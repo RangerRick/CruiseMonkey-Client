@@ -12,12 +12,28 @@ ko.bindingHandlers.dateString = {
 
 function Event(data) {
 	var self = this;
-	self.id = data.id;
-	self.summary = ko.observable(data.summary);
+
+	self.id          = data.id;
+	self.summary     = ko.observable(data.summary);
 	self.description = ko.observable(data.description);
-	self.start = ko.observable(new Date(data.startDate));
-	self.end = ko.observable(new Date(data.endDate));
-	self.createdBy = ko.observable(data.createdBy);
+	self.start       = ko.observable(new Date(data.startDate));
+	self.end         = ko.observable(new Date(data.endDate));
+	self.location    = ko.observable(data.location);
+	self.createdBy   = ko.observable(data.createdBy);
+	self.timespan    = ko.computed(function() {
+		var start = start === null? null : formatTime(self.start(), false);
+		var end   = end   === null? null : formatTime(self.end(), false);
+		console.log("start = " + start + ", end = " + end);
+		var retVal = "";
+		if (start != null) {
+			retVal += start;
+			if (end != null) {
+				retVal += "-" + end;
+			}
+		}
+		console.log("retVal = " + retVal);
+		return retVal;
+	}, self);
 }
 
 var entryIdMatch = function(entry, id) {

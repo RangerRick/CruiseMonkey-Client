@@ -1,22 +1,47 @@
-.calendar-event {
-	border: 1px solid;
-	height: 100px;
-	overflow: hidden;
-	margin: 0;
+#content.columns {
+	padding: 0px;
 }
 
+.calendar-event {
+	border: 1px solid;
+	/* height: 100px; */
+	width: 100%;
+	overflow: auto;
+	list-style-type: none;
+	/* padding-left: 100px; */
+	padding: 5px;
+}
+
+.event-list {
+	margin-bottom: 0px;
+}
+
+.time span {
+	font-family: monospace;
+}
+
+/*
 .time {
 	font-family: monospace;
 	padding: 5px;
-	/* border: 1px solid; */
 	float: left;
-	height: 100px;
+	height: 50px;
+	width: 100px;
+	position: absolute;
+	left: 0px;
+	display: inline-block;
 }
 
 .event-text {
 	padding: 5px;
+	height: auto;
+	display: inline-block;
+	overflow: auto;
+	width: auto;
 }
 
-#content.columns {
-	padding: 0px;
+.event-text h4 {
+	margin-top: 0px;
+	margin-bottom: 5px;
 }
+*/
