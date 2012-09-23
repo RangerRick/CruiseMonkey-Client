@@ -1,6 +1,6 @@
 <!-- <h2>{{event_header}}</h2> -->
 <ul data-bind="foreach: events" class="event-list unstyled" style="visibility:hidden">
-  <li class="calendar-event official">
+  <li class="calendar-event official" onclick="alert('calendar click')" ontouchstart="alert('calendar touch')">
   	<div class="pull-left">1:00am - 5:00am</div>
   	<div class="event-text">
       <h3><span data-bind="text: summary"></span></h3>
