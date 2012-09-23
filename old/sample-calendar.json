@@ -1,0 +1,3829 @@
+{
+    "feed": {
+        "category": [
+            {
+                "term": "http://schemas.google.com/g/2005#event", 
+                "scheme": "http://schemas.google.com/g/2005#kind"
+            }
+        ], 
+        "gd$where": {
+            "valueString": ""
+        }, 
+        "updated": {
+            "$t": "2012-02-14T06:07:07.000Z"
+        }, 
+        "xmlns$gd": "http://schemas.google.com/g/2005", 
+        "subtitle": {
+            "$t": "", 
+            "type": "text"
+        }, 
+        "generator": {
+            "$t": "Google Calendar", 
+            "version": "1.0", 
+            "uri": "http://www.google.com/calendar"
+        }, 
+        "title": {
+            "$t": "JoCo Cruise Crazy 2 Events Calendar", 
+            "type": "text"
+        }, 
+        "gCal$timesCleaned": {
+            "value": 0
+        }, 
+        "xmlns$gCal": "http://schemas.google.com/gCal/2005", 
+        "author": [
+            {
+                "name": {
+                    "$t": "lizsmith6@gmail.com"
+                }, 
+                "email": {
+                    "$t": "lizsmith6@gmail.com"
+                }
+            }
+        ], 
+        "openSearch$startIndex": {
+            "$t": 1
+        }, 
+        "gCal$timezone": {
+            "value": "America/New_York"
+        }, 
+        "xmlns": "http://www.w3.org/2005/Atom", 
+        "link": [
+            {
+                "href": "http://www.google.com/calendar/embed?src=nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com", 
+                "type": "text/html", 
+                "rel": "alternate"
+            }, 
+            {
+                "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full", 
+                "type": "application/atom+xml", 
+                "rel": "http://schemas.google.com/g/2005#feed"
+            }, 
+            {
+                "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/batch", 
+                "type": "application/atom+xml", 
+                "rel": "http://schemas.google.com/g/2005#batch"
+            }, 
+            {
+                "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full?alt=json-in-script&max-results=10000&start-min=2012-01-01T00%3A00%3A00-05%3A00&sortorder=ascending&ctz=America%2FNew_York&orderby=starttime", 
+                "type": "application/atom+xml", 
+                "rel": "self"
+            }
+        ], 
+        "xmlns$openSearch": "http://a9.com/-/spec/opensearchrss/1.0/", 
+        "openSearch$itemsPerPage": {
+            "$t": 10000
+        }, 
+        "entry": [
+            {
+                "category": [
+                    {
+                        "term": "http://schemas.google.com/g/2005#event", 
+                        "scheme": "http://schemas.google.com/g/2005#kind"
+                    }
+                ], 
+                "gd$where": [
+                    {
+                        "valueString": "Hudson/Half Moon/Stuyvesant"
+                    }
+                ], 
+                "updated": {
+                    "$t": "2012-02-04T00:37:50.000-05:00"
+                }, 
+                "gCal$guestsCanSeeGuests": {
+                    "value": "true"
+                }, 
+                "gd$comments": {
+                    "gd$feedLink": {
+                        "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/4mcpska0spd192339j5ia94e68/comments"
+                    }
+                }, 
+                "title": {
+                    "$t": "Registration", 
+                    "type": "text"
+                }, 
+                "gCal$guestsCanModify": {
+                    "value": "false"
+                }, 
+                "gd$transparency": {
+                    "value": "http://schemas.google.com/g/2005#event.opaque"
+                }, 
+                "author": [
+                    {
+                        "name": {
+                            "$t": "JoCo Cruise Crazy 2 Events Calendar"
+                        }
+                    }
+                ], 
+                "gd$eventStatus": {
+                    "value": "http://schemas.google.com/g/2005#event.confirmed"
+                }, 
+                "gCal$uid": {
+                    "value": "4mcpska0spd192339j5ia94e68@google.com"
+                }, 
+                "content": {
+                    "$t": "", 
+                    "type": "text"
+                }, 
+                "gCal$guestsCanInviteOthers": {
+                    "value": "true"
+                }, 
+                "gd$who": [
+                    {
+                        "email": "nh76o8dgn9d86b7n3p3uofg1q0@group.calendar.google.com", 
+                        "rel": "http://schemas.google.com/g/2005#event.organizer", 
+                        "valueString": "JoCo Cruise Crazy 2 Events Calendar"
+                    }
+                ], 
+                "link": [
+                    {
+                        "href": "http://www.google.com/calendar/event?eid=NG1jcHNrYTBzcGQxOTIzMzlqNWlhOTRlNjggbmg3Nm84ZGduOWQ4NmI3bjNwM3VvZmcxcTBAZw", 
+                        "type": "text/html", 
+                        "rel": "alternate", 
+                        "title": "alternate"
+                    }, 
+                    {
+                        "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/4mcpska0spd192339j5ia94e68", 
+                        "type": "application/atom+xml", 
+                        "rel": "self"
+                    }
+                ], 
+                "published": {
+                    "$t": "2011-11-11T13:39:56.000-05:00"
+                }, 
+                "gCal$anyoneCanAddSelf": {
+                    "value": "false"
+                }, 
+                "gd$when": [
+                    {
+                        "endTime": "2012-02-19T16:00:00.000-05:00", 
+                        "startTime": "2012-02-19T12:00:00.000-05:00"
+                    }
+                ], 
+                "gCal$sequence": {
+                    "value": 3
+                }, 
+                "id": {
+                    "$t": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/4mcpska0spd192339j5ia94e68"
+                }
+            }, 
+            {
+                "category": [
+                    {
+                        "term": "http://schemas.google.com/g/2005#event", 
+                        "scheme": "http://schemas.google.com/g/2005#kind"
+                    }
+                ], 
+                "gd$where": [
+                    {
+                        "valueString": "Shipwide"
+                    }
+                ], 
+                "updated": {
+                    "$t": "2012-02-04T12:23:36.000-05:00"
+                }, 
+                "gCal$guestsCanSeeGuests": {
+                    "value": "true"
+                }, 
+                "gd$comments": {
+                    "gd$feedLink": {
+                        "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/j5n2akf0to3pgdl7ie6hn3g9h8/comments"
+                    }
+                }, 
+                "title": {
+                    "$t": "Mandatory Safety Drill", 
+                    "type": "text"
+                }, 
+                "gCal$guestsCanModify": {
+                    "value": "false"
+                }, 
+                "gd$transparency": {
+                    "value": "http://schemas.google.com/g/2005#event.opaque"
+                }, 
+                "author": [
+                    {
+                        "name": {
+                            "$t": "JoCo Cruise Crazy 2 Events Calendar"
+                        }
+                    }
+                ], 
+                "gd$eventStatus": {
+                    "value": "http://schemas.google.com/g/2005#event.confirmed"
+                }, 
+                "gCal$uid": {
+                    "value": "j5n2akf0to3pgdl7ie6hn3g9h8@google.com"
+                }, 
+                "content": {
+                    "$t": "Required by HAL; you will be directed which muster station to go for this drill based on your cabin number. THIS DRILL IS MANDATORY! If you skip this drill, HAL reserves the right to PUT YOU OFF THE SHIP. They are not kidding about this, people.", 
+                    "type": "text"
+                }, 
+                "gCal$guestsCanInviteOthers": {
+                    "value": "true"
+                }, 
+                "gd$who": [
+                    {
+                        "email": "nh76o8dgn9d86b7n3p3uofg1q0@group.calendar.google.com", 
+                        "rel": "http://schemas.google.com/g/2005#event.organizer", 
+                        "valueString": "JoCo Cruise Crazy 2 Events Calendar"
+                    }
+                ], 
+                "link": [
+                    {
+                        "href": "http://www.google.com/calendar/event?eid=ajVuMmFrZjB0bzNwZ2RsN2llNmhuM2c5aDggbmg3Nm84ZGduOWQ4NmI3bjNwM3VvZmcxcTBAZw", 
+                        "type": "text/html", 
+                        "rel": "alternate", 
+                        "title": "alternate"
+                    }, 
+                    {
+                        "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/j5n2akf0to3pgdl7ie6hn3g9h8", 
+                        "type": "application/atom+xml", 
+                        "rel": "self"
+                    }
+                ], 
+                "published": {
+                    "$t": "2012-02-03T18:30:58.000-05:00"
+                }, 
+                "gCal$anyoneCanAddSelf": {
+                    "value": "false"
+                }, 
+                "gd$when": [
+                    {
+                        "endTime": "2012-02-19T16:30:00.000-05:00", 
+                        "startTime": "2012-02-19T16:00:00.000-05:00"
+                    }
+                ], 
+                "gCal$sequence": {
+                    "value": 0
+                }, 
+                "id": {
+                    "$t": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/j5n2akf0to3pgdl7ie6hn3g9h8"
+                }
+            }, 
+            {
+                "category": [
+                    {
+                        "term": "http://schemas.google.com/g/2005#event", 
+                        "scheme": "http://schemas.google.com/g/2005#kind"
+                    }
+                ], 
+                "gd$where": [
+                    {
+                        "valueString": "Sea View Pool Deck (aft)"
+                    }
+                ], 
+                "updated": {
+                    "$t": "2012-02-04T00:38:50.000-05:00"
+                }, 
+                "gCal$guestsCanSeeGuests": {
+                    "value": "true"
+                }, 
+                "gd$comments": {
+                    "gd$feedLink": {
+                        "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/3vp5jvtik23uhtiq7p08a8bnjk/comments"
+                    }
+                }, 
+                "title": {
+                    "$t": "Shove Off! - Informal Gathering by the Sea View Pool", 
+                    "type": "text"
+                }, 
+                "gCal$guestsCanModify": {
+                    "value": "false"
+                }, 
+                "gd$transparency": {
+                    "value": "http://schemas.google.com/g/2005#event.opaque"
+                }, 
+                "author": [
+                    {
+                        "name": {
+                            "$t": "JoCo Cruise Crazy 2 Events Calendar"
+                        }
+                    }
+                ], 
+                "gd$eventStatus": {
+                    "value": "http://schemas.google.com/g/2005#event.confirmed"
+                }, 
+                "gCal$uid": {
+                    "value": "3vp5jvtik23uhtiq7p08a8bnjk@google.com"
+                }, 
+                "content": {
+                    "$t": "Informal gathering on the back deck to watch the land recede in the distance, meet fellow Sea Monkeys, and start the trip properly.", 
+                    "type": "text"
+                }, 
+                "gCal$guestsCanInviteOthers": {
+                    "value": "true"
+                }, 
+                "gd$who": [
+                    {
+                        "email": "nh76o8dgn9d86b7n3p3uofg1q0@group.calendar.google.com", 
+                        "rel": "http://schemas.google.com/g/2005#event.organizer", 
+                        "valueString": "JoCo Cruise Crazy 2 Events Calendar"
+                    }
+                ], 
+                "link": [
+                    {
+                        "href": "http://www.google.com/calendar/event?eid=M3ZwNWp2dGlrMjN1aHRpcTdwMDhhOGJuamsgbmg3Nm84ZGduOWQ4NmI3bjNwM3VvZmcxcTBAZw", 
+                        "type": "text/html", 
+                        "rel": "alternate", 
+                        "title": "alternate"
+                    }, 
+                    {
+                        "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/3vp5jvtik23uhtiq7p08a8bnjk", 
+                        "type": "application/atom+xml", 
+                        "rel": "self"
+                    }
+                ], 
+                "published": {
+                    "$t": "2012-02-03T20:51:05.000-05:00"
+                }, 
+                "gCal$anyoneCanAddSelf": {
+                    "value": "false"
+                }, 
+                "gd$when": [
+                    {
+                        "endTime": "2012-02-19T17:30:00.000-05:00", 
+                        "startTime": "2012-02-19T16:30:00.000-05:00"
+                    }
+                ], 
+                "gCal$sequence": {
+                    "value": 1
+                }, 
+                "id": {
+                    "$t": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/3vp5jvtik23uhtiq7p08a8bnjk"
+                }
+            }, 
+            {
+                "category": [
+                    {
+                        "term": "http://schemas.google.com/g/2005#event", 
+                        "scheme": "http://schemas.google.com/g/2005#kind"
+                    }
+                ], 
+                "gd$where": [
+                    {
+                        "valueString": "Vista Lounge"
+                    }
+                ], 
+                "updated": {
+                    "$t": "2012-02-04T00:38:55.000-05:00"
+                }, 
+                "gCal$guestsCanSeeGuests": {
+                    "value": "true"
+                }, 
+                "gd$comments": {
+                    "gd$feedLink": {
+                        "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/vr798q9lg87v8d5cdtluu9ktsc_20120219T213000Z/comments"
+                    }
+                }, 
+                "title": {
+                    "$t": "Orientation Meeting", 
+                    "type": "text"
+                }, 
+                "gCal$guestsCanModify": {
+                    "value": "false"
+                }, 
+                "gd$transparency": {
+                    "value": "http://schemas.google.com/g/2005#event.opaque"
+                }, 
+                "author": [
+                    {
+                        "name": {
+                            "$t": "JoCo Cruise Crazy 2 Events Calendar"
+                        }
+                    }
+                ], 
+                "gd$eventStatus": {
+                    "value": "http://schemas.google.com/g/2005#event.confirmed"
+                }, 
+                "gCal$uid": {
+                    "value": "vr798q9lg87v8d5cdtluu9ktsc@google.com"
+                }, 
+                "content": {
+                    "$t": "A brief orientation meeting: meet the performers, learn how dinner will be organized, learn about the Game Room and Master Control information boards, and generally get in the proper mood for JCCC2.", 
+                    "type": "text"
+                }, 
+                "gCal$guestsCanInviteOthers": {
+                    "value": "true"
+                }, 
+                "gd$who": [
+                    {
+                        "email": "nh76o8dgn9d86b7n3p3uofg1q0@group.calendar.google.com", 
+                        "rel": "http://schemas.google.com/g/2005#event.organizer", 
+                        "valueString": "JoCo Cruise Crazy 2 Events Calendar"
+                    }
+                ], 
+                "link": [
+                    {
+                        "href": "http://www.google.com/calendar/event?eid=dnI3OThxOWxnODd2OGQ1Y2R0bHV1OWt0c2NfMjAxMjAyMTlUMjEzMDAwWiBuaDc2bzhkZ245ZDg2YjduM3AzdW9mZzFxMEBn", 
+                        "type": "text/html", 
+                        "rel": "alternate", 
+                        "title": "alternate"
+                    }, 
+                    {
+                        "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/vr798q9lg87v8d5cdtluu9ktsc_20120219T213000Z", 
+                        "type": "application/atom+xml", 
+                        "rel": "self"
+                    }
+                ], 
+                "published": {
+                    "$t": "2011-11-11T14:14:48.000-05:00"
+                }, 
+                "gCal$anyoneCanAddSelf": {
+                    "value": "false"
+                }, 
+                "gd$when": [
+                    {
+                        "endTime": "2012-02-19T18:30:00.000-05:00", 
+                        "startTime": "2012-02-19T17:30:00.000-05:00"
+                    }
+                ], 
+                "gd$originalEvent": {
+                    "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/vr798q9lg87v8d5cdtluu9ktsc", 
+                    "gd$when": {
+                        "startTime": "2012-02-19T16:30:00.000-05:00"
+                    }, 
+                    "id": "vr798q9lg87v8d5cdtluu9ktsc"
+                }, 
+                "gCal$sequence": {
+                    "value": 4
+                }, 
+                "id": {
+                    "$t": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/vr798q9lg87v8d5cdtluu9ktsc_20120219T213000Z"
+                }
+            }, 
+            {
+                "category": [
+                    {
+                        "term": "http://schemas.google.com/g/2005#event", 
+                        "scheme": "http://schemas.google.com/g/2005#kind"
+                    }
+                ], 
+                "gd$where": [
+                    {
+                        "valueString": "Hudson/Half Moon/Stuyvesant"
+                    }
+                ], 
+                "updated": {
+                    "$t": "2012-02-04T00:39:04.000-05:00"
+                }, 
+                "gCal$guestsCanSeeGuests": {
+                    "value": "true"
+                }, 
+                "gd$comments": {
+                    "gd$feedLink": {
+                        "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/vqlkq2c8fd1s4p85hn0i9arqvo/comments"
+                    }
+                }, 
+                "title": {
+                    "$t": "Open Gaming", 
+                    "type": "text"
+                }, 
+                "gCal$guestsCanModify": {
+                    "value": "false"
+                }, 
+                "gd$transparency": {
+                    "value": "http://schemas.google.com/g/2005#event.opaque"
+                }, 
+                "author": [
+                    {
+                        "name": {
+                            "$t": "JoCo Cruise Crazy 2 Events Calendar"
+                        }
+                    }
+                ], 
+                "gd$eventStatus": {
+                    "value": "http://schemas.google.com/g/2005#event.confirmed"
+                }, 
+                "gCal$uid": {
+                    "value": "vqlkq2c8fd1s4p85hn0i9arqvo@google.com"
+                }, 
+                "content": {
+                    "$t": "Start time approximate; gaming will be open as soon as HAL gets the room set up.", 
+                    "type": "text"
+                }, 
+                "gCal$guestsCanInviteOthers": {
+                    "value": "true"
+                }, 
+                "gd$who": [
+                    {
+                        "email": "nh76o8dgn9d86b7n3p3uofg1q0@group.calendar.google.com", 
+                        "rel": "http://schemas.google.com/g/2005#event.organizer", 
+                        "valueString": "JoCo Cruise Crazy 2 Events Calendar"
+                    }
+                ], 
+                "link": [
+                    {
+                        "href": "http://www.google.com/calendar/event?eid=dnFsa3EyYzhmZDFzNHA4NWhuMGk5YXJxdm8gbmg3Nm84ZGduOWQ4NmI3bjNwM3VvZmcxcTBAZw", 
+                        "type": "text/html", 
+                        "rel": "alternate", 
+                        "title": "alternate"
+                    }, 
+                    {
+                        "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/vqlkq2c8fd1s4p85hn0i9arqvo", 
+                        "type": "application/atom+xml", 
+                        "rel": "self"
+                    }
+                ], 
+                "published": {
+                    "$t": "2011-11-11T13:40:57.000-05:00"
+                }, 
+                "gCal$anyoneCanAddSelf": {
+                    "value": "false"
+                }, 
+                "gd$when": [
+                    {
+                        "endTime": "2012-02-20T00:00:00.000-05:00", 
+                        "startTime": "2012-02-19T18:00:00.000-05:00"
+                    }
+                ], 
+                "gCal$sequence": {
+                    "value": 2
+                }, 
+                "id": {
+                    "$t": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/vqlkq2c8fd1s4p85hn0i9arqvo"
+                }
+            }, 
+            {
+                "category": [
+                    {
+                        "term": "http://schemas.google.com/g/2005#event", 
+                        "scheme": "http://schemas.google.com/g/2005#kind"
+                    }
+                ], 
+                "gd$where": [
+                    {
+                        "valueString": "Sea View Pool Deck (aft)"
+                    }
+                ], 
+                "updated": {
+                    "$t": "2012-02-04T00:39:13.000-05:00"
+                }, 
+                "gCal$guestsCanSeeGuests": {
+                    "value": "true"
+                }, 
+                "gd$comments": {
+                    "gd$feedLink": {
+                        "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/l45tum5r0ous0k3kvdjv9vjqp4/comments"
+                    }
+                }, 
+                "title": {
+                    "$t": "\u201cThe First Transport Is Away!\u201d Cocktail Reception", 
+                    "type": "text"
+                }, 
+                "gCal$guestsCanModify": {
+                    "value": "false"
+                }, 
+                "gd$transparency": {
+                    "value": "http://schemas.google.com/g/2005#event.opaque"
+                }, 
+                "author": [
+                    {
+                        "name": {
+                            "$t": "JoCo Cruise Crazy 2 Events Calendar"
+                        }
+                    }
+                ], 
+                "gd$eventStatus": {
+                    "value": "http://schemas.google.com/g/2005#event.confirmed"
+                }, 
+                "gCal$uid": {
+                    "value": "l45tum5r0ous0k3kvdjv9vjqp4@google.com"
+                }, 
+                "content": {
+                    "$t": "Shove-off cocktail reception; open bar and snax!", 
+                    "type": "text"
+                }, 
+                "gCal$guestsCanInviteOthers": {
+                    "value": "true"
+                }, 
+                "gd$who": [
+                    {
+                        "email": "nh76o8dgn9d86b7n3p3uofg1q0@group.calendar.google.com", 
+                        "rel": "http://schemas.google.com/g/2005#event.organizer", 
+                        "valueString": "JoCo Cruise Crazy 2 Events Calendar"
+                    }
+                ], 
+                "link": [
+                    {
+                        "href": "http://www.google.com/calendar/event?eid=bDQ1dHVtNXIwb3VzMGsza3ZkanY5dmpxcDQgbmg3Nm84ZGduOWQ4NmI3bjNwM3VvZmcxcTBAZw", 
+                        "type": "text/html", 
+                        "rel": "alternate", 
+                        "title": "alternate"
+                    }, 
+                    {
+                        "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/l45tum5r0ous0k3kvdjv9vjqp4", 
+                        "type": "application/atom+xml", 
+                        "rel": "self"
+                    }
+                ], 
+                "published": {
+                    "$t": "2011-11-11T13:43:22.000-05:00"
+                }, 
+                "gCal$anyoneCanAddSelf": {
+                    "value": "false"
+                }, 
+                "gd$when": [
+                    {
+                        "endTime": "2012-02-19T19:45:00.000-05:00", 
+                        "startTime": "2012-02-19T18:45:00.000-05:00"
+                    }
+                ], 
+                "gCal$sequence": {
+                    "value": 1
+                }, 
+                "id": {
+                    "$t": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/l45tum5r0ous0k3kvdjv9vjqp4"
+                }
+            }, 
+            {
+                "category": [
+                    {
+                        "term": "http://schemas.google.com/g/2005#event", 
+                        "scheme": "http://schemas.google.com/g/2005#kind"
+                    }
+                ], 
+                "gd$where": [
+                    {
+                        "valueString": "Vista Dining Room (Upper and Lower Floors)"
+                    }
+                ], 
+                "updated": {
+                    "$t": "2012-02-04T00:39:32.000-05:00"
+                }, 
+                "gCal$guestsCanSeeGuests": {
+                    "value": "true"
+                }, 
+                "title": {
+                    "$t": "Dinner", 
+                    "type": "text"
+                }, 
+                "gd$recurrence": {
+                    "$t": "DTSTART;TZID=America/New_York:20120219T200000\r\nDTEND;TZID=America/New_York:20120219T220000\r\nRRULE:FREQ=DAILY;COUNT=7\r\nBEGIN:VTIMEZONE\r\nTZID:America/New_York\r\nX-LIC-LOCATION:America/New_York\r\nBEGIN:DAYLIGHT\r\nTZOFFSETFROM:-0500\r\nTZOFFSETTO:-0400\r\nTZNAME:EDT\r\nDTSTART:19700308T020000\r\nRRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU\r\nEND:DAYLIGHT\r\nBEGIN:STANDARD\r\nTZOFFSETFROM:-0400\r\nTZOFFSETTO:-0500\r\nTZNAME:EST\r\nDTSTART:19701101T020000\r\nRRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU\r\nEND:STANDARD\r\nEND:VTIMEZONE\r\n"
+                }, 
+                "gd$transparency": {
+                    "value": "http://schemas.google.com/g/2005#event.opaque"
+                }, 
+                "author": [
+                    {
+                        "name": {
+                            "$t": "JoCo Cruise Crazy 2 Events Calendar"
+                        }
+                    }
+                ], 
+                "gd$eventStatus": {
+                    "value": "http://schemas.google.com/g/2005#event.confirmed"
+                }, 
+                "gCal$uid": {
+                    "value": "c4labvre368sq9cmrnp42ierkc@google.com"
+                }, 
+                "content": {
+                    "$t": "Om nom nom.", 
+                    "type": "text"
+                }, 
+                "gCal$guestsCanModify": {
+                    "value": "false"
+                }, 
+                "gCal$guestsCanInviteOthers": {
+                    "value": "true"
+                }, 
+                "gd$who": [
+                    {
+                        "email": "nh76o8dgn9d86b7n3p3uofg1q0@group.calendar.google.com", 
+                        "rel": "http://schemas.google.com/g/2005#event.organizer", 
+                        "valueString": "JoCo Cruise Crazy 2 Events Calendar"
+                    }
+                ], 
+                "link": [
+                    {
+                        "href": "http://www.google.com/calendar/event?eid=YzRsYWJ2cmUzNjhzcTljbXJucDQyaWVya2NfMjAxMjAyMjBUMDEwMDAwWiBuaDc2bzhkZ245ZDg2YjduM3AzdW9mZzFxMEBn", 
+                        "type": "text/html", 
+                        "rel": "alternate", 
+                        "title": "alternate"
+                    }, 
+                    {
+                        "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/c4labvre368sq9cmrnp42ierkc", 
+                        "type": "application/atom+xml", 
+                        "rel": "self"
+                    }
+                ], 
+                "published": {
+                    "$t": "2011-11-11T14:03:49.000-05:00"
+                }, 
+                "gCal$anyoneCanAddSelf": {
+                    "value": "false"
+                }, 
+                "gd$when": [
+                    {
+                        "endTime": "2012-02-19T22:00:00.000-05:00", 
+                        "startTime": "2012-02-19T20:00:00.000-05:00"
+                    }, 
+                    {
+                        "endTime": "2012-02-20T22:00:00.000-05:00", 
+                        "startTime": "2012-02-20T20:00:00.000-05:00"
+                    }, 
+                    {
+                        "endTime": "2012-02-22T22:00:00.000-05:00", 
+                        "startTime": "2012-02-22T20:00:00.000-05:00"
+                    }, 
+                    {
+                        "endTime": "2012-02-23T22:00:00.000-05:00", 
+                        "startTime": "2012-02-23T20:00:00.000-05:00"
+                    }, 
+                    {
+                        "endTime": "2012-02-25T22:00:00.000-05:00", 
+                        "startTime": "2012-02-25T20:00:00.000-05:00"
+                    }, 
+                    {
+                        "endTime": "2012-02-24T22:00:00.000-05:00", 
+                        "startTime": "2012-02-24T20:00:00.000-05:00"
+                    }, 
+                    {
+                        "endTime": "2012-02-21T22:00:00.000-05:00", 
+                        "startTime": "2012-02-21T20:00:00.000-05:00"
+                    }
+                ], 
+                "gCal$sequence": {
+                    "value": 1
+                }, 
+                "id": {
+                    "$t": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/c4labvre368sq9cmrnp42ierkc"
+                }
+            }, 
+            {
+                "category": [
+                    {
+                        "term": "http://schemas.google.com/g/2005#event", 
+                        "scheme": "http://schemas.google.com/g/2005#kind"
+                    }
+                ], 
+                "gd$where": [
+                    {
+                        "valueString": "Sea View Pool Deck (aft)"
+                    }
+                ], 
+                "updated": {
+                    "$t": "2012-02-04T01:15:22.000-05:00"
+                }, 
+                "gCal$guestsCanSeeGuests": {
+                    "value": "true"
+                }, 
+                "title": {
+                    "$t": "You Know, Just Chillin' by the Sea View Pool", 
+                    "type": "text"
+                }, 
+                "gd$recurrence": {
+                    "$t": "DTSTART;TZID=America/New_York:20120219T220000\r\nDTEND;TZID=America/New_York:20120219T230000\r\nRRULE:FREQ=DAILY;UNTIL=20120220T045959Z\r\nBEGIN:VTIMEZONE\r\nTZID:America/New_York\r\nX-LIC-LOCATION:America/New_York\r\nBEGIN:DAYLIGHT\r\nTZOFFSETFROM:-0500\r\nTZOFFSETTO:-0400\r\nTZNAME:EDT\r\nDTSTART:19700308T020000\r\nRRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU\r\nEND:DAYLIGHT\r\nBEGIN:STANDARD\r\nTZOFFSETFROM:-0400\r\nTZOFFSETTO:-0500\r\nTZNAME:EST\r\nDTSTART:19701101T020000\r\nRRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU\r\nEND:STANDARD\r\nEND:VTIMEZONE\r\n"
+                }, 
+                "gd$transparency": {
+                    "value": "http://schemas.google.com/g/2005#event.opaque"
+                }, 
+                "author": [
+                    {
+                        "name": {
+                            "$t": "JoCo Cruise Crazy 2 Events Calendar"
+                        }
+                    }
+                ], 
+                "gd$eventStatus": {
+                    "value": "http://schemas.google.com/g/2005#event.confirmed"
+                }, 
+                "gCal$uid": {
+                    "value": "nf4hsdqjgnsi0mck68680njqdc@google.com"
+                }, 
+                "content": {
+                    "$t": "We are making the Sea View Pool Deck our unofficial \"hangin' out\" area after dinner, on nights when we don't have any other events planned (weather permitting).", 
+                    "type": "text"
+                }, 
+                "gCal$guestsCanModify": {
+                    "value": "false"
+                }, 
+                "gCal$guestsCanInviteOthers": {
+                    "value": "true"
+                }, 
+                "gd$who": [
+                    {
+                        "email": "nh76o8dgn9d86b7n3p3uofg1q0@group.calendar.google.com", 
+                        "rel": "http://schemas.google.com/g/2005#event.organizer", 
+                        "valueString": "JoCo Cruise Crazy 2 Events Calendar"
+                    }
+                ], 
+                "link": [
+                    {
+                        "href": "http://www.google.com/calendar/event?eid=bmY0aHNkcWpnbnNpMG1jazY4NjgwbmpxZGNfMjAxMjAyMjBUMDMwMDAwWiBuaDc2bzhkZ245ZDg2YjduM3AzdW9mZzFxMEBn", 
+                        "type": "text/html", 
+                        "rel": "alternate", 
+                        "title": "alternate"
+                    }, 
+                    {
+                        "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/nf4hsdqjgnsi0mck68680njqdc", 
+                        "type": "application/atom+xml", 
+                        "rel": "self"
+                    }
+                ], 
+                "published": {
+                    "$t": "2012-02-03T21:59:56.000-05:00"
+                }, 
+                "gCal$anyoneCanAddSelf": {
+                    "value": "false"
+                }, 
+                "gd$when": [
+                    {
+                        "endTime": "2012-02-19T23:00:00.000-05:00", 
+                        "startTime": "2012-02-19T22:00:00.000-05:00"
+                    }
+                ], 
+                "gCal$sequence": {
+                    "value": 0
+                }, 
+                "id": {
+                    "$t": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/nf4hsdqjgnsi0mck68680njqdc"
+                }
+            }, 
+            {
+                "category": [
+                    {
+                        "term": "http://schemas.google.com/g/2005#event", 
+                        "scheme": "http://schemas.google.com/g/2005#kind"
+                    }
+                ], 
+                "gd$where": [
+                    {
+                        "valueString": "Culinary Arts Center/Queens Lounge"
+                    }
+                ], 
+                "updated": {
+                    "$t": "2012-02-04T01:10:01.000-05:00"
+                }, 
+                "gCal$guestsCanSeeGuests": {
+                    "value": "true"
+                }, 
+                "gd$comments": {
+                    "gd$feedLink": {
+                        "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/hk9p4erbrva83p21bthogdjgk8_20120220T040000Z/comments"
+                    }
+                }, 
+                "title": {
+                    "$t": "Dance Party with DJ Flans (aka John Flansburgh)", 
+                    "type": "text"
+                }, 
+                "gCal$guestsCanModify": {
+                    "value": "false"
+                }, 
+                "gd$transparency": {
+                    "value": "http://schemas.google.com/g/2005#event.opaque"
+                }, 
+                "author": [
+                    {
+                        "name": {
+                            "$t": "JoCo Cruise Crazy 2 Events Calendar"
+                        }
+                    }
+                ], 
+                "gd$eventStatus": {
+                    "value": "http://schemas.google.com/g/2005#event.confirmed"
+                }, 
+                "gCal$uid": {
+                    "value": "hk9p4erbrva83p21bthogdjgk8@google.com"
+                }, 
+                "content": {
+                    "$t": "Dance the night away with DJ Flans. Dance, we say! Dance!! WE COMMAND YOU TO DANCE!!!", 
+                    "type": "text"
+                }, 
+                "gCal$guestsCanInviteOthers": {
+                    "value": "true"
+                }, 
+                "gd$who": [
+                    {
+                        "email": "nh76o8dgn9d86b7n3p3uofg1q0@group.calendar.google.com", 
+                        "rel": "http://schemas.google.com/g/2005#event.organizer", 
+                        "valueString": "JoCo Cruise Crazy 2 Events Calendar"
+                    }
+                ], 
+                "link": [
+                    {
+                        "href": "http://www.google.com/calendar/event?eid=aGs5cDRlcmJydmE4M3AyMWJ0aG9nZGpnazhfMjAxMjAyMjBUMDQwMDAwWiBuaDc2bzhkZ245ZDg2YjduM3AzdW9mZzFxMEBn", 
+                        "type": "text/html", 
+                        "rel": "alternate", 
+                        "title": "alternate"
+                    }, 
+                    {
+                        "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/hk9p4erbrva83p21bthogdjgk8_20120220T040000Z", 
+                        "type": "application/atom+xml", 
+                        "rel": "self"
+                    }
+                ], 
+                "published": {
+                    "$t": "2011-11-11T14:07:35.000-05:00"
+                }, 
+                "gCal$anyoneCanAddSelf": {
+                    "value": "false"
+                }, 
+                "gd$when": [
+                    {
+                        "endTime": "2012-02-20T02:00:00.000-05:00", 
+                        "startTime": "2012-02-19T23:00:00.000-05:00"
+                    }
+                ], 
+                "gd$originalEvent": {
+                    "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/hk9p4erbrva83p21bthogdjgk8", 
+                    "gd$when": {
+                        "startTime": "2012-02-19T23:00:00.000-05:00"
+                    }, 
+                    "id": "hk9p4erbrva83p21bthogdjgk8"
+                }, 
+                "gCal$sequence": {
+                    "value": 0
+                }, 
+                "id": {
+                    "$t": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/hk9p4erbrva83p21bthogdjgk8_20120220T040000Z"
+                }
+            }, 
+            {
+                "category": [
+                    {
+                        "term": "http://schemas.google.com/g/2005#event", 
+                        "scheme": "http://schemas.google.com/g/2005#kind"
+                    }
+                ], 
+                "gd$where": [
+                    {
+                        "valueString": "Hudson/Half Moon/Stuyvesant"
+                    }
+                ], 
+                "updated": {
+                    "$t": "2012-02-04T00:42:39.000-05:00"
+                }, 
+                "gCal$guestsCanSeeGuests": {
+                    "value": "true"
+                }, 
+                "title": {
+                    "$t": "Open Gaming", 
+                    "type": "text"
+                }, 
+                "gd$recurrence": {
+                    "$t": "DTSTART;TZID=America/New_York:20120220T000000\r\nDTEND;TZID=America/New_York:20120220T235900\r\nRRULE:FREQ=DAILY;COUNT=6\r\nBEGIN:VTIMEZONE\r\nTZID:America/New_York\r\nX-LIC-LOCATION:America/New_York\r\nBEGIN:DAYLIGHT\r\nTZOFFSETFROM:-0500\r\nTZOFFSETTO:-0400\r\nTZNAME:EDT\r\nDTSTART:19700308T020000\r\nRRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU\r\nEND:DAYLIGHT\r\nBEGIN:STANDARD\r\nTZOFFSETFROM:-0400\r\nTZOFFSETTO:-0500\r\nTZNAME:EST\r\nDTSTART:19701101T020000\r\nRRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU\r\nEND:STANDARD\r\nEND:VTIMEZONE\r\n"
+                }, 
+                "gd$transparency": {
+                    "value": "http://schemas.google.com/g/2005#event.opaque"
+                }, 
+                "author": [
+                    {
+                        "name": {
+                            "$t": "JoCo Cruise Crazy 2 Events Calendar"
+                        }
+                    }
+                ], 
+                "gd$eventStatus": {
+                    "value": "http://schemas.google.com/g/2005#event.confirmed"
+                }, 
+                "gCal$uid": {
+                    "value": "ss03iftatomvdg00e5jcfbp7m8@google.com"
+                }, 
+                "content": {
+                    "$t": "24-hour gaming. The sun is overrated, anyway.", 
+                    "type": "text"
+                }, 
+                "gCal$guestsCanModify": {
+                    "value": "false"
+                }, 
+                "gCal$guestsCanInviteOthers": {
+                    "value": "true"
+                }, 
+                "gd$who": [
+                    {
+                        "email": "nh76o8dgn9d86b7n3p3uofg1q0@group.calendar.google.com", 
+                        "rel": "http://schemas.google.com/g/2005#event.organizer", 
+                        "valueString": "JoCo Cruise Crazy 2 Events Calendar"
+                    }
+                ], 
+                "link": [
+                    {
+                        "href": "http://www.google.com/calendar/event?eid=c3MwM2lmdGF0b212ZGcwMGU1amNmYnA3bThfMjAxMjAyMjBUMDUwMDAwWiBuaDc2bzhkZ245ZDg2YjduM3AzdW9mZzFxMEBn", 
+                        "type": "text/html", 
+                        "rel": "alternate", 
+                        "title": "alternate"
+                    }, 
+                    {
+                        "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/ss03iftatomvdg00e5jcfbp7m8", 
+                        "type": "application/atom+xml", 
+                        "rel": "self"
+                    }
+                ], 
+                "published": {
+                    "$t": "2011-11-11T14:07:56.000-05:00"
+                }, 
+                "gCal$anyoneCanAddSelf": {
+                    "value": "false"
+                }, 
+                "gd$when": [
+                    {
+                        "endTime": "2012-02-20T23:59:00.000-05:00", 
+                        "startTime": "2012-02-20T00:00:00.000-05:00"
+                    }, 
+                    {
+                        "endTime": "2012-02-21T23:59:00.000-05:00", 
+                        "startTime": "2012-02-21T00:00:00.000-05:00"
+                    }, 
+                    {
+                        "endTime": "2012-02-22T23:59:00.000-05:00", 
+                        "startTime": "2012-02-22T00:00:00.000-05:00"
+                    }, 
+                    {
+                        "endTime": "2012-02-23T23:59:00.000-05:00", 
+                        "startTime": "2012-02-23T00:00:00.000-05:00"
+                    }, 
+                    {
+                        "endTime": "2012-02-24T23:59:00.000-05:00", 
+                        "startTime": "2012-02-24T00:00:00.000-05:00"
+                    }, 
+                    {
+                        "endTime": "2012-02-25T23:59:00.000-05:00", 
+                        "startTime": "2012-02-25T00:00:00.000-05:00"
+                    }
+                ], 
+                "gCal$sequence": {
+                    "value": 1
+                }, 
+                "id": {
+                    "$t": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/ss03iftatomvdg00e5jcfbp7m8"
+                }
+            }, 
+            {
+                "category": [
+                    {
+                        "term": "http://schemas.google.com/g/2005#event", 
+                        "scheme": "http://schemas.google.com/g/2005#kind"
+                    }
+                ], 
+                "gd$where": [
+                    {
+                        "valueString": "Bahamas"
+                    }
+                ], 
+                "updated": {
+                    "$t": "2012-02-04T12:45:05.000-05:00"
+                }, 
+                "gCal$guestsCanSeeGuests": {
+                    "value": "true"
+                }, 
+                "gd$comments": {
+                    "gd$feedLink": {
+                        "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/peu3evm74uf4tvu729ihh23m40/comments"
+                    }
+                }, 
+                "title": {
+                    "$t": "Half Moon Cay", 
+                    "type": "text"
+                }, 
+                "gCal$guestsCanModify": {
+                    "value": "false"
+                }, 
+                "gd$transparency": {
+                    "value": "http://schemas.google.com/g/2005#event.opaque"
+                }, 
+                "author": [
+                    {
+                        "name": {
+                            "$t": "JoCo Cruise Crazy 2 Events Calendar"
+                        }
+                    }
+                ], 
+                "gd$eventStatus": {
+                    "value": "http://schemas.google.com/g/2005#event.confirmed"
+                }, 
+                "gCal$uid": {
+                    "value": "peu3evm74uf4tvu729ihh23m40@google.com"
+                }, 
+                "content": {
+                    "$t": "Gathering spots (informal):\n- Captain Morgan Barrr! (the big ship-shaped building on the beach)\n- Nerd Beach Parrrty! (far end of beach, past cabanas) - reserved area with cash bar service, and Playing in the Sand with Vi Hart (Harrrt)", 
+                    "type": "text"
+                }, 
+                "gCal$guestsCanInviteOthers": {
+                    "value": "true"
+                }, 
+                "gd$who": [
+                    {
+                        "email": "nh76o8dgn9d86b7n3p3uofg1q0@group.calendar.google.com", 
+                        "rel": "http://schemas.google.com/g/2005#event.organizer", 
+                        "valueString": "JoCo Cruise Crazy 2 Events Calendar"
+                    }
+                ], 
+                "link": [
+                    {
+                        "href": "http://www.google.com/calendar/event?eid=cGV1M2V2bTc0dWY0dHZ1NzI5aWhoMjNtNDAgbmg3Nm84ZGduOWQ4NmI3bjNwM3VvZmcxcTBAZw", 
+                        "type": "text/html", 
+                        "rel": "alternate", 
+                        "title": "alternate"
+                    }, 
+                    {
+                        "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/peu3evm74uf4tvu729ihh23m40", 
+                        "type": "application/atom+xml", 
+                        "rel": "self"
+                    }
+                ], 
+                "published": {
+                    "$t": "2012-01-02T15:51:53.000-05:00"
+                }, 
+                "gCal$anyoneCanAddSelf": {
+                    "value": "false"
+                }, 
+                "gd$when": [
+                    {
+                        "endTime": "2012-02-20T15:00:00.000-05:00", 
+                        "startTime": "2012-02-20T08:00:00.000-05:00"
+                    }
+                ], 
+                "gCal$sequence": {
+                    "value": 0
+                }, 
+                "id": {
+                    "$t": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/peu3evm74uf4tvu729ihh23m40"
+                }
+            }, 
+            {
+                "category": [
+                    {
+                        "term": "http://schemas.google.com/g/2005#event", 
+                        "scheme": "http://schemas.google.com/g/2005#kind"
+                    }
+                ], 
+                "gd$where": [
+                    {
+                        "valueString": "In front of the Captain Morgan Bar"
+                    }
+                ], 
+                "updated": {
+                    "$t": "2012-02-04T00:22:05.000-05:00"
+                }, 
+                "gCal$guestsCanSeeGuests": {
+                    "value": "true"
+                }, 
+                "gd$comments": {
+                    "gd$feedLink": {
+                        "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/jgtn19jib976sk3ieg7d0mdaig/comments"
+                    }
+                }, 
+                "title": {
+                    "$t": "Bonus Group Photo - Captain Morgan Bar, Half Moon Cay", 
+                    "type": "text"
+                }, 
+                "gCal$guestsCanModify": {
+                    "value": "false"
+                }, 
+                "gd$transparency": {
+                    "value": "http://schemas.google.com/g/2005#event.opaque"
+                }, 
+                "author": [
+                    {
+                        "name": {
+                            "$t": "JoCo Cruise Crazy 2 Events Calendar"
+                        }
+                    }
+                ], 
+                "gd$eventStatus": {
+                    "value": "http://schemas.google.com/g/2005#event.confirmed"
+                }, 
+                "gCal$uid": {
+                    "value": "jgtn19jib976sk3ieg7d0mdaig@google.com"
+                }, 
+                "content": {
+                    "$t": "A (non-mandatory) group photo opportunity, taken on the beach in front of the Captain Morgan Bar, with the Westerdam in the background. Pretty.", 
+                    "type": "text"
+                }, 
+                "gCal$guestsCanInviteOthers": {
+                    "value": "true"
+                }, 
+                "gd$who": [
+                    {
+                        "email": "nh76o8dgn9d86b7n3p3uofg1q0@group.calendar.google.com", 
+                        "rel": "http://schemas.google.com/g/2005#event.organizer", 
+                        "valueString": "JoCo Cruise Crazy 2 Events Calendar"
+                    }
+                ], 
+                "link": [
+                    {
+                        "href": "http://www.google.com/calendar/event?eid=amd0bjE5amliOTc2c2szaWVnN2QwbWRhaWcgbmg3Nm84ZGduOWQ4NmI3bjNwM3VvZmcxcTBAZw", 
+                        "type": "text/html", 
+                        "rel": "alternate", 
+                        "title": "alternate"
+                    }, 
+                    {
+                        "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/jgtn19jib976sk3ieg7d0mdaig", 
+                        "type": "application/atom+xml", 
+                        "rel": "self"
+                    }
+                ], 
+                "published": {
+                    "$t": "2012-01-02T15:53:21.000-05:00"
+                }, 
+                "gCal$anyoneCanAddSelf": {
+                    "value": "false"
+                }, 
+                "gd$when": [
+                    {
+                        "endTime": "2012-02-20T13:30:00.000-05:00", 
+                        "startTime": "2012-02-20T13:00:00.000-05:00"
+                    }
+                ], 
+                "gCal$sequence": {
+                    "value": 0
+                }, 
+                "id": {
+                    "$t": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/jgtn19jib976sk3ieg7d0mdaig"
+                }
+            }, 
+            {
+                "category": [
+                    {
+                        "term": "http://schemas.google.com/g/2005#event", 
+                        "scheme": "http://schemas.google.com/g/2005#kind"
+                    }
+                ], 
+                "gd$where": [
+                    {
+                        "valueString": "Vista Lounge"
+                    }
+                ], 
+                "updated": {
+                    "$t": "2012-02-04T00:40:56.000-05:00"
+                }, 
+                "gCal$guestsCanSeeGuests": {
+                    "value": "true"
+                }, 
+                "gd$comments": {
+                    "gd$feedLink": {
+                        "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/vr798q9lg87v8d5cdtluu9ktsc_20120220T213000Z/comments"
+                    }
+                }, 
+                "title": {
+                    "$t": "Concert: Paul and Storm & Chris Collingwood", 
+                    "type": "text"
+                }, 
+                "gCal$guestsCanModify": {
+                    "value": "false"
+                }, 
+                "gd$transparency": {
+                    "value": "http://schemas.google.com/g/2005#event.opaque"
+                }, 
+                "author": [
+                    {
+                        "name": {
+                            "$t": "JoCo Cruise Crazy 2 Events Calendar"
+                        }
+                    }
+                ], 
+                "gd$eventStatus": {
+                    "value": "http://schemas.google.com/g/2005#event.confirmed"
+                }, 
+                "gCal$uid": {
+                    "value": "vr798q9lg87v8d5cdtluu9ktsc@google.com"
+                }, 
+                "content": {
+                    "$t": "Concert: Paul and Storm & Chris Collingwood.", 
+                    "type": "text"
+                }, 
+                "gCal$guestsCanInviteOthers": {
+                    "value": "true"
+                }, 
+                "gd$who": [
+                    {
+                        "email": "nh76o8dgn9d86b7n3p3uofg1q0@group.calendar.google.com", 
+                        "rel": "http://schemas.google.com/g/2005#event.organizer", 
+                        "valueString": "JoCo Cruise Crazy 2 Events Calendar"
+                    }
+                ], 
+                "link": [
+                    {
+                        "href": "http://www.google.com/calendar/event?eid=dnI3OThxOWxnODd2OGQ1Y2R0bHV1OWt0c2NfMjAxMjAyMjBUMjEzMDAwWiBuaDc2bzhkZ245ZDg2YjduM3AzdW9mZzFxMEBn", 
+                        "type": "text/html", 
+                        "rel": "alternate", 
+                        "title": "alternate"
+                    }, 
+                    {
+                        "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/vr798q9lg87v8d5cdtluu9ktsc_20120220T213000Z", 
+                        "type": "application/atom+xml", 
+                        "rel": "self"
+                    }
+                ], 
+                "published": {
+                    "$t": "2011-11-11T14:14:48.000-05:00"
+                }, 
+                "gCal$anyoneCanAddSelf": {
+                    "value": "false"
+                }, 
+                "gd$when": [
+                    {
+                        "endTime": "2012-02-20T19:00:00.000-05:00", 
+                        "startTime": "2012-02-20T16:30:00.000-05:00"
+                    }
+                ], 
+                "gd$originalEvent": {
+                    "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/vr798q9lg87v8d5cdtluu9ktsc", 
+                    "gd$when": {
+                        "startTime": "2012-02-20T16:30:00.000-05:00"
+                    }, 
+                    "id": "vr798q9lg87v8d5cdtluu9ktsc"
+                }, 
+                "gCal$sequence": {
+                    "value": 3
+                }, 
+                "id": {
+                    "$t": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/vr798q9lg87v8d5cdtluu9ktsc_20120220T213000Z"
+                }
+            }, 
+            {
+                "category": [
+                    {
+                        "term": "http://schemas.google.com/g/2005#event", 
+                        "scheme": "http://schemas.google.com/g/2005#kind"
+                    }
+                ], 
+                "gd$where": [
+                    {
+                        "valueString": "Sea View Pool Area (aft Lido Deck)"
+                    }
+                ], 
+                "updated": {
+                    "$t": "2012-02-04T01:15:22.000-05:00"
+                }, 
+                "gCal$guestsCanSeeGuests": {
+                    "value": "true"
+                }, 
+                "title": {
+                    "$t": "You Know, Just Chillin' by the Sea View Pool", 
+                    "type": "text"
+                }, 
+                "gd$recurrence": {
+                    "$t": "DTSTART;TZID=America/New_York:20120220T220000\r\nDTEND;TZID=America/New_York:20120220T230000\r\nRRULE:FREQ=DAILY;COUNT=6\r\nBEGIN:VTIMEZONE\r\nTZID:America/New_York\r\nX-LIC-LOCATION:America/New_York\r\nBEGIN:DAYLIGHT\r\nTZOFFSETFROM:-0500\r\nTZOFFSETTO:-0400\r\nTZNAME:EDT\r\nDTSTART:19700308T020000\r\nRRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU\r\nEND:DAYLIGHT\r\nBEGIN:STANDARD\r\nTZOFFSETFROM:-0400\r\nTZOFFSETTO:-0500\r\nTZNAME:EST\r\nDTSTART:19701101T020000\r\nRRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU\r\nEND:STANDARD\r\nEND:VTIMEZONE\r\n"
+                }, 
+                "gd$transparency": {
+                    "value": "http://schemas.google.com/g/2005#event.opaque"
+                }, 
+                "author": [
+                    {
+                        "name": {
+                            "$t": "JoCo Cruise Crazy 2 Events Calendar"
+                        }
+                    }
+                ], 
+                "gd$eventStatus": {
+                    "value": "http://schemas.google.com/g/2005#event.confirmed"
+                }, 
+                "gCal$uid": {
+                    "value": "kfrr1qbd1ott34rtisj0v0tmik@google.com"
+                }, 
+                "content": {
+                    "$t": "We are making the Sea View Pool Deck our unofficial \"hangin' out\" area after dinner, on nights when we don't have any other events planned (weather permitting).", 
+                    "type": "text"
+                }, 
+                "gCal$guestsCanModify": {
+                    "value": "false"
+                }, 
+                "gCal$guestsCanInviteOthers": {
+                    "value": "true"
+                }, 
+                "gd$who": [
+                    {
+                        "email": "nh76o8dgn9d86b7n3p3uofg1q0@group.calendar.google.com", 
+                        "rel": "http://schemas.google.com/g/2005#event.organizer", 
+                        "valueString": "JoCo Cruise Crazy 2 Events Calendar"
+                    }
+                ], 
+                "link": [
+                    {
+                        "href": "http://www.google.com/calendar/event?eid=a2ZycjFxYmQxb3R0MzRydGlzajB2MHRtaWtfMjAxMjAyMjFUMDMwMDAwWiBuaDc2bzhkZ245ZDg2YjduM3AzdW9mZzFxMEBn", 
+                        "type": "text/html", 
+                        "rel": "alternate", 
+                        "title": "alternate"
+                    }, 
+                    {
+                        "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/kfrr1qbd1ott34rtisj0v0tmik", 
+                        "type": "application/atom+xml", 
+                        "rel": "self"
+                    }
+                ], 
+                "published": {
+                    "$t": "2012-02-03T21:59:56.000-05:00"
+                }, 
+                "gCal$anyoneCanAddSelf": {
+                    "value": "false"
+                }, 
+                "gd$when": [
+                    {
+                        "endTime": "2012-02-20T23:00:00.000-05:00", 
+                        "startTime": "2012-02-20T22:00:00.000-05:00"
+                    }, 
+                    {
+                        "endTime": "2012-02-21T23:00:00.000-05:00", 
+                        "startTime": "2012-02-21T22:00:00.000-05:00"
+                    }, 
+                    {
+                        "endTime": "2012-02-22T23:00:00.000-05:00", 
+                        "startTime": "2012-02-22T22:00:00.000-05:00"
+                    }, 
+                    {
+                        "endTime": "2012-02-23T23:00:00.000-05:00", 
+                        "startTime": "2012-02-23T22:00:00.000-05:00"
+                    }, 
+                    {
+                        "endTime": "2012-02-24T23:00:00.000-05:00", 
+                        "startTime": "2012-02-24T22:00:00.000-05:00"
+                    }, 
+                    {
+                        "endTime": "2012-02-25T23:00:00.000-05:00", 
+                        "startTime": "2012-02-25T22:00:00.000-05:00"
+                    }
+                ], 
+                "gCal$sequence": {
+                    "value": 1
+                }, 
+                "id": {
+                    "$t": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/kfrr1qbd1ott34rtisj0v0tmik"
+                }
+            }, 
+            {
+                "category": [
+                    {
+                        "term": "http://schemas.google.com/g/2005#event", 
+                        "scheme": "http://schemas.google.com/g/2005#kind"
+                    }
+                ], 
+                "gd$where": [
+                    {
+                        "valueString": "Culinary Arts Center/Queens Lounge"
+                    }
+                ], 
+                "updated": {
+                    "$t": "2012-02-04T00:41:13.000-05:00"
+                }, 
+                "gCal$guestsCanSeeGuests": {
+                    "value": "true"
+                }, 
+                "gd$comments": {
+                    "gd$feedLink": {
+                        "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/hk9p4erbrva83p21bthogdjgk8_20120221T040000Z/comments"
+                    }
+                }, 
+                "title": {
+                    "$t": "Joseph Scrimshaw and The Comedy of Doom; plus Movie Night", 
+                    "type": "text"
+                }, 
+                "gCal$guestsCanModify": {
+                    "value": "false"
+                }, 
+                "gd$transparency": {
+                    "value": "http://schemas.google.com/g/2005#event.opaque"
+                }, 
+                "author": [
+                    {
+                        "name": {
+                            "$t": "JoCo Cruise Crazy 2 Events Calendar"
+                        }
+                    }
+                ], 
+                "gd$eventStatus": {
+                    "value": "http://schemas.google.com/g/2005#event.confirmed"
+                }, 
+                "gCal$uid": {
+                    "value": "hk9p4erbrva83p21bthogdjgk8@google.com"
+                }, 
+                "content": {
+                    "$t": "Joseph Scrimshaw presents \"The Comedy of Doom\", in which he covers every major geek franchise and genre in less than an hour. Immediately following: Movie Night, wherein we all sit around and watch a movie. (What movie? YOU'LL JUST HAVE TO WAIT TO FIND OUT)", 
+                    "type": "text"
+                }, 
+                "gCal$guestsCanInviteOthers": {
+                    "value": "true"
+                }, 
+                "gd$who": [
+                    {
+                        "email": "nh76o8dgn9d86b7n3p3uofg1q0@group.calendar.google.com", 
+                        "rel": "http://schemas.google.com/g/2005#event.organizer", 
+                        "valueString": "JoCo Cruise Crazy 2 Events Calendar"
+                    }
+                ], 
+                "link": [
+                    {
+                        "href": "http://www.google.com/calendar/event?eid=aGs5cDRlcmJydmE4M3AyMWJ0aG9nZGpnazhfMjAxMjAyMjFUMDQwMDAwWiBuaDc2bzhkZ245ZDg2YjduM3AzdW9mZzFxMEBn", 
+                        "type": "text/html", 
+                        "rel": "alternate", 
+                        "title": "alternate"
+                    }, 
+                    {
+                        "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/hk9p4erbrva83p21bthogdjgk8_20120221T040000Z", 
+                        "type": "application/atom+xml", 
+                        "rel": "self"
+                    }
+                ], 
+                "published": {
+                    "$t": "2011-11-11T14:07:35.000-05:00"
+                }, 
+                "gCal$anyoneCanAddSelf": {
+                    "value": "false"
+                }, 
+                "gd$when": [
+                    {
+                        "endTime": "2012-02-21T02:00:00.000-05:00", 
+                        "startTime": "2012-02-20T23:00:00.000-05:00"
+                    }
+                ], 
+                "gd$originalEvent": {
+                    "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/hk9p4erbrva83p21bthogdjgk8", 
+                    "gd$when": {
+                        "startTime": "2012-02-20T23:00:00.000-05:00"
+                    }, 
+                    "id": "hk9p4erbrva83p21bthogdjgk8"
+                }, 
+                "gCal$sequence": {
+                    "value": 0
+                }, 
+                "id": {
+                    "$t": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/hk9p4erbrva83p21bthogdjgk8_20120221T040000Z"
+                }
+            }, 
+            {
+                "category": [
+                    {
+                        "term": "http://schemas.google.com/g/2005#event", 
+                        "scheme": "http://schemas.google.com/g/2005#kind"
+                    }
+                ], 
+                "gd$where": [
+                    {
+                        "valueString": "Vista Lounge"
+                    }
+                ], 
+                "updated": {
+                    "$t": "2012-02-04T00:43:09.000-05:00"
+                }, 
+                "gCal$guestsCanSeeGuests": {
+                    "value": "true"
+                }, 
+                "gd$comments": {
+                    "gd$feedLink": {
+                        "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/73d011tm03mmdov5dkt57q6qh8/comments"
+                    }
+                }, 
+                "title": {
+                    "$t": "Q&A with JoCo and the JCCC2 Performers", 
+                    "type": "text"
+                }, 
+                "gCal$guestsCanModify": {
+                    "value": "false"
+                }, 
+                "gd$transparency": {
+                    "value": "http://schemas.google.com/g/2005#event.opaque"
+                }, 
+                "author": [
+                    {
+                        "name": {
+                            "$t": "JoCo Cruise Crazy 2 Events Calendar"
+                        }
+                    }
+                ], 
+                "gd$eventStatus": {
+                    "value": "http://schemas.google.com/g/2005#event.confirmed"
+                }, 
+                "gCal$uid": {
+                    "value": "73d011tm03mmdov5dkt57q6qh8@google.com"
+                }, 
+                "content": {
+                    "$t": "Wake up early and ask your burning questions of Jonathan and the JCCC2 performers.", 
+                    "type": "text"
+                }, 
+                "gCal$guestsCanInviteOthers": {
+                    "value": "true"
+                }, 
+                "gd$who": [
+                    {
+                        "email": "nh76o8dgn9d86b7n3p3uofg1q0@group.calendar.google.com", 
+                        "rel": "http://schemas.google.com/g/2005#event.organizer", 
+                        "valueString": "JoCo Cruise Crazy 2 Events Calendar"
+                    }
+                ], 
+                "link": [
+                    {
+                        "href": "http://www.google.com/calendar/event?eid=NzNkMDExdG0wM21tZG92NWRrdDU3cTZxaDggbmg3Nm84ZGduOWQ4NmI3bjNwM3VvZmcxcTBAZw", 
+                        "type": "text/html", 
+                        "rel": "alternate", 
+                        "title": "alternate"
+                    }, 
+                    {
+                        "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/73d011tm03mmdov5dkt57q6qh8", 
+                        "type": "application/atom+xml", 
+                        "rel": "self"
+                    }
+                ], 
+                "published": {
+                    "$t": "2011-11-11T14:11:43.000-05:00"
+                }, 
+                "gCal$anyoneCanAddSelf": {
+                    "value": "false"
+                }, 
+                "gd$when": [
+                    {
+                        "endTime": "2012-02-21T10:50:00.000-05:00", 
+                        "startTime": "2012-02-21T09:00:00.000-05:00"
+                    }
+                ], 
+                "gCal$sequence": {
+                    "value": 0
+                }, 
+                "id": {
+                    "$t": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/73d011tm03mmdov5dkt57q6qh8"
+                }
+            }, 
+            {
+                "category": [
+                    {
+                        "term": "http://schemas.google.com/g/2005#event", 
+                        "scheme": "http://schemas.google.com/g/2005#kind"
+                    }
+                ], 
+                "gd$where": [
+                    {
+                        "valueString": "Vista Lounge"
+                    }
+                ], 
+                "updated": {
+                    "$t": "2012-02-04T00:43:15.000-05:00"
+                }, 
+                "gCal$guestsCanSeeGuests": {
+                    "value": "true"
+                }, 
+                "gd$comments": {
+                    "gd$feedLink": {
+                        "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/9p9ueqvvu0t9moajheeodo4ros/comments"
+                    }
+                }, 
+                "title": {
+                    "$t": "JCCC2 \"Official\" Group Photo", 
+                    "type": "text"
+                }, 
+                "gCal$guestsCanModify": {
+                    "value": "false"
+                }, 
+                "gd$transparency": {
+                    "value": "http://schemas.google.com/g/2005#event.opaque"
+                }, 
+                "author": [
+                    {
+                        "name": {
+                            "$t": "JoCo Cruise Crazy 2 Events Calendar"
+                        }
+                    }
+                ], 
+                "gd$eventStatus": {
+                    "value": "http://schemas.google.com/g/2005#event.confirmed"
+                }, 
+                "gCal$uid": {
+                    "value": "9p9ueqvvu0t9moajheeodo4ros@google.com"
+                }, 
+                "content": {
+                    "$t": "Gather in the Vista Lounge for the Official JCCC2 Group Photo, scheduled to be taken on the Westerdam bow (weather permitting)", 
+                    "type": "text"
+                }, 
+                "gCal$guestsCanInviteOthers": {
+                    "value": "true"
+                }, 
+                "gd$who": [
+                    {
+                        "email": "nh76o8dgn9d86b7n3p3uofg1q0@group.calendar.google.com", 
+                        "rel": "http://schemas.google.com/g/2005#event.organizer", 
+                        "valueString": "JoCo Cruise Crazy 2 Events Calendar"
+                    }
+                ], 
+                "link": [
+                    {
+                        "href": "http://www.google.com/calendar/event?eid=OXA5dWVxdnZ1MHQ5bW9hamhlZW9kbzRyb3Mgbmg3Nm84ZGduOWQ4NmI3bjNwM3VvZmcxcTBAZw", 
+                        "type": "text/html", 
+                        "rel": "alternate", 
+                        "title": "alternate"
+                    }, 
+                    {
+                        "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/9p9ueqvvu0t9moajheeodo4ros", 
+                        "type": "application/atom+xml", 
+                        "rel": "self"
+                    }
+                ], 
+                "published": {
+                    "$t": "2011-11-11T14:20:25.000-05:00"
+                }, 
+                "gCal$anyoneCanAddSelf": {
+                    "value": "false"
+                }, 
+                "gd$when": [
+                    {
+                        "endTime": "2012-02-21T12:00:00.000-05:00", 
+                        "startTime": "2012-02-21T11:00:00.000-05:00"
+                    }
+                ], 
+                "gCal$sequence": {
+                    "value": 0
+                }, 
+                "id": {
+                    "$t": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/9p9ueqvvu0t9moajheeodo4ros"
+                }
+            }, 
+            {
+                "category": [
+                    {
+                        "term": "http://schemas.google.com/g/2005#event", 
+                        "scheme": "http://schemas.google.com/g/2005#kind"
+                    }
+                ], 
+                "gd$where": [
+                    {
+                        "valueString": "One of the Pools"
+                    }
+                ], 
+                "updated": {
+                    "$t": "2012-02-04T12:27:50.000-05:00"
+                }, 
+                "gCal$guestsCanSeeGuests": {
+                    "value": "true"
+                }, 
+                "gd$comments": {
+                    "gd$feedLink": {
+                        "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/eg5vufdikks1sm05iog14fkf30/comments"
+                    }
+                }, 
+                "title": {
+                    "$t": "Hanging Out by One of the Pools, Probably", 
+                    "type": "text"
+                }, 
+                "gCal$guestsCanModify": {
+                    "value": "false"
+                }, 
+                "gd$transparency": {
+                    "value": "http://schemas.google.com/g/2005#event.opaque"
+                }, 
+                "author": [
+                    {
+                        "name": {
+                            "$t": "JoCo Cruise Crazy 2 Events Calendar"
+                        }
+                    }
+                ], 
+                "gd$eventStatus": {
+                    "value": "http://schemas.google.com/g/2005#event.confirmed"
+                }, 
+                "gCal$uid": {
+                    "value": "eg5vufdikks1sm05iog14fkf30@google.com"
+                }, 
+                "content": {
+                    "$t": "Probably.", 
+                    "type": "text"
+                }, 
+                "gCal$guestsCanInviteOthers": {
+                    "value": "true"
+                }, 
+                "gd$who": [
+                    {
+                        "email": "nh76o8dgn9d86b7n3p3uofg1q0@group.calendar.google.com", 
+                        "rel": "http://schemas.google.com/g/2005#event.organizer", 
+                        "valueString": "JoCo Cruise Crazy 2 Events Calendar"
+                    }
+                ], 
+                "link": [
+                    {
+                        "href": "http://www.google.com/calendar/event?eid=ZWc1dnVmZGlra3Mxc20wNWlvZzE0ZmtmMzAgbmg3Nm84ZGduOWQ4NmI3bjNwM3VvZmcxcTBAZw", 
+                        "type": "text/html", 
+                        "rel": "alternate", 
+                        "title": "alternate"
+                    }, 
+                    {
+                        "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/eg5vufdikks1sm05iog14fkf30", 
+                        "type": "application/atom+xml", 
+                        "rel": "self"
+                    }
+                ], 
+                "published": {
+                    "$t": "2012-02-04T12:27:50.000-05:00"
+                }, 
+                "gCal$anyoneCanAddSelf": {
+                    "value": "false"
+                }, 
+                "gd$when": [
+                    {
+                        "endTime": "2012-02-21T15:00:00.000-05:00", 
+                        "startTime": "2012-02-21T13:00:00.000-05:00"
+                    }
+                ], 
+                "gCal$sequence": {
+                    "value": 0
+                }, 
+                "id": {
+                    "$t": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/eg5vufdikks1sm05iog14fkf30"
+                }
+            }, 
+            {
+                "category": [
+                    {
+                        "term": "http://schemas.google.com/g/2005#event", 
+                        "scheme": "http://schemas.google.com/g/2005#kind"
+                    }
+                ], 
+                "gd$where": [
+                    {
+                        "valueString": "Vista Lounge"
+                    }
+                ], 
+                "updated": {
+                    "$t": "2012-02-04T00:41:29.000-05:00"
+                }, 
+                "gCal$guestsCanSeeGuests": {
+                    "value": "true"
+                }, 
+                "gd$comments": {
+                    "gd$feedLink": {
+                        "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/vr798q9lg87v8d5cdtluu9ktsc_20120221T213000Z/comments"
+                    }
+                }, 
+                "title": {
+                    "$t": "Concert: Marian Call & Paul F. Tompkins", 
+                    "type": "text"
+                }, 
+                "gCal$guestsCanModify": {
+                    "value": "false"
+                }, 
+                "gd$transparency": {
+                    "value": "http://schemas.google.com/g/2005#event.opaque"
+                }, 
+                "author": [
+                    {
+                        "name": {
+                            "$t": "JoCo Cruise Crazy 2 Events Calendar"
+                        }
+                    }
+                ], 
+                "gd$eventStatus": {
+                    "value": "http://schemas.google.com/g/2005#event.confirmed"
+                }, 
+                "gCal$uid": {
+                    "value": "vr798q9lg87v8d5cdtluu9ktsc@google.com"
+                }, 
+                "content": {
+                    "$t": "Concert: Marian Call & Paul F. Tompkins.", 
+                    "type": "text"
+                }, 
+                "gCal$guestsCanInviteOthers": {
+                    "value": "true"
+                }, 
+                "gd$who": [
+                    {
+                        "email": "nh76o8dgn9d86b7n3p3uofg1q0@group.calendar.google.com", 
+                        "rel": "http://schemas.google.com/g/2005#event.organizer", 
+                        "valueString": "JoCo Cruise Crazy 2 Events Calendar"
+                    }
+                ], 
+                "link": [
+                    {
+                        "href": "http://www.google.com/calendar/event?eid=dnI3OThxOWxnODd2OGQ1Y2R0bHV1OWt0c2NfMjAxMjAyMjFUMjEzMDAwWiBuaDc2bzhkZ245ZDg2YjduM3AzdW9mZzFxMEBn", 
+                        "type": "text/html", 
+                        "rel": "alternate", 
+                        "title": "alternate"
+                    }, 
+                    {
+                        "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/vr798q9lg87v8d5cdtluu9ktsc_20120221T213000Z", 
+                        "type": "application/atom+xml", 
+                        "rel": "self"
+                    }
+                ], 
+                "published": {
+                    "$t": "2011-11-11T14:14:48.000-05:00"
+                }, 
+                "gCal$anyoneCanAddSelf": {
+                    "value": "false"
+                }, 
+                "gd$when": [
+                    {
+                        "endTime": "2012-02-21T19:00:00.000-05:00", 
+                        "startTime": "2012-02-21T16:30:00.000-05:00"
+                    }
+                ], 
+                "gd$originalEvent": {
+                    "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/vr798q9lg87v8d5cdtluu9ktsc", 
+                    "gd$when": {
+                        "startTime": "2012-02-21T16:30:00.000-05:00"
+                    }, 
+                    "id": "vr798q9lg87v8d5cdtluu9ktsc"
+                }, 
+                "gCal$sequence": {
+                    "value": 3
+                }, 
+                "id": {
+                    "$t": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/vr798q9lg87v8d5cdtluu9ktsc_20120221T213000Z"
+                }
+            }, 
+            {
+                "category": [
+                    {
+                        "term": "http://schemas.google.com/g/2005#event", 
+                        "scheme": "http://schemas.google.com/g/2005#kind"
+                    }
+                ], 
+                "gd$where": [
+                    {
+                        "valueString": "Vista Dining Room (Upper and Lower Floors)"
+                    }
+                ], 
+                "updated": {
+                    "$t": "2012-02-04T01:19:56.000-05:00"
+                }, 
+                "gCal$guestsCanSeeGuests": {
+                    "value": "true"
+                }, 
+                "gd$comments": {
+                    "gd$feedLink": {
+                        "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/c4labvre368sq9cmrnp42ierkc_20120222T010000Z/comments"
+                    }
+                }, 
+                "title": {
+                    "$t": "Dinner - FORMAL", 
+                    "type": "text"
+                }, 
+                "gCal$guestsCanModify": {
+                    "value": "false"
+                }, 
+                "gd$transparency": {
+                    "value": "http://schemas.google.com/g/2005#event.opaque"
+                }, 
+                "author": [
+                    {
+                        "name": {
+                            "$t": "JoCo Cruise Crazy 2 Events Calendar"
+                        }
+                    }
+                ], 
+                "gd$eventStatus": {
+                    "value": "http://schemas.google.com/g/2005#event.confirmed"
+                }, 
+                "gCal$uid": {
+                    "value": "c4labvre368sq9cmrnp42ierkc@google.com"
+                }, 
+                "content": {
+                    "$t": "Om nom nom. NOTE: dress for dinner this evening is formal wear.", 
+                    "type": "text"
+                }, 
+                "gCal$guestsCanInviteOthers": {
+                    "value": "true"
+                }, 
+                "gd$who": [
+                    {
+                        "email": "nh76o8dgn9d86b7n3p3uofg1q0@group.calendar.google.com", 
+                        "rel": "http://schemas.google.com/g/2005#event.organizer", 
+                        "valueString": "JoCo Cruise Crazy 2 Events Calendar"
+                    }
+                ], 
+                "link": [
+                    {
+                        "href": "http://www.google.com/calendar/event?eid=YzRsYWJ2cmUzNjhzcTljbXJucDQyaWVya2NfMjAxMjAyMjJUMDEwMDAwWiBuaDc2bzhkZ245ZDg2YjduM3AzdW9mZzFxMEBn", 
+                        "type": "text/html", 
+                        "rel": "alternate", 
+                        "title": "alternate"
+                    }, 
+                    {
+                        "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/c4labvre368sq9cmrnp42ierkc_20120222T010000Z", 
+                        "type": "application/atom+xml", 
+                        "rel": "self"
+                    }
+                ], 
+                "published": {
+                    "$t": "2011-11-11T14:03:49.000-05:00"
+                }, 
+                "gCal$anyoneCanAddSelf": {
+                    "value": "false"
+                }, 
+                "gd$when": [
+                    {
+                        "endTime": "2012-02-21T22:00:00.000-05:00", 
+                        "startTime": "2012-02-21T20:00:00.000-05:00"
+                    }
+                ], 
+                "gd$originalEvent": {
+                    "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/c4labvre368sq9cmrnp42ierkc", 
+                    "gd$when": {
+                        "startTime": "2012-02-21T20:00:00.000-05:00"
+                    }, 
+                    "id": "c4labvre368sq9cmrnp42ierkc"
+                }, 
+                "gCal$sequence": {
+                    "value": 1
+                }, 
+                "id": {
+                    "$t": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/c4labvre368sq9cmrnp42ierkc_20120222T010000Z"
+                }
+            }, 
+            {
+                "category": [
+                    {
+                        "term": "http://schemas.google.com/g/2005#event", 
+                        "scheme": "http://schemas.google.com/g/2005#kind"
+                    }
+                ], 
+                "gd$where": [
+                    {
+                        "valueString": "Culinary Arts Center/Queens Lounge"
+                    }
+                ], 
+                "updated": {
+                    "$t": "2012-02-04T00:41:42.000-05:00"
+                }, 
+                "gCal$guestsCanSeeGuests": {
+                    "value": "true"
+                }, 
+                "gd$comments": {
+                    "gd$feedLink": {
+                        "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/hk9p4erbrva83p21bthogdjgk8_20120222T040000Z/comments"
+                    }
+                }, 
+                "title": {
+                    "$t": "JoCo Karaoke", 
+                    "type": "text"
+                }, 
+                "gCal$guestsCanModify": {
+                    "value": "false"
+                }, 
+                "gd$transparency": {
+                    "value": "http://schemas.google.com/g/2005#event.opaque"
+                }, 
+                "author": [
+                    {
+                        "name": {
+                            "$t": "JoCo Cruise Crazy 2 Events Calendar"
+                        }
+                    }
+                ], 
+                "gd$eventStatus": {
+                    "value": "http://schemas.google.com/g/2005#event.confirmed"
+                }, 
+                "gCal$uid": {
+                    "value": "hk9p4erbrva83p21bthogdjgk8@google.com"
+                }, 
+                "content": {
+                    "$t": "Come sing your favorite JoCo songs. And drink. And watch other people sing JoCo songs. And maybe drink some more.", 
+                    "type": "text"
+                }, 
+                "gCal$guestsCanInviteOthers": {
+                    "value": "true"
+                }, 
+                "gd$who": [
+                    {
+                        "email": "nh76o8dgn9d86b7n3p3uofg1q0@group.calendar.google.com", 
+                        "rel": "http://schemas.google.com/g/2005#event.organizer", 
+                        "valueString": "JoCo Cruise Crazy 2 Events Calendar"
+                    }
+                ], 
+                "link": [
+                    {
+                        "href": "http://www.google.com/calendar/event?eid=aGs5cDRlcmJydmE4M3AyMWJ0aG9nZGpnazhfMjAxMjAyMjJUMDQwMDAwWiBuaDc2bzhkZ245ZDg2YjduM3AzdW9mZzFxMEBn", 
+                        "type": "text/html", 
+                        "rel": "alternate", 
+                        "title": "alternate"
+                    }, 
+                    {
+                        "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/hk9p4erbrva83p21bthogdjgk8_20120222T040000Z", 
+                        "type": "application/atom+xml", 
+                        "rel": "self"
+                    }
+                ], 
+                "published": {
+                    "$t": "2011-11-11T14:07:35.000-05:00"
+                }, 
+                "gCal$anyoneCanAddSelf": {
+                    "value": "false"
+                }, 
+                "gd$when": [
+                    {
+                        "endTime": "2012-02-22T02:00:00.000-05:00", 
+                        "startTime": "2012-02-21T23:00:00.000-05:00"
+                    }
+                ], 
+                "gd$originalEvent": {
+                    "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/hk9p4erbrva83p21bthogdjgk8", 
+                    "gd$when": {
+                        "startTime": "2012-02-21T23:00:00.000-05:00"
+                    }, 
+                    "id": "hk9p4erbrva83p21bthogdjgk8"
+                }, 
+                "gCal$sequence": {
+                    "value": 0
+                }, 
+                "id": {
+                    "$t": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/hk9p4erbrva83p21bthogdjgk8_20120222T040000Z"
+                }
+            }, 
+            {
+                "category": [
+                    {
+                        "term": "http://schemas.google.com/g/2005#event", 
+                        "scheme": "http://schemas.google.com/g/2005#kind"
+                    }
+                ], 
+                "gd$where": [
+                    {
+                        "valueString": "Aruba"
+                    }
+                ], 
+                "updated": {
+                    "$t": "2012-02-04T01:20:42.000-05:00"
+                }, 
+                "gCal$guestsCanSeeGuests": {
+                    "value": "true"
+                }, 
+                "gd$comments": {
+                    "gd$feedLink": {
+                        "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/e0m6opofa3rj086c4ajrv6r8sc/comments"
+                    }
+                }, 
+                "title": {
+                    "$t": "Oranjestad", 
+                    "type": "text"
+                }, 
+                "gCal$guestsCanModify": {
+                    "value": "false"
+                }, 
+                "gd$transparency": {
+                    "value": "http://schemas.google.com/g/2005#event.opaque"
+                }, 
+                "author": [
+                    {
+                        "name": {
+                            "$t": "JoCo Cruise Crazy 2 Events Calendar"
+                        }
+                    }
+                ], 
+                "gd$eventStatus": {
+                    "value": "http://schemas.google.com/g/2005#event.confirmed"
+                }, 
+                "gCal$uid": {
+                    "value": "e0m6opofa3rj086c4ajrv6r8sc@google.com"
+                }, 
+                "content": {
+                    "$t": "Get off the boat and go see things, fer crying out loud!", 
+                    "type": "text"
+                }, 
+                "gCal$guestsCanInviteOthers": {
+                    "value": "true"
+                }, 
+                "gd$who": [
+                    {
+                        "email": "nh76o8dgn9d86b7n3p3uofg1q0@group.calendar.google.com", 
+                        "rel": "http://schemas.google.com/g/2005#event.organizer", 
+                        "valueString": "JoCo Cruise Crazy 2 Events Calendar"
+                    }
+                ], 
+                "link": [
+                    {
+                        "href": "http://www.google.com/calendar/event?eid=ZTBtNm9wb2ZhM3JqMDg2YzRhanJ2NnI4c2Mgbmg3Nm84ZGduOWQ4NmI3bjNwM3VvZmcxcTBAZw", 
+                        "type": "text/html", 
+                        "rel": "alternate", 
+                        "title": "alternate"
+                    }, 
+                    {
+                        "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/e0m6opofa3rj086c4ajrv6r8sc", 
+                        "type": "application/atom+xml", 
+                        "rel": "self"
+                    }
+                ], 
+                "published": {
+                    "$t": "2012-01-02T15:58:14.000-05:00"
+                }, 
+                "gCal$anyoneCanAddSelf": {
+                    "value": "false"
+                }, 
+                "gd$when": [
+                    {
+                        "endTime": "2012-02-22T23:00:00.000-05:00", 
+                        "startTime": "2012-02-22T13:00:00.000-05:00"
+                    }
+                ], 
+                "gCal$sequence": {
+                    "value": 0
+                }, 
+                "id": {
+                    "$t": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/e0m6opofa3rj086c4ajrv6r8sc"
+                }
+            }, 
+            {
+                "category": [
+                    {
+                        "term": "http://schemas.google.com/g/2005#event", 
+                        "scheme": "http://schemas.google.com/g/2005#kind"
+                    }
+                ], 
+                "gd$where": [
+                    {
+                        "valueString": "Culinary Arts Center/Queens Lounge"
+                    }
+                ], 
+                "updated": {
+                    "$t": "2012-02-04T12:55:35.000-05:00"
+                }, 
+                "gCal$guestsCanSeeGuests": {
+                    "value": "true"
+                }, 
+                "gd$comments": {
+                    "gd$feedLink": {
+                        "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/hk9p4erbrva83p21bthogdjgk8_20120223T040000Z/comments"
+                    }
+                }, 
+                "title": {
+                    "$t": "Dance Party 2: Flans Harder - with DJ Flans", 
+                    "type": "text"
+                }, 
+                "gCal$guestsCanModify": {
+                    "value": "false"
+                }, 
+                "gd$transparency": {
+                    "value": "http://schemas.google.com/g/2005#event.opaque"
+                }, 
+                "author": [
+                    {
+                        "name": {
+                            "$t": "JoCo Cruise Crazy 2 Events Calendar"
+                        }
+                    }
+                ], 
+                "gd$eventStatus": {
+                    "value": "http://schemas.google.com/g/2005#event.confirmed"
+                }, 
+                "gCal$uid": {
+                    "value": "hk9p4erbrva83p21bthogdjgk8@google.com"
+                }, 
+                "content": {
+                    "$t": "Answering all the unanswered questions leftover from the first dance party. DANCE MORE! OBEY! SUBMIT TO THE RHYTHM!", 
+                    "type": "text"
+                }, 
+                "gCal$guestsCanInviteOthers": {
+                    "value": "true"
+                }, 
+                "gd$who": [
+                    {
+                        "email": "nh76o8dgn9d86b7n3p3uofg1q0@group.calendar.google.com", 
+                        "rel": "http://schemas.google.com/g/2005#event.organizer", 
+                        "valueString": "JoCo Cruise Crazy 2 Events Calendar"
+                    }
+                ], 
+                "link": [
+                    {
+                        "href": "http://www.google.com/calendar/event?eid=aGs5cDRlcmJydmE4M3AyMWJ0aG9nZGpnazhfMjAxMjAyMjNUMDQwMDAwWiBuaDc2bzhkZ245ZDg2YjduM3AzdW9mZzFxMEBn", 
+                        "type": "text/html", 
+                        "rel": "alternate", 
+                        "title": "alternate"
+                    }, 
+                    {
+                        "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/hk9p4erbrva83p21bthogdjgk8_20120223T040000Z", 
+                        "type": "application/atom+xml", 
+                        "rel": "self"
+                    }
+                ], 
+                "published": {
+                    "$t": "2011-11-11T14:07:35.000-05:00"
+                }, 
+                "gCal$anyoneCanAddSelf": {
+                    "value": "false"
+                }, 
+                "gd$when": [
+                    {
+                        "endTime": "2012-02-23T02:00:00.000-05:00", 
+                        "startTime": "2012-02-22T23:00:00.000-05:00"
+                    }
+                ], 
+                "gd$originalEvent": {
+                    "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/hk9p4erbrva83p21bthogdjgk8", 
+                    "gd$when": {
+                        "startTime": "2012-02-22T23:00:00.000-05:00"
+                    }, 
+                    "id": "hk9p4erbrva83p21bthogdjgk8"
+                }, 
+                "gCal$sequence": {
+                    "value": 0
+                }, 
+                "id": {
+                    "$t": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/hk9p4erbrva83p21bthogdjgk8_20120223T040000Z"
+                }
+            }, 
+            {
+                "category": [
+                    {
+                        "term": "http://schemas.google.com/g/2005#event", 
+                        "scheme": "http://schemas.google.com/g/2005#kind"
+                    }
+                ], 
+                "gd$where": [
+                    {
+                        "valueString": "Curacao"
+                    }
+                ], 
+                "updated": {
+                    "$t": "2012-02-04T01:20:32.000-05:00"
+                }, 
+                "gCal$guestsCanSeeGuests": {
+                    "value": "true"
+                }, 
+                "gd$comments": {
+                    "gd$feedLink": {
+                        "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/tv2ge6cb086pev75truhtfmchc/comments"
+                    }
+                }, 
+                "title": {
+                    "$t": "Willemstad", 
+                    "type": "text"
+                }, 
+                "gCal$guestsCanModify": {
+                    "value": "false"
+                }, 
+                "gd$transparency": {
+                    "value": "http://schemas.google.com/g/2005#event.opaque"
+                }, 
+                "author": [
+                    {
+                        "name": {
+                            "$t": "JoCo Cruise Crazy 2 Events Calendar"
+                        }
+                    }
+                ], 
+                "gd$eventStatus": {
+                    "value": "http://schemas.google.com/g/2005#event.confirmed"
+                }, 
+                "gCal$uid": {
+                    "value": "tv2ge6cb086pev75truhtfmchc@google.com"
+                }, 
+                "content": {
+                    "$t": "Sun and things. Also, shopping.", 
+                    "type": "text"
+                }, 
+                "gCal$guestsCanInviteOthers": {
+                    "value": "true"
+                }, 
+                "gd$who": [
+                    {
+                        "email": "nh76o8dgn9d86b7n3p3uofg1q0@group.calendar.google.com", 
+                        "rel": "http://schemas.google.com/g/2005#event.organizer", 
+                        "valueString": "JoCo Cruise Crazy 2 Events Calendar"
+                    }
+                ], 
+                "link": [
+                    {
+                        "href": "http://www.google.com/calendar/event?eid=dHYyZ2U2Y2IwODZwZXY3NXRydWh0Zm1jaGMgbmg3Nm84ZGduOWQ4NmI3bjNwM3VvZmcxcTBAZw", 
+                        "type": "text/html", 
+                        "rel": "alternate", 
+                        "title": "alternate"
+                    }, 
+                    {
+                        "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/tv2ge6cb086pev75truhtfmchc", 
+                        "type": "application/atom+xml", 
+                        "rel": "self"
+                    }
+                ], 
+                "published": {
+                    "$t": "2012-01-02T15:59:27.000-05:00"
+                }, 
+                "gCal$anyoneCanAddSelf": {
+                    "value": "false"
+                }, 
+                "gd$when": [
+                    {
+                        "endTime": "2012-02-23T17:00:00.000-05:00", 
+                        "startTime": "2012-02-23T08:00:00.000-05:00"
+                    }
+                ], 
+                "gCal$sequence": {
+                    "value": 0
+                }, 
+                "id": {
+                    "$t": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/tv2ge6cb086pev75truhtfmchc"
+                }
+            }, 
+            {
+                "category": [
+                    {
+                        "term": "http://schemas.google.com/g/2005#event", 
+                        "scheme": "http://schemas.google.com/g/2005#kind"
+                    }
+                ], 
+                "gd$where": [
+                    {
+                        "valueString": "One of the Pools"
+                    }
+                ], 
+                "updated": {
+                    "$t": "2012-02-04T12:28:23.000-05:00"
+                }, 
+                "gCal$guestsCanSeeGuests": {
+                    "value": "true"
+                }, 
+                "gd$comments": {
+                    "gd$feedLink": {
+                        "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/a63br68uqrcqlus84t4lmb64go/comments"
+                    }
+                }, 
+                "title": {
+                    "$t": "Hanging Out by One of the Pools, Probably", 
+                    "type": "text"
+                }, 
+                "gCal$guestsCanModify": {
+                    "value": "false"
+                }, 
+                "gd$transparency": {
+                    "value": "http://schemas.google.com/g/2005#event.opaque"
+                }, 
+                "author": [
+                    {
+                        "name": {
+                            "$t": "JoCo Cruise Crazy 2 Events Calendar"
+                        }
+                    }
+                ], 
+                "gd$eventStatus": {
+                    "value": "http://schemas.google.com/g/2005#event.confirmed"
+                }, 
+                "gCal$uid": {
+                    "value": "a63br68uqrcqlus84t4lmb64go@google.com"
+                }, 
+                "content": {
+                    "$t": "Probably.", 
+                    "type": "text"
+                }, 
+                "gCal$guestsCanInviteOthers": {
+                    "value": "true"
+                }, 
+                "gd$who": [
+                    {
+                        "email": "nh76o8dgn9d86b7n3p3uofg1q0@group.calendar.google.com", 
+                        "rel": "http://schemas.google.com/g/2005#event.organizer", 
+                        "valueString": "JoCo Cruise Crazy 2 Events Calendar"
+                    }
+                ], 
+                "link": [
+                    {
+                        "href": "http://www.google.com/calendar/event?eid=YTYzYnI2OHVxcmNxbHVzODR0NGxtYjY0Z28gbmg3Nm84ZGduOWQ4NmI3bjNwM3VvZmcxcTBAZw", 
+                        "type": "text/html", 
+                        "rel": "alternate", 
+                        "title": "alternate"
+                    }, 
+                    {
+                        "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/a63br68uqrcqlus84t4lmb64go", 
+                        "type": "application/atom+xml", 
+                        "rel": "self"
+                    }
+                ], 
+                "published": {
+                    "$t": "2012-02-04T12:28:23.000-05:00"
+                }, 
+                "gCal$anyoneCanAddSelf": {
+                    "value": "false"
+                }, 
+                "gd$when": [
+                    {
+                        "endTime": "2012-02-24T15:00:00.000-05:00", 
+                        "startTime": "2012-02-23T13:00:00.000-05:00"
+                    }
+                ], 
+                "gCal$sequence": {
+                    "value": 0
+                }, 
+                "id": {
+                    "$t": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/a63br68uqrcqlus84t4lmb64go"
+                }
+            }, 
+            {
+                "category": [
+                    {
+                        "term": "http://schemas.google.com/g/2005#event", 
+                        "scheme": "http://schemas.google.com/g/2005#kind"
+                    }
+                ], 
+                "gd$where": [
+                    {
+                        "valueString": "One of the Pools"
+                    }
+                ], 
+                "updated": {
+                    "$t": "2012-02-04T12:28:05.000-05:00"
+                }, 
+                "gCal$guestsCanSeeGuests": {
+                    "value": "true"
+                }, 
+                "gd$comments": {
+                    "gd$feedLink": {
+                        "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/b9vic90ijcfgjri0s49l5rrro0/comments"
+                    }
+                }, 
+                "title": {
+                    "$t": "Hanging Out by One of the Pools, Probably", 
+                    "type": "text"
+                }, 
+                "gCal$guestsCanModify": {
+                    "value": "false"
+                }, 
+                "gd$transparency": {
+                    "value": "http://schemas.google.com/g/2005#event.opaque"
+                }, 
+                "author": [
+                    {
+                        "name": {
+                            "$t": "JoCo Cruise Crazy 2 Events Calendar"
+                        }
+                    }
+                ], 
+                "gd$eventStatus": {
+                    "value": "http://schemas.google.com/g/2005#event.confirmed"
+                }, 
+                "gCal$uid": {
+                    "value": "b9vic90ijcfgjri0s49l5rrro0@google.com"
+                }, 
+                "content": {
+                    "$t": "Probably.", 
+                    "type": "text"
+                }, 
+                "gCal$guestsCanInviteOthers": {
+                    "value": "true"
+                }, 
+                "gd$who": [
+                    {
+                        "email": "nh76o8dgn9d86b7n3p3uofg1q0@group.calendar.google.com", 
+                        "rel": "http://schemas.google.com/g/2005#event.organizer", 
+                        "valueString": "JoCo Cruise Crazy 2 Events Calendar"
+                    }
+                ], 
+                "link": [
+                    {
+                        "href": "http://www.google.com/calendar/event?eid=Yjl2aWM5MGlqY2ZnanJpMHM0OWw1cnJybzAgbmg3Nm84ZGduOWQ4NmI3bjNwM3VvZmcxcTBAZw", 
+                        "type": "text/html", 
+                        "rel": "alternate", 
+                        "title": "alternate"
+                    }, 
+                    {
+                        "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/b9vic90ijcfgjri0s49l5rrro0", 
+                        "type": "application/atom+xml", 
+                        "rel": "self"
+                    }
+                ], 
+                "published": {
+                    "$t": "2012-02-04T12:28:05.000-05:00"
+                }, 
+                "gCal$anyoneCanAddSelf": {
+                    "value": "false"
+                }, 
+                "gd$when": [
+                    {
+                        "endTime": "2012-02-23T15:00:00.000-05:00", 
+                        "startTime": "2012-02-23T13:00:00.000-05:00"
+                    }
+                ], 
+                "gCal$sequence": {
+                    "value": 0
+                }, 
+                "id": {
+                    "$t": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/b9vic90ijcfgjri0s49l5rrro0"
+                }
+            }, 
+            {
+                "category": [
+                    {
+                        "term": "http://schemas.google.com/g/2005#event", 
+                        "scheme": "http://schemas.google.com/g/2005#kind"
+                    }
+                ], 
+                "gd$where": [
+                    {
+                        "valueString": "Vista Lounge"
+                    }
+                ], 
+                "updated": {
+                    "$t": "2012-02-04T00:43:30.000-05:00"
+                }, 
+                "gCal$guestsCanSeeGuests": {
+                    "value": "true"
+                }, 
+                "gd$comments": {
+                    "gd$feedLink": {
+                        "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/vr798q9lg87v8d5cdtluu9ktsc_20120223T213000Z/comments"
+                    }
+                }, 
+                "title": {
+                    "$t": "Concert: Wil Wheaton & MC Frontalot", 
+                    "type": "text"
+                }, 
+                "gCal$guestsCanModify": {
+                    "value": "false"
+                }, 
+                "gd$transparency": {
+                    "value": "http://schemas.google.com/g/2005#event.opaque"
+                }, 
+                "author": [
+                    {
+                        "name": {
+                            "$t": "JoCo Cruise Crazy 2 Events Calendar"
+                        }
+                    }
+                ], 
+                "gd$eventStatus": {
+                    "value": "http://schemas.google.com/g/2005#event.confirmed"
+                }, 
+                "gCal$uid": {
+                    "value": "vr798q9lg87v8d5cdtluu9ktsc@google.com"
+                }, 
+                "content": {
+                    "$t": "Concert: Wil Wheaton & MC Frontalot.", 
+                    "type": "text"
+                }, 
+                "gCal$guestsCanInviteOthers": {
+                    "value": "true"
+                }, 
+                "gd$who": [
+                    {
+                        "email": "nh76o8dgn9d86b7n3p3uofg1q0@group.calendar.google.com", 
+                        "rel": "http://schemas.google.com/g/2005#event.organizer", 
+                        "valueString": "JoCo Cruise Crazy 2 Events Calendar"
+                    }
+                ], 
+                "link": [
+                    {
+                        "href": "http://www.google.com/calendar/event?eid=dnI3OThxOWxnODd2OGQ1Y2R0bHV1OWt0c2NfMjAxMjAyMjNUMjEzMDAwWiBuaDc2bzhkZ245ZDg2YjduM3AzdW9mZzFxMEBn", 
+                        "type": "text/html", 
+                        "rel": "alternate", 
+                        "title": "alternate"
+                    }, 
+                    {
+                        "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/vr798q9lg87v8d5cdtluu9ktsc_20120223T213000Z", 
+                        "type": "application/atom+xml", 
+                        "rel": "self"
+                    }
+                ], 
+                "published": {
+                    "$t": "2011-11-11T14:14:48.000-05:00"
+                }, 
+                "gCal$anyoneCanAddSelf": {
+                    "value": "false"
+                }, 
+                "gd$when": [
+                    {
+                        "endTime": "2012-02-23T19:00:00.000-05:00", 
+                        "startTime": "2012-02-23T17:00:00.000-05:00"
+                    }
+                ], 
+                "gd$originalEvent": {
+                    "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/vr798q9lg87v8d5cdtluu9ktsc", 
+                    "gd$when": {
+                        "startTime": "2012-02-23T16:30:00.000-05:00"
+                    }, 
+                    "id": "vr798q9lg87v8d5cdtluu9ktsc"
+                }, 
+                "gCal$sequence": {
+                    "value": 4
+                }, 
+                "id": {
+                    "$t": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/vr798q9lg87v8d5cdtluu9ktsc_20120223T213000Z"
+                }
+            }, 
+            {
+                "category": [
+                    {
+                        "term": "http://schemas.google.com/g/2005#event", 
+                        "scheme": "http://schemas.google.com/g/2005#kind"
+                    }
+                ], 
+                "gd$where": [
+                    {
+                        "valueString": "Culinary Arts Center/Queens Lounge"
+                    }
+                ], 
+                "updated": {
+                    "$t": "2012-02-04T01:11:27.000-05:00"
+                }, 
+                "gCal$guestsCanSeeGuests": {
+                    "value": "true"
+                }, 
+                "gd$comments": {
+                    "gd$feedLink": {
+                        "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/hk9p4erbrva83p21bthogdjgk8_20120224T040000Z/comments"
+                    }
+                }, 
+                "title": {
+                    "$t": "A Night at the Empty Orchestra: The Rees/Tompkins Karaoke Invitational", 
+                    "type": "text"
+                }, 
+                "gCal$guestsCanModify": {
+                    "value": "false"
+                }, 
+                "gd$transparency": {
+                    "value": "http://schemas.google.com/g/2005#event.opaque"
+                }, 
+                "author": [
+                    {
+                        "name": {
+                            "$t": "JoCo Cruise Crazy 2 Events Calendar"
+                        }
+                    }
+                ], 
+                "gd$eventStatus": {
+                    "value": "http://schemas.google.com/g/2005#event.confirmed"
+                }, 
+                "gCal$uid": {
+                    "value": "hk9p4erbrva83p21bthogdjgk8@google.com"
+                }, 
+                "content": {
+                    "$t": "David Rees and Paul F. Tompkins host an epic evening of regular (i.e., non-JoCo) karaoke.", 
+                    "type": "text"
+                }, 
+                "gCal$guestsCanInviteOthers": {
+                    "value": "true"
+                }, 
+                "gd$who": [
+                    {
+                        "email": "nh76o8dgn9d86b7n3p3uofg1q0@group.calendar.google.com", 
+                        "rel": "http://schemas.google.com/g/2005#event.organizer", 
+                        "valueString": "JoCo Cruise Crazy 2 Events Calendar"
+                    }
+                ], 
+                "link": [
+                    {
+                        "href": "http://www.google.com/calendar/event?eid=aGs5cDRlcmJydmE4M3AyMWJ0aG9nZGpnazhfMjAxMjAyMjRUMDQwMDAwWiBuaDc2bzhkZ245ZDg2YjduM3AzdW9mZzFxMEBn", 
+                        "type": "text/html", 
+                        "rel": "alternate", 
+                        "title": "alternate"
+                    }, 
+                    {
+                        "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/hk9p4erbrva83p21bthogdjgk8_20120224T040000Z", 
+                        "type": "application/atom+xml", 
+                        "rel": "self"
+                    }
+                ], 
+                "published": {
+                    "$t": "2011-11-11T14:07:35.000-05:00"
+                }, 
+                "gCal$anyoneCanAddSelf": {
+                    "value": "false"
+                }, 
+                "gd$when": [
+                    {
+                        "endTime": "2012-02-24T02:00:00.000-05:00", 
+                        "startTime": "2012-02-23T23:00:00.000-05:00"
+                    }
+                ], 
+                "gd$originalEvent": {
+                    "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/hk9p4erbrva83p21bthogdjgk8", 
+                    "gd$when": {
+                        "startTime": "2012-02-23T23:00:00.000-05:00"
+                    }, 
+                    "id": "hk9p4erbrva83p21bthogdjgk8"
+                }, 
+                "gCal$sequence": {
+                    "value": 0
+                }, 
+                "id": {
+                    "$t": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/hk9p4erbrva83p21bthogdjgk8_20120224T040000Z"
+                }
+            }, 
+            {
+                "category": [
+                    {
+                        "term": "http://schemas.google.com/g/2005#event", 
+                        "scheme": "http://schemas.google.com/g/2005#kind"
+                    }
+                ], 
+                "gd$where": [
+                    {
+                        "valueString": "Vista Lounge"
+                    }
+                ], 
+                "updated": {
+                    "$t": "2012-02-14T00:54:13.000-05:00"
+                }, 
+                "gCal$guestsCanSeeGuests": {
+                    "value": "true"
+                }, 
+                "gd$comments": {
+                    "gd$feedLink": {
+                        "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/9d5gfrc4m3is4ulbuu9qktjac4/comments"
+                    }
+                }, 
+                "title": {
+                    "$t": "Concert: David Rees &Vi Hart", 
+                    "type": "text"
+                }, 
+                "gCal$guestsCanModify": {
+                    "value": "false"
+                }, 
+                "gd$transparency": {
+                    "value": "http://schemas.google.com/g/2005#event.opaque"
+                }, 
+                "author": [
+                    {
+                        "name": {
+                            "$t": "JoCo Cruise Crazy 2 Events Calendar"
+                        }
+                    }
+                ], 
+                "gd$eventStatus": {
+                    "value": "http://schemas.google.com/g/2005#event.confirmed"
+                }, 
+                "gCal$uid": {
+                    "value": "9d5gfrc4m3is4ulbuu9qktjac4@google.com"
+                }, 
+                "content": {
+                    "$t": "Concert: David Rees & Vi Hart.", 
+                    "type": "text"
+                }, 
+                "gCal$guestsCanInviteOthers": {
+                    "value": "true"
+                }, 
+                "gd$who": [
+                    {
+                        "email": "nh76o8dgn9d86b7n3p3uofg1q0@group.calendar.google.com", 
+                        "rel": "http://schemas.google.com/g/2005#event.organizer", 
+                        "valueString": "JoCo Cruise Crazy 2 Events Calendar"
+                    }
+                ], 
+                "link": [
+                    {
+                        "href": "http://www.google.com/calendar/event?eid=OWQ1Z2ZyYzRtM2lzNHVsYnV1OXFrdGphYzQgbmg3Nm84ZGduOWQ4NmI3bjNwM3VvZmcxcTBAZw", 
+                        "type": "text/html", 
+                        "rel": "alternate", 
+                        "title": "alternate"
+                    }, 
+                    {
+                        "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/9d5gfrc4m3is4ulbuu9qktjac4", 
+                        "type": "application/atom+xml", 
+                        "rel": "self"
+                    }
+                ], 
+                "published": {
+                    "$t": "2011-11-11T14:10:41.000-05:00"
+                }, 
+                "gCal$anyoneCanAddSelf": {
+                    "value": "false"
+                }, 
+                "gd$when": [
+                    {
+                        "endTime": "2012-02-24T10:50:00.000-05:00", 
+                        "startTime": "2012-02-24T09:30:00.000-05:00"
+                    }
+                ], 
+                "gCal$sequence": {
+                    "value": 1
+                }, 
+                "id": {
+                    "$t": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/9d5gfrc4m3is4ulbuu9qktjac4"
+                }
+            }, 
+            {
+                "category": [
+                    {
+                        "term": "http://schemas.google.com/g/2005#event", 
+                        "scheme": "http://schemas.google.com/g/2005#kind"
+                    }
+                ], 
+                "gd$where": [
+                    {
+                        "valueString": "One of the Pools"
+                    }
+                ], 
+                "updated": {
+                    "$t": "2012-02-04T12:29:09.000-05:00"
+                }, 
+                "gCal$guestsCanSeeGuests": {
+                    "value": "true"
+                }, 
+                "gd$comments": {
+                    "gd$feedLink": {
+                        "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/75svitlpf5d7sc49p54od2o8ng/comments"
+                    }
+                }, 
+                "title": {
+                    "$t": "Hanging Out by One of the Pools, Probably", 
+                    "type": "text"
+                }, 
+                "gCal$guestsCanModify": {
+                    "value": "false"
+                }, 
+                "gd$transparency": {
+                    "value": "http://schemas.google.com/g/2005#event.opaque"
+                }, 
+                "author": [
+                    {
+                        "name": {
+                            "$t": "JoCo Cruise Crazy 2 Events Calendar"
+                        }
+                    }
+                ], 
+                "gd$eventStatus": {
+                    "value": "http://schemas.google.com/g/2005#event.confirmed"
+                }, 
+                "gCal$uid": {
+                    "value": "75svitlpf5d7sc49p54od2o8ng@google.com"
+                }, 
+                "content": {
+                    "$t": "Probably.", 
+                    "type": "text"
+                }, 
+                "gCal$guestsCanInviteOthers": {
+                    "value": "true"
+                }, 
+                "gd$who": [
+                    {
+                        "email": "nh76o8dgn9d86b7n3p3uofg1q0@group.calendar.google.com", 
+                        "rel": "http://schemas.google.com/g/2005#event.organizer", 
+                        "valueString": "JoCo Cruise Crazy 2 Events Calendar"
+                    }
+                ], 
+                "link": [
+                    {
+                        "href": "http://www.google.com/calendar/event?eid=NzVzdml0bHBmNWQ3c2M0OXA1NG9kMm84bmcgbmg3Nm84ZGduOWQ4NmI3bjNwM3VvZmcxcTBAZw", 
+                        "type": "text/html", 
+                        "rel": "alternate", 
+                        "title": "alternate"
+                    }, 
+                    {
+                        "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/75svitlpf5d7sc49p54od2o8ng", 
+                        "type": "application/atom+xml", 
+                        "rel": "self"
+                    }
+                ], 
+                "published": {
+                    "$t": "2012-02-04T12:29:09.000-05:00"
+                }, 
+                "gCal$anyoneCanAddSelf": {
+                    "value": "false"
+                }, 
+                "gd$when": [
+                    {
+                        "endTime": "2012-02-24T15:00:00.000-05:00", 
+                        "startTime": "2012-02-24T13:00:00.000-05:00"
+                    }
+                ], 
+                "gCal$sequence": {
+                    "value": 0
+                }, 
+                "id": {
+                    "$t": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/75svitlpf5d7sc49p54od2o8ng"
+                }
+            }, 
+            {
+                "category": [
+                    {
+                        "term": "http://schemas.google.com/g/2005#event", 
+                        "scheme": "http://schemas.google.com/g/2005#kind"
+                    }
+                ], 
+                "gd$where": [
+                    {
+                        "valueString": "Lido Pool Area (Lido Deck midships)"
+                    }
+                ], 
+                "updated": {
+                    "$t": "2012-02-04T01:16:52.000-05:00"
+                }, 
+                "gCal$guestsCanSeeGuests": {
+                    "value": "true"
+                }, 
+                "gd$comments": {
+                    "gd$feedLink": {
+                        "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/0iiku0duka1o2h379ifpv6jssc/comments"
+                    }
+                }, 
+                "title": {
+                    "$t": "Mollystock 2: Molly Lewis Poolside Concert", 
+                    "type": "text"
+                }, 
+                "gCal$guestsCanModify": {
+                    "value": "false"
+                }, 
+                "gd$transparency": {
+                    "value": "http://schemas.google.com/g/2005#event.opaque"
+                }, 
+                "author": [
+                    {
+                        "name": {
+                            "$t": "JoCo Cruise Crazy 2 Events Calendar"
+                        }
+                    }
+                ], 
+                "gd$eventStatus": {
+                    "value": "http://schemas.google.com/g/2005#event.confirmed"
+                }, 
+                "gCal$uid": {
+                    "value": "0iiku0duka1o2h379ifpv6jssc@google.com"
+                }, 
+                "content": {
+                    "$t": "Come sit around (and IN) the Lido Pool while Molly Lewis performs in concert, \"ninja gig\"-style. There may be ukulele jams and/or cannonballs.", 
+                    "type": "text"
+                }, 
+                "gCal$guestsCanInviteOthers": {
+                    "value": "true"
+                }, 
+                "gd$who": [
+                    {
+                        "email": "nh76o8dgn9d86b7n3p3uofg1q0@group.calendar.google.com", 
+                        "rel": "http://schemas.google.com/g/2005#event.organizer", 
+                        "valueString": "JoCo Cruise Crazy 2 Events Calendar"
+                    }
+                ], 
+                "link": [
+                    {
+                        "href": "http://www.google.com/calendar/event?eid=MGlpa3UwZHVrYTFvMmgzNzlpZnB2Nmpzc2Mgbmg3Nm84ZGduOWQ4NmI3bjNwM3VvZmcxcTBAZw", 
+                        "type": "text/html", 
+                        "rel": "alternate", 
+                        "title": "alternate"
+                    }, 
+                    {
+                        "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/0iiku0duka1o2h379ifpv6jssc", 
+                        "type": "application/atom+xml", 
+                        "rel": "self"
+                    }
+                ], 
+                "published": {
+                    "$t": "2012-02-03T21:28:36.000-05:00"
+                }, 
+                "gCal$anyoneCanAddSelf": {
+                    "value": "false"
+                }, 
+                "gd$when": [
+                    {
+                        "endTime": "2012-02-24T15:00:00.000-05:00", 
+                        "startTime": "2012-02-24T14:30:00.000-05:00"
+                    }
+                ], 
+                "gCal$sequence": {
+                    "value": 0
+                }, 
+                "id": {
+                    "$t": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/0iiku0duka1o2h379ifpv6jssc"
+                }
+            }, 
+            {
+                "category": [
+                    {
+                        "term": "http://schemas.google.com/g/2005#event", 
+                        "scheme": "http://schemas.google.com/g/2005#kind"
+                    }
+                ], 
+                "gd$where": [
+                    {
+                        "valueString": "Vista Lounge"
+                    }
+                ], 
+                "updated": {
+                    "$t": "2012-02-04T00:44:55.000-05:00"
+                }, 
+                "gCal$guestsCanSeeGuests": {
+                    "value": "true"
+                }, 
+                "gd$comments": {
+                    "gd$feedLink": {
+                        "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/vr798q9lg87v8d5cdtluu9ktsc_20120224T213000Z/comments"
+                    }
+                }, 
+                "title": {
+                    "$t": "Concert: John Hodgman & John Roderick", 
+                    "type": "text"
+                }, 
+                "gCal$guestsCanModify": {
+                    "value": "false"
+                }, 
+                "gd$transparency": {
+                    "value": "http://schemas.google.com/g/2005#event.opaque"
+                }, 
+                "author": [
+                    {
+                        "name": {
+                            "$t": "JoCo Cruise Crazy 2 Events Calendar"
+                        }
+                    }
+                ], 
+                "gd$eventStatus": {
+                    "value": "http://schemas.google.com/g/2005#event.confirmed"
+                }, 
+                "gCal$uid": {
+                    "value": "vr798q9lg87v8d5cdtluu9ktsc@google.com"
+                }, 
+                "content": {
+                    "$t": "Concert: John Hodgman & John Roderick.", 
+                    "type": "text"
+                }, 
+                "gCal$guestsCanInviteOthers": {
+                    "value": "true"
+                }, 
+                "gd$who": [
+                    {
+                        "email": "nh76o8dgn9d86b7n3p3uofg1q0@group.calendar.google.com", 
+                        "rel": "http://schemas.google.com/g/2005#event.organizer", 
+                        "valueString": "JoCo Cruise Crazy 2 Events Calendar"
+                    }
+                ], 
+                "link": [
+                    {
+                        "href": "http://www.google.com/calendar/event?eid=dnI3OThxOWxnODd2OGQ1Y2R0bHV1OWt0c2NfMjAxMjAyMjRUMjEzMDAwWiBuaDc2bzhkZ245ZDg2YjduM3AzdW9mZzFxMEBn", 
+                        "type": "text/html", 
+                        "rel": "alternate", 
+                        "title": "alternate"
+                    }, 
+                    {
+                        "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/vr798q9lg87v8d5cdtluu9ktsc_20120224T213000Z", 
+                        "type": "application/atom+xml", 
+                        "rel": "self"
+                    }
+                ], 
+                "published": {
+                    "$t": "2011-11-11T14:14:48.000-05:00"
+                }, 
+                "gCal$anyoneCanAddSelf": {
+                    "value": "false"
+                }, 
+                "gd$when": [
+                    {
+                        "endTime": "2012-02-24T19:00:00.000-05:00", 
+                        "startTime": "2012-02-24T16:30:00.000-05:00"
+                    }
+                ], 
+                "gd$originalEvent": {
+                    "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/vr798q9lg87v8d5cdtluu9ktsc", 
+                    "gd$when": {
+                        "startTime": "2012-02-24T16:30:00.000-05:00"
+                    }, 
+                    "id": "vr798q9lg87v8d5cdtluu9ktsc"
+                }, 
+                "gCal$sequence": {
+                    "value": 3
+                }, 
+                "id": {
+                    "$t": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/vr798q9lg87v8d5cdtluu9ktsc_20120224T213000Z"
+                }
+            }, 
+            {
+                "category": [
+                    {
+                        "term": "http://schemas.google.com/g/2005#event", 
+                        "scheme": "http://schemas.google.com/g/2005#kind"
+                    }
+                ], 
+                "gd$where": [
+                    {
+                        "valueString": "Vista Dining Room (Upper and Lower Floors)"
+                    }
+                ], 
+                "updated": {
+                    "$t": "2012-02-04T01:19:17.000-05:00"
+                }, 
+                "gCal$guestsCanSeeGuests": {
+                    "value": "true"
+                }, 
+                "gd$comments": {
+                    "gd$feedLink": {
+                        "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/c4labvre368sq9cmrnp42ierkc_20120225T010000Z/comments"
+                    }
+                }, 
+                "title": {
+                    "$t": "Dinner - FORMAL", 
+                    "type": "text"
+                }, 
+                "gCal$guestsCanModify": {
+                    "value": "false"
+                }, 
+                "gd$transparency": {
+                    "value": "http://schemas.google.com/g/2005#event.opaque"
+                }, 
+                "author": [
+                    {
+                        "name": {
+                            "$t": "JoCo Cruise Crazy 2 Events Calendar"
+                        }
+                    }
+                ], 
+                "gd$eventStatus": {
+                    "value": "http://schemas.google.com/g/2005#event.confirmed"
+                }, 
+                "gCal$uid": {
+                    "value": "c4labvre368sq9cmrnp42ierkc@google.com"
+                }, 
+                "content": {
+                    "$t": "Om nom nom. NOTE: Dress for dinner this evening is formal wear.", 
+                    "type": "text"
+                }, 
+                "gCal$guestsCanInviteOthers": {
+                    "value": "true"
+                }, 
+                "gd$who": [
+                    {
+                        "email": "nh76o8dgn9d86b7n3p3uofg1q0@group.calendar.google.com", 
+                        "rel": "http://schemas.google.com/g/2005#event.organizer", 
+                        "valueString": "JoCo Cruise Crazy 2 Events Calendar"
+                    }
+                ], 
+                "link": [
+                    {
+                        "href": "http://www.google.com/calendar/event?eid=YzRsYWJ2cmUzNjhzcTljbXJucDQyaWVya2NfMjAxMjAyMjVUMDEwMDAwWiBuaDc2bzhkZ245ZDg2YjduM3AzdW9mZzFxMEBn", 
+                        "type": "text/html", 
+                        "rel": "alternate", 
+                        "title": "alternate"
+                    }, 
+                    {
+                        "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/c4labvre368sq9cmrnp42ierkc_20120225T010000Z", 
+                        "type": "application/atom+xml", 
+                        "rel": "self"
+                    }
+                ], 
+                "published": {
+                    "$t": "2011-11-11T14:03:49.000-05:00"
+                }, 
+                "gCal$anyoneCanAddSelf": {
+                    "value": "false"
+                }, 
+                "gd$when": [
+                    {
+                        "endTime": "2012-02-24T22:00:00.000-05:00", 
+                        "startTime": "2012-02-24T20:00:00.000-05:00"
+                    }
+                ], 
+                "gd$originalEvent": {
+                    "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/c4labvre368sq9cmrnp42ierkc", 
+                    "gd$when": {
+                        "startTime": "2012-02-24T20:00:00.000-05:00"
+                    }, 
+                    "id": "c4labvre368sq9cmrnp42ierkc"
+                }, 
+                "gCal$sequence": {
+                    "value": 1
+                }, 
+                "id": {
+                    "$t": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/c4labvre368sq9cmrnp42ierkc_20120225T010000Z"
+                }
+            }, 
+            {
+                "category": [
+                    {
+                        "term": "http://schemas.google.com/g/2005#event", 
+                        "scheme": "http://schemas.google.com/g/2005#kind"
+                    }
+                ], 
+                "gd$where": [
+                    {
+                        "valueString": "Sea View Pool Area (aft Lido Deck)"
+                    }
+                ], 
+                "updated": {
+                    "$t": "2012-02-04T01:18:17.000-05:00"
+                }, 
+                "gCal$guestsCanSeeGuests": {
+                    "value": "true"
+                }, 
+                "gd$comments": {
+                    "gd$feedLink": {
+                        "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/rna7irutkk6al7j0jt31l7mfks/comments"
+                    }
+                }, 
+                "title": {
+                    "$t": "The 2nd Annual Paul F. Tompkins Memorial Moustache Formal and Feztravaganza", 
+                    "type": "text"
+                }, 
+                "gCal$guestsCanModify": {
+                    "value": "false"
+                }, 
+                "gd$transparency": {
+                    "value": "http://schemas.google.com/g/2005#event.opaque"
+                }, 
+                "author": [
+                    {
+                        "name": {
+                            "$t": "JoCo Cruise Crazy 2 Events Calendar"
+                        }
+                    }
+                ], 
+                "gd$eventStatus": {
+                    "value": "http://schemas.google.com/g/2005#event.confirmed"
+                }, 
+                "gCal$uid": {
+                    "value": "rna7irutkk6al7j0jt31l7mfks@google.com"
+                }, 
+                "content": {
+                    "$t": "Paul F. Tompkins hosts this fancy, fancy event for fancy, fancy people and their moustaches and fezzes. Formal wear, moustaches, and fezzes optional; moustaches provided upon request.", 
+                    "type": "text"
+                }, 
+                "gCal$guestsCanInviteOthers": {
+                    "value": "true"
+                }, 
+                "gd$who": [
+                    {
+                        "email": "nh76o8dgn9d86b7n3p3uofg1q0@group.calendar.google.com", 
+                        "rel": "http://schemas.google.com/g/2005#event.organizer", 
+                        "valueString": "JoCo Cruise Crazy 2 Events Calendar"
+                    }
+                ], 
+                "link": [
+                    {
+                        "href": "http://www.google.com/calendar/event?eid=cm5hN2lydXRrazZhbDdqMGp0MzFsN21ma3Mgbmg3Nm84ZGduOWQ4NmI3bjNwM3VvZmcxcTBAZw", 
+                        "type": "text/html", 
+                        "rel": "alternate", 
+                        "title": "alternate"
+                    }, 
+                    {
+                        "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/rna7irutkk6al7j0jt31l7mfks", 
+                        "type": "application/atom+xml", 
+                        "rel": "self"
+                    }
+                ], 
+                "published": {
+                    "$t": "2012-01-02T16:01:39.000-05:00"
+                }, 
+                "gCal$anyoneCanAddSelf": {
+                    "value": "false"
+                }, 
+                "gd$when": [
+                    {
+                        "endTime": "2012-02-24T23:00:00.000-05:00", 
+                        "startTime": "2012-02-24T22:00:00.000-05:00"
+                    }
+                ], 
+                "gCal$sequence": {
+                    "value": 0
+                }, 
+                "id": {
+                    "$t": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/rna7irutkk6al7j0jt31l7mfks"
+                }
+            }, 
+            {
+                "category": [
+                    {
+                        "term": "http://schemas.google.com/g/2005#event", 
+                        "scheme": "http://schemas.google.com/g/2005#kind"
+                    }
+                ], 
+                "gd$where": [
+                    {
+                        "valueString": "Culinary Arts Center/Queens Lounge"
+                    }
+                ], 
+                "updated": {
+                    "$t": "2012-02-04T12:57:23.000-05:00"
+                }, 
+                "gCal$guestsCanSeeGuests": {
+                    "value": "true"
+                }, 
+                "gd$comments": {
+                    "gd$feedLink": {
+                        "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/hk9p4erbrva83p21bthogdjgk8_20120225T040000Z/comments"
+                    }
+                }, 
+                "title": {
+                    "$t": "Open Mic Night", 
+                    "type": "text"
+                }, 
+                "gCal$guestsCanModify": {
+                    "value": "false"
+                }, 
+                "gd$transparency": {
+                    "value": "http://schemas.google.com/g/2005#event.opaque"
+                }, 
+                "author": [
+                    {
+                        "name": {
+                            "$t": "JoCo Cruise Crazy 2 Events Calendar"
+                        }
+                    }
+                ], 
+                "gd$eventStatus": {
+                    "value": "http://schemas.google.com/g/2005#event.confirmed"
+                }, 
+                "gCal$uid": {
+                    "value": "hk9p4erbrva83p21bthogdjgk8@google.com"
+                }, 
+                "content": {
+                    "$t": "This is your chance to shine. Sing, dance, play, tell jokes, emote...come on out and show us what you've got. Guaranteed to be a 100% safe, supportive environment. (In other words, no jerks allowed) Please keep all performances to 5 minutes or less.", 
+                    "type": "text"
+                }, 
+                "gCal$guestsCanInviteOthers": {
+                    "value": "true"
+                }, 
+                "gd$who": [
+                    {
+                        "email": "nh76o8dgn9d86b7n3p3uofg1q0@group.calendar.google.com", 
+                        "rel": "http://schemas.google.com/g/2005#event.organizer", 
+                        "valueString": "JoCo Cruise Crazy 2 Events Calendar"
+                    }
+                ], 
+                "link": [
+                    {
+                        "href": "http://www.google.com/calendar/event?eid=aGs5cDRlcmJydmE4M3AyMWJ0aG9nZGpnazhfMjAxMjAyMjVUMDQwMDAwWiBuaDc2bzhkZ245ZDg2YjduM3AzdW9mZzFxMEBn", 
+                        "type": "text/html", 
+                        "rel": "alternate", 
+                        "title": "alternate"
+                    }, 
+                    {
+                        "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/hk9p4erbrva83p21bthogdjgk8_20120225T040000Z", 
+                        "type": "application/atom+xml", 
+                        "rel": "self"
+                    }
+                ], 
+                "published": {
+                    "$t": "2011-11-11T14:07:35.000-05:00"
+                }, 
+                "gCal$anyoneCanAddSelf": {
+                    "value": "false"
+                }, 
+                "gd$when": [
+                    {
+                        "endTime": "2012-02-25T02:00:00.000-05:00", 
+                        "startTime": "2012-02-24T23:00:00.000-05:00"
+                    }
+                ], 
+                "gd$originalEvent": {
+                    "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/hk9p4erbrva83p21bthogdjgk8", 
+                    "gd$when": {
+                        "startTime": "2012-02-24T23:00:00.000-05:00"
+                    }, 
+                    "id": "hk9p4erbrva83p21bthogdjgk8"
+                }, 
+                "gCal$sequence": {
+                    "value": 0
+                }, 
+                "id": {
+                    "$t": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/hk9p4erbrva83p21bthogdjgk8_20120225T040000Z"
+                }
+            }, 
+            {
+                "category": [
+                    {
+                        "term": "http://schemas.google.com/g/2005#event", 
+                        "scheme": "http://schemas.google.com/g/2005#kind"
+                    }
+                ], 
+                "gd$where": [
+                    {
+                        "valueString": "Vista Lounge"
+                    }
+                ], 
+                "updated": {
+                    "$t": "2012-02-14T00:56:11.000-05:00"
+                }, 
+                "gCal$guestsCanSeeGuests": {
+                    "value": "true"
+                }, 
+                "gd$comments": {
+                    "gd$feedLink": {
+                        "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/c0olt7atajif25g10c9fscdlbs/comments"
+                    }
+                }, 
+                "title": {
+                    "$t": "LIVE PODCAST: Paul and Storm", 
+                    "type": "text"
+                }, 
+                "gCal$guestsCanModify": {
+                    "value": "false"
+                }, 
+                "gd$transparency": {
+                    "value": "http://schemas.google.com/g/2005#event.opaque"
+                }, 
+                "author": [
+                    {
+                        "name": {
+                            "$t": "JoCo Cruise Crazy 2 Events Calendar"
+                        }
+                    }
+                ], 
+                "gd$eventStatus": {
+                    "value": "http://schemas.google.com/g/2005#event.confirmed"
+                }, 
+                "gCal$uid": {
+                    "value": "c0olt7atajif25g10c9fscdlbs@google.com"
+                }, 
+                "content": {
+                    "$t": "Paul and Storm record a live version of their podcast, \"Paul and Storm Talk About Some Stuff for Five to Ten Minutes (On Average)\". Guests TBD.", 
+                    "type": "text"
+                }, 
+                "gCal$guestsCanInviteOthers": {
+                    "value": "true"
+                }, 
+                "gd$who": [
+                    {
+                        "email": "nh76o8dgn9d86b7n3p3uofg1q0@group.calendar.google.com", 
+                        "rel": "http://schemas.google.com/g/2005#event.organizer", 
+                        "valueString": "JoCo Cruise Crazy 2 Events Calendar"
+                    }
+                ], 
+                "link": [
+                    {
+                        "href": "http://www.google.com/calendar/event?eid=YzBvbHQ3YXRhamlmMjVnMTBjOWZzY2RsYnMgbmg3Nm84ZGduOWQ4NmI3bjNwM3VvZmcxcTBAZw", 
+                        "type": "text/html", 
+                        "rel": "alternate", 
+                        "title": "alternate"
+                    }, 
+                    {
+                        "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/c0olt7atajif25g10c9fscdlbs", 
+                        "type": "application/atom+xml", 
+                        "rel": "self"
+                    }
+                ], 
+                "published": {
+                    "$t": "2012-02-14T00:55:03.000-05:00"
+                }, 
+                "gCal$anyoneCanAddSelf": {
+                    "value": "false"
+                }, 
+                "gd$when": [
+                    {
+                        "endTime": "2012-02-25T10:50:00.000-05:00", 
+                        "startTime": "2012-02-25T09:30:00.000-05:00"
+                    }
+                ], 
+                "gCal$sequence": {
+                    "value": 0
+                }, 
+                "id": {
+                    "$t": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/c0olt7atajif25g10c9fscdlbs"
+                }
+            }, 
+            {
+                "category": [
+                    {
+                        "term": "http://schemas.google.com/g/2005#event", 
+                        "scheme": "http://schemas.google.com/g/2005#kind"
+                    }
+                ], 
+                "gd$where": [
+                    {
+                        "valueString": "Vista Lounge"
+                    }
+                ], 
+                "updated": {
+                    "$t": "2012-02-04T00:45:24.000-05:00"
+                }, 
+                "gCal$guestsCanSeeGuests": {
+                    "value": "true"
+                }, 
+                "gd$comments": {
+                    "gd$feedLink": {
+                        "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/463sqnpkjck8ui3svfbh0obn6o/comments"
+                    }
+                }, 
+                "title": {
+                    "$t": "Concert: Jonathan Coulton", 
+                    "type": "text"
+                }, 
+                "gCal$guestsCanModify": {
+                    "value": "false"
+                }, 
+                "gd$transparency": {
+                    "value": "http://schemas.google.com/g/2005#event.opaque"
+                }, 
+                "author": [
+                    {
+                        "name": {
+                            "$t": "JoCo Cruise Crazy 2 Events Calendar"
+                        }
+                    }
+                ], 
+                "gd$eventStatus": {
+                    "value": "http://schemas.google.com/g/2005#event.confirmed"
+                }, 
+                "gCal$uid": {
+                    "value": "463sqnpkjck8ui3svfbh0obn6o@google.com"
+                }, 
+                "content": {
+                    "$t": "Concert: Jonathan Coulton - both with the band, and an acoustic solo set.", 
+                    "type": "text"
+                }, 
+                "gCal$guestsCanInviteOthers": {
+                    "value": "true"
+                }, 
+                "gd$who": [
+                    {
+                        "email": "nh76o8dgn9d86b7n3p3uofg1q0@group.calendar.google.com", 
+                        "rel": "http://schemas.google.com/g/2005#event.organizer", 
+                        "valueString": "JoCo Cruise Crazy 2 Events Calendar"
+                    }
+                ], 
+                "link": [
+                    {
+                        "href": "http://www.google.com/calendar/event?eid=NDYzc3FucGtqY2s4dWkzc3ZmYmgwb2JuNm8gbmg3Nm84ZGduOWQ4NmI3bjNwM3VvZmcxcTBAZw", 
+                        "type": "text/html", 
+                        "rel": "alternate", 
+                        "title": "alternate"
+                    }, 
+                    {
+                        "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/463sqnpkjck8ui3svfbh0obn6o", 
+                        "type": "application/atom+xml", 
+                        "rel": "self"
+                    }
+                ], 
+                "published": {
+                    "$t": "2012-02-03T21:33:05.000-05:00"
+                }, 
+                "gCal$anyoneCanAddSelf": {
+                    "value": "false"
+                }, 
+                "gd$when": [
+                    {
+                        "endTime": "2012-02-25T19:00:00.000-05:00", 
+                        "startTime": "2012-02-25T16:30:00.000-05:00"
+                    }
+                ], 
+                "gCal$sequence": {
+                    "value": 0
+                }, 
+                "id": {
+                    "$t": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/463sqnpkjck8ui3svfbh0obn6o"
+                }
+            }, 
+            {
+                "category": [
+                    {
+                        "term": "http://schemas.google.com/g/2005#event", 
+                        "scheme": "http://schemas.google.com/g/2005#kind"
+                    }
+                ], 
+                "gd$where": [
+                    {
+                        "valueString": "Lido Pool Area (midships)"
+                    }
+                ], 
+                "updated": {
+                    "$t": "2012-02-04T01:13:17.000-05:00"
+                }, 
+                "gCal$guestsCanSeeGuests": {
+                    "value": "true"
+                }, 
+                "gd$comments": {
+                    "gd$feedLink": {
+                        "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/qgegtgivpa5ap9nofaqbusb670/comments"
+                    }
+                }, 
+                "title": {
+                    "$t": "\"So Long, and Thanks for All the Drinks!\" Cocktail Reception", 
+                    "type": "text"
+                }, 
+                "gCal$guestsCanModify": {
+                    "value": "false"
+                }, 
+                "gd$transparency": {
+                    "value": "http://schemas.google.com/g/2005#event.opaque"
+                }, 
+                "author": [
+                    {
+                        "name": {
+                            "$t": "JoCo Cruise Crazy 2 Events Calendar"
+                        }
+                    }
+                ], 
+                "gd$eventStatus": {
+                    "value": "http://schemas.google.com/g/2005#event.confirmed"
+                }, 
+                "gCal$uid": {
+                    "value": "qgegtgivpa5ap9nofaqbusb670@google.com"
+                }, 
+                "content": {
+                    "$t": "A final celebratory cocktail reception; open bar and desserts!", 
+                    "type": "text"
+                }, 
+                "gCal$guestsCanInviteOthers": {
+                    "value": "true"
+                }, 
+                "gd$who": [
+                    {
+                        "email": "nh76o8dgn9d86b7n3p3uofg1q0@group.calendar.google.com", 
+                        "rel": "http://schemas.google.com/g/2005#event.organizer", 
+                        "valueString": "JoCo Cruise Crazy 2 Events Calendar"
+                    }
+                ], 
+                "link": [
+                    {
+                        "href": "http://www.google.com/calendar/event?eid=cWdlZ3RnaXZwYTVhcDlub2ZhcWJ1c2I2NzAgbmg3Nm84ZGduOWQ4NmI3bjNwM3VvZmcxcTBAZw", 
+                        "type": "text/html", 
+                        "rel": "alternate", 
+                        "title": "alternate"
+                    }, 
+                    {
+                        "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/qgegtgivpa5ap9nofaqbusb670", 
+                        "type": "application/atom+xml", 
+                        "rel": "self"
+                    }
+                ], 
+                "published": {
+                    "$t": "2011-11-11T14:06:54.000-05:00"
+                }, 
+                "gCal$anyoneCanAddSelf": {
+                    "value": "false"
+                }, 
+                "gd$when": [
+                    {
+                        "endTime": "2012-02-25T23:00:00.000-05:00", 
+                        "startTime": "2012-02-25T22:00:00.000-05:00"
+                    }
+                ], 
+                "gCal$sequence": {
+                    "value": 0
+                }, 
+                "id": {
+                    "$t": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/qgegtgivpa5ap9nofaqbusb670"
+                }
+            }, 
+            {
+                "category": [
+                    {
+                        "term": "http://schemas.google.com/g/2005#event", 
+                        "scheme": "http://schemas.google.com/g/2005#kind"
+                    }
+                ], 
+                "gd$where": [
+                    {
+                        "valueString": "Culinary Arts Center/Queens Lounge"
+                    }
+                ], 
+                "updated": {
+                    "$t": "2012-02-04T00:45:52.000-05:00"
+                }, 
+                "gCal$guestsCanSeeGuests": {
+                    "value": "true"
+                }, 
+                "gd$comments": {
+                    "gd$feedLink": {
+                        "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/hk9p4erbrva83p21bthogdjgk8_20120226T040000Z/comments"
+                    }
+                }, 
+                "title": {
+                    "$t": "Wild Card", 
+                    "type": "text"
+                }, 
+                "gCal$guestsCanModify": {
+                    "value": "false"
+                }, 
+                "gd$transparency": {
+                    "value": "http://schemas.google.com/g/2005#event.opaque"
+                }, 
+                "author": [
+                    {
+                        "name": {
+                            "$t": "JoCo Cruise Crazy 2 Events Calendar"
+                        }
+                    }
+                ], 
+                "gd$eventStatus": {
+                    "value": "http://schemas.google.com/g/2005#event.confirmed"
+                }, 
+                "gCal$uid": {
+                    "value": "hk9p4erbrva83p21bthogdjgk8@google.com"
+                }, 
+                "content": {
+                    "$t": "Event in the CAC/Queens Lounge to be determined, likely by popular demand.", 
+                    "type": "text"
+                }, 
+                "gCal$guestsCanInviteOthers": {
+                    "value": "true"
+                }, 
+                "gd$who": [
+                    {
+                        "email": "nh76o8dgn9d86b7n3p3uofg1q0@group.calendar.google.com", 
+                        "rel": "http://schemas.google.com/g/2005#event.organizer", 
+                        "valueString": "JoCo Cruise Crazy 2 Events Calendar"
+                    }
+                ], 
+                "link": [
+                    {
+                        "href": "http://www.google.com/calendar/event?eid=aGs5cDRlcmJydmE4M3AyMWJ0aG9nZGpnazhfMjAxMjAyMjZUMDQwMDAwWiBuaDc2bzhkZ245ZDg2YjduM3AzdW9mZzFxMEBn", 
+                        "type": "text/html", 
+                        "rel": "alternate", 
+                        "title": "alternate"
+                    }, 
+                    {
+                        "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/hk9p4erbrva83p21bthogdjgk8_20120226T040000Z", 
+                        "type": "application/atom+xml", 
+                        "rel": "self"
+                    }
+                ], 
+                "published": {
+                    "$t": "2011-11-11T14:07:35.000-05:00"
+                }, 
+                "gCal$anyoneCanAddSelf": {
+                    "value": "false"
+                }, 
+                "gd$when": [
+                    {
+                        "endTime": "2012-02-26T02:00:00.000-05:00", 
+                        "startTime": "2012-02-25T23:00:00.000-05:00"
+                    }
+                ], 
+                "gd$originalEvent": {
+                    "href": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/hk9p4erbrva83p21bthogdjgk8", 
+                    "gd$when": {
+                        "startTime": "2012-02-25T23:00:00.000-05:00"
+                    }, 
+                    "id": "hk9p4erbrva83p21bthogdjgk8"
+                }, 
+                "gCal$sequence": {
+                    "value": 0
+                }, 
+                "id": {
+                    "$t": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full/hk9p4erbrva83p21bthogdjgk8_20120226T040000Z"
+                }
+            }
+        ], 
+        "openSearch$totalResults": {
+            "$t": 39
+        }, 
+        "id": {
+            "$t": "http://www.google.com/calendar/feeds/nh76o8dgn9d86b7n3p3uofg1q0%40group.calendar.google.com/public/full"
+        }
+    }, 
+    "version": "1.0", 
+    "encoding": "UTF-8"
+}

@@ -1,0 +1,6 @@
+ExpiresActive On
+
+AddType text/cache-manifest .appcache
+<Files ~ "\.(html|appcache)$">
+	ExpiresDefault "access"
+</Files>

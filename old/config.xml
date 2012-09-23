@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns		= "http://www.w3.org/ns/widgets"
+	xmlns:gap	= "http://phonegap.com/ns/1.0"
+	id		= "com.raccoonfink.cruisemonkey"
+	version 	= "1.0.18">
+
+	<name>CruiseMonkey</name>
+
+	<description>Keep Track of Your Cruise</description>
+
+	<author href="http://github.com/RangerRick/JoCo"
+		email="ranger@befunk.com">
+		Benjamin Reed
+	</author>
+
+	<gap:platforms>
+		<gap:platform name="ios" minVersion="4.0" />
+		<gap:platform name="android" minVersion="2.2" />
+		<!-- <gap:platform name="webos" /> -->
+		<!-- <gap:platform name="symbian.wrt" /> -->
+		<!-- <gap:platform name="blackberry" project="widgets"/> -->
+	</gap:platforms>
+
+	<icon src="images/icon-ship-512.png" gap:role="default" />
+
+	<!-- iOS requires specific dimensions for icons; classic iPhone screens, Retina displays, and iPad screens respectively -->
+	<icon src="images/icon-ship-57.png" width="57" height="57" />
+	<icon src="images/icon-ship-72.png" width="72" height="72" />
+	<icon src="images/icon-ship-114.png" width="114" height="114" />
+	<icon src="images/icon-ship-512.png" width="512" height="512" />
+
+	<!-- Android requires specific dimensions; ldpi, mdpi, and hdpi respectively -->
+	<icon src="images/icon-ship-36.png" />
+	<icon src="images/icon-ship-48.png" />
+	<!-- 72 specified above, skipping here -->
+
+	<gap:splash src="images/cruise-monkey-720x960.png" />
+	<gap:splash src="images/cruise-monkey-1024x768.png" width="1024" height="768" />
+	<gap:splash src="images/cruise-monkey-320x480.png"  width="320"  height="480" />
+	<gap:splash src="images/cruise-monkey-640x960.png"  width="640"  height="960" />
+	<gap:splash src="images/cruise-monkey-720x960.png"  width="720"  height="960" />
+	<gap:splash src="images/cruise-monkey-768x1024.png" width="768"  height="1024" />
+
+	<!-- <feature name="http://api.phonegap.com/1.0/geolocation"/> -->
+	<feature name="http://api.phonegap.com/1.0/network"/>
+	<feature name="http://api.phonegap.com/1.0/storage"/>
+
+	<!-- sample preference specification -->
+	<!-- <preference name="autorotate" value="false" readonly="true"/> -->
+</widget>

@@ -1,0 +1,22 @@
+.calendar-event {
+	border: 1px solid;
+	height: 100px;
+	overflow: hidden;
+	margin: 0;
+}
+
+.time {
+	font-family: monospace;
+	padding: 5px;
+	/* border: 1px solid; */
+	float: left;
+	height: 100px;
+}
+
+.event-text {
+	padding: 5px;
+}
+
+#content.columns {
+	padding: 0px;
+}
