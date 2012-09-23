@@ -1,16 +1,14 @@
 body {
-	/* overflow: hidden; */
+	padding-top: 45px;
 }
 
 #header {
-	overflow: hidden;
 	position: fixed;
 }
 
 #content {
+	display: block;	
 	overflow: auto;
-	-webkit-overflow-scrolling: touch;
-	overflow-scrolling: touch;
 }
 
 #content.columns {
