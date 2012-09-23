@@ -10,8 +10,21 @@ ko.bindingHandlers.dateString = {
 	}
 }
 
+function removeLastMatch(string, match) {
+	var n = string.lastIndexOf(match);
+	if (n >= 0 && (n + match.length) == string.length) {
+		// console.log("removeLastMatch: " + string + " matches " + match);
+		return string.substring(0, n);
+	} else {
+		// console.log("removeLastMatch: " + string + " does not match " + match);
+		return string;
+	}
+}
+
 function Event(data) {
 	var self = this;
+
+	data.summary = removeLastMatch(data.summary, ' - ' + data.location);
 
 	self.id          = data.id;
 	self.summary     = ko.observable(data.summary);
@@ -23,7 +36,6 @@ function Event(data) {
 	self.timespan    = ko.computed(function() {
 		var start = start === null? null : formatTime(self.start(), false);
 		var end   = end   === null? null : formatTime(self.end(), false);
-		console.log("start = " + start + ", end = " + end);
 		var retVal = "";
 		if (start != null) {
 			retVal += start;
@@ -31,7 +43,6 @@ function Event(data) {
 				retVal += "-" + end;
 			}
 		}
-		console.log("retVal = " + retVal);
 		return retVal;
 	}, self);
 }
