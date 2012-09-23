@@ -2,13 +2,13 @@
 <widget xmlns		= "http://www.w3.org/ns/widgets"
 	xmlns:gap	= "http://phonegap.com/ns/1.0"
 	id		= "com.raccoonfink.cruisemonkey"
-	version 	= "1.0.18">
+	version 	= "2.9.90">
 
-	<name>CruiseMonkey</name>
+	<name>CruiseMonkey 3</name>
 
 	<description>Keep Track of Your Cruise</description>
 
-	<author href="http://github.com/RangerRick/JoCo"
+	<author href="https://github.com/RangerRick/CruiseMonkey.git"
 		email="ranger@befunk.com">
 		Benjamin Reed
 	</author>
