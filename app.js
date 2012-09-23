@@ -29,7 +29,7 @@ function EventsViewModel() {
 	self.events = ko.observableArray();
 
 	self.updateDataFromJSON = function() {
-	    $.getJSON("/events.json", function(allData) {
+	    $.getJSON("http://sin.local:8088/events.json", function(allData) {
 	        var mappedTasks = $.map(allData.eventList, function(event) {
 	        	var item = ko.utils.arrayFirst(self.events(), function(entry) {
 	        		if (entry.id == event.id) {
