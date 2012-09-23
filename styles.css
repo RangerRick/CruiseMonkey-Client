@@ -1,3 +1,16 @@
+body {
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
+}
+
+#header {
+	overflow: hidden;
+}
+
+#content {
+	overflow: scroll;
+}
+
 #content.columns {
 	padding: 0px;
 }
