@@ -2,15 +2,6 @@ body {
 	padding-top: 45px;
 }
 
-#header {
-	position: fixed;
-}
-
-#content {
-	display: block;	
-	overflow: auto;
-}
-
 #content.columns {
 	padding: 0px;
 }
