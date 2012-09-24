@@ -20,34 +20,8 @@
     <![endif]-->
   </head>
   <body>
-    <div id="header">
-      <div class="fixed">
-        <nav class="top-bar">
-          <ul>
-            <li class="name"><h1><a href="#">CruiseMonkey 3</a></h1></li>
-            <li class="toggle-topbar"><a href="#"></a></li>
-          </ul>
-          <section>
-            <ul class="left">
-              <li><a href="#">Official Events</a></li>
-              <li><a href="#">My Events</a></li>
-            </ul>
-          </section>
-        </nav>
-      </div>
-    </div>
-    <div id="content">
-      <form id="search_events"><input type="search" results="5" placeholder="Search..." data-bind="value: filter, valueUpdate: 'afterkeydown'" /></form>
-      <!-- <form><input placeholder="Search..." autocapitalize="off" data-bind="value: filter, valueUpdate: 'afterkeydown'" /></form> -->
-      <ul data-bind="foreach: { data: filteredEvents }" class="event-list unstyled" style="visibility:hidden">
-        <li class="calendar-event official"> <!-- onclick="" ontouchstart="" -->
-          <div class="summary"><span data-bind="text: summary"></span></div>
-          <div class="time">Time: <span data-bind="text: timespan"></span></div>
-          <div class="location">Location: <span data-bind="text: location"></span></div>
-          <div class="description"><span data-bind="text: description"></span></div>
-        </li>
-      </ul>
-    </div>
+    <div id="header"></div>
+    <div id="content"></div>
 
     <script src="jquery/jquery-1.8.1.js"></script>
     <!-- add cordova -->
