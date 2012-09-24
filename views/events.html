@@ -1,5 +1,4 @@
-<!-- <h2>{{event_header}}</h2> -->
-<form><input type="search" results="5" placeholder="Search..." class="search" name="search_events" data-bind="value: filter, valueUpdate: 'afterkeydown'" /></form>
+<form><input type="search" results="5" placeholder="Search..." name="search_events" data-bind="value: filter, valueUpdate: 'afterkeydown'" /></form>
 <ul data-bind="foreach: { data: filteredEvents }" class="event-list unstyled" style="visibility:hidden">
   <li class="calendar-event official"> <!-- onclick="" ontouchstart="" -->
     <div class="summary"><span data-bind="text: summary"></span></div>

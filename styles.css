@@ -2,11 +2,13 @@ body {
 	padding-top: 45px;
 }
 
+/*
 input[type="search"] {
 	font-size: large;
-	/* margin: 3px 0 3px 0; */
 	margin: auto;
 }
+*/
+	/* margin: 3px 0 3px 0; */
 
 .top-bar {
 	margin: 0px;
