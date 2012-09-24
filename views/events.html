@@ -1,5 +1,6 @@
 <!-- <h2>{{event_header}}</h2> -->
-<ul data-bind="foreach: events" class="event-list unstyled" style="visibility:hidden">
+<input type="search" results="5" placeholder="Search..." class="search" data-bind="value: filter, valueUpdate: 'afterkeydown'" />
+<ul data-bind="foreach: { data: filteredEvents }" class="event-list unstyled" style="visibility:hidden">
   <li class="calendar-event official"> <!-- onclick="" ontouchstart="" -->
     <div class="summary"><span data-bind="text: summary"></span></div>
   	<div class="time">Time: <span data-bind="text: timespan"></span></div>

@@ -54,6 +54,7 @@ var entryIdMatch = function(entry, id) {
 function EventsViewModel() {
 	var self = this;
 	self.events = ko.observableArray();
+	self.filter = ko.observable("");
 
 	self.updateDataFromJSON = function() {
 	    $.getJSON("http://sin.local:8088/events.json", function(allData) {
@@ -89,5 +90,22 @@ function EventsViewModel() {
 }
 
 var eventsModel = new EventsViewModel();
+eventsModel.filteredEvents = ko.dependentObservable(function() {
+	var filter = this.filter().toLowerCase();
+	
+	if (!filter) {
+		return this.events();
+	} else {
+		return ko.utils.arrayFilter(this.events(), function(event) {
+			if (event.summary().toLowerCase().search(filter) != -1) {
+				return true;
+			} else if (event.description().toLowerCase().search(filter) != -1) {
+				return true;
+			} else {
+				return false;
+			}
+		});
+	}
+}, eventsModel);
 
 console.log("app.js loaded");

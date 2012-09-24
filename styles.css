@@ -2,16 +2,34 @@ body {
 	padding-top: 45px;
 }
 
+input[type="search"] {
+	font-size: large;
+	/* margin: 3px 0 3px 0; */
+	margin: auto;
+}
+
+.top-bar {
+	margin: 0px;
+}
+
+#content {
+	padding: 5px;
+}
+
 #content.columns {
 	padding: 0px;
 }
 
 .event-list {
-	margin-bottom: 0px;
+	margin-left: -5px;
+	margin-right: -5px;
+	margin-top: 5px;
+	margin-bottom: -5px;
+	border-top: 1px solid black;
 }
 
 .calendar-event {
-	border-top: 1px solid black;
+	border-bottom: 1px solid black;
 	/* height: 100px; */
 	width: 100%;
 	overflow: auto;
@@ -41,29 +59,3 @@ body {
 .location {
 	font-weight: bolder;
 }
-
-/*
-.time {
-	font-family: monospace;
-	padding: 5px;
-	float: left;
-	height: 50px;
-	width: 100px;
-	position: absolute;
-	left: 0px;
-	display: inline-block;
-}
-
-.event-text {
-	padding: 5px;
-	height: auto;
-	display: inline-block;
-	overflow: auto;
-	width: auto;
-}
-
-.event-text h4 {
-	margin-top: 0px;
-	margin-bottom: 5px;
-}
-*/
