@@ -44,6 +44,7 @@ function setupDefaultView() {
     }, 30000);
 
     // Hide address bar on mobile devices
+    /*
     var Modernizr = window.Modernizr;
     if (Modernizr.touch) {
         $(window).load(function () {
@@ -52,8 +53,8 @@ function setupDefaultView() {
             }, 0);
         });
     }
+    */
 
-    $('.search').focus();
 }
 
 function showOfficialEventsView() {
