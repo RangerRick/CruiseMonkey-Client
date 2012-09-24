@@ -14,7 +14,7 @@
 	</author>
 
 	<gap:platforms>
-		<gap:platform name="ios" minVersion="4.0" />
+		<gap:platform name="ios" minVersion="4.2" />
 		<gap:platform name="android" minVersion="2.3" />
 		<!-- <gap:platform name="webos" /> -->
 		<!-- <gap:platform name="symbian.wrt" /> -->
