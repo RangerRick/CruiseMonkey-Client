@@ -1,5 +1,5 @@
 body {
-	padding-top: 45px;
+	/* padding-top: 45px; */
 }
 
 input[type="search"] {
@@ -9,7 +9,11 @@ input[type="search"] {
 }
 	/* margin: 3px 0 3px 0; */
 
-#search_events {
+#official-search {
+	margin-bottom: 5px;
+}
+
+#my-search {
 	margin-bottom: 5px;
 }
 
@@ -18,6 +22,7 @@ input[type="search"] {
 }
 
 #content {
+	margin-top: 45px;
 	padding: 5px;
 }
 
