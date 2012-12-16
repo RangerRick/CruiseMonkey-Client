@@ -9,6 +9,10 @@
         <li><a href="#official-events">Official Events</a></li>
         <li><a href="#my-events">My Events</a></li>
       </ul>
+      <ul class="right">
+      	<li data-bind="visible: notSignedIn"><a href="#" class="signin">Sign In</a></li>
+      	<li data-bind="visible: signedIn"><a href="#" class="signout">Sign Out</a></li>
+      </ul>
     </section>
   </nav>
 </div>
