@@ -1,12 +1,14 @@
-var days = [ 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday' ];
-var months = [ 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December' ];
+var days = [ 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday' ],
+	months = [ 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December' ];
 
 function formatTime(d, doSeconds) {
-	var hour = String('0' + (d.getHours() % 12)).slice(-2);
+	var hour, ret;
+
+	hour = String('0' + (d.getHours() % 12)).slice(-2);
 	if (hour == '00') {
 		hour = '12';
 	}
-	var ret = hour + ':' + String('0' + d.getMinutes()).slice(-2);
+	ret = hour + ':' + String('0' + d.getMinutes()).slice(-2);
 	
 	if (doSeconds === true) {
 		ret += ':' + String('0' + d.getSeconds()).slice(-2);
@@ -28,9 +30,9 @@ function getDateFromString(dateTime) {
 	if (dateTime instanceof Date) {
 		return new Date(dateTime.getFullYear(), dateTime.getMonth(), dateTime.getDate(), dateTime.getHours(), dateTime.getMinutes(), 0, 0);
 	}
-	var dateTimeParts = dateTime.split('T');
-	var dateParts = dateTimeParts[0].split('-');
-	var timeParts = dateTimeParts[1].split(':');
+	var dateTimeParts = dateTime.split('T'),
+	 	dateParts = dateTimeParts[0].split('-'),
+	 	timeParts = dateTimeParts[1].split(':');
 	
 	// console.log('year = ' + dateParts[0] + ', month = ' + dateParts[1] + ', day = ' + dateParts[2]);
 	// console.log('hours = ' + timeParts[0] + ', minutes = ' + timeParts[1]);

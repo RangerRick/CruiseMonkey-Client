@@ -1,109 +1,70 @@
 console.log("init.js loading");
 
 var pages = {};
-var current_page = 'official-events';
 var page_scroll_element = [];
+var online = false;
 
-var templates = {
-	header: "views/header.html",
-	events: "views/events.html",
-	loaded: 0,
-	requested: 0,
+var scrollManager = new ScrollManager();
+scrollManager.delay = 100;
+
+scrollManager.onScrollStart = function(enabled) {
+	if (enabled) {
+		console.log('scrolling started while enabled');
+	} else {
+		console.log('scrolling started while disabled');
+	}
+};
+scrollManager.onScrollStop = function(enabled) {
+	if (enabled) {
+		var found = pageNavigator.findTopVisibleElement();
+		if (found) {
+			console.log("visible element: " + CMUtils.getSummary(found) + ' (' + $(found).attr('id') + ')');
+		} else {
+			console.log("no elements visible!");
+		}
+	} else {
+		console.log('scrolling stopped while disabled');
+	}
 };
 
-function elementInViewport(el) {
-	var top = el.offsetTop;
-	// var left = el.offsetLeft;
-	// var width = el.offsetWidth;
-	var height = el.offsetHeight;
+var pageTracker = new PageTracker(amplify, '.scrollable'),
+pageNavigator   = new PageNavigator(amplify, pageTracker, 'official-events', '.calendar-event'),
 
-	while (el.offsetParent) {
-		el = el.offsetParent;
-		top += el.offsetTop;
-		// left += el.offsetLeft;
+templates = {
+	header: "views/header.html",
+	events: "views/events.html",
+	login: "views/login.html",
+	loaded: 0,
+	requested: 0,
+},
+
+setOffline = function() {
+	console.log('setOffline()');
+	if (online == true) {
+		console.log("setOffline: we were online but have gone offline");
 	}
+	online = false;
+	navModel.signedIn(false);
+	console.log("online = " + online);
+},
 
-	return (top >= window.pageYOffset
-		// && left >= window.pageXOffset
-		&& (top + height) <= (window.pageYOffset + window.innerHeight)
-		// && (left + width) <= (window.pageXOffset + window.innerWidth)
-	);
-}
-
-function _getPageStoreCache() {
-	// console.log("store currently contains: " + ko.toJSON(amplify.store()));
-	var page_store_cache = amplify.store('page_store_cache');
-	if (!page_store_cache) {
-		page_store_cache = {};
+setOnline = function() {
+	console.log('setOnline()');
+	if (online == false) {
+		console.log("setOnline: we were offline but have gone online");
 	}
-	return page_store_cache;
-}
+	online = true;
+	navModel.signedIn(true);
+	console.log("online = " + online);
+},
 
-function _setPageStoreCache(cache) {
-	console.log("set cache: " + ko.toJSON(cache));
-	amplify.store('page_store_cache', cache);
-}
+isOnline = function() {
+	return online;
+},
 
-function updatePageTopElement(page, id) {
-	console.log("storing " + id + " as the top element for page " + page);
-	var page_store_cache = _getPageStoreCache();
-	page_store_cache[page] = id;
-	_setPageStoreCache(page_store_cache);
-	return id;
-}
-
-function getPageTopElement(page) {
-	var page_store_cache = _getPageStoreCache();
-	var retVal = null;
-	if (page_store_cache) {
-		retVal = page_store_cache[page];
-	}
-	console.log("getPageTopElement(" + page + ") = " + retVal);
-	return retVal;
-}
-
-var scrollTimeout = null;
-var scrollEndDelay = 500; // ms
-
-function findTopVisibleElement() {
-	var found = null;
-	$('.calendar-event').each(function(index, element) {
-		if (elementInViewport(element)) {
-			var id = $(element).attr('id');
-			if (id) {
-				var summary = $(found).find('div.summary').text();
-				console.log("first visible element: " + summary + ' (' + id + ')');
-				if (current_page) {
-					updatePageTopElement(current_page, id);
-				}
-			}
-			found = element;
-			return false;
-		}
-	});
-
-	return found;
-}
-
-function scrollEndHandler() {
-	console.log("scrolling finished");
-	scrollTimeout = null;
-	var found = findTopVisibleElement();
-	if (found) {
-		console.log("visible element: " + $(found).find('div.summary').text() + ' (' + $(found).attr('id') + ')');
-	} else {
-		console.log("no elements visible!");
-	}
-}
-
-$(window).scroll(function() {
-	if (scrollTimeout === null) {
-		console.log("scrolling started");
-	} else {
-		clearTimeout(scrollTimeout);
-	}
-	scrollTimeout = setTimeout( scrollEndHandler, scrollEndDelay );
-});
+isSignedIn = function() {
+	return online && loginModel.username() && loginModel.username().length > 0;
+};
 
 function onDeviceReady( event ) {
 	console.log("Device is ready.  Initializing.");
@@ -141,36 +102,14 @@ function getContainer() {
 	return _container;
 }
 
-function getScroll() {
-	var scroll;
-	
-	// Netscape compliant
-	if (typeof(window.pageYOffset) === 'number') {
-		scroll = window.pageYOffset;
-	}
-	// DOM compliant
-	else if (document.body && document.body.scrollTop) {
-		scroll = document.body.scrollTop;
-	}
-	// IE6 standards compliant mode
-	else if (document.documentElement && document.documentElement.scrollTop) {
-		scroll = document.documentElement.scrollTop;
-	}
-	// needed for IE6 (when vertical scroll bar is on the top)
-	else {
-		scroll = 0;
-	}
-}
-
-function scrollTo(x, y) {
-	window.scrollTo(x, y);
-}
-
 function setupHeader() {
+	console.log('setupHeader()');
     header = getHeader();
     header.html(templates.header);
     
-    $('nav').find('a').each(function(index, element) {
+    var nav = $(header).find('nav')[0];
+
+    $(nav).find('a').each(function(index, element) {
     	var hash = undefined;
     	if (element.href !== undefined) {
     		hash = element.href.split('#')[1];
@@ -186,62 +125,142 @@ function setupHeader() {
     });
 
     $(document).foundationTopBar();
+
+    $(nav).find('.signin').each(function(index, element) {
+    	$(element).on('click.fndtn touchstart.fndtn', function(e) {
+    		setOffline();
+    		navigateTo('login');
+    	});
+    });
+    $(nav).find('.signout').each(function(index, element) {
+    	$(element).on('click.fndtn touchstart.fndtn', function(e) {
+    		setOffline();
+    		serverModel.username(null);
+    		serverModel.password(null);
+    		navigateTo('login');
+    	});
+    });
+    ko.applyBindings(navModel, nav);
 }
 
 function navigateTo(pageId) {
+	console.log('----------------------------------------------------------------------------------');
+	console.log('navigateTo(' + pageId + ')');
+	scrollManager.disable();
+
 	if (pageId == 'official-events') {
 		showOfficialEventsView();
 	} else if (pageId == 'my-events') {
 		showMyEventsView();
+	} else if (pageId == 'login') {
+		showLoginView();
 	} else {
 		console.log('unknown page ID: ' + pageId);
 		return false;
 	}
 
-	var topElement = getPageTopElement(pageId);
-	if (topElement) {
-		var matched = null;
-		$('#content').find('.scrollable').each(function(index, element) {
-			var id = $(element).attr('id');
-			if (id == topElement) {
-				matched = element;
-				console.log("matched " + id);
-				return false;
-			} else {
-				console.log("id " + id + " did not match " + topElement);
-			}
-			return true;
-		});
+	var topElement = pageTracker.getTopElement(pageId);
 
-		if (matched) {
-			console.log("scrolling to " + topElement);
-			matched.scrollIntoView(true);
-			window.scrollBy(0, -45);
-		} else {
-			console.log("didn't find an element to scroll to for " + topElement);
-		}
+	if (!topElement || topElement.getIndex() == 0) {
+		console.log('scrolling to the top of the page');
+		setTimeout(function() {
+			$('body').scrollTo(0, 0, {
+				onAfter: function() {
+					setTimeout(function() {
+						scrollManager.enable();
+					}, 50);
+				}
+			});
+		}, 0);
 	} else {
-		console.log("no top element found for " + pageId);
+		console.log("scrolling to " + topElement.toString());
+		setTimeout(function() {
+			$('body').scrollTo('#' + topElement.getId(), 0,
+				{
+					margin:false,
+					offset: {left:0, top:-45},
+					onAfter: function() {
+						setTimeout(function() {
+							scrollManager.enable();
+						}, 50);
+					}
+				}
+			);
+		}, 0);
 	}
 
 	return true;
 }
 
+function checkIfAuthorized(success, failure) {
+	console.log('checkIfAuthorized()');
+	var username = amplify.store('username');
+	var password = amplify.store('password');
+	
+	if (!username || !password) {
+		failure();
+		return;
+	}
+
+	$.ajax({
+		url: serverModel.statusnet() + '/api/help/test.json',
+		dataType: 'json',
+		type: 'POST',
+		beforeSend: function(xhr) {
+			xhr.setRequestHeader("Authorization", "Basic " + btoa(username + ':' + password));
+		},
+		username: username,
+		password: password,
+		success: function(data) {
+			if (data == 'ok') {
+				setOnline();
+				console.log('test returned OK');
+				success();
+				return;
+			} else {
+				setOnline();
+				console.log('success function called, but data was not OK!');
+				failure();
+				return;
+			}
+		}
+	}).error(function(data) {
+		if (data && data.readyState == 0) {
+			setOffline();
+		} else {
+			setOnline();
+		}
+		console.log("An error occurred: " + ko.toJSON(data));
+		failure();
+	});
+}
+
+var showLoginOrCurrent = function() {
+	var current_page = pageNavigator.getCurrentPage();
+
+    checkIfAuthorized(
+    	// success
+    	function() {
+    		console.log("checkIfAuthorized: success");
+    	    navigateTo(current_page);
+    	},
+    	// failure
+    	function() {
+    		console.log("checkIfAuthorized: failure");
+    		navigateTo('login');
+    	}
+    );
+}
+
 function setupDefaultView() {
-    console.log("setting up default view");
-
-    var current_page = amplify.store('current_page');
-    if (!current_page) {
-    	current_page = 'official-events';
-    	amplify.store('current_page', current_page);
-    }
-
+	console.log('setupDefaultView()');
     setupHeader();
-    navigateTo(current_page);
 
+    /*
     var interval = setInterval(function() {
     	eventsModel.updateDataFromJSON();
     }, 5000);
+    */
 
     // Hide address bar on mobile devices
     /*
@@ -255,61 +274,112 @@ function setupDefaultView() {
     }
     */
 
+    showLoginOrCurrent();
 }
 
 function replaceCurrentPage(pageId) {
-	getContainer().children().css('display', 'none');
+	console.log('replaceCurrentPage(' + pageId + ')');
+
 	var page = $('#' + pageId);
+	var search = page.find('input[type=search]').first();
+
+	getContainer().children().css('display', 'none');
 	page.css('display', 'block');
+
     if (!Modernizr.touch) {
     	// on non-mobile devices, focus the search input
-    	page.find('input[type=search]')[0].focus();
+    	if (search) {
+    		search.focus();
+    	}
     }
-    amplify.store('current_page', pageId);
+    if (pageId != 'login') {
+        amplify.store('current_page', pageId);
+    }
 	return getContainer()[0];
 }
 
 function createOfficialEventsView() {
+	console.log('createOfficialEventsView()');
     if (!pages.official) {
+    	var html = Mustache.to_html(templates.events, { eventType: "official" });
+
     	var div = document.createElement('div');
     	div.setAttribute('id', 'official-events');
     	$(div).css('display', 'none');
-    	var html = Mustache.to_html(templates.events, { eventType: "official" });
     	$(div).html(html);
-    	pages.official = div;
     	var appended = getContainer()[0].appendChild(div);
+
+    	pages.official = div;
+
         ko.applyBindings(officialEventsModel, appended);
     }
 }
 
 function showOfficialEventsView() {
+	console.log('showOfficialEventsView()');
 	createOfficialEventsView();
 	var content = replaceCurrentPage('official-events');
     $(content).find('ul.event-list').css('display', 'block');
 }
 
 function createMyEventsView() {
+	console.log('createMyEventsView()');
     if (!pages.my) {
+    	var html = Mustache.to_html(templates.events, { eventType: "my" });
+
     	var div = document.createElement('div');
     	div.setAttribute('id', 'my-events');
     	$(div).css('display', 'none');
-    	var html = Mustache.to_html(templates.events, { eventType: "my" });
-    	// console.log("html = " + html);
     	$(div).html(html);
-    	pages.my = div;
     	var appended = getContainer()[0].appendChild(div);
+
+    	pages.my = div;
+
         ko.applyBindings(myEventsModel, appended);
     }
 }
 
 function showMyEventsView() {
+	console.log('showMyEventsView()');
 	createMyEventsView();
 	var content = replaceCurrentPage('my-events');
     $(content).find('ul.event-list').css('display', 'block');
 }
 
+function createLoginView() {
+	console.log('createLoginView()');
+	if (!pages.login) {
+    	var html = Mustache.to_html(templates.login);
+
+    	var div = document.createElement('div');
+    	div.setAttribute('id', 'login');
+    	$(div).css('display', 'none');
+    	$(div).html(html);
+		$(div).find('#login_reset').on('click.fndtn touchstart.fndtn', function(e) {
+			console.log("cancel clicked");
+			serverModel.reset();
+		});
+		$(div).find('#login_save').on('click.fndtn touchstart.fndtn', function(e) {
+			console.log("save clicked");
+			serverModel.persist();
+			setupDefaultView();
+		});
+    	var appended = getContainer()[0].appendChild(div);
+
+    	pages.login = div;
+
+    	ko.applyBindings(serverModel, appended);
+	}
+}
+
+function showLoginView() {
+	console.log('showLoginView()');
+	createLoginView();
+	var content = replaceCurrentPage('login');
+}
+
 function onTemplateLoaded(template, key) {
-	console.log("template '" + key + "' loaded");
+	console.log('onTemplateLoaded(<template>, ' + key + ')');
 
 //    console.log( key + ": " + template);
     templates[ key ] = template;
@@ -320,6 +390,7 @@ function onTemplateLoaded(template, key) {
 		
 		createOfficialEventsView();
 		createMyEventsView();
+		createLoginView();
 
         setupDefaultView();
     }

@@ -17,7 +17,7 @@ ko.bindingHandlers.dateString = {
 function Event(data) {
 	var self = this;
 
-	self.id           = ko.observable(data["@id"]);
+	self.id           = ko.observable(data["@id"].replace(/[\W\@]+/g, ''));
 	self.summary      = ko.observable(data.summary);
 	self.description  = ko.observable(data.description);
 	self.start        = ko.observable(new Date(data.start));
@@ -70,6 +70,40 @@ var onFilterChange = function() {
 	*/
 };
 
+function ServerModel() {
+	var self = this;
+
+	self.cruisemonkey = ko.observable(amplify.store('cruisemonkey_url'));
+	self.statusnet    = ko.observable(amplify.store('statusnet_url'));
+	self.username     = ko.observable(amplify.store('username'));
+	self.password     = ko.observable(amplify.store('password'));
+	
+	self.reset = function() {
+		self.cruisemonkey(amplify.store('cruisemonkey_url'));
+		self.statusnet(amplify.store('statusnet_url'));
+		self.username(amplify.store('username'));
+		self.password(amplify.store('password'));
+	};
+	
+	self.persist = function() {
+		amplify.store('cruisemonkey_url', self.cruisemonkey());
+		amplify.store('statusnet_url',    self.statusnet());
+		amplify.store('username',         self.username());
+		amplify.store('password',         self.password());
+	};
+	
+	if (!self.cruisemonkey()) {
+		self.cruisemonkey("http://localhost:8088");
+	}
+	if (!self.statusnet()) {
+		// self.statusnet("http://192.168.211.118/statusnet");
+		// self.statusnet("https://identi.ca");
+		self.statusnet('http://localhost/statusnet');
+	}
+}
+
+var serverModel = new ServerModel();
+
 function EventsViewModel() {
 	var self = this;
 	self.events = ko.observableArray();
@@ -79,6 +113,7 @@ function EventsViewModel() {
 			var item = ko.utils.arrayFirst(self.events(), function(entry) {
 				if (entry) {
 					// console.log("entry = " + ko.toJSON(entry));
+					event["@id"] = event["@id"].replace(/[\W\@]+/g, '');
 					if (entry.id() == event["@id"]) {
 						return true;
 					} else {
@@ -106,12 +141,12 @@ function EventsViewModel() {
 			}
 		});
 		self.events(mappedTasks);
-		console.log("saving ReST events");
+		// console.log("saving ReST events");
 		amplify.store("events", allData);
 	}
 	
 	self.updateDataFromJSON = function() {
-		$.getJSON("rest/events", self.updateData);
+		$.getJSON(serverModel.cruisemonkey() + '/rest/events', self.updateData);
 	};
 
 	self.updateDataFromJSON();
@@ -167,11 +202,10 @@ function MyEventsModel() {
 var myEventsModel = new MyEventsModel();
 myEventsModel.filter.subscribe(onFilterChange, myEventsModel);
 myEventsModel.filteredEvents = ko.dependentObservable(function() {
-	var self = this;
+	var self = this,
+		filter = self.filter().toLowerCase(),
 
-	var filter = self.filter().toLowerCase();
-
-	var matchesGroup = ko.utils.arrayFilter(self.events(), function(event) {
+	matchesGroup = ko.utils.arrayFilter(self.events(), function(event) {
 		if (event.owner() == 'admin') {
 			return false;
 		}
@@ -186,5 +220,13 @@ myEventsModel.filteredEvents = ko.dependentObservable(function() {
 		});
 	}
 }, myEventsModel);
+
+var navModel = {
+		signedIn: ko.observable(false)
+};
+navModel.notSignedIn = ko.dependentObservable(function() {
+	var self = this;
+	return ! self.signedIn();
+}, navModel);
 
 console.log("app.js loaded");
