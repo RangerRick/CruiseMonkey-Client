@@ -146,7 +146,7 @@ function EventsViewModel() {
 	}
 	
 	self.updateDataFromJSON = function() {
-		$.getJSON(serverModel.cruisemonkey() + '/rest/events', self.updateData);
+		$.getJSON(serverModel.cruisemonkey() + '/rest/events?callback=?', self.updateData);
 	};
 
 	self.updateDataFromJSON();
