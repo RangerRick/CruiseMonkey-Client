@@ -71,8 +71,8 @@ function onDeviceReady( event ) {
 	
 	// load Mustache templates
     for (var key in templates) {
+		console.log("loading template: " + key);
         (function() {
-			console.log("loading template: " + key);
             var _key = key.toString();
             if ( _key != "loaded" && _key != "requested" ){
                 templates.requested ++;
