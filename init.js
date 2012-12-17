@@ -242,11 +242,9 @@ function setupDefaultView() {
 	console.log('setupDefaultView()');
     setupHeader();
 
-    /*
     var interval = setInterval(function() {
     	eventsModel.updateDataFromJSON();
     }, 5000);
-    */
 
     // Hide address bar on mobile devices
     /*
