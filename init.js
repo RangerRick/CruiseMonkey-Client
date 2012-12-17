@@ -27,16 +27,26 @@ scrollManager.onScrollStop = function(enabled) {
 	}
 };
 
+var templates = ['views/header.html', 'views/events.html', 'views/login.html'],
+ 	templateLoader  = new TemplateLoader(templates);
+
+templateLoader.onLoad = function(url) {
+	switch(url) {
+		case 'views/events.html':
+			createOfficialEventsView();
+			createMyEventsView();
+			break;
+		case 'views/login.html':
+			createLoginView();
+			break;
+	}
+};
+templateLoader.onFinished = function() {
+    setupDefaultView();
+};
+
 var pageTracker = new PageTracker(amplify, '.scrollable'),
 pageNavigator   = new PageNavigator(amplify, pageTracker, 'official-events', '.calendar-event'),
-
-templates = {
-	header: "views/header.html",
-	events: "views/events.html",
-	login: "views/login.html",
-	loaded: 0,
-	requested: 0,
-},
 
 setOffline = function() {
 	console.log('setOffline()');
@@ -68,45 +78,16 @@ isSignedIn = function() {
 
 function onDeviceReady( event ) {
 	console.log("Device is ready.  Initializing.");
-	
-	// load Mustache templates
-    for (var key in templates) {
-		console.log("loading template: " + key);
-        (function() {
-            var _key = key.toString();
-            if ( _key != "loaded" && _key != "requested" ){
-                templates.requested ++;
-         
-                 var templateLoaded = function( template ){
-                    onTemplateLoaded( template, _key );
-                 }
-                
-                $.get( templates[ _key ], templateLoaded );
-             }
-         })();
-    }
+
+	templateLoader.load();
 }
 
 var _header, _container;
 
-function getHeader() {
-	if (!_header) {
-		_header = $("body").find("#header");
-	}
-	return _header;
-}
-
-function getContainer() {
-	if (!_container) {
-		_container = $("body").find("#content");
-	}
-	return _container;
-}
-
 function setupHeader() {
 	console.log('setupHeader()');
-    header = getHeader();
-    header.html(templates.header);
+    header = pageTracker.getHeader();
+    header.html(templateLoader.renderTemplate('views/header.html'));
     
     var nav = $(header).find('nav')[0];
 
@@ -121,6 +102,7 @@ function setupHeader() {
     			// e.preventDefault();
             	console.log("navigation event: " + hash);
             	navigateTo(hash);
+				if ($('.top-bar').hasClass('expanded')) $('.toggle-topbar').find('a').click();
     		});
     	}
     });
@@ -131,6 +113,7 @@ function setupHeader() {
     	$(element).on('click.fndtn touchstart.fndtn', function(e) {
     		setOffline();
     		navigateTo('login');
+			if ($('.top-bar').hasClass('expanded')) $('.toggle-topbar').find('a').click();
     	});
     });
     $(nav).find('.signout').each(function(index, element) {
@@ -139,8 +122,10 @@ function setupHeader() {
     		serverModel.username(null);
     		serverModel.password(null);
     		navigateTo('login');
+			if ($('.top-bar').hasClass('expanded')) $('.toggle-topbar').find('a').click();
     	});
     });
+
     ko.applyBindings(navModel, nav);
 }
 
@@ -165,7 +150,7 @@ function navigateTo(pageId) {
 	if (!topElement || topElement.getIndex() == 0) {
 		console.log('scrolling to the top of the page');
 		setTimeout(function() {
-			$('body').scrollTo(0, 0, {
+			pageTracker.getElement('body').scrollTo(0, 0, {
 				onAfter: function() {
 					setTimeout(function() {
 						scrollManager.enable();
@@ -176,7 +161,7 @@ function navigateTo(pageId) {
 	} else {
 		console.log("scrolling to " + topElement.toString());
 		setTimeout(function() {
-			$('body').scrollTo('#' + topElement.getId(), 0,
+			pageTracker.getElement('body').scrollTo('#' + topElement.getId(), 0,
 				{
 					margin:false,
 					offset: {left:0, top:-45},
@@ -281,10 +266,10 @@ function setupDefaultView() {
 function replaceCurrentPage(pageId) {
 	console.log('replaceCurrentPage(' + pageId + ')');
 
-	var page = $('#' + pageId);
+	var page = pageTracker.getElement('#' + pageId);
 	var search = page.find('input[type=search]').first();
 
-	getContainer().children().css('display', 'none');
+	pageTracker.getContainer().children().css('display', 'none');
 	page.css('display', 'block');
 
     if (!Modernizr.touch) {
@@ -296,19 +281,19 @@ function replaceCurrentPage(pageId) {
     if (pageId != 'login') {
         amplify.store('current_page', pageId);
     }
-	return getContainer()[0];
+	return pageTracker.getContainer()[0];
 }
 
 function createOfficialEventsView() {
 	console.log('createOfficialEventsView()');
-    if (!pages.official) {
-    	var html = Mustache.to_html(templates.events, { eventType: "official" });
+	if (!pages.official) {
+		var html = templateLoader.renderTemplate('views/events.html', { eventType: "official" });
 
     	var div = document.createElement('div');
     	div.setAttribute('id', 'official-events');
     	$(div).css('display', 'none');
     	$(div).html(html);
-    	var appended = getContainer()[0].appendChild(div);
+    	var appended = pageTracker.getContainer()[0].appendChild(div);
 
     	pages.official = div;
 
@@ -325,14 +310,14 @@ function showOfficialEventsView() {
 
 function createMyEventsView() {
 	console.log('createMyEventsView()');
-    if (!pages.my) {
-    	var html = Mustache.to_html(templates.events, { eventType: "my" });
+	if (!pages.my) {
+		var html = templateLoader.renderTemplate('views/events.html', { eventType: "my" });
 
     	var div = document.createElement('div');
     	div.setAttribute('id', 'my-events');
     	$(div).css('display', 'none');
     	$(div).html(html);
-    	var appended = getContainer()[0].appendChild(div);
+    	var appended = pageTracker.getContainer()[0].appendChild(div);
 
     	pages.my = div;
 
@@ -350,7 +335,7 @@ function showMyEventsView() {
 function createLoginView() {
 	console.log('createLoginView()');
 	if (!pages.login) {
-    	var html = Mustache.to_html(templates.login);
+		var html = templateLoader.renderTemplate('views/login.html');
 
     	var div = document.createElement('div');
     	div.setAttribute('id', 'login');
@@ -365,7 +350,7 @@ function createLoginView() {
 			serverModel.persist();
 			setupDefaultView();
 		});
-    	var appended = getContainer()[0].appendChild(div);
+    	var appended = pageTracker.getContainer()[0].appendChild(div);
 
     	pages.login = div;
 
@@ -377,24 +362,6 @@ function showLoginView() {
 	console.log('showLoginView()');
 	createLoginView();
 	var content = replaceCurrentPage('login');
-}
-
-function onTemplateLoaded(template, key) {
-	console.log('onTemplateLoaded(<template>, ' + key + ')');
-
-//    console.log( key + ": " + template);
-    templates[ key ] = template;
-    templates.loaded ++;
-
-	if ( templates.loaded == templates.requested ) {
-		console.log("all requested templates have been loaded");
-		
-		createOfficialEventsView();
-		createMyEventsView();
-		createLoginView();
-
-        setupDefaultView();
-    }
 }
 
 console.log("init.js loaded");

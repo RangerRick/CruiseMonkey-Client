@@ -26,8 +26,8 @@ function PageNavigator(amplify, pageTracker, defaultPage, elementCriteria) {
 		 	current_page = self.getCurrentPage(),
 			id = null;
 
-		$('#' + current_page).find(m_elementCriteria).each(function(index, element) {
-			if (m_pageTracker.isElementInViewport(element)) {
+		pageTracker.getElement('#' + current_page).find(m_elementCriteria).each(function(index, element) {
+			if (CMUtils.isElementInViewport(element)) {
 				id = $(element).attr('id');
 				if (id) {
 					var summary = CMUtils.getSummary(element);

@@ -3,9 +3,9 @@ function PageElement(element, elementId, index) {
 		throw new TypeError("You must pass an element, element ID, and match index!");
 	}
 
-	var m_element   = element,
-	 	m_elementId = elementId,
-	 	m_index     = index;
+	var m_element      = element,
+	 	m_elementId    = elementId,
+	 	m_index        = index;
 	
 	this.getElement = function() {
 		return m_element;
@@ -26,8 +26,9 @@ function PageTracker(amplify, elementCriteria) {
 		throw new TypeError("You must pass an Amplify storage class and an element match criteria!");
 	}
 
-	var m_amplify = amplify,
+	var m_amplify         = amplify,
 		m_elementCriteria = elementCriteria,
+		m_elementCache    = [],
 		self = this;
 
 	/** public methods **/
@@ -49,7 +50,15 @@ function PageTracker(amplify, elementCriteria) {
 		f_setPageCache(page_store_cache);
 		return id;
 	};
-	
+
+	self._getElement = function(criteria) {
+		return $(criteria);
+	};
+	self.getElement = function(criteria) {
+		self._memoize = self._memoize || {};
+		return (criteria in self._memoize) ? self._memoize[criteria] : self._memoize[criteria] = self._getElement(criteria);
+	};
+
 	self.getTopElement = function(pageId) {
 		var matched = f_getElementForPageId(pageId);
 		if (matched) {
@@ -58,16 +67,11 @@ function PageTracker(amplify, elementCriteria) {
 		return null;
 	};
 
-	self.isElementInViewport = function(el) {
-		var m_top    = el.offsetTop,
-		 	m_height = el.offsetHeight;
-
-		while (el.offsetParent) {
-			el = el.offsetParent;
-			m_top += el.offsetTop;
-		}
-
-		return ( m_top >= window.pageYOffset && (m_top + m_height) <= (window.pageYOffset + window.innerHeight) );
+	self.getHeader = function() {
+		return self.getElement('#header');
+	};
+	self.getContainer = function() {
+		return self.getElement('#content');
 	};
 
 	/** internal methods **/
@@ -83,7 +87,7 @@ function PageTracker(amplify, elementCriteria) {
 	},
 	f_getElementForPageId = function(pageId) {
 		var topElement = self.getScrolledId(pageId),
-			page = $('#' + pageId),
+			page = self.getElement('#' + pageId),
 			matched = null,
 			id = null;
 
