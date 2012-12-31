@@ -53,6 +53,7 @@
 	<preference name="webviewbounce" value="false" />
 	<!-- <preference name="stay-in-webview" value="true" /> -->
 	<preference name="splash-screen-duration" value="20000" />
+	<preference name="load-url-timeout" value="20000" />
 
 	<access origin="*" />
 </widget>
