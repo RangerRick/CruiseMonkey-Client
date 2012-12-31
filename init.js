@@ -1,8 +1,10 @@
 console.log("init.js loading");
 
-var pages = {};
-var page_scroll_element = [];
-var online = false;
+var pages = {},
+page_scroll_element = [],
+online = false,
+m_deviceReady = false,
+m_interval;
 
 var scrollManager = new ScrollManager();
 scrollManager.delay = 100;
@@ -30,18 +32,10 @@ scrollManager.onScrollStop = function(enabled) {
 var templates = ['views/header.html', 'views/events.html', 'views/login.html'],
  	templateLoader  = new TemplateLoader(templates);
 
-templateLoader.onLoad = function(url) {
-	switch(url) {
-		case 'views/events.html':
-			createOfficialEventsView();
-			createMyEventsView();
-			break;
-		case 'views/login.html':
-			createLoginView();
-			break;
-	}
-};
 templateLoader.onFinished = function() {
+	createLoginView();
+	createOfficialEventsView();
+	createMyEventsView();
     setupDefaultView();
 };
 
@@ -77,10 +71,21 @@ isSignedIn = function() {
 };
 
 function onDeviceReady( event ) {
+	if (m_deviceReady) return;
 	console.log("Device is ready.  Initializing.");
+	m_deviceReady = true;
 
 	templateLoader.load();
 }
+
+// if phonegap never initializes, fire manually
+/*
+setTimeout(function() {
+	if (!m_deviceReady) {
+		onDeviceReady(null);
+	}
+}, 5000);
+*/
 
 var _header, _container;
 
@@ -180,8 +185,8 @@ function navigateTo(pageId) {
 
 function checkIfAuthorized(success, failure) {
 	console.log('checkIfAuthorized()');
-	var username = amplify.store('username');
-	var password = amplify.store('password');
+	var username = serverModel.username();
+	var password = serverModel.password();
 	
 	if (!username || !password) {
 		failure();
@@ -189,16 +194,14 @@ function checkIfAuthorized(success, failure) {
 	}
 
 	$.ajax({
-		url: serverModel.statusnet() + '/api/help/test.json',
+		url: serverModel.cruisemonkey() + '/rest/auth',
 		dataType: 'json',
-		type: 'POST',
-		beforeSend: function(xhr) {
-			xhr.setRequestHeader("Authorization", "Basic " + btoa(username + ':' + password));
-		},
+		cache: false,
+		type: 'GET',
 		username: username,
 		password: password,
 		success: function(data) {
-			if (data == 'ok') {
+			if (data == true) {
 				setOnline();
 				console.log('test returned OK');
 				success();
@@ -239,10 +242,11 @@ var showLoginOrCurrent = function() {
 }
 
 function setupDefaultView() {
+	
 	console.log('setupDefaultView()');
     setupHeader();
 
-    var interval = setInterval(function() {
+    m_interval = setInterval(function() {
     	eventsModel.updateDataFromJSON();
     }, 5000);
 
@@ -340,16 +344,22 @@ function createLoginView() {
     	$(div).css('display', 'none');
     	$(div).html(html);
 		$(div).find('#login_reset').on('click.fndtn touchstart.fndtn', function(e) {
+			e.stopPropagation();
 			console.log("cancel clicked");
 			serverModel.reset();
 		});
 		$(div).find('#login_save').on('click.fndtn touchstart.fndtn', function(e) {
+			e.stopPropagation();
 			console.log("save clicked");
 			serverModel.persist();
-			setupDefaultView();
+			showLoginOrCurrent();
+			if (eventsViewModel) {
+				eventsViewModel.updateDataFromJSON();
+			}
 		});
     	var appended = pageTracker.getContainer()[0].appendChild(div);
 
+		console.log("done creating loginView");
     	pages.login = div;
 
     	ko.applyBindings(serverModel, appended);

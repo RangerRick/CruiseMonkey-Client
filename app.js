@@ -17,7 +17,8 @@ ko.bindingHandlers.dateString = {
 function Event(data) {
 	var self = this;
 
-	self.id           = ko.observable(data["@id"].replace(/[\W\@]+/g, ''));
+	self.id           = ko.observable(data["@id"]);
+	self.cleanId      = ko.observable(data["@id"].replace(/[\W\@]+/g, ''));
 	self.summary      = ko.observable(data.summary);
 	self.description  = ko.observable(data.description);
 	self.start        = ko.observable(new Date(data.start));
@@ -37,6 +38,28 @@ function Event(data) {
 		}
 		return retVal;
 	}, self);
+	self.favorite     = ko.observable(false);
+	self.favorite.subscribe(function(isFavorite) {
+		if (eventsModel.updating()) {
+			// console.log("skipping ajax update for " + self.id() + ", we are in the middle of a server update");
+			return;
+		}
+		console.log(self.id() + " favorite has changed to: " + isFavorite);
+		var type = "PUT";
+		if (isFavorite) {
+			type = 'PUT';
+		} else {
+			type = 'DELETE';
+		}
+		$.ajax({
+			url: serverModel.cruisemonkey() + '/rest/favorites?event=' + encodeURI(self.id()),
+			dataType: 'json',
+			type: type,
+			cache: false,
+			username: serverModel.username(),
+			password: serverModel.password()
+		});
+	});
 }
 
 /** used for filter/searching, match an event based on a filter **/
@@ -107,47 +130,75 @@ var serverModel = new ServerModel();
 function EventsViewModel() {
 	var self = this;
 	self.events = ko.observableArray();
+	self.updating = ko.observable(false);
 
 	self.updateData = function(allData) {
-		var mappedTasks = $.map(allData.event, function(event) {
-			var item = ko.utils.arrayFirst(self.events(), function(entry) {
-				if (entry) {
-					// console.log("entry = " + ko.toJSON(entry));
-					event["@id"] = event["@id"].replace(/[\W\@]+/g, '');
-					if (entry.id() == event["@id"]) {
-						return true;
+		self.updating(true);
+		var favorites = [], dataFavorites = [], dataEvents = [];
+		if (allData.favorites && allData.favorites.favorite) {
+			if (allData.favorites.favorite instanceof Array) {
+				dataFavorites = allData.favorites.favorite;
+			} else {
+				dataFavorites.push(allData.favorites.favorite);
+			}
+			favorites = $.map(dataFavorites, function(favorite) {
+				return favorite["@event"];
+			});
+		}
+		if (allData.events && allData.events.event) {
+			if (allData.events.event instanceof Array) {
+				dataEvents = allData.events.event;
+			} else {
+				dataEvents.push(allData.events.event);
+			}
+			var mappedTasks = $.map(dataEvents, function(event) {
+				var isFavorite = (favorites.indexOf(event["@id"]) != -1);
+				var item = ko.utils.arrayFirst(self.events(), function(entry) {
+					if (entry) {
+						if (entry.id() == event["@id"]) {
+							return true;
+						} else {
+							return false;
+						}
 					} else {
-						return false;
+						console.log("no entry");
 					}
+				});
+				if (item) {
+					var startDate = new Date(event.start);
+					var endDate	= new Date(event.end);
+					var createdBy = event["created-by"];
+
+					item.favorite(isFavorite);
+					if (item.summary()         != event.summary)       { item.summary(event.summary); }
+					if (item.description()     != event.description)   { item.description(event.description); }
+					if (item.start().getTime() != startDate.getTime()) { item.start(startDate); }
+					if (item.end().getTime()   != endDate.getTime())   { item.end(endDate); }
+					if (item.createdBy()       != createdBy)           { item.createdBy(createdBy); }
+					if (item.owner()           != event.owner)         { item.owner(event.owner); }
+					return item;
 				} else {
-					console.log("no entry");
+					var e = new Event(event);
+					e.favorite(isFavorite);
+					return e;
 				}
 			});
-			if (item) {
-				// console.log("reusing " + ko.toJSON(item));
-				var startDate = new Date(event.start);
-				var endDate	= new Date(event.end);
-				var createdBy = event["created-by"];
-
-				if (item.summary()         != event.summary)       { item.summary(event.summary); }
-				if (item.description()     != event.description)   { item.description(event.description); }
-				if (item.start().getTime() != startDate.getTime()) { item.start(startDate); }
-				if (item.end().getTime()   != endDate.getTime())   { item.end(endDate); }
-				if (item.createdBy()       != createdBy)           { item.createdBy(createdBy); }
-				if (item.owner()           != event.owner)         { item.owner(event.owner); }
-				return item;
-			} else {
-				return new Event(event);
-			}
-		});
-		self.events(mappedTasks);
+			self.events(mappedTasks);
+		}
 		// console.log("saving ReST events");
 		amplify.store("events", allData);
+		self.updating(false);
 	}
 	
 	self.updateDataFromJSON = function() {
-		// $.getJSON(serverModel.cruisemonkey() + '/rest/events?callback=?', self.updateData);
-		$.getJSON(serverModel.cruisemonkey() + '/rest/events', self.updateData);
+		$.ajax({
+			url: serverModel.cruisemonkey() + '/rest/cruisemonkey/events',
+			dataType: 'json',
+			cache: false,
+			username: serverModel.username(),
+			password: serverModel.password(),
+			success: self.updateData
+		});
 	};
 
 	self.updateDataFromJSON();
@@ -174,15 +225,15 @@ function OfficialEventsModel() {
 var officialEventsModel = new OfficialEventsModel();
 officialEventsModel.filter.subscribe(onFilterChange, officialEventsModel);
 officialEventsModel.filteredEvents = ko.dependentObservable(function() {
-	var self = this;
-
-	var filter = self.filter().toLowerCase();
+	var self = this,
+		filter = self.filter().toLowerCase(),
+		username = serverModel.username();
 
 	var matchesGroup = ko.utils.arrayFilter(self.events(), function(event) {
-		if (event.owner() != 'admin') {
-			return false;
+		if (event.owner() == 'google') {
+			return true;
 		}
-		return true;
+		return false;
 	});
 
 	if (!filter) {
@@ -207,10 +258,11 @@ myEventsModel.filteredEvents = ko.dependentObservable(function() {
 		filter = self.filter().toLowerCase(),
 
 	matchesGroup = ko.utils.arrayFilter(self.events(), function(event) {
-		if (event.owner() == 'admin') {
-			return false;
+		if (event.favorite()) return true;
+		if (event.owner() != 'google') {
+			return true;
 		}
-		return true;
+		return false;
 	});
 
 	if (!filter) {

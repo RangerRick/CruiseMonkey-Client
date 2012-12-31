@@ -16,26 +16,36 @@ if (!Array.prototype.indexOf) {
 function TemplateLoader(urls) {
 	var self = this,
 	m_templateUrls = urls || [],
-	m_loaded = 0,
-	m_failed = 0,
-	m_templates = [],
+	m_failed = {},
+	m_templates = {},
+
+	f_getSize = function(obj) {
+		// http://stackoverflow.com/a/6700/11236
+		var size = 0, key;
+		for (key in obj) {
+			if (obj.hasOwnProperty(key)) size++;
+		}
+		return size;
+	},
 
 	f_checkOnFinished = function() {
-		if ((m_loaded + m_failed) == m_templateUrls.length) {
+		var templateLength = f_getSize(m_templates),
+			failedLength = f_getSize(m_failed);
+
+		if ((templateLength + failedLength) >= m_templateUrls.length) {
 			self.onFinished();
 		}
 	}
 	f_onLoad = function(url, template) {
 		console.log('TemplateLoader::f_onLoad(' + url + ', <template>)');
 		m_templates[url] = template;
-		m_loaded++;
 
 		self.onLoad(url, template);
 		f_checkOnFinished();
 	},
-	f_onFail = function(url) {
-		console.log('TemplateLoader::f_onFail(' + url + ')');
-		m_failed++;
+	f_onFail = function(url, textStatus, errorThrown) {
+		console.log('TemplateLoader::f_onFail(' + url + ', ' + textStatus + ')');
+		m_failed[url] = errorThrown;
 
 		self.onFail(url);
 		f_checkOnFinished();
@@ -46,8 +56,8 @@ function TemplateLoader(urls) {
 			var templateLoaded = function( template ){
 				f_onLoad( url, template );
 			},
-			failed = function() {
-				f_onFail(url);
+			failed = function(jqXHR, textStatus, errorThrown) {
+				f_onFail(url, textStatus, errorThrown);
 			};
 			$.ajax({
 				url: url,
@@ -63,9 +73,13 @@ function TemplateLoader(urls) {
 	};
 	self.remove = function(url) {
 		m_templateUrls.splice(m_templateUrls.indexOf(url), 1);
+		delete m_templates[url];
+		delete m_failed[url];
 	};
 	self.clear = function() {
 		m_templateUrls = [];
+		m_templates = {};
+		m_failed = {};
 	};
 	self.urls = function() {
 		return m_templateUrls.slice(0);
