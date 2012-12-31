@@ -232,7 +232,7 @@ setupDefaultView = function() {
 
     m_interval = setInterval(function() {
     	eventsModel.updateDataFromJSON();
-    }, 5000);
+    }, 60000);
 
     // Hide address bar on mobile devices
     /*
