@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
-<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"><![endif]-->
-<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en"><![endif]-->
-<!--[if gt IE 8]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en" manifest="cruisemonkey.manifest"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" lang="en" manifest="cruisemonkey.manifest"><![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" manifest="cruisemonkey.manifest"><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" lang="en" manifest="cruisemonkey.manifest"><!--<![endif]-->
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0">
@@ -35,6 +35,22 @@
 				templateLoader.load();
 			},
 			onLoad = function() {
+				if (window.applicationCache.status == window.applicationCache.IDLE) {
+					console.log("application cache is up-to-date");
+				}
+				window.applicationCache.addEventListener('updateready', function(e) {
+					if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
+						console.log("application cache has changed");
+						// Browser downloaded a new app cache.
+						// Swap it in and reload the page to get the new hotness.
+						window.applicationCache.swapCache();
+		        window.location.reload();
+					} else {
+						// Manifest didn't change. Nothing new to server.
+						console.log("application cache is up-to-date");
+					}
+				}, false);
+
 				if (m_isPhoneGap) {
 					document.addEventListener("deviceready", initializeApp, false);
 				} else {
