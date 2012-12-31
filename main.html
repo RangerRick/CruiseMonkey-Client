@@ -109,7 +109,7 @@
 				if (m_isPhoneGap) {
 					console.log("we're on phonegap, hiding the splashscreen");
 					navigator.splashscreen.hide();
-					setTimeout(photos.takePhoto, 10000);
+					photos.takePhoto();
 				}
 			},
 			onLoad = function() {
