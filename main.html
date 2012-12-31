@@ -22,6 +22,77 @@
 		<div id="header"></div>
 		<div id="content"><div class="loading">loading...</div></div>
 
+		<script id="header.html" type="text/html">
+			<div class="fixed" style="display:block">
+			  <nav class="top-bar">
+			    <ul>
+			      <li class="name"><h1><a href="#official-events">CruiseMonkey 3</a></h1></li>
+			      <li class="toggle-topbar"><a href="#"></a></li>
+			    </ul>
+			    <section>
+			      <ul class="left">
+			        <li><a href="#official-events">Official Events</a></li>
+			        <li><a href="#my-events">My Events</a></li>
+			      </ul>
+			      <ul class="right">
+			      	<li data-bind="visible: notSignedIn"><a href="#" class="signin">Sign In</a></li>
+			      	<li data-bind="visible: signedIn"><a href="#" class="signout">Sign Out</a></li>
+			      </ul>
+			    </section>
+			  </nav>
+			</div>
+		</script>
+		<script id="login.html" type="text/html">
+			<form>
+				<div class="row">
+					<div class="three mobile-two columns">
+						<label class="right inline">CruiseMonkey URL:</label>
+					</div>
+					<div class="nine mobile-two columns">
+						<input type="text" placeholder="" data-bind="value: cruisemonkey" />
+					</div>
+				</div>
+				<div class="row">
+					<div class="three mobile-two columns">
+						<label class="right inline">Login:</label>
+					</div>
+					<div class="nine mobile-two columns">
+						<input type="text" placeholder="Twit-arrrr username..." data-bind="value: username" />
+					</div>
+				</div>
+				<div class="row">
+					<div class="three mobile-two columns">
+						<label class="right inline">Password:</label>
+					</div>
+					<div class="nine mobile-two columns">
+						<input type="password" placeholder="Twit-arrrr password..." data-bind="value: password" />
+					</div>
+				</div>
+				<div class="row">
+					<div class="twelve mobile-four columns">
+						<div class="right inline">
+							<a href="#" id="login_reset" class="round secondary button">Reset</a>
+							<a href="#" id="login_save"  class="round button">Save</a>
+						</div>
+					</div>
+				</div>
+			</form>
+		</script>
+		<script id="events.html" type="text/html">
+			<form id="{{eventType}}-search"><input type="search" results="5" placeholder="Search..." data-bind="value: filter, valueUpdate: 'afterkeydown'" /></form>
+			<ul class="event-list unstyled" style="display:none">
+				<!-- ko foreach: { data: filteredEvents } -->
+				<li class="calendar-event {{eventType}} scrollable" data-bind="attr: { id: cleanId }"> <!-- onclick="" ontouchstart="" -->
+					<div class="summary"><span data-bind="text: summary"></span></div>
+					<div class="favorite"><input type="checkbox" data-bind="checked: favorite, attr: { id: cleanId() + '-favorite' }" /><label data-bind="attr: { for: cleanId() + '-favorite' }">&nbsp;</div>
+					<div class="time">Time: <span data-bind="text: timespan"></span></div>
+					<div class="location">Location: <span data-bind="text: location"></span></div>
+					<div class="description"><span data-bind="text: description"></span></div>
+				</li>
+				<!-- /ko -->
+			</ul>
+		</script>
+
 		<script>var m_isPhoneGap = true;</script>
 		<script>
 			var m_deviceReady = false,
