@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# version 0bb31fdca56cd4f6dae79de37f0dafdf4ec233df 1356975767
+# version fcb140a0b583d74e6e12e132236effb1bd6aa530 1356976366
 
 NETWORK:
 *
@@ -8,7 +8,6 @@ CACHE:
 3rdparty.js
 cruisemonkey.css
 cruisemonkey.js
-cruisemonkey.manifest
 foundation/humans.txt
 foundation/images/foundation/orbit/bullets.jpg
 foundation/images/foundation/orbit/left-arrow-small.png
