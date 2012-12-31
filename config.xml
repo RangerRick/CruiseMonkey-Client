@@ -21,7 +21,8 @@
 		<!-- <gap:platform name="blackberry" project="widgets"/> -->
 	</gap:platforms>
 
-	<icon src="images/icon-ship-512.png" gap:role="default" />
+	<icon src="images/icon-ship-512.png" gap:role="default" gap:platform="ios" />
+	<icon src="images/icon-ship-512.png" gap:role="default" gap:platform="android" />
 
 	<!-- iOS requires specific dimensions for icons; classic iPhone screens, Retina displays, and iPad screens respectively -->
 	<icon src="images/icon-ship-57.png" width="57" height="57" />
