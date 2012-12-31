@@ -26,7 +26,6 @@
 		<div id="header"></div>
 		<div id="content"><div class="loading">loading...</div></div>
 
-		<script src="phonegap.js"></script>
 		<script src="3rdparty.js"></script>
 		<!--
 		<script src="jquery/jquery-1.8.1.min.js"></script>
@@ -57,8 +56,24 @@
 		<script src="app.js"></script>
 		<script src="init.js"></script>
 		<script src="auth.js"></script>
+
 		<script>
-			document.addEventListener("deviceready", onDeviceReady, false);
+			var initializeApp = function() {
+				console.log('Device is ready; initializing.');
+				document.removeEventListener("deviceready", initializeApp, false);
+				templateLoader.load();
+			};
+
+			document.addEventListener("deviceready", initializeApp, false);
+
+			// if phonegap never initializes, fire manually
+			setTimeout(function() {
+				var evt = document.createEvent('Event');
+				evt.initEvent('deviceready', true, true);
+				document.dispatchEvent(evt);
+			}, 5000);
 		</script>
+
+		<script src="phonegap.js"></script>
 	</body>
 </html>

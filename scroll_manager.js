@@ -15,11 +15,11 @@ function ScrollManager() {
 
 	/* Public methods */
 	self.disable = function() {
-		console.log("ScrollManager::disable()");
+		// console.log("ScrollManager::disable()");
 		m_enabled = false;
 	};
 	self.enable = function() {
-		console.log("ScrollManager::enable()");
+		// console.log("ScrollManager::enable()");
 		m_enabled = true;
 	};
 

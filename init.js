@@ -3,12 +3,13 @@ console.log("init.js loading");
 var pages = {},
 page_scroll_element = [],
 online = false,
-m_deviceReady = false,
-m_interval;
+m_interval,
+_header, _container;
 
 var scrollManager = new ScrollManager();
 scrollManager.delay = 100;
 
+/*
 scrollManager.onScrollStart = function(enabled) {
 	if (enabled) {
 		console.log('scrolling started while enabled');
@@ -16,6 +17,8 @@ scrollManager.onScrollStart = function(enabled) {
 		console.log('scrolling started while disabled');
 	}
 };
+*/
+
 scrollManager.onScrollStop = function(enabled) {
 	if (enabled) {
 		var found = pageNavigator.findTopVisibleElement();
@@ -68,28 +71,9 @@ isOnline = function() {
 
 isSignedIn = function() {
 	return online && loginModel.username() && loginModel.username().length > 0;
-};
+},
 
-function onDeviceReady( event ) {
-	if (m_deviceReady) return;
-	console.log("Device is ready.  Initializing.");
-	m_deviceReady = true;
-
-	templateLoader.load();
-}
-
-// if phonegap never initializes, fire manually
-/*
-setTimeout(function() {
-	if (!m_deviceReady) {
-		onDeviceReady(null);
-	}
-}, 5000);
-*/
-
-var _header, _container;
-
-function setupHeader() {
+setupHeader = function() {
 	console.log('setupHeader()');
     header = pageTracker.getHeader();
     header.html(templateLoader.renderTemplate('views/header.html'));
@@ -132,9 +116,9 @@ function setupHeader() {
     });
 
     ko.applyBindings(navModel, nav);
-}
+},
 
-function navigateTo(pageId) {
+navigateTo = function(pageId) {
 	console.log('----------------------------------------------------------------------------------');
 	console.log('navigateTo(' + pageId + ')');
 	scrollManager.disable();
@@ -181,9 +165,9 @@ function navigateTo(pageId) {
 	}
 
 	return true;
-}
+},
 
-function checkIfAuthorized(success, failure) {
+checkIfAuthorized = function(success, failure) {
 	console.log('checkIfAuthorized()');
 	var username = serverModel.username();
 	var password = serverModel.password();
@@ -222,9 +206,9 @@ function checkIfAuthorized(success, failure) {
 		console.log("An error occurred: " + ko.toJSON(data));
 		failure();
 	});
-}
+},
 
-var showLoginOrCurrent = function() {
+showLoginOrCurrent = function() {
 	var current_page = pageNavigator.getCurrentPage();
 
     checkIfAuthorized(
@@ -239,9 +223,9 @@ var showLoginOrCurrent = function() {
     		navigateTo('login');
     	}
     );
-}
+},
 
-function setupDefaultView() {
+setupDefaultView = function() {
 	
 	console.log('setupDefaultView()');
     setupHeader();
@@ -263,9 +247,9 @@ function setupDefaultView() {
     */
 
     showLoginOrCurrent();
-}
+},
 
-function replaceCurrentPage(pageId) {
+replaceCurrentPage = function(pageId) {
 	console.log('replaceCurrentPage(' + pageId + ')');
 
 	var page = pageTracker.getElement('#' + pageId);
@@ -284,9 +268,9 @@ function replaceCurrentPage(pageId) {
         amplify.store('current_page', pageId);
     }
 	return pageTracker.getContainer()[0];
-}
+},
 
-function createOfficialEventsView() {
+createOfficialEventsView = function() {
 	console.log('createOfficialEventsView()');
 	if (!pages.official) {
 		var html = templateLoader.renderTemplate('views/events.html', { eventType: "official" });
@@ -301,16 +285,16 @@ function createOfficialEventsView() {
 
         ko.applyBindings(officialEventsModel, appended);
     }
-}
+},
 
-function showOfficialEventsView() {
+showOfficialEventsView = function() {
 	console.log('showOfficialEventsView()');
 	createOfficialEventsView();
 	var content = replaceCurrentPage('official-events');
     $(content).find('ul.event-list').css('display', 'block');
-}
+},
 
-function createMyEventsView() {
+createMyEventsView = function() {
 	console.log('createMyEventsView()');
 	if (!pages.my) {
 		var html = templateLoader.renderTemplate('views/events.html', { eventType: "my" });
@@ -325,16 +309,16 @@ function createMyEventsView() {
 
         ko.applyBindings(myEventsModel, appended);
     }
-}
+},
 
-function showMyEventsView() {
+showMyEventsView = function() {
 	console.log('showMyEventsView()');
 	createMyEventsView();
 	var content = replaceCurrentPage('my-events');
     $(content).find('ul.event-list').css('display', 'block');
-}
+},
 
-function createLoginView() {
+createLoginView = function() {
 	console.log('createLoginView()');
 	if (!pages.login) {
 		var html = templateLoader.renderTemplate('views/login.html');
@@ -364,12 +348,12 @@ function createLoginView() {
 
     	ko.applyBindings(serverModel, appended);
 	}
-}
+},
 
-function showLoginView() {
+showLoginView = function() {
 	console.log('showLoginView()');
 	createLoginView();
 	var content = replaceCurrentPage('login');
-}
+};
 
 console.log("init.js loaded");
