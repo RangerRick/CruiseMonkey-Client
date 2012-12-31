@@ -57,7 +57,7 @@
 		<script src="init.js"></script>
 
 		<script>
-			var initializeApp = function() {
+			var initializeApp = function(event) {
 				console.log('Device is ready; initializing.');
 				document.removeEventListener("deviceready", initializeApp, false);
 				templateLoader.load();
@@ -65,12 +65,6 @@
 
 			document.addEventListener("deviceready", initializeApp, false);
 
-			// if phonegap never initializes, fire manually
-			setTimeout(function() {
-				var evt = document.createEvent('Event');
-				evt.initEvent('deviceready', true, true);
-				document.dispatchEvent(evt);
-			}, 5000);
 		</script>
 
 		<script src="phonegap.js"></script>
