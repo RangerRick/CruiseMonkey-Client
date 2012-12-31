@@ -22,9 +22,9 @@
 		<div id="header"></div>
 		<div id="content"><div class="loading">loading...</div></div>
 
+		<script>var m_isPhoneGap = true;</script>
 		<script>
 			var m_deviceReady = false,
-			m_isPhoneGap = false,
 			initializeApp = function(event) {
 				console.log('Initializing Cruise Monkey.');
 				if (m_deviceReady) {
@@ -35,19 +35,15 @@
 				templateLoader.load();
 			},
 			onLoad = function() {
-				$.getScript('phonegap.js')
-					.done(function() {
-						console.log("loaded phonegap.js");
-						m_isPhoneGap = true;
-						document.addEventListener("deviceready", initializeApp, false);
-					}).fail(function() {
-						console.log("phonegap.js not found: starting in browser mode");
-						m_isPhoneGap = false;
-						initializeApp();
-					});
+				if (m_isPhoneGap) {
+					document.addEventListener("deviceready", initializeApp, false);
+				} else {
+					initializeApp();
+				}
 			};
 		</script>
 
+		<script src="phonegap.js"></script>
 		<script src="3rdparty.js"></script>
 
 		<script src="cruisemonkey.js"></script>
