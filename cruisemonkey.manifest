@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# version fcb140a0b583d74e6e12e132236effb1bd6aa530 1356976366
+# version e7e289e14ae66e3f767285e2ad3e2f2eed4cd8de 1356977178
 
 NETWORK:
 *
@@ -59,6 +59,7 @@ images/star-white@2x.png
 images/star-yellow.png
 images/star-yellow@2x.png
 index.html
+main.html
 views/events.html
 views/header.html
 views/login.html

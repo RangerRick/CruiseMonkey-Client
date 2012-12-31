@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en" manifest="cruisemonkey.manifest"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" lang="en" manifest="cruisemonkey.manifest"><![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" manifest="cruisemonkey.manifest"><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" lang="en" manifest="cruisemonkey.manifest"><!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0">
+		<title>CruiseMonkey 3</title>
+
+		<link rel="stylesheet" href="cruisemonkey.css" type="text/css" />
+		
+		<script src="foundation/javascripts/modernizr.foundation.js"></script>
+
+		<!-- IE Fix for HTML5 Tags -->
+		<!--[if lt IE 9]>
+			<script src="html5shim/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body onload="onLoad()">
+		<div id="header"></div>
+		<div id="content"><div class="loading">loading...</div></div>
+
+		<script>var m_isPhoneGap = true;</script>
+		<script>
+			var m_deviceReady = false,
+			initializeApp = function(event) {
+				console.log('Initializing Cruise Monkey.');
+				if (m_deviceReady) {
+					console.log("Already initialized!");
+					return;
+				}
+				m_deviceReady = true;
+				templateLoader.load();
+			},
+			onLoad = function() {
+				if (window.applicationCache.status == window.applicationCache.IDLE) {
+					console.log("application cache is up-to-date");
+				}
+				window.applicationCache.addEventListener('updateready', function(e) {
+					if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
+						console.log("application cache has changed");
+						// Browser downloaded a new app cache.
+						// Swap it in and reload the page to get the new hotness.
+						window.applicationCache.swapCache();
+		        window.location.reload();
+					} else {
+						// Manifest didn't change. Nothing new to server.
+						console.log("application cache is up-to-date");
+					}
+				}, false);
+
+				if (m_isPhoneGap) {
+					document.addEventListener("deviceready", initializeApp, false);
+				} else {
+					initializeApp();
+				}
+			};
+		</script>
+
+		<script src="phonegap.js"></script>
+		<script src="3rdparty.js"></script>
+
+		<script src="cruisemonkey.js"></script>
+	</body>
+</html>
