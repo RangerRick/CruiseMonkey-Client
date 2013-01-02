@@ -34,6 +34,7 @@
 							<li><a href="#official-events">Official Events</a></li>
 							<li><a href="#my-events">My Events</a></li>
 							<li><a href="#amenities">Amenities</a></li>
+							<li><a href="#decks">Deck Plans</a></li>
 						</ul>
 						<ul class="right">
 							<li data-bind="visible: notSignedIn"><a href="#" class="signin">Sign In</a></li>
@@ -105,6 +106,16 @@
 					<div class="description"><span data-bind="text: description"></span></div>
 				</li>
 				<!-- /ko -->
+				<!-- /ko -->
+			</ul>
+		</script>
+		<script id="decks.html" type="text/html">
+			<ul class="deck-list unstyled">
+				<!-- ko foreach: { data: decks, as: 'deck' } -->
+				<li data-bind="attr: { id: id() + '-header' }" class="divider"><span data-bind="text: 'Deck ' + number()"></span></li>
+				<li class="deck scrollable" data-bind="attr: { id: id() + '-image' }">
+					<img data-bind="attr: { src: image }" />
+				</li>
 				<!-- /ko -->
 			</ul>
 		</script>

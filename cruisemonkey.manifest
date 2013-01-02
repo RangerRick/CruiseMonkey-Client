@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# version 710fd6761c463bb814ac92076a240fd7eb76a1bf 1357090645
+# version 49c38e268717e82afaa8216bdb9bea51ad4f75fc 1357099051
 
 NETWORK:
 *
@@ -48,6 +48,34 @@ images/cruise-monkey-320x480.png
 images/cruise-monkey-640x960.png
 images/cruise-monkey-720x960.png
 images/cruise-monkey-768x1024.png
+images/deck02-300.png
+images/deck02-600.png
+images/deck03-300.png
+images/deck03-600.png
+images/deck04-300.png
+images/deck04-600.png
+images/deck05-300.png
+images/deck05-600.png
+images/deck06-300.png
+images/deck06-600.png
+images/deck07-300.png
+images/deck07-600.png
+images/deck08-300.png
+images/deck08-600.png
+images/deck09-300.png
+images/deck09-600.png
+images/deck10-300.png
+images/deck10-600.png
+images/deck11-300.png
+images/deck11-600.png
+images/deck12-300.png
+images/deck12-600.png
+images/deck13-300.png
+images/deck13-600.png
+images/deck14-300.png
+images/deck14-600.png
+images/deck15-300.png
+images/deck15-600.png
 images/icon-ship-114.png
 images/icon-ship-36.png
 images/icon-ship-48.png
