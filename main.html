@@ -24,22 +24,23 @@
 
 		<script id="header.html" type="text/html">
 			<div class="fixed" style="display:block">
-			  <nav class="top-bar">
-			    <ul>
-			      <li class="name"><h1><a href="#official-events">CruiseMonkey 3</a></h1></li>
-			      <li class="toggle-topbar"><a href="#"></a></li>
-			    </ul>
-			    <section>
-			      <ul class="left">
-			        <li><a href="#official-events">Official Events</a></li>
-			        <li><a href="#my-events">My Events</a></li>
-			      </ul>
-			      <ul class="right">
-			      	<li data-bind="visible: notSignedIn"><a href="#" class="signin">Sign In</a></li>
-			      	<li data-bind="visible: signedIn"><a href="#" class="signout">Sign Out</a></li>
-			      </ul>
-			    </section>
-			  </nav>
+				<nav class="top-bar">
+					<ul>
+						<li class="name"><h1><a href="#official-events">CruiseMonkey 3</a></h1></li>
+						<li class="toggle-topbar"><a href="#"></a></li>
+					</ul>
+					<section>
+						<ul class="left">
+							<li><a href="#official-events">Official Events</a></li>
+							<li><a href="#my-events">My Events</a></li>
+							<li><a href="#amenities">Amenities</a></li>
+						</ul>
+						<ul class="right">
+							<li data-bind="visible: notSignedIn"><a href="#" class="signin">Sign In</a></li>
+							<li data-bind="visible: signedIn"><a href="#" class="signout">Sign Out</a></li>
+						</ul>
+					</section>
+				</nav>
 			</div>
 		</script>
 		<script id="login.html" type="text/html">
@@ -79,7 +80,7 @@
 			</form>
 		</script>
 		<script id="events.html" type="text/html">
-			<form id="{{eventType}}-search"><input type="search" results="5" placeholder="Search..." data-bind="value: filter, valueUpdate: 'afterkeydown'" /></form>
+			<form id="{{eventType}}-search"><input type="search" results="5" autosave="{{eventType}}-search-results" placeholder="Search..." data-bind="value: filter, valueUpdate: ['afterkeydown', 'search']" /></form>
 			<ul class="event-list unstyled" style="display:none">
 				<!-- ko foreach: { data: filteredEvents } -->
 				<li class="calendar-event {{eventType}} scrollable" data-bind="attr: { id: cleanId }"> <!-- onclick="" ontouchstart="" -->
@@ -89,6 +90,21 @@
 					<div class="location">Location: <span data-bind="text: location"></span></div>
 					<div class="description"><span data-bind="text: description"></span></div>
 				</li>
+				<!-- /ko -->
+			</ul>
+		</script>
+		<script id="amenities.html" type="text/html">
+			<form id="amenities-search"><input type="search" results="5" autosave="amenities-search-results" placeholder="Search..." data-bind="value: filter, valueUpdate: ['afterkeydown', 'search']" /></form>
+			<ul class="amenities-list unstyled">
+				<!-- ko foreach: { data: orderedAmenities, as: 'deck' } -->
+				<li class="divider"><span data-bind="text: 'Deck ' + number"></span></li>
+				<!-- ko foreach: { data: amenities, as: 'amenity' } -->
+				<li class="amenity scrollable" data-bind="attr: { id: id }">
+					<div class="deck"><span data-bind="text: deck"></span></div>
+					<div class="name"><span data-bind="text: name"></span></div>
+					<div class="description"><span data-bind="text: description"></span></div>
+				</li>
+				<!-- /ko -->
 				<!-- /ko -->
 			</ul>
 		</script>
@@ -109,7 +125,6 @@
 				if (m_isPhoneGap) {
 					console.log("we're on phonegap, hiding the splashscreen");
 					navigator.splashscreen.hide();
-					photos.takePhoto();
 				}
 			},
 			onLoad = function() {
@@ -122,7 +137,7 @@
 						// Browser downloaded a new app cache.
 						// Swap it in and reload the page to get the new hotness.
 						window.applicationCache.swapCache();
-		        window.location.reload();
+						window.location.reload();
 					} else {
 						// Manifest didn't change. Nothing new to server.
 						console.log("application cache is up-to-date");
