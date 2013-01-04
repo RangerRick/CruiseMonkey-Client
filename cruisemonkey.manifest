@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# version aaf0552ee055a4bd1c35746cd5a49b4c21b602e0 1357183168
+# version aaf0552ee055a4bd1c35746cd5a49b4c21b602e0 1357311535
 
 NETWORK:
 *
@@ -43,6 +43,7 @@ foundation/robots.txt
 foundation/stylesheets/app.css
 foundation/stylesheets/foundation.css
 foundation/stylesheets/foundation.min.css
+html5shim/html5.js
 images/cruise-monkey-1024x768.png
 images/cruise-monkey-320x480.png
 images/cruise-monkey-640x960.png
