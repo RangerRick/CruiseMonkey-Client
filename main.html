@@ -39,50 +39,6 @@
 				</nav>
 			</div>
 		</script>
-		<script id="login.html" type="text/html">
-			<form>
-				<div class="row">
-					<div class="three columns">
-					</div>
-					<div class="nine mobile-four columns" style="margin-top: 20px; margin-bottom: 20px">
-						You will have to create an account on <a href="http://c4.amberwood.net">the Twit-arrr server</a>
-						before you can log in.
-					</div>
-				</div>
-				<div class="row">
-					<div class="three mobile-two columns">
-						<label class="right inline">CruiseMonkey URL:</label>
-					</div>
-					<div class="nine mobile-two columns">
-						<input type="url" placeholder="" data-bind="value: cruisemonkey" />
-					</div>
-				</div>
-				<div class="row">
-					<div class="three mobile-two columns">
-						<label class="right inline">Login:</label>
-					</div>
-					<div class="nine mobile-two columns">
-						<input type="text" placeholder="Twit-arrrr username..." data-bind="value: username" />
-					</div>
-				</div>
-				<div class="row">
-					<div class="three mobile-two columns">
-						<label class="right inline">Password:</label>
-					</div>
-					<div class="nine mobile-two columns">
-						<input type="password" placeholder="Twit-arrrr password..." data-bind="value: password" />
-					</div>
-				</div>
-				<div class="row">
-					<div class="twelve mobile-four columns" style="margin-top: 20px; margin-bottom: 20px">
-						<div class="right inline">
-							<a href="#" id="login_reset" class="round secondary button">Reset</a>
-							<a href="#" id="login_save"  class="round button">Save</a>
-						</div>
-					</div>
-				</div>
-			</form>
-		</script>
 		<script id="events.html" type="text/html">
 			<form id="{{eventType}}-search"><input type="search" results="5" autosave="{{eventType}}-search-results" placeholder="Search..." data-bind="value: filter, valueUpdate: ['afterkeydown', 'search']" /></form>
 			<ul class="event-list unstyled" style="display:none">
@@ -174,5 +130,50 @@
 	<body onload="onLoad()">
 		<div id="header"></div>
 		<div id="content"><div class="loading">loading...</div></div>
+		<div id="login" class="reveal-modal expand">
+			<form>
+				<div class="row">
+					<div class="three columns">
+					</div>
+					<div class="nine mobile-four columns" style="margin-top: 20px; margin-bottom: 20px">
+						You will have to create an account on <a href="http://c4.amberwood.net">the Twit-arrr server</a>
+						before you can log in.
+					</div>
+				</div>
+				<div class="row">
+					<div class="three mobile-two columns">
+						<label class="right inline">CruiseMonkey URL:</label>
+					</div>
+					<div class="nine mobile-two columns">
+						<input type="url" placeholder="" data-bind="value: cruisemonkey" />
+					</div>
+				</div>
+				<div class="row">
+					<div class="three mobile-two columns">
+						<label class="right inline">Login:</label>
+					</div>
+					<div class="nine mobile-two columns">
+						<input type="text" placeholder="Twit-arrrr username..." data-bind="value: username" />
+					</div>
+				</div>
+				<div class="row">
+					<div class="three mobile-two columns">
+						<label class="right inline">Password:</label>
+					</div>
+					<div class="nine mobile-two columns">
+						<input type="password" placeholder="Twit-arrrr password..." data-bind="value: password" />
+					</div>
+				</div>
+				<div class="row">
+					<div class="twelve mobile-four columns" style="margin-top: 20px; margin-bottom: 20px">
+						<div class="right inline">
+							<a href="#" id="login_reset" class="round secondary button">Reset</a>
+							<a href="#" id="login_save"  class="round button">Save</a>
+						</div>
+					</div>
+				</div>
+			</form>
+			<a class="close-reveal-modal">&#215;</a>
+		</div>
 	</body>
 </html>
