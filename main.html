@@ -88,6 +88,9 @@
 					console.log("Already initialized!");
 					return;
 				}
+				
+				$('#login').trigger('reveal:close');
+
 				m_deviceReady = true;
 				templateLoader.load();
 
@@ -100,14 +103,12 @@
 				if (window.applicationCache.status == window.applicationCache.IDLE) {
 					console.log("application cache is up-to-date");
 				} else {
-					$('#updating-application').reveal();
 					window.applicationCache.addEventListener('updateready', function(e) {
 						if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
 							console.log("application cache has changed");
 							// Browser downloaded a new app cache.
 							// Swap it in and reload the page to get the new hotness.
 							window.applicationCache.swapCache();
-							$('#updating-application').trigger('reveal:close');
 							window.location.reload();
 						} else {
 							// Manifest didn't change. Nothing new to server.
@@ -133,7 +134,7 @@
 	<body onload="onLoad()">
 		<div id="header"></div>
 		<div id="content"><div class="loading"></div></div>
-		<div id="login" class="reveal-modal expand">
+		<div id="login" class="reveal-modal full">
 			<form>
 				<div class="row">
 					<div class="three columns">
@@ -177,9 +178,6 @@
 				</div>
 			</form>
 			<a class="close-reveal-modal">&#215;</a>
-		</div>
-		<div id="updating-application" class="reveal-modal xlarge" data-animation="none">
-			Reloading...
 		</div>
 	</body>
 </html>
