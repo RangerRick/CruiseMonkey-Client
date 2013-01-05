@@ -99,19 +99,22 @@
 			onLoad = function() {
 				if (window.applicationCache.status == window.applicationCache.IDLE) {
 					console.log("application cache is up-to-date");
+				} else {
+					$('#updating-application').reveal();
+					window.applicationCache.addEventListener('updateready', function(e) {
+						if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
+							console.log("application cache has changed");
+							// Browser downloaded a new app cache.
+							// Swap it in and reload the page to get the new hotness.
+							window.applicationCache.swapCache();
+							$('#updating-application').trigger('reveal:close');
+							window.location.reload();
+						} else {
+							// Manifest didn't change. Nothing new to server.
+							console.log("application cache is up-to-date");
+						}
+					}, false);
 				}
-				window.applicationCache.addEventListener('updateready', function(e) {
-					if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
-						console.log("application cache has changed");
-						// Browser downloaded a new app cache.
-						// Swap it in and reload the page to get the new hotness.
-						window.applicationCache.swapCache();
-						window.location.reload();
-					} else {
-						// Manifest didn't change. Nothing new to server.
-						console.log("application cache is up-to-date");
-					}
-				}, false);
 
 				if (m_isPhoneGap) {
 					document.addEventListener("deviceready", initializeApp, false);
@@ -129,7 +132,7 @@
 	</head>
 	<body onload="onLoad()">
 		<div id="header"></div>
-		<div id="content"><div class="loading">loading...</div></div>
+		<div id="content"><div class="loading"></div></div>
 		<div id="login" class="reveal-modal expand">
 			<form>
 				<div class="row">
@@ -174,6 +177,9 @@
 				</div>
 			</form>
 			<a class="close-reveal-modal">&#215;</a>
+		</div>
+		<div id="updating-application" class="reveal-modal xlarge" data-animation="none">
+			Reloading...
 		</div>
 	</body>
 </html>
