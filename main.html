@@ -18,27 +18,41 @@
 			<script src="html5shim/html5.js"></script>
 		<![endif]-->
 		<script id="header.html" type="text/html">
-			<div id="header-nav-root" class="fixed" style="display:block">
-				<nav class="top-bar">
-					<ul>
-						<li class="name"><h1><a href="#official-events">CruiseMonkey 3</a></h1></li>
-						<li class="toggle-topbar"><a href="#"></a></li>
-					</ul>
-					<section>
-						<ul class="left">
-							<li><a href="#official-events">Official Events</a></li>
-							<li><a href="#my-events">My Events</a></li>
-							<li><a href="#amenities">Amenities</a></li>
-							<li><a href="#decks">Deck Plans</a></li>
-						</ul>
-						<ul class="right">
-							<li data-bind="visible: showSignIn"><a href="#" class="signin">Sign In</a></li>
-							<li data-bind="visible: showSignOut"><a href="#" class="signout">Sign Out</a></li>
-						</ul>
-					</section>
-				</nav>
-			</div>
+				<ul class="left">
+					<li><h1 class="name"><a href="#official-events">CM3</a></h1></li>
+					<li><a href="#official-events" class="icon icon-calendar">Official Events</a></li>
+					<li><a href="#my-events"       class="icon icon-user"    >My Events</a></li>
+					<li><a href="#public-events"   class="icon icon-group"   >Public Events</a></li>
+					<li><a href="#amenities"       class="icon icon-signpost">Amenities</a></li>
+					<li><a href="#decks"           class="icon icon-map"     >Deck Plans</a></li>
+				</ul>
+				<ul class="right">
+					<li class="signin" ><span data-bind="visible: showSignIn" ><a href="#" class="icon icon-network">Sign In</a></span></li>
+					<li class="signout"><span data-bind="visible: showSignOut"><a href="#" class="icon icon-network">Sign Out</a></span></li>
+				</ul>
 		</script>
+
+		<!--
+		<nav class="top-bar">
+			<ul>
+				<li class="name"><h1><a href="#official-events">CM3</a></h1></li>
+				<li class="toggle-topbar"><a href="#"></a></li>
+			</ul>
+			<section>
+				<ul class="left">
+					<li><a href="#official-events" class="icon icon-calendar">Official Events</a></li>
+					<li><a href="#my-events"       class="icon icon-user"    >My Events</a></li>
+					<li><a href="#public-events"   class="icon icon-group"   >Public Events</a></li>
+					<li><a href="#amenities"       class="icon icon-signpost">Amenities</a></li>
+					<li><a href="#decks"           class="icon icon-map"     >Deck Plans</a></li>
+				</ul>
+				<ul class="right">
+					<li data-bind="visible: showSignIn"><a href="#" class="signin">Sign In</a></li>
+					<li data-bind="visible: showSignOut"><a href="#" class="signout">Sign Out</a></li>
+				</ul>
+			</section>
+		</nav>
+		-->
 		<script id="events.html" type="text/html">
 			<form id="{{eventType}}-search"><input type="search" results="5" autosave="{{eventType}}-search-results" placeholder="Search..." data-bind="value: filter, valueUpdate: ['afterkeydown', 'search']" /></form>
 			<ul class="event-list unstyled" style="display:none">
@@ -146,7 +160,7 @@
 				</div>
 				<div class="row">
 					<div class="three mobile-one columns">
-						<label class="right inline">CM Server:</label>
+						<label class="right inline">Server:</label>
 					</div>
 					<div class="nine mobile-three columns">
 						<input type="url" placeholder="" data-bind="value: cruisemonkey" />
