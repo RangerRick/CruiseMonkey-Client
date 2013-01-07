@@ -126,16 +126,18 @@ body {
 }
 
 input[type="search"] {
-	font-size: large;
-	/* margin: auto; */
+	height: 27px;
+	font-size: 27px;
+	margin: auto;
 	z-index: 99;
+	display: inline-block;
 }
 
 #official-search,#my-search,#public-search,#amenities-search {
 	position: fixed;
 	width: 100%;
 	top: 45px;
-	height: 33px;
+	height: 38px;
 	left: 0;
 	z-index: 99;
 	padding: 5px;
@@ -146,7 +148,7 @@ input[type="search"] {
 
 #decks {
 	position: relative;
-	top: -28px;
+	top: -33px;
 }
 
 #content.columns {
