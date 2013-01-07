@@ -55,7 +55,7 @@
 		-->
 		<script id="events.html" type="text/html">
 			<form id="{{eventType}}-search"><input type="search" results="5" autosave="{{eventType}}-search-results" placeholder="Search..." data-bind="value: filter, valueUpdate: ['afterkeydown', 'search']" /></form>
-			<ul class="event-list unstyled" style="display:none">
+			<ul class="event-list unstyled">
 				<!-- ko foreach: { data: filteredEvents } -->
 				<li class="calendar-event {{eventType}} scrollable" data-bind="attr: { id: cleanId }"> <!-- onclick="" ontouchstart="" -->
 					<div class="summary"><span data-bind="text: summary"></span></div>
