@@ -32,29 +32,8 @@
 				</ul>
 		</script>
 
-		<!--
-		<nav class="top-bar">
-			<ul>
-				<li class="name"><h1><a href="#official-events">CM3</a></h1></li>
-				<li class="toggle-topbar"><a href="#"></a></li>
-			</ul>
-			<section>
-				<ul class="left">
-					<li><a href="#official-events" class="icon icon-calendar">Official Events</a></li>
-					<li><a href="#my-events"       class="icon icon-user"    >My Events</a></li>
-					<li><a href="#public-events"   class="icon icon-group"   >Public Events</a></li>
-					<li><a href="#amenities"       class="icon icon-signpost">Amenities</a></li>
-					<li><a href="#decks"           class="icon icon-map"     >Deck Plans</a></li>
-				</ul>
-				<ul class="right">
-					<li data-bind="visible: showSignIn"><a href="#" class="signin">Sign In</a></li>
-					<li data-bind="visible: showSignOut"><a href="#" class="signout">Sign Out</a></li>
-				</ul>
-			</section>
-		</nav>
-		-->
 		<script id="events.html" type="text/html">
-			<form id="{{eventType}}-search"><input type="search" results="5" autosave="{{eventType}}-search-results" placeholder="Search..." data-bind="value: filter, valueUpdate: ['afterkeydown', 'search']" /></form>
+			<form id="{{eventType}}-search" class="search-bar"><input type="search" results="5" autosave="{{eventType}}-search-results" placeholder="Search..." data-bind="value: filter, valueUpdate: ['afterkeydown', 'search']" /></form>
 			<ul class="event-list unstyled">
 				<!-- ko foreach: { data: filteredEvents } -->
 				<li class="calendar-event {{eventType}} scrollable" data-bind="attr: { id: cleanId }"> <!-- onclick="" ontouchstart="" -->
