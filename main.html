@@ -32,8 +32,29 @@
 				</ul>
 		</script>
 
+		<!--
+		<nav class="top-bar">
+			<ul>
+				<li class="name"><h1><a href="#official-events">CM3</a></h1></li>
+				<li class="toggle-topbar"><a href="#"></a></li>
+			</ul>
+			<section>
+				<ul class="left">
+					<li><a href="#official-events" class="icon icon-calendar">Official Events</a></li>
+					<li><a href="#my-events"       class="icon icon-user"    >My Events</a></li>
+					<li><a href="#public-events"   class="icon icon-group"   >Public Events</a></li>
+					<li><a href="#amenities"       class="icon icon-signpost">Amenities</a></li>
+					<li><a href="#decks"           class="icon icon-map"     >Deck Plans</a></li>
+				</ul>
+				<ul class="right">
+					<li data-bind="visible: showSignIn"><a href="#" class="signin">Sign In</a></li>
+					<li data-bind="visible: showSignOut"><a href="#" class="signout">Sign Out</a></li>
+				</ul>
+			</section>
+		</nav>
+		-->
 		<script id="events.html" type="text/html">
-			<form id="{{eventType}}-search" class="search-bar"><input type="search" results="5" autosave="{{eventType}}-search-results" placeholder="Search..." data-bind="value: filter, valueUpdate: ['afterkeydown', 'search']" /></form>
+			<form id="{{eventType}}-search"><input type="search" results="5" autosave="{{eventType}}-search-results" placeholder="Search..." data-bind="value: filter, valueUpdate: ['afterkeydown', 'search']" /></form>
 			<ul class="event-list unstyled">
 				<!-- ko foreach: { data: filteredEvents } -->
 				<li class="calendar-event {{eventType}} scrollable" data-bind="attr: { id: cleanId }"> <!-- onclick="" ontouchstart="" -->
@@ -63,12 +84,12 @@
 		</script>
 		<script id="decks.html" type="text/html">
 			<ul class="deck-list unstyled">
-				<!-- ko foreach: { data: decks, as: 'deck' } -->
+				<!-- tko foreach: { data: decks, as: 'deck' } -->
 				<li data-bind="attr: { id: id() } " class="deck scrollable">
 					<div data-bind="text: 'Deck ' + number()" class="divider"></div>
 					<img data-bind="attr: { id: id() + '-image', src: image }" />
 				</li>
-				<!-- /ko -->
+				<!-- /tko -->
 			</ul>
 		</script>
 		<script>var m_isPhoneGap = true;</script>
@@ -94,23 +115,21 @@
 				}
 			},
 			onLoad = function() {
-				if (window.applicationCache) {
-					if (window.applicationCache.status == window.applicationCache.IDLE) {
-						console.log("application cache is up-to-date");
-					} else {
-						window.applicationCache.addEventListener('updateready', function(e) {
-							if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
-								console.log("application cache has changed");
-								// Browser downloaded a new app cache.
-								// Swap it in and reload the page to get the new hotness.
-								window.applicationCache.swapCache();
-								window.location.reload();
-							} else {
-								// Manifest didn't change. Nothing new to server.
-								console.log("application cache is up-to-date");
-							}
-						}, false);
-					}
+				if (window.applicationCache.status == window.applicationCache.IDLE) {
+					console.log("application cache is up-to-date");
+				} else {
+					window.applicationCache.addEventListener('updateready', function(e) {
+						if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
+							console.log("application cache has changed");
+							// Browser downloaded a new app cache.
+							// Swap it in and reload the page to get the new hotness.
+							window.applicationCache.swapCache();
+							window.location.reload();
+						} else {
+							// Manifest didn't change. Nothing new to server.
+							console.log("application cache is up-to-date");
+						}
+					}, false);
 				}
 
 				if (m_isPhoneGap) {
