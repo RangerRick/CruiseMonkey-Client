@@ -66,6 +66,7 @@
 				<!-- ko foreach: { data: decks, as: 'deck' } -->
 				<li data-bind="attr: { id: id() } " class="deck scrollable">
 					<div data-bind="text: 'Deck ' + number()" class="divider"></div>
+					<img data-bind="attr: { id: id() + '-image', src: image }" />
 				</li>
 				<!-- /ko -->
 			</ul>
