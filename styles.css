@@ -127,7 +127,7 @@ body {
 
 input[type="search"] {
 	height: 27px;
-	font-size: 27px;
+	font-size: 15px;
 	margin: auto;
 	z-index: 99;
 	display: inline-block;
