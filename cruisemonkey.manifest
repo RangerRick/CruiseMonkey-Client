@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# version da30d9316793c55106d4fb5f14bf2e163568b052 1357669929
+# version 09e95eb83762a174a04655db1bf3a41ecc0804b5 1357696634
 
 CACHE:
 3rdparty.js
@@ -41,10 +41,21 @@ CACHE:
 3rdparty/html5shim/html5.js
 cruisemonkey.js
 images/cruise-monkey-1024x768.png
+images/cruise-monkey-1136x640.png
+images/cruise-monkey-1280x720.png
+images/cruise-monkey-1536x2048.png
+images/cruise-monkey-200x320.png
+images/cruise-monkey-2048x1536.png
+images/cruise-monkey-320x200.png
 images/cruise-monkey-320x480.png
+images/cruise-monkey-480x320.png
+images/cruise-monkey-480x800.png
+images/cruise-monkey-640x1136.png
 images/cruise-monkey-640x960.png
+images/cruise-monkey-720x1280.png
 images/cruise-monkey-720x960.png
 images/cruise-monkey-768x1024.png
+images/cruise-monkey-800x480.png
 images/deck02-300.png
 images/deck02-600.png
 images/deck03-300.png
@@ -73,12 +84,17 @@ images/deck14-300.png
 images/deck14-600.png
 images/deck15-300.png
 images/deck15-600.png
-images/icon-ship-114.png
-images/icon-ship-36.png
-images/icon-ship-48.png
-images/icon-ship-512.png
-images/icon-ship-57.png
-images/icon-ship-72.png
+images/icon-114.png
+images/icon-144.png
+images/icon-29.png
+images/icon-320.png
+images/icon-36.png
+images/icon-48.png
+images/icon-57.png
+images/icon-58.png
+images/icon-64.png
+images/icon-72.png
+images/icon-96.png
 images/icons/gray/103-map.png
 images/icons/gray/103-map@2x.png
 images/icons/gray/111-user.png

@@ -21,27 +21,39 @@
 		<!-- <gap:platform name="blackberry" project="widgets"/> -->
 	</gap:platforms>
 
-	<icon src="images/icon-ship-512.png" gap:role="default" gap:platform="ios" />
-	<icon src="images/icon-ship-512.png" gap:role="default" gap:platform="android" />
+	<icon src="images/icon-29.png"  width="29"  height="29"  gap:platform="ios" />
+	<icon src="images/icon-48.png"  width="48"  height="48"  gap:platform="ios" />
+	<icon src="images/icon-57.png"  width="57"  height="57"  gap:platform="ios" />
+	<icon src="images/icon-58.png"  width="58"  height="58"  gap:platform="ios" />
+	<icon src="images/icon-64.png"  width="64"  height="64"  gap:platform="ios" />
+	<icon src="images/icon-72.png"  width="72"  height="72"  gap:platform="ios" />
+	<icon src="images/icon-114.png" width="114" height="114" gap:platform="ios" />
+	<icon src="images/icon-144.png" width="144" height="144" gap:platform="ios" />
+	<icon src="images/icon-320.png" width="320" height="320" gap:platform="ios" />
 
-	<!-- iOS requires specific dimensions for icons; classic iPhone screens, Retina displays, and iPad screens respectively -->
-	<icon src="images/icon-ship-57.png" width="57" height="57" />
-	<icon src="images/icon-ship-72.png" width="72" height="72" />
-	<icon src="images/icon-ship-114.png" width="114" height="114" />
-	<icon src="images/icon-ship-512.png" width="512" height="512" gap:platform="ios" />
-	<icon src="images/icon-ship-512.png" width="512" height="512" gap:platform="android" />
+	<icon src="images/icon-36.png"  width="36"  height="36"  gap:platform="android" />
+	<icon src="images/icon-48.png"  width="48"  height="48"  gap:platform="android" />
+	<icon src="images/icon-72.png"  width="72"  height="72"  gap:platform="android" />
+	<icon src="images/icon-96.png"  width="96"  height="96"  gap:platform="android" />
 
-	<!-- Android requires specific dimensions; ldpi, mdpi, and hdpi respectively -->
-	<icon src="images/icon-ship-36.png" />
-	<icon src="images/icon-ship-48.png" />
-	<!-- 72 specified above, skipping here -->
+	<gap:splash src="images/cruise-monkey-768x1024.png"  width="768"  height="1024" gap:platform="ios" />
+	<gap:splash src="images/cruise-monkey-1024x768.png"  width="1024" height="768"  gap:platform="ios" />
+	<gap:splash src="images/cruise-monkey-1536x2048.png" width="1536" height="2048" gap:platform="ios" />
+	<gap:splash src="images/cruise-monkey-2048x1536.png" width="2048" height="1536" gap:platform="ios" />
+	<gap:splash src="images/cruise-monkey-320x480.png"   width="320"  height="480"  gap:platform="ios" />
+	<gap:splash src="images/cruise-monkey-480x320.png"   width="480"  height="320"  gap:platform="ios" />
+	<gap:splash src="images/cruise-monkey-640x960.png"   width="640"  height="960"  gap:platform="ios" />
+	<gap:splash src="images/cruise-monkey-960x640.png"   width="960"  height="640"  gap:platform="ios" />
+	<gap:splash src="images/cruise-monkey-640x1136.png"  width="640"  height="1136" gap:platform="ios" />
 
-	<gap:splash src="images/cruise-monkey-720x960.png" />
-	<gap:splash src="images/cruise-monkey-1024x768.png" width="1024" height="768" />
-	<gap:splash src="images/cruise-monkey-320x480.png"  width="320"  height="480" />
-	<gap:splash src="images/cruise-monkey-640x960.png"  width="640"  height="960" />
-	<gap:splash src="images/cruise-monkey-720x960.png"  width="720"  height="960" />
-	<gap:splash src="images/cruise-monkey-768x1024.png" width="768"  height="1024" />
+	<gap:splash src="images/cruise-monkey-200x320.png"   width="200"  height="320"  gap:platform="android" />
+	<gap:splash src="images/cruise-monkey-320x200.png"   width="320"  height="200"  gap:platform="android" />
+	<gap:splash src="images/cruise-monkey-320x480.png"   width="320"  height="480"  gap:platform="android" />
+	<gap:splash src="images/cruise-monkey-480x320.png"   width="480"  height="320"  gap:platform="android" />
+	<gap:splash src="images/cruise-monkey-480x800.png"   width="480"  height="800"  gap:platform="android" />
+	<gap:splash src="images/cruise-monkey-800x480.png"   width="800"  height="480"  gap:platform="android" />
+	<gap:splash src="images/cruise-monkey-720x1280.png"  width="720"  height="1280" gap:platform="android" />
+	<gap:splash src="images/cruise-monkey-1280x720.png"  width="1280" height="720"  gap:platform="android" />
 
 	<!-- <feature name="http://api.phonegap.com/1.0/geolocation"/> -->
 	<feature name="http://api.phonegap.com/1.0/network"/>
