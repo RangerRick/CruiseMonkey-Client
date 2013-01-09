@@ -31,6 +31,48 @@
 					<li class="signout"><span data-bind="visible: showSignOut"><a href="#" class="icon icon-network">Sign Out</a></span></li>
 				</ul>
 		</script>
+		<script id="login.html" type="text/html">
+			<form data-bind="submit: onSubmit">
+				<div class="row">
+					<div class="three columns">
+					</div>
+					<div class="nine mobile-four columns" style="margin-top: 20px; margin-bottom: 20px">
+						You will have to create an account on the Twit-arrr server before you can log in.
+					</div>
+				</div>
+				<div class="row">
+					<div class="three mobile-one columns">
+						<label class="right inline">Server:</label>
+					</div>
+					<div class="nine mobile-three columns">
+						<input type="url" placeholder="" data-bind="value: cruisemonkey" />
+					</div>
+				</div>
+				<div class="row">
+					<div class="three mobile-one columns">
+						<label class="right inline">Login:</label>
+					</div>
+					<div class="nine mobile-three columns">
+						<input type="text" placeholder="Twit-arrrr username..." data-bind="value: username" />
+					</div>
+				</div>
+				<div class="row">
+					<div class="three mobile-one columns">
+						<label class="right inline">Password:</label>
+					</div>
+					<div class="nine mobile-three columns">
+						<input type="password" placeholder="Twit-arrrr password..." data-bind="value: password" />
+					</div>
+				</div>
+				<div class="row">
+					<div style="margin-top: 20px; margin-bottom: 20px">
+						<input type="reset" class="round secondary button" value="Reset" />
+						<input type="submit" class="round button" value="Save" />
+					</div>
+				</div>
+			</form>
+			<a class="close-reveal-modal">&#215;</a>
+		</script>
 
 		<script id="events.html" type="text/html">
 			<form id="{{eventType}}-search" class="search-bar"><input type="search" results="5" autosave="{{eventType}}-search-results" placeholder="Search..." data-bind="value: filter, valueUpdate: ['afterkeydown', 'search']" /></form>
@@ -130,47 +172,5 @@
 	<body onload="onLoad()">
 		<div id="header"></div>
 		<div id="content"><div class="loading"></div></div>
-		<div id="login" class="reveal-modal full">
-			<form data-bind="submit: onSubmit">
-				<div class="row">
-					<div class="three columns">
-					</div>
-					<div class="nine mobile-four columns" style="margin-top: 20px; margin-bottom: 20px">
-						You will have to create an account on the Twit-arrr server before you can log in.
-					</div>
-				</div>
-				<div class="row">
-					<div class="three mobile-one columns">
-						<label class="right inline">Server:</label>
-					</div>
-					<div class="nine mobile-three columns">
-						<input type="url" placeholder="" data-bind="value: cruisemonkey" />
-					</div>
-				</div>
-				<div class="row">
-					<div class="three mobile-one columns">
-						<label class="right inline">Login:</label>
-					</div>
-					<div class="nine mobile-three columns">
-						<input type="text" placeholder="Twit-arrrr username..." data-bind="value: username" />
-					</div>
-				</div>
-				<div class="row">
-					<div class="three mobile-one columns">
-						<label class="right inline">Password:</label>
-					</div>
-					<div class="nine mobile-three columns">
-						<input type="password" placeholder="Twit-arrrr password..." data-bind="value: password" />
-					</div>
-				</div>
-				<div class="row">
-					<div style="margin-top: 20px; margin-bottom: 20px">
-						<input type="reset" class="round secondary button" value="Reset" />
-						<input type="submit" class="round button" value="Save" />
-					</div>
-				</div>
-			</form>
-			<a class="close-reveal-modal">&#215;</a>
-		</div>
 	</body>
 </html>
