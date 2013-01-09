@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# version 09e95eb83762a174a04655db1bf3a41ecc0804b5 1357696634
+# version 09e95eb83762a174a04655db1bf3a41ecc0804b5 1357697582
 
 CACHE:
 3rdparty.js
@@ -53,9 +53,9 @@ images/cruise-monkey-480x800.png
 images/cruise-monkey-640x1136.png
 images/cruise-monkey-640x960.png
 images/cruise-monkey-720x1280.png
-images/cruise-monkey-720x960.png
 images/cruise-monkey-768x1024.png
 images/cruise-monkey-800x480.png
+images/cruise-monkey-960x640.png
 images/deck02-300.png
 images/deck02-600.png
 images/deck03-300.png
