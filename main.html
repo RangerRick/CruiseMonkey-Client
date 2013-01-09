@@ -131,7 +131,7 @@
 		<div id="header"></div>
 		<div id="content"><div class="loading"></div></div>
 		<div id="login" class="reveal-modal full">
-			<form>
+			<form data-bind="submit: onSubmit">
 				<div class="row">
 					<div class="three columns">
 					</div>
@@ -165,10 +165,8 @@
 				</div>
 				<div class="row">
 					<div style="margin-top: 20px; margin-bottom: 20px">
-						<div class="right inline">
-							<a href="#" id="login_reset" class="round secondary button">Reset</a>
-							<a href="#" id="login_save"  class="round button">Save</a>
-						</div>
+						<input type="reset" class="round secondary button" value="Reset" />
+						<input type="submit" class="round button" value="Save" />
 					</div>
 				</div>
 			</form>
