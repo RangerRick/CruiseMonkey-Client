@@ -296,7 +296,7 @@ Date.CultureInfo={name:"en-US",englishName:"English (United States)",nativeName:
 		
 		// compile a 'base' domain attribute        
 		uri.attr['base'] = uri.attr.host ? (uri.attr.protocol ?  uri.attr.protocol+'://'+uri.attr.host : uri.attr.host) + (uri.attr.port ? ':'+uri.attr.port : '') : '';      
-		  
+			
 		return uri;
 	};
 	
@@ -476,7 +476,7 @@ Date.CultureInfo={name:"en-US",englishName:"English (United States)",nativeName:
 					return this.data.seg.fragment[seg];                    
 				}
 			}
-	    	
+				
 		};
 	
 	};
