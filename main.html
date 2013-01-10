@@ -10,6 +10,7 @@
 		<title>CruiseMonkey 3</title>
 
 		<link rel="stylesheet" href="3rdparty/foundation/stylesheets/foundation.min.css" type="text/css" />
+		<link rel="stylesheet" href="3rdparty/jquery-ui/css/no-theme/jquery-ui-1.9.2.custom.min.css" type="text/css" />
 		<link rel="stylesheet" href="styles.css" type="text/css" />
 		
 		<script src="3rdparty/foundation/javascripts/modernizr.foundation.js"></script>
@@ -20,15 +21,16 @@
 		<![endif]-->
 		<script id="header.html" type="text/html">
 				<ul class="left">
-					<li><a href="#official-events" class="icon icon-calendar">Official Events</a></li>
-					<li><a href="#my-events"       class="icon icon-user"    >My Events</a></li>
-					<li><a href="#public-events"   class="icon icon-group"   >Public Events</a></li>
-					<li><a href="#amenities"       class="icon icon-signpost">Amenities</a></li>
-					<li><a href="#decks"           class="icon icon-map"     >Deck Plans</a></li>
+					<li><a href="#official-events" class="icon icon-official-events">Official Events</a></li>
+					<li><a href="#my-events"       class="icon icon-my-events"      >My Events</a></li>
+					<li><a href="#public-events"   class="icon icon-public-events"  >Public Events</a></li>
+					<li><a href="#amenities"       class="icon icon-amenities"      >Amenities</a></li>
+					<li><a href="#decks"           class="icon icon-decks"          >Deck Plans</a></li>
+					<li><a href="#add-event"       class="icon icon-add"            >Add Event</a></li>
 				</ul>
 				<ul class="right">
-					<li class="signin" ><span data-bind="visible: showSignIn" ><a href="#" class="icon icon-network">Sign In</a></span></li>
-					<li class="signout"><span data-bind="visible: showSignOut"><a href="#" class="icon icon-network">Sign Out</a></span></li>
+					<li class="signin" ><span data-bind="visible: showSignIn" ><a href="#" class="icon icon-login">Sign In</a></span></li>
+					<li class="signout"><span data-bind="visible: showSignOut"><a href="#" class="icon icon-login">Sign Out</a></span></li>
 				</ul>
 		</script>
 		<script id="login.html" type="text/html">
@@ -75,7 +77,6 @@
 			</form>
 			<a class="close-reveal-modal">&#215;</a>
 		</script>
-
 		<script id="events.html" type="text/html">
 			<form id="{{eventType}}-search" class="search-bar"><input type="search" results="5" autosave="{{eventType}}-search-results" placeholder="Search..." data-bind="value: filter, valueUpdate: ['afterkeydown', 'search']" /></form>
 			<ul class="event-list unstyled">
@@ -91,7 +92,7 @@
 			</ul>
 		</script>
 		<script id="amenities.html" type="text/html">
-			<form id="amenities-search"><input type="search" results="5" autosave="amenities-search-results" placeholder="Search..." data-bind="value: filter, valueUpdate: ['afterkeydown', 'search']" /></form>
+			<form id="amenities-search" class="search-bar"><input type="search" results="5" autosave="amenities-search-results" placeholder="Search..." data-bind="value: filter, valueUpdate: ['afterkeydown', 'search']" /></form>
 			<ul class="amenities-list unstyled">
 				<!-- ko foreach: { data: orderedAmenities, as: 'deck' } -->
 				<li class="divider"><span data-bind="text: 'Deck ' + number"></span></li>
@@ -173,5 +174,34 @@
 	<body onload="onLoad()">
 		<div id="header"></div>
 		<div id="content"><div class="loading"></div></div>
+		<div id="add-event" style="display: none">
+			<form data-bind="submit: onSubmit">
+				<div class="row">
+					<div class="three mobile-one columns">
+						<label class="right inline">Start:</label>
+					</div>
+					<div class="nine mobile-three columns">
+						<input type="text" id="start-datepicker" placeholder="" data-bind="value: startDate" />
+					</div>
+				</div>
+				<div class="row">
+					<div class="three mobile-one columns">
+						<label class="right inline">End:</label>
+					</div>
+					<div class="nine mobile-three columns">
+						<input type="text" id="end-datepicker" placeholder="" data-bind="value: endDate" />
+					</div>
+				</div>
+				<div class="row">
+					<div class="twelve mobile-four columns">
+						<ul class="button-group even two-up">
+							<li><input type="reset" class="round secondary button" value="Reset" /></li>
+							<li><input type="submit" class="round button" value="Save" /></li>
+						</ul>
+					</div>
+				</div>
+			</form>
+			<a class="close-reveal-modal">&#215;</a>
+		</div>
 	</body>
 </html>
