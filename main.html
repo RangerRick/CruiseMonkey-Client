@@ -9,7 +9,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0">
 		<title>CruiseMonkey 3</title>
 
-		<link rel="stylesheet" href="3rdparty/foundation/stylesheets/foundation.min.css">
+		<link rel="stylesheet" href="3rdparty/foundation/stylesheets/foundation.min.css" type="text/css" />
 		<link rel="stylesheet" href="styles.css" type="text/css" />
 		
 		<script src="3rdparty/foundation/javascripts/modernizr.foundation.js"></script>
@@ -65,9 +65,11 @@
 					</div>
 				</div>
 				<div class="row">
-					<div style="margin-top: 20px; margin-bottom: 20px">
-						<input type="reset" class="round secondary button" value="Reset" />
-						<input type="submit" class="round button" value="Save" />
+					<div class="twelve mobile-four columns">
+						<ul class="button-group even two-up">
+							<li><input type="reset" class="round secondary button" value="Reset" /></li>
+							<li><input type="submit" class="round button" value="Save" /></li>
+						</ul>
 					</div>
 				</div>
 			</form>
