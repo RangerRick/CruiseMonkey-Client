@@ -131,7 +131,12 @@
 			var m_timeout = 10000;
 			var m_deviceReady = false,
 			initializeApp = function(event) {
-				console.log('Initializing Cruise Monkey.');
+				console.log('Initializing Cruise Monkey. f62811229884490bd10a36067c3667a649600e5e 1357939392');
+				if (window.isPhoneGap) {
+					console.log('Running under PhoneGap.');
+				} else {
+					console.log('Running in a browser.');
+				}
 				if (m_deviceReady) {
 					console.log('Already initialized!');
 					return;
@@ -161,7 +166,7 @@
 						}, false);
 					}
 				}
-				window.isPhoneGap = true; console.log('running under phonegap, waiting for device ready'); document.addEventListener('deviceready', initializeApp, false);
+				window.isPhoneGap = true; document.addEventListener('deviceready', initializeApp, false);
 			};
 		</script>
 	</head>
