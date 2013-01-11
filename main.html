@@ -157,8 +157,10 @@
 				}
 
 				if (window.isPhoneGap) {
+					console.log("running under phonegap, waiting for device ready");
 					document.addEventListener("deviceready", initializeApp, false);
 				} else {
+					console.log("running in a browser, initializing");
 					initializeApp();
 				}
 			};
