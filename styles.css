@@ -95,7 +95,7 @@ body {
 	padding-top: 47px;
 }
 
-#add-event, #login, #ui-datepicker-div {
+#add-event, #login {
 	z-index: 200;
 	position: fixed;
 	top: 0;
@@ -132,21 +132,21 @@ a.close-reveal-modal {
 	*/
 }
 
-.icon-official-events:before           { content: url(images/icons/gray/83-calendar.png);     background-size: 23px 25px; }
-.icon-my-events:before                 { content: url(images/icons/gray/111-user.png);        background-size: 24px 21px; }
-.icon-public-events:before             { content: url(images/icons/gray/112-group.png);       background-size: 32px 21px; }
-.icon-amenities:before                 { content: url(images/icons/gray/60-signpost.png);     background-size: 22px 28px; }
-.icon-decks:before                     { content: url(images/icons/gray/103-map.png);         background-size: 26px 21px; }
-.icon-login:before                     { content: url(images/icons/gray/55-network.png);      background-size: 24px 24px; }
-.icon-add:before                       { content: url(images/icons/gray/31-circle-plus.png);  background-size: 24px 24px; }
+a.icon-official-events:before           { content: url(images/icons/gray/83-calendar.png);     background-size: 23px 25px; }
+a.icon-my-events:before                 { content: url(images/icons/gray/111-user.png);        background-size: 24px 21px; }
+a.icon-public-events:before             { content: url(images/icons/gray/112-group.png);       background-size: 32px 21px; }
+a.icon-amenities:before                 { content: url(images/icons/gray/60-signpost.png);     background-size: 22px 28px; }
+a.icon-decks:before                     { content: url(images/icons/gray/103-map.png);         background-size: 26px 21px; }
+a.icon-login:before                     { content: url(images/icons/gray/55-network.png);      background-size: 24px 24px; }
+a.icon-add:before                       { content: url(images/icons/gray/31-circle-plus.png);  background-size: 24px 24px; }
 
-.icon-official-events.selected:before  { content: url(images/icons/white/83-calendar.png);    background-size: 23px 25px; }
-.icon-my-events.selected:before        { content: url(images/icons/white/111-user.png);       background-size: 24px 21px; }
-.icon-public-events.selected:before    { content: url(images/icons/white/112-group.png);      background-size: 32px 21px; }
-.icon-amenities.selected:before        { content: url(images/icons/white/60-signpost.png);    background-size: 22px 28px; }
-.icon-decks.selected:before            { content: url(images/icons/white/103-map.png);        background-size: 26px 21px; }
-.icon-login.selected:before            { content: url(images/icons/white/55-network.png);     background-size: 24px 24px; }
-.icon-add.selected:before              { content: url(images/icons/white/31-circle-plus.png); background-size: 24px 24px; }
+a.icon-official-events.selected:before  { content: url(images/icons/white/83-calendar.png);    background-size: 23px 25px; }
+a.icon-my-events.selected:before        { content: url(images/icons/white/111-user.png);       background-size: 24px 21px; }
+a.icon-public-events.selected:before    { content: url(images/icons/white/112-group.png);      background-size: 32px 21px; }
+a.icon-amenities.selected:before        { content: url(images/icons/white/60-signpost.png);    background-size: 22px 28px; }
+a.icon-decks.selected:before            { content: url(images/icons/white/103-map.png);        background-size: 26px 21px; }
+a.icon-login.selected:before            { content: url(images/icons/white/55-network.png);     background-size: 24px 24px; }
+a.icon-add.selected:before              { content: url(images/icons/white/31-circle-plus.png); background-size: 24px 24px; }
 
 @media only screen and (max-width: 940px) {
 	#header a.icon {
@@ -250,12 +250,40 @@ input[type="search"] {
 	top: 2px;
 }
 
+.calendar-event .trash {
+	position: absolute;
+	display: inline-block;
+	float: right;
+	width: 32px;
+	height: 32px;
+	right: 2px;
+	top: 2px;
+}
+
+.calendar-event .public {
+	position: absolute;
+	display: inline-block;
+	float: right;
+	width: 32px;
+	height: 32px;
+	right: 2px;
+	top: 34px;
+}
+
 .calendar-event .favorite input[type=checkbox] {
 	display:none;
 }
 
+.calendar-event .trash input[type=button] {
+	display:none;
+}
+
+.calendar-event .public input[type=checkbox] {
+	display:none;
+}
+
 .calendar-event .favorite input[type=checkbox] + label {
-	background:url(images/star-white.png) no-repeat;
+	background:url(images/star-unchecked.png) no-repeat;
 	background-position: center center;
 	background-size: 26px 26px;
 	width: 32px;
@@ -263,9 +291,33 @@ input[type="search"] {
 }
 
 .calendar-event .favorite input[type=checkbox]:checked + label {
-	background:url(images/star-yellow.png) no-repeat;
+	background:url(images/star-checked.png) no-repeat;
 	background-position: center center;
 	background-size: 26px 26px;
+	width: 32px;
+	height: 32px;
+}
+
+.calendar-event .trash input[type=button] + label {
+	background:url(images/trash.png) no-repeat;
+	background-position: center center;
+	background-size: 16px 21px;
+	width: 32px;
+	height: 32px;
+}
+
+.calendar-event .public input[type=checkbox] + label {
+	background:url(images/eye-unchecked.png) no-repeat;
+	background-position: center center;
+	background-size: 24px 16px;
+	width: 32px;
+	height: 32px;
+}
+
+.calendar-event .public input[type=checkbox]:checked + label {
+	background:url(images/eye-checked.png) no-repeat;
+	background-position: center center;
+	background-size: 24px 16px;
 	width: 32px;
 	height: 32px;
 }
@@ -274,10 +326,19 @@ input[type="search"] {
 (-webkit-min-device-pixel-ratio: 2), 
 (min-resolution: 192dpi) { 
 	.calendar-event .favorite input[type=checkbox] + label {
-		background-image:url(images/star-white@2x.png);
+		background-image:url(images/star-unchecked@2x.png);
 	}
 	.calendar-event .favorite input[type=checkbox]:checked + label {
-		background-image:url(images/star-yellow@2x.png);
+		background-image:url(images/star-checked@2x.png);
+	}
+	.calendar-event .trash input[type=button] + label {
+		background-image:url(images/trash@2x.png);
+	}
+	.calendar-event .public input[type=checkbox] + label {
+		background-image:url(images/eye-unchecked@2x.png);
+	}
+	.calendar-event .public input[type=checkbox]:checked + label {
+		background-image:url(images/eye-checked@2x.png);
 	}
 
 	.icon-official-events:before           { content: url(images/icons/gray/83-calendar@2.png);     background-size: 23px 25px; }

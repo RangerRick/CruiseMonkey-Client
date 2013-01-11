@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# version 80df55022a6f37c97b31b55b70521297cd1f5575 1357855735
+# version 13a7a7a46a5bddd35f60a9f7ad0d40fa8b522a91 1357933440
 
 CACHE:
 3rdparty.js
@@ -84,6 +84,10 @@ images/deck14-300.png
 images/deck14-600.png
 images/deck15-300.png
 images/deck15-600.png
+images/eye-checked.png
+images/eye-checked@2x.png
+images/eye-unchecked.png
+images/eye-unchecked@2x.png
 images/icon-114.png
 images/icon-144.png
 images/icon-29.png
@@ -123,10 +127,12 @@ images/icons/white/60-signpost.png
 images/icons/white/60-signpost@2x.png
 images/icons/white/83-calendar.png
 images/icons/white/83-calendar@2x.png
-images/star-white.png
-images/star-white@2x.png
-images/star-yellow.png
-images/star-yellow@2x.png
+images/star-checked.png
+images/star-checked@2x.png
+images/star-unchecked.png
+images/star-unchecked@2x.png
+images/trash.png
+images/trash@2.png
 index.html
 main.html
 styles.css
