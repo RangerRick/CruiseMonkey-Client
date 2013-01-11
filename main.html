@@ -135,10 +135,6 @@
 
 				m_deviceReady = true;
 				templateLoader.load();
-
-				if (window.isPhoneGap) {
-					console.log("we're on phonegap, hiding the splashscreen");
-				}
 			},
 			onLoad = function() {
 				if (window.applicationCache) {
