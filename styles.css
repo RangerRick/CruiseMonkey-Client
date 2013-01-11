@@ -236,6 +236,10 @@ input[type="search"] {
 	font-family: monospace;
 }
 
+.calendar-event .createdBy {
+	font-weight: bolder;
+}
+
 .calendar-event .location {
 	font-weight: bolder;
 }

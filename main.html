@@ -85,7 +85,8 @@
 					<div class="summary"><span data-bind="text: summary"></span></div>
 					<div class="favorite" data-bind="visible: !isMine()"><input type="checkbox" class="favorite-checkbox" data-bind="checked: favorite, click: $parent.toggleFavorite, attr: { id: cleanId() + '-favorite' }" /><label data-bind="attr: { for: cleanId() + '-favorite' }">&nbsp;</div>
 					<div class="trash" data-bind="visible: isMine"><input type="button" class="trash-button" data-bind="click: $parent.deleteEvent, attr: { id: cleanId() + '-trash' }" /><label data-bind="attr: { for: cleanId() + '-trash' }">&nbsp;</div>
-					<div class="public" data-bind="visible: isMine()"><input type="checkbox" class="public-checkbox" data-bind="checked: isPublic, click: $parent.togglePublic, attr: { id: cleanId() + '-public' }" /><label data-bind="attr: { for: cleanId() + '-public' }">&nbsp;</div>
+					<div class="public" data-bind="visible: isMine"><input type="checkbox" class="public-checkbox" data-bind="checked: isPublic, click: $parent.togglePublic, attr: { id: cleanId() + '-public' }" /><label data-bind="attr: { for: cleanId() + '-public' }">&nbsp;</div>
+					<div class="createdBy" data-bind="visible: !isMine()">Created By: <span data-bind="text: createdBy"></span></div>
 					<div class="time">Time: <span data-bind="text: timespan"></span></div>
 					<div class="location">Location: <span data-bind="text: location"></span></div>
 					<div class="description"><span data-bind="text: description"></span></div>
