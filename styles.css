@@ -32,7 +32,7 @@ body {
 	list-style-type: none;
 }
 
-#header li > * {
+#header li > a {
 	color: white;
 	height: 45px;
 	display: table-cell;
@@ -48,14 +48,14 @@ body {
 	margin: 0;
 }
 
-#header li.signin a {
+#header li.signin > span > a {
 	color: white;
 	margin-left: 0;
 	margin-right: 0;
 	padding-right: 10px;
 }
 
-#header li.signout a {
+#header li.signout > span > a {
 	color: white;
 	margin-left: 0;
 	margin-right: 0;
@@ -95,7 +95,7 @@ body {
 	padding-top: 47px;
 }
 
-#add-event, #login {
+#login {
 	z-index: 200;
 	position: fixed;
 	top: 0;
@@ -107,7 +107,7 @@ body {
 	color: black;
 }
 
-#add-event, #login > form {
+#login > form {
 	/*
 	display: table;
 	margin: auto;
