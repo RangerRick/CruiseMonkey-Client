@@ -17,64 +17,6 @@
 		<!--[if lt IE 9]>
 			<script src="3rdparty/html5shim/html5.js"></script>
 		<![endif]-->
-		<script id="header.html" type="text/html">
-				<ul class="left">
-					<li><a href="#official-events" class="icon icon-official-events" data-bind="click: navigate">Official Events</a></li>
-					<li><a href="#my-events"       class="icon icon-my-events"       data-bind="click: navigate">My Events</a></li>
-					<li><a href="#public-events"   class="icon icon-public-events"   data-bind="click: navigate">Public Events</a></li>
-					<li><a href="#amenities"       class="icon icon-amenities"       data-bind="click: navigate">Amenities</a></li>
-					<li><a href="#decks"           class="icon icon-decks"           data-bind="click: navigate">Deck Plans</a></li>
-					<li><a href="#edit-event"      class="icon icon-add"             data-bind="click: navigate">Add Event</a></li>
-				</ul>
-				<ul class="right">
-					<li class="signin" ><span data-bind="visible: showSignIn" ><a href="#sign-in"  class="icon icon-login" data-bind="click: navigate">Sign In</a></span></li>
-					<li class="signout"><span data-bind="visible: showSignOut"><a href="#sign-out" class="icon icon-login" data-bind="click: navigate">Sign Out</a></span></li>
-				</ul>
-		</script>
-		<script id="login.html" type="text/html">
-			<form data-bind="submit: onSubmit">
-				<div class="row">
-					<div class="three columns">
-					</div>
-					<div class="nine mobile-four columns" style="margin-top: 20px; margin-bottom: 20px">
-						You will have to create an account on the Twit-arrr server before you can log in.
-					</div>
-				</div>
-				<div class="row">
-					<div class="three mobile-one columns">
-						<label class="right inline">Server:</label>
-					</div>
-					<div class="nine mobile-three columns">
-						<input type="url" placeholder="" data-bind="value: cruisemonkey" />
-					</div>
-				</div>
-				<div class="row">
-					<div class="three mobile-one columns">
-						<label class="right inline">Login:</label>
-					</div>
-					<div class="nine mobile-three columns">
-						<input type="text" placeholder="Twit-arrrr username..." data-bind="value: username" />
-					</div>
-				</div>
-				<div class="row">
-					<div class="three mobile-one columns">
-						<label class="right inline">Password:</label>
-					</div>
-					<div class="nine mobile-three columns">
-						<input type="password" placeholder="Twit-arrrr password..." data-bind="value: password" />
-					</div>
-				</div>
-				<div class="row">
-					<div class="twelve mobile-four columns">
-						<ul class="button-group even two-up">
-							<li><input type="reset" class="round secondary button" value="Reset" /></li>
-							<li><input type="submit" class="round button" value="Save" /></li>
-						</ul>
-					</div>
-				</div>
-			</form>
-			<a class="close-reveal-modal">&#215;</a>
-		</script>
 		<script id="events.html" type="text/html">
 			<form id="{{eventType}}-search" class="search-bar"><input type="search" results="5" autosave="{{eventType}}-search-results" placeholder="Search..." data-bind="value: filter, valueUpdate: ['afterkeydown', 'search']" /></form>
 			<ul class="event-list unstyled">
@@ -88,31 +30,6 @@
 					<div class="time">Time: <span data-bind="text: timespan"></span></div>
 					<div class="location">Location: <span data-bind="text: location"></span></div>
 					<div class="description"><span data-bind="text: description"></span></div>
-				</li>
-				<!-- /ko -->
-			</ul>
-		</script>
-		<script id="amenities.html" type="text/html">
-			<form id="amenities-search" class="search-bar"><input type="search" results="5" autosave="amenities-search-results" placeholder="Search..." data-bind="value: filter, valueUpdate: ['afterkeydown', 'search']" /></form>
-			<ul class="amenities-list unstyled">
-				<!-- ko foreach: { data: orderedAmenities, as: 'deck' } -->
-				<li class="divider"><span data-bind="text: 'Deck ' + number"></span></li>
-				<!-- ko foreach: { data: amenities, as: 'amenity' } -->
-				<li class="amenity scrollable" data-bind="attr: { id: id }">
-					<div class="deck"><span data-bind="text: deck"></span></div>
-					<div class="name"><span data-bind="text: name"></span></div>
-					<div class="description"><span data-bind="text: description"></span></div>
-				</li>
-				<!-- /ko -->
-				<!-- /ko -->
-			</ul>
-		</script>
-		<script id="decks.html" type="text/html">
-			<ul class="deck-list unstyled">
-				<!-- ko foreach: { data: decks, as: 'deck' } -->
-				<li data-bind="attr: { id: id() } " class="deck scrollable">
-					<div data-bind="text: 'Deck ' + number()" class="divider"></div>
-					<img data-bind="attr: { id: id() + '-image', src: image }" />
 				</li>
 				<!-- /ko -->
 			</ul>
@@ -178,7 +95,6 @@
 			</form>
 		</script>
 		
-
 		<script src="phonegap.js"></script>
 		<script src="childbrowser.js"></script>
 		<script src="3rdparty.js"></script>
@@ -192,7 +108,7 @@
 			var m_timeout = 10000;
 			var m_deviceReady = false,
 			initializeApp = function(event) {
-				console.log('Initializing Cruise Monkey. 69081b67f28b11f30db63711fa51aa78975e2137 1357962934');
+				console.log('Initializing Cruise Monkey. 16505a941f1cb1eaf089a15f6a1fb11c30b5165c 1358034434');
 				if (window.isPhoneGap) {
 					console.log('Running under PhoneGap.');
 				} else {
@@ -232,7 +148,90 @@
 		</script>
 	</head>
 	<body onload="onLoad()">
-		<div id="header"></div>
-		<div id="content"><div class="loading"></div></div>
+		<div id="header">
+			<ul class="left">
+				<li><a href="#official-events" class="icon icon-official-events" data-bind="click: navigate">Official Events</a></li>
+				<li><a href="#my-events"       class="icon icon-my-events"       data-bind="click: navigate">My Events</a></li>
+				<li><a href="#public-events"   class="icon icon-public-events"   data-bind="click: navigate">Public Events</a></li>
+				<li><a href="#amenities"       class="icon icon-amenities"       data-bind="click: navigate">Amenities</a></li>
+				<li><a href="#decks"           class="icon icon-decks"           data-bind="click: navigate">Deck Plans</a></li>
+				<li><a href="#edit-event"      class="icon icon-add"             data-bind="click: navigate">Add Event</a></li>
+			</ul>
+			<ul class="right">
+				<li class="signin" ><span data-bind="visible: showSignIn" ><a href="#sign-in"  class="icon icon-login" data-bind="click: navigate">Sign In</a></span></li>
+				<li class="signout"><span data-bind="visible: showSignOut"><a href="#sign-out" class="icon icon-login" data-bind="click: navigate">Sign Out</a></span></li>
+			</ul>
+		</div>
+		<div id="content">
+			<div id="amenities" style="display:none">
+				<form id="amenities-search" class="search-bar"><input type="search" results="5" autosave="amenities-search-results" placeholder="Search..." data-bind="value: filter, valueUpdate: ['afterkeydown', 'search']" /></form>
+				<ul class="amenities-list unstyled">
+					<!-- ko foreach: { data: orderedAmenities, as: 'deck' } -->
+					<li class="divider"><span data-bind="text: 'Deck ' + number"></span></li>
+					<!-- ko foreach: { data: amenities, as: 'amenity' } -->
+					<li class="amenity scrollable" data-bind="attr: { id: id }">
+						<div class="deck"><span data-bind="text: deck"></span></div>
+						<div class="name"><span data-bind="text: name"></span></div>
+						<div class="description"><span data-bind="text: description"></span></div>
+					</li>
+					<!-- /ko -->
+					<!-- /ko -->
+				</ul>
+			</div>
+			<div id="decks" style="display:none">
+				<ul class="deck-list unstyled">
+					<!-- ko foreach: { data: decks, as: 'deck' } -->
+					<li data-bind="attr: { id: id() } " class="deck scrollable">
+						<div data-bind="text: 'Deck ' + number()" class="divider"></div>
+						<img data-bind="attr: { id: id() + '-image', src: image }" />
+					</li>
+					<!-- /ko -->
+				</ul>
+			</div>
+			<div id="login" style="display:none">
+				<form data-bind="submit: onSubmit">
+					<div class="row">
+						<div class="three columns">
+						</div>
+						<div class="nine mobile-four columns" style="margin-top: 20px; margin-bottom: 20px">
+							You will have to create an account on the Twit-arrr server before you can log in.
+						</div>
+					</div>
+					<div class="row">
+						<div class="three mobile-one columns">
+							<label class="right inline">Server:</label>
+						</div>
+						<div class="nine mobile-three columns">
+							<input type="url" placeholder="" data-bind="value: cruisemonkey" />
+						</div>
+					</div>
+					<div class="row">
+						<div class="three mobile-one columns">
+							<label class="right inline">Login:</label>
+						</div>
+						<div class="nine mobile-three columns">
+							<input type="text" placeholder="Twit-arrrr username..." data-bind="value: username" />
+						</div>
+					</div>
+					<div class="row">
+						<div class="three mobile-one columns">
+							<label class="right inline">Password:</label>
+						</div>
+						<div class="nine mobile-three columns">
+							<input type="password" placeholder="Twit-arrrr password..." data-bind="value: password" />
+						</div>
+					</div>
+					<div class="row">
+						<div class="twelve mobile-four columns">
+							<ul class="button-group even two-up">
+								<li><input type="reset" class="round secondary button" value="Reset" /></li>
+								<li><input type="submit" class="round button" value="Save" /></li>
+							</ul>
+						</div>
+					</div>
+				</form>
+				<a class="close-reveal-modal">&#215;</a>
+			</div>
+		</div>
 	</body>
 </html>
