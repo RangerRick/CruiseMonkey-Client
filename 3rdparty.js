@@ -2395,6 +2395,7 @@ Date.CultureInfo={name:"en-US",englishName:"English (United States)",nativeName:
 	$.timepicker.version = "1.1.1";
 
 })(jQuery);
+
 //     uuid.js
 //
 //     Copyright (c) 2010-2012 Robert Kieffer
