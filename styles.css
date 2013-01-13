@@ -1,3 +1,11 @@
+/*
+ * Royal Caribbean Colors:
+ *
+ * Navy Blue:  #061556
+ * Royal Blue: #0073bb
+ * Royal Gold: #febd11
+ */
+
 html, body {
 	height: 100%;
 }
@@ -7,6 +15,7 @@ body {
 	margin: 0;
 	padding: 0;
 	background-color: white;
+	color: black;
 }
 
 #header {
@@ -15,14 +24,30 @@ body {
 	position: fixed;
 	top: 0;
 	left: 0;
-	color: white;
-	background-color: black;
+	font-weight: bolder;
 	display: block;
 	z-index: 99;
 }
 
+.theme-header {
+	color: #febd11;
+	background-color: #061556;
+}
+
+.divider {
+	font-size: larger;
+	font-weight: bolder;
+	padding: 5px;
+}
+
+.blue-gradient {
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#169efe', endColorstr='#a2d4f7'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#169efe), to(#a2d4f7)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #169efe,  #a2d4f7); /* for firefox 3.6+ */
+	border-bottom: 1px solid black;
+}
+
 #header li {
-	color: #444;
 	float: left;
 	position: relative;
 	margin: 0;
@@ -33,7 +58,7 @@ body {
 }
 
 #header li > a {
-	color: #444;
+	color: #febd11;
 	height: 45px;
 	display: table-cell;
 	vertical-align: middle;
@@ -53,14 +78,12 @@ body {
 }
 
 #header li.signin > a {
-	color: white;
 	margin-left: 0;
 	margin-right: 0;
 	padding-right: 10px;
 }
 
 #header li.signout > a {
-	color: white;
 	margin-left: 0;
 	margin-right: 0;
 	padding-right: 10px;
@@ -99,20 +122,6 @@ body {
 	padding-top: 47px;
 }
 
-/*
-#login {
-	z-index: 200;
-	position: fixed;
-	top: 0;
-	bottom: 0;
-	width: 100%;
-	height: 100%;
-	min-height: 100%;
-	background-color: white;
-	color: black;
-}
-*/
-
 .icon:before {
 	display: inline-block;
 	padding-right: 5px;
@@ -124,21 +133,21 @@ body {
 	*/
 }
 
-a.icon-official-events:before           { content: url(images/icons/gray/83-calendar.png);     background-size: 23px 25px; }
-a.icon-my-events:before                 { content: url(images/icons/gray/111-user.png);        background-size: 24px 21px; }
-a.icon-public-events:before             { content: url(images/icons/gray/112-group.png);       background-size: 32px 21px; }
-a.icon-amenities:before                 { content: url(images/icons/gray/90-lifebuoy.png);     background-size: 22px 28px; }
-a.icon-decks:before                     { content: url(images/icons/gray/103-map.png);         background-size: 26px 21px; }
-a.icon-login:before                     { content: url(images/icons/gray/55-network.png);      background-size: 24px 24px; }
-a.icon-add:before                       { content: url(images/icons/gray/31-circle-plus.png);  background-size: 24px 24px; }
+a.icon-official-events:before           { content: url(images/icons/inactive/83-calendar.png);    background-size: 23px 25px; }
+a.icon-my-events:before                 { content: url(images/icons/inactive/111-user.png);       background-size: 24px 21px; }
+a.icon-public-events:before             { content: url(images/icons/inactive/112-group.png);      background-size: 32px 21px; }
+a.icon-amenities:before                 { content: url(images/icons/inactive/90-lifebuoy.png);    background-size: 22px 28px; }
+a.icon-decks:before                     { content: url(images/icons/inactive/103-map.png);        background-size: 26px 21px; }
+a.icon-login:before                     { content: url(images/icons/inactive/55-network.png);     background-size: 24px 24px; }
+a.icon-add:before                       { content: url(images/icons/inactive/31-circle-plus.png); background-size: 24px 24px; }
 
-a.icon-official-events.selected:before  { content: url(images/icons/white/83-calendar.png);    background-size: 23px 25px; }
-a.icon-my-events.selected:before        { content: url(images/icons/white/111-user.png);       background-size: 24px 21px; }
-a.icon-public-events.selected:before    { content: url(images/icons/white/112-group.png);      background-size: 32px 21px; }
-a.icon-amenities.selected:before        { content: url(images/icons/white/90-lifebuoy.png);    background-size: 22px 28px; }
-a.icon-decks.selected:before            { content: url(images/icons/white/103-map.png);        background-size: 26px 21px; }
-a.icon-login.selected:before            { content: url(images/icons/white/55-network.png);     background-size: 24px 24px; }
-a.icon-add.selected:before              { content: url(images/icons/white/31-circle-plus.png); background-size: 24px 24px; }
+a.icon-official-events.selected:before  { content: url(images/icons/active/83-calendar.png);      background-size: 23px 25px; }
+a.icon-my-events.selected:before        { content: url(images/icons/active/111-user.png);         background-size: 24px 21px; }
+a.icon-public-events.selected:before    { content: url(images/icons/active/112-group.png);        background-size: 32px 21px; }
+a.icon-amenities.selected:before        { content: url(images/icons/active/90-lifebuoy.png);      background-size: 22px 28px; }
+a.icon-decks.selected:before            { content: url(images/icons/active/103-map.png);          background-size: 26px 21px; }
+a.icon-login.selected:before            { content: url(images/icons/active/55-network.png);       background-size: 24px 24px; }
+a.icon-add.selected:before              { content: url(images/icons/active/31-circle-plus.png);   background-size: 24px 24px; }
 
 @media only screen and (max-width: 940px) {
 	#header a.icon {
@@ -202,11 +211,15 @@ input[type="search"] {
 	/* padding-left: 100px; */
 	padding: 5px;
 
-	background: #eee; /* for non-css3 browsers */
+	background: white; /* for non-css3 browsers */
+}
 
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#eeeeee'); /* for IE */
-	background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eee)); /* for webkit browsers */
-	background: -moz-linear-gradient(top,  #fff,  #eee); /* for firefox 3.6+ */
+.calendar-event:nth-child(even) {
+	background-color: #fff;
+}
+
+.calendar-event:nth-child(odd) {
+	background-color: #ddf2ff;
 }
 
 .calendar-event .summary {
@@ -259,6 +272,16 @@ input[type="search"] {
 	height: 32px;
 	right: 2px;
 	top: 34px;
+}
+
+input[type=button].button, input[type=submit].button {
+	color: #febd11;
+	background-color: #061556;
+}
+
+input[type=button].button.secondary, input[type=submit].button.secondary {
+	color: #0073bb;
+	background-color: #ddd;
 }
 
 .calendar-event .favorite input[type=checkbox] {
@@ -332,21 +355,21 @@ input[type="search"] {
 		background-image:url(images/eye-checked@2x.png);
 	}
 
-	a.icon-official-events:before           { content: url(images/icons/gray/83-calendar@2.png);     background-size: 23px 25px; }
-	a.icon-my-events:before                 { content: url(images/icons/gray/111-user@2.png);        background-size: 24px 21px; }
-	a.icon-public-events:before             { content: url(images/icons/gray/112-group@2.png);       background-size: 32px 21px; }
-	a.icon-amenities:before                 { content: url(images/icons/gray/90-lifebuoy@2.png);     background-size: 22px 28px; }
-	a.icon-decks:before                     { content: url(images/icons/gray/103-map@2.png);         background-size: 26px 21px; }
-	a.icon-login:before                     { content: url(images/icons/gray/55-network@2.png);      background-size: 24px 24px; }
-	a.icon-add:before                       { content: url(images/icons/gray/31-circle-plus@2.png);  background-size: 24px 24px; }
+	a.icon-official-events:before           { content: url(images/icons/inactive/83-calendar@2.png);    background-size: 23px 25px; }
+	a.icon-my-events:before                 { content: url(images/icons/inactive/111-user@2.png);       background-size: 24px 21px; }
+	a.icon-public-events:before             { content: url(images/icons/inactive/112-group@2.png);      background-size: 32px 21px; }
+	a.icon-amenities:before                 { content: url(images/icons/inactive/90-lifebuoy@2.png);    background-size: 22px 28px; }
+	a.icon-decks:before                     { content: url(images/icons/inactive/103-map@2.png);        background-size: 26px 21px; }
+	a.icon-login:before                     { content: url(images/icons/inactive/55-network@2.png);     background-size: 24px 24px; }
+	a.icon-add:before                       { content: url(images/icons/inactive/31-circle-plus@2.png); background-size: 24px 24px; }
 
-	a.icon-official-events.selected:before  { content: url(images/icons/white/83-calendar@2.png);    background-size: 23px 25px; }
-	a.icon-my-events.selected:before        { content: url(images/icons/white/111-user@2.png);       background-size: 24px 21px; }
-	a.icon-public-events.selected:before    { content: url(images/icons/white/112-group@2.png);      background-size: 32px 21px; }
-	a.icon-amenities.selected:before        { content: url(images/icons/white/90-lifebuoy@2.png);    background-size: 22px 28px; }
-	a.icon-decks.selected:before            { content: url(images/icons/white/103-map@2.png);        background-size: 26px 21px; }
-	a.icon-login.selected:before            { content: url(images/icons/white/55-network@2.png);     background-size: 24px 24px; }
-	a.icon-add.selected:before              { content: url(images/icons/white/31-circle-plus@2.png); background-size: 24px 24px; }
+	a.icon-official-events.selected:before  { content: url(images/icons/active/83-calendar@2.png);      background-size: 23px 25px; }
+	a.icon-my-events.selected:before        { content: url(images/icons/active/111-user@2.png);         background-size: 24px 21px; }
+	a.icon-public-events.selected:before    { content: url(images/icons/active/112-group@2.png);        background-size: 32px 21px; }
+	a.icon-amenities.selected:before        { content: url(images/icons/active/90-lifebuoy@2.png);      background-size: 22px 28px; }
+	a.icon-decks.selected:before            { content: url(images/icons/active/103-map@2.png);          background-size: 26px 21px; }
+	a.icon-login.selected:before            { content: url(images/icons/active/55-network@2.png);       background-size: 24px 24px; }
+	a.icon-add.selected:before              { content: url(images/icons/active/31-circle-plus@2.png);   background-size: 24px 24px; }
 }
 
 .amenities-list {
@@ -356,14 +379,6 @@ input[type="search"] {
 	margin-bottom: -5px;
 	border-top: 1px solid black;
 	position: relative;
-}
-
-.amenities-list .divider {
-	background-color: black;
-	color: white;
-	font-size: larger;
-	font-weight: bolder;
-	padding: 5px;
 }
 
 .amenity {
@@ -376,11 +391,15 @@ input[type="search"] {
 	/* padding-left: 100px; */
 	padding: 5px;
 
-	background: #eee; /* for non-css3 browsers */
+	background: white; /* for non-css3 browsers */
+}
 
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#eeeeee'); /* for IE */
-	background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eee)); /* for webkit browsers */
-	background: -moz-linear-gradient(top,  #fff,  #eee); /* for firefox 3.6+ */
+.amenity:nth-child(even) {
+	background-color: #fff;
+}
+
+.amenity:nth-child(odd) {
+	background-color: #ddf2ff;
 }
 
 .amenity .deck {
@@ -392,10 +411,6 @@ input[type="search"] {
 	font-weight: bolder;
 }
 
-.amenity .description {
-	
-}
-
 .deck-list {
 	margin-left: -5px;
 	margin-right: -5px;
@@ -403,14 +418,6 @@ input[type="search"] {
 	margin-bottom: -5px;
 	border-top: 1px solid black;
 	position: relative;
-}
-
-.deck-list .divider {
-	background-color: black;
-	color: white;
-	font-size: larger;
-	font-weight: bolder;
-	padding: 5px;
 }
 
 .deck-list img {

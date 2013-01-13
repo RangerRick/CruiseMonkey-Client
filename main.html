@@ -49,7 +49,7 @@
 			var m_timeout = 10000;
 			var m_deviceReady = false,
 			initializeApp = function(event) {
-				console.log('Initializing Cruise Monkey. c75371435f7a38c0815ad59d80bf98f8606a611c 1358044335');
+				console.log('Initializing Cruise Monkey. 1e0479b6ceb83982a9b85c6350c801b24e7821d5 1358046924');
 				if (window.isPhoneGap) {
 					console.log('Running under PhoneGap.');
 				} else {
@@ -87,7 +87,7 @@
 		</script>
 	</head>
 	<body onload="onLoad()">
-		<div id="header">
+		<div id="header" class="theme-header">
 			<ul class="left">
 				<li><a href="#official-events" class="icon icon-official-events" data-bind="click: navigate">Official Events</a></li>
 				<li><a href="#my-events"       class="icon icon-my-events"       data-bind="click: navigate">My Events</a></li>
@@ -106,7 +106,7 @@
 				<form id="amenities-search" class="search-bar"><input type="search" results="5" autosave="amenities-search-results" placeholder="Search..." data-bind="value: filter, valueUpdate: ['afterkeydown', 'search']" /></form>
 				<ul class="amenities-list unstyled">
 					<!-- ko foreach: { data: orderedAmenities, as: 'deck' } -->
-					<li class="divider"><span data-bind="text: 'Deck ' + number"></span></li>
+					<li class="divider theme-header"><span data-bind="text: 'Deck ' + number"></span></li>
 					<!-- ko foreach: { data: amenities, as: 'amenity' } -->
 					<li class="amenity scrollable" data-bind="attr: { id: id }">
 						<div class="deck"><span data-bind="text: deck"></span></div>
@@ -121,7 +121,7 @@
 				<ul class="deck-list unstyled">
 					<!-- ko foreach: { data: decks, as: 'deck' } -->
 					<li data-bind="attr: { id: id() } " class="deck scrollable">
-						<div data-bind="text: 'Deck ' + number()" class="divider"></div>
+						<div data-bind="text: 'Deck ' + number()" class="divider theme-header"></div>
 						<img data-bind="attr: { id: id() + '-image', src: image }" />
 					</li>
 					<!-- /ko -->
