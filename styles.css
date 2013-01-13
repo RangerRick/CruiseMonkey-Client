@@ -245,9 +245,6 @@ input[type="search"] {
 .calendar-event .time {
 	font-weight: bolder;
 }
-.calendar-event .time span {
-	font-family: monospace;
-}
 
 .calendar-event .createdBy {
 	font-weight: bolder;
