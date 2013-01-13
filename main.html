@@ -11,12 +11,6 @@
 
 		<link rel="stylesheet" href="cruisemonkey.css" type="text/css" />
 
-		<script src="3rdparty/foundation/javascripts/modernizr.foundation.js"></script>
-
-		<!-- IE Fix for HTML5 Tags -->
-		<!--[if lt IE 9]>
-			<script src="3rdparty/html5shim/html5.js"></script>
-		<![endif]-->
 		<script id="events.html" type="text/html">
 			<form id="{{eventType}}-search" class="search-bar"><input type="search" results="5" autosave="{{eventType}}-search-results" placeholder="Search..." data-bind="value: filter, valueUpdate: ['afterkeydown', 'search']" /></form>
 			<ul class="event-list unstyled">
@@ -95,6 +89,13 @@
 			</form>
 		</script>
 		
+		<script src="3rdparty/foundation/javascripts/modernizr.foundation.js"></script>
+
+		<!-- IE Fix for HTML5 Tags -->
+		<!--[if lt IE 9]>
+			<script src="3rdparty/html5shim/html5.js"></script>
+		<![endif]-->
+
 		<script src="phonegap.js"></script>
 		<script src="childbrowser.js"></script>
 		<script src="3rdparty.js"></script>
@@ -108,7 +109,7 @@
 			var m_timeout = 10000;
 			var m_deviceReady = false,
 			initializeApp = function(event) {
-				console.log('Initializing Cruise Monkey. 2df4b131eaf4c90dc02c32bf14f18d340a9b35a6 1358035092');
+				console.log('Initializing Cruise Monkey. 91c3229f0fe37cd52e2dd6a776f66f19214086d5 1358037031');
 				if (window.isPhoneGap) {
 					console.log('Running under PhoneGap.');
 				} else {
