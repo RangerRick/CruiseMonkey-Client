@@ -22,7 +22,7 @@ body {
 }
 
 #header li {
-	color: white;
+	color: #444;
 	float: left;
 	position: relative;
 	margin: 0;
@@ -33,7 +33,7 @@ body {
 }
 
 #header li > a {
-	color: white;
+	color: #444;
 	height: 45px;
 	display: table-cell;
 	vertical-align: middle;
@@ -44,18 +44,22 @@ body {
 	*/
 }
 
+#header li > a.selected {
+	color: white;
+}
+
 #header > ul {
 	margin: 0;
 }
 
-#header li.signin > span > a {
+#header li.signin > a {
 	color: white;
 	margin-left: 0;
 	margin-right: 0;
 	padding-right: 10px;
 }
 
-#header li.signout > span > a {
+#header li.signout > a {
 	color: white;
 	margin-left: 0;
 	margin-right: 0;
@@ -95,6 +99,7 @@ body {
 	padding-top: 47px;
 }
 
+/*
 #login {
 	z-index: 200;
 	position: fixed;
@@ -106,19 +111,7 @@ body {
 	background-color: white;
 	color: black;
 }
-
-#login > form {
-	/*
-	display: table;
-	margin: auto;
-	*/
-}
-
-a.close-reveal-modal {
-	position: static;
-	top: 5;
-	right: 5;
-}
+*/
 
 .icon:before {
 	display: inline-block;
@@ -134,7 +127,7 @@ a.close-reveal-modal {
 a.icon-official-events:before           { content: url(images/icons/gray/83-calendar.png);     background-size: 23px 25px; }
 a.icon-my-events:before                 { content: url(images/icons/gray/111-user.png);        background-size: 24px 21px; }
 a.icon-public-events:before             { content: url(images/icons/gray/112-group.png);       background-size: 32px 21px; }
-a.icon-amenities:before                 { content: url(images/icons/gray/60-signpost.png);     background-size: 22px 28px; }
+a.icon-amenities:before                 { content: url(images/icons/gray/90-lifebuoy.png);     background-size: 22px 28px; }
 a.icon-decks:before                     { content: url(images/icons/gray/103-map.png);         background-size: 26px 21px; }
 a.icon-login:before                     { content: url(images/icons/gray/55-network.png);      background-size: 24px 24px; }
 a.icon-add:before                       { content: url(images/icons/gray/31-circle-plus.png);  background-size: 24px 24px; }
@@ -142,7 +135,7 @@ a.icon-add:before                       { content: url(images/icons/gray/31-circ
 a.icon-official-events.selected:before  { content: url(images/icons/white/83-calendar.png);    background-size: 23px 25px; }
 a.icon-my-events.selected:before        { content: url(images/icons/white/111-user.png);       background-size: 24px 21px; }
 a.icon-public-events.selected:before    { content: url(images/icons/white/112-group.png);      background-size: 32px 21px; }
-a.icon-amenities.selected:before        { content: url(images/icons/white/60-signpost.png);    background-size: 22px 28px; }
+a.icon-amenities.selected:before        { content: url(images/icons/white/90-lifebuoy.png);    background-size: 22px 28px; }
 a.icon-decks.selected:before            { content: url(images/icons/white/103-map.png);        background-size: 26px 21px; }
 a.icon-login.selected:before            { content: url(images/icons/white/55-network.png);     background-size: 24px 24px; }
 a.icon-add.selected:before              { content: url(images/icons/white/31-circle-plus.png); background-size: 24px 24px; }
@@ -155,18 +148,13 @@ a.icon-add.selected:before              { content: url(images/icons/white/31-cir
 		color: transparent;
 	}
 
-	#header li.signin a {
+	#header li.signin > a {
 		padding-right: 2px;
 	}
 
-	#header li.signout a {
+	#header li.signout > a {
 		padding-right: 2px;
 	}
-}
-
-.reveal-modal.full {
-	width: 100%;
-	margin-left: -50%;
 }
 
 .search-bar {
@@ -344,21 +332,21 @@ input[type="search"] {
 		background-image:url(images/eye-checked@2x.png);
 	}
 
-	.icon-official-events:before           { content: url(images/icons/gray/83-calendar@2.png);     background-size: 23px 25px; }
-	.icon-my-events:before                 { content: url(images/icons/gray/111-user@2.png);        background-size: 24px 21px; }
-	.icon-public-events:before             { content: url(images/icons/gray/112-group@2.png);       background-size: 32px 21px; }
-	.icon-amenities:before                 { content: url(images/icons/gray/60-signpost@2.png);     background-size: 22px 28px; }
-	.icon-decks:before                     { content: url(images/icons/gray/103-map@2.png);         background-size: 26px 21px; }
-	.icon-login:before                     { content: url(images/icons/gray/55-network@2.png);      background-size: 24px 24px; }
-	.icon-add:before                       { content: url(images/icons/gray/31-circle-plus@2.png);  background-size: 24px 24px; }
+	a.icon-official-events:before           { content: url(images/icons/gray/83-calendar@2.png);     background-size: 23px 25px; }
+	a.icon-my-events:before                 { content: url(images/icons/gray/111-user@2.png);        background-size: 24px 21px; }
+	a.icon-public-events:before             { content: url(images/icons/gray/112-group@2.png);       background-size: 32px 21px; }
+	a.icon-amenities:before                 { content: url(images/icons/gray/90-lifebuoy@2.png);     background-size: 22px 28px; }
+	a.icon-decks:before                     { content: url(images/icons/gray/103-map@2.png);         background-size: 26px 21px; }
+	a.icon-login:before                     { content: url(images/icons/gray/55-network@2.png);      background-size: 24px 24px; }
+	a.icon-add:before                       { content: url(images/icons/gray/31-circle-plus@2.png);  background-size: 24px 24px; }
 
-	.icon-official-events.selected:before  { content: url(images/icons/white/83-calendar@2.png);    background-size: 23px 25px; }
-	.icon-my-events.selected:before        { content: url(images/icons/white/111-user@2.png);       background-size: 24px 21px; }
-	.icon-public-events.selected:before    { content: url(images/icons/white/112-group@2.png);      background-size: 32px 21px; }
-	.icon-amenities.selected:before        { content: url(images/icons/white/60-signpost@2.png);    background-size: 22px 28px; }
-	.icon-decks.selected:before            { content: url(images/icons/white/103-map@2.png);        background-size: 26px 21px; }
-	.icon-login.selected:before            { content: url(images/icons/white/55-network@2.png);     background-size: 24px 24px; }
-	.icon-add.selected:before              { content: url(images/icons/white/31-circle-plus@2.png); background-size: 24px 24px; }
+	a.icon-official-events.selected:before  { content: url(images/icons/white/83-calendar@2.png);    background-size: 23px 25px; }
+	a.icon-my-events.selected:before        { content: url(images/icons/white/111-user@2.png);       background-size: 24px 21px; }
+	a.icon-public-events.selected:before    { content: url(images/icons/white/112-group@2.png);      background-size: 32px 21px; }
+	a.icon-amenities.selected:before        { content: url(images/icons/white/90-lifebuoy@2.png);    background-size: 22px 28px; }
+	a.icon-decks.selected:before            { content: url(images/icons/white/103-map@2.png);        background-size: 26px 21px; }
+	a.icon-login.selected:before            { content: url(images/icons/white/55-network@2.png);     background-size: 24px 24px; }
+	a.icon-add.selected:before              { content: url(images/icons/white/31-circle-plus@2.png); background-size: 24px 24px; }
 }
 
 .amenities-list {

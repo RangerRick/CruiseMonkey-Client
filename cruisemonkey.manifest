@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# version 91c3229f0fe37cd52e2dd6a776f66f19214086d5 1358037031
+# version c75371435f7a38c0815ad59d80bf98f8606a611c 1358044335
 
 CACHE:
 3rdparty.js
@@ -113,6 +113,8 @@ images/icons/gray/60-signpost.png
 images/icons/gray/60-signpost@2x.png
 images/icons/gray/83-calendar.png
 images/icons/gray/83-calendar@2x.png
+images/icons/gray/90-lifebuoy.png
+images/icons/gray/90-lifebuoy@2x.png
 images/icons/white/103-map.png
 images/icons/white/103-map@2x.png
 images/icons/white/111-user.png
@@ -127,6 +129,8 @@ images/icons/white/60-signpost.png
 images/icons/white/60-signpost@2x.png
 images/icons/white/83-calendar.png
 images/icons/white/83-calendar@2x.png
+images/icons/white/90-lifebuoy.png
+images/icons/white/90-lifebuoy@2x.png
 images/star-checked.png
 images/star-checked@2x.png
 images/star-unchecked.png
