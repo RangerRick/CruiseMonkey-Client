@@ -49,7 +49,7 @@
 			var m_timeout = 10000;
 			var m_deviceReady = false,
 			initializeApp = function(event) {
-				console.log('Initializing Cruise Monkey. 6b35a392138a0aecb410c6646711f9e52e4c0abe 1358049991');
+				console.log('Initializing Cruise Monkey. 3319020a0f7fd7bb322289928518b778e9ff04e8 1358053146');
 				if (window.isPhoneGap) {
 					console.log('Running under PhoneGap.');
 				} else {
@@ -88,17 +88,17 @@
 	</head>
 	<body onload="onLoad()">
 		<div id="header" class="theme-header">
-			<ul class="left">
-				<li><a href="#official-events" class="icon icon-official-events" data-bind="click: navigate">Official Events</a></li>
-				<li><a href="#my-events"       class="icon icon-my-events"       data-bind="click: navigate">My Events</a></li>
-				<li><a href="#public-events"   class="icon icon-public-events"   data-bind="click: navigate">Public Events</a></li>
-				<li><a href="#amenities"       class="icon icon-amenities"       data-bind="click: navigate">Amenities</a></li>
-				<li><a href="#decks"           class="icon icon-decks"           data-bind="click: navigate">Deck Plans</a></li>
-				<li><a href="#edit-event"      class="icon icon-add"             data-bind="click: navigate">Add Event</a></li>
+			<ul class="left icons">
+				<li><a href="#official-events" class="icon icon-official-events" data-bind="click: navigate"><div class="icon icon-official-events"></div>Official Events</a></li>
+				<li><a href="#my-events"       class="icon icon-my-events"       data-bind="click: navigate"><div class="icon icon-my-events"      ></div>My Events</a></li>
+				<li><a href="#public-events"   class="icon icon-public-events"   data-bind="click: navigate"><div class="icon icon-public-events"  ></div>Public Events</a></li>
+				<li><a href="#amenities"       class="icon icon-amenities"       data-bind="click: navigate"><div class="icon icon-amenities"      ></div>Amenities</a></li>
+				<li><a href="#decks"           class="icon icon-decks"           data-bind="click: navigate"><div class="icon icon-decks"          ></div>Deck Plans</a></li>
+				<li><a href="#edit-event"      class="icon icon-add"             data-bind="click: navigate"><div class="icon icon-add"            ></div>Add Event</a></li>
 			</ul>
-			<ul class="right">
-				<li class="signin" style="display:none" data-bind="visible: showSignIn" ><a href="#sign-in"  class="icon icon-login" data-bind="click: navigate">Sign In</a></li>
-				<li class="signout" data-bind="visible: showSignOut"><a href="#sign-out" class="icon icon-login" data-bind="click: navigate">Sign Out</a></li>
+			<ul class="right icons">
+				<li class="signin" style="display:none" data-bind="visible: showSignIn" ><a href="#sign-in"  class="icon icon-login" data-bind="click: navigate"><div class="icon icon-login"></div>Sign In</a></li>
+				<li class="signout"                     data-bind="visible: showSignOut"><a href="#sign-out" class="icon icon-login" data-bind="click: navigate"><div class="icon icon-login"></div>Sign Out</a></li>
 			</ul>
 		</div>
 		<div id="content">
