@@ -137,24 +137,28 @@ div.icon {
 	display: inline-block;
 	vertical-align: middle;
 	margin-right: 5px;
-	background-size: 25px 25px;
+	background-size: 32px 32px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 32px;
+	height: 32px;
 }
 
-div.icon-official-events           { content: url(images/icons/inactive/83-calendar.png);    background-size: 23px 25px; }
-div.icon-my-events                 { content: url(images/icons/inactive/111-user.png);       background-size: 24px 21px; }
-div.icon-public-events             { content: url(images/icons/inactive/112-group.png);      background-size: 32px 21px; }
-div.icon-amenities                 { content: url(images/icons/inactive/90-lifebuoy.png);    background-size: 22px 28px; }
-div.icon-decks                     { content: url(images/icons/inactive/103-map.png);        background-size: 26px 21px; }
-div.icon-login                     { content: url(images/icons/inactive/55-network.png);     background-size: 24px 24px; }
-div.icon-add                       { content: url(images/icons/inactive/31-circle-plus.png); background-size: 24px 24px; }
+div.icon-official-events           { background-image: url(images/icons/inactive/83-calendar.png);    background-size: 23px 25px; }
+div.icon-my-events                 { background-image: url(images/icons/inactive/111-user.png);       background-size: 24px 21px; }
+div.icon-public-events             { background-image: url(images/icons/inactive/112-group.png);      background-size: 32px 21px; }
+div.icon-amenities                 { background-image: url(images/icons/inactive/90-lifebuoy.png);    background-size: 24px 24px; }
+div.icon-decks                     { background-image: url(images/icons/inactive/103-map.png);        background-size: 26px 21px; }
+div.icon-login                     { background-image: url(images/icons/inactive/55-network.png);     background-size: 24px 24px; }
+div.icon-add                       { background-image: url(images/icons/inactive/31-circle-plus.png); background-size: 28px 28px; }
 
-div.icon-official-events.selected  { content: url(images/icons/active/83-calendar.png);      background-size: 23px 25px; }
-div.icon-my-events.selected        { content: url(images/icons/active/111-user.png);         background-size: 24px 21px; }
-div.icon-public-events.selected    { content: url(images/icons/active/112-group.png);        background-size: 32px 21px; }
-div.icon-amenities.selected        { content: url(images/icons/active/90-lifebuoy.png);      background-size: 22px 28px; }
-div.icon-decks.selected            { content: url(images/icons/active/103-map.png);          background-size: 26px 21px; }
-div.icon-login.selected            { content: url(images/icons/active/55-network.png);       background-size: 24px 24px; }
-div.icon-add.selected              { content: url(images/icons/active/31-circle-plus.png);   background-size: 24px 24px; }
+div.icon-official-events.selected  { background-image: url(images/icons/active/83-calendar.png);      background-size: 23px 25px; }
+div.icon-my-events.selected        { background-image: url(images/icons/active/111-user.png);         background-size: 24px 21px; }
+div.icon-public-events.selected    { background-image: url(images/icons/active/112-group.png);        background-size: 32px 21px; }
+div.icon-amenities.selected        { background-image: url(images/icons/active/90-lifebuoy.png);      background-size: 24px 24px; }
+div.icon-decks.selected            { background-image: url(images/icons/active/103-map.png);          background-size: 26px 21px; }
+div.icon-login.selected            { background-image: url(images/icons/active/55-network.png);       background-size: 24px 24px; }
+div.icon-add.selected              { background-image: url(images/icons/active/31-circle-plus.png);   background-size: 28px 28px; }
 
 @media only screen and (max-width: 940px) {
 	#header a.icon {
@@ -348,40 +352,40 @@ input[type=button].button.secondary, input[type=submit].button.secondary {
 (min-resolution: 192dpi) { 
 	.calendar-event .favorite input[type=checkbox] + label {
 		background-image:url(images/star-unchecked@2x.png);
-		background-size: 50%;
+		background-size: 26px 26px;
 	}
 	.calendar-event .favorite input[type=checkbox]:checked + label {
 		background-image:url(images/star-checked@2x.png);
-		background-size: 50%;
+		background-size: 26px 26px;
 	}
 	.calendar-event .trash input[type=button] + label {
 		background-image:url(images/trash@2x.png);
-		background-size: 50%;
+		background-size: 16px 21px;
 	}
 	.calendar-event .public input[type=checkbox] + label {
 		background-image:url(images/eye-unchecked@2x.png);
-		background-size: 50%;
+		background-size: 24px 16px;
 	}
 	.calendar-event .public input[type=checkbox]:checked + label {
 		background-image:url(images/eye-checked@2x.png);
-		background-size: 50%;
+		background-size: 24px 16px;
 	}
 
-	div.icon-official-events           { content: url(images/icons/inactive/83-calendar@2x.png);    background-size: 50%; }
-	div.icon-my-events                 { content: url(images/icons/inactive/111-user@2x.png);       background-size: 50%; }
-	div.icon-public-events             { content: url(images/icons/inactive/112-group@2x.png);      background-size: 50%; }
-	div.icon-amenities                 { content: url(images/icons/inactive/90-lifebuoy@2x.png);    background-size: 50%; }
-	div.icon-decks                     { content: url(images/icons/inactive/103-map@2x.png);        background-size: 50%; }
-	div.icon-login                     { content: url(images/icons/inactive/55-network@2x.png);     background-size: 50%; }
-	div.icon-add                       { content: url(images/icons/inactive/31-circle-plus@2x.png); background-size: 50%; }
+	div.icon-official-events           { background-image: url(images/icons/inactive/83-calendar@2x.png);    background-size: 23px 25px; }
+	div.icon-my-events                 { background-image: url(images/icons/inactive/111-user@2x.png);       background-size: 24px 21px; }
+	div.icon-public-events             { background-image: url(images/icons/inactive/112-group@2x.png);      background-size: 32px 21px; }
+	div.icon-amenities                 { background-image: url(images/icons/inactive/90-lifebuoy@2x.png);    background-size: 24px 24px; }
+	div.icon-decks                     { background-image: url(images/icons/inactive/103-map@2x.png);        background-size: 26px 21px; }
+	div.icon-login                     { background-image: url(images/icons/inactive/55-network@2x.png);     background-size: 24px 24px; }
+	div.icon-add                       { background-image: url(images/icons/inactive/31-circle-plus@2x.png); background-size: 28px 28px; }
 
-	div.icon-official-events.selected  { content: url(images/icons/active/83-calendar@2x.png);      background-size: 50%; }
-	div.icon-my-events.selected        { content: url(images/icons/active/111-user@2x.png);         background-size: 50%; }
-	div.icon-public-events.selected    { content: url(images/icons/active/112-group@2x.png);        background-size: 50%; }
-	div.icon-amenities.selected        { content: url(images/icons/active/90-lifebuoy@2x.png);      background-size: 50%; }
-	div.icon-decks.selected            { content: url(images/icons/active/103-map@2x.png);          background-size: 50%; }
-	div.icon-login.selected            { content: url(images/icons/active/55-network@2x.png);       background-size: 50%; }
-	div.icon-add.selected              { content: url(images/icons/active/31-circle-plus@2x.png);   background-size: 50%; }
+	div.icon-official-events.selected  { background-image: url(images/icons/active/83-calendar@2x.png);      background-size: 23px 25px; }
+	div.icon-my-events.selected        { background-image: url(images/icons/active/111-user@2x.png);         background-size: 24px 21px; }
+	div.icon-public-events.selected    { background-image: url(images/icons/active/112-group@2x.png);        background-size: 32px 21px; }
+	div.icon-amenities.selected        { background-image: url(images/icons/active/90-lifebuoy@2x.png);      background-size: 24px 24px; }
+	div.icon-decks.selected            { background-image: url(images/icons/active/103-map@2x.png);          background-size: 26px 21px; }
+	div.icon-login.selected            { background-image: url(images/icons/active/55-network@2x.png);       background-size: 24px 24px; }
+	div.icon-add.selected              { background-image: url(images/icons/active/31-circle-plus@2x.png);   background-size: 28px 28px; }
 }
 
 .amenities-list {
