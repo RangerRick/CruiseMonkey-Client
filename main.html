@@ -108,7 +108,7 @@
 			var m_timeout = 10000;
 			var m_deviceReady = false,
 			initializeApp = function(event) {
-				console.log('Initializing Cruise Monkey. 16505a941f1cb1eaf089a15f6a1fb11c30b5165c 1358034434');
+				console.log('Initializing Cruise Monkey. 2df4b131eaf4c90dc02c32bf14f18d340a9b35a6 1358035092');
 				if (window.isPhoneGap) {
 					console.log('Running under PhoneGap.');
 				} else {
@@ -118,8 +118,6 @@
 					console.log('Already initialized!');
 					return;
 				}
-
-				$('#login').trigger('reveal:close');
 
 				m_deviceReady = true;
 				templateLoader.load();
@@ -230,7 +228,6 @@
 						</div>
 					</div>
 				</form>
-				<a class="close-reveal-modal">&#215;</a>
 			</div>
 		</div>
 	</body>
