@@ -49,7 +49,7 @@
 			var m_timeout = 10000;
 			var m_deviceReady = false,
 			initializeApp = function(event) {
-				console.log('Initializing Cruise Monkey. 1e0479b6ceb83982a9b85c6350c801b24e7821d5 1358046924');
+				console.log('Initializing Cruise Monkey. 6b35a392138a0aecb410c6646711f9e52e4c0abe 1358049991');
 				if (window.isPhoneGap) {
 					console.log('Running under PhoneGap.');
 				} else {
@@ -97,7 +97,7 @@
 				<li><a href="#edit-event"      class="icon icon-add"             data-bind="click: navigate">Add Event</a></li>
 			</ul>
 			<ul class="right">
-				<li class="signin"  data-bind="visible: showSignIn" ><a href="#sign-in"  class="icon icon-login" data-bind="click: navigate">Sign In</a></li>
+				<li class="signin" style="display:none" data-bind="visible: showSignIn" ><a href="#sign-in"  class="icon icon-login" data-bind="click: navigate">Sign In</a></li>
 				<li class="signout" data-bind="visible: showSignOut"><a href="#sign-out" class="icon icon-login" data-bind="click: navigate">Sign Out</a></li>
 			</ul>
 		</div>
