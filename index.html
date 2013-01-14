@@ -14,13 +14,13 @@
 		<script id="events.html" type="text/html">
 			<form id="{{eventType}}-search" class="search-bar"><input type="search" results="5" autosave="{{eventType}}-search-results" placeholder="Search..." data-bind="value: filter, valueUpdate: ['afterkeydown', 'search']" /></form>
 			<ul class="list event-list unstyled" data-bind="delegatedHandler: ['click', 'touchstart'], foreach: filteredEvents">
-				<li class="list-entry calendar-event {{eventType}} scrollable" data-bind="attr: { id: cleanId }, css: { mine: isMine }">
+				<li class="list-entry calendar-event {{eventType}} scrollable" data-bind="attr: { id: cleanId }, css: { mine: isMine() }">
 					<div class="summary" data-bind="text: summary"></div>
 					<div class="favorite" data-bind="visible: !isMine()"><input type="checkbox" data-bind="checked: favorite, delegatedClick: $parent.toggleFavorite, delegatedTouchstart: $parent.toggleFavorite, attr: { id: cleanId() + '-favorite' }" /><label data-bind="attr: { for: cleanId() + '-favorite' }">&nbsp;</div>
-					<div class="trash" data-bind="visible: isMine"><input type="button" data-bind="delegatedClick: $parent.deleteEvent, delegatedTouchstart: $parent.deleteEvent, attr: { id: cleanId() + '-trash' }" /><label data-bind="attr: { for: cleanId() + '-trash' }">&nbsp;</div>
-					<div class="public" data-bind="visible: isMine"><input type="checkbox" data-bind="checked: isPublic, delegatedClick: $parent.togglePublic, delegatedTouchstart: $parent.togglePublic, attr: { id: cleanId() + '-public' }" /><label data-bind="attr: { for: cleanId() + '-public' }">&nbsp;</div>
+					<div class="trash" data-bind="visible: isMine()"><input type="button" data-bind="delegatedClick: $parent.deleteEvent, delegatedTouchstart: $parent.deleteEvent, attr: { id: cleanId() + '-trash' }" /><label data-bind="attr: { for: cleanId() + '-trash' }">&nbsp;</div>
+					<div class="public" data-bind="visible: isMine()"><input type="checkbox" data-bind="checked: isPublic, delegatedClick: $parent.togglePublic, delegatedTouchstart: $parent.togglePublic, attr: { id: cleanId() + '-public' }" /><label data-bind="attr: { for: cleanId() + '-public' }">&nbsp;</div>
 					<div class="createdBy" data-bind="visible: !isMine() && createdBy() != 'google'">Created By: <span data-bind="text: createdBy"></span></div>
-					<div class="time">Time: <span data-bind="text: timespan"></span></div>
+					<div class="time">Time: <span data-bind="text: timespan()"></span></div>
 					<div class="location">Location: <span data-bind="text: location"></span></div>
 					<div class="description" data-bind="text: description"></div>
 				</li>
@@ -47,7 +47,7 @@
 			var m_timeout = 10000;
 			var m_deviceReady = false,
 			initializeApp = function(event) {
-				console.log('Initializing Cruise Monkey. b72cec86831147ca471fe1a69433411be8870225 1358175356');
+				console.log('Initializing Cruise Monkey. fba2756a09536b17157db7ce425f83c488f0ea19 1358185947');
 				if (window.isPhoneGap) {
 					console.log('Running under PhoneGap.');
 				} else {
