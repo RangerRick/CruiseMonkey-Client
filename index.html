@@ -47,7 +47,7 @@
 			var m_timeout = 10000;
 			var m_deviceReady = false,
 			initializeApp = function(event) {
-				console.log('Initializing Cruise Monkey. fba2756a09536b17157db7ce425f83c488f0ea19 1358185947');
+				console.log('Initializing Cruise Monkey. 4c79995a6011c1a976062311ff2756612f16d0d2 1358186803');
 				if (window.isPhoneGap) {
 					console.log('Running under PhoneGap.');
 				} else {
@@ -118,9 +118,9 @@
 			<div id="decks">
 				<ul class="list deck-list unstyled">
 					<!-- ko foreach: { data: decks, as: 'deck' } -->
-					<li data-bind="attr: { id: id() } " class="list-entry deck scrollable">
-						<div data-bind="text: 'Deck ' + number()" class="divider theme-header"></div>
-						<img data-bind="attr: { id: id() + '-image', src: image }" />
+					<li data-bind="attr: { id: id } " class="list-entry deck scrollable">
+						<div data-bind="text: 'Deck ' + number" class="divider theme-header"></div>
+						<img data-bind="attr: { id: id + '-image', src: image() }" />
 					</li>
 					<!-- /ko -->
 				</ul>
