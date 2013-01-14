@@ -40,21 +40,30 @@ body {
 	padding: 5px;
 }
 
-.blue-gradient {
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#169efe', endColorstr='#a2d4f7'); /* for IE */
-	background: -webkit-gradient(linear, left top, left bottom, from(#169efe), to(#a2d4f7)); /* for webkit browsers */
-	background: -moz-linear-gradient(top,  #169efe,  #a2d4f7); /* for firefox 3.6+ */
+.list {
+	margin-left: -5px;
+	margin-right: -5px;
+	margin-top: 5px;
+	margin-bottom: -5px;
+	border-top: 1px solid black;
+	position: relative;
+}
+
+.list-entry {
+	position: relative;
 	border-bottom: 1px solid black;
+	width: 100%;
+	overflow: auto;
+	list-style-type: none;
+	padding: 5px;
+
+	background: white;
 }
 
 #header li {
 	float: left;
 	position: relative;
 	margin: 0;
-	/*
-	margin-left: 5px;
-	margin-right: 5px;
-	*/
 	height: 45px;
 	list-style-type: none;
 }
@@ -64,11 +73,6 @@ body {
 	height: 45px;
 	display: table-cell;
 	vertical-align: middle;
-	/*
-	text-align: middle;
-	margin-top: auto;
-	margin-bottom: auto;
-	*/
 }
 
 #header li > a.selected {
@@ -124,17 +128,6 @@ body {
 	padding-top: 47px;
 }
 
-/*
-.icon:before {
-	display: inline-block;
-	padding-right: 5px;
-	vertical-align: middle;
-	margin-top: 2px;
-	background-width: 25px;
-	background-height: 25px;
-}
-*/
-
 div.icon {
 	display: inline-block;
 	vertical-align: middle;
@@ -184,19 +177,11 @@ div.icon-add.selected              { background-image: url(images/icons/active/3
 	font-size: large;
 	margin: auto;
 }
-	/* margin: 3px 0 3px 0; */
 
 input[type="search"] {
 	font-size: large;
-	/* margin-bottom: 5px; */
 	margin: auto;
 }
-
-/*
-#official-search,#my-search,#public-search,#amenities-search {
-	margin-bottom: 5px;
-}
-*/
 
 #content.columns {
 	padding: 0px;
@@ -214,32 +199,11 @@ input[type="search"] {
 	background-color: white;
 }
 
-.event-list {
-	margin-left: -5px;
-	margin-right: -5px;
-	margin-top: 5px;
-	margin-bottom: -5px;
-	border-top: 1px solid black;
-}
-
-.calendar-event {
-	position: relative;
-	border-bottom: 1px solid black;
-	/* height: 100px; */
-	width: 100%;
-	overflow: auto;
-	list-style-type: none;
-	/* padding-left: 100px; */
-	padding: 5px;
-
-	background: white; /* for non-css3 browsers */
-}
-
-.calendar-event:nth-child(even) {
+.list-entry:nth-child(even) {
 	background-color: #fff;
 }
 
-.calendar-event:nth-child(odd) {
+.list-entry:nth-child(odd) {
 	background-color: #ddf2ff;
 }
 
@@ -302,22 +266,14 @@ input[type=button].button.secondary, input[type=submit].button.secondary {
 	background-color: #ddd;
 }
 
-.calendar-event .favorite input[type=checkbox] {
-	display:none;
-}
-
-.calendar-event .trash input[type=button] {
-	display:none;
-}
-
-.calendar-event .public input[type=checkbox] {
+.calendar-event input {
 	display:none;
 }
 
 .calendar-event .favorite input[type=checkbox] + label {
 	background:url(images/star-unchecked.png) no-repeat;
 	background-position: center center;
-	background-size: 26px 26px;
+	background-size:26px 26px;
 	width: 32px;
 	height: 32px;
 }
@@ -395,28 +351,6 @@ input[type=button].button.secondary, input[type=submit].button.secondary {
 	div.icon-add.selected              { background-image: url(images/icons/active/31-circle-plus@2x.png);   background-size: 28px 28px; }
 }
 
-.amenities-list {
-	margin-left: -5px;
-	margin-right: -5px;
-	margin-top: 5px;
-	margin-bottom: -5px;
-	border-top: 1px solid black;
-	position: relative;
-}
-
-.amenity {
-	position: relative;
-	border-bottom: 1px solid black;
-	/* height: 100px; */
-	width: 100%;
-	overflow: auto;
-	list-style-type: none;
-	/* padding-left: 100px; */
-	padding: 5px;
-
-	background: white; /* for non-css3 browsers */
-}
-
 .amenity:nth-child(even) {
 	background-color: #fff;
 }
@@ -432,15 +366,6 @@ input[type=button].button.secondary, input[type=submit].button.secondary {
 .amenity .name {
 	font-size: larger;
 	font-weight: bolder;
-}
-
-.deck-list {
-	margin-left: -5px;
-	margin-right: -5px;
-	margin-top: -3px;
-	margin-bottom: -5px;
-	border-top: 1px solid black;
-	position: relative;
 }
 
 .deck-list img {

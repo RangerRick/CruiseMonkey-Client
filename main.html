@@ -13,9 +13,9 @@
 
 		<script id="events.html" type="text/html">
 			<form id="{{eventType}}-search" class="search-bar"><input type="search" results="5" autosave="{{eventType}}-search-results" placeholder="Search..." data-bind="value: filter, valueUpdate: ['afterkeydown', 'search']" /></form>
-			<ul class="event-list unstyled">
+			<ul class="list event-list unstyled">
 				<!-- ko foreach: { data: filteredEvents } -->
-				<li class="calendar-event {{eventType}} scrollable" data-bind="attr: { id: cleanId }, css: { mine: isMine }"> <!-- onclick="" ontouchstart="" -->
+				<li class="list-entry calendar-event {{eventType}} scrollable" data-bind="attr: { id: cleanId }, css: { mine: isMine }">
 					<div class="summary"><span data-bind="text: summary"></span></div>
 					<div class="favorite" data-bind="visible: !isMine()"><input type="checkbox" class="favorite-checkbox" data-bind="checked: favorite, touchOrClick: $parent.toggleFavorite, attr: { id: cleanId() + '-favorite' }" /><label data-bind="attr: { for: cleanId() + '-favorite' }">&nbsp;</div>
 					<div class="trash" data-bind="visible: isMine"><input type="button" class="trash-button" data-bind="touchOrClick: $parent.deleteEvent, attr: { id: cleanId() + '-trash' }" /><label data-bind="attr: { for: cleanId() + '-trash' }">&nbsp;</div>
@@ -49,7 +49,7 @@
 			var m_timeout = 10000;
 			var m_deviceReady = false,
 			initializeApp = function(event) {
-				console.log('Initializing Cruise Monkey. 148ec6c0c9f22b015be404e894e5bd7a804c9f29 1358122492');
+				console.log('Initializing Cruise Monkey. 148ec6c0c9f22b015be404e894e5bd7a804c9f29 1358127537');
 				if (window.isPhoneGap) {
 					console.log('Running under PhoneGap.');
 				} else {
@@ -104,11 +104,11 @@
 		<div id="content">
 			<div id="amenities">
 				<form id="amenities-search" class="search-bar"><input type="search" results="5" autosave="amenities-search-results" placeholder="Search..." data-bind="value: filter, valueUpdate: ['afterkeydown', 'search']" /></form>
-				<ul class="amenities-list unstyled">
+				<ul class="list amenities-list unstyled">
 					<!-- ko foreach: { data: orderedAmenities, as: 'deck' } -->
 					<li class="divider theme-header"><span data-bind="text: 'Deck ' + number"></span></li>
 					<!-- ko foreach: { data: amenities, as: 'amenity' } -->
-					<li class="amenity scrollable" data-bind="attr: { id: id }">
+					<li class="list-entry amenity scrollable" data-bind="attr: { id: id }">
 						<div class="deck"><span data-bind="text: deck"></span></div>
 						<div class="name"><span data-bind="text: name"></span></div>
 						<div class="description"><span data-bind="text: description"></span></div>
@@ -118,9 +118,9 @@
 				</ul>
 			</div>
 			<div id="decks">
-				<ul class="deck-list unstyled">
+				<ul class="list deck-list unstyled">
 					<!-- ko foreach: { data: decks, as: 'deck' } -->
-					<li data-bind="attr: { id: id() } " class="deck scrollable">
+					<li data-bind="attr: { id: id() } " class="list-entry deck scrollable">
 						<div data-bind="text: 'Deck ' + number()" class="divider theme-header"></div>
 						<img data-bind="attr: { id: id() + '-image', src: image }" />
 					</li>
