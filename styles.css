@@ -60,6 +60,14 @@ body {
 	background: white;
 }
 
+.list-entry:nth-child(even) {
+	background-color: #fff;
+}
+
+.list-entry:nth-child(odd) {
+	background-color: #ddf2ff;
+}
+
 #header li {
 	float: left;
 	position: relative;
@@ -197,14 +205,6 @@ input[type="search"] {
 
 #ui-datepicker-div {
 	background-color: white;
-}
-
-.list-entry:nth-child(even) {
-	background-color: #fff;
-}
-
-.list-entry:nth-child(odd) {
-	background-color: #ddf2ff;
 }
 
 .calendar-event .summary {
@@ -366,6 +366,11 @@ input[type=button].button.secondary, input[type=submit].button.secondary {
 .amenity .name {
 	font-size: larger;
 	font-weight: bolder;
+}
+
+.deck-list, .deck {
+	padding: 0;
+	margin-top: -2px;
 }
 
 .deck-list img {
