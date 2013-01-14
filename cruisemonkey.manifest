@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# version 984da6ad3e0a0f36221b31f9ae4cb7740321876e 1358174910
+# version b72cec86831147ca471fe1a69433411be8870225 1358175356
 
 CACHE:
 3rdparty.js
@@ -135,7 +135,6 @@ images/star-unchecked@2x.png
 images/trash.png
 images/trash@2.png
 index.html
-main.html
 styles.css
 
 NETWORK:

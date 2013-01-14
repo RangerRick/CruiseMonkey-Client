@@ -1,9 +1,233 @@
 <!DOCTYPE html>
-<html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en" manifest="cruisemonkey.manifest"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" lang="en" manifest="cruisemonkey.manifest"><![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" manifest="cruisemonkey.manifest"><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" lang="en" manifest="cruisemonkey.manifest"><!--<![endif]-->
 	<head>
-		<title></title>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<script>window.location='main.html';</script>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0">
+		<title>CruiseMonkey 3</title>
+
+		<link rel="stylesheet" href="cruisemonkey.css" type="text/css" />
+
+		<script id="events.html" type="text/html">
+			<form id="{{eventType}}-search" class="search-bar"><input type="search" results="5" autosave="{{eventType}}-search-results" placeholder="Search..." data-bind="value: filter, valueUpdate: ['afterkeydown', 'search']" /></form>
+			<ul class="list event-list unstyled" data-bind="delegatedHandler: ['click', 'touchstart'], foreach: filteredEvents">
+				<li class="list-entry calendar-event {{eventType}} scrollable" data-bind="attr: { id: cleanId }, css: { mine: isMine }">
+					<div class="summary" data-bind="text: summary"></div>
+					<div class="favorite" data-bind="visible: !isMine()"><input type="checkbox" data-bind="checked: favorite, delegatedClick: $parent.toggleFavorite, delegatedTouchstart: $parent.toggleFavorite, attr: { id: cleanId() + '-favorite' }" /><label data-bind="attr: { for: cleanId() + '-favorite' }">&nbsp;</div>
+					<div class="trash" data-bind="visible: isMine"><input type="button" data-bind="delegatedClick: $parent.deleteEvent, delegatedTouchstart: $parent.deleteEvent, attr: { id: cleanId() + '-trash' }" /><label data-bind="attr: { for: cleanId() + '-trash' }">&nbsp;</div>
+					<div class="public" data-bind="visible: isMine"><input type="checkbox" data-bind="checked: isPublic, delegatedClick: $parent.togglePublic, delegatedTouchstart: $parent.togglePublic, attr: { id: cleanId() + '-public' }" /><label data-bind="attr: { for: cleanId() + '-public' }">&nbsp;</div>
+					<div class="createdBy" data-bind="visible: !isMine() && createdBy() != 'google'">Created By: <span data-bind="text: createdBy"></span></div>
+					<div class="time">Time: <span data-bind="text: timespan"></span></div>
+					<div class="location">Location: <span data-bind="text: location"></span></div>
+					<div class="description" data-bind="text: description"></div>
+				</li>
+			</ul>
+		</script>
+		
+		<script src="3rdparty/modernizr.js"></script>
+
+		<!-- IE Fix for HTML5 Tags -->
+		<!--[if lt IE 9]>
+			<script src="3rdparty/html5shim/html5.js"></script>
+		<![endif]-->
+
+		<script src="phonegap.js"></script>
+		<script src="childbrowser.js"></script>
+		<script src="3rdparty.js"></script>
+		<!-- <script src="3rdparty/jquery-ui/js/jquery-ui-1.9.2.custom.min.js"></script> -->
+		<!-- <script src="3rdparty/jquery-ui-timepicker-addon.js"></script> -->
+
+		<script src="cruisemonkey.js"></script>
+		
+		<script>
+			'use strict';
+			var m_timeout = 10000;
+			var m_deviceReady = false,
+			initializeApp = function(event) {
+				console.log('Initializing Cruise Monkey. b72cec86831147ca471fe1a69433411be8870225 1358175356');
+				if (window.isPhoneGap) {
+					console.log('Running under PhoneGap.');
+				} else {
+					console.log('Running in a browser.');
+				}
+				if (m_deviceReady) {
+					console.log('Already initialized!');
+					return;
+				}
+
+				m_deviceReady = true;
+				app.views.templateLoader.load();
+			},
+			onLoad = function() {
+				if (window.applicationCache) {
+					if (window.applicationCache.status == window.applicationCache.IDLE) {
+						console.log('application cache is up-to-date');
+					} else {
+						window.applicationCache.addEventListener('updateready', function(e) {
+							if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
+								console.log('application cache has changed');
+								// Browser downloaded a new app cache.
+								// Swap it in and reload the page to get the new hotness.
+								window.applicationCache.swapCache();
+								window.location.reload();
+							} else {
+								// Manifest didn't change. Nothing new to server.
+								console.log('application cache is up-to-date');
+							}
+						}, false);
+					}
+				}
+				window.isPhoneGap = true; document.addEventListener('deviceready', initializeApp, false);
+			};
+		</script>
 	</head>
-	<body></body>
+	<body onload="onLoad()">
+		<div id="header" class="theme-header" data-bind="delegatedHandler: ['click', 'touchstart']">
+			<ul class="left icons">
+				<li><a href="#official-events" class="icon icon-official-events" data-bind="delegatedClick: navigate, delegatedTouchstart: navigate"><div class="icon icon-official-events"></div>Official Events</a></li>
+				<li><a href="#public-events"   class="icon icon-public-events"   data-bind="delegatedClick: navigate, delegatedTouchstart: navigate"><div class="icon icon-public-events"  ></div>Public Events</a></li>
+				<li><a href="#my-events"       class="icon icon-my-events"       data-bind="delegatedClick: navigate, delegatedTouchstart: navigate"><div class="icon icon-my-events"      ></div>My Events</a></li>
+				<li><a href="#amenities"       class="icon icon-amenities"       data-bind="delegatedClick: navigate, delegatedTouchstart: navigate"><div class="icon icon-amenities"      ></div>Amenities</a></li>
+				<li><a href="#decks"           class="icon icon-decks"           data-bind="delegatedClick: navigate, delegatedTouchstart: navigate"><div class="icon icon-decks"          ></div>Deck Plans</a></li>
+				<li><a href="#edit-event"      class="icon icon-add"             data-bind="delegatedClick: navigate, delegatedTouchstart: navigate"><div class="icon icon-add"            ></div>Add Event</a></li>
+			</ul>
+			<ul class="right icons">
+				<li class="signin" style="display:none" data-bind="visible: showSignIn" ><a href="#sign-in"  class="icon icon-login" data-bind="delegatedClick: navigate, delegatedTouchstart: navigate"><div class="icon icon-login"></div>Sign In</a></li>
+				<li class="signout"                     data-bind="visible: showSignOut"><a href="#sign-out" class="icon icon-login" data-bind="delegatedClick: navigate, delegatedTouchstart: navigate"><div class="icon icon-login"></div>Sign Out</a></li>
+			</ul>
+		</div>
+		<div id="content">
+			<div id="amenities">
+				<form id="amenities-search" class="search-bar"><input type="search" results="5" autosave="amenities-search-results" placeholder="Search..." data-bind="value: filter, valueUpdate: ['afterkeydown', 'search']" /></form>
+				<ul class="list amenities-list unstyled">
+					<!-- ko foreach: { data: orderedAmenities, as: 'deck' } -->
+					<li class="divider theme-header"><span data-bind="text: 'Deck ' + number"></span></li>
+					<!-- ko foreach: { data: amenities, as: 'amenity' } -->
+					<li class="list-entry amenity scrollable" data-bind="attr: { id: id }">
+						<div class="deck"><span data-bind="text: deck"></span></div>
+						<div class="name"><span data-bind="text: name"></span></div>
+						<div class="description"><span data-bind="text: description"></span></div>
+					</li>
+					<!-- /ko -->
+					<!-- /ko -->
+				</ul>
+			</div>
+			<div id="decks">
+				<ul class="list deck-list unstyled">
+					<!-- ko foreach: { data: decks, as: 'deck' } -->
+					<li data-bind="attr: { id: id() } " class="list-entry deck scrollable">
+						<div data-bind="text: 'Deck ' + number()" class="divider theme-header"></div>
+						<img data-bind="attr: { id: id() + '-image', src: image }" />
+					</li>
+					<!-- /ko -->
+				</ul>
+			</div>
+			<div id="login">
+				<form data-bind="submit: onSubmit">
+					<div class="row">
+						<div class="three columns">
+						</div>
+						<div class="nine mobile-four columns" style="margin-top: 20px; margin-bottom: 20px">
+							You will have to create an account on the Twit-arrr server before you can log in.
+						</div>
+					</div>
+					<div class="row">
+						<div class="three mobile-one columns">
+							<label class="right inline">Server:</label>
+						</div>
+						<div class="nine mobile-three columns">
+							<input type="url" placeholder="" data-bind="value: cruisemonkey" />
+						</div>
+					</div>
+					<div class="row">
+						<div class="three mobile-one columns">
+							<label class="right inline">Login:</label>
+						</div>
+						<div class="nine mobile-three columns">
+							<input type="text" placeholder="Twit-arrrr username..." data-bind="value: username" />
+						</div>
+					</div>
+					<div class="row">
+						<div class="three mobile-one columns">
+							<label class="right inline">Password:</label>
+						</div>
+						<div class="nine mobile-three columns">
+							<input type="password" placeholder="Twit-arrrr password..." data-bind="value: password" />
+						</div>
+					</div>
+					<div class="row">
+						<div class="twelve mobile-four columns">
+							<ul class="button-group even two-up">
+								<li><input type="reset" class="round secondary button" value="Reset" /></li>
+								<li><input type="submit" class="round button" value="Save" /></li>
+							</ul>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div id="edit-event">
+				<form data-bind="submit: onSubmit">
+					<div class="row">
+						<div class="three mobile-one columns">
+							<label class="right inline">Summary:</label>
+						</div>
+						<div class="nine mobile-three columns">
+							<input type="text" placeholder="" data-bind="value: summary" />
+						</div>
+					</div>
+					<div class="row">
+						<div class="three mobile-one columns">
+							<label class="right inline">Description:</label>
+						</div>
+						<div class="nine mobile-three columns">
+							<textarea data-bind="value: description"></textarea>
+						</div>
+					</div>
+					<div class="row">
+						<div class="three mobile-one columns">
+							<label class="right inline">Start:</label>
+						</div>
+						<div class="nine mobile-three columns">
+							<input type="text" id="start-datepicker" placeholder="" data-bind="value: startDate" />
+						</div>
+					</div>
+					<div class="row">
+						<div class="three mobile-one columns">
+							<label class="right inline">End:</label>
+						</div>
+						<div class="nine mobile-three columns">
+							<input type="text" id="end-datepicker" placeholder="" data-bind="value: endDate" />
+						</div>
+					</div>
+					<div class="row">
+						<div class="three mobile-one columns">
+							<label class="right inline">Location:</label>
+						</div>
+						<div class="nine mobile-three columns">
+							<input type="text" placeholder="" data-bind="value: location" />
+						</div>
+					</div>
+					<div class="row">
+						<div class="three mobile-one columns">
+							<label class="right inline">Public?</label>
+						</div>
+						<div class="nine mobile-three columns">
+							<input type="checkbox" placeholder="" data-bind="checked: isPublic" />
+						</div>
+					</div>
+					<div class="row">
+						<div class="twelve mobile-four columns">
+							<ul class="button-group even two-up">
+								<li><input type="button" class="round secondary button" value="Cancel" data-bind="touchOrClick: onCancel" /></li>
+								<li><input type="submit" class="round button" value="Save" /></li>
+							</ul>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
 </html>
