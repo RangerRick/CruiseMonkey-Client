@@ -202,6 +202,14 @@ input[type="search"] {
 	padding: 0px;
 }
 
+#content > div {
+	display:none;
+}
+#content > div.active {
+	display:block;
+	z-index:50;
+}
+
 #ui-datepicker-div {
 	background-color: white;
 }

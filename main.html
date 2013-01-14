@@ -49,7 +49,7 @@
 			var m_timeout = 10000;
 			var m_deviceReady = false,
 			initializeApp = function(event) {
-				console.log('Initializing Cruise Monkey. b4e8aab903501e1aa802db3692d645ddc1f72228 1358086456');
+				console.log('Initializing Cruise Monkey. 6d4e9ec863c92dbbe4101eaff71bf2627b857cf9 1358121518');
 				if (window.isPhoneGap) {
 					console.log('Running under PhoneGap.');
 				} else {
@@ -102,7 +102,7 @@
 			</ul>
 		</div>
 		<div id="content">
-			<div id="amenities" style="display:none">
+			<div id="amenities">
 				<form id="amenities-search" class="search-bar"><input type="search" results="5" autosave="amenities-search-results" placeholder="Search..." data-bind="value: filter, valueUpdate: ['afterkeydown', 'search']" /></form>
 				<ul class="amenities-list unstyled">
 					<!-- ko foreach: { data: orderedAmenities, as: 'deck' } -->
@@ -117,7 +117,7 @@
 					<!-- /ko -->
 				</ul>
 			</div>
-			<div id="decks" style="display:none">
+			<div id="decks">
 				<ul class="deck-list unstyled">
 					<!-- ko foreach: { data: decks, as: 'deck' } -->
 					<li data-bind="attr: { id: id() } " class="deck scrollable">
@@ -127,7 +127,7 @@
 					<!-- /ko -->
 				</ul>
 			</div>
-			<div id="login" style="display:none">
+			<div id="login">
 				<form data-bind="submit: onSubmit">
 					<div class="row">
 						<div class="three columns">
@@ -170,7 +170,7 @@
 					</div>
 				</form>
 			</div>
-			<div id="edit-event" style="display:none">
+			<div id="edit-event">
 				<form data-bind="submit: onSubmit">
 					<div class="row">
 						<div class="three mobile-one columns">
