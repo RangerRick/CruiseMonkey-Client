@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# version 6d4e9ec863c92dbbe4101eaff71bf2627b857cf9 1358121561
+# version 148ec6c0c9f22b015be404e894e5bd7a804c9f29 1358122492
 
 CACHE:
 3rdparty.js
@@ -39,6 +39,7 @@ CACHE:
 3rdparty/foundation/stylesheets/foundation.css
 3rdparty/foundation/stylesheets/foundation.min.css
 3rdparty/html5shim/html5.js
+3rdparty/modernizr.js
 cruisemonkey.js
 images/cruise-monkey-1024x768.png
 images/cruise-monkey-1136x640.png
