@@ -31,7 +31,7 @@
 			var m_timeout = 10000;
 			var m_deviceReady = false,
 			initializeApp = function(event) {
-				console.log('Initializing Cruise Monkey. 188f16130910f8cd1bc51f6a20106416d9d16855 1358196266');
+				console.log('Initializing Cruise Monkey. c1ab77d6826628cf3b1574edd509d0d8a68c70c4 1358221407');
 				if (window.isPhoneGap) {
 					console.log('Running under PhoneGap.');
 				} else {
@@ -88,14 +88,14 @@
 				<form id="official-search" class="search-bar"><input type="search" results="5" autosave="official-search-results" placeholder="Search..." data-bind="value: filter, valueUpdate: ['afterkeydown', 'search']" /></form>
 				<ul class="list event-list unstyled" data-bind="delegatedHandler: ['click', 'touchstart'], foreach: filteredEvents">
 					<li class="list-entry calendar-event official scrollable" data-bind="attr: { id: cleanId }, css: { mine: isMine() }">
-						<div class="summary" data-bind="text: summary"></div>
-						<div class="favorite" data-bind="visible: !isMine()"><input type="checkbox" data-bind="checked: favorite, delegatedClick: $parent.toggleFavorite, delegatedTouchstart: $parent.toggleFavorite, attr: { id: cleanId() + '-favorite' }" /><label data-bind="attr: { for: cleanId() + '-favorite' }">&nbsp;</div>
+						<div class="summary" data-bind="text: summary()"></div>
+						<div class="favorite" data-bind="visible: !isMine()"><input type="checkbox" data-bind="checked: isFavorite(), delegatedClick: $parent.toggleFavorite, delegatedTouchstart: $parent.toggleFavorite, attr: { id: cleanId() + '-favorite' }" /><label data-bind="attr: { for: cleanId() + '-favorite' }">&nbsp;</div>
 						<div class="trash" data-bind="visible: isMine()"><input type="button" data-bind="delegatedClick: $parent.deleteEvent, delegatedTouchstart: $parent.deleteEvent, attr: { id: cleanId() + '-trash' }" /><label data-bind="attr: { for: cleanId() + '-trash' }">&nbsp;</div>
 						<div class="public" data-bind="visible: isMine()"><input type="checkbox" data-bind="checked: isPublic, delegatedClick: $parent.togglePublic, delegatedTouchstart: $parent.togglePublic, attr: { id: cleanId() + '-public' }" /><label data-bind="attr: { for: cleanId() + '-public' }">&nbsp;</div>
 						<div class="createdBy" data-bind="visible: !isMine() &amp;&amp; createdBy() != 'google'">Created By: <span data-bind="text: createdBy"></span></div>
 						<div class="time">Time: <span data-bind="text: timespan()"></span></div>
-						<div class="location">Location: <span data-bind="text: location"></span></div>
-						<div class="description" data-bind="text: description"></div>
+						<div class="location">Location: <span data-bind="text: location()"></span></div>
+						<div class="description" data-bind="text: description()"></div>
 					</li>
 				</ul>
 			</div>
@@ -103,14 +103,14 @@
 				<form id="public-search" class="search-bar"><input type="search" results="5" autosave="public-search-results" placeholder="Search..." data-bind="value: filter, valueUpdate: ['afterkeydown', 'search']" /></form>
 				<ul class="list event-list unstyled" data-bind="delegatedHandler: ['click', 'touchstart'], foreach: filteredEvents">
 					<li class="list-entry calendar-event public scrollable" data-bind="attr: { id: cleanId }, css: { mine: isMine() }">
-						<div class="summary" data-bind="text: summary"></div>
-						<div class="favorite" data-bind="visible: !isMine()"><input type="checkbox" data-bind="checked: favorite, delegatedClick: $parent.toggleFavorite, delegatedTouchstart: $parent.toggleFavorite, attr: { id: cleanId() + '-favorite' }" /><label data-bind="attr: { for: cleanId() + '-favorite' }">&nbsp;</div>
+						<div class="summary" data-bind="text: summary()"></div>
+						<div class="favorite" data-bind="visible: !isMine()"><input type="checkbox" data-bind="checked: isFavorite(), delegatedClick: $parent.toggleFavorite, delegatedTouchstart: $parent.toggleFavorite, attr: { id: cleanId() + '-favorite' }" /><label data-bind="attr: { for: cleanId() + '-favorite' }">&nbsp;</div>
 						<div class="trash" data-bind="visible: isMine()"><input type="button" data-bind="delegatedClick: $parent.deleteEvent, delegatedTouchstart: $parent.deleteEvent, attr: { id: cleanId() + '-trash' }" /><label data-bind="attr: { for: cleanId() + '-trash' }">&nbsp;</div>
 						<div class="public" data-bind="visible: isMine()"><input type="checkbox" data-bind="checked: isPublic, delegatedClick: $parent.togglePublic, delegatedTouchstart: $parent.togglePublic, attr: { id: cleanId() + '-public' }" /><label data-bind="attr: { for: cleanId() + '-public' }">&nbsp;</div>
 						<div class="createdBy" data-bind="visible: !isMine() &amp;&amp; createdBy() != 'google'">Created By: <span data-bind="text: createdBy"></span></div>
 						<div class="time">Time: <span data-bind="text: timespan()"></span></div>
-						<div class="location">Location: <span data-bind="text: location"></span></div>
-						<div class="description" data-bind="text: description"></div>
+						<div class="location">Location: <span data-bind="text: location()"></span></div>
+						<div class="description" data-bind="text: description()"></div>
 					</li>
 				</ul>
 			</div>
@@ -118,14 +118,14 @@
 				<form id="my-search" class="search-bar"><input type="search" results="5" autosave="my-search-results" placeholder="Search..." data-bind="value: filter, valueUpdate: ['afterkeydown', 'search']" /></form>
 				<ul class="list event-list unstyled" data-bind="delegatedHandler: ['click', 'touchstart'], foreach: filteredEvents">
 					<li class="list-entry calendar-event my scrollable" data-bind="attr: { id: cleanId }, css: { mine: isMine() }">
-						<div class="summary" data-bind="text: summary"></div>
-						<div class="favorite" data-bind="visible: !isMine()"><input type="checkbox" data-bind="checked: favorite, delegatedClick: $parent.toggleFavorite, delegatedTouchstart: $parent.toggleFavorite, attr: { id: cleanId() + '-favorite' }" /><label data-bind="attr: { for: cleanId() + '-favorite' }">&nbsp;</div>
+						<div class="summary" data-bind="text: summary()"></div>
+						<div class="favorite" data-bind="visible: !isMine()"><input type="checkbox" data-bind="checked: isFavorite(), delegatedClick: $parent.toggleFavorite, delegatedTouchstart: $parent.toggleFavorite, attr: { id: cleanId() + '-favorite' }" /><label data-bind="attr: { for: cleanId() + '-favorite' }">&nbsp;</div>
 						<div class="trash" data-bind="visible: isMine()"><input type="button" data-bind="delegatedClick: $parent.deleteEvent, delegatedTouchstart: $parent.deleteEvent, attr: { id: cleanId() + '-trash' }" /><label data-bind="attr: { for: cleanId() + '-trash' }">&nbsp;</div>
 						<div class="public" data-bind="visible: isMine()"><input type="checkbox" data-bind="checked: isPublic, delegatedClick: $parent.togglePublic, delegatedTouchstart: $parent.togglePublic, attr: { id: cleanId() + '-public' }" /><label data-bind="attr: { for: cleanId() + '-public' }">&nbsp;</div>
 						<div class="createdBy" data-bind="visible: !isMine() &amp;&amp; createdBy() != 'google'">Created By: <span data-bind="text: createdBy"></span></div>
 						<div class="time">Time: <span data-bind="text: timespan()"></span></div>
-						<div class="location">Location: <span data-bind="text: location"></span></div>
-						<div class="description" data-bind="text: description"></div>
+						<div class="location">Location: <span data-bind="text: location()"></span></div>
+						<div class="description" data-bind="text: description()"></div>
 					</li>
 				</ul>
 			</div>
@@ -136,9 +136,9 @@
 					<li class="divider theme-header"><span data-bind="text: 'Deck ' + number"></span></li>
 					<!-- ko foreach: { data: amenities, as: 'amenity' } -->
 					<li class="list-entry amenity scrollable" data-bind="attr: { id: id }">
-						<div class="deck"><span data-bind="text: deck"></span></div>
-						<div class="name"><span data-bind="text: name"></span></div>
-						<div class="description"><span data-bind="text: description()"></span></div>
+						<div class="deck" data-bind="text: deck"></div>
+						<div class="name" data-bind="text: name"></div>
+						<div class="description" data-bind="text: description()"></div>
 					</li>
 					<!-- /ko -->
 					<!-- /ko -->
@@ -190,7 +190,7 @@
 					<div class="row">
 						<div class="twelve mobile-four columns">
 							<ul class="button-group even two-up">
-								<li><input type="reset" class="round secondary button" value="Reset" /></li>
+								<li><input type="reset" class="round button secondary" value="Reset" /></li>
 								<li><input type="submit" class="round button" value="Save" /></li>
 							</ul>
 						</div>
