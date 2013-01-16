@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# version b75e34a1889fea2beef0e35afa05e53c0c595e46 1358225352
+# version 2f76b6809c52246f5b31bb37a0dc1c6c71b06983 1358298130
 
 CACHE:
 3rdparty.js
@@ -136,6 +136,7 @@ images/trash.png
 images/trash@2.png
 index.html
 styles.css
+styles.min.css
 
 NETWORK:
 *
