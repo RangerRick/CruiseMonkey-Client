@@ -1,0 +1,41 @@
+.cellTableFooter {
+	border-top: 2px solid #6f7277;
+	padding: 0;
+	text-align: left;
+	color: #4b4a4a;
+	text-shadow: #ddf 1px 1px 0;
+	overflow: hidden;
+}
+
+.cellTableHeader {
+	border-bottom: 2px solid #6f7277;
+	padding: 0;
+	text-align: left;
+	color: #4b4a4a;
+	text-shadow: #ddf 1px 1px 0;
+	overflow: hidden;
+}
+
+.cellTableCell {
+	border-top: 1px solid black;
+	padding: 5px;
+	overflow: hidden;
+}
+
+.cellTableEvenRow {
+  background: #ffffff;
+}
+
+.cellTableEvenRowCell {
+  border: selectionBorderWidth solid #ffffff;
+	border-top: 1px solid black;
+}
+
+.cellTableOddRow {
+  background: #ddf2ff;
+}
+
+.cellTableOddRowCell {
+  border: selectionBorderWidth solid #ddf2ff;
+	border-top: 1px solid black;
+}
