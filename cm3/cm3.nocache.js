@@ -243,6 +243,48 @@ function cm3(){
   }
   ;
   values['phonegap.env'] = {no:0, yes:1};
+  providers['user.agent'] = function(){
+    var ua = navigator.userAgent.toLowerCase();
+    var makeVersion = function(result){
+      return parseInt(result[1]) * 1000 + parseInt(result[2]);
+    }
+    ;
+    if (function(){
+      return ua.indexOf('opera') != -1;
+    }
+    ())
+      return 'opera';
+    if (function(){
+      return ua.indexOf('webkit') != -1;
+    }
+    ())
+      return 'safari';
+    if (function(){
+      return ua.indexOf('msie') != -1 && $doc_0.documentMode >= 9;
+    }
+    ())
+      return 'ie9';
+    if (function(){
+      return ua.indexOf('msie') != -1 && $doc_0.documentMode >= 8;
+    }
+    ())
+      return 'ie8';
+    if (function(){
+      var result = /msie ([0-9]+)\.([0-9]+)/.exec(ua);
+      if (result && result.length == 3)
+        return makeVersion(result) >= 6000;
+    }
+    ())
+      return 'ie6';
+    if (function(){
+      return ua.indexOf('gecko') != -1;
+    }
+    ())
+      return 'gecko1_8';
+    return 'unknown';
+  }
+  ;
+  values['user.agent'] = {gecko1_8:0, ie6:1, ie8:2, ie9:3, opera:4, safari:5};
   cm3.onScriptLoad = function(){
     if (frameInjected) {
       loadDone = true;
@@ -271,9 +313,14 @@ function cm3(){
   $stats && $stats({moduleName:'cm3', sessionId:$sessionId_0, subSystem:'startup', evtGroup:'bootstrap', millis:(new Date).getTime(), type:'selectingPermutation'});
   if (!isHostedMode()) {
     try {
-      unflattenKeylistIntoAnswers(['yes'], '039CC3D00214E11770AFC5D600334653');
-      unflattenKeylistIntoAnswers(['no'], '5836F3A4125318D1B70124A6CC0D5BC3');
-      strongName = answers[computePropValue('phonegap.env')];
+      unflattenKeylistIntoAnswers(['no', 'ie8'], '214646221340660632F01CCB54BB7B1E');
+      unflattenKeylistIntoAnswers(['no', 'ie9'], '5AA43216F3D7C0411B79A339BCD4ACC3');
+      unflattenKeylistIntoAnswers(['no', 'opera'], '8D225D0C0EB6E2468E16D66CD286184D');
+      unflattenKeylistIntoAnswers(['no', 'safari'], 'C88A03629A7D58B43844E0C320AE5217');
+      unflattenKeylistIntoAnswers(['yes', 'safari'], 'CF348389D00B2E777080289613934ED6');
+      unflattenKeylistIntoAnswers(['no', 'ie6'], 'D4DBB12116850EA41262558075412BB2');
+      unflattenKeylistIntoAnswers(['no', 'gecko1_8'], 'FFFFC8D65817EC0A47BBA4D754EECAFE');
+      strongName = answers[computePropValue('phonegap.env')][computePropValue('user.agent')];
       var idx = strongName.indexOf(':');
       if (idx != -1) {
         softPermutationId = Number(strongName.substring(idx + 1));
