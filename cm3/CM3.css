@@ -6,6 +6,8 @@
  * Royal Gold: #febd11
  */
 
+/** tab bar **/
+
 .gwt-TabLayoutPanel .gwt-TabLayoutPanelContent {
   padding: 0;
 }
@@ -18,17 +20,23 @@
 }
 
 .gwt-TabLayoutPanel .gwt-TabLayoutPanelTab {
-	display: table-cell;
 	border-radius: 0;
 	background: transparent;
+	height: 36px;
+	margin: 0; !important;
+	padding: 0; !important;
+	font-weight: bold;
 }
 
 .gwt-TabLayoutPanel .gwt-TabLayoutPanelTab-selected {
 	color: white;
 	background: transparent;
+	font-weight: bold;
 }
 
-/** tab bar **/
+.gwt-TabLayoutPanel .gwt-TabLayoutPanelTab .gwt-TabLayoutPanelTabInner {
+	padding: 2px; !important;
+}
 
 div.tabLabel {
 	color: #febd11;
@@ -52,6 +60,12 @@ div.icon {
 	height: 32px;
 }
 
+@media only screen and (max-width: 940px) {
+	div.tabLabel {
+		display: none;
+	}
+}
+
 div.icon-official-events { background-image: url(images/icons/inactive/83-calendar.png);    background-size: 23px 25px; }
 div.icon-my-events       { background-image: url(images/icons/inactive/111-user.png);       background-size: 24px 21px; }
 div.icon-public-events   { background-image: url(images/icons/inactive/112-group.png);      background-size: 32px 21px; }
@@ -68,6 +82,30 @@ div.icon-add             { background-image: url(images/icons/inactive/31-circle
 .gwt-TabLayoutPanelTab-selected div.icon-login           { background-image: url(images/icons/active/55-network.png);       background-size: 24px 24px; }
 .gwt-TabLayoutPanelTab-selected div.icon-add             { background-image: url(images/icons/active/31-circle-plus.png);   background-size: 28px 28px; }
 
+@media 
+(-webkit-min-device-pixel-ratio: 2), 
+(min-resolution: 192dpi) { 
+	div.icon-official-events           { background-image: url(images/icons/inactive/83-calendar@2x.png);    background-size: 23px 25px; }
+	div.icon-my-events                 { background-image: url(images/icons/inactive/111-user@2x.png);       background-size: 24px 21px; }
+	div.icon-public-events             { background-image: url(images/icons/inactive/112-group@2x.png);      background-size: 32px 21px; }
+	div.icon-amenities                 { background-image: url(images/icons/inactive/90-lifebuoy@2x.png);    background-size: 24px 24px; }
+	div.icon-decks                     { background-image: url(images/icons/inactive/103-map@2x.png);        background-size: 26px 21px; }
+	div.icon-login                     { background-image: url(images/icons/inactive/55-network@2x.png);     background-size: 24px 24px; }
+	div.icon-add                       { background-image: url(images/icons/inactive/31-circle-plus@2x.png); background-size: 28px 28px; }
+
+	.gwt-TabLayoutPanelTab-selected div.icon-official-events  { background-image: url(images/icons/active/83-calendar@2x.png);      background-size: 23px 25px; }
+	.gwt-TabLayoutPanelTab-selected div.icon-my-events        { background-image: url(images/icons/active/111-user@2x.png);         background-size: 24px 21px; }
+	.gwt-TabLayoutPanelTab-selected div.icon-public-events    { background-image: url(images/icons/active/112-group@2x.png);        background-size: 32px 21px; }
+	.gwt-TabLayoutPanelTab-selected div.icon-amenities        { background-image: url(images/icons/active/90-lifebuoy@2x.png);      background-size: 24px 24px; }
+	.gwt-TabLayoutPanelTab-selected div.icon-decks            { background-image: url(images/icons/active/103-map@2x.png);          background-size: 26px 21px; }
+	.gwt-TabLayoutPanelTab-selected div.icon-login            { background-image: url(images/icons/active/55-network@2x.png);       background-size: 24px 24px; }
+	.gwt-TabLayoutPanelTab-selected div.icon-add              { background-image: url(images/icons/active/31-circle-plus@2x.png);   background-size: 28px 28px; }
+}
+
+.gwt-TabLayoutPanelContent table {
+	border-bottom: 1px solid black !important;
+}
+
 .summary {
 	font-size: larger;
 	font-weight: bolder;
@@ -76,6 +114,11 @@ div.icon-add             { background-image: url(images/icons/inactive/31-circle
 }
 
 .createdBy, .time, .location {
+	font-weight: bolder;
+}
+
+.name {
+	font-size: larger;
 	font-weight: bolder;
 }
 
@@ -111,12 +154,47 @@ label {
 	display: block;
 }
 
-.event-list {
+.event-list, .amenity-list, .deck-list {
 	width: 100%;
 	height: 100%;
 }
 
 .list-entry {
+	padding: 5px;
+}
+
+/*
+table.deck-list, table.deck-list td.list-entry {
+	border-collapse: collapse; !important;
+	border-spacing: 0; !important;
+	border: 0; !important;
+}
+*/
+
+table {
+	border-collapse: collapse; !important;
+	border-spacing: 0; !important;
+	border: 0; !important;
+}
+
+.deck-list .list-entry {
+	padding: 0;
+}
+
+.deck-list img {
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px;
+}
+
+.theme-header {
+	color: #febd11;
+	background-color: #061556;
+}
+
+.divider {
+	font-size: larger;
+	font-weight: bolder;
 	padding: 5px;
 }
 
@@ -170,4 +248,29 @@ label {
 	background-size: 24px 16px;
 	width: 32px;
 	height: 32px;
+}
+
+@media 
+(-webkit-min-device-pixel-ratio: 2), 
+(min-resolution: 192dpi) { 
+	.list-entry .favorite input[type=checkbox] + label {
+		background-image:url(images/star-unchecked@2x.png);
+		background-size: 26px 26px;
+	}
+	.list-entry .favorite input[type=checkbox]:checked + label {
+		background-image:url(images/star-checked@2x.png);
+		background-size: 26px 26px;
+	}
+	.list-entry .trash input[type=button] + label {
+		background-image:url(images/trash@2x.png);
+		background-size: 16px 21px;
+	}
+	.list-entry .public input[type=checkbox] + label {
+		background-image:url(images/eye-unchecked@2x.png);
+		background-size: 24px 16px;
+	}
+	.list-entry .public input[type=checkbox]:checked + label {
+		background-image:url(images/eye-checked@2x.png);
+		background-size: 24px 16px;
+	}
 }
