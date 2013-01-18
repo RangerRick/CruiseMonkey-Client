@@ -271,8 +271,8 @@ function cm3(){
   $stats && $stats({moduleName:'cm3', sessionId:$sessionId_0, subSystem:'startup', evtGroup:'bootstrap', millis:(new Date).getTime(), type:'selectingPermutation'});
   if (!isHostedMode()) {
     try {
-      unflattenKeylistIntoAnswers(['no'], '5664D9105D62576E230D4F31DE0638DE');
-      unflattenKeylistIntoAnswers(['yes'], 'A2527F7AFF2189F940DBD94E7F6CAFD9');
+      unflattenKeylistIntoAnswers(['no'], '1225A62534511F9DAA3C5D754DEBAD8A');
+      unflattenKeylistIntoAnswers(['yes'], 'F3C9AC3475F3D807ECF1E4CEC985F7F2');
       strongName = answers[computePropValue('phonegap.env')];
       var idx = strongName.indexOf(':');
       if (idx != -1) {
