@@ -26,11 +26,10 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
+	/* line-height: 1; */
 	font-family: "Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
 	font-weight: normal;
 	font-style: normal;
-	line-height: 1;
 }
 ol, ul {
 	list-style: none;
@@ -213,14 +212,20 @@ label {
 	border-bottom: 1px solid black;
 }
 
+.deck-list .deck {
+	background: white !important;
+}
+
 .deck-list .list-entry {
 	padding: 0;
 }
 
 .deck-list img {
+	display: block;
 	margin-left: auto;
 	margin-right: auto;
 	padding: 10px;
+	max-width: 100%;
 }
 
 .theme-header {

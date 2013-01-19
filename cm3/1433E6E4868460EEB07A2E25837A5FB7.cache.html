@@ -4,7 +4,7 @@ var $gwt_version = "2.5.0";
 var $wnd = parent;
 var $doc = $wnd.document;
 var $moduleName, $moduleBase;
-var $strongName = '1393DF3147FF229C4AB15BE363AA6277';
+var $strongName = '1433E6E4868460EEB07A2E25837A5FB7';
 var $stats = $wnd.__gwtStatsEvent ? function(a) {return $wnd.__gwtStatsEvent(a);} : null,
 $sessionId = $wnd.__gwtStatsSessionId ? $wnd.__gwtStatsSessionId : null;
 $stats && $stats({moduleName:'cm3',sessionId:$sessionId,subSystem:'startup',evtGroup:'moduleStartup',millis:(new Date()).getTime(),type:'moduleEvalStart'});
@@ -1331,7 +1331,7 @@ function $doAdd(this$static, type, handler) {
   if(!type) {
     throw new NullPointerException_1("Cannot add a handler with a null type");
   }
-  if(!handler) {
+  if(null == handler) {
     throw new NullPointerException_1("Cannot add a null handler");
   }
   0 < this$static.firingDepth ? $defer(this$static, new SimpleEventBus$2_0(this$static, type, null, handler)) : $ensureHandlerList(this$static, type, null).add(handler);
@@ -7671,8 +7671,6 @@ _.dispatch = function(handler) {
   $insert_4(amenityData, connection, amenityData.children.size);
   amenityData = m_phoneGap;
   !amenityData.splashScreen && (amenityData.splashScreen = new SplashScreenBrowserImpl_0);
-  amenityData = m_storage_0;
-  (amenityData = !amenityData.m_storageMap || !$containsKey(amenityData.m_storageMap, "ui.tab_selection") ? null : valueOf(__parseAndValidateInt($get_0(amenityData.m_storageMap, "ui.tab_selection")))) && $selectTab(connection, amenityData.value);
   amenityData = new ArrayList_0;
   $add_8(amenityData, new Venue_0(valueOf(2), "Arcadia Theatre (2nd Deck)", "Our theatre - five stories from the orchestra pit to domed ceiling - features contemporary musical stage productions."));
   $add_8(amenityData, new Venue_0(valueOf(2), "Conference Center", "Our comfortable conference center features state-of-the-art presentation equipment and a variety of meeting rooms."));
