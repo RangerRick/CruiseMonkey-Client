@@ -4,7 +4,7 @@ var $gwt_version = "2.5.0";
 var $wnd = parent;
 var $doc = $wnd.document;
 var $moduleName, $moduleBase;
-var $strongName = 'CF348389D00B2E777080289613934ED6';
+var $strongName = '9ED8A9741CFA55539D4638BE8A372614';
 var $stats = $wnd.__gwtStatsEvent ? function(a) {return $wnd.__gwtStatsEvent(a);} : null,
 $sessionId = $wnd.__gwtStatsSessionId ? $wnd.__gwtStatsSessionId : null;
 $stats && $stats({moduleName:'cm3',sessionId:$sessionId,subSystem:'startup',evtGroup:'moduleStartup',millis:(new Date()).getTime(),type:'moduleEvalStart'});
@@ -12,8 +12,8 @@ $stats && $stats({moduleName:'cm3',sessionId:$sessionId,subSystem:'startup',evtG
 <body>
 <script><!--
 var _, N1_longLit = {l:4194303, m:4194303, h:1048575}, P0_longLit = {l:0, m:0, h:0}, seedTable = {}, Q$Object = 0, Q$String = 1, Q$HasCell = 5, Q$JavaScriptException = 6, Q$TableCellBuilder = 7, Q$Style$Display = 8, Q$Style$OutlineStyle = 10, Q$Style$Overflow = 11, Q$Style$Position = 12, Q$Style$TextAlign = 13, Q$Style$Unit = 14, Q$DomEvent$Type = 16, Q$EventHandler = 26, Q$HandlerRegistration = 27, Q$DateTimeFormat = 30, Q$HasDirection$Direction = 31, Q$DateTimeFormat$PatternPart = 32, Q$LongLibBase$LongEmul = 
-37, Q$Layout$Alignment = 38, Q$Layout$Layer = 39, Q$Column = 50, Q$ColumnSortList$ColumnSortInfo = 52, Q$HasKeyboardPagingPolicy$KeyboardPagingPolicy = 53, Q$HasKeyboardSelectionPolicy$KeyboardSelectionPolicy = 54, Q$RowHoverEvent$HoveringScope = 55, Q$DocumentModeAsserter$Severity = 56, Q$EventListener = 58, Q$RequestCallbackAdapter$ResponseReader = 61, Q$HasWidgets = 63, Q$IsRenderable = 64, Q$RequiresResize = 66, Q$RootPanel = 67, Q$TabLayoutPanel$Tab = 68, Q$Widget = 70, Q$HasData = 73, Q$Range = 
-76, Q$SimpleEventBus$Command = 78, Q$UmbrellaException = 79, Q$FilteredListDataProvider = 84, Q$HasId = 86, Q$Serializable = 88, Q$Boolean = 89, Q$Enum = 93, Q$Error = 94, Q$IndexOutOfBoundsException = 95, Q$Integer = 96, Q$NumberFormatException = 98, Q$RuntimeException = 99, Q$StackTraceElement = 100, Q$Throwable = 101, Q$UnsupportedOperationException = 102, Q$List = 104, Q$Map = 105, Q$Map$Entry = 106, Q$Handler = 109, Q$Handler_$1 = 110, Q$Logger = 111;
+37, Q$Layout$Alignment = 38, Q$Layout$Layer = 39, Q$Column = 50, Q$ColumnSortList$ColumnSortInfo = 52, Q$HasKeyboardPagingPolicy$KeyboardPagingPolicy = 53, Q$HasKeyboardSelectionPolicy$KeyboardSelectionPolicy = 54, Q$RowHoverEvent$HoveringScope = 55, Q$DocumentModeAsserter$Severity = 56, Q$EventListener = 58, Q$RequestCallbackAdapter$ResponseReader = 61, Q$HasWidgets = 63, Q$IsRenderable = 64, Q$RequiresResize = 66, Q$RootPanel = 67, Q$ScrollPanel = 68, Q$TabLayoutPanel$Tab = 69, Q$Widget = 71, Q$HasData = 
+74, Q$Range = 77, Q$SimpleEventBus$Command = 79, Q$UmbrellaException = 80, Q$FilteredListDataProvider = 85, Q$HasId = 87, Q$Serializable = 89, Q$Boolean = 90, Q$Enum = 94, Q$Error = 95, Q$IndexOutOfBoundsException = 96, Q$Integer = 97, Q$NumberFormatException = 99, Q$RuntimeException = 100, Q$StackTraceElement = 101, Q$Throwable = 102, Q$UnsupportedOperationException = 103, Q$List = 105, Q$Map = 106, Q$Map$Entry = 107, Q$Handler = 110, Q$Handler_$1 = 111, Q$Logger = 112;
 function defineSeed(id, superSeed, castableTypeMap) {
   var seed = seedTable[id];
   seed && !seed.___clazz$ ? _ = seed.prototype : (!seed && (seed = seedTable[id] = function() {
@@ -131,7 +131,7 @@ _.isNativelySupported = function() {
 };
 _.requestAnimationFrame = function(callback) {
   callback = new AnimationSchedulerImplTimer$AnimationHandleImpl_0(this, callback);
-  $add_7(this.animationRequests, callback);
+  $add_8(this.animationRequests, callback);
   1 == this.animationRequests.size && $schedule(this.timer, 16);
   return callback
 };
@@ -154,7 +154,7 @@ function $schedule(this$static, delayMillis) {
   $remove_14(timers, this$static);
   this$static.isRepeating = !1;
   this$static.timerId = createTimeout(this$static, delayMillis);
-  $add_7(timers, this$static)
+  $add_8(timers, this$static)
 }
 function createInterval(timer, period) {
   return $wnd.setInterval($entry(function() {
@@ -248,7 +248,7 @@ function AbstractCell_0(consumedEvents) {
   if(null != consumedEvents && 0 < consumedEvents.length) {
     events = new HashSet_0;
     for(event$index = 0, event$max = consumedEvents.length;event$index < event$max;++event$index) {
-      event_0 = consumedEvents[event$index], $add_8(events, event_0)
+      event_0 = consumedEvents[event$index], $add_9(events, event_0)
     }
   }
   events && (this.consumedEvents = ($clinit_Collections(), new Collections$UnmodifiableSet_0(events)))
@@ -919,7 +919,7 @@ function Enum_0(name_0, ordinal) {
   this.name_0 = name_0;
   this.ordinal = ordinal
 }
-defineSeed(79, 1, makeCastMap([Q$Serializable, 91, Q$Enum]));
+defineSeed(79, 1, makeCastMap([Q$Serializable, 92, Q$Enum]));
 _.compareTo$ = function(other) {
   return this.ordinal - dynamicCast(other, Q$Enum).ordinal
 };
@@ -942,24 +942,24 @@ function $clinit_Style$Display() {
   INLINE_BLOCK = new Style$Display$4_0("INLINE_BLOCK", 3);
   $VALUES = initValues(_3Lcom_google_gwt_dom_client_Style$Display_2_classLit, makeCastMap([Q$Serializable]), Q$Style$Display, [NONE, BLOCK, INLINE, INLINE_BLOCK])
 }
-defineSeed(78, 79, makeCastMap([Q$Style$Display, 9, Q$Serializable, 91, Q$Enum]));
+defineSeed(78, 79, makeCastMap([Q$Style$Display, 9, Q$Serializable, 92, Q$Enum]));
 var $VALUES, BLOCK, INLINE, INLINE_BLOCK, NONE;
 function Style$Display$1_0(enum$name, enum$ordinal) {
   Enum_0.call(this, enum$name, enum$ordinal)
 }
-defineSeed(80, 78, makeCastMap([Q$Style$Display, 9, Q$Serializable, 91, Q$Enum]), Style$Display$1_0);
+defineSeed(80, 78, makeCastMap([Q$Style$Display, 9, Q$Serializable, 92, Q$Enum]), Style$Display$1_0);
 function Style$Display$2_0(enum$name, enum$ordinal) {
   Enum_0.call(this, enum$name, enum$ordinal)
 }
-defineSeed(81, 78, makeCastMap([Q$Style$Display, 9, Q$Serializable, 91, Q$Enum]), Style$Display$2_0);
+defineSeed(81, 78, makeCastMap([Q$Style$Display, 9, Q$Serializable, 92, Q$Enum]), Style$Display$2_0);
 function Style$Display$3_0(enum$name, enum$ordinal) {
   Enum_0.call(this, enum$name, enum$ordinal)
 }
-defineSeed(82, 78, makeCastMap([Q$Style$Display, 9, Q$Serializable, 91, Q$Enum]), Style$Display$3_0);
+defineSeed(82, 78, makeCastMap([Q$Style$Display, 9, Q$Serializable, 92, Q$Enum]), Style$Display$3_0);
 function Style$Display$4_0(enum$name, enum$ordinal) {
   Enum_0.call(this, enum$name, enum$ordinal)
 }
-defineSeed(83, 78, makeCastMap([Q$Style$Display, 9, Q$Serializable, 91, Q$Enum]), Style$Display$4_0);
+defineSeed(83, 78, makeCastMap([Q$Style$Display, 9, Q$Serializable, 92, Q$Enum]), Style$Display$4_0);
 function $clinit_Style$OutlineStyle() {
   $clinit_Style$OutlineStyle = nullMethod;
   NONE_0 = new Style$OutlineStyle$1_0("NONE", 0);
@@ -973,44 +973,44 @@ function $clinit_Style$OutlineStyle() {
   SOLID = new Style$OutlineStyle$9_0("SOLID", 8);
   $VALUES_0 = initValues(_3Lcom_google_gwt_dom_client_Style$OutlineStyle_2_classLit, makeCastMap([Q$Serializable]), Q$Style$OutlineStyle, [NONE_0, DASHED, DOTTED, DOUBLE, GROOVE, INSET, OUTSET, RIDGE, SOLID])
 }
-defineSeed(84, 79, makeCastMap([9, Q$Style$OutlineStyle, Q$Serializable, 91, Q$Enum]));
+defineSeed(84, 79, makeCastMap([9, Q$Style$OutlineStyle, Q$Serializable, 92, Q$Enum]));
 var $VALUES_0, DASHED, DOTTED, DOUBLE, GROOVE, INSET, NONE_0, OUTSET, RIDGE, SOLID;
 function Style$OutlineStyle$1_0(enum$name, enum$ordinal) {
   Enum_0.call(this, enum$name, enum$ordinal)
 }
-defineSeed(85, 84, makeCastMap([9, Q$Style$OutlineStyle, Q$Serializable, 91, Q$Enum]), Style$OutlineStyle$1_0);
+defineSeed(85, 84, makeCastMap([9, Q$Style$OutlineStyle, Q$Serializable, 92, Q$Enum]), Style$OutlineStyle$1_0);
 function Style$OutlineStyle$2_0(enum$name, enum$ordinal) {
   Enum_0.call(this, enum$name, enum$ordinal)
 }
-defineSeed(86, 84, makeCastMap([9, Q$Style$OutlineStyle, Q$Serializable, 91, Q$Enum]), Style$OutlineStyle$2_0);
+defineSeed(86, 84, makeCastMap([9, Q$Style$OutlineStyle, Q$Serializable, 92, Q$Enum]), Style$OutlineStyle$2_0);
 function Style$OutlineStyle$3_0(enum$name, enum$ordinal) {
   Enum_0.call(this, enum$name, enum$ordinal)
 }
-defineSeed(87, 84, makeCastMap([9, Q$Style$OutlineStyle, Q$Serializable, 91, Q$Enum]), Style$OutlineStyle$3_0);
+defineSeed(87, 84, makeCastMap([9, Q$Style$OutlineStyle, Q$Serializable, 92, Q$Enum]), Style$OutlineStyle$3_0);
 function Style$OutlineStyle$4_0(enum$name, enum$ordinal) {
   Enum_0.call(this, enum$name, enum$ordinal)
 }
-defineSeed(88, 84, makeCastMap([9, Q$Style$OutlineStyle, Q$Serializable, 91, Q$Enum]), Style$OutlineStyle$4_0);
+defineSeed(88, 84, makeCastMap([9, Q$Style$OutlineStyle, Q$Serializable, 92, Q$Enum]), Style$OutlineStyle$4_0);
 function Style$OutlineStyle$5_0(enum$name, enum$ordinal) {
   Enum_0.call(this, enum$name, enum$ordinal)
 }
-defineSeed(89, 84, makeCastMap([9, Q$Style$OutlineStyle, Q$Serializable, 91, Q$Enum]), Style$OutlineStyle$5_0);
+defineSeed(89, 84, makeCastMap([9, Q$Style$OutlineStyle, Q$Serializable, 92, Q$Enum]), Style$OutlineStyle$5_0);
 function Style$OutlineStyle$6_0(enum$name, enum$ordinal) {
   Enum_0.call(this, enum$name, enum$ordinal)
 }
-defineSeed(90, 84, makeCastMap([9, Q$Style$OutlineStyle, Q$Serializable, 91, Q$Enum]), Style$OutlineStyle$6_0);
+defineSeed(90, 84, makeCastMap([9, Q$Style$OutlineStyle, Q$Serializable, 92, Q$Enum]), Style$OutlineStyle$6_0);
 function Style$OutlineStyle$7_0(enum$name, enum$ordinal) {
   Enum_0.call(this, enum$name, enum$ordinal)
 }
-defineSeed(91, 84, makeCastMap([9, Q$Style$OutlineStyle, Q$Serializable, 91, Q$Enum]), Style$OutlineStyle$7_0);
+defineSeed(91, 84, makeCastMap([9, Q$Style$OutlineStyle, Q$Serializable, 92, Q$Enum]), Style$OutlineStyle$7_0);
 function Style$OutlineStyle$8_0(enum$name, enum$ordinal) {
   Enum_0.call(this, enum$name, enum$ordinal)
 }
-defineSeed(92, 84, makeCastMap([9, Q$Style$OutlineStyle, Q$Serializable, 91, Q$Enum]), Style$OutlineStyle$8_0);
+defineSeed(92, 84, makeCastMap([9, Q$Style$OutlineStyle, Q$Serializable, 92, Q$Enum]), Style$OutlineStyle$8_0);
 function Style$OutlineStyle$9_0(enum$name, enum$ordinal) {
   Enum_0.call(this, enum$name, enum$ordinal)
 }
-defineSeed(93, 84, makeCastMap([9, Q$Style$OutlineStyle, Q$Serializable, 91, Q$Enum]), Style$OutlineStyle$9_0);
+defineSeed(93, 84, makeCastMap([9, Q$Style$OutlineStyle, Q$Serializable, 92, Q$Enum]), Style$OutlineStyle$9_0);
 function $clinit_Style$Overflow() {
   $clinit_Style$Overflow = nullMethod;
   VISIBLE = new Style$Overflow$1_0("VISIBLE", 0);
@@ -1019,24 +1019,24 @@ function $clinit_Style$Overflow() {
   AUTO = new Style$Overflow$4_0("AUTO", 3);
   $VALUES_1 = initValues(_3Lcom_google_gwt_dom_client_Style$Overflow_2_classLit, makeCastMap([Q$Serializable]), Q$Style$Overflow, [VISIBLE, HIDDEN_0, SCROLL, AUTO])
 }
-defineSeed(94, 79, makeCastMap([9, Q$Style$Overflow, Q$Serializable, 91, Q$Enum]));
+defineSeed(94, 79, makeCastMap([9, Q$Style$Overflow, Q$Serializable, 92, Q$Enum]));
 var $VALUES_1, AUTO, HIDDEN_0, SCROLL, VISIBLE;
 function Style$Overflow$1_0(enum$name, enum$ordinal) {
   Enum_0.call(this, enum$name, enum$ordinal)
 }
-defineSeed(95, 94, makeCastMap([9, Q$Style$Overflow, Q$Serializable, 91, Q$Enum]), Style$Overflow$1_0);
+defineSeed(95, 94, makeCastMap([9, Q$Style$Overflow, Q$Serializable, 92, Q$Enum]), Style$Overflow$1_0);
 function Style$Overflow$2_0(enum$name, enum$ordinal) {
   Enum_0.call(this, enum$name, enum$ordinal)
 }
-defineSeed(96, 94, makeCastMap([9, Q$Style$Overflow, Q$Serializable, 91, Q$Enum]), Style$Overflow$2_0);
+defineSeed(96, 94, makeCastMap([9, Q$Style$Overflow, Q$Serializable, 92, Q$Enum]), Style$Overflow$2_0);
 function Style$Overflow$3_0(enum$name, enum$ordinal) {
   Enum_0.call(this, enum$name, enum$ordinal)
 }
-defineSeed(97, 94, makeCastMap([9, Q$Style$Overflow, Q$Serializable, 91, Q$Enum]), Style$Overflow$3_0);
+defineSeed(97, 94, makeCastMap([9, Q$Style$Overflow, Q$Serializable, 92, Q$Enum]), Style$Overflow$3_0);
 function Style$Overflow$4_0(enum$name, enum$ordinal) {
   Enum_0.call(this, enum$name, enum$ordinal)
 }
-defineSeed(98, 94, makeCastMap([9, Q$Style$Overflow, Q$Serializable, 91, Q$Enum]), Style$Overflow$4_0);
+defineSeed(98, 94, makeCastMap([9, Q$Style$Overflow, Q$Serializable, 92, Q$Enum]), Style$Overflow$4_0);
 function $clinit_Style$Position() {
   $clinit_Style$Position = nullMethod;
   STATIC = new Style$Position$1_0("STATIC", 0);
@@ -1045,24 +1045,24 @@ function $clinit_Style$Position() {
   FIXED = new Style$Position$4_0("FIXED", 3);
   $VALUES_2 = initValues(_3Lcom_google_gwt_dom_client_Style$Position_2_classLit, makeCastMap([Q$Serializable]), Q$Style$Position, [STATIC, RELATIVE, ABSOLUTE, FIXED])
 }
-defineSeed(99, 79, makeCastMap([9, Q$Style$Position, Q$Serializable, 91, Q$Enum]));
+defineSeed(99, 79, makeCastMap([9, Q$Style$Position, Q$Serializable, 92, Q$Enum]));
 var $VALUES_2, ABSOLUTE, FIXED, RELATIVE, STATIC;
 function Style$Position$1_0(enum$name, enum$ordinal) {
   Enum_0.call(this, enum$name, enum$ordinal)
 }
-defineSeed(100, 99, makeCastMap([9, Q$Style$Position, Q$Serializable, 91, Q$Enum]), Style$Position$1_0);
+defineSeed(100, 99, makeCastMap([9, Q$Style$Position, Q$Serializable, 92, Q$Enum]), Style$Position$1_0);
 function Style$Position$2_0(enum$name, enum$ordinal) {
   Enum_0.call(this, enum$name, enum$ordinal)
 }
-defineSeed(101, 99, makeCastMap([9, Q$Style$Position, Q$Serializable, 91, Q$Enum]), Style$Position$2_0);
+defineSeed(101, 99, makeCastMap([9, Q$Style$Position, Q$Serializable, 92, Q$Enum]), Style$Position$2_0);
 function Style$Position$3_0(enum$name, enum$ordinal) {
   Enum_0.call(this, enum$name, enum$ordinal)
 }
-defineSeed(102, 99, makeCastMap([9, Q$Style$Position, Q$Serializable, 91, Q$Enum]), Style$Position$3_0);
+defineSeed(102, 99, makeCastMap([9, Q$Style$Position, Q$Serializable, 92, Q$Enum]), Style$Position$3_0);
 function Style$Position$4_0(enum$name, enum$ordinal) {
   Enum_0.call(this, enum$name, enum$ordinal)
 }
-defineSeed(103, 99, makeCastMap([9, Q$Style$Position, Q$Serializable, 91, Q$Enum]), Style$Position$4_0);
+defineSeed(103, 99, makeCastMap([9, Q$Style$Position, Q$Serializable, 92, Q$Enum]), Style$Position$4_0);
 function $clinit_Style$TextAlign() {
   $clinit_Style$TextAlign = nullMethod;
   CENTER = new Style$TextAlign$1_0("CENTER", 0);
@@ -1071,24 +1071,24 @@ function $clinit_Style$TextAlign() {
   RIGHT = new Style$TextAlign$4_0("RIGHT", 3);
   $VALUES_3 = initValues(_3Lcom_google_gwt_dom_client_Style$TextAlign_2_classLit, makeCastMap([Q$Serializable]), Q$Style$TextAlign, [CENTER, JUSTIFY, LEFT, RIGHT])
 }
-defineSeed(104, 79, makeCastMap([9, Q$Style$TextAlign, Q$Serializable, 91, Q$Enum]));
+defineSeed(104, 79, makeCastMap([9, Q$Style$TextAlign, Q$Serializable, 92, Q$Enum]));
 var $VALUES_3, CENTER, JUSTIFY, LEFT, RIGHT;
 function Style$TextAlign$1_0(enum$name, enum$ordinal) {
   Enum_0.call(this, enum$name, enum$ordinal)
 }
-defineSeed(105, 104, makeCastMap([9, Q$Style$TextAlign, Q$Serializable, 91, Q$Enum]), Style$TextAlign$1_0);
+defineSeed(105, 104, makeCastMap([9, Q$Style$TextAlign, Q$Serializable, 92, Q$Enum]), Style$TextAlign$1_0);
 function Style$TextAlign$2_0(enum$name, enum$ordinal) {
   Enum_0.call(this, enum$name, enum$ordinal)
 }
-defineSeed(106, 104, makeCastMap([9, Q$Style$TextAlign, Q$Serializable, 91, Q$Enum]), Style$TextAlign$2_0);
+defineSeed(106, 104, makeCastMap([9, Q$Style$TextAlign, Q$Serializable, 92, Q$Enum]), Style$TextAlign$2_0);
 function Style$TextAlign$3_0(enum$name, enum$ordinal) {
   Enum_0.call(this, enum$name, enum$ordinal)
 }
-defineSeed(107, 104, makeCastMap([9, Q$Style$TextAlign, Q$Serializable, 91, Q$Enum]), Style$TextAlign$3_0);
+defineSeed(107, 104, makeCastMap([9, Q$Style$TextAlign, Q$Serializable, 92, Q$Enum]), Style$TextAlign$3_0);
 function Style$TextAlign$4_0(enum$name, enum$ordinal) {
   Enum_0.call(this, enum$name, enum$ordinal)
 }
-defineSeed(108, 104, makeCastMap([9, Q$Style$TextAlign, Q$Serializable, 91, Q$Enum]), Style$TextAlign$4_0);
+defineSeed(108, 104, makeCastMap([9, Q$Style$TextAlign, Q$Serializable, 92, Q$Enum]), Style$TextAlign$4_0);
 function $clinit_Style$Unit() {
   $clinit_Style$Unit = nullMethod;
   PX = new Style$Unit$1_0("PX", 0);
@@ -1102,68 +1102,68 @@ function $clinit_Style$Unit() {
   MM = new Style$Unit$9_0("MM", 8);
   $VALUES_4 = initValues(_3Lcom_google_gwt_dom_client_Style$Unit_2_classLit, makeCastMap([Q$Serializable]), Q$Style$Unit, [PX, PCT, EM, EX, PT, PC, IN, CM, MM])
 }
-defineSeed(109, 79, makeCastMap([Q$Style$Unit, Q$Serializable, 91, Q$Enum]));
+defineSeed(109, 79, makeCastMap([Q$Style$Unit, Q$Serializable, 92, Q$Enum]));
 var $VALUES_4, CM, EM, EX, IN, MM, PC, PCT, PT, PX;
 function Style$Unit$1_0(enum$name, enum$ordinal) {
   Enum_0.call(this, enum$name, enum$ordinal)
 }
-defineSeed(110, 109, makeCastMap([Q$Style$Unit, Q$Serializable, 91, Q$Enum]), Style$Unit$1_0);
+defineSeed(110, 109, makeCastMap([Q$Style$Unit, Q$Serializable, 92, Q$Enum]), Style$Unit$1_0);
 _.getType = function() {
   return"px"
 };
 function Style$Unit$2_0(enum$name, enum$ordinal) {
   Enum_0.call(this, enum$name, enum$ordinal)
 }
-defineSeed(111, 109, makeCastMap([Q$Style$Unit, Q$Serializable, 91, Q$Enum]), Style$Unit$2_0);
+defineSeed(111, 109, makeCastMap([Q$Style$Unit, Q$Serializable, 92, Q$Enum]), Style$Unit$2_0);
 _.getType = function() {
   return"%"
 };
 function Style$Unit$3_0(enum$name, enum$ordinal) {
   Enum_0.call(this, enum$name, enum$ordinal)
 }
-defineSeed(112, 109, makeCastMap([Q$Style$Unit, Q$Serializable, 91, Q$Enum]), Style$Unit$3_0);
+defineSeed(112, 109, makeCastMap([Q$Style$Unit, Q$Serializable, 92, Q$Enum]), Style$Unit$3_0);
 _.getType = function() {
   return"em"
 };
 function Style$Unit$4_0(enum$name, enum$ordinal) {
   Enum_0.call(this, enum$name, enum$ordinal)
 }
-defineSeed(113, 109, makeCastMap([Q$Style$Unit, Q$Serializable, 91, Q$Enum]), Style$Unit$4_0);
+defineSeed(113, 109, makeCastMap([Q$Style$Unit, Q$Serializable, 92, Q$Enum]), Style$Unit$4_0);
 _.getType = function() {
   return"ex"
 };
 function Style$Unit$5_0(enum$name, enum$ordinal) {
   Enum_0.call(this, enum$name, enum$ordinal)
 }
-defineSeed(114, 109, makeCastMap([Q$Style$Unit, Q$Serializable, 91, Q$Enum]), Style$Unit$5_0);
+defineSeed(114, 109, makeCastMap([Q$Style$Unit, Q$Serializable, 92, Q$Enum]), Style$Unit$5_0);
 _.getType = function() {
   return"pt"
 };
 function Style$Unit$6_0(enum$name, enum$ordinal) {
   Enum_0.call(this, enum$name, enum$ordinal)
 }
-defineSeed(115, 109, makeCastMap([Q$Style$Unit, Q$Serializable, 91, Q$Enum]), Style$Unit$6_0);
+defineSeed(115, 109, makeCastMap([Q$Style$Unit, Q$Serializable, 92, Q$Enum]), Style$Unit$6_0);
 _.getType = function() {
   return"pc"
 };
 function Style$Unit$7_0(enum$name, enum$ordinal) {
   Enum_0.call(this, enum$name, enum$ordinal)
 }
-defineSeed(116, 109, makeCastMap([Q$Style$Unit, Q$Serializable, 91, Q$Enum]), Style$Unit$7_0);
+defineSeed(116, 109, makeCastMap([Q$Style$Unit, Q$Serializable, 92, Q$Enum]), Style$Unit$7_0);
 _.getType = function() {
   return"in"
 };
 function Style$Unit$8_0(enum$name, enum$ordinal) {
   Enum_0.call(this, enum$name, enum$ordinal)
 }
-defineSeed(117, 109, makeCastMap([Q$Style$Unit, Q$Serializable, 91, Q$Enum]), Style$Unit$8_0);
+defineSeed(117, 109, makeCastMap([Q$Style$Unit, Q$Serializable, 92, Q$Enum]), Style$Unit$8_0);
 _.getType = function() {
   return"cm"
 };
 function Style$Unit$9_0(enum$name, enum$ordinal) {
   Enum_0.call(this, enum$name, enum$ordinal)
 }
-defineSeed(118, 109, makeCastMap([Q$Style$Unit, Q$Serializable, 91, Q$Enum]), Style$Unit$9_0);
+defineSeed(118, 109, makeCastMap([Q$Style$Unit, Q$Serializable, 92, Q$Enum]), Style$Unit$9_0);
 _.getType = function() {
   return"mm"
 };
@@ -1353,7 +1353,7 @@ _.dispatch = function(handler) {
     this$static.point = handler.startTouchPosition;
     this$static.time = startTouchTime;
     handler.recentTouchPositionOnDeck = null;
-    handler.momentumCommand && ($add_7(handler.touchPositionsDuringMomentum, new TouchScroller$TemporalPoint_1(handler.startTouchPosition, startTouchTime)), scheduleFixedDelayImpl(($clinit_SchedulerImpl(), handler.momentumTouchRemovalCommand), 2500));
+    handler.momentumCommand && ($add_8(handler.touchPositionsDuringMomentum, new TouchScroller$TemporalPoint_1(handler.startTouchPosition, startTouchTime)), scheduleFixedDelayImpl(($clinit_SchedulerImpl(), handler.momentumTouchRemovalCommand), 2500));
     handler.startScrollPosition = new Point_0($getScrollLeft(handler.widget.scrollableElem), handler.widget.scrollableElem.scrollTop || 0);
     $cancelAll(handler);
     handler.touching = !0
@@ -1454,7 +1454,7 @@ _.source = null;
 defineSeed(152, 1, {});
 function $defer(this$static, command) {
   !this$static.deferredDeltas && (this$static.deferredDeltas = new ArrayList_0);
-  $add_7(this$static.deferredDeltas, command)
+  $add_8(this$static.deferredDeltas, command)
 }
 function $doAdd(this$static, type, handler) {
   if(!type) {
@@ -1481,7 +1481,7 @@ function $doFire(this$static, event_0) {
         event_0.dispatch(dynamicCast(handler, Q$EventHandler))
       }catch($e0) {
         if($e0 = caught_0($e0), instanceOf($e0, Q$Throwable)) {
-          e = $e0, !causes && (causes = new HashSet_0), $add_8(causes, e)
+          e = $e0, !causes && (causes = new HashSet_0), $add_9(causes, e)
         }else {
           throw $e0;
         }
@@ -1727,7 +1727,7 @@ function $clinit_DateTimeFormat() {
   new HashMap_0
 }
 function $addPart(this$static, buf, count) {
-  0 < buf.impl.string.length && ($add_7(this$static.patternParts, new DateTimeFormat$PatternPart_0(buf.impl.string, count)), this$static = buf.impl.string.length, 0 < this$static ? $replace(buf.impl, 0, this$static, "") : 0 > this$static && (this$static = initDim(_3C_classLit, makeCastMap([Q$Serializable]), -1, 0 - this$static, 1), $appendNonNull(buf.impl, String.fromCharCode.apply(null, this$static))))
+  0 < buf.impl.string.length && ($add_8(this$static.patternParts, new DateTimeFormat$PatternPart_0(buf.impl.string, count)), this$static = buf.impl.string.length, 0 < this$static ? $replace(buf.impl, 0, this$static, "") : 0 > this$static && (this$static = initDim(_3C_classLit, makeCastMap([Q$Serializable]), -1, 0 - this$static, 1), $appendNonNull(buf.impl, String.fromCharCode.apply(null, this$static))))
 }
 function $isNumeric(part) {
   var i;
@@ -1805,7 +1805,7 @@ function $clinit_HasDirection$Direction() {
 function HasDirection$Direction_0(enum$name, enum$ordinal) {
   Enum_0.call(this, enum$name, enum$ordinal)
 }
-defineSeed(177, 79, makeCastMap([Q$HasDirection$Direction, Q$Serializable, 91, Q$Enum]), HasDirection$Direction_0);
+defineSeed(177, 79, makeCastMap([Q$HasDirection$Direction, Q$Serializable, 92, Q$Enum]), HasDirection$Direction_0);
 var $VALUES_5, DEFAULT, LTR, RTL;
 function $clinit_LocaleInfo() {
   $clinit_LocaleInfo = nullMethod;
@@ -2403,15 +2403,15 @@ function init() {
   (log = null == log ? null : $equals(log, ($clinit_Level(), "OFF")) ? OFF : $equals(log, "SEVERE") ? SEVERE : $equals(log, "WARNING") ? WARNING : $equals(log, "INFO") ? INFO : $equals(log, "CONFIG") ? CONFIG : $equals(log, "FINE") ? FINE : $equals(log, "FINER") ? FINER : $equals(log, "FINEST") ? FINEST : $equals(log, "ALL") ? ALL : null) || (log = ($clinit_Level(), INFO));
   runtimeValue.impl.level_0 = log;
   log = message.root;
-  (regexp = new NullLogHandler_0) || $add_7(log.impl.handlers, regexp);
+  (regexp = new NullLogHandler_0) || $add_8(log.impl.handlers, regexp);
   regexp = new DevelopmentModeLogHandler_0;
-  $add_7(log.impl.handlers, regexp);
+  $add_8(log.impl.handlers, regexp);
   regexp = new FirebugLogHandler_0;
-  $add_7(log.impl.handlers, regexp);
+  $add_8(log.impl.handlers, regexp);
   regexp = new SystemLogHandler_0;
-  $add_7(log.impl.handlers, regexp);
-  (regexp = new NullLogHandler_0) || $add_7(log.impl.handlers, regexp);
-  new NullLoggingPopup_0 || (regexp = new HasWidgetsLogHandler_0, $add_7(log.impl.handlers, regexp));
+  $add_8(log.impl.handlers, regexp);
+  (regexp = new NullLogHandler_0) || $add_8(log.impl.handlers, regexp);
+  new NullLoggingPopup_0 || (regexp = new HasWidgetsLogHandler_0, $add_8(log.impl.handlers, regexp));
   sUncaughtExceptionHandler || (log = ($clinit_Logger(), $getLoggerHelper(Lcom_google_gwt_logging_client_LogConfiguration_2_classLit.typeName)), sUncaughtExceptionHandler = new LogConfiguration$1_0(log));
   $stats && onModuleStart("com.raccoonfink.cruisemonkey.gwt.client.CM3");
   regexp = new CM3_0;
@@ -2641,7 +2641,7 @@ function $attachChild(this$static, child, before, userObject) {
   before && (beforeContainer = $getParentElement(before));
   parent_0.insertBefore(container, beforeContainer);
   child = new Layout$Layer_0(container, child, userObject);
-  $add_7(this$static.layers, child);
+  $add_8(this$static.layers, child);
   return child
 }
 function $getUnitSize(this$static, unit, vertical) {
@@ -2751,7 +2751,7 @@ function $clinit_Layout$Alignment() {
 function Layout$Alignment_0(enum$name, enum$ordinal) {
   Enum_0.call(this, enum$name, enum$ordinal)
 }
-defineSeed(210, 79, makeCastMap([Q$Layout$Alignment, Q$Serializable, 91, Q$Enum]), Layout$Alignment_0);
+defineSeed(210, 79, makeCastMap([Q$Layout$Alignment, Q$Serializable, 92, Q$Enum]), Layout$Alignment_0);
 var $VALUES_6, BEGIN, END, STRETCH;
 function $setLeftRight(this$static, leftUnit) {
   var rightUnit = PX;
@@ -3002,7 +3002,7 @@ function $getStackTraceAsString(e, newline, indent) {
   currentCause = e;
   e = "";
   for(seenCauses = new HashSet_0;currentCause && !$containsKey_1(seenCauses.map, currentCause);) {
-    $add_8(seenCauses, currentCause);
+    $add_9(seenCauses, currentCause);
     $append_1(s.impl, e);
     e = newline + "Caused by: ";
     $append_1(s.impl, currentCause.___clazz$.typeName);
@@ -3573,16 +3573,16 @@ _.toArray_0 = function(a) {
 _.toString$ = function() {
   return $toString_1(this)
 };
-defineSeed(255, 256, makeCastMap([108]));
+defineSeed(255, 256, makeCastMap([109]));
 _.equals$ = function(o) {
   var otherItem;
   if(o === this) {
     return!0
   }
-  if(!instanceOf(o, 108)) {
+  if(!instanceOf(o, 109)) {
     return!1
   }
-  o = dynamicCast(o, 108);
+  o = dynamicCast(o, 109);
   if(o.size_0() != this.size_0()) {
     return!1
   }
@@ -3604,7 +3604,7 @@ _.hashCode$ = function() {
 function StorageMap$StorageEntrySet_0(this$0) {
   this.this$0 = this$0
 }
-defineSeed(254, 255, makeCastMap([108]), StorageMap$StorageEntrySet_0);
+defineSeed(254, 255, makeCastMap([109]), StorageMap$StorageEntrySet_0);
 _.contains_0 = function(o) {
   var key;
   if(null == o || !instanceOf(o, Q$Map$Entry)) {
@@ -3909,7 +3909,7 @@ function setVisible(elem, visible) {
   elem.style.display = visible ? "" : "none";
   elem.setAttribute("aria-hidden", "" + !visible)
 }
-defineSeed(275, 1, makeCastMap([62, 69]));
+defineSeed(275, 1, makeCastMap([62, 70]));
 _.resolvePotentialElement = function() {
   throw new UnsupportedOperationException_0;
 };
@@ -4036,7 +4036,7 @@ function $setParent_0(this$static, parent_0) {
     }
   }
 }
-defineSeed(274, 275, makeCastMap([23, 28, Q$EventListener, 62, 65, 69, Q$Widget]));
+defineSeed(274, 275, makeCastMap([23, 28, Q$EventListener, 62, 65, 70, Q$Widget]));
 _.doAttachChildren = function() {
 };
 _.doDetachChildren = function() {
@@ -4088,7 +4088,7 @@ function $initWidget(this$static, widget) {
 function $isAttached(this$static) {
   return this$static.widget ? this$static.widget.isAttached() : !1
 }
-defineSeed(273, 274, makeCastMap([23, 28, Q$EventListener, 62, Q$IsRenderable, 65, 69, Q$Widget]));
+defineSeed(273, 274, makeCastMap([23, 28, Q$EventListener, 62, Q$IsRenderable, 65, 70, Q$Widget]));
 _.isAttached = function() {
   return $isAttached(this)
 };
@@ -4138,7 +4138,7 @@ function $setKeyboardSelectionHandler(this$static, keyboardSelectionReg) {
 function $showOrHide(element, show) {
   element && (show ? element.style.display = "" : element.style.display = ($clinit_Style$Display(), "none"))
 }
-defineSeed(272, 273, makeCastMap([23, 28, Q$EventListener, 62, Q$IsRenderable, 65, 69, Q$Widget, Q$HasData]));
+defineSeed(272, 273, makeCastMap([23, 28, Q$EventListener, 62, Q$IsRenderable, 65, 70, Q$Widget, Q$HasData]));
 _.getVisibleRange = function() {
   return $getVisibleRange(this.presenter)
 };
@@ -4199,7 +4199,7 @@ _.onBrowserEvent_0 = function(event_0) {
             for(col = 0;col < event_0.infos.size;++col) {
               eventType = dynamicCast($get_5(event_0.infos, col), Q$ColumnSortList$ColumnSortInfo), eventType.column == eventTarget && ($remove_13(event_0.infos, col), col < column && --column, --col)
             }
-            $add_6(event_0.infos, column, columnParent);
+            $add_7(event_0.infos, column, columnParent);
             event_0.delegate && (event_0 = event_0.delegate, event_0.this$0.updatingSortList || $createHeaders(event_0.this$0, !1));
             this.updatingSortList = !1
           }
@@ -4485,9 +4485,9 @@ function $getSubRowElement(this$static, absRow, subrow) {
 }
 function $insertColumn(this$static, beforeIndex, col) {
   beforeIndex != this$static.columns.size && $checkColumnBounds(this$static, beforeIndex);
-  $add_6(this$static.headers, beforeIndex, null);
-  $add_6(this$static.footers, beforeIndex, null);
-  $add_6(this$static.columns, beforeIndex, col);
+  $add_7(this$static.headers, beforeIndex, null);
+  $add_7(this$static.footers, beforeIndex, null);
+  $add_7(this$static.columns, beforeIndex, col);
   beforeIndex <= this$static.keyboardSelectedColumn && (this$static.keyboardSelectedColumn = this$static.keyboardSelectedColumn + 1 < this$static.columns.size - 1 ? this$static.keyboardSelectedColumn + 1 : this$static.columns.size - 1);
   isColumnInteractive(col) && (this$static.keyboardSelectedColumn >= this$static.columns.size || !isColumnInteractive(dynamicCast($get_5(this$static.columns, this$static.keyboardSelectedColumn), Q$HasCell))) && (this$static.keyboardSelectedColumn = beforeIndex);
   beforeIndex = new HashSet_0;
@@ -4575,7 +4575,7 @@ function tableSectionToSafeHtml(section) {
   section = section.substr(7, section.length - 8 - 7);
   return $clinit_SafeHtmlUtils(), new SafeHtmlString_0(section)
 }
-defineSeed(271, 272, makeCastMap([23, 28, Q$EventListener, 62, Q$IsRenderable, 65, 69, Q$Widget, Q$HasData]));
+defineSeed(271, 272, makeCastMap([23, 28, Q$EventListener, 62, Q$IsRenderable, 65, 70, Q$Widget, Q$HasData]));
 _.cellIsEditing = !1;
 _.columnWidthsDirty = !1;
 _.footerBuilder = null;
@@ -4663,7 +4663,7 @@ function $setKeyboardSelectedRow_1(this$static, row) {
 function AbstractHasData$DefaultKeyboardSelectionHandler_0(display) {
   this.display_0 = display
 }
-defineSeed(279, 1, makeCastMap([Q$EventHandler, 72]), AbstractHasData$DefaultKeyboardSelectionHandler_0);
+defineSeed(279, 1, makeCastMap([Q$EventHandler, 73]), AbstractHasData$DefaultKeyboardSelectionHandler_0);
 _.onCellPreview = function(event_0) {
   $onCellPreview(this, event_0)
 };
@@ -4699,7 +4699,7 @@ function $findInteractiveColumn(this$static, start, reverse) {
 function AbstractCellTable$CellTableKeyboardSelectionHandler_0(table) {
   this.table = this.display_0 = table
 }
-defineSeed(278, 279, makeCastMap([Q$EventHandler, 72]), AbstractCellTable$CellTableKeyboardSelectionHandler_0);
+defineSeed(278, 279, makeCastMap([Q$EventHandler, 73]), AbstractCellTable$CellTableKeyboardSelectionHandler_0);
 _.onCellPreview = function(event_0) {
   var col, eventType, isRtl, keyCode, oldRow;
   keyCode = event_0.nativeEvent;
@@ -4809,7 +4809,7 @@ defineSeed(282, 1, {}, AbstractCellTable_TemplateImpl_0);
 function AbstractHasData$1_0(val$elem) {
   this.element = this.val$elem = val$elem
 }
-defineSeed(283, 274, makeCastMap([23, 28, Q$EventListener, 62, 65, 69, Q$Widget]), AbstractHasData$1_0);
+defineSeed(283, 274, makeCastMap([23, 28, Q$EventListener, 62, 65, 70, Q$Widget]), AbstractHasData$1_0);
 _.val$elem = null;
 function $renderRowValues_0(this$static) {
   try {
@@ -5088,17 +5088,17 @@ defineSeed(290, 289, {});
 var dispatchNonBubblingEvent = _.nonBubblingEvents = null;
 function CellBasedWidgetImplStandardBase_0() {
   this.focusableTypes = new HashSet_0;
-  $add_8(this.focusableTypes, "select");
-  $add_8(this.focusableTypes, "input");
-  $add_8(this.focusableTypes, "textarea");
-  $add_8(this.focusableTypes, "option");
-  $add_8(this.focusableTypes, "button");
-  $add_8(this.focusableTypes, "label");
+  $add_9(this.focusableTypes, "select");
+  $add_9(this.focusableTypes, "input");
+  $add_9(this.focusableTypes, "textarea");
+  $add_9(this.focusableTypes, "option");
+  $add_9(this.focusableTypes, "button");
+  $add_9(this.focusableTypes, "label");
   this.nonBubblingEvents = new HashSet_0;
-  $add_8(this.nonBubblingEvents, "focus");
-  $add_8(this.nonBubblingEvents, "blur");
-  $add_8(this.nonBubblingEvents, "load");
-  $add_8(this.nonBubblingEvents, "error")
+  $add_9(this.nonBubblingEvents, "focus");
+  $add_9(this.nonBubblingEvents, "blur");
+  $add_9(this.nonBubblingEvents, "load");
+  $add_9(this.nonBubblingEvents, "error")
 }
 defineSeed(291, 290, {}, CellBasedWidgetImplStandardBase_0);
 function $ensureTableColElement(this$static, index) {
@@ -5117,12 +5117,12 @@ function CellTable_0(pageSize) {
   $initWidget(this, loadingImg);
   this.presenter = new HasDataPresenter_0(this, new AbstractHasData$View_0(this), pageSize);
   pageSize = new HashSet_0;
-  $add_8(pageSize, "focus");
-  $add_8(pageSize, "blur");
-  $add_8(pageSize, "keydown");
-  $add_8(pageSize, "keyup");
-  $add_8(pageSize, "click");
-  $add_8(pageSize, "mousedown");
+  $add_9(pageSize, "focus");
+  $add_9(pageSize, "blur");
+  $add_9(pageSize, "keydown");
+  $add_9(pageSize, "keyup");
+  $add_9(pageSize, "click");
+  $add_9(pageSize, "mousedown");
   $sinkEvents_0((!impl_2 && (impl_2 = new CellBasedWidgetImplStandardBase_0), impl_2), this, pageSize);
   $addCellPreviewHandler_0(this.presenter, new DefaultSelectionEventManager_0);
   $setKeyboardSelectionHandler(this, new AbstractHasData$DefaultKeyboardSelectionHandler_0(this));
@@ -5135,8 +5135,8 @@ function CellTable_0(pageSize) {
   !TABLE_IMPL && (TABLE_IMPL = new AbstractCellTable$Impl_0);
   !template && (template = new AbstractCellTable_TemplateImpl_0);
   pageSize = new HashSet_0;
-  $add_8(pageSize, "mouseover");
-  $add_8(pageSize, "mouseout");
+  $add_9(pageSize, "mouseover");
+  $add_9(pageSize, "mouseout");
   $sinkEvents_0((!impl_2 && (impl_2 = new CellBasedWidgetImplStandardBase_0), impl_2), this, pageSize);
   this.tableBuilder = new DefaultCellTableBuilder_0(this);
   this.headerBuilder = new DefaultHeaderOrFooterBuilder_0(this, !1);
@@ -5171,11 +5171,11 @@ function CellTable_0(pageSize) {
   this.loadingIndicatorContainer.element.className = "GPBYFDEOD";
   this.loadingIndicatorContainer.setWidget(loadingIndicator);
   loadingIndicator = new HashSet_0;
-  $add_8(loadingIndicator, "mouseover");
-  $add_8(loadingIndicator, "mouseout");
+  $add_9(loadingIndicator, "mouseover");
+  $add_9(loadingIndicator, "mouseout");
   $sinkEvents_0((!impl_2 && (impl_2 = new CellBasedWidgetImplStandardBase_0), impl_2), this, loadingIndicator)
 }
-defineSeed(292, 271, makeCastMap([23, 28, Q$EventListener, 62, Q$IsRenderable, 65, 69, Q$Widget, Q$HasData]), CellTable_0);
+defineSeed(292, 271, makeCastMap([23, 28, Q$EventListener, 62, Q$IsRenderable, 65, 70, Q$Widget, Q$HasData]), CellTable_0);
 _.colGroupEnabled = !0;
 _.colgroup = null;
 _.style_0 = null;
@@ -5381,8 +5381,8 @@ function $resolvePendingState(this$static, modifiedRows) {
   newlySelectedRows += 1;
   oldPageSize == i && (i = newlySelectedRows, newlySelectedRows = oldPageSize = -1);
   length_0 = new ArrayList_0;
-  -1 != range && $add_7(length_0, new Range_1(range, i - range));
-  -1 != oldPageSize && $add_7(length_0, new Range_1(oldPageSize, newlySelectedRows - oldPageSize));
+  -1 != range && $add_8(length_0, new Range_1(range, i - range));
+  -1 != oldPageSize && $add_8(length_0, new Range_1(oldPageSize, newlySelectedRows - oldPageSize));
   pageEnd = 0 < length_0.size ? dynamicCast((checkIndex(0, length_0.size), length_0.array[0]), Q$Range) : null;
   i = 1 < length_0.size ? dynamicCast((checkIndex(1, length_0.size), length_0.array[1]), Q$Range) : null;
   newlySelectedRows = 0;
@@ -5504,9 +5504,9 @@ function $setKeyboardSelectedRow_2(this$static, index, stealFocus) {
           }else {
             if(newPageSize = rowCount - index, 0 < (!this$static.pendingState ? this$static.state : this$static.pendingState).rowData.size && newPageSize < pageSize) {
               for(rowCount = 0;rowCount < newPageSize;++rowCount) {
-                $add_6(pageStart.rowData, 0, null)
+                $add_7(pageStart.rowData, 0, null)
               }
-              $add_7(pageStart.replacedRanges, new Range_1(index, index + newPageSize - index))
+              $add_8(pageStart.replacedRanges, new Range_1(index, index + newPageSize - index))
             }else {
               $clear_0(pageStart.rowData)
             }
@@ -5539,12 +5539,12 @@ function $setRowData(this$static, start, values) {
     pending = $ensurePendingState(this$static);
     cacheOffset = 0 > boundedStart - pageStart - (!this$static.pendingState ? this$static.state : this$static.pendingState).rowData.size ? 0 : boundedStart - pageStart - (!this$static.pendingState ? this$static.state : this$static.pendingState).rowData.size;
     for(i = 0;i < cacheOffset;++i) {
-      $add_7(pending.rowData, null)
+      $add_8(pending.rowData, null)
     }
     for(i = boundedStart;i < boundedEnd;++i) {
-      value = values.get_0(i - start), dataIndex = i - pageStart, dataIndex < (!this$static.pendingState ? this$static.state : this$static.pendingState).rowData.size ? $set_2(pending.rowData, dataIndex, value) : $add_7(pending.rowData, value)
+      value = values.get_0(i - start), dataIndex = i - pageStart, dataIndex < (!this$static.pendingState ? this$static.state : this$static.pendingState).rowData.size ? $set_2(pending.rowData, dataIndex, value) : $add_8(pending.rowData, value)
     }
-    $add_7(pending.replacedRanges, new Range_1(boundedStart - cacheOffset, boundedEnd - (boundedStart - cacheOffset)));
+    $add_8(pending.replacedRanges, new Range_1(boundedStart - cacheOffset, boundedEnd - (boundedStart - cacheOffset)));
     valuesEnd > (!this$static.pendingState ? this$static.state : this$static.pendingState).rowCount && $setRowCount_0(this$static, valuesEnd, (!this$static.pendingState ? this$static.state : this$static.pendingState).rowCountIsExact)
   }
 }
@@ -5622,7 +5622,7 @@ function HasDataPresenter$PendingState_0(state) {
   this.viewTouched = state.viewTouched;
   rowDataSize = state.rowData.size;
   for(i = 0;i < rowDataSize;++i) {
-    $add_7(this.rowData, $get_5(state.rowData, i))
+    $add_8(this.rowData, $get_5(state.rowData, i))
   }
 }
 defineSeed(303, 302, {}, HasDataPresenter$PendingState_0);
@@ -5640,7 +5640,7 @@ function HasKeyboardPagingPolicy$KeyboardPagingPolicy_0(enum$name, enum$ordinal,
   Enum_0.call(this, enum$name, enum$ordinal);
   this.isLimitedToRange = isLimitedToRange
 }
-defineSeed(304, 79, makeCastMap([Q$HasKeyboardPagingPolicy$KeyboardPagingPolicy, Q$Serializable, 91, Q$Enum]), HasKeyboardPagingPolicy$KeyboardPagingPolicy_0);
+defineSeed(304, 79, makeCastMap([Q$HasKeyboardPagingPolicy$KeyboardPagingPolicy, Q$Serializable, 92, Q$Enum]), HasKeyboardPagingPolicy$KeyboardPagingPolicy_0);
 _.isLimitedToRange = !1;
 var $VALUES_7, CHANGE_PAGE, CURRENT_PAGE, INCREASE_RANGE;
 function $clinit_HasKeyboardSelectionPolicy$KeyboardSelectionPolicy() {
@@ -5653,7 +5653,7 @@ function $clinit_HasKeyboardSelectionPolicy$KeyboardSelectionPolicy() {
 function HasKeyboardSelectionPolicy$KeyboardSelectionPolicy_0(enum$name, enum$ordinal) {
   Enum_0.call(this, enum$name, enum$ordinal)
 }
-defineSeed(305, 79, makeCastMap([Q$HasKeyboardSelectionPolicy$KeyboardSelectionPolicy, Q$Serializable, 91, Q$Enum]), HasKeyboardSelectionPolicy$KeyboardSelectionPolicy_0);
+defineSeed(305, 79, makeCastMap([Q$HasKeyboardSelectionPolicy$KeyboardSelectionPolicy, Q$Serializable, 92, Q$Enum]), HasKeyboardSelectionPolicy$KeyboardSelectionPolicy_0);
 var $VALUES_8, BOUND_TO_SELECTION, DISABLED, ENABLED;
 function IdentityColumn_0(cell) {
   this.cell = cell
@@ -5705,7 +5705,7 @@ function $clinit_RowHoverEvent$HoveringScope() {
 function RowHoverEvent$HoveringScope_0(enum$name, enum$ordinal) {
   Enum_0.call(this, enum$name, enum$ordinal)
 }
-defineSeed(310, 79, makeCastMap([Q$RowHoverEvent$HoveringScope, Q$Serializable, 91, Q$Enum]), RowHoverEvent$HoveringScope_0);
+defineSeed(310, 79, makeCastMap([Q$RowHoverEvent$HoveringScope, Q$Serializable, 92, Q$Enum]), RowHoverEvent$HoveringScope_0);
 var $VALUES_9, CELL_HOVER, ROW_HOVER, UNKNOWN;
 function appendChild(parent_0, child) {
   var newChild = ($clinit_PotentialElement(), child.__gwt_resolve ? child.__gwt_resolve() : child);
@@ -5726,7 +5726,7 @@ function $clinit_DocumentModeAsserter$Severity() {
 function DocumentModeAsserter$Severity_0(enum$name, enum$ordinal) {
   Enum_0.call(this, enum$name, enum$ordinal)
 }
-defineSeed(313, 79, makeCastMap([Q$DocumentModeAsserter$Severity, Q$Serializable, 91, Q$Enum]), DocumentModeAsserter$Severity_0);
+defineSeed(313, 79, makeCastMap([Q$DocumentModeAsserter$Severity, Q$Serializable, 92, Q$Enum]), DocumentModeAsserter$Severity_0);
 var $VALUES_10, ERROR, IGNORE, WARN;
 function addNativePreviewHandler(handler) {
   $maybeInitializeEventSystem();
@@ -6307,7 +6307,7 @@ function $addString(this$static, string) {
   if(index = dynamicCast($get_4(this$static.stringMap, string), Q$Integer)) {
     return index.value
   }
-  $add_7(this$static.stringTable, string);
+  $add_8(this$static.stringTable, string);
   index = this$static.stringTable.size;
   $put_1(this$static.stringMap, string, valueOf(index));
   return index
@@ -6424,52 +6424,52 @@ function $clinit_RequestCallbackAdapter$ResponseReader() {
   VOID = new RequestCallbackAdapter$ResponseReader$11_0("VOID", 10);
   $VALUES_11 = initValues(_3Lcom_google_gwt_user_client_rpc_impl_RequestCallbackAdapter$ResponseReader_2_classLit, makeCastMap([Q$Serializable]), Q$RequestCallbackAdapter$ResponseReader, [BOOLEAN, BYTE, CHAR, DOUBLE_0, FLOAT, INT, LONG, OBJECT, SHORT, STRING, VOID])
 }
-defineSeed(395, 79, makeCastMap([Q$RequestCallbackAdapter$ResponseReader, Q$Serializable, 91, Q$Enum]));
+defineSeed(395, 79, makeCastMap([Q$RequestCallbackAdapter$ResponseReader, Q$Serializable, 92, Q$Enum]));
 var $VALUES_11, BOOLEAN, BYTE, CHAR, DOUBLE_0, FLOAT, INT, LONG, OBJECT, SHORT, STRING, VOID;
 function RequestCallbackAdapter$ResponseReader$1_0(enum$name, enum$ordinal) {
   Enum_0.call(this, enum$name, enum$ordinal)
 }
-defineSeed(396, 395, makeCastMap([Q$RequestCallbackAdapter$ResponseReader, Q$Serializable, 91, Q$Enum]), RequestCallbackAdapter$ResponseReader$1_0);
+defineSeed(396, 395, makeCastMap([Q$RequestCallbackAdapter$ResponseReader, Q$Serializable, 92, Q$Enum]), RequestCallbackAdapter$ResponseReader$1_0);
 function RequestCallbackAdapter$ResponseReader$10_0(enum$name, enum$ordinal) {
   Enum_0.call(this, enum$name, enum$ordinal)
 }
-defineSeed(397, 395, makeCastMap([Q$RequestCallbackAdapter$ResponseReader, Q$Serializable, 91, Q$Enum]), RequestCallbackAdapter$ResponseReader$10_0);
+defineSeed(397, 395, makeCastMap([Q$RequestCallbackAdapter$ResponseReader, Q$Serializable, 92, Q$Enum]), RequestCallbackAdapter$ResponseReader$10_0);
 function RequestCallbackAdapter$ResponseReader$11_0(enum$name, enum$ordinal) {
   Enum_0.call(this, enum$name, enum$ordinal)
 }
-defineSeed(398, 395, makeCastMap([Q$RequestCallbackAdapter$ResponseReader, Q$Serializable, 91, Q$Enum]), RequestCallbackAdapter$ResponseReader$11_0);
+defineSeed(398, 395, makeCastMap([Q$RequestCallbackAdapter$ResponseReader, Q$Serializable, 92, Q$Enum]), RequestCallbackAdapter$ResponseReader$11_0);
 function RequestCallbackAdapter$ResponseReader$2_0(enum$name, enum$ordinal) {
   Enum_0.call(this, enum$name, enum$ordinal)
 }
-defineSeed(399, 395, makeCastMap([Q$RequestCallbackAdapter$ResponseReader, Q$Serializable, 91, Q$Enum]), RequestCallbackAdapter$ResponseReader$2_0);
+defineSeed(399, 395, makeCastMap([Q$RequestCallbackAdapter$ResponseReader, Q$Serializable, 92, Q$Enum]), RequestCallbackAdapter$ResponseReader$2_0);
 function RequestCallbackAdapter$ResponseReader$3_0(enum$name, enum$ordinal) {
   Enum_0.call(this, enum$name, enum$ordinal)
 }
-defineSeed(400, 395, makeCastMap([Q$RequestCallbackAdapter$ResponseReader, Q$Serializable, 91, Q$Enum]), RequestCallbackAdapter$ResponseReader$3_0);
+defineSeed(400, 395, makeCastMap([Q$RequestCallbackAdapter$ResponseReader, Q$Serializable, 92, Q$Enum]), RequestCallbackAdapter$ResponseReader$3_0);
 function RequestCallbackAdapter$ResponseReader$4_0(enum$name, enum$ordinal) {
   Enum_0.call(this, enum$name, enum$ordinal)
 }
-defineSeed(401, 395, makeCastMap([Q$RequestCallbackAdapter$ResponseReader, Q$Serializable, 91, Q$Enum]), RequestCallbackAdapter$ResponseReader$4_0);
+defineSeed(401, 395, makeCastMap([Q$RequestCallbackAdapter$ResponseReader, Q$Serializable, 92, Q$Enum]), RequestCallbackAdapter$ResponseReader$4_0);
 function RequestCallbackAdapter$ResponseReader$5_0(enum$name, enum$ordinal) {
   Enum_0.call(this, enum$name, enum$ordinal)
 }
-defineSeed(402, 395, makeCastMap([Q$RequestCallbackAdapter$ResponseReader, Q$Serializable, 91, Q$Enum]), RequestCallbackAdapter$ResponseReader$5_0);
+defineSeed(402, 395, makeCastMap([Q$RequestCallbackAdapter$ResponseReader, Q$Serializable, 92, Q$Enum]), RequestCallbackAdapter$ResponseReader$5_0);
 function RequestCallbackAdapter$ResponseReader$6_0(enum$name, enum$ordinal) {
   Enum_0.call(this, enum$name, enum$ordinal)
 }
-defineSeed(403, 395, makeCastMap([Q$RequestCallbackAdapter$ResponseReader, Q$Serializable, 91, Q$Enum]), RequestCallbackAdapter$ResponseReader$6_0);
+defineSeed(403, 395, makeCastMap([Q$RequestCallbackAdapter$ResponseReader, Q$Serializable, 92, Q$Enum]), RequestCallbackAdapter$ResponseReader$6_0);
 function RequestCallbackAdapter$ResponseReader$7_0(enum$name, enum$ordinal) {
   Enum_0.call(this, enum$name, enum$ordinal)
 }
-defineSeed(404, 395, makeCastMap([Q$RequestCallbackAdapter$ResponseReader, Q$Serializable, 91, Q$Enum]), RequestCallbackAdapter$ResponseReader$7_0);
+defineSeed(404, 395, makeCastMap([Q$RequestCallbackAdapter$ResponseReader, Q$Serializable, 92, Q$Enum]), RequestCallbackAdapter$ResponseReader$7_0);
 function RequestCallbackAdapter$ResponseReader$8_0(enum$name, enum$ordinal) {
   Enum_0.call(this, enum$name, enum$ordinal)
 }
-defineSeed(405, 395, makeCastMap([Q$RequestCallbackAdapter$ResponseReader, Q$Serializable, 91, Q$Enum]), RequestCallbackAdapter$ResponseReader$8_0);
+defineSeed(405, 395, makeCastMap([Q$RequestCallbackAdapter$ResponseReader, Q$Serializable, 92, Q$Enum]), RequestCallbackAdapter$ResponseReader$8_0);
 function RequestCallbackAdapter$ResponseReader$9_0(enum$name, enum$ordinal) {
   Enum_0.call(this, enum$name, enum$ordinal)
 }
-defineSeed(406, 395, makeCastMap([Q$RequestCallbackAdapter$ResponseReader, Q$Serializable, 91, Q$Enum]), RequestCallbackAdapter$ResponseReader$9_0);
+defineSeed(406, 395, makeCastMap([Q$RequestCallbackAdapter$ResponseReader, Q$Serializable, 92, Q$Enum]), RequestCallbackAdapter$ResponseReader$9_0);
 function $timeStat(this$static, method, eventType) {
   return{moduleName:$moduleName, sessionId:$sessionId, subSystem:"rpc", evtGroup:this$static.requestId, method:method, millis:(new Date).getTime(), type:eventType}
 }
@@ -6484,7 +6484,7 @@ var requestIdCounter = _.requestId = 0;
 defineSeed(408, 1, {});
 _.methodMapNative = null;
 _.signatureMapNative = null;
-defineSeed(412, 274, makeCastMap([23, 28, Q$EventListener, 62, Q$HasWidgets, 65, 69, Q$Widget]));
+defineSeed(412, 274, makeCastMap([23, 28, Q$EventListener, 62, Q$HasWidgets, 65, 70, Q$Widget]));
 _.doAttachChildren = function() {
   tryCommand(this, ($clinit_AttachDetachException(), attachCommand))
 };
@@ -6517,14 +6517,14 @@ function $remove_1(this$static, w) {
   }
   return!0
 }
-defineSeed(411, 412, makeCastMap([23, 28, Q$EventListener, 62, Q$HasWidgets, 65, 69, Q$Widget]));
+defineSeed(411, 412, makeCastMap([23, 28, Q$EventListener, 62, Q$HasWidgets, 65, 70, Q$Widget]));
 _.iterator = function() {
   return new WidgetCollection$WidgetIterator_0(this.children)
 };
 _.remove = function(w) {
   return $remove_1(this, w)
 };
-defineSeed(410, 411, makeCastMap([23, 28, Q$EventListener, 62, Q$HasWidgets, 65, 69, Q$Widget]));
+defineSeed(410, 411, makeCastMap([23, 28, Q$EventListener, 62, Q$HasWidgets, 65, 70, Q$Widget]));
 _.remove = function(w) {
   var removed;
   if(removed = $remove_1(this, w)) {
@@ -6550,7 +6550,7 @@ function tryCommand(hasWidgets, c) {
       c.execute_2(e)
     }catch($e0) {
       if($e0 = caught_0($e0), instanceOf($e0, Q$Throwable)) {
-        e = $e0, !caught && (caught = new HashSet_0), $add_8(caught, e)
+        e = $e0, !caught && (caught = new HashSet_0), $add_9(caught, e)
       }else {
         throw $e0;
       }
@@ -6596,7 +6596,7 @@ function $setWidgetVisible(w, layer, visible) {
   layer.visible = visible;
   setVisible(w.element, visible)
 }
-defineSeed(416, 411, makeCastMap([23, 28, Q$EventListener, 62, Q$HasWidgets, 65, Q$RequiresResize, 69, Q$Widget]));
+defineSeed(416, 411, makeCastMap([23, 28, Q$EventListener, 62, Q$HasWidgets, 65, Q$RequiresResize, 70, Q$Widget]));
 _.onAttach = function() {
   $onAttach(this)
 };
@@ -6689,7 +6689,7 @@ function DeckPanel_0() {
   this.children = new WidgetCollection_0(this);
   this.element = $doc.createElement("div")
 }
-defineSeed(420, 411, makeCastMap([23, 28, Q$EventListener, 62, Q$HasWidgets, 65, 69, Q$Widget]), DeckPanel_0);
+defineSeed(420, 411, makeCastMap([23, 28, Q$EventListener, 62, Q$HasWidgets, 65, 70, Q$Widget]), DeckPanel_0);
 _.remove = function(w) {
   var container, removed;
   container = $getParentElement(w.element);
@@ -6763,8 +6763,8 @@ function FlowPanel_0() {
   this.children = new WidgetCollection_0(this);
   this.element = $doc.createElement("div")
 }
-defineSeed(423, 411, makeCastMap([23, 28, Q$EventListener, 62, Q$HasWidgets, 65, 69, Q$Widget]), FlowPanel_0);
-defineSeed(426, 274, makeCastMap([23, 28, Q$EventListener, 62, 65, 69, Q$Widget]));
+defineSeed(423, 411, makeCastMap([23, 28, Q$EventListener, 62, Q$HasWidgets, 65, 70, Q$Widget]), FlowPanel_0);
+defineSeed(426, 274, makeCastMap([23, 28, Q$EventListener, 62, 65, 70, Q$Widget]));
 _.directionalTextHelper = null;
 function Label_1(text) {
   this.element = $doc.createElement("div");
@@ -6772,7 +6772,7 @@ function Label_1(text) {
   this.element.className = "gwt-Label";
   $setTextOrHtml(this.directionalTextHelper, text, !1)
 }
-defineSeed(425, 426, makeCastMap([23, 28, Q$EventListener, 62, 65, 69, Q$Widget]), Label_1);
+defineSeed(425, 426, makeCastMap([23, 28, Q$EventListener, 62, 65, 70, Q$Widget]), Label_1);
 function HTML_0(html) {
   var element = $doc.createElement("div");
   $equalsIgnoreCase("span", element.tagName);
@@ -6781,7 +6781,7 @@ function HTML_0(html) {
   this.element.className = "gwt-HTML";
   $setTextOrHtml(this.directionalTextHelper, html, !0)
 }
-defineSeed(424, 425, makeCastMap([23, 28, Q$EventListener, 62, 65, 69, Q$Widget]), HTML_0);
+defineSeed(424, 425, makeCastMap([23, 28, Q$EventListener, 62, 65, 70, Q$Widget]), HTML_0);
 function $clinit_Image() {
   $clinit_Image = nullMethod;
   new HashMap_0
@@ -6792,7 +6792,7 @@ function Image_1(resource) {
   this.state = new Image$ClippedState_0(this, url, left, top_0, width, resource);
   this.element.className = "gwt-Image"
 }
-defineSeed(427, 274, makeCastMap([23, 28, Q$EventListener, 62, 65, 69, Q$Widget]), Image_1);
+defineSeed(427, 274, makeCastMap([23, 28, Q$EventListener, 62, 65, 70, Q$Widget]), Image_1);
 _.onBrowserEvent_0 = function(event_0) {
   32768 == $eventGetTypeInt(event_0.type) && this.state && (this.element.__gwtLastUnhandledEvent = "");
   $onBrowserEvent_0(this, event_0)
@@ -6871,7 +6871,7 @@ function LayoutPanel_0() {
   this.layout = new Layout_0(this.element);
   this.layoutCmd = new LayoutCommand_0(this.layout)
 }
-defineSeed(432, 411, makeCastMap([23, 28, Q$EventListener, 62, Q$HasWidgets, 65, Q$RequiresResize, 69, Q$Widget]), LayoutPanel_0);
+defineSeed(432, 411, makeCastMap([23, 28, Q$EventListener, 62, Q$HasWidgets, 65, Q$RequiresResize, 70, Q$Widget]), LayoutPanel_0);
 _.onAttach = function() {
   $onAttach(this)
 };
@@ -6917,7 +6917,7 @@ function declareShim() {
   }, src:"", style:{}, title:""};
   $wnd.GwtPotentialElementShim = shim
 }
-defineSeed(434, 273, makeCastMap([23, 28, Q$EventListener, 62, Q$IsRenderable, 65, Q$RequiresResize, 69, Q$Widget]));
+defineSeed(434, 273, makeCastMap([23, 28, Q$EventListener, 62, Q$IsRenderable, 65, Q$RequiresResize, 70, Q$Widget]));
 _.onResize_0 = function() {
   dynamicCast(this.widget, Q$RequiresResize).onResize_0()
 };
@@ -6925,7 +6925,7 @@ function RootLayoutPanel_0() {
   LayoutPanel_0.call(this);
   addResizeHandler(new RootLayoutPanel$1_0(this))
 }
-defineSeed(435, 432, makeCastMap([23, 28, Q$EventListener, 62, Q$HasWidgets, 65, Q$RequiresResize, 69, Q$Widget]), RootLayoutPanel_0);
+defineSeed(435, 432, makeCastMap([23, 28, Q$EventListener, 62, Q$HasWidgets, 65, Q$RequiresResize, 70, Q$Widget]), RootLayoutPanel_0);
 _.onLoad = function() {
   $fillParent(this.layout.parentElem)
 };
@@ -6944,7 +6944,7 @@ function $clinit_RootPanel() {
   rootPanels = new HashMap_0;
   widgetsToDetach = new HashSet_0
 }
-defineSeed(437, 410, makeCastMap([23, 28, Q$EventListener, 62, Q$HasWidgets, 65, Q$RootPanel, 69, Q$Widget]));
+defineSeed(437, 410, makeCastMap([23, 28, Q$EventListener, 62, Q$HasWidgets, 65, Q$RootPanel, 70, Q$Widget]));
 var maybeDetachCommand, rootPanels, widgetsToDetach;
 function RootPanel$1_0() {
 }
@@ -6969,7 +6969,7 @@ function RootPanel$DefaultRootPanel_0() {
   this.element = elem;
   $onAttach(this)
 }
-defineSeed(440, 437, makeCastMap([23, 28, Q$EventListener, 62, Q$HasWidgets, 65, Q$RootPanel, 69, Q$Widget]), RootPanel$DefaultRootPanel_0);
+defineSeed(440, 437, makeCastMap([23, 28, Q$EventListener, 62, Q$HasWidgets, 65, Q$RootPanel, 70, Q$Widget]), RootPanel$DefaultRootPanel_0);
 function $getMaximumHorizontalScrollPosition(scrollable) {
   return $isRtl(scrollable) ? 0 : (scrollable.scrollWidth || 0) - scrollable.clientWidth
 }
@@ -6983,6 +6983,12 @@ function ScrollImpl_0() {
 }
 defineSeed(441, 1, {}, ScrollImpl_0);
 var impl_3 = null;
+function $add_3(this$static, w) {
+  if(this$static.widget) {
+    throw new IllegalStateException_1("SimplePanel can only contain one child widget");
+  }
+  $setWidget(this$static, w)
+}
 function $remove_3(this$static, w) {
   if(this$static.widget != w) {
     return!1
@@ -7002,7 +7008,7 @@ function $setWidget(this$static, w) {
 function SimplePanel_0() {
   this.element = $doc.createElement("div")
 }
-defineSeed(443, 412, makeCastMap([23, 28, Q$EventListener, 62, Q$HasWidgets, 65, 69, Q$Widget]), SimplePanel_0);
+defineSeed(443, 412, makeCastMap([23, 28, Q$EventListener, 62, Q$HasWidgets, 65, 70, Q$Widget]), SimplePanel_0);
 _.getContainerElement = function() {
   return this.element
 };
@@ -7016,7 +7022,7 @@ _.setWidget = function(w) {
   $setWidget(this, w)
 };
 _.widget = null;
-function ScrollPanel_0(child) {
+function ScrollPanel_0() {
   SimplePanel_0.call(this);
   this.scrollableElem = this.element;
   this.containerElem = $doc.createElement("div");
@@ -7039,16 +7045,15 @@ function ScrollPanel_0(child) {
         scroller.attachHandlerReg && ($removeHandler(scroller.attachHandlerReg.real), scroller.attachHandlerReg = null);
         $removeBustClickHandler(scroller);
         scroller.widget = this;
-        this && (this.attached && ($removeBustClickHandler(scroller), scroller.bustClickHandlerReg = addNativePreviewHandler(new TouchScroller$6_0(scroller))), scroller.attachHandlerReg = $addHandler_2(this, new TouchScroller$1_0(scroller), (!TYPE_4 && (TYPE_4 = new GwtEvent$Type_0), TYPE_4)), $add_7(scroller.handlerRegs, $addDomHandler(this, new TouchScroller$2_0(scroller), ($clinit_TouchStartEvent(), $clinit_TouchStartEvent(), TYPE_3))), $add_7(scroller.handlerRegs, $addDomHandler(this, new TouchScroller$3_0(scroller), 
-        ($clinit_TouchMoveEvent(), $clinit_TouchMoveEvent(), TYPE_2))), $add_7(scroller.handlerRegs, $addDomHandler(this, new TouchScroller$4_0(scroller), ($clinit_TouchEndEvent(), $clinit_TouchEndEvent(), TYPE_1))), $add_7(scroller.handlerRegs, $addDomHandler(this, new TouchScroller$5_0(scroller), ($clinit_TouchCancelEvent(), $clinit_TouchCancelEvent(), TYPE_0))))
+        this && (this.attached && ($removeBustClickHandler(scroller), scroller.bustClickHandlerReg = addNativePreviewHandler(new TouchScroller$6_0(scroller))), scroller.attachHandlerReg = $addHandler_2(this, new TouchScroller$1_0(scroller), (!TYPE_4 && (TYPE_4 = new GwtEvent$Type_0), TYPE_4)), $add_8(scroller.handlerRegs, $addDomHandler(this, new TouchScroller$2_0(scroller), ($clinit_TouchStartEvent(), $clinit_TouchStartEvent(), TYPE_3))), $add_8(scroller.handlerRegs, $addDomHandler(this, new TouchScroller$3_0(scroller), 
+        ($clinit_TouchMoveEvent(), $clinit_TouchMoveEvent(), TYPE_2))), $add_8(scroller.handlerRegs, $addDomHandler(this, new TouchScroller$4_0(scroller), ($clinit_TouchEndEvent(), $clinit_TouchEndEvent(), TYPE_1))), $add_8(scroller.handlerRegs, $addDomHandler(this, new TouchScroller$5_0(scroller), ($clinit_TouchCancelEvent(), $clinit_TouchCancelEvent(), TYPE_0))))
       }
     }
     this.touchScroller = scroller
   }
-  !impl_3 && (impl_3 = new ScrollImpl_0);
-  $setWidget(this, child)
+  !impl_3 && (impl_3 = new ScrollImpl_0)
 }
-defineSeed(442, 443, makeCastMap([23, 28, Q$EventListener, 62, Q$HasWidgets, 65, Q$RequiresResize, 69, Q$Widget]), ScrollPanel_0);
+defineSeed(442, 443, makeCastMap([23, 28, Q$EventListener, 62, Q$HasWidgets, 65, Q$RequiresResize, Q$ScrollPanel, 70, Q$Widget]), ScrollPanel_0);
 _.getContainerElement = function() {
   return this.containerElem
 };
@@ -7097,7 +7102,7 @@ _.remove_1 = function() {
 };
 _.returned = null;
 _.this$0 = null;
-function $add_3(this$static, child, tab) {
+function $add_4(this$static, child, tab) {
   var beforeIndex = this$static.deckPanel.children.size, tab = new TabLayoutPanel$Tab_0(this$static, tab), idx;
   idx = $indexOf(this$static.deckPanel.children, child);
   -1 != idx && ($remove_5(this$static, child), idx < beforeIndex && --beforeIndex);
@@ -7113,7 +7118,7 @@ function $add_3(this$static, child, tab) {
   $setParent_0(child, idx);
   idx = idx.layoutCmd;
   $schedule_0(idx, 0, new DeckLayoutPanel$DeckAnimateCommand$1_0(idx));
-  $add_6(this$static.tabs, beforeIndex, tab);
+  $add_7(this$static.tabs, beforeIndex, tab);
   idx = this$static.tabBar;
   before = idx.element;
   children = beforeIndex;
@@ -7210,7 +7215,7 @@ function TabLayoutPanel_0(barHeight, barUnit) {
   this.tabBar.element.className = "gwt-TabLayoutPanelTabs";
   this.element.className = "gwt-TabLayoutPanel"
 }
-defineSeed(445, 434, makeCastMap([23, 28, Q$EventListener, 62, Q$HasWidgets, Q$IsRenderable, 65, Q$RequiresResize, 69, Q$Widget]), TabLayoutPanel_0);
+defineSeed(445, 434, makeCastMap([23, 28, Q$EventListener, 62, Q$HasWidgets, Q$IsRenderable, 65, Q$RequiresResize, 70, Q$Widget]), TabLayoutPanel_0);
 _.iterator = function() {
   return new WidgetCollection$WidgetIterator_0(this.deckPanel.children)
 };
@@ -7248,7 +7253,7 @@ function TabLayoutPanel$Tab_0(this$0, child) {
   style.injected || (style.injected = !0, $clinit_StyleInjector(), style = toInject, style[style.length] = ".GPBYFDEH{position:relative;display:inline-block;}", schedule());
   $addClassName(JSCompiler_temp_const, "GPBYFDEH")
 }
-defineSeed(447, 443, makeCastMap([23, 28, Q$EventListener, 62, Q$HasWidgets, 65, Q$TabLayoutPanel$Tab, 69, Q$Widget]), TabLayoutPanel$Tab_0);
+defineSeed(447, 443, makeCastMap([23, 28, Q$EventListener, 62, Q$HasWidgets, 65, Q$TabLayoutPanel$Tab, 70, Q$Widget]), TabLayoutPanel$Tab_0);
 _.getContainerElement = function() {
   return this.inner
 };
@@ -7272,7 +7277,7 @@ function TabLayoutPanel$TabbedDeckLayoutPanel_0(this$0) {
   this.layout = new Layout_0(this.element);
   this.layoutCmd = new DeckLayoutPanel$DeckAnimateCommand_0(this, this.layout)
 }
-defineSeed(448, 416, makeCastMap([23, 28, Q$EventListener, 62, Q$HasWidgets, 65, Q$RequiresResize, 69, Q$Widget]), TabLayoutPanel$TabbedDeckLayoutPanel_0);
+defineSeed(448, 416, makeCastMap([23, 28, Q$EventListener, 62, Q$HasWidgets, 65, Q$RequiresResize, 70, Q$Widget]), TabLayoutPanel$TabbedDeckLayoutPanel_0);
 _.remove = function(w) {
   return $remove_5(this.this$0, w)
 };
@@ -7364,7 +7369,7 @@ function $addDataDisplay(this$static, display) {
   }else {
     throw new IllegalArgumentException_1("display cannot be null");
   }
-  $add_8(this$static.displays, display);
+  $add_9(this$static.displays, display);
   handler = display.presenter;
   var handler$$0 = new AbstractDataProvider$1_0(this$static, display), type = (!TYPE_15 && (TYPE_15 = new GwtEvent$Type_0), TYPE_15);
   handler = $addHandler_2(handler.view.hasData, handler$$0, type);
@@ -7390,14 +7395,14 @@ function $updateRowData_0(display, start, values) {
     curStart = curStart < start ? start : curStart, start = values.subList(curStart - start, curStart - start + ((curEnd > end ? end : curEnd) - curStart)), display.setRowData(curStart, start)
   }
 }
-defineSeed(456, 1, makeCastMap([71, 75]));
+defineSeed(456, 1, makeCastMap([72, 76]));
 _.lastRowCount = -1;
 _.lastRowCountExact = !1;
 function AbstractDataProvider$1_0(this$0, val$display) {
   this.this$0 = this$0;
   this.val$display = val$display
 }
-defineSeed(457, 1, makeCastMap([Q$EventHandler, 77]), AbstractDataProvider$1_0);
+defineSeed(457, 1, makeCastMap([Q$EventHandler, 78]), AbstractDataProvider$1_0);
 _.this$0 = null;
 _.val$display = null;
 function CellPreviewEvent_0(nativeEvent, display, context, isCellEditing) {
@@ -7408,7 +7413,7 @@ function CellPreviewEvent_0(nativeEvent, display, context, isCellEditing) {
 }
 defineSeed(458, 130, {}, CellPreviewEvent_0);
 _.dispatch = function(handler) {
-  dynamicCast(handler, 72).onCellPreview(this)
+  dynamicCast(handler, 73).onCellPreview(this)
 };
 _.getAssociatedType = function() {
   return TYPE_14
@@ -7421,7 +7426,7 @@ _.isSelectionHandled = !1;
 var TYPE_14 = _.nativeEvent = null;
 function DefaultSelectionEventManager_0() {
 }
-defineSeed(459, 1, makeCastMap([Q$EventHandler, 72]), DefaultSelectionEventManager_0);
+defineSeed(459, 1, makeCastMap([Q$EventHandler, 73]), DefaultSelectionEventManager_0);
 _.onCellPreview = function() {
 };
 function ListDataProvider_0(listToWrap) {
@@ -7432,9 +7437,9 @@ function ListDataProvider_1(listToWrap) {
   this.rangeChangeHandlers = new HashMap_0;
   this.listWrapper = new ListDataProvider$ListWrapper_0(this, listToWrap)
 }
-defineSeed(460, 456, makeCastMap([71, 74, 75]), ListDataProvider_0);
+defineSeed(460, 456, makeCastMap([72, 75, 76]), ListDataProvider_0);
 _.listWrapper = null;
-function $add_5(this$static, e) {
+function $add_6(this$static, e) {
   var toRet;
   toRet = this$static.list.add(e);
   var x = this$static.minModified, y = this$static.list.size_0() - 1;
@@ -7481,7 +7486,7 @@ function ListDataProvider$ListWrapper_1(this$0, list, delegate, offset) {
 }
 defineSeed(461, 1, makeCastMap([Q$List]), ListDataProvider$ListWrapper_0, ListDataProvider$ListWrapper_1);
 _.add = function(e) {
-  return $add_5(this, e)
+  return $add_6(this, e)
 };
 _.contains_0 = function(o) {
   return this.list.contains_0(o)
@@ -7644,7 +7649,7 @@ function RangeChangeEvent_0() {
 }
 defineSeed(465, 130, {}, RangeChangeEvent_0);
 _.dispatch = function(handler) {
-  var handler$$0 = dynamicCast(handler, 77), handler = handler$$0.this$0, handler$$0 = handler$$0.val$display;
+  var handler$$0 = dynamicCast(handler, 78), handler = handler$$0.this$0, handler$$0 = handler$$0.val$display;
   0 < handler.listWrapper.list.size_0() && $updateRowData_0(handler$$0, 0, handler.listWrapper)
 };
 _.getAssociatedType = function() {
@@ -7735,7 +7740,7 @@ function PhoneGapAvailableEvent_0() {
 }
 defineSeed(477, 130, {}, PhoneGapAvailableEvent_0);
 _.dispatch = function(handler) {
-  handler = dynamicCast(handler, 80);
+  handler = dynamicCast(handler, 81);
   $info(handler.this$0.m_log.impl, "PhoneGap loaded.");
   $clinit_CM3();
   m_phoneGap = handler.val$phoneGap;
@@ -7801,7 +7806,7 @@ function PhoneGapTimeoutEvent_0() {
 }
 defineSeed(480, 130, {}, PhoneGapTimeoutEvent_0);
 _.dispatch = function(handler) {
-  handler = dynamicCast(handler, 81);
+  handler = dynamicCast(handler, 82);
   $info(handler.this$0.m_log.impl, "Unable to initialize PhoneGap, running in browser mode.");
   $initializeApp(handler.this$0)
 };
@@ -7984,7 +7989,7 @@ function PauseEvent_0() {
 }
 defineSeed(493, 130, {}, PauseEvent_0);
 _.dispatch = function(handler) {
-  handler = dynamicCast(handler, 82);
+  handler = dynamicCast(handler, 83);
   handler.this$0.m_updater && $cancel_0(handler.this$0.m_updater.m_timer)
 };
 _.getAssociatedType = function() {
@@ -8000,7 +8005,7 @@ function ResumeEvent_0() {
 }
 defineSeed(494, 130, {}, ResumeEvent_0);
 _.dispatch = function(handler) {
-  handler = dynamicCast(handler, 83);
+  handler = dynamicCast(handler, 84);
   handler.this$0.m_updater && $schedule(new AjaxUpdater$3_0(handler.this$0.m_updater), 2E3)
 };
 _.getAssociatedType = function() {
@@ -8143,9 +8148,9 @@ function PhoneGapLogStandardImpl_0() {
   $clinit_PhoneGapLogStandardImpl();
   var consoleHandler;
   consoleHandler = new PhoneGapConsoleLogHandler_0;
-  $add_7(rootLogger.impl.handlers, consoleHandler);
+  $add_8(rootLogger.impl.handlers, consoleHandler);
   consoleHandler = new PhoneGapRemoteBatchLogHandler_0;
-  $add_7(rootLogger.impl.handlers, consoleHandler);
+  $add_8(rootLogger.impl.handlers, consoleHandler);
   consoleHandler && (this.remoteHandler = consoleHandler)
 }
 defineSeed(502, 1, {}, PhoneGapLogStandardImpl_0);
@@ -8154,7 +8159,7 @@ var rootLogger;
 function PhoneGapRemoteBatchLogHandler_0() {
   $clinit_RemoteLogHandlerBase();
   this.excludedLoggerNames = new ArrayList_0;
-  $add_7(this.excludedLoggerNames, "WireActivityLogger");
+  $add_8(this.excludedLoggerNames, "WireActivityLogger");
   this.logRecords = new LinkedList_0;
   this.service = new PhoneGapLogService_Proxy_0;
   this.maxEntries = 100;
@@ -8495,7 +8500,7 @@ function $processEventJson(this$static, jsonString) {
   favorites = new ArrayList_0;
   jsEvents = data.favorites && data.favorites.favorite ? data.favorites.favorite instanceof Array ? data.favorites.favorite : [data.favorites.favorite] : [];
   for(i = 0;i < jsEvents.length;++i) {
-    events = jsEvents[i], $add_7(favorites, events["@event"])
+    events = jsEvents[i], $add_8(favorites, events["@event"])
   }
   events = new ArrayList_0;
   jsEvents = data.events && data.events.event ? data.events.event instanceof Array ? data.events.event : [data.events.event] : [];
@@ -8532,7 +8537,7 @@ function $processEventJson(this$static, jsonString) {
       }
     }
     for(entry$iterator = $iterator_0(new AbstractMap$2_0(jsEvents, new AbstractHashMap$EntrySet_0(jsEvents)));$hasNext(entry$iterator.val$outerIter.iter);) {
-      entry = dynamicCastAllowJso($next_3(entry$iterator.val$outerIter).getValue()), data.m_filter.matches(dynamicCastJso(entry)) && $add_5(isFavorite, entry)
+      entry = dynamicCastAllowJso($next_3(entry$iterator.val$outerIter).getValue()), data.m_filter.matches(dynamicCastJso(entry)) && $add_6(isFavorite, entry)
     }
     jsEvents = isFavorite;
     entry = data.m_comparator;
@@ -8606,7 +8611,7 @@ _.run = function() {
   $remove_14(timers, this$static);
   this$static.isRepeating = !0;
   this$static.timerId = createInterval(this$static, periodMillis);
-  $add_7(timers, this$static)
+  $add_8(timers, this$static)
 };
 _.this$0 = null;
 function $clinit_CM3() {
@@ -8627,9 +8632,9 @@ function $createTable() {
   return table
 }
 function $initializeApp(this$static) {
-  var amenityData, connection, deckData, deckTable, myTable, officialData, officialTable, panel, publicData, publicTable, root, cell_0, table_0, column_0;
+  var amenityData, connection, deckData, deckTable, myData, officialData, officialTable, column;
   try {
-    officialData = m_phoneGap, !officialData.connection_0 && (officialData.connection_0 = new ConnectionMobileImpl_0), connection = $wnd.navigator.network.connection.type, $info(this$static.m_log.impl, "connection: " + connection)
+    amenityData = m_phoneGap, !amenityData.connection_0 && (amenityData.connection_0 = new ConnectionMobileImpl_0), connection = $wnd.navigator.network.connection.type, $info(this$static.m_log.impl, "connection: " + connection)
   }catch($e0) {
     if($e0 = caught_0($e0), instanceOf($e0, Q$Throwable)) {
       $info(this$static.m_log.impl, "Failed to get connection info, assuming PhoneGap is not available."), m_phoneGap = null
@@ -8637,128 +8642,144 @@ function $initializeApp(this$static) {
       throw $e0;
     }
   }
-  panel = new TabLayoutPanel_0(36, ($clinit_Style$Unit(), PX));
-  $addHandler_2(panel, new CM3$5_0, (!TYPE_7 && (TYPE_7 = new GwtEvent$Type_0), TYPE_7));
-  officialData = new FilteredListDataProvider_0(new CM3$6_0, this$static.m_eventComparator);
-  officialTable = $createTable();
-  $addDataDisplay(officialData, officialTable);
-  publicData = new FilteredListDataProvider_0(new CM3$7_0, this$static.m_eventComparator);
-  publicTable = $createTable();
-  $addDataDisplay(publicData, publicTable);
-  connection = new FilteredListDataProvider_0(new CM3$8_0, this$static.m_eventComparator);
-  myTable = $createTable();
-  $addDataDisplay(connection, myTable);
+  connection = new TabLayoutPanel_0(36, ($clinit_Style$Unit(), PX));
+  $addHandler_2(connection, new CM3$5_0, (!TYPE_7 && (TYPE_7 = new GwtEvent$Type_0), TYPE_7));
+  $add_4(connection, new ScrollPanel_0, new HTML_0('<div class="icon icon-official-events"></div><div class="tabLabel">Official Events</div>'));
+  $add_4(connection, new ScrollPanel_0, new HTML_0('<div class="icon icon-public-events"></div><div class="tabLabel">Public Events</div>'));
+  $add_4(connection, new ScrollPanel_0, new HTML_0('<div class="icon icon-my-events"></div><div class="tabLabel">My Events</div>'));
+  $add_4(connection, new ScrollPanel_0, new HTML_0('<div class="icon icon-amenities"></div><div class="tabLabel">Amenities</div>'));
+  $add_4(connection, new ScrollPanel_0, new HTML_0('<div class="icon icon-decks"></div><div class="tabLabel">Deck Plans</div>'));
+  if(!singleton_0) {
+    singleton_0 = new RootLayoutPanel_0;
+    $clinit_RootPanel();
+    $clinit_RootPanel();
+    amenityData = dynamicCast($get_4(rootPanels, null), Q$RootPanel);
+    amenityData || (0 == rootPanels.size && (amenityData = new RootPanel$2_0, maybeInitializeCloseHandlers(), addHandler(TYPE_5 ? TYPE_5 : TYPE_5 = new GwtEvent$Type_0, amenityData), $clinit_LocaleInfo()), amenityData = new RootPanel$DefaultRootPanel_0, $put_1(rootPanels, null, amenityData), $add_9(widgetsToDetach, amenityData));
+    var child = singleton_0, container = amenityData.element;
+    $removeFromParent_0(child);
+    var this$static$$0 = amenityData.children;
+    $insert_7(this$static$$0, child, this$static$$0.size);
+    appendChild(container, child.element);
+    $setParent_0(child, amenityData)
+  }
+  amenityData = singleton_0;
+  $insert_4(amenityData, connection, amenityData.children.size);
+  amenityData = m_phoneGap;
+  !amenityData.splashScreen && (amenityData.splashScreen = new SplashScreenMobileImpl_0);
+  $wnd.navigator.splashscreen.hide();
+  amenityData = m_storage_0;
+  (amenityData = !amenityData.m_storageMap || !$containsKey(amenityData.m_storageMap, "ui.tab_selection") ? null : valueOf(__parseAndValidateInt($get_0(amenityData.m_storageMap, "ui.tab_selection")))) && $selectTab(connection, amenityData.value);
   amenityData = new ArrayList_0;
-  $add_7(amenityData, new Venue_0(valueOf(2), "Arcadia Theatre (2nd Deck)", "Our theatre - five stories from the orchestra pit to domed ceiling - features contemporary musical stage productions."));
-  $add_7(amenityData, new Venue_0(valueOf(2), "Conference Center", "Our comfortable conference center features state-of-the-art presentation equipment and a variety of meeting rooms."));
-  $add_7(amenityData, new Miscellaneous_0(valueOf(2), "Center Ice Rink", "Inside Studio B, the ice rink offers skating as well as ice shows."));
-  $add_7(amenityData, new Venue_0(valueOf(2), "Studio B (2nd Deck)", "A multipurpose studio complex filled with activity all day long, from ice-skating to cooking demonstrations."));
-  $add_7(amenityData, new Venue_0(valueOf(3), "Arcadia Theatre (3rd Deck)", "Our theatre - five stories from the orchestra pit to domed ceiling - features contemporary musical stage productions."));
-  $add_7(amenityData, new Bar_0(valueOf(3), "The Crypt (3rd Deck)", "The Crypt's decor is true to its name: the area features spiked window frames, paintings of fantasy warriors, pictures of people from the dark ages, and gargoyle statues. The bar stools are pointed, the railings look like a part of an ancient church, and even the lights look like torches. Along the walls are armchairs and small glass tables. The club is two levels high and the dance floor is on the lower level so people upstairs can watch the action below. both bars, upstairs and downstairs, are made of chrome and milky glass with lights. The Crypt opens around 8pm for teen and kid's parties, but it is open for adults only later in the evening."));
-  $add_7(amenityData, new Venue_0(valueOf(3), "Studio B (3rd Deck)", "A multipurpose studio complex filled with activity all day long, from ice-skating to cooking demonstrations."));
-  $add_7(amenityData, new Bar_0(valueOf(3), "On Air", "Grab a microphone and get to singing! This karaoke club will provide hours of endless entertainment; sing the classics or watch your friends embarrass themselves on stage! It's a win-win situation at On Air Club."));
-  $add_7(amenityData, new Miscellaneous_0(valueOf(3), "RCTV", "RCTV is the television/internet/communications control room.  Look through the glass to see the master control for the entire ship."));
-  $add_7(amenityData, new Miscellaneous_0(valueOf(3), "Art Gallery", "Original art is displayed in the onboard art gallery as well as throughout the ship. To purchase something for your own collection, visit an onboard art auction."));
-  $add_7(amenityData, new Miscellaneous_0(valueOf(3), "Terra", "A dining room area used for overflow, or as a meeting room."));
-  $add_7(amenityData, new Miscellaneous_0(valueOf(3), "Cielo", "A dining room area used for overflow, or as a meeting room."));
-  $add_7(amenityData, new Food_0(valueOf(3), "Leonardo Dining Room", "Our three-tier dining room features a wide variety of menu items and impeccable service."));
-  $add_7(amenityData, new Venue_0(valueOf(4), "Arcadia Theatre (4th Deck)", "Our theatre - five stories from the orchestra pit to domed ceiling - features contemporary musical stage productions."));
-  $add_7(amenityData, new Bar_0(valueOf(4), "The Crypt (4th Deck)", "The Crypt's decor is true to its name: the area features spiked window frames, paintings of fantasy warriors, pictures of people from the dark ages, and gargoyle statues. The bar stools are pointed, the railings look like a part of an ancient church, and even the lights look like torches. Along the walls are armchairs and small glass tables. The club is two levels high and the dance floor is on the lower level so people upstairs can watch the action below. both bars, upstairs and downstairs, are made of chrome and milky glass with lights. The Crypt opens around 8pm for teen and kid's parties, but it is open for adults only later in the evening."));
-  $add_7(amenityData, new Bar_0(valueOf(4), "Schooner Bar", "This nautically themed bar is the perfect spot to enjoy a drink with friends."));
-  $add_7(amenityData, new Miscellaneous_0(valueOf(4), "Casino Royale", "Our glittering casino features electronic Slot Machines, Video Poker, Blackjack, Craps, Roulette and Caribbean Stud Poker."));
-  $add_7(amenityData, new Shopping_0(valueOf(4), "Photo Gallery and Shop", "View and purchase photos of your family that Royal Caribbean's staff has taken on board and in port! You can also purchase a dvd of the photos as well to show off what a great time you had to all your friends and family back home."));
-  $add_7(amenityData, new Bar_0(valueOf(4), "Boleros Lounge", "Follow the Latin beat and find yourself in a nighttime hot spot where you can keep up with live music and cool down n with a mojito or caipirinha."));
-  $add_7(amenityData, new Food_0(valueOf(4), "Isaac Dining Room", "Our three-tier dining room features a wide variety of menu items and impeccable service."));
-  $add_7(amenityData, new Miscellaneous_0(valueOf(5), "Observation Deck", 'A wind-blown perch where you\'ll have views and photo-ops of "titanic" proportions.'));
-  $add_7(amenityData, new Miscellaneous_0(valueOf(5), "Outdoor Deck", null));
-  $add_7(amenityData, new Venue_0(valueOf(5), "Pharaoh's Palace", "Enjoy live music, cocktails, and fun, exciting trivia games in this lounge. Pharaoh's Palace has kitschy Egyptian d\u00e9cor including sarcophaguses and sphinx statues! Check your Cruise Compass and Daily Planner for more information on performances and games."));
-  $add_7(amenityData, new Bar_0(valueOf(5), "Connoisseur Club", "A classic cigar lounge in the style of a modern gentleman's club, the connoisseur club is a great place to have a smoke and a cocktail."));
-  $add_7(amenityData, new Food_0(valueOf(5), "Sorrento's", "When you find yourself craving pizza, drop by Sorrento's for a piping hot slice."));
-  $add_7(amenityData, new Bar_0(valueOf(5), "Bull and Bear Pub", "The ship's version of an English pub, The Bull and Bear is located centrally on deck five, featuring vintage wooden d\u00e9cor to give a friendly vibe while you relax with a drink or have a quick snack."));
-  $add_7(amenityData, new Shopping_0(valueOf(5), "Promenade Shops", "Distinctive storefronts offer an array of merchandise ranging from logo items, perfume and jewelry to liquor and cruise wear."));
-  $add_7(amenityData, new Bar_0(valueOf(5), "Vintages", "A classic wine and tapas bar with an extensive list of wines from worldwide. Guests may also participate in wine tastings and classes \u2013 check your Cruise Compass and Daily Planner for exact times."));
-  $add_7(amenityData, new Shopping_0(valueOf(5), "Royal Promenade", "This boulevard centrally located on deck five is ship's version of 5th avenue \u2013 full of a variety of shops and restaurants."));
-  $add_7(amenityData, new Food_0(valueOf(5), "Ben and Jerry's Ice Cream Parlor", "Satisfy your sweet tooth with a smoothie or a waffle cone of various flavors of Ben and Jerry's rich ice cream!"));
-  $add_7(amenityData, new Food_0(valueOf(5), "Caf\u00e9 Promenade", "A strip of the Royal promenade specifically designated for in between meal snacking with additional seating."));
-  $add_7(amenityData, new Food_0(valueOf(5), "Cupcake Cupboard", "Have some fun and grab a cupcake before, after, or in between meals at the Cupcake Cupboard! With specialty flavors such as bubblegum, red velvet, and even root beer \u2013 there's a featured flavor each day of the trip! Guests can also participate in cupcake making and decorating classes!"));
-  $add_7(amenityData, new Shopping_0(valueOf(5), "Britto Art Gallery", "The spirited works of iconic pop artist Romero Britto saturate this engaging and interactive space, where shoppers may peruse a wide array of artwork, giftware, collectibles and luggage, including limited edition custom works created by Britto exclusively for Royal Caribbean guests."));
-  $add_7(amenityData, new Miscellaneous_0(valueOf(5), "Guest Relations", "The place to go for general ship information, to report lost or damaged goods, to exchange money or cash traveler's checks."));
-  $add_7(amenityData, new Miscellaneous_0(valueOf(5), "Explorations!", "Book your shore excursions at the Explorations! Desk."));
-  $add_7(amenityData, new Bar_0(valueOf(5), "Champagne Bar", "A classic lounge-inspired bar that has an air of elegance where you can satisfy yourself with a glass of bubbly to celebrate a great vacation."));
-  $add_7(amenityData, new Food_0(valueOf(5), "Galileo Dining Room", "Our three-tier dining room features a wide variety of menu items and impeccable service."));
-  $add_7(amenityData, new Miscellaneous_0(valueOf(6), "Business Services", "Computers for browsing the Internet and complimentary printing are available to meet your business needs."));
-  $add_7(amenityData, new Miscellaneous_0(valueOf(7), "Library", "Our onboard library features comfortable reading chairs as well as an impressive selection of books and guidebooks."));
-  $add_7(amenityData, new Miscellaneous_0(valueOf(8), "Royal Caribbean Online", "It's high tech on the high seas! With royalcaribbean online, for a small fee you can access the Internet, send e-mails, or send your family an e-postcard with your picture in it."));
-  $add_7(amenityData, new Bar_0(valueOf(10), "Concierge Club", "Only accessible to those who have booked the larger suites, the concierge club gives extra leisure to guests in a semi-exclusive lounge."));
-  $add_7(amenityData, new Fitness_0(valueOf(11), "Vitality at Sea Spa and Fitness Center", "Our seaside fitness center features modern exercise equipment. And our full-service spa offers a beauty salon and spa treatments, including massage, manicures and seaweed body wraps."));
-  $add_7(amenityData, new Pool_0(valueOf(11), "Solarium", "Escape the general pool population and head to the Solarium to bask in the more relaxed adults only swimming pool and cantilevered whirlpools. Encompassed by glass the clean, contemporary design provides a perfect area for sunbathing and swimming."));
-  $add_7(amenityData, new Pool_0(valueOf(11), "Whirlpool", null));
-  $add_7(amenityData, new Bar_0(valueOf(11), "Pool Bar", "Throw back a few drinks after swimming in the main pool or take one to your deck chair while you soak up some sun."));
-  $add_7(amenityData, new Pool_0(valueOf(11), "Main Pool", "Salt-water pool for guests to enjoy twenty-four hours a day."));
-  $add_7(amenityData, new Pool_0(valueOf(11), "Sports Pool", "A salt-water pool designated for water sports, join in on a game of volleyball or a class of water aerobics. Lap swim times are also available but are subject to change \u2013 check your Cruise Compass and Daily Planner."));
-  $add_7(amenityData, new Pool_0(valueOf(11), "H2O Zone", "A bright, colorful water play area, H2O Zone is where your kids will want to be the entire trip! Water spigots, sprinklers, geysers, and even water cannons!  At night this area turns into a beautifully lit sculpture garden."));
-  $add_7(amenityData, new Bar_0(valueOf(11), "Squeeze", "Quench your thirst after swimming laps on the pool deck at Squeeze. This juice bar has a variety of fruit juices, wheat grass shots, and energy shakes!"));
-  $add_7(amenityData, new Shopping_0(valueOf(11), "SeaTrek Dive Shop", "Whether you're a seasoned pro or a beginner, you can rent gear and take courses at this shop to properly prepare yourself for any scuba excursions you plan to go on during your vacation. Full PADI certificate courses available as well as tune up refresher courses."));
-  $add_7(amenityData, new Food_1(valueOf(11), "Chops Grille", "Royal's signature upscale steak house, Chops Grille provides a palatable dinner with a classic menu. Have a fresh salad and juicy steak followed by a delectable slice of chocolate mud pie."));
-  $add_7(amenityData, new Food_1(valueOf(11), "Portofino", "A classic, intimate Italian restaurant where you can feed upon some of the finest pastas, soups, and salads on board. Finish the night off by sharing a slice of scrumptious tiramisu with a glass of fine wine."));
-  $add_7(amenityData, new Bar_0(valueOf(11), "Plaza Bar", "Cocktail bar in the middle of deck eleven conveniently sandwiched between several other dining options."));
-  $add_7(amenityData, new Food_0(valueOf(11), "Windjammer Caf\u00e9", "Casual buffet style dining, a popular choice among guests. Open for several meals a day, guests can satisfy any craving they come across during their trip."));
-  $add_7(amenityData, new Fitness_0(valueOf(12), "Vitality at Sea Spa and Fitness Center", "Our seaside fitness center features modern exercise equipment. And our full-service spa offers a beauty salon and spa treatments, including massage, manicures and seaweed body wraps."));
-  $add_7(amenityData, new Bar_0(valueOf(12), "Sky Bar", "Catch a drink in the sun at this small ocean blue bar and people watch from plush white stools."));
-  $add_7(amenityData, new Fitness_0(valueOf(12), "Jogging Track", "Run laps while taking in the view. Our tracks are open to anyone and proper shoes are recommended."));
-  $add_7(amenityData, new Miscellaneous_0(valueOf(12), "Outdoor Movie Screen", "Watch first-run movies and big time sporting events the way they were meant to be seen - poolside, under the stars. A screen hoisted above the main pool area will showcase all the larger-than-life action."));
-  $add_7(amenityData, new Miscellaneous_0(valueOf(12), "Royal Babies and Tots Nursery", "Parents love our new colorful nursery where our littlest guests can be left in the care of our trained professionals, to enjoy specially-designed programming and playgroups designed by Fisher-Price and Crayola."));
-  $add_7(amenityData, new Miscellaneous_0(valueOf(12), "The Living Room", "A laid-back place for teens to hang out with new friends."));
-  $add_7(amenityData, new Miscellaneous_0(valueOf(12), "Video Arcade", "Blips, bleeps, clangs and cheers. Play to win in a classic arcade atmosphere with timeless games like Pacman and table hockey, plus the latest \u2013 Guitar Hero, Fast and Furious Drift and more."));
-  $add_7(amenityData, new Miscellaneous_0(valueOf(12), "Adventure Ocean", "A play area with specially designed activities for kids ages 3-17. Run by exceptional, energetic, college-educated staff."));
-  $add_7(amenityData, new Food_0(valueOf(12), "Johnny Rockets", "Step into our '50s diner, which features red naugahyde booths, formica counters, a jukebox, burgers, fries and, of course, good old-fashioned malted milk shakes."));
-  $add_7(amenityData, new Miscellaneous_0(valueOf(12), "Fuel Teen Disco", "A teens-only club where they can gather, dance and enjoy music."));
-  $add_7(amenityData, new Miscellaneous_0(valueOf(13), "Rock Climbing Wall", "This is the largest of our rock-climbing walls: a 43-foot-tall by 44-foot-wide freestanding wall with a central spire. Plus, with eleven different routes to choose from, our rock-climbing wall offers skill combinations for all levels."));
-  $add_7(amenityData, new Fitness_0(valueOf(13), "Sports Court", "An outdoor full-size court for sports, including basketball and volleyball."));
-  $add_7(amenityData, new Miscellaneous_0(valueOf(13), "Golf Simulator", "Being at sea making you miss the green? The golf simulator can give golf pros their fix until they reach land!"));
-  $add_7(amenityData, new Miscellaneous_0(valueOf(13), "Freedom Fairways", "A nine-hole miniature golf course with whimsical shrubbery and lighting open 24 hours for the entire family to enjoy at any time they please."));
-  $add_7(amenityData, new Miscellaneous_0(valueOf(13), "Wipe Out! Caf\u00e9", "Grab a bite to eat at this casual caf\u00e9 on the pool deck while you watch people wipe out on their surf boards at the FlowRider station."));
-  $add_7(amenityData, new Pool_0(valueOf(13), "FlowRider Surfing", "Your friends are never going to believe you surfed onboard a ship! Even the best beaches have bad days, but on the FlowRider, surf's always up. Plus, the FlowRider is great fun for all ages and all skill levels, whether you're boogie boarding or surfing."));
-  $add_7(amenityData, new Bar_0(valueOf(14), "Olive or Twist", "A classic martini bar encompassed by floor to ceiling windows for great panoramic views. Live music also occurs nightly here."));
-  $add_7(amenityData, new Miscellaneous_0(valueOf(14), "Cloud Nine", "A quiet space to work and have meetings, Cloud Nine is a multipurpose room that is often used as a reception area for weddings on the ship."));
-  $add_7(amenityData, new Miscellaneous_0(valueOf(14), "Seven Hearts", "A small room dedicated for the fun of playing card games \u2013 separate from the casino on a lower deck. Seven Hearts boasts classic felt tables and board games in addition to cards."));
-  $add_7(amenityData, new Bar_0(valueOf(14), "Viking Crown Lounge", "A Royal Caribbean signature. Perched high above the ocean, this comfortable lounge offers spectacular vistas by day and turns into a lively dance club at night."));
-  $add_7(amenityData, new Bar_0(valueOf(14), "Diamond Club", "Diamond, Diamond Plus, and Pinnacle Club Crown and Anchor Society members enjoy access to this lounge, created to serve these loyal guests with concierge access, complimentary continental breakfast, and evening drinks."));
-  $add_7(amenityData, new Miscellaneous_0(valueOf(15), "Skylight Chapel", 'Our wedding chapel, which can accommodate 40 people, is located on top of the Viking Crown Lounge (the highest point on the ship), and is the perfect place to say "I do."'));
+  $add_8(amenityData, new Venue_0(valueOf(2), "Arcadia Theatre (2nd Deck)", "Our theatre - five stories from the orchestra pit to domed ceiling - features contemporary musical stage productions."));
+  $add_8(amenityData, new Venue_0(valueOf(2), "Conference Center", "Our comfortable conference center features state-of-the-art presentation equipment and a variety of meeting rooms."));
+  $add_8(amenityData, new Miscellaneous_0(valueOf(2), "Center Ice Rink", "Inside Studio B, the ice rink offers skating as well as ice shows."));
+  $add_8(amenityData, new Venue_0(valueOf(2), "Studio B (2nd Deck)", "A multipurpose studio complex filled with activity all day long, from ice-skating to cooking demonstrations."));
+  $add_8(amenityData, new Venue_0(valueOf(3), "Arcadia Theatre (3rd Deck)", "Our theatre - five stories from the orchestra pit to domed ceiling - features contemporary musical stage productions."));
+  $add_8(amenityData, new Bar_0(valueOf(3), "The Crypt (3rd Deck)", "The Crypt's decor is true to its name: the area features spiked window frames, paintings of fantasy warriors, pictures of people from the dark ages, and gargoyle statues. The bar stools are pointed, the railings look like a part of an ancient church, and even the lights look like torches. Along the walls are armchairs and small glass tables. The club is two levels high and the dance floor is on the lower level so people upstairs can watch the action below. both bars, upstairs and downstairs, are made of chrome and milky glass with lights. The Crypt opens around 8pm for teen and kid's parties, but it is open for adults only later in the evening."));
+  $add_8(amenityData, new Venue_0(valueOf(3), "Studio B (3rd Deck)", "A multipurpose studio complex filled with activity all day long, from ice-skating to cooking demonstrations."));
+  $add_8(amenityData, new Bar_0(valueOf(3), "On Air", "Grab a microphone and get to singing! This karaoke club will provide hours of endless entertainment; sing the classics or watch your friends embarrass themselves on stage! It's a win-win situation at On Air Club."));
+  $add_8(amenityData, new Miscellaneous_0(valueOf(3), "RCTV", "RCTV is the television/internet/communications control room.  Look through the glass to see the master control for the entire ship."));
+  $add_8(amenityData, new Miscellaneous_0(valueOf(3), "Art Gallery", "Original art is displayed in the onboard art gallery as well as throughout the ship. To purchase something for your own collection, visit an onboard art auction."));
+  $add_8(amenityData, new Miscellaneous_0(valueOf(3), "Terra", "A dining room area used for overflow, or as a meeting room."));
+  $add_8(amenityData, new Miscellaneous_0(valueOf(3), "Cielo", "A dining room area used for overflow, or as a meeting room."));
+  $add_8(amenityData, new Food_0(valueOf(3), "Leonardo Dining Room", "Our three-tier dining room features a wide variety of menu items and impeccable service."));
+  $add_8(amenityData, new Venue_0(valueOf(4), "Arcadia Theatre (4th Deck)", "Our theatre - five stories from the orchestra pit to domed ceiling - features contemporary musical stage productions."));
+  $add_8(amenityData, new Bar_0(valueOf(4), "The Crypt (4th Deck)", "The Crypt's decor is true to its name: the area features spiked window frames, paintings of fantasy warriors, pictures of people from the dark ages, and gargoyle statues. The bar stools are pointed, the railings look like a part of an ancient church, and even the lights look like torches. Along the walls are armchairs and small glass tables. The club is two levels high and the dance floor is on the lower level so people upstairs can watch the action below. both bars, upstairs and downstairs, are made of chrome and milky glass with lights. The Crypt opens around 8pm for teen and kid's parties, but it is open for adults only later in the evening."));
+  $add_8(amenityData, new Bar_0(valueOf(4), "Schooner Bar", "This nautically themed bar is the perfect spot to enjoy a drink with friends."));
+  $add_8(amenityData, new Miscellaneous_0(valueOf(4), "Casino Royale", "Our glittering casino features electronic Slot Machines, Video Poker, Blackjack, Craps, Roulette and Caribbean Stud Poker."));
+  $add_8(amenityData, new Shopping_0(valueOf(4), "Photo Gallery and Shop", "View and purchase photos of your family that Royal Caribbean's staff has taken on board and in port! You can also purchase a dvd of the photos as well to show off what a great time you had to all your friends and family back home."));
+  $add_8(amenityData, new Bar_0(valueOf(4), "Boleros Lounge", "Follow the Latin beat and find yourself in a nighttime hot spot where you can keep up with live music and cool down n with a mojito or caipirinha."));
+  $add_8(amenityData, new Food_0(valueOf(4), "Isaac Dining Room", "Our three-tier dining room features a wide variety of menu items and impeccable service."));
+  $add_8(amenityData, new Miscellaneous_0(valueOf(5), "Observation Deck", 'A wind-blown perch where you\'ll have views and photo-ops of "titanic" proportions.'));
+  $add_8(amenityData, new Miscellaneous_0(valueOf(5), "Outdoor Deck", null));
+  $add_8(amenityData, new Venue_0(valueOf(5), "Pharaoh's Palace", "Enjoy live music, cocktails, and fun, exciting trivia games in this lounge. Pharaoh's Palace has kitschy Egyptian d\u00e9cor including sarcophaguses and sphinx statues! Check your Cruise Compass and Daily Planner for more information on performances and games."));
+  $add_8(amenityData, new Bar_0(valueOf(5), "Connoisseur Club", "A classic cigar lounge in the style of a modern gentleman's club, the connoisseur club is a great place to have a smoke and a cocktail."));
+  $add_8(amenityData, new Food_0(valueOf(5), "Sorrento's", "When you find yourself craving pizza, drop by Sorrento's for a piping hot slice."));
+  $add_8(amenityData, new Bar_0(valueOf(5), "Bull and Bear Pub", "The ship's version of an English pub, The Bull and Bear is located centrally on deck five, featuring vintage wooden d\u00e9cor to give a friendly vibe while you relax with a drink or have a quick snack."));
+  $add_8(amenityData, new Shopping_0(valueOf(5), "Promenade Shops", "Distinctive storefronts offer an array of merchandise ranging from logo items, perfume and jewelry to liquor and cruise wear."));
+  $add_8(amenityData, new Bar_0(valueOf(5), "Vintages", "A classic wine and tapas bar with an extensive list of wines from worldwide. Guests may also participate in wine tastings and classes \u2013 check your Cruise Compass and Daily Planner for exact times."));
+  $add_8(amenityData, new Shopping_0(valueOf(5), "Royal Promenade", "This boulevard centrally located on deck five is ship's version of 5th avenue \u2013 full of a variety of shops and restaurants."));
+  $add_8(amenityData, new Food_0(valueOf(5), "Ben and Jerry's Ice Cream Parlor", "Satisfy your sweet tooth with a smoothie or a waffle cone of various flavors of Ben and Jerry's rich ice cream!"));
+  $add_8(amenityData, new Food_0(valueOf(5), "Caf\u00e9 Promenade", "A strip of the Royal promenade specifically designated for in between meal snacking with additional seating."));
+  $add_8(amenityData, new Food_0(valueOf(5), "Cupcake Cupboard", "Have some fun and grab a cupcake before, after, or in between meals at the Cupcake Cupboard! With specialty flavors such as bubblegum, red velvet, and even root beer \u2013 there's a featured flavor each day of the trip! Guests can also participate in cupcake making and decorating classes!"));
+  $add_8(amenityData, new Shopping_0(valueOf(5), "Britto Art Gallery", "The spirited works of iconic pop artist Romero Britto saturate this engaging and interactive space, where shoppers may peruse a wide array of artwork, giftware, collectibles and luggage, including limited edition custom works created by Britto exclusively for Royal Caribbean guests."));
+  $add_8(amenityData, new Miscellaneous_0(valueOf(5), "Guest Relations", "The place to go for general ship information, to report lost or damaged goods, to exchange money or cash traveler's checks."));
+  $add_8(amenityData, new Miscellaneous_0(valueOf(5), "Explorations!", "Book your shore excursions at the Explorations! Desk."));
+  $add_8(amenityData, new Bar_0(valueOf(5), "Champagne Bar", "A classic lounge-inspired bar that has an air of elegance where you can satisfy yourself with a glass of bubbly to celebrate a great vacation."));
+  $add_8(amenityData, new Food_0(valueOf(5), "Galileo Dining Room", "Our three-tier dining room features a wide variety of menu items and impeccable service."));
+  $add_8(amenityData, new Miscellaneous_0(valueOf(6), "Business Services", "Computers for browsing the Internet and complimentary printing are available to meet your business needs."));
+  $add_8(amenityData, new Miscellaneous_0(valueOf(7), "Library", "Our onboard library features comfortable reading chairs as well as an impressive selection of books and guidebooks."));
+  $add_8(amenityData, new Miscellaneous_0(valueOf(8), "Royal Caribbean Online", "It's high tech on the high seas! With royalcaribbean online, for a small fee you can access the Internet, send e-mails, or send your family an e-postcard with your picture in it."));
+  $add_8(amenityData, new Bar_0(valueOf(10), "Concierge Club", "Only accessible to those who have booked the larger suites, the concierge club gives extra leisure to guests in a semi-exclusive lounge."));
+  $add_8(amenityData, new Fitness_0(valueOf(11), "Vitality at Sea Spa and Fitness Center", "Our seaside fitness center features modern exercise equipment. And our full-service spa offers a beauty salon and spa treatments, including massage, manicures and seaweed body wraps."));
+  $add_8(amenityData, new Pool_0(valueOf(11), "Solarium", "Escape the general pool population and head to the Solarium to bask in the more relaxed adults only swimming pool and cantilevered whirlpools. Encompassed by glass the clean, contemporary design provides a perfect area for sunbathing and swimming."));
+  $add_8(amenityData, new Pool_0(valueOf(11), "Whirlpool", null));
+  $add_8(amenityData, new Bar_0(valueOf(11), "Pool Bar", "Throw back a few drinks after swimming in the main pool or take one to your deck chair while you soak up some sun."));
+  $add_8(amenityData, new Pool_0(valueOf(11), "Main Pool", "Salt-water pool for guests to enjoy twenty-four hours a day."));
+  $add_8(amenityData, new Pool_0(valueOf(11), "Sports Pool", "A salt-water pool designated for water sports, join in on a game of volleyball or a class of water aerobics. Lap swim times are also available but are subject to change \u2013 check your Cruise Compass and Daily Planner."));
+  $add_8(amenityData, new Pool_0(valueOf(11), "H2O Zone", "A bright, colorful water play area, H2O Zone is where your kids will want to be the entire trip! Water spigots, sprinklers, geysers, and even water cannons!  At night this area turns into a beautifully lit sculpture garden."));
+  $add_8(amenityData, new Bar_0(valueOf(11), "Squeeze", "Quench your thirst after swimming laps on the pool deck at Squeeze. This juice bar has a variety of fruit juices, wheat grass shots, and energy shakes!"));
+  $add_8(amenityData, new Shopping_0(valueOf(11), "SeaTrek Dive Shop", "Whether you're a seasoned pro or a beginner, you can rent gear and take courses at this shop to properly prepare yourself for any scuba excursions you plan to go on during your vacation. Full PADI certificate courses available as well as tune up refresher courses."));
+  $add_8(amenityData, new Food_1(valueOf(11), "Chops Grille", "Royal's signature upscale steak house, Chops Grille provides a palatable dinner with a classic menu. Have a fresh salad and juicy steak followed by a delectable slice of chocolate mud pie."));
+  $add_8(amenityData, new Food_1(valueOf(11), "Portofino", "A classic, intimate Italian restaurant where you can feed upon some of the finest pastas, soups, and salads on board. Finish the night off by sharing a slice of scrumptious tiramisu with a glass of fine wine."));
+  $add_8(amenityData, new Bar_0(valueOf(11), "Plaza Bar", "Cocktail bar in the middle of deck eleven conveniently sandwiched between several other dining options."));
+  $add_8(amenityData, new Food_0(valueOf(11), "Windjammer Caf\u00e9", "Casual buffet style dining, a popular choice among guests. Open for several meals a day, guests can satisfy any craving they come across during their trip."));
+  $add_8(amenityData, new Fitness_0(valueOf(12), "Vitality at Sea Spa and Fitness Center", "Our seaside fitness center features modern exercise equipment. And our full-service spa offers a beauty salon and spa treatments, including massage, manicures and seaweed body wraps."));
+  $add_8(amenityData, new Bar_0(valueOf(12), "Sky Bar", "Catch a drink in the sun at this small ocean blue bar and people watch from plush white stools."));
+  $add_8(amenityData, new Fitness_0(valueOf(12), "Jogging Track", "Run laps while taking in the view. Our tracks are open to anyone and proper shoes are recommended."));
+  $add_8(amenityData, new Miscellaneous_0(valueOf(12), "Outdoor Movie Screen", "Watch first-run movies and big time sporting events the way they were meant to be seen - poolside, under the stars. A screen hoisted above the main pool area will showcase all the larger-than-life action."));
+  $add_8(amenityData, new Miscellaneous_0(valueOf(12), "Royal Babies and Tots Nursery", "Parents love our new colorful nursery where our littlest guests can be left in the care of our trained professionals, to enjoy specially-designed programming and playgroups designed by Fisher-Price and Crayola."));
+  $add_8(amenityData, new Miscellaneous_0(valueOf(12), "The Living Room", "A laid-back place for teens to hang out with new friends."));
+  $add_8(amenityData, new Miscellaneous_0(valueOf(12), "Video Arcade", "Blips, bleeps, clangs and cheers. Play to win in a classic arcade atmosphere with timeless games like Pacman and table hockey, plus the latest \u2013 Guitar Hero, Fast and Furious Drift and more."));
+  $add_8(amenityData, new Miscellaneous_0(valueOf(12), "Adventure Ocean", "A play area with specially designed activities for kids ages 3-17. Run by exceptional, energetic, college-educated staff."));
+  $add_8(amenityData, new Food_0(valueOf(12), "Johnny Rockets", "Step into our '50s diner, which features red naugahyde booths, formica counters, a jukebox, burgers, fries and, of course, good old-fashioned malted milk shakes."));
+  $add_8(amenityData, new Miscellaneous_0(valueOf(12), "Fuel Teen Disco", "A teens-only club where they can gather, dance and enjoy music."));
+  $add_8(amenityData, new Miscellaneous_0(valueOf(13), "Rock Climbing Wall", "This is the largest of our rock-climbing walls: a 43-foot-tall by 44-foot-wide freestanding wall with a central spire. Plus, with eleven different routes to choose from, our rock-climbing wall offers skill combinations for all levels."));
+  $add_8(amenityData, new Fitness_0(valueOf(13), "Sports Court", "An outdoor full-size court for sports, including basketball and volleyball."));
+  $add_8(amenityData, new Miscellaneous_0(valueOf(13), "Golf Simulator", "Being at sea making you miss the green? The golf simulator can give golf pros their fix until they reach land!"));
+  $add_8(amenityData, new Miscellaneous_0(valueOf(13), "Freedom Fairways", "A nine-hole miniature golf course with whimsical shrubbery and lighting open 24 hours for the entire family to enjoy at any time they please."));
+  $add_8(amenityData, new Miscellaneous_0(valueOf(13), "Wipe Out! Caf\u00e9", "Grab a bite to eat at this casual caf\u00e9 on the pool deck while you watch people wipe out on their surf boards at the FlowRider station."));
+  $add_8(amenityData, new Pool_0(valueOf(13), "FlowRider Surfing", "Your friends are never going to believe you surfed onboard a ship! Even the best beaches have bad days, but on the FlowRider, surf's always up. Plus, the FlowRider is great fun for all ages and all skill levels, whether you're boogie boarding or surfing."));
+  $add_8(amenityData, new Bar_0(valueOf(14), "Olive or Twist", "A classic martini bar encompassed by floor to ceiling windows for great panoramic views. Live music also occurs nightly here."));
+  $add_8(amenityData, new Miscellaneous_0(valueOf(14), "Cloud Nine", "A quiet space to work and have meetings, Cloud Nine is a multipurpose room that is often used as a reception area for weddings on the ship."));
+  $add_8(amenityData, new Miscellaneous_0(valueOf(14), "Seven Hearts", "A small room dedicated for the fun of playing card games \u2013 separate from the casino on a lower deck. Seven Hearts boasts classic felt tables and board games in addition to cards."));
+  $add_8(amenityData, new Bar_0(valueOf(14), "Viking Crown Lounge", "A Royal Caribbean signature. Perched high above the ocean, this comfortable lounge offers spectacular vistas by day and turns into a lively dance club at night."));
+  $add_8(amenityData, new Bar_0(valueOf(14), "Diamond Club", "Diamond, Diamond Plus, and Pinnacle Club Crown and Anchor Society members enjoy access to this lounge, created to serve these loyal guests with concierge access, complimentary continental breakfast, and evening drinks."));
+  $add_8(amenityData, new Miscellaneous_0(valueOf(15), "Skylight Chapel", 'Our wedding chapel, which can accommodate 40 people, is located on top of the Viking Crown Lounge (the highest point on the ship), and is the perfect place to say "I do."'));
   amenityData = new FilteredListDataProvider_1(amenityData);
   deckData = new AmenityCell_0;
-  root = new CellTable_0(2147483647);
-  deckTable = new IdentityColumn_0(deckData);
-  deckTable.isSortable = !0;
-  deckTable.isDefaultSortAscending = !1;
-  deckTable.cellStyleNames = "list-entry";
-  $insertColumn(root, root.columns.size, deckTable);
-  setStyleName(root.element, "amenity-list", !0);
-  root.rowStyles = new CM3$11_0;
-  $addDataDisplay(amenityData, root);
+  deckTable = new CellTable_0(2147483647);
+  column = new IdentityColumn_0(deckData);
+  column.isSortable = !0;
+  column.isDefaultSortAscending = !1;
+  column.cellStyleNames = "list-entry";
+  $insertColumn(deckTable, deckTable.columns.size, column);
+  setStyleName(deckTable.element, "amenity-list", !0);
+  deckTable.rowStyles = new CM3$11_0;
+  $addDataDisplay(amenityData, deckTable);
+  $add_3(dynamicCast($get_1(connection.deckPanel.children, 3), Q$ScrollPanel), deckTable);
   deckTable = new ArrayList_0;
   for(deckData = 2;15 >= deckData;++deckData) {
-    $add_7(deckTable, new Deck_0(valueOf(deckData)))
+    $add_8(deckTable, new Deck_0(valueOf(deckData)))
   }
   deckData = new ListDataProvider_0(deckTable);
-  deckTable = (cell_0 = new DeckCell_0, table_0 = new CellTable_0(2147483647), column_0 = new IdentityColumn_0(cell_0), column_0.isSortable = !1, column_0.cellStyleNames = "list-entry", $insertColumn(table_0, table_0.columns.size, column_0), setStyleName(table_0.element, "deck-list", !0), table_0);
+  deckTable = (officialData = new DeckCell_0, officialTable = new CellTable_0(2147483647), myData = new IdentityColumn_0(officialData), myData.isSortable = !1, myData.cellStyleNames = "list-entry", $insertColumn(officialTable, officialTable.columns.size, myData), setStyleName(officialTable.element, "deck-list", !0), officialTable);
   $addDataDisplay(deckData, deckTable);
-  $add_3(panel, new ScrollPanel_0(officialTable), new HTML_0('<div class="icon icon-official-events"></div><div class="tabLabel">Official Events</div>'));
-  $add_3(panel, new ScrollPanel_0(publicTable), new HTML_0('<div class="icon icon-public-events"></div><div class="tabLabel">Public Events</div>'));
-  $add_3(panel, new ScrollPanel_0(myTable), new HTML_0('<div class="icon icon-my-events"></div><div class="tabLabel">My Events</div>'));
-  $add_3(panel, new ScrollPanel_0(root), new HTML_0('<div class="icon icon-amenities"></div><div class="tabLabel">Amenities</div>'));
-  $add_3(panel, new ScrollPanel_0(deckTable), new HTML_0('<div class="icon icon-decks"></div><div class="tabLabel">Deck Plans</div>'));
-  singleton_0 || (singleton_0 = new RootLayoutPanel_0, $clinit_RootPanel(), $clinit_RootPanel(), root = dynamicCast($get_4(rootPanels, null), Q$RootPanel), root || (0 == rootPanels.size && (root = new RootPanel$2_0, maybeInitializeCloseHandlers(), addHandler(TYPE_5 ? TYPE_5 : TYPE_5 = new GwtEvent$Type_0, root), $clinit_LocaleInfo()), root = new RootPanel$DefaultRootPanel_0, $put_1(rootPanels, null, root), $add_8(widgetsToDetach, root)), cell_0 = singleton_0, table_0 = root.element, $removeFromParent_0(cell_0), 
-  column_0 = root.children, $insert_7(column_0, cell_0, column_0.size), appendChild(table_0, cell_0.element), $setParent_0(cell_0, root));
-  root = singleton_0;
-  $insert_4(root, panel, root.children.size);
-  root = m_storage_0;
-  (root = !root.m_storageMap || !$containsKey(root.m_storageMap, "ui.tab_selection") ? null : valueOf(__parseAndValidateInt($get_0(root.m_storageMap, "ui.tab_selection")))) && $selectTab(panel, root.value);
-  this$static.m_updater = new AjaxUpdater_0("RangerTest", "testme", "http://cm.raccoonfink.com/rest/cruisemonkey/events", 6E4, 1E4, initValues(_3Lcom_raccoonfink_cruisemonkey_gwt_client_FilteredListDataProvider_2_classLit, makeCastMap([Q$Serializable]), Q$FilteredListDataProvider, [officialData, publicData, connection]));
+  $add_3(dynamicCast($get_1(connection.deckPanel.children, 4), Q$ScrollPanel), deckTable);
+  officialData = new FilteredListDataProvider_0(new CM3$7_0, this$static.m_eventComparator);
+  officialTable = $createTable();
+  $addDataDisplay(officialData, officialTable);
+  $add_3(dynamicCast($get_1(connection.deckPanel.children, 0), Q$ScrollPanel), officialTable);
+  officialTable = new FilteredListDataProvider_0(new CM3$8_0, this$static.m_eventComparator);
+  myData = $createTable();
+  $addDataDisplay(officialTable, myData);
+  $add_3(dynamicCast($get_1(connection.deckPanel.children, 1), Q$ScrollPanel), myData);
+  myData = new FilteredListDataProvider_0(new CM3$9_0, this$static.m_eventComparator);
+  deckData = $createTable();
+  $addDataDisplay(myData, deckData);
+  $add_3(dynamicCast($get_1(connection.deckPanel.children, 2), Q$ScrollPanel), deckData);
+  this$static.m_updater = new AjaxUpdater_0("RangerTest", "testme", "http://cm.raccoonfink.com/rest/cruisemonkey/events", 6E4, 1E4, initValues(_3Lcom_raccoonfink_cruisemonkey_gwt_client_FilteredListDataProvider_2_classLit, makeCastMap([Q$Serializable]), Q$FilteredListDataProvider, [officialData, officialTable, myData]));
   $schedule(new AjaxUpdater$3_0(this$static.m_updater), 2E3);
-  this$static = m_phoneGap;
-  !this$static.splashScreen && (this$static.splashScreen = new SplashScreenMobileImpl_0);
-  $wnd.navigator.splashscreen.hide();
   m_initializing = !1
 }
 function CM3_0() {
@@ -8773,7 +8794,7 @@ function CM3$1_0(this$0, val$phoneGap) {
   this.this$0 = this$0;
   this.val$phoneGap = val$phoneGap
 }
-defineSeed(513, 1, makeCastMap([Q$EventHandler, 80]), CM3$1_0);
+defineSeed(513, 1, makeCastMap([Q$EventHandler, 81]), CM3$1_0);
 _.this$0 = null;
 _.val$phoneGap = null;
 function CM3$10_0() {
@@ -8786,22 +8807,22 @@ function CM3$11_0() {
 }
 defineSeed(515, 1, {}, CM3$11_0);
 _.getStyleNames = function(row, rowIndex) {
-  return 0 == (dynamicCast(row, 87), rowIndex) % 2 ? "even" : "odd"
+  return 0 == (dynamicCast(row, 88), rowIndex) % 2 ? "even" : "odd"
 };
 function CM3$2_0(this$0) {
   this.this$0 = this$0
 }
-defineSeed(516, 1, makeCastMap([Q$EventHandler, 81]), CM3$2_0);
+defineSeed(516, 1, makeCastMap([Q$EventHandler, 82]), CM3$2_0);
 _.this$0 = null;
 function CM3$3_0(this$0) {
   this.this$0 = this$0
 }
-defineSeed(517, 1, makeCastMap([Q$EventHandler, 82]), CM3$3_0);
+defineSeed(517, 1, makeCastMap([Q$EventHandler, 83]), CM3$3_0);
 _.this$0 = null;
 function CM3$4_0(this$0) {
   this.this$0 = this$0
 }
-defineSeed(518, 1, makeCastMap([Q$EventHandler, 83]), CM3$4_0);
+defineSeed(518, 1, makeCastMap([Q$EventHandler, 84]), CM3$4_0);
 _.this$0 = null;
 function CM3$5_0() {
 }
@@ -8811,21 +8832,21 @@ defineSeed(521, 522, {});
 _.matches = function() {
   return!0
 };
-function CM3$6_0() {
+function CM3$7_0() {
 }
-defineSeed(520, 521, {}, CM3$6_0);
+defineSeed(520, 521, {}, CM3$7_0);
 _.matches = function(entry) {
   return!$equals(entry["created-by"], "google") ? !1 : !0
 };
-function CM3$7_0() {
+function CM3$8_0() {
 }
-defineSeed(523, 521, {}, CM3$7_0);
+defineSeed(523, 521, {}, CM3$8_0);
 _.matches = function(entry) {
   return $equals(entry["created-by"], "google") || !$isPublic(entry) ? !1 : !0
 };
-function CM3$8_0() {
+function CM3$9_0() {
 }
-defineSeed(524, 521, {}, CM3$8_0);
+defineSeed(524, 521, {}, CM3$9_0);
 _.matches = function(entry) {
   return $equals(entry["created-by"], ($clinit_CM3(), "RangerRick")) ? !0 : !1
 };
@@ -8849,7 +8870,7 @@ function FilteredListDataProvider_0(filter, comparator) {
 function FilteredListDataProvider_1(list) {
   ListDataProvider_1.call(this, list)
 }
-defineSeed(526, 460, makeCastMap([71, 74, 75, Q$FilteredListDataProvider]), FilteredListDataProvider_0, FilteredListDataProvider_1);
+defineSeed(526, 460, makeCastMap([72, 75, 76, Q$FilteredListDataProvider]), FilteredListDataProvider_0, FilteredListDataProvider_1);
 _.m_comparator = null;
 _.m_data = null;
 _.m_filter = null;
@@ -8926,7 +8947,7 @@ function Deck_0(deck) {
   this.m_size = valueOf(600);
   this.m_deck = deck
 }
-defineSeed(531, 1, makeCastMap([85, Q$HasId]), Deck_0);
+defineSeed(531, 1, makeCastMap([86, Q$HasId]), Deck_0);
 _.getId = function() {
   return"deck-" + this.m_deck.value
 };
@@ -8964,7 +8985,7 @@ function Amenity_0(category, deck, name_0, description) {
   this.m_name = name_0;
   this.m_description = description
 }
-defineSeed(539, 1, makeCastMap([Q$HasId, 87]));
+defineSeed(539, 1, makeCastMap([Q$HasId, 88]));
 _.getId = function() {
   return this.m_id
 };
@@ -8981,12 +9002,12 @@ function Bar_0(deck, name_0, description) {
   $clinit_Amenity();
   Amenity_0.call(this, "Bar/Club", deck, name_0, description)
 }
-defineSeed(540, 539, makeCastMap([Q$HasId, 87]), Bar_0);
+defineSeed(540, 539, makeCastMap([Q$HasId, 88]), Bar_0);
 function Fitness_0(deck, name_0, description) {
   $clinit_Amenity();
   Amenity_0.call(this, "Spa/Fitness", deck, name_0, description)
 }
-defineSeed(541, 539, makeCastMap([Q$HasId, 87]), Fitness_0);
+defineSeed(541, 539, makeCastMap([Q$HasId, 88]), Fitness_0);
 function Food_0(deck, name_0, description) {
   $clinit_Amenity();
   Amenity_0.call(this, "Food", deck, name_0, description)
@@ -8995,33 +9016,33 @@ function Food_1(deck, name_0, description) {
   $clinit_Amenity();
   Food_0.call(this, deck, name_0, description)
 }
-defineSeed(542, 539, makeCastMap([Q$HasId, 87]), Food_0, Food_1);
+defineSeed(542, 539, makeCastMap([Q$HasId, 88]), Food_0, Food_1);
 function Miscellaneous_0(deck, name_0, description) {
   $clinit_Amenity();
   Amenity_0.call(this, "Miscellaneous", deck, name_0, description)
 }
-defineSeed(543, 539, makeCastMap([Q$HasId, 87]), Miscellaneous_0);
+defineSeed(543, 539, makeCastMap([Q$HasId, 88]), Miscellaneous_0);
 function Pool_0(deck, name_0, description) {
   $clinit_Amenity();
   Amenity_0.call(this, "Pool", deck, name_0, description)
 }
-defineSeed(544, 539, makeCastMap([Q$HasId, 87]), Pool_0);
+defineSeed(544, 539, makeCastMap([Q$HasId, 88]), Pool_0);
 function Shopping_0(deck, name_0, description) {
   $clinit_Amenity();
   Amenity_0.call(this, "Shopping", deck, name_0, description)
 }
-defineSeed(545, 539, makeCastMap([Q$HasId, 87]), Shopping_0);
+defineSeed(545, 539, makeCastMap([Q$HasId, 88]), Shopping_0);
 function Venue_0(deck, name_0, description) {
   $clinit_Amenity();
   Amenity_0.call(this, "Venue", deck, name_0, description)
 }
-defineSeed(546, 539, makeCastMap([Q$HasId, 87]), Venue_0);
+defineSeed(546, 539, makeCastMap([Q$HasId, 88]), Venue_0);
 function AmenityCell_0() {
   AbstractCell_0.call(this, initValues(_3Ljava_lang_String_2_classLit, makeCastMap([Q$Serializable]), Q$String, []))
 }
 defineSeed(547, 18, {}, AmenityCell_0);
 _.render = function(context, amenity, sb) {
-  context = dynamicCast(amenity, 87);
+  context = dynamicCast(amenity, 88);
   $appendHtmlConstant(sb, '<div class="amenity scrollable" id="' + context.m_id + '">');
   $appendHtmlConstant($appendEscaped(($append_8(sb.sb, '<div class="name">'), sb), context.m_name), "</div>");
   $append_8(sb.sb, '<div class="description">');
@@ -9051,7 +9072,7 @@ function DeckCell_0() {
 }
 defineSeed(549, 18, {}, DeckCell_0);
 _.render = function(context, deck, sb) {
-  context = dynamicCast(deck, 85);
+  context = dynamicCast(deck, 86);
   $appendHtmlConstant(sb, '<div class="deck scrollable" id="deck-' + context.m_deck.value + '">');
   $appendHtmlConstant(sb, '<div class="divider theme-header">Deck ' + context.m_deck + "</div>");
   var deck = '<img id="deck-' + context.m_deck.value + '-image" src="cm3/images/deck', JSCompiler_inline_result;
@@ -9175,7 +9196,7 @@ function $clinit_Boolean() {
 function Boolean_1(value) {
   this.value = value
 }
-defineSeed(552, 1, makeCastMap([Q$Serializable, Q$Boolean, 91]), Boolean_1);
+defineSeed(552, 1, makeCastMap([Q$Serializable, Q$Boolean, 92]), Boolean_1);
 _.compareTo$ = function(other) {
   return this.value == dynamicCast(other, Q$Boolean).value ? 0 : this.value ? 1 : -1
 };
@@ -9273,17 +9294,17 @@ function __parseAndValidateInt(s) {
   }
   return i
 }
-defineSeed(557, 1, makeCastMap([Q$Serializable, 97]));
+defineSeed(557, 1, makeCastMap([Q$Serializable, 98]));
 function Double_0(value) {
   this.value = value
 }
-defineSeed(556, 557, makeCastMap([Q$Serializable, 91, 92, 97]), Double_0);
+defineSeed(556, 557, makeCastMap([Q$Serializable, 92, 93, 98]), Double_0);
 _.compareTo$ = function(b) {
-  b = dynamicCast(b, 92);
+  b = dynamicCast(b, 93);
   return isNaN(this.value) ? isNaN(b.value) ? 0 : 1 : isNaN(b.value) ? -1 : this.value < b.value ? -1 : this.value > b.value ? 1 : 0
 };
 _.equals$ = function(o) {
-  return instanceOf(o, 92) && dynamicCast(o, 92).value == this.value
+  return instanceOf(o, 93) && dynamicCast(o, 93).value == this.value
 };
 _.hashCode$ = function() {
   return round_int(this.value)
@@ -9353,7 +9374,7 @@ function valueOf(i) {
   var rebase, result;
   return-129 < i && 128 > i ? (rebase = i + 128, result = ($clinit_Integer$BoxedValues(), boxedValues_0)[rebase], !result && (result = boxedValues_0[rebase] = new Integer_0(i)), result) : new Integer_0(i)
 }
-defineSeed(561, 557, makeCastMap([Q$Serializable, 91, Q$Integer, 97]), Integer_0);
+defineSeed(561, 557, makeCastMap([Q$Serializable, 92, Q$Integer, 98]), Integer_0);
 _.compareTo$ = function(b) {
   b = dynamicCast(b, Q$Integer);
   return this.value < b.value ? -1 : this.value > b.value ? 1 : 0
@@ -9465,7 +9486,7 @@ function fromCodePoint(codePoint) {
   return 65536 <= codePoint ? (loSurrogate = 56320 + (codePoint - 65536 & 1023) & 65535, String.fromCharCode(55296 + (~~(codePoint - 65536) >> 10 & 1023) & 65535) + String.fromCharCode(loSurrogate)) : String.fromCharCode(codePoint & 65535)
 }
 _ = String.prototype;
-_.castableTypeMap$ = makeCastMap([Q$String, Q$Serializable, 90, 91]);
+_.castableTypeMap$ = makeCastMap([Q$String, Q$Serializable, 91, 92]);
 _.compareTo$ = function(other) {
   return compareTo_4(this, dynamicCast(other, Q$String))
 };
@@ -9516,7 +9537,7 @@ function StringBuffer_2(s) {
   this.impl = new StringBufferImplAppend_0;
   $append_1(this.impl, s)
 }
-defineSeed(570, 1, makeCastMap([90]), StringBuffer_0, StringBuffer_1, StringBuffer_2);
+defineSeed(570, 1, makeCastMap([91]), StringBuffer_0, StringBuffer_1, StringBuffer_2);
 _.toString$ = function() {
   return this.impl.string
 };
@@ -9531,7 +9552,7 @@ function StringBuilder_1(s) {
   this.impl = new StringBufferImplAppend_0;
   $append_1(this.impl, s)
 }
-defineSeed(571, 1, makeCastMap([90]), StringBuilder_0, StringBuilder_1);
+defineSeed(571, 1, makeCastMap([91]), StringBuilder_0, StringBuilder_1);
 _.toString$ = function() {
   return this.impl.string
 };
@@ -9687,7 +9708,7 @@ function $contains(this$static, o) {
 function AbstractHashMap$EntrySet_0(this$0) {
   this.this$0 = this$0
 }
-defineSeed(575, 255, makeCastMap([108]), AbstractHashMap$EntrySet_0);
+defineSeed(575, 255, makeCastMap([109]), AbstractHashMap$EntrySet_0);
 _.contains_0 = function(o) {
   return $contains(this, o)
 };
@@ -9715,7 +9736,7 @@ function AbstractHashMap$EntrySetIterator_0(this$0) {
   var list;
   this.this$0 = this$0;
   list = new ArrayList_0;
-  this$0.nullSlotLive && $add_7(list, new AbstractHashMap$MapEntryNull_0(this$0));
+  this$0.nullSlotLive && $add_8(list, new AbstractHashMap$MapEntryNull_0(this$0));
   var stringMap = this$0.stringMap, key;
   for(key in stringMap) {
     if(58 == key.charCodeAt(0)) {
@@ -9966,7 +9987,7 @@ function AbstractMap$1_0(this$0, val$entrySet) {
   this.this$0 = this$0;
   this.val$entrySet = val$entrySet
 }
-defineSeed(584, 255, makeCastMap([108]), AbstractMap$1_0);
+defineSeed(584, 255, makeCastMap([109]), AbstractMap$1_0);
 _.contains_0 = function(key) {
   return $containsKey_1(this.this$0, key)
 };
@@ -10077,7 +10098,7 @@ _.get_0 = function(index) {
     return $next_7(iter)
   }catch($e0) {
     $e0 = caught_0($e0);
-    if(instanceOf($e0, 107)) {
+    if(instanceOf($e0, 108)) {
       throw new IndexOutOfBoundsException_1("Can't get element " + index);
     }
     throw $e0;
@@ -10093,7 +10114,7 @@ _.remove_3 = function(index) {
     old = $next_7(iter)
   }catch($e0) {
     $e0 = caught_0($e0);
-    if(instanceOf($e0, 107)) {
+    if(instanceOf($e0, 108)) {
       throw new IndexOutOfBoundsException_1("Can't remove element " + index);
     }
     throw $e0;
@@ -10113,18 +10134,18 @@ _.set = function(index, element) {
     return old
   }catch($e0) {
     $e0 = caught_0($e0);
-    if(instanceOf($e0, 107)) {
+    if(instanceOf($e0, 108)) {
       throw new IndexOutOfBoundsException_1("Can't set element " + index);
     }
     throw $e0;
   }
 };
-function $add_6(this$static, index, o) {
+function $add_7(this$static, index, o) {
   (0 > index || index > this$static.size) && indexOutOfBounds(index, this$static.size);
   this$static.array.splice(index, 0, o);
   ++this$static.size
 }
-function $add_7(this$static, o) {
+function $add_8(this$static, o) {
   setCheck(this$static.array, this$static.size++, o);
   return!0
 }
@@ -10180,10 +10201,10 @@ function ArrayList_0() {
 }
 defineSeed(589, 580, makeCastMap([Q$Serializable, Q$List]), ArrayList_0);
 _.add_0 = function(index, o) {
-  $add_6(this, index, o)
+  $add_7(this, index, o)
 };
 _.add = function(o) {
-  return $add_7(this, o)
+  return $add_8(this, o)
 };
 _.addAll = function(c) {
   var len, c = c.toArray();
@@ -10358,7 +10379,7 @@ defineSeed(597, 595, makeCastMap([Q$List]), Collections$UnmodifiableRandomAccess
 function Collections$UnmodifiableSet_0(set) {
   this.coll = set
 }
-defineSeed(598, 593, makeCastMap([108]), Collections$UnmodifiableSet_0);
+defineSeed(598, 593, makeCastMap([109]), Collections$UnmodifiableSet_0);
 _.equals$ = function(o) {
   return this.coll.equals$(o)
 };
@@ -10374,7 +10395,7 @@ function Comparators$1_0() {
 }
 defineSeed(600, 1, {}, Comparators$1_0);
 _.compare = function(o1, o2) {
-  return dynamicCast(o1, 91).compareTo$(o2)
+  return dynamicCast(o1, 92).compareTo$(o2)
 };
 function $fixDaylightSavings(this$static, hours) {
   var badHours, copy, day, timeDiffMinutes;
@@ -10411,13 +10432,13 @@ function Date_2(date) {
 function padTwo(number) {
   return 10 > number ? "0" + number : "" + number
 }
-defineSeed(601, 1, makeCastMap([Q$Serializable, 91, 103]), Date_1, Date_2);
+defineSeed(601, 1, makeCastMap([Q$Serializable, 92, 104]), Date_1, Date_2);
 _.compareTo$ = function(other) {
-  other = dynamicCast(other, 103);
+  other = dynamicCast(other, 104);
   return signum(sub(fromDouble(this.jsdate.getTime()), fromDouble(other.jsdate.getTime())))
 };
 _.equals$ = function(obj) {
-  return instanceOf(obj, 103) && eq(fromDouble(this.jsdate.getTime()), fromDouble(dynamicCast(obj, 103).jsdate.getTime()))
+  return instanceOf(obj, 104) && eq(fromDouble(this.jsdate.getTime()), fromDouble(dynamicCast(obj, 104).jsdate.getTime()))
 };
 _.hashCode$ = function() {
   var time;
@@ -10450,7 +10471,7 @@ _.equals = function(value1, value2) {
 _.getHashCode = function(key) {
   return~~hashCode__devirtual$(key)
 };
-function $add_8(this$static, o) {
+function $add_9(this$static, o) {
   return null == $put_1(this$static.map, o, this$static)
 }
 function $contains_0(this$static, o) {
@@ -10459,9 +10480,9 @@ function $contains_0(this$static, o) {
 function HashSet_0() {
   this.map = new HashMap_0
 }
-defineSeed(604, 255, makeCastMap([Q$Serializable, 108]), HashSet_0);
+defineSeed(604, 255, makeCastMap([Q$Serializable, 109]), HashSet_0);
 _.add = function(o) {
-  return $add_8(this, o)
+  return $add_9(this, o)
 };
 _.contains_0 = function(o) {
   return $containsKey_1(this.map, o)
@@ -10647,7 +10668,7 @@ _.value = null;
 function NoSuchElementException_0() {
   $fillInStackTrace(($clinit_StackTraceCreator$CollectorChrome(), this))
 }
-defineSeed(610, 23, makeCastMap([Q$Serializable, Q$RuntimeException, Q$Throwable, 107]), NoSuchElementException_0);
+defineSeed(610, 23, makeCastMap([Q$Serializable, Q$RuntimeException, Q$Throwable, 108]), NoSuchElementException_0);
 function equalsWithNullCheck(a, b) {
   return maskUndefined(a) === maskUndefined(b) || null != a && equals__devirtual$(a, b)
 }
@@ -10884,9 +10905,9 @@ createForClass("com.raccoonfink.cruisemonkey.gwt.client.", "CM3$4", 518);
 createForClass("com.raccoonfink.cruisemonkey.gwt.client.", "CM3$5", 519);
 createForClass("com.raccoonfink.cruisemonkey.gwt.client.", "ListFilter", 522);
 createForClass("com.raccoonfink.cruisemonkey.gwt.client.", "CalendarEventFilter", 521);
-createForClass("com.raccoonfink.cruisemonkey.gwt.client.", "CM3$6", 520);
-createForClass("com.raccoonfink.cruisemonkey.gwt.client.", "CM3$7", 523);
-createForClass("com.raccoonfink.cruisemonkey.gwt.client.", "CM3$8", 524);
+createForClass("com.raccoonfink.cruisemonkey.gwt.client.", "CM3$7", 520);
+createForClass("com.raccoonfink.cruisemonkey.gwt.client.", "CM3$8", 523);
+createForClass("com.raccoonfink.cruisemonkey.gwt.client.", "CM3$9", 524);
 createForClass("com.raccoonfink.cruisemonkey.gwt.client.", "CM3$10", 514);
 createForClass("com.raccoonfink.cruisemonkey.gwt.client.", "CM3$11", 515);
 var Ljava_lang_Error_2_classLit = createForClass("java.lang.", "Error", null), Ljava_lang_AssertionError_2_classLit = createForClass("java.lang.", "AssertionError", null), Ljava_lang_Boolean_2_classLit = createForClass("java.lang.", "Boolean", 552);
@@ -11207,23 +11228,23 @@ createForClass("com.google.gwt.layout.client.", "Layout$1", 209);
 createForClass("com.google.gwt.animation.client.", "Animation$1", 4);
 createForClass("com.google.gwt.animation.client.", "AnimationScheduler", 5);
 createForClass("com.google.gwt.animation.client.", "AnimationScheduler$AnimationHandle", 6);
+createForClass("com.google.gwt.user.client.ui.", "LayoutPanel", 432);
+createForClass("com.google.gwt.user.client.ui.", "RootLayoutPanel", 435);
+createForClass("com.google.gwt.user.client.ui.", "RootLayoutPanel$1", 436);
 createForClass("com.google.gwt.view.client.", "ListDataProvider$ListWrapper", 461);
 createForClass("com.google.gwt.view.client.", "ListDataProvider$ListWrapper$WrappedListIterator", 463);
 createForClass("com.google.gwt.view.client.", "ListDataProvider$ListWrapper$1", 462);
 createForClass("com.google.gwt.view.client.", "AbstractDataProvider$1", 457);
 createForClass("com.google.gwt.view.client.", "RangeChangeEvent", 465);
-createForClass("com.google.gwt.user.client.ui.", "LayoutPanel", 432);
-createForClass("com.google.gwt.user.client.ui.", "RootLayoutPanel", 435);
-createForClass("com.google.gwt.user.client.ui.", "RootLayoutPanel$1", 436);
 createForClass("com.google.gwt.user.client.ui.", "ScrollPanel", 442);
 createForClass("java.util.", "IdentityHashMap", 605);
 createForClass("com.google.gwt.user.client.ui.", "FlowPanel", 423);
 createForClass("com.google.gwt.event.logical.shared.", "SelectionEvent", 147);
-createForClass("com.google.gwt.cell.client.", "AbstractCell", 18);
-createForClass("com.raccoonfink.cruisemonkey.gwt.client.ui.", "CalendarEventCell", 548);
-createForClass("com.google.gwt.cell.client.", "Cell$Context", 19);
-createForClass("com.google.gwt.user.cellview.client.", "Column", 294);
-createForClass("com.google.gwt.user.cellview.client.", "IdentityColumn", 306);
+createForClass("com.google.gwt.user.client.ui.", "AbsolutePanel", 410);
+createForClass("com.google.gwt.user.client.ui.", "RootPanel", 437);
+createForClass("com.google.gwt.user.client.ui.", "RootPanel$DefaultRootPanel", 440);
+createForClass("com.google.gwt.user.client.ui.", "RootPanel$1", 438);
+createForClass("com.google.gwt.user.client.ui.", "RootPanel$2", 439);
 createForClass("com.raccoonfink.cruisemonkey.gwt.client.model.amenities.", "Amenity", 539);
 createForClass("com.raccoonfink.cruisemonkey.gwt.client.model.amenities.", "Venue", 546);
 createForClass("com.raccoonfink.cruisemonkey.gwt.client.model.amenities.", "Miscellaneous", 543);
@@ -11232,35 +11253,25 @@ createForClass("com.raccoonfink.cruisemonkey.gwt.client.model.amenities.", "Food
 createForClass("com.raccoonfink.cruisemonkey.gwt.client.model.amenities.", "Shopping", 545);
 createForClass("com.raccoonfink.cruisemonkey.gwt.client.model.amenities.", "Fitness", 541);
 createForClass("com.raccoonfink.cruisemonkey.gwt.client.model.amenities.", "Pool", 544);
+createForClass("com.google.gwt.cell.client.", "AbstractCell", 18);
 createForClass("com.raccoonfink.cruisemonkey.gwt.client.ui.", "AmenityCell", 547);
+createForClass("com.google.gwt.cell.client.", "Cell$Context", 19);
+createForClass("com.google.gwt.user.cellview.client.", "Column", 294);
+createForClass("com.google.gwt.user.cellview.client.", "IdentityColumn", 306);
 createForClass("com.raccoonfink.cruisemonkey.gwt.client.model.", "Deck", 531);
 createForClass("com.raccoonfink.cruisemonkey.gwt.client.ui.", "DeckCell", 549);
-createForClass("com.google.gwt.user.client.ui.", "AbsolutePanel", 410);
-createForClass("com.google.gwt.user.client.ui.", "RootPanel", 437);
-createForClass("com.google.gwt.user.client.ui.", "RootPanel$DefaultRootPanel", 440);
-createForClass("com.google.gwt.user.client.ui.", "RootPanel$1", 438);
-createForClass("com.google.gwt.user.client.ui.", "RootPanel$2", 439);
+createForClass("com.raccoonfink.cruisemonkey.gwt.client.ui.", "CalendarEventCell", 548);
 createForClass("com.google.gwt.safehtml.shared.", "SafeHtmlString", 242);
 createForClass("com.googlecode.gwtphonegap.client.connection.", "ConnectionMobileImpl", 481);
+createForClass("com.google.gwt.user.client.ui.", "ScrollImpl", 441);
 createForClass("com.google.gwt.user.client.ui.", "WidgetCollection", 449);
 var _3Lcom_google_gwt_user_client_ui_Widget_2_classLit = createForArray("[Lcom.google.gwt.user.client.ui.", "Widget;", 649);
 createForClass("com.google.gwt.user.client.ui.", "WidgetCollection$WidgetIterator", 450);
+createForClass("com.googlecode.gwtphonegap.client.splashscreen.", "SplashScreenMobileImpl", 507);
 createForClass("com.google.gwt.json.client.", "JSONValue", 185);
 createForClass("com.google.gwt.json.client.", "JSONObject", 191);
-createForClass("com.googlecode.gwtphonegap.client.splashscreen.", "SplashScreenMobileImpl", 507);
 createForClass("com.google.gwt.layout.client.", "LayoutImpl", 212);
 var _3Ljava_lang_Boolean_2_classLit = createForArray("[Ljava.lang.", "Boolean;", 650);
-createForClass("com.google.gwt.view.client.", "Range", 464);
-createForClass("com.google.gwt.i18n.client.", "NumberFormat", 179);
-createForClass("com.google.gwt.user.client.ui.", "ScrollImpl", 441);
-createForClass("com.google.gwt.event.logical.shared.", "ResizeEvent", 146);
-createForClass("com.google.gwt.http.client.", "RequestTimeoutException", 167);
-createForClass("com.google.gwt.event.logical.shared.", "AttachEvent", 143);
-createForClass("com.google.gwt.user.client.ui.", "Image", 427);
-createForClass("com.google.gwt.user.client.ui.", "Image$State", 429);
-createForClass("com.google.gwt.user.client.ui.", "Image$ClippedState", 428);
-createForClass("com.google.gwt.user.client.ui.", "Image$State$1", 430);
-createForClass("com.google.gwt.user.cellview.client.", "CellBasedWidgetImpl", 289);
 createForClass("com.google.gwt.touch.client.", "TouchScroller", 260);
 createForClass("com.google.gwt.touch.client.", "TouchScroller$TemporalPoint", 270);
 createForClass("com.google.gwt.touch.client.", "TouchScroller$MomentumCommand", 267);
@@ -11272,25 +11283,35 @@ createForClass("com.google.gwt.touch.client.", "TouchScroller$3", 263);
 createForClass("com.google.gwt.touch.client.", "TouchScroller$4", 264);
 createForClass("com.google.gwt.touch.client.", "TouchScroller$5", 265);
 createForClass("com.google.gwt.touch.client.", "TouchScroller$6", 266);
+createForClass("com.google.gwt.event.logical.shared.", "AttachEvent", 143);
+createForClass("com.google.gwt.event.logical.shared.", "ResizeEvent", 146);
+createForClass("com.google.gwt.view.client.", "Range", 464);
+createForClass("com.google.gwt.i18n.client.", "NumberFormat", 179);
+createForClass("com.google.gwt.http.client.", "RequestTimeoutException", 167);
 createForClass("com.google.gwt.event.dom.client.", "DomEvent", 129);
 createForClass("com.google.gwt.event.dom.client.", "HumanInputEvent", 128);
+createForClass("com.google.gwt.event.dom.client.", "TouchEvent", 138);
+createForClass("com.google.gwt.event.dom.client.", "TouchStartEvent", 142);
+createForClass("com.google.gwt.event.dom.client.", "TouchEvent$TouchSupportDetector", 140);
+createForClass("com.google.gwt.event.dom.client.", "DomEvent$Type", 132);
+createForClass("com.google.gwt.event.dom.client.", "TouchMoveEvent", 141);
+createForClass("com.google.gwt.event.dom.client.", "TouchEndEvent", 139);
+createForClass("com.google.gwt.event.dom.client.", "TouchCancelEvent", 137);
 createForClass("com.google.gwt.event.dom.client.", "MouseEvent", 127);
 createForClass("com.google.gwt.event.dom.client.", "ClickEvent", 126);
-createForClass("com.google.gwt.event.dom.client.", "DomEvent$Type", 132);
+createForClass("com.google.gwt.user.client.ui.", "Image", 427);
+createForClass("com.google.gwt.user.client.ui.", "Image$State", 429);
+createForClass("com.google.gwt.user.client.ui.", "Image$ClippedState", 428);
+createForClass("com.google.gwt.user.client.ui.", "Image$State$1", 430);
+createForClass("com.google.gwt.user.cellview.client.", "CellBasedWidgetImpl", 289);
 createForClass("com.google.gwt.aria.client.", "Attribute", 15);
+createForClass("com.google.gwt.resources.client.", "CommonResources_Bundle_safari_default_InlineClientBundleGenerator", 233);
+createForClass("com.google.gwt.resources.client.", "CommonResources_Bundle_safari_default_InlineClientBundleGenerator$1", 234);
 createForClass("com.google.gwt.user.client.ui.", "DeckPanel", 420);
 createForClass("com.google.gwt.user.client.ui.", "DeckPanel$SlideAnimation", 421);
 createForClass("com.google.gwt.user.cellview.client.", "CellBasedWidgetImplStandard", 290);
 createForClass("com.google.gwt.user.cellview.client.", "CellBasedWidgetImplStandardBase", 291);
 createForClass("com.google.gwt.i18n.client.constants.", "NumberConstantsImpl_", 180);
-createForClass("com.google.gwt.event.dom.client.", "TouchEvent", 138);
-createForClass("com.google.gwt.event.dom.client.", "TouchStartEvent", 142);
-createForClass("com.google.gwt.event.dom.client.", "TouchEvent$TouchSupportDetector", 140);
-createForClass("com.google.gwt.event.dom.client.", "TouchMoveEvent", 141);
-createForClass("com.google.gwt.event.dom.client.", "TouchEndEvent", 139);
-createForClass("com.google.gwt.event.dom.client.", "TouchCancelEvent", 137);
-createForClass("com.google.gwt.resources.client.", "CommonResources_Bundle_safari_default_InlineClientBundleGenerator", 233);
-createForClass("com.google.gwt.resources.client.", "CommonResources_Bundle_safari_default_InlineClientBundleGenerator$1", 234);
 createForClass("com.google.gwt.json.client.", "JSONBoolean", 186);
 createForClass("com.google.gwt.json.client.", "JSONNumber", 190);
 createForClass("com.google.gwt.json.client.", "JSONString", 193);
@@ -11299,6 +11320,8 @@ createForClass("com.google.gwt.json.client.", "JSONArray", 184);
 createForClass("com.google.gwt.aria.client.", "PrimitiveValueAttribute", 16);
 createForClass("com.google.gwt.aria.client.", "AriaValueAttribute", 14);
 createForClass("com.google.gwt.event.dom.client.", "PrivateMap", 135);
+createForClass("com.google.gwt.touch.client.", "DefaultMomentum", 257);
+createForClass("com.google.gwt.touch.client.", "Momentum$State", 258);
 createForClass("java.util.", "Comparators$1", 600);
 createForClass("com.google.gwt.resources.client.impl.", "ImageResourcePrototype", 236);
 createForClass("com.google.gwt.safehtml.shared.", "SafeUriString", 244);
@@ -11308,8 +11331,6 @@ createForClass("com.google.gwt.user.cellview.client.", "DefaultCellTableBuilder"
 createForClass("com.google.gwt.user.cellview.client.", "AbstractHeaderOrFooterBuilder", 287);
 createForClass("com.google.gwt.user.cellview.client.", "DefaultHeaderOrFooterBuilder", 299);
 createForClass("com.google.gwt.user.cellview.client.", "AbstractHeaderOrFooterBuilder$TwoWayHashMap", 288);
-createForClass("com.google.gwt.touch.client.", "DefaultMomentum", 257);
-createForClass("com.google.gwt.touch.client.", "Momentum$State", 258);
 createForClass("com.google.gwt.animation.client.", "AnimationSchedulerImpl", 7);
 createForClass("com.google.gwt.view.client.", "DefaultSelectionEventManager", 459);
 createForClass("com.google.gwt.safehtml.shared.", "SafeHtmlBuilder", 241);
@@ -11321,10 +11342,10 @@ createForClass("com.google.gwt.animation.client.", "AnimationSchedulerImplWebkit
 createForClass("com.google.gwt.animation.client.", "AnimationSchedulerImplWebkit$AnimationHandleImpl", 13);
 createForClass("com.google.gwt.user.cellview.client.", "LoadingStateChangeEvent", 307);
 createForClass("com.google.gwt.user.cellview.client.", "LoadingStateChangeEvent$DefaultLoadingState", 308);
+createForClass("com.google.gwt.touch.client.", "Point", 259);
 createForClass("com.google.gwt.dom.client.", "StyleInjector$StyleInjectorImpl", 121);
 createForClass("com.google.gwt.dom.client.", "StyleInjector$1", 120);
 createForClass("com.google.gwt.safecss.shared.", "SafeStylesBuilder", 237);
-createForClass("com.google.gwt.touch.client.", "Point", 259);
 createForClass("com.google.gwt.user.client.ui.impl.", "ClippedImageImpl_TemplateImpl", 453);
 createForClass("com.google.gwt.safecss.shared.", "SafeStylesString", 238);
 createForClass("com.google.gwt.user.client.ui.impl.", "ClippedImageImpl_DraggableTemplateImpl", 452);
