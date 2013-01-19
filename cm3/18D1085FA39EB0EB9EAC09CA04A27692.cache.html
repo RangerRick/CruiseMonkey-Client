@@ -4,7 +4,7 @@ var $gwt_version = "2.5.0";
 var $wnd = parent;
 var $doc = $wnd.document;
 var $moduleName, $moduleBase;
-var $strongName = '0C6E21AE3F694FA95960945B7ED8A9E8';
+var $strongName = '18D1085FA39EB0EB9EAC09CA04A27692';
 var $stats = $wnd.__gwtStatsEvent ? function(a) {return $wnd.__gwtStatsEvent(a);} : null,
 $sessionId = $wnd.__gwtStatsSessionId ? $wnd.__gwtStatsSessionId : null;
 $stats && $stats({moduleName:'cm3',sessionId:$sessionId,subSystem:'startup',evtGroup:'moduleStartup',millis:(new Date()).getTime(),type:'moduleEvalStart'});
@@ -12,8 +12,8 @@ $stats && $stats({moduleName:'cm3',sessionId:$sessionId,subSystem:'startup',evtG
 <body>
 <script><!--
 var _, N1_longLit = {l:4194303, m:4194303, h:1048575}, P0_longLit = {l:0, m:0, h:0}, P72957f000_longLit = {l:1568768, m:7333, h:0}, seedTable = {}, Q$Object = 0, Q$String = 1, Q$HasCell = 5, Q$JavaScriptException = 6, Q$TableCellBuilder = 7, Q$Style$Display = 8, Q$Style$OutlineStyle = 10, Q$Style$Overflow = 11, Q$Style$Position = 12, Q$Style$TextAlign = 13, Q$Style$Unit = 14, Q$DomEvent$Type = 16, Q$EventHandler = 26, Q$HandlerRegistration = 27, Q$DateTimeFormat = 30, Q$HasDirection$Direction = 31, 
-Q$DateTimeFormat$PatternPart = 32, Q$LongLibBase$LongEmul = 37, Q$Layout$Alignment = 38, Q$Layout$Layer = 39, Q$Column = 50, Q$ColumnSortList$ColumnSortInfo = 52, Q$HasKeyboardPagingPolicy$KeyboardPagingPolicy = 53, Q$HasKeyboardSelectionPolicy$KeyboardSelectionPolicy = 54, Q$RowHoverEvent$HoveringScope = 55, Q$DocumentModeAsserter$Severity = 56, Q$EventListener = 58, Q$RequestCallbackAdapter$ResponseReader = 61, Q$HasWidgets = 63, Q$IsRenderable = 64, Q$RequiresResize = 66, Q$TabLayoutPanel$Tab = 
-69, Q$Widget = 71, Q$HasData = 74, Q$Range = 77, Q$SimpleEventBus$Command = 79, Q$UmbrellaException = 80, Q$HasId = 84, Q$Serializable = 86, Q$Boolean = 87, Q$Enum = 91, Q$Error = 92, Q$IndexOutOfBoundsException = 93, Q$Integer = 94, Q$NumberFormatException = 96, Q$RuntimeException = 97, Q$StackTraceElement = 98, Q$Throwable = 99, Q$UnsupportedOperationException = 100, Q$List = 102, Q$Map = 103, Q$Map$Entry = 104, Q$Handler = 107, Q$Handler_$1 = 108, Q$Logger = 109;
+Q$DateTimeFormat$PatternPart = 32, Q$LongLibBase$LongEmul = 37, Q$Layout$Alignment = 38, Q$Layout$Layer = 39, Q$Column = 50, Q$ColumnSortList$ColumnSortInfo = 52, Q$HasKeyboardPagingPolicy$KeyboardPagingPolicy = 53, Q$HasKeyboardSelectionPolicy$KeyboardSelectionPolicy = 54, Q$RowHoverEvent$HoveringScope = 55, Q$DocumentModeAsserter$Severity = 56, Q$EventListener = 58, Q$RequestCallbackAdapter$ResponseReader = 61, Q$HasWidgets = 63, Q$IsRenderable = 64, Q$RequiresResize = 66, Q$RootPanel = 67, Q$ScrollPanel = 
+68, Q$TabLayoutPanel$Tab = 69, Q$Widget = 71, Q$HasData = 74, Q$Range = 77, Q$SimpleEventBus$Command = 79, Q$UmbrellaException = 80, Q$HasId = 84, Q$Serializable = 86, Q$Boolean = 87, Q$Enum = 91, Q$Error = 92, Q$IndexOutOfBoundsException = 93, Q$Integer = 94, Q$NumberFormatException = 96, Q$RuntimeException = 97, Q$StackTraceElement = 98, Q$Throwable = 99, Q$UnsupportedOperationException = 100, Q$List = 102, Q$Map = 103, Q$Map$Entry = 104, Q$Handler = 107, Q$Handler_$1 = 108, Q$Logger = 109;
 function defineSeed(id, superSeed, castableTypeMap) {
   var seed = seedTable[id];
   seed && !seed.___clazz$ ? _ = seed.prototype : (!seed && (seed = seedTable[id] = function() {
@@ -1331,7 +1331,7 @@ function SelectionEvent_0(selectedItem) {
 defineSeed(143, 126, {}, SelectionEvent_0);
 _.dispatch = function(handler) {
   dynamicCast(handler, 25);
-  ($clinit_CM3(), m_initializing) || m_storage_0.m_storageMap && $put(m_storage_0.m_storageMap, "ui.tab_selection", "" + this.selectedItem.value)
+  m_initializing || (handler = this.selectedItem, m_storage_0 && m_storage_0.m_storageMap && $put(m_storage_0.m_storageMap, "ui.tab_selection", "" + handler.value))
 };
 _.getAssociatedType = function() {
   return TYPE_7
@@ -2339,68 +2339,189 @@ function init() {
   new NullLoggingPopup_0 || (regexp = new HasWidgetsLogHandler_0, $add_8(log.impl.handlers, regexp));
   sUncaughtExceptionHandler || (log = ($clinit_Logger(), $getLoggerHelper(Lcom_google_gwt_logging_client_LogConfiguration_2_classLit.typeName)), sUncaughtExceptionHandler = new LogConfiguration$1_0(log));
   $stats && onModuleStart("com.raccoonfink.cruisemonkey.gwt.client.CM3");
-  regexp = new CM3_0;
-  log = new PhoneGapBrowserImpl_0;
-  regexp = new CM3$1_0(regexp, log);
-  $doAdd(log.handlerManager, ($clinit_PhoneGapAvailableEvent(), TYPE_16), regexp);
-  regexp = new CM3$2_0;
-  $doAdd(log.handlerManager, ($clinit_PhoneGapTimeoutEvent(), TYPE_17), regexp);
-  regexp = (!log.event_0 && (log.event_0 = $constructEvent(log)), log.event_0).pgImpl;
-  message = new CM3$3_0;
-  $doAdd(regexp.this$0.eventBus, ($clinit_PauseEvent(), $clinit_PauseEvent(), TYPE_18), message);
-  regexp = (!log.event_0 && (log.event_0 = $constructEvent(log)), log.event_0).pgImpl;
-  message = new CM3$4_0;
-  $doAdd(regexp.this$0.eventBus, ($clinit_ResumeEvent(), $clinit_ResumeEvent(), TYPE_19), message);
-  add_0(fromDouble((new Date).getTime()), fromInt(1E4));
-  regexp = log.phoneGapLog;
-  !log.device && (log.device = new DeviceBrowserImpl_0);
-  var JSCompiler_inline_result$$0;
-  if(!(message = !cachedCookies)) {
-    message = $doc.cookie, message != rawCookies ? (rawCookies = message, message = !0) : message = !1
+  log = new CM3_0;
+  var phoneGap, cell, table, column, table_0, column_0;
+  regexp = new TabLayoutPanel_0(36, ($clinit_Style$Unit(), PX));
+  $addHandler_2(regexp, new CM3$5_0, (!TYPE_7 && (TYPE_7 = new GwtEvent$Type_0), TYPE_7));
+  $add_4(regexp, new ScrollPanel_0, new HTML_0('<div class="icon icon-official-events"></div><div class="tabLabel">Official Events</div>'));
+  $add_4(regexp, new ScrollPanel_0, new HTML_0('<div class="icon icon-public-events"></div><div class="tabLabel">Public Events</div>'));
+  $add_4(regexp, new ScrollPanel_0, new HTML_0('<div class="icon icon-my-events"></div><div class="tabLabel">My Events</div>'));
+  $add_4(regexp, new ScrollPanel_0, new HTML_0('<div class="icon icon-amenities"></div><div class="tabLabel">Amenities</div>'));
+  $add_4(regexp, new ScrollPanel_0, new HTML_0('<div class="icon icon-decks"></div><div class="tabLabel">Deck Plans</div>'));
+  singleton_0 || (singleton_0 = new RootLayoutPanel_0, $clinit_RootPanel(), $clinit_RootPanel(), message = dynamicCast($get_4(rootPanels, null), Q$RootPanel), message || (0 == rootPanels.size && (message = new RootPanel$2_0, maybeInitializeCloseHandlers(), addHandler(TYPE_5 ? TYPE_5 : TYPE_5 = new GwtEvent$Type_0, message), $clinit_LocaleInfo()), message = new RootPanel$DefaultRootPanel_0, $put_1(rootPanels, null, message), $add_9(widgetsToDetach, message)), $add(message, singleton_0, message.element));
+  message = singleton_0;
+  $insert_4(message, regexp, message.children.size);
+  message = new ArrayList_0;
+  $add_8(message, new Venue_0(valueOf(2), "Arcadia Theatre (2nd Deck)", "Our theatre - five stories from the orchestra pit to domed ceiling - features contemporary musical stage productions."));
+  $add_8(message, new Venue_0(valueOf(2), "Conference Center", "Our comfortable conference center features state-of-the-art presentation equipment and a variety of meeting rooms."));
+  $add_8(message, new Miscellaneous_0(valueOf(2), "Center Ice Rink", "Inside Studio B, the ice rink offers skating as well as ice shows."));
+  $add_8(message, new Venue_0(valueOf(2), "Studio B (2nd Deck)", "A multipurpose studio complex filled with activity all day long, from ice-skating to cooking demonstrations."));
+  $add_8(message, new Venue_0(valueOf(3), "Arcadia Theatre (3rd Deck)", "Our theatre - five stories from the orchestra pit to domed ceiling - features contemporary musical stage productions."));
+  $add_8(message, new Bar_0(valueOf(3), "The Crypt (3rd Deck)", "The Crypt's decor is true to its name: the area features spiked window frames, paintings of fantasy warriors, pictures of people from the dark ages, and gargoyle statues. The bar stools are pointed, the railings look like a part of an ancient church, and even the lights look like torches. Along the walls are armchairs and small glass tables. The club is two levels high and the dance floor is on the lower level so people upstairs can watch the action below. both bars, upstairs and downstairs, are made of chrome and milky glass with lights. The Crypt opens around 8pm for teen and kid's parties, but it is open for adults only later in the evening."));
+  $add_8(message, new Venue_0(valueOf(3), "Studio B (3rd Deck)", "A multipurpose studio complex filled with activity all day long, from ice-skating to cooking demonstrations."));
+  $add_8(message, new Bar_0(valueOf(3), "On Air", "Grab a microphone and get to singing! This karaoke club will provide hours of endless entertainment; sing the classics or watch your friends embarrass themselves on stage! It's a win-win situation at On Air Club."));
+  $add_8(message, new Miscellaneous_0(valueOf(3), "RCTV", "RCTV is the television/internet/communications control room.  Look through the glass to see the master control for the entire ship."));
+  $add_8(message, new Miscellaneous_0(valueOf(3), "Art Gallery", "Original art is displayed in the onboard art gallery as well as throughout the ship. To purchase something for your own collection, visit an onboard art auction."));
+  $add_8(message, new Miscellaneous_0(valueOf(3), "Terra", "A dining room area used for overflow, or as a meeting room."));
+  $add_8(message, new Miscellaneous_0(valueOf(3), "Cielo", "A dining room area used for overflow, or as a meeting room."));
+  $add_8(message, new Food_0(valueOf(3), "Leonardo Dining Room", "Our three-tier dining room features a wide variety of menu items and impeccable service."));
+  $add_8(message, new Venue_0(valueOf(4), "Arcadia Theatre (4th Deck)", "Our theatre - five stories from the orchestra pit to domed ceiling - features contemporary musical stage productions."));
+  $add_8(message, new Bar_0(valueOf(4), "The Crypt (4th Deck)", "The Crypt's decor is true to its name: the area features spiked window frames, paintings of fantasy warriors, pictures of people from the dark ages, and gargoyle statues. The bar stools are pointed, the railings look like a part of an ancient church, and even the lights look like torches. Along the walls are armchairs and small glass tables. The club is two levels high and the dance floor is on the lower level so people upstairs can watch the action below. both bars, upstairs and downstairs, are made of chrome and milky glass with lights. The Crypt opens around 8pm for teen and kid's parties, but it is open for adults only later in the evening."));
+  $add_8(message, new Bar_0(valueOf(4), "Schooner Bar", "This nautically themed bar is the perfect spot to enjoy a drink with friends."));
+  $add_8(message, new Miscellaneous_0(valueOf(4), "Casino Royale", "Our glittering casino features electronic Slot Machines, Video Poker, Blackjack, Craps, Roulette and Caribbean Stud Poker."));
+  $add_8(message, new Shopping_0(valueOf(4), "Photo Gallery and Shop", "View and purchase photos of your family that Royal Caribbean's staff has taken on board and in port! You can also purchase a dvd of the photos as well to show off what a great time you had to all your friends and family back home."));
+  $add_8(message, new Bar_0(valueOf(4), "Boleros Lounge", "Follow the Latin beat and find yourself in a nighttime hot spot where you can keep up with live music and cool down n with a mojito or caipirinha."));
+  $add_8(message, new Food_0(valueOf(4), "Isaac Dining Room", "Our three-tier dining room features a wide variety of menu items and impeccable service."));
+  $add_8(message, new Miscellaneous_0(valueOf(5), "Observation Deck", 'A wind-blown perch where you\'ll have views and photo-ops of "titanic" proportions.'));
+  $add_8(message, new Miscellaneous_0(valueOf(5), "Outdoor Deck", null));
+  $add_8(message, new Venue_0(valueOf(5), "Pharaoh's Palace", "Enjoy live music, cocktails, and fun, exciting trivia games in this lounge. Pharaoh's Palace has kitschy Egyptian d\u00e9cor including sarcophaguses and sphinx statues! Check your Cruise Compass and Daily Planner for more information on performances and games."));
+  $add_8(message, new Bar_0(valueOf(5), "Connoisseur Club", "A classic cigar lounge in the style of a modern gentleman's club, the connoisseur club is a great place to have a smoke and a cocktail."));
+  $add_8(message, new Food_0(valueOf(5), "Sorrento's", "When you find yourself craving pizza, drop by Sorrento's for a piping hot slice."));
+  $add_8(message, new Bar_0(valueOf(5), "Bull and Bear Pub", "The ship's version of an English pub, The Bull and Bear is located centrally on deck five, featuring vintage wooden d\u00e9cor to give a friendly vibe while you relax with a drink or have a quick snack."));
+  $add_8(message, new Shopping_0(valueOf(5), "Promenade Shops", "Distinctive storefronts offer an array of merchandise ranging from logo items, perfume and jewelry to liquor and cruise wear."));
+  $add_8(message, new Bar_0(valueOf(5), "Vintages", "A classic wine and tapas bar with an extensive list of wines from worldwide. Guests may also participate in wine tastings and classes \u2013 check your Cruise Compass and Daily Planner for exact times."));
+  $add_8(message, new Shopping_0(valueOf(5), "Royal Promenade", "This boulevard centrally located on deck five is ship's version of 5th avenue \u2013 full of a variety of shops and restaurants."));
+  $add_8(message, new Food_0(valueOf(5), "Ben and Jerry's Ice Cream Parlor", "Satisfy your sweet tooth with a smoothie or a waffle cone of various flavors of Ben and Jerry's rich ice cream!"));
+  $add_8(message, new Food_0(valueOf(5), "Caf\u00e9 Promenade", "A strip of the Royal promenade specifically designated for in between meal snacking with additional seating."));
+  $add_8(message, new Food_0(valueOf(5), "Cupcake Cupboard", "Have some fun and grab a cupcake before, after, or in between meals at the Cupcake Cupboard! With specialty flavors such as bubblegum, red velvet, and even root beer \u2013 there's a featured flavor each day of the trip! Guests can also participate in cupcake making and decorating classes!"));
+  $add_8(message, new Shopping_0(valueOf(5), "Britto Art Gallery", "The spirited works of iconic pop artist Romero Britto saturate this engaging and interactive space, where shoppers may peruse a wide array of artwork, giftware, collectibles and luggage, including limited edition custom works created by Britto exclusively for Royal Caribbean guests."));
+  $add_8(message, new Miscellaneous_0(valueOf(5), "Guest Relations", "The place to go for general ship information, to report lost or damaged goods, to exchange money or cash traveler's checks."));
+  $add_8(message, new Miscellaneous_0(valueOf(5), "Explorations!", "Book your shore excursions at the Explorations! Desk."));
+  $add_8(message, new Bar_0(valueOf(5), "Champagne Bar", "A classic lounge-inspired bar that has an air of elegance where you can satisfy yourself with a glass of bubbly to celebrate a great vacation."));
+  $add_8(message, new Food_0(valueOf(5), "Galileo Dining Room", "Our three-tier dining room features a wide variety of menu items and impeccable service."));
+  $add_8(message, new Miscellaneous_0(valueOf(6), "Business Services", "Computers for browsing the Internet and complimentary printing are available to meet your business needs."));
+  $add_8(message, new Miscellaneous_0(valueOf(7), "Library", "Our onboard library features comfortable reading chairs as well as an impressive selection of books and guidebooks."));
+  $add_8(message, new Miscellaneous_0(valueOf(8), "Royal Caribbean Online", "It's high tech on the high seas! With royalcaribbean online, for a small fee you can access the Internet, send e-mails, or send your family an e-postcard with your picture in it."));
+  $add_8(message, new Bar_0(valueOf(10), "Concierge Club", "Only accessible to those who have booked the larger suites, the concierge club gives extra leisure to guests in a semi-exclusive lounge."));
+  $add_8(message, new Fitness_0(valueOf(11), "Vitality at Sea Spa and Fitness Center", "Our seaside fitness center features modern exercise equipment. And our full-service spa offers a beauty salon and spa treatments, including massage, manicures and seaweed body wraps."));
+  $add_8(message, new Pool_0(valueOf(11), "Solarium", "Escape the general pool population and head to the Solarium to bask in the more relaxed adults only swimming pool and cantilevered whirlpools. Encompassed by glass the clean, contemporary design provides a perfect area for sunbathing and swimming."));
+  $add_8(message, new Pool_0(valueOf(11), "Whirlpool", null));
+  $add_8(message, new Bar_0(valueOf(11), "Pool Bar", "Throw back a few drinks after swimming in the main pool or take one to your deck chair while you soak up some sun."));
+  $add_8(message, new Pool_0(valueOf(11), "Main Pool", "Salt-water pool for guests to enjoy twenty-four hours a day."));
+  $add_8(message, new Pool_0(valueOf(11), "Sports Pool", "A salt-water pool designated for water sports, join in on a game of volleyball or a class of water aerobics. Lap swim times are also available but are subject to change \u2013 check your Cruise Compass and Daily Planner."));
+  $add_8(message, new Pool_0(valueOf(11), "H2O Zone", "A bright, colorful water play area, H2O Zone is where your kids will want to be the entire trip! Water spigots, sprinklers, geysers, and even water cannons!  At night this area turns into a beautifully lit sculpture garden."));
+  $add_8(message, new Bar_0(valueOf(11), "Squeeze", "Quench your thirst after swimming laps on the pool deck at Squeeze. This juice bar has a variety of fruit juices, wheat grass shots, and energy shakes!"));
+  $add_8(message, new Shopping_0(valueOf(11), "SeaTrek Dive Shop", "Whether you're a seasoned pro or a beginner, you can rent gear and take courses at this shop to properly prepare yourself for any scuba excursions you plan to go on during your vacation. Full PADI certificate courses available as well as tune up refresher courses."));
+  $add_8(message, new Food_1(valueOf(11), "Chops Grille", "Royal's signature upscale steak house, Chops Grille provides a palatable dinner with a classic menu. Have a fresh salad and juicy steak followed by a delectable slice of chocolate mud pie."));
+  $add_8(message, new Food_1(valueOf(11), "Portofino", "A classic, intimate Italian restaurant where you can feed upon some of the finest pastas, soups, and salads on board. Finish the night off by sharing a slice of scrumptious tiramisu with a glass of fine wine."));
+  $add_8(message, new Bar_0(valueOf(11), "Plaza Bar", "Cocktail bar in the middle of deck eleven conveniently sandwiched between several other dining options."));
+  $add_8(message, new Food_0(valueOf(11), "Windjammer Caf\u00e9", "Casual buffet style dining, a popular choice among guests. Open for several meals a day, guests can satisfy any craving they come across during their trip."));
+  $add_8(message, new Fitness_0(valueOf(12), "Vitality at Sea Spa and Fitness Center", "Our seaside fitness center features modern exercise equipment. And our full-service spa offers a beauty salon and spa treatments, including massage, manicures and seaweed body wraps."));
+  $add_8(message, new Bar_0(valueOf(12), "Sky Bar", "Catch a drink in the sun at this small ocean blue bar and people watch from plush white stools."));
+  $add_8(message, new Fitness_0(valueOf(12), "Jogging Track", "Run laps while taking in the view. Our tracks are open to anyone and proper shoes are recommended."));
+  $add_8(message, new Miscellaneous_0(valueOf(12), "Outdoor Movie Screen", "Watch first-run movies and big time sporting events the way they were meant to be seen - poolside, under the stars. A screen hoisted above the main pool area will showcase all the larger-than-life action."));
+  $add_8(message, new Miscellaneous_0(valueOf(12), "Royal Babies and Tots Nursery", "Parents love our new colorful nursery where our littlest guests can be left in the care of our trained professionals, to enjoy specially-designed programming and playgroups designed by Fisher-Price and Crayola."));
+  $add_8(message, new Miscellaneous_0(valueOf(12), "The Living Room", "A laid-back place for teens to hang out with new friends."));
+  $add_8(message, new Miscellaneous_0(valueOf(12), "Video Arcade", "Blips, bleeps, clangs and cheers. Play to win in a classic arcade atmosphere with timeless games like Pacman and table hockey, plus the latest \u2013 Guitar Hero, Fast and Furious Drift and more."));
+  $add_8(message, new Miscellaneous_0(valueOf(12), "Adventure Ocean", "A play area with specially designed activities for kids ages 3-17. Run by exceptional, energetic, college-educated staff."));
+  $add_8(message, new Food_0(valueOf(12), "Johnny Rockets", "Step into our '50s diner, which features red naugahyde booths, formica counters, a jukebox, burgers, fries and, of course, good old-fashioned malted milk shakes."));
+  $add_8(message, new Miscellaneous_0(valueOf(12), "Fuel Teen Disco", "A teens-only club where they can gather, dance and enjoy music."));
+  $add_8(message, new Miscellaneous_0(valueOf(13), "Rock Climbing Wall", "This is the largest of our rock-climbing walls: a 43-foot-tall by 44-foot-wide freestanding wall with a central spire. Plus, with eleven different routes to choose from, our rock-climbing wall offers skill combinations for all levels."));
+  $add_8(message, new Fitness_0(valueOf(13), "Sports Court", "An outdoor full-size court for sports, including basketball and volleyball."));
+  $add_8(message, new Miscellaneous_0(valueOf(13), "Golf Simulator", "Being at sea making you miss the green? The golf simulator can give golf pros their fix until they reach land!"));
+  $add_8(message, new Miscellaneous_0(valueOf(13), "Freedom Fairways", "A nine-hole miniature golf course with whimsical shrubbery and lighting open 24 hours for the entire family to enjoy at any time they please."));
+  $add_8(message, new Miscellaneous_0(valueOf(13), "Wipe Out! Caf\u00e9", "Grab a bite to eat at this casual caf\u00e9 on the pool deck while you watch people wipe out on their surf boards at the FlowRider station."));
+  $add_8(message, new Pool_0(valueOf(13), "FlowRider Surfing", "Your friends are never going to believe you surfed onboard a ship! Even the best beaches have bad days, but on the FlowRider, surf's always up. Plus, the FlowRider is great fun for all ages and all skill levels, whether you're boogie boarding or surfing."));
+  $add_8(message, new Bar_0(valueOf(14), "Olive or Twist", "A classic martini bar encompassed by floor to ceiling windows for great panoramic views. Live music also occurs nightly here."));
+  $add_8(message, new Miscellaneous_0(valueOf(14), "Cloud Nine", "A quiet space to work and have meetings, Cloud Nine is a multipurpose room that is often used as a reception area for weddings on the ship."));
+  $add_8(message, new Miscellaneous_0(valueOf(14), "Seven Hearts", "A small room dedicated for the fun of playing card games \u2013 separate from the casino on a lower deck. Seven Hearts boasts classic felt tables and board games in addition to cards."));
+  $add_8(message, new Bar_0(valueOf(14), "Viking Crown Lounge", "A Royal Caribbean signature. Perched high above the ocean, this comfortable lounge offers spectacular vistas by day and turns into a lively dance club at night."));
+  $add_8(message, new Bar_0(valueOf(14), "Diamond Club", "Diamond, Diamond Plus, and Pinnacle Club Crown and Anchor Society members enjoy access to this lounge, created to serve these loyal guests with concierge access, complimentary continental breakfast, and evening drinks."));
+  $add_8(message, new Miscellaneous_0(valueOf(15), "Skylight Chapel", 'Our wedding chapel, which can accommodate 40 people, is located on top of the Viking Crown Lounge (the highest point on the ship), and is the perfect place to say "I do."'));
+  log.m_amenityData = new FilteredListDataProvider_1(message);
+  cell = new AmenityCell_0;
+  table = new CellTable_0(2147483647);
+  column = new IdentityColumn_0(cell);
+  column.isSortable = !0;
+  column.isDefaultSortAscending = !1;
+  column.cellStyleNames = "list-entry";
+  $insertColumn(table, table.columns.size, column);
+  setStyleName(table.element, "amenity-list", !0);
+  table.rowStyles = new CM3$11_0;
+  $addDataDisplay(log.m_amenityData, table);
+  $add_3(dynamicCast($get_1(regexp.deckPanel.children, 3), Q$ScrollPanel), table);
+  table = new ArrayList_0;
+  for(cell = 2;15 >= cell;++cell) {
+    $add_8(table, new Deck_0(valueOf(cell)))
   }
-  if(message) {
-    message = new HashMap_0;
-    if((runtimeValue = $doc.cookie) && "" != runtimeValue) {
-      runtimeValue = runtimeValue.split("; ");
-      for(JSCompiler_inline_result = 0;JSCompiler_inline_result < runtimeValue.length;++JSCompiler_inline_result) {
-        severity = runtimeValue[JSCompiler_inline_result].indexOf("=");
-        -1 == severity ? (result = runtimeValue[JSCompiler_inline_result], severity = "") : (result = runtimeValue[JSCompiler_inline_result].substring(0, severity), severity = runtimeValue[JSCompiler_inline_result].substring(severity + 1));
+  log.m_deckData = new ListDataProvider_0(table);
+  cell = (phoneGap = new DeckCell_0, table_0 = new CellTable_0(2147483647), column_0 = new IdentityColumn_0(phoneGap), column_0.isSortable = !1, column_0.cellStyleNames = "list-entry", $insertColumn(table_0, table_0.columns.size, column_0), setStyleName(table_0.element, "deck-list", !0), table_0);
+  $addDataDisplay(log.m_deckData, cell);
+  $add_3(dynamicCast($get_1(regexp.deckPanel.children, 4), Q$ScrollPanel), cell);
+  log.m_officialData = new FilteredListDataProvider_0(new CM3$7_0, log.m_eventComparator);
+  phoneGap = $createTable();
+  $addDataDisplay(log.m_officialData, phoneGap);
+  $add_3(dynamicCast($get_1(regexp.deckPanel.children, 0), Q$ScrollPanel), phoneGap);
+  log.m_publicData = new FilteredListDataProvider_0(new CM3$8_0, log.m_eventComparator);
+  phoneGap = $createTable();
+  $addDataDisplay(log.m_publicData, phoneGap);
+  $add_3(dynamicCast($get_1(regexp.deckPanel.children, 1), Q$ScrollPanel), phoneGap);
+  log.m_myData = new FilteredListDataProvider_0(new CM3$9_0, log.m_eventComparator);
+  phoneGap = $createTable();
+  $addDataDisplay(log.m_myData, phoneGap);
+  $add_3(dynamicCast($get_1(regexp.deckPanel.children, 2), Q$ScrollPanel), phoneGap);
+  m_initializing = !1;
+  phoneGap = new PhoneGapBrowserImpl_0;
+  table_0 = new CM3$1_0(log, phoneGap);
+  $doAdd(phoneGap.handlerManager, ($clinit_PhoneGapAvailableEvent(), TYPE_16), table_0);
+  table_0 = new CM3$2_0;
+  $doAdd(phoneGap.handlerManager, ($clinit_PhoneGapTimeoutEvent(), TYPE_17), table_0);
+  table_0 = (!phoneGap.event_0 && (phoneGap.event_0 = $constructEvent(phoneGap)), phoneGap.event_0).pgImpl;
+  column_0 = new CM3$3_0;
+  $doAdd(table_0.this$0.eventBus, ($clinit_PauseEvent(), $clinit_PauseEvent(), TYPE_18), column_0);
+  table_0 = (!phoneGap.event_0 && (phoneGap.event_0 = $constructEvent(phoneGap)), phoneGap.event_0).pgImpl;
+  column_0 = new CM3$4_0;
+  $doAdd(table_0.this$0.eventBus, ($clinit_ResumeEvent(), $clinit_ResumeEvent(), TYPE_19), column_0);
+  add_0(fromDouble((new Date).getTime()), fromInt(1E4));
+  table_0 = phoneGap.phoneGapLog;
+  !phoneGap.device && (phoneGap.device = new DeviceBrowserImpl_0);
+  var JSCompiler_inline_result$$0;
+  if(!(column_0 = !cachedCookies)) {
+    column_0 = $doc.cookie, column_0 != rawCookies ? (rawCookies = column_0, column_0 = !0) : column_0 = !1
+  }
+  if(column_0) {
+    column_0 = new HashMap_0;
+    if((cell = $doc.cookie) && "" != cell) {
+      cell = cell.split("; ");
+      for(table = 0;table < cell.length;++table) {
+        log = cell[table].indexOf("=");
+        -1 == log ? (column = cell[table], log = "") : (column = cell[table].substring(0, log), log = cell[table].substring(log + 1));
         if(uriEncoding) {
           try {
-            result = decodeURIComponent(result)
+            column = decodeURIComponent(column)
           }catch(e) {
           }
           try {
-            severity = decodeURIComponent(severity)
+            log = decodeURIComponent(log)
           }catch(e$$0) {
           }
         }
-        message.put(result, severity)
+        column_0.put(column, log)
       }
     }
-    cachedCookies = message
+    cachedCookies = column_0
   }
-  message = (JSCompiler_inline_result$$0 = cachedCookies, dynamicCast(JSCompiler_inline_result$$0.stringMap[":gwt-phonegap-uuid"], Q$String));
-  if(null == message) {
+  column_0 = (JSCompiler_inline_result$$0 = cachedCookies, dynamicCast(JSCompiler_inline_result$$0.stringMap[":gwt-phonegap-uuid"], Q$String));
+  if(null == column_0) {
     JSCompiler_inline_result$$0 = add_0(fromDouble((new Date).getTime()), P72957f000_longLit);
-    message = initDim(_3C_classLit, makeCastMap([Q$Serializable]), -1, 36, 1);
-    for(runtimeValue = 0;36 > runtimeValue;++runtimeValue) {
-      result = round_int(16 * Math.random()), JSCompiler_inline_result = 0, 19 == runtimeValue ? JSCompiler_inline_result = result & 3 | 8 : JSCompiler_inline_result = result & 15, message[runtimeValue] = CHAR_ARRAY[JSCompiler_inline_result]
+    column_0 = initDim(_3C_classLit, makeCastMap([Q$Serializable]), -1, 36, 1);
+    for(cell = 0;36 > cell;++cell) {
+      column = round_int(16 * Math.random()), table = 0, 19 == cell ? table = column & 3 | 8 : table = column & 15, column_0[cell] = CHAR_ARRAY[table]
     }
-    message[8] = message[13] = message[18] = message[23] = 45;
-    message[14] = 52;
-    runtimeValue = message = String.fromCharCode.apply(null, message);
-    JSCompiler_inline_result = new Date_2(JSCompiler_inline_result$$0);
+    column_0[8] = column_0[13] = column_0[18] = column_0[23] = 45;
+    column_0[14] = 52;
+    cell = column_0 = String.fromCharCode.apply(null, column_0);
+    table = new Date_2(JSCompiler_inline_result$$0);
     JSCompiler_inline_result$$0 = encodeURIComponent("gwt-phonegap-uuid");
-    runtimeValue = encodeURIComponent(runtimeValue);
-    JSCompiler_inline_result = toDouble(!JSCompiler_inline_result ? P0_longLit : fromDouble(JSCompiler_inline_result.jsdate.getTime()));
-    JSCompiler_inline_result$$0 = JSCompiler_inline_result$$0 + "=" + runtimeValue;
-    JSCompiler_inline_result && (JSCompiler_inline_result$$0 += ";expires=" + (new Date(JSCompiler_inline_result)).toGMTString());
+    cell = encodeURIComponent(cell);
+    table = toDouble(!table ? P0_longLit : fromDouble(table.jsdate.getTime()));
+    JSCompiler_inline_result$$0 = JSCompiler_inline_result$$0 + "=" + cell;
+    table && (JSCompiler_inline_result$$0 += ";expires=" + (new Date(table)).toGMTString());
     $doc.cookie = JSCompiler_inline_result$$0
   }
-  JSCompiler_inline_result$$0 = message;
-  regexp.remoteHandler && (regexp.remoteHandler.clientId = JSCompiler_inline_result$$0);
-  $doFire(log.handlerManager, new PhoneGapAvailableEvent_0)
+  JSCompiler_inline_result$$0 = column_0;
+  table_0.remoteHandler && (table_0.remoteHandler.clientId = JSCompiler_inline_result$$0);
+  $doFire(phoneGap.handlerManager, new PhoneGapAvailableEvent_0)
 }
 function caught_0(e) {
   return instanceOf(e, Q$Throwable) ? e : new JavaScriptException_0(e)
@@ -5607,10 +5728,6 @@ function RowHoverEvent$HoveringScope_0(enum$name, enum$ordinal) {
 }
 defineSeed(306, 75, makeCastMap([Q$RowHoverEvent$HoveringScope, Q$Serializable, 89, Q$Enum]), RowHoverEvent$HoveringScope_0);
 var $VALUES_9, CELL_HOVER, ROW_HOVER, UNKNOWN, cachedCookies = null, rawCookies = null, uriEncoding = !0;
-function appendChild(parent_0, child) {
-  var newChild = ($clinit_PotentialElement(), child.__gwt_resolve ? child.__gwt_resolve() : child);
-  parent_0.appendChild(newChild)
-}
 function dispatchEvent_0(evt, elem, listener) {
   elem == sCaptureElem && 8192 == $eventGetTypeInt(evt.type) && (sCaptureElem = null);
   listener.onBrowserEvent_0(evt)
@@ -6403,6 +6520,14 @@ _.doAttachChildren = function() {
 _.doDetachChildren = function() {
   tryCommand(this, ($clinit_AttachDetachException(), detachCommand))
 };
+function $add(this$static, child, container) {
+  $removeFromParent_0(child);
+  var this$static$$0 = this$static.children;
+  $insert_7(this$static$$0, child, this$static$$0.size);
+  this$static$$0 = ($clinit_PotentialElement(), child.element.__gwt_resolve ? child.element.__gwt_resolve() : child.element);
+  container.appendChild(this$static$$0);
+  $setParent_0(child, this$static)
+}
 function $remove_1(this$static, w) {
   var elem;
   if(w.parent_0 != this$static) {
@@ -6584,12 +6709,9 @@ _.this$1 = null;
 function $add_1(this$static, w) {
   var container, container_0;
   container = (container_0 = $doc.createElement("div"), container_0.style.width = "100%", container_0.style.height = "0px", container_0.style.padding = "0px", container_0.style.margin = "0px", container_0);
-  appendChild(this$static.element, container);
-  $removeFromParent_0(w);
-  container_0 = this$static.children;
-  $insert_7(container_0, w, container_0.size);
-  appendChild(container, w.element);
-  $setParent_0(w, this$static);
+  container_0 = ($clinit_PotentialElement(), container.__gwt_resolve ? container.__gwt_resolve() : container);
+  this$static.element.appendChild(container_0);
+  $add(this$static, w, container);
   setVisible(container, !1);
   container.style.height = "100%";
   container = w.element;
@@ -6861,7 +6983,7 @@ function $clinit_RootPanel() {
   rootPanels = new HashMap_0;
   widgetsToDetach = new HashSet_0
 }
-defineSeed(435, 408, makeCastMap([23, 28, Q$EventListener, 62, Q$HasWidgets, 65, 67, 70, Q$Widget]));
+defineSeed(435, 408, makeCastMap([23, 28, Q$EventListener, 62, Q$HasWidgets, 65, Q$RootPanel, 70, Q$Widget]));
 var maybeDetachCommand, rootPanels, widgetsToDetach;
 function RootPanel$1_0() {
 }
@@ -6886,7 +7008,7 @@ function RootPanel$DefaultRootPanel_0() {
   this.element = elem;
   $onAttach(this)
 }
-defineSeed(438, 435, makeCastMap([23, 28, Q$EventListener, 62, Q$HasWidgets, 65, 67, 70, Q$Widget]), RootPanel$DefaultRootPanel_0);
+defineSeed(438, 435, makeCastMap([23, 28, Q$EventListener, 62, Q$HasWidgets, 65, Q$RootPanel, 70, Q$Widget]), RootPanel$DefaultRootPanel_0);
 function $getMaximumHorizontalScrollPosition(scrollable) {
   return $isRtl(scrollable) ? 0 : (scrollable.scrollWidth || 0) - scrollable.clientWidth
 }
@@ -6919,7 +7041,9 @@ function $remove_3(this$static, w) {
 }
 function $setWidget(this$static, w) {
   if(w != this$static.widget && (w && $removeFromParent_0(w), this$static.widget && this$static.remove(this$static.widget), this$static.widget = w)) {
-    appendChild(this$static.getContainerElement(), this$static.widget.element), $setParent_0(w, this$static)
+    var newChild = ($clinit_PotentialElement(), this$static.widget.element.__gwt_resolve ? this$static.widget.element.__gwt_resolve() : this$static.widget.element);
+    this$static.getContainerElement().appendChild(newChild);
+    $setParent_0(w, this$static)
   }
 }
 function SimplePanel_0() {
@@ -6970,7 +7094,7 @@ function ScrollPanel_0() {
   }
   !impl_3 && (impl_3 = new ScrollImpl_0)
 }
-defineSeed(440, 441, makeCastMap([23, 28, Q$EventListener, 62, Q$HasWidgets, 65, Q$RequiresResize, 68, 70, Q$Widget]), ScrollPanel_0);
+defineSeed(440, 441, makeCastMap([23, 28, Q$EventListener, 62, Q$HasWidgets, 65, Q$RequiresResize, Q$ScrollPanel, 70, Q$Widget]), ScrollPanel_0);
 _.getContainerElement = function() {
   return this.containerElem
 };
@@ -7659,11 +7783,14 @@ defineSeed(475, 126, {}, PhoneGapAvailableEvent_0);
 _.dispatch = function(handler) {
   handler = dynamicCast(handler, 81);
   $info(handler.this$0.m_log.impl, "PhoneGap loaded.");
-  $clinit_CM3();
   m_phoneGap = handler.val$phoneGap;
-  var handler = handler.this$0, amenityData, connection, deckData, deckTable, myData, officialData, officialTable, column;
+  var handler = handler.this$0, connection;
+  m_storage_0 = (!m_instance && (m_instance = new StorageFactory_0), m_instance);
   try {
-    amenityData = m_phoneGap, !amenityData.connection && (amenityData.connection = new ConnectionBrowserImpl_0), connection = amenityData.connection.type_0, $info(handler.m_log.impl, "connection: " + connection)
+    var this$static = m_phoneGap;
+    !this$static.connection && (this$static.connection = new ConnectionBrowserImpl_0);
+    connection = this$static.connection.type_0;
+    $info(handler.m_log.impl, "connection: " + connection)
   }catch($e0) {
     if($e0 = caught_0($e0), instanceOf($e0, Q$Throwable)) {
       $info(handler.m_log.impl, "Failed to get connection info, assuming PhoneGap is not available."), m_phoneGap = null
@@ -7671,142 +7798,10 @@ _.dispatch = function(handler) {
       throw $e0;
     }
   }
-  connection = new TabLayoutPanel_0(36, ($clinit_Style$Unit(), PX));
-  $addHandler_2(connection, new CM3$5_0, (!TYPE_7 && (TYPE_7 = new GwtEvent$Type_0), TYPE_7));
-  $add_4(connection, new ScrollPanel_0, new HTML_0('<div class="icon icon-official-events"></div><div class="tabLabel">Official Events</div>'));
-  $add_4(connection, new ScrollPanel_0, new HTML_0('<div class="icon icon-public-events"></div><div class="tabLabel">Public Events</div>'));
-  $add_4(connection, new ScrollPanel_0, new HTML_0('<div class="icon icon-my-events"></div><div class="tabLabel">My Events</div>'));
-  $add_4(connection, new ScrollPanel_0, new HTML_0('<div class="icon icon-amenities"></div><div class="tabLabel">Amenities</div>'));
-  $add_4(connection, new ScrollPanel_0, new HTML_0('<div class="icon icon-decks"></div><div class="tabLabel">Deck Plans</div>'));
-  if(!singleton_0) {
-    singleton_0 = new RootLayoutPanel_0;
-    $clinit_RootPanel();
-    $clinit_RootPanel();
-    amenityData = dynamicCast($get_4(rootPanels, null), 67);
-    amenityData || (0 == rootPanels.size && (amenityData = new RootPanel$2_0, maybeInitializeCloseHandlers(), addHandler(TYPE_5 ? TYPE_5 : TYPE_5 = new GwtEvent$Type_0, amenityData), $clinit_LocaleInfo()), amenityData = new RootPanel$DefaultRootPanel_0, $put_1(rootPanels, null, amenityData), $add_9(widgetsToDetach, amenityData));
-    var child = singleton_0, container = amenityData.element;
-    $removeFromParent_0(child);
-    var this$static = amenityData.children;
-    $insert_7(this$static, child, this$static.size);
-    appendChild(container, child.element);
-    $setParent_0(child, amenityData)
-  }
-  amenityData = singleton_0;
-  $insert_4(amenityData, connection, amenityData.children.size);
-  amenityData = m_phoneGap;
-  !amenityData.splashScreen && (amenityData.splashScreen = new SplashScreenBrowserImpl_0);
-  amenityData = new ArrayList_0;
-  $add_8(amenityData, new Venue_0(valueOf(2), "Arcadia Theatre (2nd Deck)", "Our theatre - five stories from the orchestra pit to domed ceiling - features contemporary musical stage productions."));
-  $add_8(amenityData, new Venue_0(valueOf(2), "Conference Center", "Our comfortable conference center features state-of-the-art presentation equipment and a variety of meeting rooms."));
-  $add_8(amenityData, new Miscellaneous_0(valueOf(2), "Center Ice Rink", "Inside Studio B, the ice rink offers skating as well as ice shows."));
-  $add_8(amenityData, new Venue_0(valueOf(2), "Studio B (2nd Deck)", "A multipurpose studio complex filled with activity all day long, from ice-skating to cooking demonstrations."));
-  $add_8(amenityData, new Venue_0(valueOf(3), "Arcadia Theatre (3rd Deck)", "Our theatre - five stories from the orchestra pit to domed ceiling - features contemporary musical stage productions."));
-  $add_8(amenityData, new Bar_0(valueOf(3), "The Crypt (3rd Deck)", "The Crypt's decor is true to its name: the area features spiked window frames, paintings of fantasy warriors, pictures of people from the dark ages, and gargoyle statues. The bar stools are pointed, the railings look like a part of an ancient church, and even the lights look like torches. Along the walls are armchairs and small glass tables. The club is two levels high and the dance floor is on the lower level so people upstairs can watch the action below. both bars, upstairs and downstairs, are made of chrome and milky glass with lights. The Crypt opens around 8pm for teen and kid's parties, but it is open for adults only later in the evening."));
-  $add_8(amenityData, new Venue_0(valueOf(3), "Studio B (3rd Deck)", "A multipurpose studio complex filled with activity all day long, from ice-skating to cooking demonstrations."));
-  $add_8(amenityData, new Bar_0(valueOf(3), "On Air", "Grab a microphone and get to singing! This karaoke club will provide hours of endless entertainment; sing the classics or watch your friends embarrass themselves on stage! It's a win-win situation at On Air Club."));
-  $add_8(amenityData, new Miscellaneous_0(valueOf(3), "RCTV", "RCTV is the television/internet/communications control room.  Look through the glass to see the master control for the entire ship."));
-  $add_8(amenityData, new Miscellaneous_0(valueOf(3), "Art Gallery", "Original art is displayed in the onboard art gallery as well as throughout the ship. To purchase something for your own collection, visit an onboard art auction."));
-  $add_8(amenityData, new Miscellaneous_0(valueOf(3), "Terra", "A dining room area used for overflow, or as a meeting room."));
-  $add_8(amenityData, new Miscellaneous_0(valueOf(3), "Cielo", "A dining room area used for overflow, or as a meeting room."));
-  $add_8(amenityData, new Food_0(valueOf(3), "Leonardo Dining Room", "Our three-tier dining room features a wide variety of menu items and impeccable service."));
-  $add_8(amenityData, new Venue_0(valueOf(4), "Arcadia Theatre (4th Deck)", "Our theatre - five stories from the orchestra pit to domed ceiling - features contemporary musical stage productions."));
-  $add_8(amenityData, new Bar_0(valueOf(4), "The Crypt (4th Deck)", "The Crypt's decor is true to its name: the area features spiked window frames, paintings of fantasy warriors, pictures of people from the dark ages, and gargoyle statues. The bar stools are pointed, the railings look like a part of an ancient church, and even the lights look like torches. Along the walls are armchairs and small glass tables. The club is two levels high and the dance floor is on the lower level so people upstairs can watch the action below. both bars, upstairs and downstairs, are made of chrome and milky glass with lights. The Crypt opens around 8pm for teen and kid's parties, but it is open for adults only later in the evening."));
-  $add_8(amenityData, new Bar_0(valueOf(4), "Schooner Bar", "This nautically themed bar is the perfect spot to enjoy a drink with friends."));
-  $add_8(amenityData, new Miscellaneous_0(valueOf(4), "Casino Royale", "Our glittering casino features electronic Slot Machines, Video Poker, Blackjack, Craps, Roulette and Caribbean Stud Poker."));
-  $add_8(amenityData, new Shopping_0(valueOf(4), "Photo Gallery and Shop", "View and purchase photos of your family that Royal Caribbean's staff has taken on board and in port! You can also purchase a dvd of the photos as well to show off what a great time you had to all your friends and family back home."));
-  $add_8(amenityData, new Bar_0(valueOf(4), "Boleros Lounge", "Follow the Latin beat and find yourself in a nighttime hot spot where you can keep up with live music and cool down n with a mojito or caipirinha."));
-  $add_8(amenityData, new Food_0(valueOf(4), "Isaac Dining Room", "Our three-tier dining room features a wide variety of menu items and impeccable service."));
-  $add_8(amenityData, new Miscellaneous_0(valueOf(5), "Observation Deck", 'A wind-blown perch where you\'ll have views and photo-ops of "titanic" proportions.'));
-  $add_8(amenityData, new Miscellaneous_0(valueOf(5), "Outdoor Deck", null));
-  $add_8(amenityData, new Venue_0(valueOf(5), "Pharaoh's Palace", "Enjoy live music, cocktails, and fun, exciting trivia games in this lounge. Pharaoh's Palace has kitschy Egyptian d\u00e9cor including sarcophaguses and sphinx statues! Check your Cruise Compass and Daily Planner for more information on performances and games."));
-  $add_8(amenityData, new Bar_0(valueOf(5), "Connoisseur Club", "A classic cigar lounge in the style of a modern gentleman's club, the connoisseur club is a great place to have a smoke and a cocktail."));
-  $add_8(amenityData, new Food_0(valueOf(5), "Sorrento's", "When you find yourself craving pizza, drop by Sorrento's for a piping hot slice."));
-  $add_8(amenityData, new Bar_0(valueOf(5), "Bull and Bear Pub", "The ship's version of an English pub, The Bull and Bear is located centrally on deck five, featuring vintage wooden d\u00e9cor to give a friendly vibe while you relax with a drink or have a quick snack."));
-  $add_8(amenityData, new Shopping_0(valueOf(5), "Promenade Shops", "Distinctive storefronts offer an array of merchandise ranging from logo items, perfume and jewelry to liquor and cruise wear."));
-  $add_8(amenityData, new Bar_0(valueOf(5), "Vintages", "A classic wine and tapas bar with an extensive list of wines from worldwide. Guests may also participate in wine tastings and classes \u2013 check your Cruise Compass and Daily Planner for exact times."));
-  $add_8(amenityData, new Shopping_0(valueOf(5), "Royal Promenade", "This boulevard centrally located on deck five is ship's version of 5th avenue \u2013 full of a variety of shops and restaurants."));
-  $add_8(amenityData, new Food_0(valueOf(5), "Ben and Jerry's Ice Cream Parlor", "Satisfy your sweet tooth with a smoothie or a waffle cone of various flavors of Ben and Jerry's rich ice cream!"));
-  $add_8(amenityData, new Food_0(valueOf(5), "Caf\u00e9 Promenade", "A strip of the Royal promenade specifically designated for in between meal snacking with additional seating."));
-  $add_8(amenityData, new Food_0(valueOf(5), "Cupcake Cupboard", "Have some fun and grab a cupcake before, after, or in between meals at the Cupcake Cupboard! With specialty flavors such as bubblegum, red velvet, and even root beer \u2013 there's a featured flavor each day of the trip! Guests can also participate in cupcake making and decorating classes!"));
-  $add_8(amenityData, new Shopping_0(valueOf(5), "Britto Art Gallery", "The spirited works of iconic pop artist Romero Britto saturate this engaging and interactive space, where shoppers may peruse a wide array of artwork, giftware, collectibles and luggage, including limited edition custom works created by Britto exclusively for Royal Caribbean guests."));
-  $add_8(amenityData, new Miscellaneous_0(valueOf(5), "Guest Relations", "The place to go for general ship information, to report lost or damaged goods, to exchange money or cash traveler's checks."));
-  $add_8(amenityData, new Miscellaneous_0(valueOf(5), "Explorations!", "Book your shore excursions at the Explorations! Desk."));
-  $add_8(amenityData, new Bar_0(valueOf(5), "Champagne Bar", "A classic lounge-inspired bar that has an air of elegance where you can satisfy yourself with a glass of bubbly to celebrate a great vacation."));
-  $add_8(amenityData, new Food_0(valueOf(5), "Galileo Dining Room", "Our three-tier dining room features a wide variety of menu items and impeccable service."));
-  $add_8(amenityData, new Miscellaneous_0(valueOf(6), "Business Services", "Computers for browsing the Internet and complimentary printing are available to meet your business needs."));
-  $add_8(amenityData, new Miscellaneous_0(valueOf(7), "Library", "Our onboard library features comfortable reading chairs as well as an impressive selection of books and guidebooks."));
-  $add_8(amenityData, new Miscellaneous_0(valueOf(8), "Royal Caribbean Online", "It's high tech on the high seas! With royalcaribbean online, for a small fee you can access the Internet, send e-mails, or send your family an e-postcard with your picture in it."));
-  $add_8(amenityData, new Bar_0(valueOf(10), "Concierge Club", "Only accessible to those who have booked the larger suites, the concierge club gives extra leisure to guests in a semi-exclusive lounge."));
-  $add_8(amenityData, new Fitness_0(valueOf(11), "Vitality at Sea Spa and Fitness Center", "Our seaside fitness center features modern exercise equipment. And our full-service spa offers a beauty salon and spa treatments, including massage, manicures and seaweed body wraps."));
-  $add_8(amenityData, new Pool_0(valueOf(11), "Solarium", "Escape the general pool population and head to the Solarium to bask in the more relaxed adults only swimming pool and cantilevered whirlpools. Encompassed by glass the clean, contemporary design provides a perfect area for sunbathing and swimming."));
-  $add_8(amenityData, new Pool_0(valueOf(11), "Whirlpool", null));
-  $add_8(amenityData, new Bar_0(valueOf(11), "Pool Bar", "Throw back a few drinks after swimming in the main pool or take one to your deck chair while you soak up some sun."));
-  $add_8(amenityData, new Pool_0(valueOf(11), "Main Pool", "Salt-water pool for guests to enjoy twenty-four hours a day."));
-  $add_8(amenityData, new Pool_0(valueOf(11), "Sports Pool", "A salt-water pool designated for water sports, join in on a game of volleyball or a class of water aerobics. Lap swim times are also available but are subject to change \u2013 check your Cruise Compass and Daily Planner."));
-  $add_8(amenityData, new Pool_0(valueOf(11), "H2O Zone", "A bright, colorful water play area, H2O Zone is where your kids will want to be the entire trip! Water spigots, sprinklers, geysers, and even water cannons!  At night this area turns into a beautifully lit sculpture garden."));
-  $add_8(amenityData, new Bar_0(valueOf(11), "Squeeze", "Quench your thirst after swimming laps on the pool deck at Squeeze. This juice bar has a variety of fruit juices, wheat grass shots, and energy shakes!"));
-  $add_8(amenityData, new Shopping_0(valueOf(11), "SeaTrek Dive Shop", "Whether you're a seasoned pro or a beginner, you can rent gear and take courses at this shop to properly prepare yourself for any scuba excursions you plan to go on during your vacation. Full PADI certificate courses available as well as tune up refresher courses."));
-  $add_8(amenityData, new Food_1(valueOf(11), "Chops Grille", "Royal's signature upscale steak house, Chops Grille provides a palatable dinner with a classic menu. Have a fresh salad and juicy steak followed by a delectable slice of chocolate mud pie."));
-  $add_8(amenityData, new Food_1(valueOf(11), "Portofino", "A classic, intimate Italian restaurant where you can feed upon some of the finest pastas, soups, and salads on board. Finish the night off by sharing a slice of scrumptious tiramisu with a glass of fine wine."));
-  $add_8(amenityData, new Bar_0(valueOf(11), "Plaza Bar", "Cocktail bar in the middle of deck eleven conveniently sandwiched between several other dining options."));
-  $add_8(amenityData, new Food_0(valueOf(11), "Windjammer Caf\u00e9", "Casual buffet style dining, a popular choice among guests. Open for several meals a day, guests can satisfy any craving they come across during their trip."));
-  $add_8(amenityData, new Fitness_0(valueOf(12), "Vitality at Sea Spa and Fitness Center", "Our seaside fitness center features modern exercise equipment. And our full-service spa offers a beauty salon and spa treatments, including massage, manicures and seaweed body wraps."));
-  $add_8(amenityData, new Bar_0(valueOf(12), "Sky Bar", "Catch a drink in the sun at this small ocean blue bar and people watch from plush white stools."));
-  $add_8(amenityData, new Fitness_0(valueOf(12), "Jogging Track", "Run laps while taking in the view. Our tracks are open to anyone and proper shoes are recommended."));
-  $add_8(amenityData, new Miscellaneous_0(valueOf(12), "Outdoor Movie Screen", "Watch first-run movies and big time sporting events the way they were meant to be seen - poolside, under the stars. A screen hoisted above the main pool area will showcase all the larger-than-life action."));
-  $add_8(amenityData, new Miscellaneous_0(valueOf(12), "Royal Babies and Tots Nursery", "Parents love our new colorful nursery where our littlest guests can be left in the care of our trained professionals, to enjoy specially-designed programming and playgroups designed by Fisher-Price and Crayola."));
-  $add_8(amenityData, new Miscellaneous_0(valueOf(12), "The Living Room", "A laid-back place for teens to hang out with new friends."));
-  $add_8(amenityData, new Miscellaneous_0(valueOf(12), "Video Arcade", "Blips, bleeps, clangs and cheers. Play to win in a classic arcade atmosphere with timeless games like Pacman and table hockey, plus the latest \u2013 Guitar Hero, Fast and Furious Drift and more."));
-  $add_8(amenityData, new Miscellaneous_0(valueOf(12), "Adventure Ocean", "A play area with specially designed activities for kids ages 3-17. Run by exceptional, energetic, college-educated staff."));
-  $add_8(amenityData, new Food_0(valueOf(12), "Johnny Rockets", "Step into our '50s diner, which features red naugahyde booths, formica counters, a jukebox, burgers, fries and, of course, good old-fashioned malted milk shakes."));
-  $add_8(amenityData, new Miscellaneous_0(valueOf(12), "Fuel Teen Disco", "A teens-only club where they can gather, dance and enjoy music."));
-  $add_8(amenityData, new Miscellaneous_0(valueOf(13), "Rock Climbing Wall", "This is the largest of our rock-climbing walls: a 43-foot-tall by 44-foot-wide freestanding wall with a central spire. Plus, with eleven different routes to choose from, our rock-climbing wall offers skill combinations for all levels."));
-  $add_8(amenityData, new Fitness_0(valueOf(13), "Sports Court", "An outdoor full-size court for sports, including basketball and volleyball."));
-  $add_8(amenityData, new Miscellaneous_0(valueOf(13), "Golf Simulator", "Being at sea making you miss the green? The golf simulator can give golf pros their fix until they reach land!"));
-  $add_8(amenityData, new Miscellaneous_0(valueOf(13), "Freedom Fairways", "A nine-hole miniature golf course with whimsical shrubbery and lighting open 24 hours for the entire family to enjoy at any time they please."));
-  $add_8(amenityData, new Miscellaneous_0(valueOf(13), "Wipe Out! Caf\u00e9", "Grab a bite to eat at this casual caf\u00e9 on the pool deck while you watch people wipe out on their surf boards at the FlowRider station."));
-  $add_8(amenityData, new Pool_0(valueOf(13), "FlowRider Surfing", "Your friends are never going to believe you surfed onboard a ship! Even the best beaches have bad days, but on the FlowRider, surf's always up. Plus, the FlowRider is great fun for all ages and all skill levels, whether you're boogie boarding or surfing."));
-  $add_8(amenityData, new Bar_0(valueOf(14), "Olive or Twist", "A classic martini bar encompassed by floor to ceiling windows for great panoramic views. Live music also occurs nightly here."));
-  $add_8(amenityData, new Miscellaneous_0(valueOf(14), "Cloud Nine", "A quiet space to work and have meetings, Cloud Nine is a multipurpose room that is often used as a reception area for weddings on the ship."));
-  $add_8(amenityData, new Miscellaneous_0(valueOf(14), "Seven Hearts", "A small room dedicated for the fun of playing card games \u2013 separate from the casino on a lower deck. Seven Hearts boasts classic felt tables and board games in addition to cards."));
-  $add_8(amenityData, new Bar_0(valueOf(14), "Viking Crown Lounge", "A Royal Caribbean signature. Perched high above the ocean, this comfortable lounge offers spectacular vistas by day and turns into a lively dance club at night."));
-  $add_8(amenityData, new Bar_0(valueOf(14), "Diamond Club", "Diamond, Diamond Plus, and Pinnacle Club Crown and Anchor Society members enjoy access to this lounge, created to serve these loyal guests with concierge access, complimentary continental breakfast, and evening drinks."));
-  $add_8(amenityData, new Miscellaneous_0(valueOf(15), "Skylight Chapel", 'Our wedding chapel, which can accommodate 40 people, is located on top of the Viking Crown Lounge (the highest point on the ship), and is the perfect place to say "I do."'));
-  amenityData = new FilteredListDataProvider_1(amenityData);
-  deckData = new AmenityCell_0;
-  deckTable = new CellTable_0(2147483647);
-  column = new IdentityColumn_0(deckData);
-  column.isSortable = !0;
-  column.isDefaultSortAscending = !1;
-  column.cellStyleNames = "list-entry";
-  $insertColumn(deckTable, deckTable.columns.size, column);
-  setStyleName(deckTable.element, "amenity-list", !0);
-  deckTable.rowStyles = new CM3$11_0;
-  $addDataDisplay(amenityData, deckTable);
-  $add_3(dynamicCast($get_1(connection.deckPanel.children, 3), 68), deckTable);
-  deckTable = new ArrayList_0;
-  for(deckData = 2;15 >= deckData;++deckData) {
-    $add_8(deckTable, new Deck_0(valueOf(deckData)))
-  }
-  deckData = new ListDataProvider_0(deckTable);
-  deckTable = (officialData = new DeckCell_0, officialTable = new CellTable_0(2147483647), myData = new IdentityColumn_0(officialData), myData.isSortable = !1, myData.cellStyleNames = "list-entry", $insertColumn(officialTable, officialTable.columns.size, myData), setStyleName(officialTable.element, "deck-list", !0), officialTable);
-  $addDataDisplay(deckData, deckTable);
-  $add_3(dynamicCast($get_1(connection.deckPanel.children, 4), 68), deckTable);
-  officialData = new FilteredListDataProvider_0(new CM3$7_0, handler.m_eventComparator);
-  officialTable = $createTable();
-  $addDataDisplay(officialData, officialTable);
-  $add_3(dynamicCast($get_1(connection.deckPanel.children, 0), 68), officialTable);
-  officialTable = new FilteredListDataProvider_0(new CM3$8_0, handler.m_eventComparator);
-  myData = $createTable();
-  $addDataDisplay(officialTable, myData);
-  $add_3(dynamicCast($get_1(connection.deckPanel.children, 1), 68), myData);
-  myData = new FilteredListDataProvider_0(new CM3$9_0, handler.m_eventComparator);
-  deckData = $createTable();
-  $addDataDisplay(myData, deckData);
-  $add_3(dynamicCast($get_1(connection.deckPanel.children, 2), 68), deckData);
-  handler.m_updater = new AjaxUpdater_0("RangerTest", "testme", "http://cm.raccoonfink.com/rest/cruisemonkey/events", 6E4, 1E4, initValues(_3Lcom_raccoonfink_cruisemonkey_gwt_client_FilteredListDataProvider_2_classLit, makeCastMap([Q$Serializable]), 82, [officialData, officialTable, myData]));
+  handler.m_updater = new AjaxUpdater_0("RangerTest", "testme", "http://cm.raccoonfink.com/rest/cruisemonkey/events", 6E4, 1E4, initValues(_3Lcom_raccoonfink_cruisemonkey_gwt_client_FilteredListDataProvider_2_classLit, makeCastMap([Q$Serializable]), 82, [handler.m_officialData, handler.m_publicData, handler.m_myData]));
   $schedule(new AjaxUpdater$3_0(handler.m_updater), 2E3);
-  m_initializing = !1
+  connection = m_phoneGap;
+  !connection.splashScreen && (connection.splashScreen = new SplashScreenBrowserImpl_0)
 };
 _.getAssociatedType = function() {
   return TYPE_16
@@ -8376,10 +8371,6 @@ _.run = function() {
   $add_8(timers, this$static)
 };
 _.this$0 = null;
-function $clinit_CM3() {
-  $clinit_CM3 = nullMethod;
-  m_storage_0 = (!m_instance && (m_instance = new StorageFactory_0), m_instance)
-}
 function $createTable() {
   var cell, table;
   cell = new CalendarEventCell_0;
@@ -8394,13 +8385,17 @@ function $createTable() {
   return table
 }
 function CM3_0() {
-  $clinit_CM3();
   this.m_log = ($clinit_Logger(), $getLoggerHelper(Lcom_raccoonfink_cruisemonkey_gwt_client_CM3_2_classLit.typeName));
   this.m_eventComparator = new CalendarEventComparator_0
 }
 defineSeed(498, 1, {}, CM3_0);
+_.m_amenityData = null;
+_.m_deckData = null;
+_.m_myData = null;
+_.m_officialData = null;
+_.m_publicData = null;
 _.m_updater = null;
-var m_initializing = !0, m_phoneGap = null, m_storage_0;
+var m_initializing = !0, m_phoneGap = null, m_storage_0 = null;
 function CM3$1_0(this$0, val$phoneGap) {
   this.this$0 = this$0;
   this.val$phoneGap = val$phoneGap
@@ -8453,7 +8448,7 @@ function CM3$9_0() {
 }
 defineSeed(510, 507, {}, CM3$9_0);
 _.matches = function(entry) {
-  return $equals(entry["created-by"], ($clinit_CM3(), "RangerRick")) ? !0 : !1
+  return $equals(entry["created-by"], "RangerRick") ? !0 : !1
 };
 function CalendarEventComparator_0() {
 }
@@ -8666,8 +8661,8 @@ _.onBrowserEvent = function(context, parent_0, value, event_0) {
 };
 _.render = function(context, event_0, sb) {
   var context = dynamicCastJso(event_0), isFavoriteChecked, isPublicChecked;
-  context && ($append_8(sb.sb, '<div class="calendar-event scrollable">'), $equals(context["created-by"], ($clinit_CM3(), "RangerRick")) ? ($append_8(sb.sb, '<div class="trash">'), $appendHtmlConstant(sb, '<input type="button" id="' + $replace_0(($clinit_JsCalendarEvent(), m_regExp), context["@id"]) + '-trash">'), $appendHtmlConstant(sb, '<label for="' + $replace_0(m_regExp, context["@id"]) + '-trash">&nbsp;</div>'), $append_8(sb.sb, '<div class="public">'), $isPublic(context) ? isPublicChecked = 
-  "checked=checked" : isPublicChecked = "", $appendHtmlConstant(sb, '<input type="checkbox" ' + isPublicChecked + ' id="' + $replace_0(m_regExp, context["@id"]) + '-public" />'), $appendHtmlConstant(sb, '<label for="' + $replace_0(m_regExp, context["@id"]) + '-public">&nbsp;</div>')) : ($append_8(sb.sb, '<div class="favorite">'), context.hasOwnProperty("isFavorite") && ("true" === context.isFavorite || !0 === context.isFavorite) ? isFavoriteChecked = "checked=checked" : isFavoriteChecked = "", $appendHtmlConstant(sb, 
+  context && ($append_8(sb.sb, '<div class="calendar-event scrollable">'), $equals(context["created-by"], "RangerRick") ? ($append_8(sb.sb, '<div class="trash">'), $appendHtmlConstant(sb, '<input type="button" id="' + $replace_0(($clinit_JsCalendarEvent(), m_regExp), context["@id"]) + '-trash">'), $appendHtmlConstant(sb, '<label for="' + $replace_0(m_regExp, context["@id"]) + '-trash">&nbsp;</div>'), $append_8(sb.sb, '<div class="public">'), $isPublic(context) ? isPublicChecked = "checked=checked" : 
+  isPublicChecked = "", $appendHtmlConstant(sb, '<input type="checkbox" ' + isPublicChecked + ' id="' + $replace_0(m_regExp, context["@id"]) + '-public" />'), $appendHtmlConstant(sb, '<label for="' + $replace_0(m_regExp, context["@id"]) + '-public">&nbsp;</div>')) : ($append_8(sb.sb, '<div class="favorite">'), context.hasOwnProperty("isFavorite") && ("true" === context.isFavorite || !0 === context.isFavorite) ? isFavoriteChecked = "checked=checked" : isFavoriteChecked = "", $appendHtmlConstant(sb, 
   '<input type="checkbox" ' + isFavoriteChecked + ' id="' + $replace_0(($clinit_JsCalendarEvent(), m_regExp), context["@id"]) + '-favorite" />'), $appendHtmlConstant(sb, '<label for="' + $replace_0(m_regExp, context["@id"]) + '-favorite">&nbsp;</div>')), $appendHtmlConstant($appendEscaped(($append_8(sb.sb, '<div class="summary">'), sb), context.summary), "</div>"), isPublicChecked = $parseNativeDate(context.start), isFavoriteChecked = $parseNativeDate(context.end), isFavoriteChecked = isPublicChecked ? 
   isFavoriteChecked ? formatDate(isPublicChecked) + "-" + formatDate(isFavoriteChecked) : formatDate(isPublicChecked) : "Unknown", $appendHtmlConstant(sb, '<div class="time">Time: ' + htmlEscape(isFavoriteChecked) + "</div>"), $equals(context["created-by"], "RangerRick") && $appendHtmlConstant(sb, '<div class="createdBy">Created By: ' + htmlEscape(context["created-by"]) + "</div>"), $appendHtmlConstant(sb, '<div class="location">Location: ' + htmlEscape(context.location) + "</div>"), $appendHtmlConstant(sb, 
   '<div class="description">' + htmlEscape(context.description) + "</div>"), $append_8(sb.sb, "</div>"))
@@ -10563,7 +10558,6 @@ var Lcom_raccoonfink_cruisemonkey_gwt_client_AjaxUpdater_2_classLit = createForC
 createForClass("com.raccoonfink.cruisemonkey.gwt.client.", "AjaxUpdater$1", 495);
 createForClass("com.raccoonfink.cruisemonkey.gwt.client.", "AjaxUpdater$2", 496);
 createForClass("com.raccoonfink.cruisemonkey.gwt.client.", "AjaxUpdater$3", 497);
-createForClass("com.raccoonfink.cruisemonkey.gwt.client.", "StorageFactory", 513);
 createForClass("com.google.gwt.user.client.ui.", "UIObject", 271);
 createForClass("com.google.gwt.user.client.ui.", "Widget", 270);
 createForClass("com.google.gwt.user.client.ui.", "Composite", 269);
@@ -10605,137 +10599,58 @@ createForClass("com.google.gwt.core.client.", "Scheduler", 32);
 createForClass("com.google.gwt.user.cellview.client.", "ColumnSortList", 292);
 createForClass("com.google.gwt.user.cellview.client.", "ColumnSortList$ColumnSortInfo", 293);
 createForClass("com.raccoonfink.cruisemonkey.gwt.client.model.", "MyTableResources_default_InlineClientBundleGenerator$1", 520);
-createForClass("com.google.gwt.core.client.impl.", "StringBufferImplAppend", 44);
-var Ljava_lang_UnsupportedOperationException_2_classLit = createForClass("java.lang.", "UnsupportedOperationException", 559), Ljava_util_logging_Level_2_classLit = createForClass("java.util.logging.", "Level", 598);
-createForClass("java.util.logging.", "Level$LevelAll", 599);
-createForClass("java.util.logging.", "Level$LevelConfig", 600);
-createForClass("java.util.logging.", "Level$LevelFine", 601);
-createForClass("java.util.logging.", "Level$LevelFiner", 602);
-createForClass("java.util.logging.", "Level$LevelFinest", 603);
-createForClass("java.util.logging.", "Level$LevelInfo", 604);
-createForClass("java.util.logging.", "Level$LevelOff", 605);
-createForClass("java.util.logging.", "Level$LevelSevere", 606);
-createForClass("java.util.logging.", "Level$LevelWarning", 607);
-createForClass("java.util.logging.", "LogManager", 608);
-createForClass("java.util.logging.", "LogManager$RootLogger", 609);
-createForClass("com.google.gwt.logging.impl.", "LoggerWithExposedConstructor", 225);
-createForClass("com.google.gwt.core.client.", "Duration", 20);
-createForClass("com.google.gwt.core.client.impl.", "SchedulerImpl", 34);
-createForClass("com.google.gwt.core.client.impl.", "SchedulerImpl$Flusher", 35);
-createForClass("com.google.gwt.core.client.impl.", "SchedulerImpl$Rescuer", 36);
-createForClass("com.google.web.bindery.event.shared.", "EventBus", 148);
-createForClass("com.googlecode.gwtphonegap.client.", "PhoneGapAvailableEvent", 475);
-createForClass("com.google.web.bindery.event.shared.", "SimpleEventBus", 147);
-createForClass("com.google.web.bindery.event.shared.", "SimpleEventBus$1", 465);
-createForClass("com.google.web.bindery.event.shared.", "SimpleEventBus$2", 466);
-createForClass("com.google.web.bindery.event.shared.", "SimpleEventBus$3", 467);
-createForClass("com.googlecode.gwtphonegap.client.log.", "PhoneGapLogStandardImpl", 488);
-createForClass("java.util.", "MapEntryImpl", 595);
-createForClass("java.lang.", "StringBuffer", 556);
-var Ljava_lang_NullPointerException_2_classLit = createForClass("java.lang.", "NullPointerException", 551), Ljava_lang_IllegalArgumentException_2_classLit = createForClass("java.lang.", "IllegalArgumentException", 544), Ljava_util_logging_LogRecord_2_classLit = createForClass("java.util.logging.", "LogRecord", 610);
-createForClass("com.google.gwt.storage.client.", "Storage", 242);
-createForClass("com.google.gwt.storage.client.", "Storage$StorageSupportDetector", 243);
-createForClass("com.google.gwt.storage.client.", "StorageMap", 246);
-createForClass("com.google.gwt.storage.client.", "StorageMap$StorageEntry", 248);
-createForClass("com.google.gwt.storage.client.", "StorageMap$StorageEntryIterator", 249);
-createForClass("com.google.gwt.storage.client.", "StorageMap$StorageEntrySet", 250);
-createForClass("com.googlecode.gwtphonegap.client.event.", "EventBaseImpl", 481);
-createForClass("com.googlecode.gwtphonegap.client.event.browser.", "EventBrowserImpl", 485);
-createForClass("com.googlecode.gwtphonegap.client.event.", "EventBaseImpl$PhoneGapEventHandlerImpl", 482);
-createForClass("com.googlecode.gwtphonegap.client.log.", "PhoneGapConsoleLogHandler", 487);
-createForClass("com.google.gwt.logging.client.", "NullLogHandler", 219);
-createForClass("com.google.gwt.logging.client.", "RemoteLogHandlerBase", 221);
-createForClass("com.googlecode.gwtphonegap.client.log.", "PhoneGapRemoteBatchLogHandler", 489);
-createForClass("com.google.gwt.i18n.shared.", "DefaultDateTimeFormatInfo", 172);
-createForClass("com.google.gwt.i18n.client.", "DefaultDateTimeFormatInfo", 171);
-createForClass("com.google.gwt.i18n.client.impl.cldr.", "DateTimeFormatInfoImpl", 178);
-createForClass("com.google.gwt.user.client.", "Window$ClosingEvent", 316);
-createForClass("com.google.gwt.event.shared.", "HandlerManager", 145);
-createForClass("com.google.gwt.user.client.", "Window$WindowHandlers", 318);
-createForClass("com.google.gwt.event.shared.", "HandlerManager$Bus", 146);
-createForClass("com.google.gwt.logging.client.", "DevelopmentModeLogHandler", 209);
-createForClass("com.google.gwt.logging.client.", "FirebugLogHandler", 211);
-createForClass("com.google.gwt.logging.client.", "SystemLogHandler", 222);
-createForClass("com.google.gwt.logging.client.", "NullLoggingPopup", 220);
-createForClass("com.google.gwt.logging.client.", "HasWidgetsLogHandler", 212);
-createForClass("java.util.", "Date", 587);
-createForClass("java.util.logging.", "Formatter", 215);
-createForClass("com.google.gwt.logging.impl.", "FormatterImpl", 214);
-createForClass("com.google.gwt.logging.client.", "TextLogFormatter", 223);
-createForClass("com.google.gwt.user.client.rpc.impl.", "RemoteServiceProxy", 391);
-createForClass("com.googlecode.gwtphonegap.client.rpc.impl.", "PhoneGapRemoteServiceProxy", 491);
-createForClass("com.googlecode.gwtphonegap.client.log.shared.", "PhoneGapLogService_Proxy", 490);
-createForClass("com.google.gwt.user.client.rpc.impl.", "RemoteServiceProxy$ServiceHelper", 392);
-createForClass("com.google.gwt.user.client.rpc.", "InvocationException", 326);
-var Lcom_google_gwt_user_client_rpc_ServiceDefTarget$NoServiceEntryPointSpecifiedException_2_classLit = createForClass("com.google.gwt.user.client.rpc.", "ServiceDefTarget$NoServiceEntryPointSpecifiedException", 333), Ljava_util_NoSuchElementException_2_classLit = createForClass("java.util.", "NoSuchElementException", 596), Ljava_lang_IllegalStateException_2_classLit = createForClass("java.lang.", "IllegalStateException", 545);
-createForClass("com.google.gwt.logging.client.", "HtmlLogFormatter", 213);
-var Lcom_google_gwt_core_client_impl_SerializableThrowable_2_classLit = createForClass("com.google.gwt.core.client.impl.", "SerializableThrowable", 38);
-createForClass("java.util.", "AbstractSequentialList", 574);
-var Ljava_util_LinkedList_2_classLit = createForClass("java.util.", "LinkedList", 592);
-createForClass("java.util.", "LinkedList$ListIteratorImpl", 593);
-createForClass("java.util.", "LinkedList$Node", 594);
-createForClass("com.google.gwt.user.client.rpc.impl.", "SerializerBase", 406);
-createForClass("com.googlecode.gwtphonegap.client.log.shared.", "PhoneGapLogService_TypeSerializer", 492);
-var Lcom_google_web_bindery_event_shared_UmbrellaException_2_classLit = createForClass("com.google.web.bindery.event.shared.", "UmbrellaException", 151), Lcom_google_gwt_event_shared_UmbrellaException_2_classLit = createForClass("com.google.gwt.event.shared.", "UmbrellaException", 150), Lcom_google_gwt_http_client_RequestException_2_classLit = createForClass("com.google.gwt.http.client.", "RequestException", 160), Lcom_google_gwt_json_client_JSONException_2_classLit = createForClass("com.google.gwt.json.client.", 
-"JSONException", 183), Lcom_google_gwt_jsonp_client_TimeoutException_2_classLit = createForClass("com.google.gwt.jsonp.client.", "TimeoutException", null), Lcom_google_gwt_user_client_rpc_IncompatibleRemoteServiceException_2_classLit = createForClass("com.google.gwt.user.client.rpc.", "IncompatibleRemoteServiceException", 324), Lcom_google_gwt_user_client_rpc_RpcTokenException_2_classLit = createForClass("com.google.gwt.user.client.rpc.", "RpcTokenException", 327), Lcom_google_gwt_user_client_rpc_SerializableException_2_classLit = 
-createForClass("com.google.gwt.user.client.rpc.", "SerializableException", null), Lcom_google_gwt_user_client_rpc_SerializationException_2_classLit = createForClass("com.google.gwt.user.client.rpc.", "SerializationException", 330), Lcom_google_gwt_user_client_rpc_SerializedTypeViolationException_2_classLit = createForClass("com.google.gwt.user.client.rpc.", "SerializedTypeViolationException", null), Lcom_google_gwt_user_client_rpc_XsrfToken_2_classLit = createForClass("com.google.gwt.user.client.rpc.", 
-"XsrfToken", null), Lcom_googlecode_gwt_crypto_bouncycastle_CryptoException_2_classLit = createForClass("com.googlecode.gwt.crypto.bouncycastle.", "CryptoException", null), Lcom_googlecode_gwt_crypto_bouncycastle_RuntimeCryptoException_2_classLit = createForClass("com.googlecode.gwt.crypto.bouncycastle.", "RuntimeCryptoException", null), Lcom_googlecode_gwt_crypto_bouncycastle_DataLengthException_2_classLit = createForClass("com.googlecode.gwt.crypto.bouncycastle.", "DataLengthException", null), 
-Lcom_googlecode_gwt_crypto_bouncycastle_InvalidCipherTextException_2_classLit = createForClass("com.googlecode.gwt.crypto.bouncycastle.", "InvalidCipherTextException", null), Lcom_googlecode_gwt_crypto_gwtx_io_IOException_2_classLit = createForClass("com.googlecode.gwt.crypto.gwtx.io.", "IOException", null), Lcom_googlecode_gwt_crypto_gwtx_io_UnsupportedEncodingException_2_classLit = createForClass("com.googlecode.gwt.crypto.gwtx.io.", "UnsupportedEncodingException", null), Lcom_googlecode_gwtphonegap_client_file_browser_FileErrorException_2_classLit = 
-createForClass("com.googlecode.gwtphonegap.client.file.browser.", "FileErrorException", null), Ljava_io_IOException_2_classLit = createForClass("java.io.", "IOException", null), Ljava_io_UnsupportedEncodingException_2_classLit = createForClass("java.io.", "UnsupportedEncodingException", null), Ljava_lang_IndexOutOfBoundsException_2_classLit = createForClass("java.lang.", "IndexOutOfBoundsException", 546), Ljava_lang_ArrayIndexOutOfBoundsException_2_classLit = createForClass("java.lang.", "ArrayIndexOutOfBoundsException", 
-null), Ljava_lang_NegativeArraySizeException_2_classLit = createForClass("java.lang.", "NegativeArraySizeException", null), Ljava_lang_NoSuchMethodException_2_classLit = createForClass("java.lang.", "NoSuchMethodException", null), Ljava_lang_NumberFormatException_2_classLit = createForClass("java.lang.", "NumberFormatException", 553), Ljava_lang_StringIndexOutOfBoundsException_2_classLit = createForClass("java.lang.", "StringIndexOutOfBoundsException", null), Ljava_lang_annotation_AnnotationFormatError_2_classLit = 
-createForClass("java.lang.annotation.", "AnnotationFormatError", null), Ljava_lang_annotation_AnnotationTypeMismatchException_2_classLit = createForClass("java.lang.annotation.", "AnnotationTypeMismatchException", null), Ljava_security_GeneralSecurityException_2_classLit = createForClass("java.security.", "GeneralSecurityException", null), Ljava_security_DigestException_2_classLit = createForClass("java.security.", "DigestException", null), Ljava_security_NoSuchAlgorithmException_2_classLit = createForClass("java.security.", 
-"NoSuchAlgorithmException", null), Ljava_util_Arrays$ArrayList_2_classLit = createForClass("java.util.", "Arrays$ArrayList", null), Ljava_util_Collections$EmptyList_2_classLit = createForClass("java.util.", "Collections$EmptyList", 578), Ljava_util_Collections$EmptySet_2_classLit = createForClass("java.util.", "Collections$EmptySet", null), Ljava_util_Collections$SingletonList_2_classLit = createForClass("java.util.", "Collections$SingletonList", null), Ljava_util_ConcurrentModificationException_2_classLit = 
-createForClass("java.util.", "ConcurrentModificationException", null), Ljava_util_EmptyStackException_2_classLit = createForClass("java.util.", "EmptyStackException", null), Ljava_util_HashSet_2_classLit = createForClass("java.util.", "HashSet", 590), Ljava_util_LinkedHashSet_2_classLit = createForClass("java.util.", "LinkedHashSet", null), Ljava_util_Vector_2_classLit = createForClass("java.util.", "Vector", null), Ljava_util_Stack_2_classLit = createForClass("java.util.", "Stack", null), Ljava_util_TooManyListenersException_2_classLit = 
-createForClass("java.util.", "TooManyListenersException", null), Ljava_util_TreeMap_2_classLit = createForClass("java.util.", "TreeMap", null), Ljava_util_TreeSet_2_classLit = createForClass("java.util.", "TreeSet", null), _3Ljava_util_logging_LogRecord_2_classLit = createForArray("[Ljava.util.logging.", "LogRecord;", 625);
-createForClass("com.google.gwt.user.client.ui.", "LabelBase", 424);
-createForClass("com.google.gwt.user.client.ui.", "Label", 423);
-createForClass("com.google.gwt.user.client.ui.", "HTML", 422);
-createForEnum("com.google.gwt.i18n.client.", "HasDirection$Direction", 173, Ljava_lang_Enum_2_classLit, function() {
-  $clinit_HasDirection$Direction();
-  return $VALUES_5
+createForClass("com.google.gwt.user.client.ui.", "ResizeComposite", 432);
+createForClass("com.google.gwt.user.client.ui.", "TabLayoutPanel", 443);
+createForClass("com.google.gwt.user.client.ui.", "Panel", 410);
+createForClass("com.google.gwt.user.client.ui.", "SimplePanel", 441);
+createForClass("com.google.gwt.user.client.ui.", "TabLayoutPanel$Tab", 445);
+createForClass("com.google.gwt.user.client.ui.", "ComplexPanel", 409);
+createForClass("com.google.gwt.user.client.ui.", "DeckLayoutPanel", 414);
+createForClass("com.google.gwt.user.client.ui.", "TabLayoutPanel$TabbedDeckLayoutPanel", 446);
+createForClass("com.google.gwt.user.client.ui.", "TabLayoutPanel$1", 444);
+createForClass("com.google.gwt.user.client.ui.", "SimplePanel$1", 442);
+createForClass("com.google.gwt.user.client.ui.", "LayoutCommand", 416);
+createForClass("com.google.gwt.user.client.ui.", "DeckLayoutPanel$DeckAnimateCommand", 415);
+createForClass("com.google.gwt.user.client.ui.", "DeckLayoutPanel$DeckAnimateCommand$1", 417);
+var Lcom_google_web_bindery_event_shared_UmbrellaException_2_classLit = createForClass("com.google.web.bindery.event.shared.", "UmbrellaException", 151), Lcom_google_gwt_event_shared_UmbrellaException_2_classLit = createForClass("com.google.gwt.event.shared.", "UmbrellaException", 150);
+createForClass("com.google.gwt.user.client.ui.", "AttachDetachException", 411);
+createForClass("com.google.gwt.user.client.ui.", "AttachDetachException$1", 412);
+createForClass("com.google.gwt.user.client.ui.", "AttachDetachException$2", 413);
+createForClass("com.google.gwt.user.client.ui.", "LayoutCommand$1", 429);
+createForClass("com.google.gwt.layout.client.", "Layout", 204);
+createForEnum("com.google.gwt.layout.client.", "Layout$Alignment", 206, Ljava_lang_Enum_2_classLit, function() {
+  $clinit_Layout$Alignment();
+  return $VALUES_6
 });
-var _3Lcom_google_gwt_i18n_client_HasDirection$Direction_2_classLit = createForArray("[Lcom.google.gwt.i18n.client.", "HasDirection$Direction;", 626);
-createForClass("com.googlecode.gwtphonegap.client.device.", "DeviceBrowserImpl", 480);
-createForClass("com.google.gwt.event.logical.shared.", "CloseEvent", 141);
-var Lcom_google_gwt_user_client_rpc_impl_RequestCallbackAdapter$ResponseReader_2_classLit = createForEnum("com.google.gwt.user.client.rpc.impl.", "RequestCallbackAdapter$ResponseReader", 393, Ljava_lang_Enum_2_classLit, function() {
-  $clinit_RequestCallbackAdapter$ResponseReader();
-  return $VALUES_11
-}), _3Lcom_google_gwt_user_client_rpc_impl_RequestCallbackAdapter$ResponseReader_2_classLit = createForArray("[Lcom.google.gwt.user.client.rpc.impl.", "RequestCallbackAdapter$ResponseReader;", 627);
-createForEnum("com.google.gwt.user.client.rpc.impl.", "RequestCallbackAdapter$ResponseReader$1", 394, Lcom_google_gwt_user_client_rpc_impl_RequestCallbackAdapter$ResponseReader_2_classLit, null);
-createForEnum("com.google.gwt.user.client.rpc.impl.", "RequestCallbackAdapter$ResponseReader$2", 397, Lcom_google_gwt_user_client_rpc_impl_RequestCallbackAdapter$ResponseReader_2_classLit, null);
-createForEnum("com.google.gwt.user.client.rpc.impl.", "RequestCallbackAdapter$ResponseReader$3", 398, Lcom_google_gwt_user_client_rpc_impl_RequestCallbackAdapter$ResponseReader_2_classLit, null);
-createForEnum("com.google.gwt.user.client.rpc.impl.", "RequestCallbackAdapter$ResponseReader$4", 399, Lcom_google_gwt_user_client_rpc_impl_RequestCallbackAdapter$ResponseReader_2_classLit, null);
-createForEnum("com.google.gwt.user.client.rpc.impl.", "RequestCallbackAdapter$ResponseReader$5", 400, Lcom_google_gwt_user_client_rpc_impl_RequestCallbackAdapter$ResponseReader_2_classLit, null);
-createForEnum("com.google.gwt.user.client.rpc.impl.", "RequestCallbackAdapter$ResponseReader$6", 401, Lcom_google_gwt_user_client_rpc_impl_RequestCallbackAdapter$ResponseReader_2_classLit, null);
-createForEnum("com.google.gwt.user.client.rpc.impl.", "RequestCallbackAdapter$ResponseReader$7", 402, Lcom_google_gwt_user_client_rpc_impl_RequestCallbackAdapter$ResponseReader_2_classLit, null);
-createForEnum("com.google.gwt.user.client.rpc.impl.", "RequestCallbackAdapter$ResponseReader$8", 403, Lcom_google_gwt_user_client_rpc_impl_RequestCallbackAdapter$ResponseReader_2_classLit, null);
-createForEnum("com.google.gwt.user.client.rpc.impl.", "RequestCallbackAdapter$ResponseReader$9", 404, Lcom_google_gwt_user_client_rpc_impl_RequestCallbackAdapter$ResponseReader_2_classLit, null);
-createForEnum("com.google.gwt.user.client.rpc.impl.", "RequestCallbackAdapter$ResponseReader$10", 395, Lcom_google_gwt_user_client_rpc_impl_RequestCallbackAdapter$ResponseReader_2_classLit, null);
-createForEnum("com.google.gwt.user.client.rpc.impl.", "RequestCallbackAdapter$ResponseReader$11", 396, Lcom_google_gwt_user_client_rpc_impl_RequestCallbackAdapter$ResponseReader_2_classLit, null);
-createForClass("com.google.gwt.http.client.", "Request", 153);
-createForClass("com.google.gwt.http.client.", "Response", 155);
-createForClass("com.google.gwt.http.client.", "Request$1", 154);
-createForClass("com.google.gwt.http.client.", "Request$3", 156);
-createForClass("com.google.gwt.user.client.ui.", "DirectionalTextHelper", 420);
+var _3Lcom_google_gwt_layout_client_Layout$Alignment_2_classLit = createForArray("[Lcom.google.gwt.layout.client.", "Layout$Alignment;", 625);
+createForClass("com.google.gwt.layout.client.", "Layout$Layer", 207);
+createForClass("com.google.gwt.animation.client.", "Animation", 3);
+createForClass("com.google.gwt.layout.client.", "Layout$1", 205);
+createForClass("com.google.gwt.animation.client.", "Animation$1", 4);
+createForClass("com.google.gwt.animation.client.", "AnimationScheduler", 5);
+createForClass("com.google.gwt.animation.client.", "AnimationScheduler$AnimationHandle", 6);
+createForClass("com.google.gwt.user.client.ui.", "LayoutPanel", 430);
+createForClass("com.google.gwt.user.client.ui.", "RootLayoutPanel", 433);
+createForClass("com.google.gwt.user.client.ui.", "RootLayoutPanel$1", 434);
 var Lcom_google_gwt_dom_client_Style$Unit_2_classLit = createForEnum("com.google.gwt.dom.client.", "Style$Unit", 105, Ljava_lang_Enum_2_classLit, function() {
   $clinit_Style$Unit();
   return $VALUES_4
-}), _3Lcom_google_gwt_dom_client_Style$Unit_2_classLit = createForArray("[Lcom.google.gwt.dom.client.", "Style$Unit;", 628), Lcom_google_gwt_dom_client_Style$Display_2_classLit = createForEnum("com.google.gwt.dom.client.", "Style$Display", 74, Ljava_lang_Enum_2_classLit, function() {
+}), _3Lcom_google_gwt_dom_client_Style$Unit_2_classLit = createForArray("[Lcom.google.gwt.dom.client.", "Style$Unit;", 626), Lcom_google_gwt_dom_client_Style$Display_2_classLit = createForEnum("com.google.gwt.dom.client.", "Style$Display", 74, Ljava_lang_Enum_2_classLit, function() {
   $clinit_Style$Display();
   return $VALUES
-}), _3Lcom_google_gwt_dom_client_Style$Display_2_classLit = createForArray("[Lcom.google.gwt.dom.client.", "Style$Display;", 629), Lcom_google_gwt_dom_client_Style$OutlineStyle_2_classLit = createForEnum("com.google.gwt.dom.client.", "Style$OutlineStyle", 80, Ljava_lang_Enum_2_classLit, function() {
+}), _3Lcom_google_gwt_dom_client_Style$Display_2_classLit = createForArray("[Lcom.google.gwt.dom.client.", "Style$Display;", 627), Lcom_google_gwt_dom_client_Style$OutlineStyle_2_classLit = createForEnum("com.google.gwt.dom.client.", "Style$OutlineStyle", 80, Ljava_lang_Enum_2_classLit, function() {
   $clinit_Style$OutlineStyle();
   return $VALUES_0
-}), _3Lcom_google_gwt_dom_client_Style$OutlineStyle_2_classLit = createForArray("[Lcom.google.gwt.dom.client.", "Style$OutlineStyle;", 630), Lcom_google_gwt_dom_client_Style$Overflow_2_classLit = createForEnum("com.google.gwt.dom.client.", "Style$Overflow", 90, Ljava_lang_Enum_2_classLit, function() {
+}), _3Lcom_google_gwt_dom_client_Style$OutlineStyle_2_classLit = createForArray("[Lcom.google.gwt.dom.client.", "Style$OutlineStyle;", 628), Lcom_google_gwt_dom_client_Style$Overflow_2_classLit = createForEnum("com.google.gwt.dom.client.", "Style$Overflow", 90, Ljava_lang_Enum_2_classLit, function() {
   $clinit_Style$Overflow();
   return $VALUES_1
-}), _3Lcom_google_gwt_dom_client_Style$Overflow_2_classLit = createForArray("[Lcom.google.gwt.dom.client.", "Style$Overflow;", 631), Lcom_google_gwt_dom_client_Style$Position_2_classLit = createForEnum("com.google.gwt.dom.client.", "Style$Position", 95, Ljava_lang_Enum_2_classLit, function() {
+}), _3Lcom_google_gwt_dom_client_Style$Overflow_2_classLit = createForArray("[Lcom.google.gwt.dom.client.", "Style$Overflow;", 629), Lcom_google_gwt_dom_client_Style$Position_2_classLit = createForEnum("com.google.gwt.dom.client.", "Style$Position", 95, Ljava_lang_Enum_2_classLit, function() {
   $clinit_Style$Position();
   return $VALUES_2
-}), _3Lcom_google_gwt_dom_client_Style$Position_2_classLit = createForArray("[Lcom.google.gwt.dom.client.", "Style$Position;", 632), Lcom_google_gwt_dom_client_Style$TextAlign_2_classLit = createForEnum("com.google.gwt.dom.client.", "Style$TextAlign", 100, Ljava_lang_Enum_2_classLit, function() {
+}), _3Lcom_google_gwt_dom_client_Style$Position_2_classLit = createForArray("[Lcom.google.gwt.dom.client.", "Style$Position;", 630), Lcom_google_gwt_dom_client_Style$TextAlign_2_classLit = createForEnum("com.google.gwt.dom.client.", "Style$TextAlign", 100, Ljava_lang_Enum_2_classLit, function() {
   $clinit_Style$TextAlign();
   return $VALUES_3
-}), _3Lcom_google_gwt_dom_client_Style$TextAlign_2_classLit = createForArray("[Lcom.google.gwt.dom.client.", "Style$TextAlign;", 633);
+}), _3Lcom_google_gwt_dom_client_Style$TextAlign_2_classLit = createForArray("[Lcom.google.gwt.dom.client.", "Style$TextAlign;", 631);
 createForEnum("com.google.gwt.dom.client.", "Style$Unit$1", 106, Lcom_google_gwt_dom_client_Style$Unit_2_classLit, null);
 createForEnum("com.google.gwt.dom.client.", "Style$Unit$2", 107, Lcom_google_gwt_dom_client_Style$Unit_2_classLit, null);
 createForEnum("com.google.gwt.dom.client.", "Style$Unit$3", 108, Lcom_google_gwt_dom_client_Style$Unit_2_classLit, null);
@@ -10770,61 +10685,38 @@ createForEnum("com.google.gwt.dom.client.", "Style$TextAlign$1", 101, Lcom_googl
 createForEnum("com.google.gwt.dom.client.", "Style$TextAlign$2", 102, Lcom_google_gwt_dom_client_Style$TextAlign_2_classLit, null);
 createForEnum("com.google.gwt.dom.client.", "Style$TextAlign$3", 103, Lcom_google_gwt_dom_client_Style$TextAlign_2_classLit, null);
 createForEnum("com.google.gwt.dom.client.", "Style$TextAlign$4", 104, Lcom_google_gwt_dom_client_Style$TextAlign_2_classLit, null);
-createForClass("java.util.", "Collections$UnmodifiableCollection", 579);
-createForClass("java.util.", "Collections$UnmodifiableList", 581);
-createForClass("java.util.", "Collections$UnmodifiableRandomAccessList", 583);
-createForClass("java.util.", "Collections$UnmodifiableSet", 584);
-createForClass("java.util.", "Collections$UnmodifiableCollectionIterator", 580);
-createForClass("java.util.", "Collections$UnmodifiableListIterator", 582);
-createForClass("com.google.gwt.user.client.rpc.impl.", "RpcStatsContext", 405);
-createForClass("com.google.gwt.user.client.", "Event$NativePreviewEvent", 313);
-createForClass("com.google.gwt.event.shared.", "LegacyHandlerWrapper", 149);
-createForClass("com.google.gwt.user.client.rpc.impl.", "AbstractSerializationStream", 388);
-createForClass("com.google.gwt.user.client.rpc.impl.", "AbstractSerializationStreamWriter", 389);
-createForClass("com.google.gwt.user.client.rpc.impl.", "ClientSerializationStreamWriter", 390);
-createForClass("com.google.gwt.http.client.", "RequestBuilder", 157);
-createForClass("com.google.gwt.http.client.", "RequestBuilder$Method", 159);
-createForClass("com.google.gwt.http.client.", "RequestBuilder$1", 158);
-createForClass("com.google.gwt.http.client.", "RequestPermissionException", 162);
-createForClass("com.google.gwt.user.client.ui.", "ResizeComposite", 432);
-createForClass("com.google.gwt.user.client.ui.", "TabLayoutPanel", 443);
-createForClass("com.google.gwt.user.client.ui.", "Panel", 410);
-createForClass("com.google.gwt.user.client.ui.", "SimplePanel", 441);
-createForClass("com.google.gwt.user.client.ui.", "TabLayoutPanel$Tab", 445);
-createForClass("com.google.gwt.user.client.ui.", "ComplexPanel", 409);
-createForClass("com.google.gwt.user.client.ui.", "DeckLayoutPanel", 414);
-createForClass("com.google.gwt.user.client.ui.", "TabLayoutPanel$TabbedDeckLayoutPanel", 446);
-createForClass("com.google.gwt.user.client.ui.", "TabLayoutPanel$1", 444);
-createForClass("com.google.gwt.user.client.ui.", "SimplePanel$1", 442);
-createForClass("com.google.gwt.user.client.ui.", "LayoutCommand", 416);
-createForClass("com.google.gwt.user.client.ui.", "DeckLayoutPanel$DeckAnimateCommand", 415);
-createForClass("com.google.gwt.user.client.ui.", "DeckLayoutPanel$DeckAnimateCommand$1", 417);
-createForClass("com.google.gwt.user.client.ui.", "AttachDetachException", 411);
-createForClass("com.google.gwt.user.client.ui.", "AttachDetachException$1", 412);
-createForClass("com.google.gwt.user.client.ui.", "AttachDetachException$2", 413);
-createForClass("com.google.gwt.user.client.ui.", "LayoutCommand$1", 429);
-createForClass("com.google.gwt.layout.client.", "Layout", 204);
-createForEnum("com.google.gwt.layout.client.", "Layout$Alignment", 206, Ljava_lang_Enum_2_classLit, function() {
-  $clinit_Layout$Alignment();
-  return $VALUES_6
+createForClass("com.google.gwt.user.client.ui.", "ScrollPanel", 440);
+createForClass("com.google.gwt.user.client.ui.", "LabelBase", 424);
+createForClass("com.google.gwt.user.client.ui.", "Label", 423);
+createForClass("com.google.gwt.user.client.ui.", "HTML", 422);
+createForEnum("com.google.gwt.i18n.client.", "HasDirection$Direction", 173, Ljava_lang_Enum_2_classLit, function() {
+  $clinit_HasDirection$Direction();
+  return $VALUES_5
 });
-var _3Lcom_google_gwt_layout_client_Layout$Alignment_2_classLit = createForArray("[Lcom.google.gwt.layout.client.", "Layout$Alignment;", 634);
-createForClass("com.google.gwt.layout.client.", "Layout$Layer", 207);
-createForClass("com.google.gwt.animation.client.", "Animation", 3);
-createForClass("com.google.gwt.layout.client.", "Layout$1", 205);
-createForClass("com.google.gwt.animation.client.", "Animation$1", 4);
-createForClass("com.google.gwt.animation.client.", "AnimationScheduler", 5);
-createForClass("com.google.gwt.animation.client.", "AnimationScheduler$AnimationHandle", 6);
-createForClass("com.google.gwt.user.client.ui.", "LayoutPanel", 430);
-createForClass("com.google.gwt.user.client.ui.", "RootLayoutPanel", 433);
-createForClass("com.google.gwt.user.client.ui.", "RootLayoutPanel$1", 434);
+var _3Lcom_google_gwt_i18n_client_HasDirection$Direction_2_classLit = createForArray("[Lcom.google.gwt.i18n.client.", "HasDirection$Direction;", 632);
 createForClass("com.google.gwt.view.client.", "ListDataProvider$ListWrapper", 459);
 createForClass("com.google.gwt.view.client.", "ListDataProvider$ListWrapper$WrappedListIterator", 461);
 createForClass("com.google.gwt.view.client.", "ListDataProvider$ListWrapper$1", 460);
 createForClass("com.google.gwt.view.client.", "AbstractDataProvider$1", 455);
 createForClass("com.google.gwt.view.client.", "RangeChangeEvent", 463);
-createForClass("com.google.gwt.user.client.ui.", "ScrollPanel", 440);
-createForClass("java.util.", "IdentityHashMap", 591);
+createForClass("com.google.gwt.core.client.impl.", "StringBufferImplAppend", 44);
+var Ljava_lang_UnsupportedOperationException_2_classLit = createForClass("java.lang.", "UnsupportedOperationException", 559), Ljava_util_logging_Level_2_classLit = createForClass("java.util.logging.", "Level", 598);
+createForClass("java.util.logging.", "Level$LevelAll", 599);
+createForClass("java.util.logging.", "Level$LevelConfig", 600);
+createForClass("java.util.logging.", "Level$LevelFine", 601);
+createForClass("java.util.logging.", "Level$LevelFiner", 602);
+createForClass("java.util.logging.", "Level$LevelFinest", 603);
+createForClass("java.util.logging.", "Level$LevelInfo", 604);
+createForClass("java.util.logging.", "Level$LevelOff", 605);
+createForClass("java.util.logging.", "Level$LevelSevere", 606);
+createForClass("java.util.logging.", "Level$LevelWarning", 607);
+createForClass("java.util.logging.", "LogManager", 608);
+createForClass("java.util.logging.", "LogManager$RootLogger", 609);
+createForClass("com.google.gwt.logging.impl.", "LoggerWithExposedConstructor", 225);
+createForClass("com.google.gwt.core.client.", "Duration", 20);
+createForClass("com.google.gwt.core.client.impl.", "SchedulerImpl", 34);
+createForClass("com.google.gwt.core.client.impl.", "SchedulerImpl$Flusher", 35);
+createForClass("com.google.gwt.core.client.impl.", "SchedulerImpl$Rescuer", 36);
 createForClass("com.google.gwt.user.client.ui.", "FlowPanel", 421);
 createForClass("com.google.gwt.event.logical.shared.", "SelectionEvent", 143);
 createForClass("com.google.gwt.user.client.ui.", "AbsolutePanel", 408);
@@ -10845,20 +10737,50 @@ createForClass("com.raccoonfink.cruisemonkey.gwt.client.ui.", "AmenityCell", 533
 createForClass("com.google.gwt.cell.client.", "Cell$Context", 19);
 createForClass("com.google.gwt.user.cellview.client.", "Column", 290);
 createForClass("com.google.gwt.user.cellview.client.", "IdentityColumn", 302);
+var Ljava_lang_IllegalArgumentException_2_classLit = createForClass("java.lang.", "IllegalArgumentException", 544), Ljava_lang_IllegalStateException_2_classLit = createForClass("java.lang.", "IllegalStateException", 545);
 createForClass("com.raccoonfink.cruisemonkey.gwt.client.model.", "Deck", 517);
 createForClass("com.raccoonfink.cruisemonkey.gwt.client.ui.", "DeckCell", 535);
 createForClass("com.raccoonfink.cruisemonkey.gwt.client.ui.", "CalendarEventCell", 534);
-createForClass("com.google.gwt.safehtml.shared.", "SafeHtmlString", 238);
-createForClass("com.googlecode.gwtphonegap.client.connection.", "ConnectionBrowserImpl", 479);
+createForClass("com.google.web.bindery.event.shared.", "EventBus", 148);
+createForClass("com.googlecode.gwtphonegap.client.", "PhoneGapAvailableEvent", 475);
+createForClass("com.google.web.bindery.event.shared.", "SimpleEventBus", 147);
+createForClass("com.google.web.bindery.event.shared.", "SimpleEventBus$1", 465);
+createForClass("com.google.web.bindery.event.shared.", "SimpleEventBus$2", 466);
+createForClass("com.google.web.bindery.event.shared.", "SimpleEventBus$3", 467);
+createForClass("com.googlecode.gwtphonegap.client.log.", "PhoneGapLogStandardImpl", 488);
+createForClass("java.util.", "MapEntryImpl", 595);
+createForClass("java.lang.", "StringBuffer", 556);
+var Ljava_lang_NullPointerException_2_classLit = createForClass("java.lang.", "NullPointerException", 551), Ljava_util_logging_LogRecord_2_classLit = createForClass("java.util.logging.", "LogRecord", 610);
+createForClass("com.google.gwt.event.shared.", "HandlerManager", 145);
+createForClass("com.google.gwt.event.shared.", "HandlerManager$Bus", 146);
 createForClass("com.google.gwt.user.client.ui.", "ScrollImpl", 439);
+createForClass("com.google.gwt.user.client.ui.", "DirectionalTextHelper", 420);
+createForClass("com.google.gwt.user.client.", "Window$ClosingEvent", 316);
+createForClass("com.google.gwt.user.client.", "Window$WindowHandlers", 318);
+var Ljava_util_HashSet_2_classLit = createForClass("java.util.", "HashSet", 590);
 createForClass("com.google.gwt.user.client.ui.", "WidgetCollection", 447);
-var _3Lcom_google_gwt_user_client_ui_Widget_2_classLit = createForArray("[Lcom.google.gwt.user.client.ui.", "Widget;", 635);
+var _3Lcom_google_gwt_user_client_ui_Widget_2_classLit = createForArray("[Lcom.google.gwt.user.client.ui.", "Widget;", 633);
 createForClass("com.google.gwt.user.client.ui.", "WidgetCollection$WidgetIterator", 448);
-createForClass("com.googlecode.gwtphonegap.client.splashscreen.", "SplashScreenBrowserImpl", 493);
-createForClass("com.google.gwt.json.client.", "JSONValue", 181);
-createForClass("com.google.gwt.json.client.", "JSONObject", 187);
+createForClass("com.googlecode.gwtphonegap.client.event.", "EventBaseImpl", 481);
+createForClass("com.googlecode.gwtphonegap.client.event.browser.", "EventBrowserImpl", 485);
+createForClass("com.googlecode.gwtphonegap.client.event.", "EventBaseImpl$PhoneGapEventHandlerImpl", 482);
+createForClass("com.googlecode.gwtphonegap.client.log.", "PhoneGapConsoleLogHandler", 487);
+createForClass("com.google.gwt.logging.client.", "NullLogHandler", 219);
+createForClass("com.google.gwt.logging.client.", "RemoteLogHandlerBase", 221);
+createForClass("com.googlecode.gwtphonegap.client.log.", "PhoneGapRemoteBatchLogHandler", 489);
+createForClass("com.google.gwt.i18n.shared.", "DefaultDateTimeFormatInfo", 172);
+createForClass("com.google.gwt.i18n.client.", "DefaultDateTimeFormatInfo", 171);
+createForClass("com.google.gwt.i18n.client.impl.cldr.", "DateTimeFormatInfoImpl", 178);
+createForClass("com.google.gwt.logging.client.", "DevelopmentModeLogHandler", 209);
+createForClass("com.google.gwt.logging.client.", "FirebugLogHandler", 211);
+createForClass("com.google.gwt.logging.client.", "SystemLogHandler", 222);
+createForClass("com.google.gwt.logging.client.", "NullLoggingPopup", 220);
+createForClass("com.google.gwt.logging.client.", "HasWidgetsLogHandler", 212);
+createForClass("java.util.", "Date", 587);
 createForClass("com.google.gwt.layout.client.", "LayoutImpl", 208);
-var _3Ljava_lang_Boolean_2_classLit = createForArray("[Ljava.lang.", "Boolean;", 636);
+var _3Ljava_lang_Boolean_2_classLit = createForArray("[Ljava.lang.", "Boolean;", 634);
+createForClass("com.google.gwt.user.client.", "Event$NativePreviewEvent", 313);
+createForClass("com.google.gwt.event.shared.", "LegacyHandlerWrapper", 149);
 createForClass("com.google.gwt.touch.client.", "TouchScroller", 256);
 createForClass("com.google.gwt.touch.client.", "TouchScroller$TemporalPoint", 266);
 createForClass("com.google.gwt.touch.client.", "TouchScroller$MomentumCommand", 263);
@@ -10872,9 +10794,20 @@ createForClass("com.google.gwt.touch.client.", "TouchScroller$5", 261);
 createForClass("com.google.gwt.touch.client.", "TouchScroller$6", 262);
 createForClass("com.google.gwt.event.logical.shared.", "AttachEvent", 139);
 createForClass("com.google.gwt.event.logical.shared.", "ResizeEvent", 142);
+var Ljava_lang_IndexOutOfBoundsException_2_classLit = createForClass("java.lang.", "IndexOutOfBoundsException", 546);
 createForClass("com.google.gwt.view.client.", "Range", 462);
 createForClass("com.google.gwt.i18n.client.", "NumberFormat", 175);
-createForClass("com.google.gwt.http.client.", "RequestTimeoutException", 163);
+createForClass("java.util.logging.", "Formatter", 215);
+createForClass("com.google.gwt.logging.impl.", "FormatterImpl", 214);
+createForClass("com.google.gwt.logging.client.", "TextLogFormatter", 223);
+createForClass("com.google.gwt.user.client.rpc.impl.", "RemoteServiceProxy", 391);
+createForClass("com.googlecode.gwtphonegap.client.rpc.impl.", "PhoneGapRemoteServiceProxy", 491);
+createForClass("com.googlecode.gwtphonegap.client.log.shared.", "PhoneGapLogService_Proxy", 490);
+createForClass("com.google.gwt.user.client.rpc.impl.", "RemoteServiceProxy$ServiceHelper", 392);
+createForClass("com.google.gwt.user.client.rpc.", "InvocationException", 326);
+var Lcom_google_gwt_user_client_rpc_ServiceDefTarget$NoServiceEntryPointSpecifiedException_2_classLit = createForClass("com.google.gwt.user.client.rpc.", "ServiceDefTarget$NoServiceEntryPointSpecifiedException", 333), Ljava_util_NoSuchElementException_2_classLit = createForClass("java.util.", "NoSuchElementException", 596);
+createForClass("com.google.gwt.logging.client.", "HtmlLogFormatter", 213);
+var Lcom_google_gwt_core_client_impl_SerializableThrowable_2_classLit = createForClass("com.google.gwt.core.client.impl.", "SerializableThrowable", 38);
 createForClass("com.google.gwt.event.dom.client.", "DomEvent", 125);
 createForClass("com.google.gwt.event.dom.client.", "HumanInputEvent", 124);
 createForClass("com.google.gwt.event.dom.client.", "TouchEvent", 134);
@@ -10886,29 +10819,67 @@ createForClass("com.google.gwt.event.dom.client.", "TouchEndEvent", 135);
 createForClass("com.google.gwt.event.dom.client.", "TouchCancelEvent", 133);
 createForClass("com.google.gwt.event.dom.client.", "MouseEvent", 123);
 createForClass("com.google.gwt.event.dom.client.", "ClickEvent", 122);
+var Ljava_util_Collections$EmptyList_2_classLit = createForClass("java.util.", "Collections$EmptyList", 578), Ljava_util_Collections$EmptySet_2_classLit = createForClass("java.util.", "Collections$EmptySet", null);
+createForClass("java.util.", "Collections$UnmodifiableCollection", 579);
+createForClass("java.util.", "Collections$UnmodifiableList", 581);
+createForClass("java.util.", "Collections$UnmodifiableRandomAccessList", 583);
+createForClass("java.util.", "Collections$UnmodifiableSet", 584);
+createForClass("java.util.", "Collections$UnmodifiableCollectionIterator", 580);
+createForClass("java.util.", "Collections$UnmodifiableListIterator", 582);
 createForClass("com.google.gwt.user.client.ui.", "Image", 425);
 createForClass("com.google.gwt.user.client.ui.", "Image$State", 427);
 createForClass("com.google.gwt.user.client.ui.", "Image$ClippedState", 426);
 createForClass("com.google.gwt.user.client.ui.", "Image$State$1", 428);
 createForClass("com.google.gwt.user.cellview.client.", "CellBasedWidgetImpl", 286);
+createForClass("java.util.", "AbstractSequentialList", 574);
+var Ljava_util_LinkedList_2_classLit = createForClass("java.util.", "LinkedList", 592);
+createForClass("java.util.", "LinkedList$ListIteratorImpl", 593);
+createForClass("java.util.", "LinkedList$Node", 594);
+createForClass("com.google.gwt.user.client.rpc.impl.", "SerializerBase", 406);
+createForClass("com.googlecode.gwtphonegap.client.log.shared.", "PhoneGapLogService_TypeSerializer", 492);
+var Lcom_google_gwt_http_client_RequestException_2_classLit = createForClass("com.google.gwt.http.client.", "RequestException", 160), Lcom_google_gwt_json_client_JSONException_2_classLit = createForClass("com.google.gwt.json.client.", "JSONException", 183), Lcom_google_gwt_jsonp_client_TimeoutException_2_classLit = createForClass("com.google.gwt.jsonp.client.", "TimeoutException", null), Lcom_google_gwt_user_client_rpc_IncompatibleRemoteServiceException_2_classLit = createForClass("com.google.gwt.user.client.rpc.", 
+"IncompatibleRemoteServiceException", 324), Lcom_google_gwt_user_client_rpc_RpcTokenException_2_classLit = createForClass("com.google.gwt.user.client.rpc.", "RpcTokenException", 327), Lcom_google_gwt_user_client_rpc_SerializableException_2_classLit = createForClass("com.google.gwt.user.client.rpc.", "SerializableException", null), Lcom_google_gwt_user_client_rpc_SerializationException_2_classLit = createForClass("com.google.gwt.user.client.rpc.", "SerializationException", 330), Lcom_google_gwt_user_client_rpc_SerializedTypeViolationException_2_classLit = 
+createForClass("com.google.gwt.user.client.rpc.", "SerializedTypeViolationException", null), Lcom_google_gwt_user_client_rpc_XsrfToken_2_classLit = createForClass("com.google.gwt.user.client.rpc.", "XsrfToken", null), Lcom_googlecode_gwt_crypto_bouncycastle_CryptoException_2_classLit = createForClass("com.googlecode.gwt.crypto.bouncycastle.", "CryptoException", null), Lcom_googlecode_gwt_crypto_bouncycastle_RuntimeCryptoException_2_classLit = createForClass("com.googlecode.gwt.crypto.bouncycastle.", 
+"RuntimeCryptoException", null), Lcom_googlecode_gwt_crypto_bouncycastle_DataLengthException_2_classLit = createForClass("com.googlecode.gwt.crypto.bouncycastle.", "DataLengthException", null), Lcom_googlecode_gwt_crypto_bouncycastle_InvalidCipherTextException_2_classLit = createForClass("com.googlecode.gwt.crypto.bouncycastle.", "InvalidCipherTextException", null), Lcom_googlecode_gwt_crypto_gwtx_io_IOException_2_classLit = createForClass("com.googlecode.gwt.crypto.gwtx.io.", "IOException", null), 
+Lcom_googlecode_gwt_crypto_gwtx_io_UnsupportedEncodingException_2_classLit = createForClass("com.googlecode.gwt.crypto.gwtx.io.", "UnsupportedEncodingException", null), Lcom_googlecode_gwtphonegap_client_file_browser_FileErrorException_2_classLit = createForClass("com.googlecode.gwtphonegap.client.file.browser.", "FileErrorException", null), Ljava_io_IOException_2_classLit = createForClass("java.io.", "IOException", null), Ljava_io_UnsupportedEncodingException_2_classLit = createForClass("java.io.", 
+"UnsupportedEncodingException", null), Ljava_lang_ArrayIndexOutOfBoundsException_2_classLit = createForClass("java.lang.", "ArrayIndexOutOfBoundsException", null), Ljava_lang_NegativeArraySizeException_2_classLit = createForClass("java.lang.", "NegativeArraySizeException", null), Ljava_lang_NoSuchMethodException_2_classLit = createForClass("java.lang.", "NoSuchMethodException", null), Ljava_lang_NumberFormatException_2_classLit = createForClass("java.lang.", "NumberFormatException", 553), Ljava_lang_StringIndexOutOfBoundsException_2_classLit = 
+createForClass("java.lang.", "StringIndexOutOfBoundsException", null), Ljava_lang_annotation_AnnotationFormatError_2_classLit = createForClass("java.lang.annotation.", "AnnotationFormatError", null), Ljava_lang_annotation_AnnotationTypeMismatchException_2_classLit = createForClass("java.lang.annotation.", "AnnotationTypeMismatchException", null), Ljava_security_GeneralSecurityException_2_classLit = createForClass("java.security.", "GeneralSecurityException", null), Ljava_security_DigestException_2_classLit = 
+createForClass("java.security.", "DigestException", null), Ljava_security_NoSuchAlgorithmException_2_classLit = createForClass("java.security.", "NoSuchAlgorithmException", null), Ljava_util_Arrays$ArrayList_2_classLit = createForClass("java.util.", "Arrays$ArrayList", null), Ljava_util_Collections$SingletonList_2_classLit = createForClass("java.util.", "Collections$SingletonList", null), Ljava_util_ConcurrentModificationException_2_classLit = createForClass("java.util.", "ConcurrentModificationException", 
+null), Ljava_util_EmptyStackException_2_classLit = createForClass("java.util.", "EmptyStackException", null), Ljava_util_LinkedHashSet_2_classLit = createForClass("java.util.", "LinkedHashSet", null), Ljava_util_Vector_2_classLit = createForClass("java.util.", "Vector", null), Ljava_util_Stack_2_classLit = createForClass("java.util.", "Stack", null), Ljava_util_TooManyListenersException_2_classLit = createForClass("java.util.", "TooManyListenersException", null), Ljava_util_TreeMap_2_classLit = createForClass("java.util.", 
+"TreeMap", null), Ljava_util_TreeSet_2_classLit = createForClass("java.util.", "TreeSet", null), _3Ljava_util_logging_LogRecord_2_classLit = createForArray("[Ljava.util.logging.", "LogRecord;", 635);
 createForClass("com.google.gwt.aria.client.", "Attribute", 15);
 createForClass("com.google.gwt.resources.client.", "CommonResources_Bundle_gecko1_8_default_InlineClientBundleGenerator", 229);
 createForClass("com.google.gwt.resources.client.", "CommonResources_Bundle_gecko1_8_default_InlineClientBundleGenerator$1", 230);
+createForClass("com.google.gwt.event.logical.shared.", "CloseEvent", 141);
 createForClass("com.google.gwt.user.client.ui.", "DeckPanel", 418);
 createForClass("com.google.gwt.user.client.ui.", "DeckPanel$SlideAnimation", 419);
 createForClass("com.google.gwt.user.cellview.client.", "CellBasedWidgetImplStandard", 287);
 createForClass("com.google.gwt.i18n.client.constants.", "NumberConstantsImpl_", 176);
-createForClass("com.google.gwt.json.client.", "JSONBoolean", 182);
-createForClass("com.google.gwt.json.client.", "JSONNumber", 186);
-createForClass("com.google.gwt.json.client.", "JSONString", 189);
-createForClass("com.google.gwt.json.client.", "JSONNull", 185);
-createForClass("com.google.gwt.json.client.", "JSONArray", 180);
+createForClass("com.googlecode.gwtphonegap.client.device.", "DeviceBrowserImpl", 480);
 createForClass("com.google.gwt.aria.client.", "PrimitiveValueAttribute", 16);
 createForClass("com.google.gwt.aria.client.", "AriaValueAttribute", 14);
 createForClass("com.google.gwt.event.dom.client.", "PrivateMap", 131);
 createForClass("com.google.gwt.touch.client.", "DefaultMomentum", 253);
 createForClass("com.google.gwt.touch.client.", "Momentum$State", 254);
-createForClass("java.util.", "Comparators$1", 586);
+var Lcom_google_gwt_user_client_rpc_impl_RequestCallbackAdapter$ResponseReader_2_classLit = createForEnum("com.google.gwt.user.client.rpc.impl.", "RequestCallbackAdapter$ResponseReader", 393, Ljava_lang_Enum_2_classLit, function() {
+  $clinit_RequestCallbackAdapter$ResponseReader();
+  return $VALUES_11
+}), _3Lcom_google_gwt_user_client_rpc_impl_RequestCallbackAdapter$ResponseReader_2_classLit = createForArray("[Lcom.google.gwt.user.client.rpc.impl.", "RequestCallbackAdapter$ResponseReader;", 636);
+createForEnum("com.google.gwt.user.client.rpc.impl.", "RequestCallbackAdapter$ResponseReader$1", 394, Lcom_google_gwt_user_client_rpc_impl_RequestCallbackAdapter$ResponseReader_2_classLit, null);
+createForEnum("com.google.gwt.user.client.rpc.impl.", "RequestCallbackAdapter$ResponseReader$2", 397, Lcom_google_gwt_user_client_rpc_impl_RequestCallbackAdapter$ResponseReader_2_classLit, null);
+createForEnum("com.google.gwt.user.client.rpc.impl.", "RequestCallbackAdapter$ResponseReader$3", 398, Lcom_google_gwt_user_client_rpc_impl_RequestCallbackAdapter$ResponseReader_2_classLit, null);
+createForEnum("com.google.gwt.user.client.rpc.impl.", "RequestCallbackAdapter$ResponseReader$4", 399, Lcom_google_gwt_user_client_rpc_impl_RequestCallbackAdapter$ResponseReader_2_classLit, null);
+createForEnum("com.google.gwt.user.client.rpc.impl.", "RequestCallbackAdapter$ResponseReader$5", 400, Lcom_google_gwt_user_client_rpc_impl_RequestCallbackAdapter$ResponseReader_2_classLit, null);
+createForEnum("com.google.gwt.user.client.rpc.impl.", "RequestCallbackAdapter$ResponseReader$6", 401, Lcom_google_gwt_user_client_rpc_impl_RequestCallbackAdapter$ResponseReader_2_classLit, null);
+createForEnum("com.google.gwt.user.client.rpc.impl.", "RequestCallbackAdapter$ResponseReader$7", 402, Lcom_google_gwt_user_client_rpc_impl_RequestCallbackAdapter$ResponseReader_2_classLit, null);
+createForEnum("com.google.gwt.user.client.rpc.impl.", "RequestCallbackAdapter$ResponseReader$8", 403, Lcom_google_gwt_user_client_rpc_impl_RequestCallbackAdapter$ResponseReader_2_classLit, null);
+createForEnum("com.google.gwt.user.client.rpc.impl.", "RequestCallbackAdapter$ResponseReader$9", 404, Lcom_google_gwt_user_client_rpc_impl_RequestCallbackAdapter$ResponseReader_2_classLit, null);
+createForEnum("com.google.gwt.user.client.rpc.impl.", "RequestCallbackAdapter$ResponseReader$10", 395, Lcom_google_gwt_user_client_rpc_impl_RequestCallbackAdapter$ResponseReader_2_classLit, null);
+createForEnum("com.google.gwt.user.client.rpc.impl.", "RequestCallbackAdapter$ResponseReader$11", 396, Lcom_google_gwt_user_client_rpc_impl_RequestCallbackAdapter$ResponseReader_2_classLit, null);
+createForClass("com.google.gwt.http.client.", "Request", 153);
+createForClass("com.google.gwt.http.client.", "Response", 155);
+createForClass("com.google.gwt.http.client.", "Request$1", 154);
+createForClass("com.google.gwt.http.client.", "Request$3", 156);
 createForClass("com.google.gwt.resources.client.impl.", "ImageResourcePrototype", 232);
 createForClass("com.google.gwt.safehtml.shared.", "SafeUriString", 240);
 createForClass("com.google.gwt.user.cellview.client.", "AbstractCellTable_TemplateImpl", 279);
@@ -10917,30 +10888,51 @@ createForClass("com.google.gwt.user.cellview.client.", "DefaultCellTableBuilder"
 createForClass("com.google.gwt.user.cellview.client.", "AbstractHeaderOrFooterBuilder", 284);
 createForClass("com.google.gwt.user.cellview.client.", "DefaultHeaderOrFooterBuilder", 295);
 createForClass("com.google.gwt.user.cellview.client.", "AbstractHeaderOrFooterBuilder$TwoWayHashMap", 285);
-createForClass("com.google.gwt.animation.client.", "AnimationSchedulerImpl", 7);
+createForClass("com.google.gwt.user.client.rpc.impl.", "RpcStatsContext", 405);
+createForClass("com.google.gwt.safehtml.shared.", "SafeHtmlString", 238);
 createForClass("com.google.gwt.view.client.", "DefaultSelectionEventManager", 457);
 createForClass("com.google.gwt.safehtml.shared.", "SafeHtmlBuilder", 237);
+createForClass("com.google.gwt.user.client.rpc.impl.", "AbstractSerializationStream", 388);
+createForClass("com.google.gwt.user.client.rpc.impl.", "AbstractSerializationStreamWriter", 389);
+createForClass("com.google.gwt.user.client.rpc.impl.", "ClientSerializationStreamWriter", 390);
+createForClass("com.google.gwt.http.client.", "RequestBuilder", 157);
+createForClass("com.google.gwt.http.client.", "RequestBuilder$Method", 159);
+createForClass("com.google.gwt.http.client.", "RequestBuilder$1", 158);
+createForClass("com.google.gwt.animation.client.", "AnimationSchedulerImpl", 7);
+createForClass("com.google.gwt.user.cellview.client.", "LoadingStateChangeEvent", 303);
+createForClass("com.google.gwt.user.cellview.client.", "LoadingStateChangeEvent$DefaultLoadingState", 304);
 createForClass("com.google.gwt.animation.client.", "AnimationSchedulerImplTimer", 10);
 createForClass("com.google.gwt.animation.client.", "AnimationSchedulerImplTimer$AnimationHandleImpl", 13);
 var _3Lcom_google_gwt_animation_client_AnimationSchedulerImplTimer$AnimationHandleImpl_2_classLit = createForArray("[Lcom.google.gwt.animation.client.", "AnimationSchedulerImplTimer$AnimationHandleImpl;", 637);
 createForClass("com.google.gwt.animation.client.", "AnimationSchedulerImplTimer$1", 11);
 createForClass("com.google.gwt.animation.client.", "AnimationSchedulerImplMozilla", 8);
 createForClass("com.google.gwt.animation.client.", "AnimationSchedulerImplMozilla$AnimationHandleImpl", 9);
-createForClass("com.google.gwt.user.cellview.client.", "LoadingStateChangeEvent", 303);
-createForClass("com.google.gwt.user.cellview.client.", "LoadingStateChangeEvent$DefaultLoadingState", 304);
-createForClass("com.google.gwt.touch.client.", "Point", 255);
 createForClass("com.google.gwt.dom.client.", "StyleInjector$StyleInjectorImpl", 117);
 createForClass("com.google.gwt.dom.client.", "StyleInjector$1", 116);
+createForClass("com.google.gwt.touch.client.", "Point", 255);
+createForClass("com.raccoonfink.cruisemonkey.gwt.client.", "StorageFactory", 513);
+createForClass("com.google.gwt.http.client.", "RequestPermissionException", 162);
 createForClass("com.google.gwt.safecss.shared.", "SafeStylesBuilder", 233);
+createForClass("com.google.gwt.storage.client.", "StorageMap", 246);
+createForClass("com.google.gwt.storage.client.", "StorageMap$StorageEntry", 248);
+createForClass("com.google.gwt.storage.client.", "StorageMap$StorageEntryIterator", 249);
+createForClass("com.google.gwt.storage.client.", "StorageMap$StorageEntrySet", 250);
+createForClass("java.util.", "IdentityHashMap", 591);
 createForClass("com.google.gwt.user.client.ui.impl.", "ClippedImageImpl_TemplateImpl", 451);
 createForClass("com.google.gwt.safecss.shared.", "SafeStylesString", 234);
 createForClass("com.google.gwt.user.client.ui.impl.", "ClippedImageImpl_DraggableTemplateImpl", 450);
+createForClass("com.google.gwt.storage.client.", "Storage", 242);
+createForClass("com.google.gwt.storage.client.", "Storage$StorageSupportDetector", 243);
 createForClass("com.google.gwt.user.cellview.client.", "ColumnSortEvent", 291);
 createForClass("com.google.gwt.dom.builder.shared.", "AbstractElementBuilderBase", 45);
 createForClass("com.google.gwt.dom.builder.shared.", "HtmlElementBuilderBase", 53);
 createForClass("com.google.gwt.dom.builder.shared.", "HtmlTableSectionBuilder", 62);
 createForClass("com.google.gwt.dom.builder.shared.", "ElementBuilderFactory", 46);
 createForClass("com.google.gwt.dom.builder.shared.", "HtmlBuilderFactory", 50);
+createForClass("com.googlecode.gwtphonegap.client.connection.", "ConnectionBrowserImpl", 479);
+createForClass("com.google.gwt.json.client.", "JSONValue", 181);
+createForClass("com.google.gwt.json.client.", "JSONObject", 187);
+createForClass("com.googlecode.gwtphonegap.client.splashscreen.", "SplashScreenBrowserImpl", 493);
 createForClass("com.google.gwt.user.cellview.client.", "RowHoverEvent", 305);
 createForEnum("com.google.gwt.user.cellview.client.", "RowHoverEvent$HoveringScope", 306, Ljava_lang_Enum_2_classLit, function() {
   $clinit_RowHoverEvent$HoveringScope();
@@ -10952,7 +10944,13 @@ createForClass("com.google.gwt.dom.builder.shared.", "ElementBuilderImpl", 47);
 createForClass("com.google.gwt.dom.builder.shared.", "HtmlBuilderImpl", 51);
 createForClass("com.google.gwt.dom.builder.shared.", "ElementBuilderImpl$StackNode", 49);
 createForClass("com.google.gwt.dom.builder.shared.", "ElementBuilderImpl$FastPeekStack", 48);
+createForClass("com.google.gwt.http.client.", "RequestTimeoutException", 163);
 createForClass("com.google.gwt.dom.builder.shared.", "HtmlTableRowBuilder", 61);
+createForClass("com.google.gwt.json.client.", "JSONBoolean", 182);
+createForClass("com.google.gwt.json.client.", "JSONNumber", 186);
+createForClass("com.google.gwt.json.client.", "JSONString", 189);
+createForClass("com.google.gwt.json.client.", "JSONNull", 185);
+createForClass("com.google.gwt.json.client.", "JSONArray", 180);
 createForClass("com.google.gwt.dom.builder.shared.", "HtmlDivBuilder", 52);
 createForClass("com.google.gwt.dom.builder.shared.", "HtmlElementBuilder", 54);
 createForClass("com.google.gwt.dom.builder.shared.", "HtmlInputBuilder", 55);
@@ -10961,6 +10959,7 @@ createForClass("com.google.gwt.dom.builder.shared.", "HtmlOptionBuilder", 57);
 createForClass("com.google.gwt.dom.builder.shared.", "HtmlSpanBuilder", 58);
 createForClass("com.google.gwt.dom.builder.shared.", "HtmlStylesBuilder", 59);
 createForClass("com.google.gwt.dom.builder.shared.", "HtmlTableCellBuilder", 60);
+createForClass("java.util.", "Comparators$1", 586);
 window.gwtOnLoad = gwtOnLoad;
 $stats && $stats({moduleName:'cm3',sessionId:$sessionId,subSystem:'startup',evtGroup:'moduleStartup',millis:(new Date()).getTime(),type:'moduleEvalEnd'});
 if ($wnd.cm3) $wnd.cm3.onScriptLoad();
