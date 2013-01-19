@@ -68,8 +68,8 @@
 	<preference name="webviewbounce" value="false" />
 	<!-- <preference name="stay-in-webview" value="true" /> -->
 	<preference name="show-splash-screen-spinner" value="true" />
-	<preference name="auto-hide-splash-screen" value="false" />
-	<preference name="splash-screen-duration" value="20000" />
+	<preference name="auto-hide-splash-screen" value="true" />
+	<preference name="splash-screen-duration" value="5000" />
 	<preference name="load-url-timeout" value="60000" />
 
 	<access origin="*" />
