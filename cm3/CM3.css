@@ -57,6 +57,10 @@ table {
 
 /** tab bar **/
 
+.gwt-TabLayoutPanelContentContainer {
+	width: 100% !important;
+}
+
 .gwt-TabLayoutPanel .gwt-TabLayoutPanelContent {
   padding: 0;
 }
@@ -65,6 +69,7 @@ table {
 	color: #febd11;
 	background-color: #061556;
 	height: 100%;
+	padding: 0;
 }
 
 .gwt-TabLayoutPanel .gwt-TabLayoutPanelTab {
@@ -90,6 +95,15 @@ div.tabLabel {
 	color: #febd11;
 	display: inline-block;
 	vertical-align: middle;
+}
+
+.sign-in {
+	position: fixed !important;
+	right: 0 !important;
+}
+
+.sign-in div.tabLabel {
+	padding-right: 5px;
 }
 
 .gwt-TabLayoutPanelTab-selected div.tabLabel {
@@ -231,6 +245,7 @@ label {
 .theme-header {
 	color: #febd11;
 	background-color: #061556;
+	margin: 0 -1px !important;
 }
 
 .divider {
