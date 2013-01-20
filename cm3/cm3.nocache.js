@@ -243,6 +243,18 @@ function cm3(){
   }
   ;
   values['phonegap.env'] = {no:0, yes:1};
+  providers['supportsDateTimeInput'] = function(){
+    try {
+      var i = document.createElement('input');
+      i.setAttribute('type', 'datetime');
+      return i.type !== 'text'?'y':'n';
+    }
+     catch (e) {
+      return 'n';
+    }
+  }
+  ;
+  values['supportsDateTimeInput'] = {n:0, y:1};
   providers['user.agent'] = function(){
     var ua = navigator.userAgent.toLowerCase();
     var makeVersion = function(result){
@@ -313,14 +325,31 @@ function cm3(){
   $stats && $stats({moduleName:'cm3', sessionId:$sessionId_0, subSystem:'startup', evtGroup:'bootstrap', millis:(new Date).getTime(), type:'selectingPermutation'});
   if (!isHostedMode()) {
     try {
-      unflattenKeylistIntoAnswers(['no', 'ie9'], '0D582D1F5CCFAA012C2AC25BBAA2A797');
-      unflattenKeylistIntoAnswers(['no', 'gecko1_8'], '19586EA3CA2783FAF6EDD8480AD87ECC');
-      unflattenKeylistIntoAnswers(['no', 'opera'], '47EE51E8D1E8217F76EA19DB9009FD15');
-      unflattenKeylistIntoAnswers(['yes', 'safari'], '6DC4475BD55E7124CD35F4C3946918E5');
-      unflattenKeylistIntoAnswers(['no', 'safari'], 'AB47E4339C455E70B7C9382B26372203');
-      unflattenKeylistIntoAnswers(['no', 'ie6'], 'D6B0A45CB9862C97261F3E423173C5C7');
-      unflattenKeylistIntoAnswers(['no', 'ie8'], 'EAB2C2D0409A4665FD0A10FE4F215948');
-      strongName = answers[computePropValue('phonegap.env')][computePropValue('user.agent')];
+      unflattenKeylistIntoAnswers(['yes', 'y', 'safari'], '0FF1FBB8EFE1C06A5230FAF1F80527BC');
+      unflattenKeylistIntoAnswers(['no', 'n', 'ie8'], '34E8D816F9524DB2919B5D56A1F0F5C5');
+      unflattenKeylistIntoAnswers(['no', 'y', 'ie8'], '34E8D816F9524DB2919B5D56A1F0F5C5');
+      unflattenKeylistIntoAnswers(['no', 'n', 'ie8'], '34E8D816F9524DB2919B5D56A1F0F5C5' + ':1');
+      unflattenKeylistIntoAnswers(['no', 'y', 'ie8'], '34E8D816F9524DB2919B5D56A1F0F5C5' + ':1');
+      unflattenKeylistIntoAnswers(['no', 'n', 'ie6'], '397305BB9DDE121A87F42C8773455444');
+      unflattenKeylistIntoAnswers(['no', 'y', 'ie6'], '397305BB9DDE121A87F42C8773455444');
+      unflattenKeylistIntoAnswers(['no', 'n', 'ie6'], '397305BB9DDE121A87F42C8773455444' + ':1');
+      unflattenKeylistIntoAnswers(['no', 'y', 'ie6'], '397305BB9DDE121A87F42C8773455444' + ':1');
+      unflattenKeylistIntoAnswers(['no', 'n', 'ie9'], '3F6AA2B55FB78A3232E3D6735590451C');
+      unflattenKeylistIntoAnswers(['no', 'y', 'ie9'], '3F6AA2B55FB78A3232E3D6735590451C');
+      unflattenKeylistIntoAnswers(['no', 'n', 'ie9'], '3F6AA2B55FB78A3232E3D6735590451C' + ':1');
+      unflattenKeylistIntoAnswers(['no', 'y', 'ie9'], '3F6AA2B55FB78A3232E3D6735590451C' + ':1');
+      unflattenKeylistIntoAnswers(['yes', 'n', 'safari'], '41D15B5F4E1AD83B74C68C5DEC1629AD');
+      unflattenKeylistIntoAnswers(['no', 'n', 'safari'], '58C89C1F28AFE10AFADDAA56FC073CFA');
+      unflattenKeylistIntoAnswers(['no', 'y', 'safari'], '78288017426954B5D727A849FC39F6F4');
+      unflattenKeylistIntoAnswers(['no', 'n', 'opera'], '8E2D36F56C9DD54E011145DCE50F17FD');
+      unflattenKeylistIntoAnswers(['no', 'y', 'opera'], '8E2D36F56C9DD54E011145DCE50F17FD');
+      unflattenKeylistIntoAnswers(['no', 'n', 'opera'], '8E2D36F56C9DD54E011145DCE50F17FD' + ':1');
+      unflattenKeylistIntoAnswers(['no', 'y', 'opera'], '8E2D36F56C9DD54E011145DCE50F17FD' + ':1');
+      unflattenKeylistIntoAnswers(['no', 'n', 'gecko1_8'], 'E09C6D8D18D0B98283DE0E36A5536994');
+      unflattenKeylistIntoAnswers(['no', 'y', 'gecko1_8'], 'E09C6D8D18D0B98283DE0E36A5536994');
+      unflattenKeylistIntoAnswers(['no', 'n', 'gecko1_8'], 'E09C6D8D18D0B98283DE0E36A5536994' + ':1');
+      unflattenKeylistIntoAnswers(['no', 'y', 'gecko1_8'], 'E09C6D8D18D0B98283DE0E36A5536994' + ':1');
+      strongName = answers[computePropValue('phonegap.env')][computePropValue('supportsDateTimeInput')][computePropValue('user.agent')];
       var idx = strongName.indexOf(':');
       if (idx != -1) {
         softPermutationId = Number(strongName.substring(idx + 1));
@@ -336,6 +365,13 @@ function cm3(){
   function onBodyDone(){
     if (!bodyDone) {
       bodyDone = true;
+      if (!__gwt_stylesLoaded['timebox.css']) {
+        var l = $doc_0.createElement('link');
+        __gwt_stylesLoaded['timebox.css'] = l;
+        l.setAttribute('rel', 'stylesheet');
+        l.setAttribute('href', base + 'timebox.css');
+        $doc_0.getElementsByTagName('head')[0].appendChild(l);
+      }
       if (!__gwt_stylesLoaded['gwt/clean/clean.css']) {
         var l = $doc_0.createElement('link');
         __gwt_stylesLoaded['gwt/clean/clean.css'] = l;
@@ -376,6 +412,10 @@ function cm3(){
   , 50);
   $stats && $stats({moduleName:'cm3', sessionId:$sessionId_0, subSystem:'startup', evtGroup:'bootstrap', millis:(new Date).getTime(), type:'end'});
   $stats && $stats({moduleName:'cm3', sessionId:$sessionId_0, subSystem:'startup', evtGroup:'loadExternalRefs', millis:(new Date).getTime(), type:'begin'});
+  if (!__gwt_scriptsLoaded['uuid.js']) {
+    __gwt_scriptsLoaded['uuid.js'] = true;
+    document.write('<script language="javascript" src="' + base + 'uuid.js"><\/script>');
+  }
   $doc_0.write('<script defer="defer">cm3.onInjectionDone(\'cm3\')<\/script>');
 }
 
