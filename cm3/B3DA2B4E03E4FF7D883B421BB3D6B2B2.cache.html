@@ -4,7 +4,7 @@ var $gwt_version = "2.5.0";
 var $wnd = parent;
 var $doc = $wnd.document;
 var $moduleName, $moduleBase;
-var $strongName = '910BF8D4F15EFCD1F3EF92525C3AA930';
+var $strongName = 'B3DA2B4E03E4FF7D883B421BB3D6B2B2';
 var $stats = $wnd.__gwtStatsEvent ? function(a) {return $wnd.__gwtStatsEvent(a);} : null,
 $sessionId = $wnd.__gwtStatsSessionId ? $wnd.__gwtStatsSessionId : null;
 $stats && $stats({moduleName:'cm3',sessionId:$sessionId,subSystem:'startup',evtGroup:'moduleStartup',millis:(new Date()).getTime(),type:'moduleEvalStart'});
@@ -1992,7 +1992,7 @@ function $doAdd(this$static, type, handler) {
   if(!type) {
     throw new NullPointerException_1("Cannot add a handler with a null type");
   }
-  if(!handler) {
+  if(null == handler) {
     throw new NullPointerException_1("Cannot add a null handler");
   }
   0 < this$static.firingDepth ? $defer(this$static, new SimpleEventBus$2_0(this$static, type, null, handler)) : $ensureHandlerList(this$static, type, null).add(handler);

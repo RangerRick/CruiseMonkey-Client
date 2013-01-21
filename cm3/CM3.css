@@ -295,23 +295,23 @@ label {
 (-webkit-min-device-pixel-ratio: 2), 
 (min-resolution: 192dpi) { 
 	.list-entry .favorite input[type=checkbox] + label {
-		background-image:url(images/star-unchecked@2x.png);
+		background-image:url(images/icons/star-unchecked@2x.png);
 		background-size: 26px 26px;
 	}
 	.list-entry .favorite input[type=checkbox]:checked + label {
-		background-image:url(images/star-checked@2x.png);
+		background-image:url(images/icons/star-checked@2x.png);
 		background-size: 26px 26px;
 	}
 	.list-entry .trash input[type=button] + label {
-		background-image:url(images/trash@2x.png);
+		background-image:url(images/icons/trash@2x.png);
 		background-size: 16px 21px;
 	}
 	.list-entry .public input[type=checkbox] + label {
-		background-image:url(images/eye-unchecked@2x.png);
+		background-image:url(images/icons/eye-unchecked@2x.png);
 		background-size: 24px 16px;
 	}
 	.list-entry .public input[type=checkbox]:checked + label {
-		background-image:url(images/eye-checked@2x.png);
+		background-image:url(images/icons/eye-checked@2x.png);
 		background-size: 24px 16px;
 	}
 }
