@@ -4,7 +4,7 @@ var $gwt_version = "2.5.0";
 var $wnd = parent;
 var $doc = $wnd.document;
 var $moduleName, $moduleBase;
-var $strongName = '81387A2BAF69AD39B8C49208B31EC57D';
+var $strongName = '192D5BF21F16226D2E072F474A99B8D9';
 var $stats = $wnd.__gwtStatsEvent ? function(a) {return $wnd.__gwtStatsEvent(a);} : null,
 $sessionId = $wnd.__gwtStatsSessionId ? $wnd.__gwtStatsSessionId : null;
 $stats && $stats({moduleName:'cm3',sessionId:$sessionId,subSystem:'startup',evtGroup:'moduleStartup',millis:(new Date()).getTime(),type:'moduleEvalStart'});
@@ -2077,7 +2077,7 @@ function $doAdd(this$static, type, handler) {
   if(!type) {
     throw new NullPointerException_1("Cannot add a handler with a null type");
   }
-  if(null == handler) {
+  if(!handler) {
     throw new NullPointerException_1("Cannot add a null handler");
   }
   0 < this$static.firingDepth ? $defer(this$static, new SimpleEventBus$2_0(this$static, type, null, handler)) : $ensureHandlerList(this$static, type, null).add(handler);
@@ -11443,7 +11443,7 @@ function SplashScreenBrowserImpl_0() {
 }
 defineSeed(658, 1, {}, SplashScreenBrowserImpl_0);
 function $createRequest(this$static, requestType, path, cache) {
-  var ret, path = (ret = ($clinit_CM3(), "http://cm.raccoonfink.com/") + path, cache || (-1 != ret.indexOf("?") ? ret += "&_=" + toString_13(fromDouble((new Date_1).jsdate.getTime())) : ret += "?_=" + toString_13(fromDouble((new Date_1).jsdate.getTime()))), ret);
+  var ret, path = (ret = ($clinit_CM3(), "http://192.168.211.61:8088/") + path, cache || (-1 != ret.indexOf("?") ? ret += "&_=" + toString_13(fromDouble((new Date_1).jsdate.getTime())) : ret += "?_=" + toString_13(fromDouble((new Date_1).jsdate.getTime()))), ret);
   $info_0(this$static.m_log, "Making AJAX call to: " + path);
   requestType = new RequestBuilder_0(requestType, path);
   ret = this$static.m_username;
