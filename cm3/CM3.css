@@ -26,7 +26,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	font-family: "Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+	font-family: "Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif !important;
 	font-weight: normal;
 	font-style: normal;
 }
@@ -183,32 +183,17 @@ div.icon-add             { background-image: url(images/icons/inactive/31-circle
 	font-weight: bolder;
 }
 
-/*
-.favorite, .trash {
-	position: absolute;
-	display: inline-block;
-	float: right;
-	width: 32px;
-	height: 32px;
-	right: 2px;
-	top: 2px;
-}
-
-.public {
-	position: absolute;
-	display: inline-block;
-	float: right;
-	width: 32px;
-	height: 32px;
-	right: 2px;
-	top: 34px;
-}*/
-
 .favorite, .trash, .public {
 	float: right;
+	display: inline-block;
 	width: 32px;
 	height: 32px;
 	top: 2px;
+	z-index: 1;
+}
+
+.trash {
+	top: 34px;
 }
 
 label {
@@ -221,6 +206,7 @@ label {
 }
 
 .list-entry {
+	width: 100%;
 	padding: 10px 5px;
 	border-bottom: 1px solid black;
 }
@@ -328,4 +314,56 @@ label {
 		background-image:url(images/eye-checked@2x.png);
 		background-size: 24px 16px;
 	}
+}
+
+/** Add Event **/
+
+.edit-event table {
+	display: inline-block;
+	border: 0 !important;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.edit-event {
+	font-size: 14px !important;
+}
+.edit-event .gwt-Label {
+	padding: 5px;
+	vertical-align: top;
+	text-align: right;
+}
+
+.edit-event .gwt-TextBox {
+	padding: 5px;
+	margin: 2px;
+	width: 200px;
+	border: 1px solid black;
+}
+
+.edit-event .gwt-TextArea {
+	padding: 5px;
+	margin: 2px;
+	width: 200px;
+	border: 1px solid black;
+}
+
+.edit-event .gwt-DateBox {
+	width: 100px;
+	padding: 5px;
+	margin: 2px;
+	font-size: 14px;
+	border: 1px solid black;
+}
+
+.edit-event .gwt-TimeBox {
+	width: 80px;
+	padding: 5px;
+	margin: 2px;
+	font-size: 14px;
+	border: 1px solid black;
+}
+
+.edit-event .buttons {
+	float: right;
 }
