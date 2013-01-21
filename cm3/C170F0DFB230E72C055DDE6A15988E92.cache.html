@@ -4,7 +4,7 @@ var $gwt_version = "2.5.0";
 var $wnd = parent;
 var $doc = $wnd.document;
 var $moduleName, $moduleBase;
-var $strongName = 'CB6D8AFFBBD16C4889927E2A076D74CC';
+var $strongName = 'C170F0DFB230E72C055DDE6A15988E92';
 var $stats = $wnd.__gwtStatsEvent ? function(a) {return $wnd.__gwtStatsEvent(a);} : null,
 $sessionId = $wnd.__gwtStatsSessionId ? $wnd.__gwtStatsSessionId : null;
 $stats && $stats({moduleName:'cm3',sessionId:$sessionId,subSystem:'startup',evtGroup:'moduleStartup',millis:(new Date()).getTime(),type:'moduleEvalStart'});
@@ -18115,10 +18115,10 @@ function com_raccoonfink_cruisemonkey_gwt_client_CM3$InitializeMyEventListWidget
 
 com_google_gwt_lang_SeedUtil_defineSeed__IILcom_google_gwt_core_client_JavaScriptObject_2Lcom_google_gwt_core_client_JavaScriptObject_2(675, 676, {}, com_raccoonfink_cruisemonkey_gwt_client_CM3$InitializeMyEventListWidget$1_CM3$InitializeMyEventListWidget$1__Lcom_raccoonfink_cruisemonkey_gwt_client_CM3$InitializeMyEventListWidget_2V);
 _.matches__Lcom_raccoonfink_cruisemonkey_gwt_client_model_CalendarEvent_2Z = function com_raccoonfink_cruisemonkey_gwt_client_CM3$InitializeMyEventListWidget$1_matches__Lcom_raccoonfink_cruisemonkey_gwt_client_model_CalendarEvent_2Z(entry){
-  if (java_lang_String_$equals__Ljava_lang_String_2Ljava_lang_Object_2Z(entry[$intern_396], (com_raccoonfink_cruisemonkey_gwt_client_CM3_$clinit__V() , $intern_394)) || com_raccoonfink_cruisemonkey_gwt_client_model_CalendarEvent_$isFavorite__Lcom_raccoonfink_cruisemonkey_gwt_client_model_CalendarEvent_2Z(entry)) {
-    return true;
+  if (!java_lang_String_$equals__Ljava_lang_String_2Ljava_lang_Object_2Z(entry[$intern_396], (com_raccoonfink_cruisemonkey_gwt_client_CM3_$clinit__V() , $intern_394)) && !com_raccoonfink_cruisemonkey_gwt_client_model_CalendarEvent_$isFavorite__Lcom_raccoonfink_cruisemonkey_gwt_client_model_CalendarEvent_2Z(entry)) {
+    return false;
   }
-  return false;
+  return true;
 }
 ;
 function com_raccoonfink_cruisemonkey_gwt_client_CM3$InitializeOfficialEventListWidget_CM3$InitializeOfficialEventListWidget__V(){
@@ -18623,24 +18623,27 @@ function com_raccoonfink_cruisemonkey_gwt_client_FilteredListDataProvider_$refre
 }
 
 function com_raccoonfink_cruisemonkey_gwt_client_FilteredListDataProvider_$replace__Lcom_raccoonfink_cruisemonkey_gwt_client_FilteredListDataProvider_2Lcom_raccoonfink_cruisemonkey_gwt_client_model_HasId_2V(this$static, item){
-  var existingItem, found, i;
+  var dataItem, existingItem, found, i, matchedExisting;
   found = false;
   for (i = new java_util_AbstractList$ListIteratorImpl_AbstractList$ListIteratorImpl__Ljava_util_AbstractList_2IV(this$static.com_raccoonfink_cruisemonkey_gwt_client_FilteredListDataProvider_m_1data, 0); i.java_util_AbstractList$IteratorImpl_i < i.java_util_AbstractList$IteratorImpl_this$0.size__I();) {
-    existingItem = com_google_gwt_lang_Cast_dynamicCastAllowJso__Ljava_lang_Object_2ILjava_lang_Object_2(java_util_AbstractList$IteratorImpl_$next__Ljava_util_AbstractList$IteratorImpl_2Ljava_lang_Object_2(i), Q$com_raccoonfink_cruisemonkey_gwt_client_model_HasId);
-    if (java_lang_String_$equals__Ljava_lang_String_2Ljava_lang_Object_2Z(com_google_gwt_core_client_JavaScriptObject_getId_1_1devirtual$__Ljava_lang_Object_2Ljava_lang_String_2(existingItem), item[$intern_75])) {
+    dataItem = com_google_gwt_lang_Cast_dynamicCastAllowJso__Ljava_lang_Object_2ILjava_lang_Object_2(java_util_AbstractList$IteratorImpl_$next__Ljava_util_AbstractList$IteratorImpl_2Ljava_lang_Object_2(i), Q$com_raccoonfink_cruisemonkey_gwt_client_model_HasId);
+    if (java_lang_String_$equals__Ljava_lang_String_2Ljava_lang_Object_2Z(com_google_gwt_core_client_JavaScriptObject_getId_1_1devirtual$__Ljava_lang_Object_2Ljava_lang_String_2(dataItem), item[$intern_75])) {
       java_util_AbstractList$ListIteratorImpl_$set__Ljava_util_AbstractList$ListIteratorImpl_2Ljava_lang_Object_2V(i, item);
       found = true;
       break;
     }
   }
   if (found) {
+    matchedExisting = false;
     for (i = new com_google_gwt_view_client_ListDataProvider$ListWrapper$WrappedListIterator_ListDataProvider$ListWrapper$WrappedListIterator__Lcom_google_gwt_view_client_ListDataProvider$ListWrapper_2V(this$static.com_google_gwt_view_client_ListDataProvider_listWrapper); i.com_google_gwt_view_client_ListDataProvider$ListWrapper$WrappedListIterator_i < i.com_google_gwt_view_client_ListDataProvider$ListWrapper$WrappedListIterator_this$1.com_google_gwt_view_client_ListDataProvider$ListWrapper_list.size__I();) {
       existingItem = com_google_gwt_lang_Cast_dynamicCastAllowJso__Ljava_lang_Object_2ILjava_lang_Object_2(com_google_gwt_view_client_ListDataProvider$ListWrapper$WrappedListIterator_$next__Lcom_google_gwt_view_client_ListDataProvider$ListWrapper$WrappedListIterator_2Ljava_lang_Object_2(i), Q$com_raccoonfink_cruisemonkey_gwt_client_model_HasId);
       if (java_lang_String_$equals__Ljava_lang_String_2Ljava_lang_Object_2Z(com_google_gwt_core_client_JavaScriptObject_getId_1_1devirtual$__Ljava_lang_Object_2Ljava_lang_String_2(existingItem), item[$intern_75])) {
-        com_google_gwt_view_client_ListDataProvider$ListWrapper$WrappedListIterator_$set__Lcom_google_gwt_view_client_ListDataProvider$ListWrapper$WrappedListIterator_2Ljava_lang_Object_2V(i, item);
+        this$static.com_raccoonfink_cruisemonkey_gwt_client_FilteredListDataProvider_m_1filter.matches__Lcom_raccoonfink_cruisemonkey_gwt_client_model_CalendarEvent_2Z(item)?com_google_gwt_view_client_ListDataProvider$ListWrapper$WrappedListIterator_$set__Lcom_google_gwt_view_client_ListDataProvider$ListWrapper$WrappedListIterator_2Ljava_lang_Object_2V(i, item):com_google_gwt_view_client_ListDataProvider$ListWrapper$WrappedListIterator_$remove__Lcom_google_gwt_view_client_ListDataProvider$ListWrapper$WrappedListIterator_2V(i);
+        matchedExisting = true;
         break;
       }
     }
+    matchedExisting || com_google_gwt_view_client_ListDataProvider$ListWrapper_$add__Lcom_google_gwt_view_client_ListDataProvider$ListWrapper_2Ljava_lang_Object_2Z(this$static.com_google_gwt_view_client_ListDataProvider_listWrapper, item);
     java_util_Collections_sort__Ljava_util_List_2Ljava_util_Comparator_2V(this$static.com_google_gwt_view_client_ListDataProvider_listWrapper, this$static.com_raccoonfink_cruisemonkey_gwt_client_FilteredListDataProvider_m_1comparator);
   }
    else {
