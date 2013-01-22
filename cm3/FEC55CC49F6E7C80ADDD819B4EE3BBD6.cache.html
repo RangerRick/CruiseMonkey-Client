@@ -4,7 +4,7 @@ var $gwt_version = "2.5.0";
 var $wnd = parent;
 var $doc = $wnd.document;
 var $moduleName, $moduleBase;
-var $strongName = 'E259BFD2B9EFE06191D57D5FB994976B';
+var $strongName = 'FEC55CC49F6E7C80ADDD819B4EE3BBD6';
 var $stats = $wnd.__gwtStatsEvent ? function(a) {return $wnd.__gwtStatsEvent(a);} : null,
 $sessionId = $wnd.__gwtStatsSessionId ? $wnd.__gwtStatsSessionId : null;
 $stats && $stats({moduleName:'cm3',sessionId:$sessionId,subSystem:'startup',evtGroup:'moduleStartup',millis:(new Date()).getTime(),type:'moduleEvalStart'});
@@ -3351,7 +3351,7 @@ function com_google_web_bindery_event_shared_SimpleEventBus_$doAdd__Lcom_google_
   if (!type) {
     throw new java_lang_NullPointerException_NullPointerException__Ljava_lang_String_2V($intern_269);
   }
-  if (handler == null) {
+  if (!handler) {
     throw new java_lang_NullPointerException_NullPointerException__Ljava_lang_String_2V($intern_270);
   }
   this$static.com_google_web_bindery_event_shared_SimpleEventBus_firingDepth > 0?com_google_web_bindery_event_shared_SimpleEventBus_$defer__Lcom_google_web_bindery_event_shared_SimpleEventBus_2Lcom_google_web_bindery_event_shared_SimpleEventBus$Command_2V(this$static, new com_google_web_bindery_event_shared_SimpleEventBus$2_SimpleEventBus$2__Lcom_google_web_bindery_event_shared_SimpleEventBus_2V(this$static, type, source, handler)):com_google_web_bindery_event_shared_SimpleEventBus_$doAddNow__Lcom_google_web_bindery_event_shared_SimpleEventBus_2Lcom_google_web_bindery_event_shared_Event$Type_2Ljava_lang_Object_2Ljava_lang_Object_2V(this$static, type, source, handler);
@@ -19040,8 +19040,8 @@ function com_raccoonfink_cruisemonkey_gwt_client_model_JsCalendarEvent_$setDescr
   this$static.description = description;
 }
 
-function com_raccoonfink_cruisemonkey_gwt_client_model_JsCalendarEvent_$setEndString__Lcom_raccoonfink_cruisemonkey_gwt_client_model_JsCalendarEvent_2Ljava_lang_String_2V(this$static){
-  this$static.end = epoch;
+function com_raccoonfink_cruisemonkey_gwt_client_model_JsCalendarEvent_$setEndString__Lcom_raccoonfink_cruisemonkey_gwt_client_model_JsCalendarEvent_2Ljava_lang_String_2V(this$static, end){
+  this$static.end = end;
 }
 
 function com_raccoonfink_cruisemonkey_gwt_client_model_JsCalendarEvent_$setLocation__Lcom_raccoonfink_cruisemonkey_gwt_client_model_JsCalendarEvent_2Ljava_lang_String_2V(this$static, location){
@@ -19052,8 +19052,8 @@ function com_raccoonfink_cruisemonkey_gwt_client_model_JsCalendarEvent_$setPubli
   this$static.isPublic = pub;
 }
 
-function com_raccoonfink_cruisemonkey_gwt_client_model_JsCalendarEvent_$setStartString__Lcom_raccoonfink_cruisemonkey_gwt_client_model_JsCalendarEvent_2Ljava_lang_String_2V(this$static){
-  this$static.start = epoch;
+function com_raccoonfink_cruisemonkey_gwt_client_model_JsCalendarEvent_$setStartString__Lcom_raccoonfink_cruisemonkey_gwt_client_model_JsCalendarEvent_2Ljava_lang_String_2V(this$static, start){
+  this$static.start = start;
 }
 
 function com_raccoonfink_cruisemonkey_gwt_client_model_JsCalendarEvent_$setSummary__Lcom_raccoonfink_cruisemonkey_gwt_client_model_JsCalendarEvent_2Ljava_lang_String_2V(this$static, summary){
