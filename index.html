@@ -20,6 +20,25 @@
     <!-- If you add any GWT meta tags, they must   -->
     <!-- be added before this line.                -->
     <!--                                           -->
+    <script>
+    if (window.applicationCache) {
+      if (window.applicationCache.status == window.applicationCache.IDLE) {
+        console.log('application cache is up-to-date');
+      } else {
+        window.applicationCache.addEventListener('updateready', function _updateReady(e) {
+          if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
+            console.log('application cache has changed');
+            // Browser downloaded a new app cache. Swap it in and reload the page to get the new hotness.
+            window.applicationCache.swapCache();
+            window.location.reload();
+          } else {
+            // Manifest didn't change. Nothing new to server.
+            console.log('application cache is up-to-date');
+          }
+        }, false);
+      }
+    }
+    </script>
     <script type="text/javascript" src="cm3/cm3.nocache.js"></script>
   </head>
 
