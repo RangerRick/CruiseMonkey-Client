@@ -4,7 +4,7 @@ var $gwt_version = "2.5.0";
 var $wnd = parent;
 var $doc = $wnd.document;
 var $moduleName, $moduleBase;
-var $strongName = 'DC88AC50C646EF6F6EC6CE3B303EFDD9';
+var $strongName = '00E9C3569CBDFFAEFDEA152326E3D7FE';
 var $stats = $wnd.__gwtStatsEvent ? function(a) {return $wnd.__gwtStatsEvent(a);} : null,
 $sessionId = $wnd.__gwtStatsSessionId ? $wnd.__gwtStatsSessionId : null;
 $stats && $stats({moduleName:'cm3',sessionId:$sessionId,subSystem:'startup',evtGroup:'moduleStartup',millis:(new Date()).getTime(),type:'moduleEvalStart'});
@@ -2681,7 +2681,7 @@ function com_google_web_bindery_event_shared_SimpleEventBus_$doAdd__Lcom_google_
   if (!type) {
     throw new java_lang_NullPointerException_NullPointerException__Ljava_lang_String_2V('Cannot add a handler with a null type');
   }
-  if (handler == null) {
+  if (!handler) {
     throw new java_lang_NullPointerException_NullPointerException__Ljava_lang_String_2V('Cannot add a null handler');
   }
   this$static.com_google_web_bindery_event_shared_SimpleEventBus_firingDepth > 0?com_google_web_bindery_event_shared_SimpleEventBus_$defer__Lcom_google_web_bindery_event_shared_SimpleEventBus_2Lcom_google_web_bindery_event_shared_SimpleEventBus$Command_2V(this$static, new com_google_web_bindery_event_shared_SimpleEventBus$2_SimpleEventBus$2__Lcom_google_web_bindery_event_shared_SimpleEventBus_2V(this$static, type, source, handler)):com_google_web_bindery_event_shared_SimpleEventBus_$doAddNow__Lcom_google_web_bindery_event_shared_SimpleEventBus_2Lcom_google_web_bindery_event_shared_Event$Type_2Ljava_lang_Object_2Ljava_lang_Object_2V(this$static, type, source, handler);
@@ -15169,7 +15169,7 @@ function com_raccoonfink_cruisemonkey_gwt_client_CM3$13$1_CM3$13$1__Lcom_raccoon
 
 com_google_gwt_lang_SeedUtil_defineSeed__IILcom_google_gwt_core_client_JavaScriptObject_2Lcom_google_gwt_core_client_JavaScriptObject_2(542, 1, {}, com_raccoonfink_cruisemonkey_gwt_client_CM3$13$1_CM3$13$1__Lcom_raccoonfink_cruisemonkey_gwt_client_CM3$13_2V);
 _.execute__V = function com_raccoonfink_cruisemonkey_gwt_client_CM3$13$1_execute__V(){
-  com_raccoonfink_cruisemonkey_gwt_client_CalendarEventModelUpdater_$poll__Lcom_raccoonfink_cruisemonkey_gwt_client_CalendarEventModelUpdater_2V((com_raccoonfink_cruisemonkey_gwt_client_CM3_$clinit__V() , com_raccoonfink_cruisemonkey_gwt_client_CM3_$clinit__V() , com_raccoonfink_cruisemonkey_gwt_client_CM3_m_1updater));
+  com_raccoonfink_cruisemonkey_gwt_client_CalendarEventModelUpdater_$poll__Lcom_raccoonfink_cruisemonkey_gwt_client_CalendarEventModelUpdater_2ZV((com_raccoonfink_cruisemonkey_gwt_client_CM3_$clinit__V() , com_raccoonfink_cruisemonkey_gwt_client_CM3_$clinit__V() , com_raccoonfink_cruisemonkey_gwt_client_CM3_m_1updater), true);
 }
 ;
 function com_raccoonfink_cruisemonkey_gwt_client_CM3$2_CM3$2__Lcom_raccoonfink_cruisemonkey_gwt_client_CM3_2V(){
@@ -15455,9 +15455,9 @@ function com_raccoonfink_cruisemonkey_gwt_client_CalendarEventModelUpdater_$dele
   }
 }
 
-function com_raccoonfink_cruisemonkey_gwt_client_CalendarEventModelUpdater_$poll__Lcom_raccoonfink_cruisemonkey_gwt_client_CalendarEventModelUpdater_2V(this$static){
+function com_raccoonfink_cruisemonkey_gwt_client_CalendarEventModelUpdater_$poll__Lcom_raccoonfink_cruisemonkey_gwt_client_CalendarEventModelUpdater_2ZV(this$static, force){
   var $e0, request, t;
-  if (com_google_gwt_lang_LongLib_gte__Lcom_google_gwt_lang_LongLibBase$LongEmul_2Lcom_google_gwt_lang_LongLibBase$LongEmul_2Z(com_google_gwt_lang_LongLib_add__Lcom_google_gwt_lang_LongLibBase$LongEmul_2Lcom_google_gwt_lang_LongLibBase$LongEmul_2Lcom_google_gwt_lang_LongLibBase$LongEmul_2(this$static.com_raccoonfink_cruisemonkey_gwt_client_CalendarEventModelUpdater_m_1lastPoll, Pea60_longLit), com_google_gwt_lang_LongLib_fromDouble__DLcom_google_gwt_lang_LongLibBase$LongEmul_2((new java_util_Date_Date__V).java_util_Date_jsdate.getTime()))) {
+  if (!force && com_google_gwt_lang_LongLib_gte__Lcom_google_gwt_lang_LongLibBase$LongEmul_2Lcom_google_gwt_lang_LongLibBase$LongEmul_2Z(com_google_gwt_lang_LongLib_add__Lcom_google_gwt_lang_LongLibBase$LongEmul_2Lcom_google_gwt_lang_LongLibBase$LongEmul_2Lcom_google_gwt_lang_LongLibBase$LongEmul_2(this$static.com_raccoonfink_cruisemonkey_gwt_client_CalendarEventModelUpdater_m_1lastPoll, Pea60_longLit), com_google_gwt_lang_LongLib_fromDouble__DLcom_google_gwt_lang_LongLibBase$LongEmul_2((new java_util_Date_Date__V).java_util_Date_jsdate.getTime()))) {
     java_util_logging_Logger_$info__Ljava_util_logging_Logger_2Ljava_lang_String_2V(this$static.com_raccoonfink_cruisemonkey_gwt_client_CalendarEventModelUpdater_m_1log, 'Less than 60 seconds since last poll, skipping.');
     return;
   }
@@ -15537,7 +15537,7 @@ function com_raccoonfink_cruisemonkey_gwt_client_CalendarEventModelUpdater$1_Cal
 
 com_google_gwt_lang_SeedUtil_defineSeed__IILcom_google_gwt_core_client_JavaScriptObject_2Lcom_google_gwt_core_client_JavaScriptObject_2(567, 10, makeCastMap([Q$com_google_gwt_user_client_Timer]), com_raccoonfink_cruisemonkey_gwt_client_CalendarEventModelUpdater$1_CalendarEventModelUpdater$1__Lcom_raccoonfink_cruisemonkey_gwt_client_CalendarEventModelUpdater_2V);
 _.run__V = function com_raccoonfink_cruisemonkey_gwt_client_CalendarEventModelUpdater$1_run__V(){
-  com_raccoonfink_cruisemonkey_gwt_client_CalendarEventModelUpdater_$poll__Lcom_raccoonfink_cruisemonkey_gwt_client_CalendarEventModelUpdater_2V(this.com_raccoonfink_cruisemonkey_gwt_client_CalendarEventModelUpdater$1_this$0);
+  com_raccoonfink_cruisemonkey_gwt_client_CalendarEventModelUpdater_$poll__Lcom_raccoonfink_cruisemonkey_gwt_client_CalendarEventModelUpdater_2ZV(this.com_raccoonfink_cruisemonkey_gwt_client_CalendarEventModelUpdater$1_this$0, false);
 }
 ;
 _.com_raccoonfink_cruisemonkey_gwt_client_CalendarEventModelUpdater$1_this$0 = null;
@@ -15569,7 +15569,7 @@ function com_raccoonfink_cruisemonkey_gwt_client_CalendarEventModelUpdater$3_Cal
 
 com_google_gwt_lang_SeedUtil_defineSeed__IILcom_google_gwt_core_client_JavaScriptObject_2Lcom_google_gwt_core_client_JavaScriptObject_2(569, 10, makeCastMap([Q$com_google_gwt_user_client_Timer]), com_raccoonfink_cruisemonkey_gwt_client_CalendarEventModelUpdater$3_CalendarEventModelUpdater$3__Lcom_raccoonfink_cruisemonkey_gwt_client_CalendarEventModelUpdater_2V);
 _.run__V = function com_raccoonfink_cruisemonkey_gwt_client_CalendarEventModelUpdater$3_run__V(){
-  com_raccoonfink_cruisemonkey_gwt_client_CalendarEventModelUpdater_$poll__Lcom_raccoonfink_cruisemonkey_gwt_client_CalendarEventModelUpdater_2V(this.com_raccoonfink_cruisemonkey_gwt_client_CalendarEventModelUpdater$3_this$0);
+  com_raccoonfink_cruisemonkey_gwt_client_CalendarEventModelUpdater_$poll__Lcom_raccoonfink_cruisemonkey_gwt_client_CalendarEventModelUpdater_2ZV(this.com_raccoonfink_cruisemonkey_gwt_client_CalendarEventModelUpdater$3_this$0, false);
   com_google_gwt_user_client_Timer_$scheduleRepeating__Lcom_google_gwt_user_client_Timer_2IV(this.com_raccoonfink_cruisemonkey_gwt_client_CalendarEventModelUpdater$3_this$0.com_raccoonfink_cruisemonkey_gwt_client_CalendarEventModelUpdater_m_1timer, this.com_raccoonfink_cruisemonkey_gwt_client_CalendarEventModelUpdater$3_this$0.com_raccoonfink_cruisemonkey_gwt_client_CalendarEventModelUpdater_m_1runEvery);
 }
 ;
