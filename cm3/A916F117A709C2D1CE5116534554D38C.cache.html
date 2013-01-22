@@ -4,7 +4,7 @@ var $gwt_version = "2.5.0";
 var $wnd = parent;
 var $doc = $wnd.document;
 var $moduleName, $moduleBase;
-var $strongName = '6489AB04723BBA95215B77A132998F0F';
+var $strongName = 'A916F117A709C2D1CE5116534554D38C';
 var $stats = $wnd.__gwtStatsEvent ? function(a) {return $wnd.__gwtStatsEvent(a);} : null,
 $sessionId = $wnd.__gwtStatsSessionId ? $wnd.__gwtStatsSessionId : null;
 $stats && $stats({moduleName:'cm3',sessionId:$sessionId,subSystem:'startup',evtGroup:'moduleStartup',millis:(new Date()).getTime(),type:'moduleEvalStart'});
@@ -18111,7 +18111,9 @@ function com_raccoonfink_cruisemonkey_gwt_client_CM3$11_$onSelection__Lcom_racco
   }
    else {
     newSelection = event.com_google_gwt_event_logical_shared_SelectionEvent_selectedItem;
+    !newSelection && (newSelection = java_lang_Integer_valueOf__ILjava_lang_Integer_2(0));
     oldSelection = com_raccoonfink_cruisemonkey_gwt_client_StorageFactory_$getInteger__Lcom_raccoonfink_cruisemonkey_gwt_client_StorageFactory_2Ljava_lang_String_2Ljava_lang_Integer_2(com_raccoonfink_cruisemonkey_gwt_client_CM3_m_1storage, $intern_407);
+    !oldSelection && (oldSelection = java_lang_Integer_valueOf__ILjava_lang_Integer_2(0));
     java_util_logging_Logger_$info__Ljava_util_logging_Logger_2Ljava_lang_String_2V(com_raccoonfink_cruisemonkey_gwt_client_CM3_m_1log, 'Tab selection handler: switching from tab #' + oldSelection + ' to tab #' + newSelection + $intern_196);
     newSelection.java_lang_Integer_value == 6 && com_raccoonfink_cruisemonkey_gwt_client_CM3_notAuthorized__V();
     newSelection.java_lang_Integer_value >= 5?com_raccoonfink_cruisemonkey_gwt_client_StorageFactory_$put__Lcom_raccoonfink_cruisemonkey_gwt_client_StorageFactory_2Ljava_lang_String_2Ljava_lang_String_2V(com_raccoonfink_cruisemonkey_gwt_client_CM3_m_1storage, $intern_408, $intern_9 + oldSelection.java_lang_Integer_value):com_raccoonfink_cruisemonkey_gwt_client_StorageFactory_$put__Lcom_raccoonfink_cruisemonkey_gwt_client_StorageFactory_2Ljava_lang_String_2Ljava_lang_String_2V(com_raccoonfink_cruisemonkey_gwt_client_CM3_m_1storage, $intern_407, $intern_9 + newSelection.java_lang_Integer_value);
@@ -19366,7 +19368,7 @@ function com_raccoonfink_cruisemonkey_gwt_client_ui_EditEventWidget_$onCancelCli
   var previous;
   java_util_logging_Logger_$warning__Ljava_util_logging_Logger_2Ljava_lang_String_2V(this$static.com_raccoonfink_cruisemonkey_gwt_client_ui_EditEventWidget_m_1log, $intern_439);
   previous = com_raccoonfink_cruisemonkey_gwt_client_StorageFactory_$getInteger__Lcom_raccoonfink_cruisemonkey_gwt_client_StorageFactory_2Ljava_lang_String_2Ljava_lang_Integer_2((com_raccoonfink_cruisemonkey_gwt_client_StorageFactory_$clinit__V() , !com_raccoonfink_cruisemonkey_gwt_client_StorageFactory_m_1instance && (com_raccoonfink_cruisemonkey_gwt_client_StorageFactory_m_1instance = new com_raccoonfink_cruisemonkey_gwt_client_StorageFactory_StorageFactory__V) , com_raccoonfink_cruisemonkey_gwt_client_StorageFactory_$clinit__V() , com_raccoonfink_cruisemonkey_gwt_client_StorageFactory_m_1instance), $intern_408);
-  com_google_gwt_user_client_ui_TabLayoutPanel_$selectTab__Lcom_google_gwt_user_client_ui_TabLayoutPanel_2IZV((com_raccoonfink_cruisemonkey_gwt_client_CM3_$clinit__V() , com_raccoonfink_cruisemonkey_gwt_client_CM3_$clinit__V() , com_raccoonfink_cruisemonkey_gwt_client_CM3_m_1panel), previous.java_lang_Integer_value, true);
+  !!previous && com_google_gwt_user_client_ui_TabLayoutPanel_$selectTab__Lcom_google_gwt_user_client_ui_TabLayoutPanel_2IZV((com_raccoonfink_cruisemonkey_gwt_client_CM3_$clinit__V() , com_raccoonfink_cruisemonkey_gwt_client_CM3_$clinit__V() , com_raccoonfink_cruisemonkey_gwt_client_CM3_m_1panel), previous.java_lang_Integer_value, true);
 }
 
 function com_raccoonfink_cruisemonkey_gwt_client_ui_EditEventWidget_$onSaveClicked__Lcom_raccoonfink_cruisemonkey_gwt_client_ui_EditEventWidget_2Lcom_google_gwt_event_dom_client_ClickEvent_2V(this$static){
@@ -19400,7 +19402,7 @@ function com_raccoonfink_cruisemonkey_gwt_client_ui_EditEventWidget_$onSaveClick
       throw $e0;
   }
   previous = com_raccoonfink_cruisemonkey_gwt_client_StorageFactory_$getInteger__Lcom_raccoonfink_cruisemonkey_gwt_client_StorageFactory_2Ljava_lang_String_2Ljava_lang_Integer_2((com_raccoonfink_cruisemonkey_gwt_client_StorageFactory_$clinit__V() , !com_raccoonfink_cruisemonkey_gwt_client_StorageFactory_m_1instance && (com_raccoonfink_cruisemonkey_gwt_client_StorageFactory_m_1instance = new com_raccoonfink_cruisemonkey_gwt_client_StorageFactory_StorageFactory__V) , com_raccoonfink_cruisemonkey_gwt_client_StorageFactory_$clinit__V() , com_raccoonfink_cruisemonkey_gwt_client_StorageFactory_m_1instance), $intern_408);
-  com_google_gwt_user_client_ui_TabLayoutPanel_$selectTab__Lcom_google_gwt_user_client_ui_TabLayoutPanel_2IZV((com_raccoonfink_cruisemonkey_gwt_client_CM3_$clinit__V() , com_raccoonfink_cruisemonkey_gwt_client_CM3_$clinit__V() , com_raccoonfink_cruisemonkey_gwt_client_CM3_m_1panel), previous.java_lang_Integer_value, true);
+  !!previous && com_google_gwt_user_client_ui_TabLayoutPanel_$selectTab__Lcom_google_gwt_user_client_ui_TabLayoutPanel_2IZV((com_raccoonfink_cruisemonkey_gwt_client_CM3_$clinit__V() , com_raccoonfink_cruisemonkey_gwt_client_CM3_$clinit__V() , com_raccoonfink_cruisemonkey_gwt_client_CM3_m_1panel), previous.java_lang_Integer_value, true);
 }
 
 function com_raccoonfink_cruisemonkey_gwt_client_ui_EditEventWidget_EditEventWidget__V(){
@@ -19635,7 +19637,7 @@ function com_raccoonfink_cruisemonkey_gwt_client_ui_SignInWidget_$onCancelClicke
   var previous;
   java_util_logging_Logger_$warning__Ljava_util_logging_Logger_2Ljava_lang_String_2V(this$static.com_raccoonfink_cruisemonkey_gwt_client_ui_SignInWidget_m_1log, $intern_439);
   previous = com_raccoonfink_cruisemonkey_gwt_client_StorageFactory_$getInteger__Lcom_raccoonfink_cruisemonkey_gwt_client_StorageFactory_2Ljava_lang_String_2Ljava_lang_Integer_2((com_raccoonfink_cruisemonkey_gwt_client_StorageFactory_$clinit__V() , !com_raccoonfink_cruisemonkey_gwt_client_StorageFactory_m_1instance && (com_raccoonfink_cruisemonkey_gwt_client_StorageFactory_m_1instance = new com_raccoonfink_cruisemonkey_gwt_client_StorageFactory_StorageFactory__V) , com_raccoonfink_cruisemonkey_gwt_client_StorageFactory_$clinit__V() , com_raccoonfink_cruisemonkey_gwt_client_StorageFactory_m_1instance), $intern_408);
-  com_google_gwt_user_client_ui_TabLayoutPanel_$selectTab__Lcom_google_gwt_user_client_ui_TabLayoutPanel_2IZV((com_raccoonfink_cruisemonkey_gwt_client_CM3_$clinit__V() , com_raccoonfink_cruisemonkey_gwt_client_CM3_$clinit__V() , com_raccoonfink_cruisemonkey_gwt_client_CM3_m_1panel), previous.java_lang_Integer_value, true);
+  !!previous && com_google_gwt_user_client_ui_TabLayoutPanel_$selectTab__Lcom_google_gwt_user_client_ui_TabLayoutPanel_2IZV((com_raccoonfink_cruisemonkey_gwt_client_CM3_$clinit__V() , com_raccoonfink_cruisemonkey_gwt_client_CM3_$clinit__V() , com_raccoonfink_cruisemonkey_gwt_client_CM3_m_1panel), previous.java_lang_Integer_value, true);
 }
 
 function com_raccoonfink_cruisemonkey_gwt_client_ui_SignInWidget_$onSaveClicked__Lcom_raccoonfink_cruisemonkey_gwt_client_ui_SignInWidget_2Lcom_google_gwt_event_dom_client_ClickEvent_2V(this$static){
@@ -19663,7 +19665,7 @@ _.com_raccoonfink_cruisemonkey_gwt_client_ui_SignInWidget_username = null;
 function com_raccoonfink_cruisemonkey_gwt_client_ui_SignInWidget$1_$run__Lcom_raccoonfink_cruisemonkey_gwt_client_ui_SignInWidget$1_2V(){
   var previous;
   previous = com_raccoonfink_cruisemonkey_gwt_client_StorageFactory_$getInteger__Lcom_raccoonfink_cruisemonkey_gwt_client_StorageFactory_2Ljava_lang_String_2Ljava_lang_Integer_2((com_raccoonfink_cruisemonkey_gwt_client_StorageFactory_$clinit__V() , !com_raccoonfink_cruisemonkey_gwt_client_StorageFactory_m_1instance && (com_raccoonfink_cruisemonkey_gwt_client_StorageFactory_m_1instance = new com_raccoonfink_cruisemonkey_gwt_client_StorageFactory_StorageFactory__V) , com_raccoonfink_cruisemonkey_gwt_client_StorageFactory_$clinit__V() , com_raccoonfink_cruisemonkey_gwt_client_StorageFactory_m_1instance), $intern_408);
-  com_google_gwt_user_client_ui_TabLayoutPanel_$selectTab__Lcom_google_gwt_user_client_ui_TabLayoutPanel_2IZV((com_raccoonfink_cruisemonkey_gwt_client_CM3_$clinit__V() , com_raccoonfink_cruisemonkey_gwt_client_CM3_$clinit__V() , com_raccoonfink_cruisemonkey_gwt_client_CM3_m_1panel), previous.java_lang_Integer_value, true);
+  !!previous && com_google_gwt_user_client_ui_TabLayoutPanel_$selectTab__Lcom_google_gwt_user_client_ui_TabLayoutPanel_2IZV((com_raccoonfink_cruisemonkey_gwt_client_CM3_$clinit__V() , com_raccoonfink_cruisemonkey_gwt_client_CM3_$clinit__V() , com_raccoonfink_cruisemonkey_gwt_client_CM3_m_1panel), previous.java_lang_Integer_value, true);
 }
 
 function com_raccoonfink_cruisemonkey_gwt_client_ui_SignInWidget$1_SignInWidget$1__Lcom_raccoonfink_cruisemonkey_gwt_client_ui_SignInWidget_2V(){
