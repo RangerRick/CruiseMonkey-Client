@@ -408,6 +408,30 @@ div.edit-event {
 	text-align: right;
 }
 
+.gwt-TabLayoutPanelContent .sign-in .gwt-PasswordTextBox {
+	font-size: 14px !important;
+	padding: 5px;
+	margin: 2px;
+	width: 200px;
+	border: 1px solid black;
+}
+
+.gwt-TabLayoutPanelContent .sign-in .gwt-UrlTextBox {
+	font-size: 14px !important;
+	padding: 5px;
+	margin: 2px;
+	width: 200px;
+	border: 1px solid black;
+}
+
+.gwt-TabLayoutPanelContent .sign-in .gwt-EmailTextBox {
+	font-size: 14px !important;
+	padding: 5px;
+	margin: 2px;
+	width: 200px;
+	border: 1px solid black;
+}
+
 .gwt-TabLayoutPanelContent .sign-in .gwt-TextBox {
 	font-size: 14px !important;
 	padding: 5px;
