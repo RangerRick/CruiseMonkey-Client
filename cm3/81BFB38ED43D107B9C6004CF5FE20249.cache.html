@@ -4,7 +4,7 @@ var $gwt_version = "2.5.0";
 var $wnd = parent;
 var $doc = $wnd.document;
 var $moduleName, $moduleBase;
-var $strongName = '9E21CE9DA98D0C9925998F5704304D5D';
+var $strongName = '81BFB38ED43D107B9C6004CF5FE20249';
 var $stats = $wnd.__gwtStatsEvent ? function(a) {return $wnd.__gwtStatsEvent(a);} : null,
 $sessionId = $wnd.__gwtStatsSessionId ? $wnd.__gwtStatsSessionId : null;
 $stats && $stats({moduleName:'cm3',sessionId:$sessionId,subSystem:'startup',evtGroup:'moduleStartup',millis:(new Date()).getTime(),type:'moduleEvalStart'});
@@ -16688,7 +16688,7 @@ function com_raccoonfink_cruisemonkey_gwt_client_ui_EditEventWidget_$onSaveClick
   java_util_logging_Logger_$warning__Ljava_util_logging_Logger_2Ljava_lang_String_2V(this$static.com_raccoonfink_cruisemonkey_gwt_client_ui_EditEventWidget_m_1log, $intern_344);
   try {
     now = new java_util_Date_Date__V;
-    offset = now.java_util_Date_jsdate.getTimezoneOffset() * 1000;
+    offset = now.java_util_Date_jsdate.getTimezoneOffset() * 60 * 1000;
     event = {};
     event[$intern_9] = $wnd.uuid.v1();
     event[$intern_318] = com_raccoonfink_cruisemonkey_gwt_client_model_NetworkState_$getUsername__Lcom_raccoonfink_cruisemonkey_gwt_client_model_NetworkState_2Ljava_lang_String_2((com_raccoonfink_cruisemonkey_gwt_client_CM3_$clinit__V() , !com_raccoonfink_cruisemonkey_gwt_client_CM3_m_1networkState && (com_raccoonfink_cruisemonkey_gwt_client_CM3_m_1networkState = new com_raccoonfink_cruisemonkey_gwt_client_model_NetworkState_NetworkState__V) , com_raccoonfink_cruisemonkey_gwt_client_CM3_$clinit__V() , com_raccoonfink_cruisemonkey_gwt_client_CM3_m_1networkState));
