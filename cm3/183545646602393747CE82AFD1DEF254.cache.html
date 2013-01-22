@@ -4,7 +4,7 @@ var $gwt_version = "2.5.0";
 var $wnd = parent;
 var $doc = $wnd.document;
 var $moduleName, $moduleBase;
-var $strongName = '05688569051FF89A7E1063828DBFBFC4';
+var $strongName = '183545646602393747CE82AFD1DEF254';
 var $stats = $wnd.__gwtStatsEvent ? function(a) {return $wnd.__gwtStatsEvent(a);} : null,
 $sessionId = $wnd.__gwtStatsSessionId ? $wnd.__gwtStatsSessionId : null;
 $stats && $stats({moduleName:'cm3',sessionId:$sessionId,subSystem:'startup',evtGroup:'moduleStartup',millis:(new Date()).getTime(),type:'moduleEvalStart'});
@@ -3351,7 +3351,7 @@ function com_google_web_bindery_event_shared_SimpleEventBus_$doAdd__Lcom_google_
   if (!type) {
     throw new java_lang_NullPointerException_NullPointerException__Ljava_lang_String_2V($intern_269);
   }
-  if (handler == null) {
+  if (!handler) {
     throw new java_lang_NullPointerException_NullPointerException__Ljava_lang_String_2V($intern_270);
   }
   this$static.com_google_web_bindery_event_shared_SimpleEventBus_firingDepth > 0?com_google_web_bindery_event_shared_SimpleEventBus_$defer__Lcom_google_web_bindery_event_shared_SimpleEventBus_2Lcom_google_web_bindery_event_shared_SimpleEventBus$Command_2V(this$static, new com_google_web_bindery_event_shared_SimpleEventBus$2_SimpleEventBus$2__Lcom_google_web_bindery_event_shared_SimpleEventBus_2V(this$static, type, source, handler)):com_google_web_bindery_event_shared_SimpleEventBus_$doAddNow__Lcom_google_web_bindery_event_shared_SimpleEventBus_2Lcom_google_web_bindery_event_shared_Event$Type_2Ljava_lang_Object_2Ljava_lang_Object_2V(this$static, type, source, handler);
@@ -19342,7 +19342,7 @@ function com_raccoonfink_cruisemonkey_gwt_client_ui_CalendarEventCell_$onBrowser
 }
 
 function com_raccoonfink_cruisemonkey_gwt_client_ui_CalendarEventCell_$render__Lcom_raccoonfink_cruisemonkey_gwt_client_ui_CalendarEventCell_2Lcom_google_gwt_cell_client_Cell$Context_2Lcom_raccoonfink_cruisemonkey_gwt_client_model_CalendarEvent_2Lcom_google_gwt_safehtml_shared_SafeHtmlBuilder_2V(event, sb){
-  var description, isFavoriteChecked, isPublicChecked, location, summary, com_raccoonfink_cruisemonkey_gwt_client_model_JsCalendarEvent_$getLocation__Lcom_raccoonfink_cruisemonkey_gwt_client_model_JsCalendarEvent_2Ljava_lang_String_2_location_0;
+  var createdBy, description, isFavoriteChecked, isPublicChecked, location, summary, com_raccoonfink_cruisemonkey_gwt_client_model_JsCalendarEvent_$getLocation__Lcom_raccoonfink_cruisemonkey_gwt_client_model_JsCalendarEvent_2Ljava_lang_String_2_location_0;
   if (!event) {
     return;
   }
@@ -19365,7 +19365,8 @@ function com_raccoonfink_cruisemonkey_gwt_client_ui_CalendarEventCell_$render__L
   summary = event.summary;
   summary != null && !java_lang_String_$equals__Ljava_lang_String_2Ljava_lang_Object_2Z($intern_13, summary) && com_google_gwt_safehtml_shared_SafeHtmlBuilder_$appendHtmlConstant__Lcom_google_gwt_safehtml_shared_SafeHtmlBuilder_2Ljava_lang_String_2Lcom_google_gwt_safehtml_shared_SafeHtmlBuilder_2(com_google_gwt_safehtml_shared_SafeHtmlBuilder_$appendEscaped__Lcom_google_gwt_safehtml_shared_SafeHtmlBuilder_2Ljava_lang_String_2Lcom_google_gwt_safehtml_shared_SafeHtmlBuilder_2((java_lang_StringBuilder_$append__Ljava_lang_StringBuilder_2Ljava_lang_String_2Ljava_lang_StringBuilder_2(sb.com_google_gwt_safehtml_shared_SafeHtmlBuilder_sb, $intern_1271) , sb), summary), $intern_1250);
   com_google_gwt_safehtml_shared_SafeHtmlBuilder_$appendHtmlConstant__Lcom_google_gwt_safehtml_shared_SafeHtmlBuilder_2Ljava_lang_String_2Lcom_google_gwt_safehtml_shared_SafeHtmlBuilder_2(sb, $intern_1272 + com_google_gwt_safehtml_shared_SafeHtmlUtils_htmlEscape__Ljava_lang_String_2Ljava_lang_String_2(com_raccoonfink_cruisemonkey_gwt_client_model_CalendarEvent_$getTimespan__Lcom_raccoonfink_cruisemonkey_gwt_client_model_CalendarEvent_2Ljava_lang_String_2(event)) + $intern_1250);
-  java_lang_String_$equals__Ljava_lang_String_2Ljava_lang_Object_2Z(event[$intern_1190], com_raccoonfink_cruisemonkey_gwt_client_model_NetworkState_$getUsername__Lcom_raccoonfink_cruisemonkey_gwt_client_model_NetworkState_2Ljava_lang_String_2(!com_raccoonfink_cruisemonkey_gwt_client_CM3_m_1networkState && (com_raccoonfink_cruisemonkey_gwt_client_CM3_m_1networkState = new com_raccoonfink_cruisemonkey_gwt_client_model_NetworkState_NetworkState__V))) && event[$intern_1190] != null && !java_lang_String_$equals__Ljava_lang_String_2Ljava_lang_Object_2Z($intern_13, event[$intern_1190]) && com_google_gwt_safehtml_shared_SafeHtmlBuilder_$appendHtmlConstant__Lcom_google_gwt_safehtml_shared_SafeHtmlBuilder_2Ljava_lang_String_2Lcom_google_gwt_safehtml_shared_SafeHtmlBuilder_2(sb, $intern_1273 + com_google_gwt_safehtml_shared_SafeHtmlUtils_htmlEscape__Ljava_lang_String_2Ljava_lang_String_2(event[$intern_1190]) + $intern_1250);
+  createdBy = event[$intern_1190];
+  !java_lang_String_$equals__Ljava_lang_String_2Ljava_lang_Object_2Z(event[$intern_1190], com_raccoonfink_cruisemonkey_gwt_client_model_NetworkState_$getUsername__Lcom_raccoonfink_cruisemonkey_gwt_client_model_NetworkState_2Ljava_lang_String_2(!com_raccoonfink_cruisemonkey_gwt_client_CM3_m_1networkState && (com_raccoonfink_cruisemonkey_gwt_client_CM3_m_1networkState = new com_raccoonfink_cruisemonkey_gwt_client_model_NetworkState_NetworkState__V))) && createdBy != null && !java_lang_String_$equals__Ljava_lang_String_2Ljava_lang_Object_2Z($intern_13, createdBy) && !java_lang_String_$equals__Ljava_lang_String_2Ljava_lang_Object_2Z($intern_1191, createdBy) && com_google_gwt_safehtml_shared_SafeHtmlBuilder_$appendHtmlConstant__Lcom_google_gwt_safehtml_shared_SafeHtmlBuilder_2Ljava_lang_String_2Lcom_google_gwt_safehtml_shared_SafeHtmlBuilder_2(sb, $intern_1273 + com_google_gwt_safehtml_shared_SafeHtmlUtils_htmlEscape__Ljava_lang_String_2Ljava_lang_String_2(createdBy) + $intern_1250);
   location = event.location;
   description = event.description;
   location != null && !java_lang_String_$equals__Ljava_lang_String_2Ljava_lang_Object_2Z($intern_13, location) && com_google_gwt_safehtml_shared_SafeHtmlBuilder_$appendHtmlConstant__Lcom_google_gwt_safehtml_shared_SafeHtmlBuilder_2Ljava_lang_String_2Lcom_google_gwt_safehtml_shared_SafeHtmlBuilder_2(sb, $intern_1274 + com_google_gwt_safehtml_shared_SafeHtmlUtils_htmlEscape__Ljava_lang_String_2Ljava_lang_String_2(location) + $intern_1250);

@@ -4,7 +4,7 @@ var $gwt_version = "2.5.0";
 var $wnd = parent;
 var $doc = $wnd.document;
 var $moduleName, $moduleBase;
-var $strongName = 'BC4AB7681B3BB01452E7C6907EBE8ACA';
+var $strongName = 'D2C6DEE671820C109118D5B6DEDA4AFD';
 var $stats = $wnd.__gwtStatsEvent ? function(a) {return $wnd.__gwtStatsEvent(a);} : null,
 $sessionId = $wnd.__gwtStatsSessionId ? $wnd.__gwtStatsSessionId : null;
 $stats && $stats({moduleName:'cm3',sessionId:$sessionId,subSystem:'startup',evtGroup:'moduleStartup',millis:(new Date()).getTime(),type:'moduleEvalStart'});
@@ -3054,7 +3054,7 @@ function com_google_web_bindery_event_shared_SimpleEventBus_$doAdd__Lcom_google_
   if (!type) {
     throw new java_lang_NullPointerException_NullPointerException__Ljava_lang_String_2V('Cannot add a handler with a null type');
   }
-  if (!handler) {
+  if (handler == null) {
     throw new java_lang_NullPointerException_NullPointerException__Ljava_lang_String_2V('Cannot add a null handler');
   }
   this$static.com_google_web_bindery_event_shared_SimpleEventBus_firingDepth > 0?com_google_web_bindery_event_shared_SimpleEventBus_$defer__Lcom_google_web_bindery_event_shared_SimpleEventBus_2Lcom_google_web_bindery_event_shared_SimpleEventBus$Command_2V(this$static, new com_google_web_bindery_event_shared_SimpleEventBus$2_SimpleEventBus$2__Lcom_google_web_bindery_event_shared_SimpleEventBus_2V(this$static, type, source, handler)):com_google_web_bindery_event_shared_SimpleEventBus_$doAddNow__Lcom_google_web_bindery_event_shared_SimpleEventBus_2Lcom_google_web_bindery_event_shared_Event$Type_2Ljava_lang_Object_2Ljava_lang_Object_2V(this$static, type, source, handler);
@@ -19077,7 +19077,7 @@ function com_raccoonfink_cruisemonkey_gwt_client_ui_CalendarEventCell_$onBrowser
 }
 
 function com_raccoonfink_cruisemonkey_gwt_client_ui_CalendarEventCell_$render__Lcom_raccoonfink_cruisemonkey_gwt_client_ui_CalendarEventCell_2Lcom_google_gwt_cell_client_Cell$Context_2Lcom_raccoonfink_cruisemonkey_gwt_client_model_CalendarEvent_2Lcom_google_gwt_safehtml_shared_SafeHtmlBuilder_2V(event, sb){
-  var description, isFavoriteChecked, isPublicChecked, location, summary, com_raccoonfink_cruisemonkey_gwt_client_model_JsCalendarEvent_$getLocation__Lcom_raccoonfink_cruisemonkey_gwt_client_model_JsCalendarEvent_2Ljava_lang_String_2_location_0;
+  var createdBy, description, isFavoriteChecked, isPublicChecked, location, summary, com_raccoonfink_cruisemonkey_gwt_client_model_JsCalendarEvent_$getLocation__Lcom_raccoonfink_cruisemonkey_gwt_client_model_JsCalendarEvent_2Ljava_lang_String_2_location_0;
   if (!event) {
     return;
   }
@@ -19100,7 +19100,8 @@ function com_raccoonfink_cruisemonkey_gwt_client_ui_CalendarEventCell_$render__L
   summary = event.summary;
   summary != null && !java_lang_String_$equals__Ljava_lang_String_2Ljava_lang_Object_2Z($intern_7, summary) && com_google_gwt_safehtml_shared_SafeHtmlBuilder_$appendHtmlConstant__Lcom_google_gwt_safehtml_shared_SafeHtmlBuilder_2Ljava_lang_String_2Lcom_google_gwt_safehtml_shared_SafeHtmlBuilder_2(com_google_gwt_safehtml_shared_SafeHtmlBuilder_$appendEscaped__Lcom_google_gwt_safehtml_shared_SafeHtmlBuilder_2Ljava_lang_String_2Lcom_google_gwt_safehtml_shared_SafeHtmlBuilder_2((java_lang_StringBuilder_$append__Ljava_lang_StringBuilder_2Ljava_lang_String_2Ljava_lang_StringBuilder_2(sb.com_google_gwt_safehtml_shared_SafeHtmlBuilder_sb, '<div class="summary">') , sb), summary), $intern_426);
   com_google_gwt_safehtml_shared_SafeHtmlBuilder_$appendHtmlConstant__Lcom_google_gwt_safehtml_shared_SafeHtmlBuilder_2Ljava_lang_String_2Lcom_google_gwt_safehtml_shared_SafeHtmlBuilder_2(sb, '<div class="time">Time: ' + com_google_gwt_safehtml_shared_SafeHtmlUtils_htmlEscape__Ljava_lang_String_2Ljava_lang_String_2(com_raccoonfink_cruisemonkey_gwt_client_model_CalendarEvent_$getTimespan__Lcom_raccoonfink_cruisemonkey_gwt_client_model_CalendarEvent_2Ljava_lang_String_2(event)) + $intern_426);
-  java_lang_String_$equals__Ljava_lang_String_2Ljava_lang_Object_2Z(event[$intern_405], com_raccoonfink_cruisemonkey_gwt_client_model_NetworkState_$getUsername__Lcom_raccoonfink_cruisemonkey_gwt_client_model_NetworkState_2Ljava_lang_String_2((!com_raccoonfink_cruisemonkey_gwt_client_CM3_m_1networkState && (com_raccoonfink_cruisemonkey_gwt_client_CM3_m_1networkState = new com_raccoonfink_cruisemonkey_gwt_client_model_NetworkState_NetworkState__V) , com_raccoonfink_cruisemonkey_gwt_client_CM3_m_1networkState))) && event[$intern_405] != null && !java_lang_String_$equals__Ljava_lang_String_2Ljava_lang_Object_2Z($intern_7, event[$intern_405]) && com_google_gwt_safehtml_shared_SafeHtmlBuilder_$appendHtmlConstant__Lcom_google_gwt_safehtml_shared_SafeHtmlBuilder_2Ljava_lang_String_2Lcom_google_gwt_safehtml_shared_SafeHtmlBuilder_2(sb, '<div class="createdBy">Created By: ' + com_google_gwt_safehtml_shared_SafeHtmlUtils_htmlEscape__Ljava_lang_String_2Ljava_lang_String_2(event[$intern_405]) + $intern_426);
+  createdBy = event[$intern_405];
+  !java_lang_String_$equals__Ljava_lang_String_2Ljava_lang_Object_2Z(event[$intern_405], com_raccoonfink_cruisemonkey_gwt_client_model_NetworkState_$getUsername__Lcom_raccoonfink_cruisemonkey_gwt_client_model_NetworkState_2Ljava_lang_String_2((!com_raccoonfink_cruisemonkey_gwt_client_CM3_m_1networkState && (com_raccoonfink_cruisemonkey_gwt_client_CM3_m_1networkState = new com_raccoonfink_cruisemonkey_gwt_client_model_NetworkState_NetworkState__V) , com_raccoonfink_cruisemonkey_gwt_client_CM3_m_1networkState))) && createdBy != null && !java_lang_String_$equals__Ljava_lang_String_2Ljava_lang_Object_2Z($intern_7, createdBy) && !java_lang_String_$equals__Ljava_lang_String_2Ljava_lang_Object_2Z($intern_406, createdBy) && com_google_gwt_safehtml_shared_SafeHtmlBuilder_$appendHtmlConstant__Lcom_google_gwt_safehtml_shared_SafeHtmlBuilder_2Ljava_lang_String_2Lcom_google_gwt_safehtml_shared_SafeHtmlBuilder_2(sb, '<div class="createdBy">Created By: ' + com_google_gwt_safehtml_shared_SafeHtmlUtils_htmlEscape__Ljava_lang_String_2Ljava_lang_String_2(createdBy) + $intern_426);
   location = event.location;
   description = event.description;
   location != null && !java_lang_String_$equals__Ljava_lang_String_2Ljava_lang_Object_2Z($intern_7, location) && com_google_gwt_safehtml_shared_SafeHtmlBuilder_$appendHtmlConstant__Lcom_google_gwt_safehtml_shared_SafeHtmlBuilder_2Ljava_lang_String_2Lcom_google_gwt_safehtml_shared_SafeHtmlBuilder_2(sb, '<div class="location">Location: ' + com_google_gwt_safehtml_shared_SafeHtmlUtils_htmlEscape__Ljava_lang_String_2Ljava_lang_String_2(location) + $intern_426);
