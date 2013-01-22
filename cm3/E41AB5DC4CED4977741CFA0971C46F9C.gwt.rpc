@@ -68,3 +68,9 @@ java.util.Vector, false, false, true, true, java.util.Vector/3057315478, 3057315
 java.util.logging.Level, false, false, true, true, java.util.logging.Level/2839552483, 2839552483
 java.util.logging.LogRecord, false, false, true, true, java.util.logging.LogRecord/2492345967, 2492345967
 [Ljava.util.logging.LogRecord;, false, false, true, true, [Ljava.util.logging.LogRecord;/565203458, 565203458
+javax.validation.ConstraintDeclarationException, false, false, true, true, javax.validation.ConstraintDeclarationException/3610544007, 3610544007
+javax.validation.ConstraintDefinitionException, false, false, true, true, javax.validation.ConstraintDefinitionException/3732439488, 3732439488
+javax.validation.ConstraintViolationException, false, false, true, true, javax.validation.ConstraintViolationException/1185386591, 1185386591
+javax.validation.GroupDefinitionException, false, false, true, true, javax.validation.GroupDefinitionException/4024780846, 4024780846
+javax.validation.UnexpectedTypeException, false, false, true, true, javax.validation.UnexpectedTypeException/593026390, 593026390
+javax.validation.ValidationException, false, false, true, true, javax.validation.ValidationException/1570221831, 1570221831
