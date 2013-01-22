@@ -4,7 +4,7 @@ var $gwt_version = "2.5.0";
 var $wnd = parent;
 var $doc = $wnd.document;
 var $moduleName, $moduleBase;
-var $strongName = 'C04EBF21525688F57AF60610D5D89BDA';
+var $strongName = '9479CEB1474E8926B26479EF8840DD71';
 var $stats = $wnd.__gwtStatsEvent ? function(a) {return $wnd.__gwtStatsEvent(a);} : null,
 $sessionId = $wnd.__gwtStatsSessionId ? $wnd.__gwtStatsSessionId : null;
 $stats && $stats({moduleName:'cm3',sessionId:$sessionId,subSystem:'startup',evtGroup:'moduleStartup',millis:(new Date()).getTime(),type:'moduleEvalStart'});
@@ -2703,7 +2703,7 @@ function com_google_web_bindery_event_shared_SimpleEventBus_$doAdd__Lcom_google_
   if (!type) {
     throw new java_lang_NullPointerException_NullPointerException__Ljava_lang_String_2V('Cannot add a handler with a null type');
   }
-  if (!handler) {
+  if (handler == null) {
     throw new java_lang_NullPointerException_NullPointerException__Ljava_lang_String_2V('Cannot add a null handler');
   }
   this$static.com_google_web_bindery_event_shared_SimpleEventBus_firingDepth > 0?com_google_web_bindery_event_shared_SimpleEventBus_$defer__Lcom_google_web_bindery_event_shared_SimpleEventBus_2Lcom_google_web_bindery_event_shared_SimpleEventBus$Command_2V(this$static, new com_google_web_bindery_event_shared_SimpleEventBus$2_SimpleEventBus$2__Lcom_google_web_bindery_event_shared_SimpleEventBus_2V(this$static, type, source, handler)):com_google_web_bindery_event_shared_SimpleEventBus_$doAddNow__Lcom_google_web_bindery_event_shared_SimpleEventBus_2Lcom_google_web_bindery_event_shared_Event$Type_2Ljava_lang_Object_2Ljava_lang_Object_2V(this$static, type, source, handler);
@@ -17220,7 +17220,7 @@ _.com_raccoonfink_cruisemonkey_gwt_client_ui_SignInWidget_1SignInWidgetUiBinderI
 function com_raccoonfink_cruisemonkey_gwt_client_ui_SignInWidget_1SignInWidgetUiBinderImpl_1TemplateImpl_$html1__Lcom_raccoonfink_cruisemonkey_gwt_client_ui_SignInWidget_1SignInWidgetUiBinderImpl_1TemplateImpl_2Ljava_lang_String_2Ljava_lang_String_2Ljava_lang_String_2Ljava_lang_String_2Ljava_lang_String_2Ljava_lang_String_2Ljava_lang_String_2Ljava_lang_String_2Lcom_google_gwt_safehtml_shared_SafeHtml_2(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7){
   var sb;
   sb = new java_lang_StringBuilder_StringBuilder__V;
-  sb.java_lang_StringBuilder_impl.com_google_gwt_core_client_impl_StringBufferImplAppend_string += "<table> <tr> <td colspan='2'>Note: You must first create an account on <a href='http://c4.amberwood.net/'>The Twit-Arrr server<\/a> before you can log in.<\/td> <\/tr> <tr> <td><span id='";
+  sb.java_lang_StringBuilder_impl.com_google_gwt_core_client_impl_StringBufferImplAppend_string += "<table> <tr> <td colspan='2'>Note: You must first create an account on <a href='http://c4.amberwood.net/' rel='nofollow'>The Twit-Arrr server<\/a> before you can log in.<\/td> <\/tr> <tr> <td><span id='";
   java_lang_StringBuilder_$append__Ljava_lang_StringBuilder_2Ljava_lang_String_2Ljava_lang_StringBuilder_2(sb, com_google_gwt_safehtml_shared_SafeHtmlUtils_htmlEscape__Ljava_lang_String_2Ljava_lang_String_2(arg0));
   sb.java_lang_StringBuilder_impl.com_google_gwt_core_client_impl_StringBufferImplAppend_string += $intern_350;
   java_lang_StringBuilder_$append__Ljava_lang_StringBuilder_2Ljava_lang_String_2Ljava_lang_StringBuilder_2(sb, com_google_gwt_safehtml_shared_SafeHtmlUtils_htmlEscape__Ljava_lang_String_2Ljava_lang_String_2(arg1));
