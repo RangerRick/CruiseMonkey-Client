@@ -25,6 +25,8 @@
       if (window.applicationCache.status == window.applicationCache.IDLE) {
         console.log('application cache is up-to-date');
       } else {
+        var element = DOM.getElementById('root');
+        element.innerHTML('<h1>CruiseMonkey has an update, please wait while it is downloaded...</h1>');
         window.applicationCache.addEventListener('updateready', function _updateReady(e) {
           if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
             console.log('application cache has changed');
