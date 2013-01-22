@@ -101,11 +101,23 @@ div.tabLabel {
 	right: 0 !important;
 }
 
-.sign-in div.tabLabel {
+div#sign-in.not-authorized div.tabLabel {
+	color: #f00;
+	content: 'Sign In';
+	padding-right: 5px;
+}
+
+div#sign-in.authorized div.tabLabel {
+	color: #febd11;
+	content: 'Sign Out';
 	padding-right: 5px;
 }
 
 .gwt-TabLayoutPanelTab-selected div.tabLabel {
+	color: white;
+}
+
+.gwt-TabLayoutPanelTab-selected div#sign-in.authorized div.tabLabel {
 	color: white;
 }
 
@@ -139,6 +151,8 @@ div.icon-decks           { background-image: url(images/icons/inactive/103-map.p
 div.icon-login           { background-image: url(images/icons/inactive/55-network.png);     background-size: 24px 24px; }
 div.icon-add             { background-image: url(images/icons/inactive/31-circle-plus.png); background-size: 28px 28px; }
 
+div#sign-in.not-authorized div.icon.icon-login { background-image: url(images/icons/not-authorized/55-network.png); background-size: 24px 24px; }
+
 .gwt-TabLayoutPanelTab-selected div.icon-official-events { background-image: url(images/icons/active/83-calendar.png);      background-size: 23px 25px; }
 .gwt-TabLayoutPanelTab-selected div.icon-my-events       { background-image: url(images/icons/active/111-user.png);         background-size: 24px 21px; }
 .gwt-TabLayoutPanelTab-selected div.icon-public-events   { background-image: url(images/icons/active/112-group.png);        background-size: 32px 21px; }
@@ -157,6 +171,8 @@ div.icon-add             { background-image: url(images/icons/inactive/31-circle
 	div.icon-decks                     { background-image: url(images/icons/inactive/103-map@2x.png);        background-size: 26px 21px; }
 	div.icon-login                     { background-image: url(images/icons/inactive/55-network@2x.png);     background-size: 24px 24px; }
 	div.icon-add                       { background-image: url(images/icons/inactive/31-circle-plus@2x.png); background-size: 28px 28px; }
+
+	div#sign-in.not-authorized div.icon.icon-login { background-image: url(images/icons/not-authorized/55-network@2x.png); background-size: 24px 24px; }
 
 	.gwt-TabLayoutPanelTab-selected div.icon-official-events  { background-image: url(images/icons/active/83-calendar@2x.png);      background-size: 23px 25px; }
 	.gwt-TabLayoutPanelTab-selected div.icon-my-events        { background-image: url(images/icons/active/111-user@2x.png);         background-size: 24px 21px; }
@@ -234,7 +250,6 @@ label {
 .theme-header {
 	color: #febd11;
 	background-color: #061556;
-	margin: 0 -1px !important;
 }
 
 .divider {
@@ -322,16 +337,20 @@ label {
 
 /** Add Event **/
 
-.edit-event table {
-	display: inline-block;
-	border: 0 !important;
-	margin-left: auto;
-	margin-right: auto;
-}
-
 .edit-event {
 	font-size: 14px !important;
 }
+
+div.edit-event {
+	width: 100%;
+}
+
+.edit-event table {
+	display: table;
+	margin: 0 auto;
+	border: 0 !important;
+}
+
 .edit-event .gwt-Label {
 	padding: 5px;
 	vertical-align: top;
@@ -370,4 +389,29 @@ label {
 
 .edit-event .buttons {
 	float: right;
+}
+
+.gwt-TabLayoutPanelContent div.sign-in {
+	width: 100%;
+}
+
+.gwt-TabLayoutPanelContent .sign-in table {
+	display: table;
+	margin: 0 auto;
+	border: 0 !important;
+}
+
+.gwt-TabLayoutPanelContent .sign-in .gwt-Label {
+	font-size: 14px !important;
+	padding: 5px;
+	vertical-align: top;
+	text-align: right;
+}
+
+.gwt-TabLayoutPanelContent .sign-in .gwt-TextBox {
+	font-size: 14px !important;
+	padding: 5px;
+	margin: 2px;
+	width: 200px;
+	border: 1px solid black;
 }
