@@ -1,0 +1,4 @@
+<FilesMatch *.manifest>
+	ExpiresActive On
+	ExpiresDefault "access"
+</FilesMatch>
