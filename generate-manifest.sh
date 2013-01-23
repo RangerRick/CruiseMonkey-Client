@@ -9,7 +9,7 @@ echo "# version $VERSION $DATE $GITHASH" >> cruisemonkey.manifest
 echo "" >> cruisemonkey.manifest
 
 echo "CACHE:" >> cruisemonkey.manifest
-find * -type f | grep -vE '^(generate-manifest.sh|cruisemonkey.manifest)$' | while read LINE; do
+find * -type f | grep -vE '^(generate-manifest.sh|cruisemonkey.manifest|.DS_Store)$' | while read LINE; do
 	echo "$LINE" >> cruisemonkey.manifest
 done
 echo "" >> cruisemonkey.manifest
