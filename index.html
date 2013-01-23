@@ -33,9 +33,6 @@
     <!--                                           -->
     <script>
     if (window.applicationCache) {
-      window.setInterval(new function() {
-        window.applicationCache.update();
-      }, 8 * 60 * 60 * 1000);
       if (window.applicationCache.status == window.applicationCache.IDLE) {
         console.log('application cache is up-to-date');
       } else {

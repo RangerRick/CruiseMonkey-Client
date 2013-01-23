@@ -190,8 +190,12 @@ div#sign-in.not-authorized div.icon.icon-login { background-image: url(images/ic
 .summary {
 	font-size: larger;
 	font-weight: bold;
-	margin-right: 64px;
+	margin-right: 32px;
 	min-height: 32px;
+}
+
+.mine .summary {
+	margin-right: 96px;
 }
 
 .createdBy, .time, .location {
@@ -203,7 +207,7 @@ div#sign-in.not-authorized div.icon.icon-login { background-image: url(images/ic
 	font-weight: bolder;
 }
 
-.favorite, .trash, .public {
+.favorite, .trash, .public, .edit {
 	float: right;
 	display: inline-block;
 	width: 32px;
@@ -212,9 +216,11 @@ div#sign-in.not-authorized div.icon.icon-login { background-image: url(images/ic
 	z-index: 1;
 }
 
+/*
 .trash {
 	top: 34px;
 }
+*/
 
 label {
 	display: block;
@@ -286,14 +292,6 @@ label {
 	height: 32px;
 }
 
-.list-entry .trash input[type=button] + label {
-	background:url(images/icons/trash.png) no-repeat;
-	background-position: center center;
-	background-size: 16px 21px;
-	width: 32px;
-	height: 32px;
-}
-
 .list-entry .public input[type=checkbox] + label {
 	background:url(images/icons/eye-unchecked.png) no-repeat;
 	background-position: center center;
@@ -310,6 +308,22 @@ label {
 	height: 32px;
 }
 
+.list-entry .trash input[type=button] + label {
+	background:url(images/icons/trash.png) no-repeat;
+	background-position: center center;
+	background-size: 16px 21px;
+	width: 32px;
+	height: 32px;
+}
+
+.list-entry .edit input[type=button] + label {
+	background:url(images/icons/edit.png) no-repeat;
+	background-position: center center;
+	background-size: 23px 23px;
+	width: 32px;
+	height: 32px;
+}
+
 @media 
 (-webkit-min-device-pixel-ratio: 2), 
 (min-resolution: 192dpi) { 
@@ -321,10 +335,6 @@ label {
 		background-image:url(images/icons/star-checked@2x.png);
 		background-size: 26px 26px;
 	}
-	.list-entry .trash input[type=button] + label {
-		background-image:url(images/icons/trash@2x.png);
-		background-size: 16px 21px;
-	}
 	.list-entry .public input[type=checkbox] + label {
 		background-image:url(images/icons/eye-unchecked@2x.png);
 		background-size: 24px 16px;
@@ -332,6 +342,14 @@ label {
 	.list-entry .public input[type=checkbox]:checked + label {
 		background-image:url(images/icons/eye-checked@2x.png);
 		background-size: 24px 16px;
+	}
+	.list-entry .trash input[type=button] + label {
+		background-image:url(images/icons/trash@2x.png);
+		background-size: 16px 21px;
+	}
+	.list-entry .edit input[type=button] + label {
+		background-image:url(images/icons/edit@2x.png);
+		background-size: 23px 23px;
 	}
 }
 
