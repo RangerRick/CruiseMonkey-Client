@@ -4,7 +4,7 @@ var $gwt_version = "2.5.0";
 var $wnd = parent;
 var $doc = $wnd.document;
 var $moduleName, $moduleBase;
-var $strongName = '84303038CFA891CA57F117274D9EBF91';
+var $strongName = '9B52B498F1CEEA209FA060DDF9B5AC9F';
 var $stats = $wnd.__gwtStatsEvent ? function(a) {return $wnd.__gwtStatsEvent(a);} : null,
 $sessionId = $wnd.__gwtStatsSessionId ? $wnd.__gwtStatsSessionId : null;
 $stats && $stats({moduleName:'cm3',sessionId:$sessionId,subSystem:'startup',evtGroup:'moduleStartup',millis:(new Date()).getTime(),type:'moduleEvalStart'});
@@ -2703,7 +2703,7 @@ function com_google_web_bindery_event_shared_SimpleEventBus_$doAdd__Lcom_google_
   if (!type) {
     throw new java_lang_NullPointerException_NullPointerException__Ljava_lang_String_2V('Cannot add a handler with a null type');
   }
-  if (!handler) {
+  if (handler == null) {
     throw new java_lang_NullPointerException_NullPointerException__Ljava_lang_String_2V('Cannot add a null handler');
   }
   this$static.com_google_web_bindery_event_shared_SimpleEventBus_firingDepth > 0?com_google_web_bindery_event_shared_SimpleEventBus_$defer__Lcom_google_web_bindery_event_shared_SimpleEventBus_2Lcom_google_web_bindery_event_shared_SimpleEventBus$Command_2V(this$static, new com_google_web_bindery_event_shared_SimpleEventBus$2_SimpleEventBus$2__Lcom_google_web_bindery_event_shared_SimpleEventBus_2V(this$static, type, source, handler)):com_google_web_bindery_event_shared_SimpleEventBus_$doAddNow__Lcom_google_web_bindery_event_shared_SimpleEventBus_2Lcom_google_web_bindery_event_shared_Event$Type_2Ljava_lang_Object_2Ljava_lang_Object_2V(this$static, type, source, handler);
@@ -15610,7 +15610,7 @@ _.onResponseReceived__Lcom_google_gwt_http_client_Request_2Lcom_google_gwt_http_
   com_raccoonfink_cruisemonkey_gwt_client_CM3RequestCallback_$onResponseReceived__Lcom_raccoonfink_cruisemonkey_gwt_client_CM3RequestCallback_2Lcom_google_gwt_http_client_Request_2Lcom_google_gwt_http_client_Response_2V(this, response);
   if (response.com_google_gwt_http_client_Request$1_val$xmlHttpRequest.status == 200 && java_lang_String_$equals__Ljava_lang_String_2Ljava_lang_Object_2Z(response.com_google_gwt_http_client_Request$1_val$xmlHttpRequest.responseText, $intern_188)) {
     com_raccoonfink_cruisemonkey_gwt_client_CM3_authorized__V();
-    !!this.com_raccoonfink_cruisemonkey_gwt_client_CM3$13_val$onSuccess && com_raccoonfink_cruisemonkey_gwt_client_CM3_navigateToPrevious__V();
+    !!this.com_raccoonfink_cruisemonkey_gwt_client_CM3$13_val$onSuccess && (com_raccoonfink_cruisemonkey_gwt_client_CM3_navigateToPrevious__V() , com_raccoonfink_cruisemonkey_gwt_client_CalendarEventModelUpdater_$poll__Lcom_raccoonfink_cruisemonkey_gwt_client_CalendarEventModelUpdater_2ZV((com_raccoonfink_cruisemonkey_gwt_client_CM3_$clinit__V() , com_raccoonfink_cruisemonkey_gwt_client_CM3_$clinit__V() , com_raccoonfink_cruisemonkey_gwt_client_CM3_m_1updater), true));
     com_google_gwt_core_client_impl_SchedulerImpl_$scheduleDeferred__Lcom_google_gwt_core_client_impl_SchedulerImpl_2Lcom_google_gwt_core_client_Scheduler$ScheduledCommand_2V((com_google_gwt_core_client_impl_SchedulerImpl_$clinit__V() , com_google_gwt_core_client_impl_SchedulerImpl_INSTANCE), new com_raccoonfink_cruisemonkey_gwt_client_CM3$13$1_CM3$13$1__Lcom_raccoonfink_cruisemonkey_gwt_client_CM3$13_2V);
   }
    else {
@@ -17117,6 +17117,7 @@ function com_raccoonfink_cruisemonkey_gwt_client_ui_SignInWidget$1_SignInWidget$
 com_google_gwt_lang_SeedUtil_defineSeed__IILcom_google_gwt_core_client_JavaScriptObject_2Lcom_google_gwt_core_client_JavaScriptObject_2(628, 1, {}, com_raccoonfink_cruisemonkey_gwt_client_ui_SignInWidget$1_SignInWidget$1__Lcom_raccoonfink_cruisemonkey_gwt_client_ui_SignInWidget_2V);
 _.run__V = function com_raccoonfink_cruisemonkey_gwt_client_ui_SignInWidget$1_run__V(){
   com_raccoonfink_cruisemonkey_gwt_client_CM3_navigateToPrevious__V();
+  com_raccoonfink_cruisemonkey_gwt_client_CalendarEventModelUpdater_$poll__Lcom_raccoonfink_cruisemonkey_gwt_client_CalendarEventModelUpdater_2ZV((com_raccoonfink_cruisemonkey_gwt_client_CM3_$clinit__V() , com_raccoonfink_cruisemonkey_gwt_client_CM3_$clinit__V() , com_raccoonfink_cruisemonkey_gwt_client_CM3_m_1updater), true);
 }
 ;
 function com_raccoonfink_cruisemonkey_gwt_client_ui_SignInWidget$2_SignInWidget$2__Lcom_raccoonfink_cruisemonkey_gwt_client_ui_SignInWidget_2V(){
@@ -17221,7 +17222,7 @@ _.com_raccoonfink_cruisemonkey_gwt_client_ui_SignInWidget_1SignInWidgetUiBinderI
 function com_raccoonfink_cruisemonkey_gwt_client_ui_SignInWidget_1SignInWidgetUiBinderImpl_1TemplateImpl_$html1__Lcom_raccoonfink_cruisemonkey_gwt_client_ui_SignInWidget_1SignInWidgetUiBinderImpl_1TemplateImpl_2Ljava_lang_String_2Ljava_lang_String_2Ljava_lang_String_2Ljava_lang_String_2Ljava_lang_String_2Ljava_lang_String_2Ljava_lang_String_2Ljava_lang_String_2Lcom_google_gwt_safehtml_shared_SafeHtml_2(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7){
   var sb;
   sb = new java_lang_StringBuilder_StringBuilder__V;
-  sb.java_lang_StringBuilder_impl.com_google_gwt_core_client_impl_StringBufferImplAppend_string += "<table> <tr> <td colspan='2'>Note: You must first create an account on <a href='http://c4.amberwood.net/' rel='nofollow'>The Twit-Arrr server<\/a> before you can log in!<\/td> <\/tr> <tr> <td><span id='";
+  sb.java_lang_StringBuilder_impl.com_google_gwt_core_client_impl_StringBufferImplAppend_string += "<table> <tr> <td colspan='2'>Note: You must first create an account on The Twit-Arrr server before you can log in!<\/td> <\/tr> <tr> <td><span id='";
   java_lang_StringBuilder_$append__Ljava_lang_StringBuilder_2Ljava_lang_String_2Ljava_lang_StringBuilder_2(sb, com_google_gwt_safehtml_shared_SafeHtmlUtils_htmlEscape__Ljava_lang_String_2Ljava_lang_String_2(arg0));
   sb.java_lang_StringBuilder_impl.com_google_gwt_core_client_impl_StringBufferImplAppend_string += $intern_350;
   java_lang_StringBuilder_$append__Ljava_lang_StringBuilder_2Ljava_lang_String_2Ljava_lang_StringBuilder_2(sb, com_google_gwt_safehtml_shared_SafeHtmlUtils_htmlEscape__Ljava_lang_String_2Ljava_lang_String_2(arg1));
@@ -17350,9 +17351,9 @@ _.setValue__Ljava_lang_Object_2ZV = function com_tractionsoftware_gwt_user_clien
 }
 ;
 _.com_tractionsoftware_gwt_user_client_ui_UTCTimeBox_impl = null;
+com_google_gwt_lang_SeedUtil_defineSeed__IILcom_google_gwt_core_client_JavaScriptObject_2Lcom_google_gwt_core_client_JavaScriptObject_2(641, 290, makeCastMap([Q$com_google_gwt_event_logical_shared_HasAttachHandlers, Q$com_google_gwt_event_shared_HasHandlers, Q$com_google_gwt_user_client_EventListener, Q$com_google_gwt_user_client_ui_HasVisibility, Q$com_google_gwt_user_client_ui_IsRenderable, Q$com_google_gwt_user_client_ui_IsWidget, Q$com_google_gwt_user_client_ui_UIObject, Q$com_google_gwt_user_client_ui_Widget]));
 --></script>
 <script><!--
-com_google_gwt_lang_SeedUtil_defineSeed__IILcom_google_gwt_core_client_JavaScriptObject_2Lcom_google_gwt_core_client_JavaScriptObject_2(641, 290, makeCastMap([Q$com_google_gwt_event_logical_shared_HasAttachHandlers, Q$com_google_gwt_event_shared_HasHandlers, Q$com_google_gwt_user_client_EventListener, Q$com_google_gwt_user_client_ui_HasVisibility, Q$com_google_gwt_user_client_ui_IsRenderable, Q$com_google_gwt_user_client_ui_IsWidget, Q$com_google_gwt_user_client_ui_UIObject, Q$com_google_gwt_user_client_ui_Widget]));
 function com_tractionsoftware_gwt_user_client_ui_impl_UTCDateBoxImplHtml5_$clinit__V(){
   com_tractionsoftware_gwt_user_client_ui_impl_UTCDateBoxImplHtml5_$clinit__V = nullMethod;
   com_tractionsoftware_gwt_user_client_ui_impl_UTCDateBoxImplHtml5_dateInputFormat = (com_google_gwt_i18n_client_DateTimeFormat_$clinit__V() , com_google_gwt_i18n_client_DateTimeFormat_getFormat__Ljava_lang_String_2Lcom_google_gwt_i18n_client_DateTimeFormatInfo_2Lcom_google_gwt_i18n_client_DateTimeFormat_2($intern_123, com_google_gwt_i18n_client_LocaleInfo_$getDateTimeFormatInfo__Lcom_google_gwt_i18n_client_LocaleInfo_2Lcom_google_gwt_i18n_client_DateTimeFormatInfo_2((com_google_gwt_i18n_client_LocaleInfo_$clinit__V() , com_google_gwt_i18n_client_LocaleInfo_$clinit__V() , com_google_gwt_i18n_client_LocaleInfo_instance))));
@@ -17700,13 +17701,13 @@ function java_lang_IllegalStateException_IllegalStateException__Ljava_lang_Strin
   java_lang_RuntimeException_RuntimeException__Ljava_lang_String_2V.call(this, s);
 }
 
---></script>
-<script><!--
 com_google_gwt_lang_SeedUtil_defineSeed__IILcom_google_gwt_core_client_JavaScriptObject_2Lcom_google_gwt_core_client_JavaScriptObject_2(655, 23, makeCastMap([Q$java_io_Serializable, Q$java_lang_RuntimeException, Q$java_lang_Throwable]), java_lang_IllegalStateException_IllegalStateException__V, java_lang_IllegalStateException_IllegalStateException__Ljava_lang_String_2V);
 function java_lang_IndexOutOfBoundsException_IndexOutOfBoundsException__V(){
   java_lang_RuntimeException_RuntimeException__V.call(this);
 }
 
+--></script>
+<script><!--
 function java_lang_IndexOutOfBoundsException_IndexOutOfBoundsException__Ljava_lang_String_2V(message){
   java_lang_RuntimeException_RuntimeException__Ljava_lang_String_2V.call(this, message);
 }
@@ -18267,8 +18268,6 @@ function java_util_AbstractHashMap_$clearImpl__Ljava_util_AbstractHashMap_2V(thi
   this$static.java_util_AbstractHashMap_size = 0;
 }
 
---></script>
-<script><!--
 function java_util_AbstractHashMap_$containsHashValue__Ljava_util_AbstractHashMap_2Ljava_lang_Object_2Z(this$static, value){
   var hashCodeMap = this$static.java_util_AbstractHashMap_hashCodeMap;
   for (var hashCode in hashCodeMap) {
@@ -18287,6 +18286,8 @@ function java_util_AbstractHashMap_$containsHashValue__Ljava_util_AbstractHashMa
   return false;
 }
 
+--></script>
+<script><!--
 function java_util_AbstractHashMap_$containsKey__Ljava_util_AbstractHashMap_2Ljava_lang_Object_2Z(this$static, key){
   return key == null?this$static.java_util_AbstractHashMap_nullSlotLive:com_google_gwt_lang_Cast_instanceOf__Ljava_lang_Object_2IZ(key, Q$java_lang_String)?java_util_AbstractHashMap_$hasStringValue__Ljava_util_AbstractHashMap_2Ljava_lang_String_2Z(this$static, com_google_gwt_lang_Cast_dynamicCast__Ljava_lang_Object_2ILjava_lang_Object_2(key, Q$java_lang_String)):java_util_AbstractHashMap_$hasHashValue__Ljava_util_AbstractHashMap_2Ljava_lang_Object_2IZ(this$static, key, this$static.getHashCode__Ljava_lang_Object_2I(key));
 }
@@ -18766,8 +18767,6 @@ function java_util_AbstractList$ListIteratorImpl_$set__Ljava_util_AbstractList$L
   this$static.java_util_AbstractList$ListIteratorImpl_this$0.set__ILjava_lang_Object_2Ljava_lang_Object_2(this$static.java_util_AbstractList$IteratorImpl_last, o);
 }
 
---></script>
-<script><!--
 function java_util_AbstractList$ListIteratorImpl_AbstractList$ListIteratorImpl__Ljava_util_AbstractList_2IV(this$0, start){
   var size;
   this.java_util_AbstractList$ListIteratorImpl_this$0 = this$0;
@@ -18782,6 +18781,8 @@ _.hasPrevious__Z = function java_util_AbstractList$ListIteratorImpl_hasPrevious_
   return this.java_util_AbstractList$IteratorImpl_i > 0;
 }
 ;
+--></script>
+<script><!--
 _.previous__Ljava_lang_Object_2 = function java_util_AbstractList$ListIteratorImpl_previous__Ljava_lang_Object_2(){
   if (this.java_util_AbstractList$IteratorImpl_i <= 0) {
     throw new java_util_NoSuchElementException_NoSuchElementException__V;
@@ -19286,8 +19287,6 @@ _.next__Ljava_lang_Object_2 = function java_util_Collections$UnmodifiableCollect
   return this.java_util_Collections$UnmodifiableCollectionIterator_it.next__Ljava_lang_Object_2();
 }
 ;
---></script>
-<script><!--
 _.remove__V = function java_util_Collections$UnmodifiableCollectionIterator_remove__V(){
   throw new java_lang_UnsupportedOperationException_UnsupportedOperationException__V;
 }
@@ -19299,6 +19298,8 @@ function java_util_Collections$UnmodifiableList_Collections$UnmodifiableList__Lj
 }
 
 com_google_gwt_lang_SeedUtil_defineSeed__IILcom_google_gwt_core_client_JavaScriptObject_2Lcom_google_gwt_core_client_JavaScriptObject_2(692, 690, makeCastMap([Q$java_util_List]), java_util_Collections$UnmodifiableList_Collections$UnmodifiableList__Ljava_util_List_2V);
+--></script>
+<script><!--
 _.equals__Ljava_lang_Object_2Z$ = function java_util_Collections$UnmodifiableList_equals__Ljava_lang_Object_2Z(o){
   return this.java_util_Collections$UnmodifiableList_list.equals__Ljava_lang_Object_2Z$(o);
 }
@@ -19747,8 +19748,6 @@ _.intValue__I = function java_util_logging_Level$LevelConfig_intValue__I(){
 function java_util_logging_Level$LevelFine_Level$LevelFine__V(){
 }
 
---></script>
-<script><!--
 com_google_gwt_lang_SeedUtil_defineSeed__IILcom_google_gwt_core_client_JavaScriptObject_2Lcom_google_gwt_core_client_JavaScriptObject_2(711, 708, makeCastMap([Q$java_io_Serializable]), java_util_logging_Level$LevelFine_Level$LevelFine__V);
 _.getName__Ljava_lang_String_2 = function java_util_logging_Level$LevelFine_getName__Ljava_lang_String_2(){
   return $intern_159;
@@ -19762,6 +19761,8 @@ function java_util_logging_Level$LevelFiner_Level$LevelFiner__V(){
 }
 
 com_google_gwt_lang_SeedUtil_defineSeed__IILcom_google_gwt_core_client_JavaScriptObject_2Lcom_google_gwt_core_client_JavaScriptObject_2(712, 708, makeCastMap([Q$java_io_Serializable]), java_util_logging_Level$LevelFiner_Level$LevelFiner__V);
+--></script>
+<script><!--
 _.getName__Ljava_lang_String_2 = function java_util_logging_Level$LevelFiner_getName__Ljava_lang_String_2(){
   return $intern_160;
 }
