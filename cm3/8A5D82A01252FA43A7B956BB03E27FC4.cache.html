@@ -4,7 +4,7 @@ var $gwt_version = "2.5.0";
 var $wnd = parent;
 var $doc = $wnd.document;
 var $moduleName, $moduleBase;
-var $strongName = '276DA7AF4D07594615091EA1B9D912D3';
+var $strongName = '8A5D82A01252FA43A7B956BB03E27FC4';
 var $stats = $wnd.__gwtStatsEvent ? function(a) {return $wnd.__gwtStatsEvent(a);} : null,
 $sessionId = $wnd.__gwtStatsSessionId ? $wnd.__gwtStatsSessionId : null;
 $stats && $stats({moduleName:'cm3',sessionId:$sessionId,subSystem:'startup',evtGroup:'moduleStartup',millis:(new Date()).getTime(),type:'moduleEvalStart'});
@@ -3346,7 +3346,7 @@ function com_google_web_bindery_event_shared_SimpleEventBus_$doAdd__Lcom_google_
   if (!type) {
     throw new java_lang_NullPointerException_NullPointerException__Ljava_lang_String_2V($intern_269);
   }
-  if (handler == null) {
+  if (!handler) {
     throw new java_lang_NullPointerException_NullPointerException__Ljava_lang_String_2V($intern_270);
   }
   this$static.com_google_web_bindery_event_shared_SimpleEventBus_firingDepth > 0?com_google_web_bindery_event_shared_SimpleEventBus_$defer__Lcom_google_web_bindery_event_shared_SimpleEventBus_2Lcom_google_web_bindery_event_shared_SimpleEventBus$Command_2V(this$static, new com_google_web_bindery_event_shared_SimpleEventBus$2_SimpleEventBus$2__Lcom_google_web_bindery_event_shared_SimpleEventBus_2V(this$static, type, source, handler)):com_google_web_bindery_event_shared_SimpleEventBus_$doAddNow__Lcom_google_web_bindery_event_shared_SimpleEventBus_2Lcom_google_web_bindery_event_shared_Event$Type_2Ljava_lang_Object_2Ljava_lang_Object_2V(this$static, type, source, handler);
@@ -19541,7 +19541,8 @@ function com_raccoonfink_cruisemonkey_gwt_client_ui_EditEventWidget_$resetConten
   com_tractionsoftware_gwt_user_client_ui_UTCTimeBox_$setValue__Lcom_tractionsoftware_gwt_user_client_ui_UTCTimeBox_2Ljava_lang_Long_2V(this$static.com_raccoonfink_cruisemonkey_gwt_client_ui_EditEventWidget_startTime, java_lang_Long_valueOf__JLjava_lang_Long_2(com_google_gwt_lang_LongLib_sub__Lcom_google_gwt_lang_LongLibBase$LongEmul_2Lcom_google_gwt_lang_LongLibBase$LongEmul_2Lcom_google_gwt_lang_LongLibBase$LongEmul_2(com_tractionsoftware_gwt_user_client_ui_UTCTimeBox_getValueForNextHour__Ljava_lang_Long_2().java_lang_Long_value, P36ee80_longLit)));
   com_tractionsoftware_gwt_user_client_ui_UTCDateBox_$setValue__Lcom_tractionsoftware_gwt_user_client_ui_UTCDateBox_2Ljava_lang_Long_2ZV(this$static.com_raccoonfink_cruisemonkey_gwt_client_ui_EditEventWidget_endDate, java_lang_Long_valueOf__JLjava_lang_Long_2(com_tractionsoftware_gwt_user_client_ui_UTCDateBox_trimTimeToMidnight__JJ(com_tractionsoftware_gwt_user_client_ui_UTCDateBox_date2utc__Ljava_util_Date_2Ljava_lang_Long_2(new java_util_Date_Date__V).java_lang_Long_value)), false);
   com_tractionsoftware_gwt_user_client_ui_UTCTimeBox_$setValue__Lcom_tractionsoftware_gwt_user_client_ui_UTCTimeBox_2Ljava_lang_Long_2V(this$static.com_raccoonfink_cruisemonkey_gwt_client_ui_EditEventWidget_endTime, com_tractionsoftware_gwt_user_client_ui_UTCTimeBox_getValueForNextHour__Ljava_lang_Long_2());
-  com_google_gwt_user_client_ui_CheckBox_$setValue__Lcom_google_gwt_user_client_ui_CheckBox_2Ljava_lang_Boolean_2ZV(this$static.com_raccoonfink_cruisemonkey_gwt_client_ui_EditEventWidget_isPublic, (java_lang_Boolean_$clinit__V() , java_lang_Boolean_$clinit__V() , java_lang_Boolean_TRUE), false);
+  com_google_gwt_user_client_ui_ValueBoxBase_$setValue__Lcom_google_gwt_user_client_ui_ValueBoxBase_2Ljava_lang_Object_2ZV(this$static.com_raccoonfink_cruisemonkey_gwt_client_ui_EditEventWidget_location, $intern_13, false);
+  com_google_gwt_user_client_ui_CheckBox_$setValue__Lcom_google_gwt_user_client_ui_CheckBox_2Ljava_lang_Boolean_2ZV(this$static.com_raccoonfink_cruisemonkey_gwt_client_ui_EditEventWidget_isPublic, (java_lang_Boolean_$clinit__V() , java_lang_Boolean_$clinit__V() , java_lang_Boolean_FALSE), false);
 }
 
 --></script>
