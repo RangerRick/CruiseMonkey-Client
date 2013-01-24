@@ -4,3 +4,8 @@ childbrowser.js
 phonegap.js
 WEB-INF
 META-INF
+*.wgz
+*.apk
+*.ipk
+*.xap
+*.ipa
