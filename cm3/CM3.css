@@ -293,7 +293,7 @@ label {
 }
 
 .list-entry .public input[type=checkbox] + label {
-	background:url(images/icons/eye-unchecked.png) no-repeat;
+	background:url(images/icons/user.png) no-repeat;
 	background-position: center center;
 	background-size: 24px 16px;
 	width: 32px;
@@ -301,7 +301,7 @@ label {
 }
 
 .list-entry .public input[type=checkbox]:checked + label {
-	background:url(images/icons/eye-checked.png) no-repeat;
+	background:url(images/icons/group.png) no-repeat;
 	background-position: center center;
 	background-size: 24px 16px;
 	width: 32px;
@@ -336,11 +336,11 @@ label {
 		background-size: 26px 26px;
 	}
 	.list-entry .public input[type=checkbox] + label {
-		background-image:url(images/icons/eye-unchecked@2x.png);
+		background-image:url(images/icons/user@2x.png);
 		background-size: 24px 16px;
 	}
 	.list-entry .public input[type=checkbox]:checked + label {
-		background-image:url(images/icons/eye-checked@2x.png);
+		background-image:url(images/icons/group@2x.png);
 		background-size: 24px 16px;
 	}
 	.list-entry .trash input[type=button] + label {
