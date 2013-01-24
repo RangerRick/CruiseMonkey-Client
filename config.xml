@@ -2,7 +2,7 @@
 <widget xmlns		= "http://www.w3.org/ns/widgets"
 	xmlns:gap	= "http://phonegap.com/ns/1.0"
 	id		= "com.raccoonfink.cruisemonkey"
-	version 	= "2.9.95.1358995326">
+	version 	= "2.9.95.1359046328">
 
 	<name>CruiseMonkey</name>
 
@@ -67,9 +67,9 @@
 	<!-- <preference name="autorotate" value="false" readonly="true"/> -->
 	<preference name="webviewbounce" value="false" />
 	<!-- <preference name="stay-in-webview" value="true" /> -->
-	<preference name="show-splash-screen-spinner" value="true" />
-	<preference name="auto-hide-splash-screen" value="true" />
-	<preference name="splash-screen-duration" value="5000" />
+	<preference name="show-splash-screen-spinner" value="false" />
+	<preference name="auto-hide-splash-screen" value="false" />
+	<preference name="splash-screen-duration" value="20000" />
 	<preference name="load-url-timeout" value="60000" />
 
 	<access origin="*" />

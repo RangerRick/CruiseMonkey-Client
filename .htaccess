@@ -1,1 +1,5 @@
-AddType application/octet-stream .apk .ipa .ipk .wgz .xap
+AddType application/octet-stream .ipa
+AddType application/vnd.palm .ipk
+AddType application/vnd.android.package-archive .apk
+AddType application/x-nokia-widget .wgz
+AddType application/x-silverlight-app .xap
