@@ -54,6 +54,15 @@ table {
  * Royal Gold: #febd11
  */
 
+/** popups **/
+
+.gwt-PopupPanel {
+	margin: 0 !important;
+	padding: 0 !important;
+	border: none !important;
+	overflow: hidden;
+}
+
 /** tab bar **/
 
 .gwt-TabLayoutPanelContentContainer {
