@@ -1,7 +1,11 @@
 CACHE MANIFEST
-# version 2.9.94 1358986646 c25791c7aef2b67989daffce50fbe7a0e91cf38e
+# version 2.9.94 1358987503 5f45c655d73f5707eabea7d7d6cc1e858b4a9a23
 
 CACHE:
+CruiseMonkey-release.apk
+CruiseMonkey.ipa
+app.wgz
+app.xap
 cm3/0326AF455425F6065C00E0361659A798.cache.png
 cm3/03F5B145CB8F44958F5BE21175F62D31.cache.html
 cm3/08FC5FDC7B07F3491EDE5CD66A1B982A.cache.html
@@ -139,7 +143,9 @@ cm3/timebox.css
 cm3/uuid.js
 cm3/x.gif
 cm3/x.png
+com.raccoonfink.cruisemonkey_2.9.94_all.ipk
 config.xml
+download.html
 index.html
 phonegap.js
 
