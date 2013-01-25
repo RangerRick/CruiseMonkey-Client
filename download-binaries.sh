@@ -1,8 +1,7 @@
 #!/bin/sh
 
-rm -rf CruiseMonkey.{ipa,xap,ipk,apk,wgz}
-curl -L -o CruiseMonkey.ipa "https://build.phonegap.com/apps/211512/download/ios"
-curl -L -o CruiseMonkey.xap "https://build.phonegap.com/apps/211512/download/winphone"
-curl -L -o CruiseMonkey.ipk "https://build.phonegap.com/apps/211512/download/webos"
-curl -L -o CruiseMonkey.apk "https://build.phonegap.com/apps/211512/download/android"
-curl -L -o CruiseMonkey.wgz "https://build.phonegap.com/apps/211512/download/symbian"
+curl -L -o CruiseMonkey.ipa.new "https://build.phonegap.com/apps/211512/download/ios";      mv CruiseMonkey.ipa.new CruiseMonkey.ipa
+curl -L -o CruiseMonkey.xap.new "https://build.phonegap.com/apps/211512/download/winphone"; mv CruiseMonkey.xap.new CruiseMonkey.xap
+curl -L -o CruiseMonkey.ipk.new "https://build.phonegap.com/apps/211512/download/webos";    mv CruiseMonkey.ipk.new CruiseMonkey.ipk
+curl -L -o CruiseMonkey.apk.new "https://build.phonegap.com/apps/211512/download/android";  mv CruiseMonkey.apk.new CruiseMonkey.apk
+curl -L -o CruiseMonkey.wgz.new "https://build.phonegap.com/apps/211512/download/symbian";  mv CruiseMonkey.wgz.new CruiseMonkey.wgz
