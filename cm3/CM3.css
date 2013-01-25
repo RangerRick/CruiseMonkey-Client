@@ -210,6 +210,10 @@ table {
 	width: 100% !important;
 }
 
+.gwt-TabLayoutPanel .gwt-TabLayoutPanelContentContainer {
+	border: none !important;
+}
+
 .gwt-TabLayoutPanel .gwt-TabLayoutPanelContent {
   padding: 0;
 }
