@@ -398,14 +398,15 @@ label {
 }
 
 .deck-list .list-entry {
-	padding: 0;
+	padding: 0 !important;
+	border: 0 !important;
 }
 
 .deck-list img {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	padding: 10px;
+	padding: 5px;
 	max-width: 98%;
 }
 
