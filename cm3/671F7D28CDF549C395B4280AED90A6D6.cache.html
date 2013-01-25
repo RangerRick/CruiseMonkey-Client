@@ -4,7 +4,7 @@ var $gwt_version = "2.5.0";
 var $wnd = parent;
 var $doc = $wnd.document;
 var $moduleName, $moduleBase;
-var $strongName = 'FB265D3402C2AABCF168BD060B5E4670';
+var $strongName = '671F7D28CDF549C395B4280AED90A6D6';
 var $stats = $wnd.__gwtStatsEvent ? function(a) {return $wnd.__gwtStatsEvent(a);} : null,
 $sessionId = $wnd.__gwtStatsSessionId ? $wnd.__gwtStatsSessionId : null;
 $stats && $stats({moduleName:'cm3',sessionId:$sessionId,subSystem:'startup',evtGroup:'moduleStartup',millis:(new Date()).getTime(),type:'moduleEvalStart'});
@@ -19351,6 +19351,7 @@ function com_raccoonfink_cruisemonkey_gwt_client_model_NetworkState_$setPassword
 }
 
 function com_raccoonfink_cruisemonkey_gwt_client_model_NetworkState_$setServer__Lcom_raccoonfink_cruisemonkey_gwt_client_model_NetworkState_2Ljava_lang_String_2V(this$static, server){
+  server != null && !java_lang_String_$endsWith__Ljava_lang_String_2Ljava_lang_String_2Z(server, $intern_120) && (server += $intern_120);
   com_raccoonfink_cruisemonkey_gwt_client_StorageFactory_$put__Lcom_raccoonfink_cruisemonkey_gwt_client_StorageFactory_2Ljava_lang_String_2Ljava_lang_String_2V(this$static.com_raccoonfink_cruisemonkey_gwt_client_model_NetworkState_m_1storage, $intern_420, server == null?$intern_7:server);
 }
 
