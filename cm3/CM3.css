@@ -66,6 +66,10 @@ table {
 
 /** splash screen **/
 
+.splash-root {
+	z-index: 10 !important;
+}
+
 .splash {
 	position: fixed !important;
 	top: 0 !important;
@@ -126,6 +130,10 @@ table {
 }
 
 /** sign-in screen **/
+
+.sign-in-root {
+	z-index: 10 !important;
+}
 
 .sign-in {
 	position: fixed !important;
