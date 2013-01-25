@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# version 2.9.95.1359128720 1359128722 49a7c8299c4ef2e9cb4988ecb0ab7add5b480d08
+# version 2.9.95.1359129539 1359129540 0b8a9d6b24a57d68d40015af7653aff0a409ce0c
 
 CACHE:
 childbrowser.js
@@ -158,6 +158,7 @@ cm3/uuid.js
 cm3/x.gif
 cm3/x.png
 config.xml
+cruise-monkey-head.ico
 download-binaries.sh
 download.html
 index.html
