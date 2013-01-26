@@ -4,7 +4,7 @@ var $gwt_version = "2.5.0";
 var $wnd = parent;
 var $doc = $wnd.document;
 var $moduleName, $moduleBase;
-var $strongName = 'BD442ECF0647A2A9D47D80B4C5CECDD7';
+var $strongName = '4CACF6ED9DAFEC87BE105BF78F906FE9';
 var $stats = $wnd.__gwtStatsEvent ? function(a) {return $wnd.__gwtStatsEvent(a);} : null,
 $sessionId = $wnd.__gwtStatsSessionId ? $wnd.__gwtStatsSessionId : null;
 $stats && $stats({moduleName:'cm3',sessionId:$sessionId,subSystem:'startup',evtGroup:'moduleStartup',millis:(new Date()).getTime(),type:'moduleEvalStart'});
@@ -2710,7 +2710,7 @@ function com_google_web_bindery_event_shared_SimpleEventBus_$doAdd__Lcom_google_
   if (!type) {
     throw new java_lang_NullPointerException_NullPointerException__Ljava_lang_String_2V('Cannot add a handler with a null type');
   }
-  if (!handler) {
+  if (handler == null) {
     throw new java_lang_NullPointerException_NullPointerException__Ljava_lang_String_2V('Cannot add a null handler');
   }
   this$static.com_google_web_bindery_event_shared_SimpleEventBus_firingDepth > 0?com_google_web_bindery_event_shared_SimpleEventBus_$defer__Lcom_google_web_bindery_event_shared_SimpleEventBus_2Lcom_google_web_bindery_event_shared_SimpleEventBus$Command_2V(this$static, new com_google_web_bindery_event_shared_SimpleEventBus$2_SimpleEventBus$2__Lcom_google_web_bindery_event_shared_SimpleEventBus_2V(this$static, type, source, handler)):com_google_web_bindery_event_shared_SimpleEventBus_$doAddNow__Lcom_google_web_bindery_event_shared_SimpleEventBus_2Lcom_google_web_bindery_event_shared_Event$Type_2Ljava_lang_Object_2Ljava_lang_Object_2V(this$static, type, source, handler);
@@ -17009,17 +17009,10 @@ function com_raccoonfink_cruisemonkey_gwt_client_FilteredListDataProvider_$refre
     item = com_google_gwt_lang_Cast_dynamicCastAllowJso__Ljava_lang_Object_2ILjava_lang_Object_2(existing.com_google_gwt_view_client_ListDataProvider$ListWrapper_list.get__ILjava_lang_Object_2(i), Q$com_raccoonfink_cruisemonkey_gwt_client_model_HasId);
     if (com_google_gwt_lang_Cast_instanceOfJso__Ljava_lang_Object_2Z(item)) {
       currentEvent = com_google_gwt_lang_Cast_dynamicCastJso__Ljava_lang_Object_2Ljava_lang_Object_2(item);
-      console.log('i = ' + i + ', current = ' + currentEvent[$intern_317] + ', previous = ' + (!previous?null:previous[$intern_317]));
       if (previous) {
         previousEvent = previous;
-        if (previousEvent[$intern_317] != null && previousEvent[$intern_317].length > 0 && currentEvent[$intern_317] != null && currentEvent[$intern_317].length > 0) {
-          console.log('* removing ' + previous[$intern_317]);
-          com_google_gwt_lang_Array_setCheck__Lcom_google_gwt_lang_Array_2ILjava_lang_Object_2Ljava_lang_Object_2(remove.java_util_ArrayList_array, remove.java_util_ArrayList_size++, previous);
-        }
-        if (i == existing.com_google_gwt_view_client_ListDataProvider$ListWrapper_list.size__I() - 1) {
-          console.log('* i == existing.size() - 1, removing ' + currentEvent[$intern_317]);
-          com_google_gwt_lang_Array_setCheck__Lcom_google_gwt_lang_Array_2ILjava_lang_Object_2Ljava_lang_Object_2(remove.java_util_ArrayList_array, remove.java_util_ArrayList_size++, item);
-        }
+        previousEvent[$intern_317] != null && previousEvent[$intern_317].length > 0 && currentEvent[$intern_317] != null && currentEvent[$intern_317].length > 0 && (com_google_gwt_lang_Array_setCheck__Lcom_google_gwt_lang_Array_2ILjava_lang_Object_2Ljava_lang_Object_2(remove.java_util_ArrayList_array, remove.java_util_ArrayList_size++, previous) , true);
+        i == existing.com_google_gwt_view_client_ListDataProvider$ListWrapper_list.size__I() - 1 && (com_google_gwt_lang_Array_setCheck__Lcom_google_gwt_lang_Array_2ILjava_lang_Object_2Ljava_lang_Object_2(remove.java_util_ArrayList_array, remove.java_util_ArrayList_size++, item) , true);
       }
       previous = currentEvent;
     }
