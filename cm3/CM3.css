@@ -64,71 +64,6 @@ table {
 	overflow: hidden;
 }
 
-/** splash screen **/
-
-.splash-root {
-	z-index: 10 !important;
-}
-
-.splash {
-	position: fixed !important;
-	top: 0 !important;
-	left: 0 !important;
-	right: 0 !important;
-	left: 0 !important;
-	width: 100% !important;
-	height: 100% !important;
-	margin: 0 !important;
-	padding: 0 !important;
-}
-#splash-sky {
-	position: absolute;
-	width: 100%;
-	top: 0;
-	height: 45%;
-	z-index: 100;
-
-	background: #189ffe; /* Old browsers */
-	background: -moz-linear-gradient(top,  #189ffe 0%, #a2d4f7 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#189ffe), color-stop(100%,#a2d4f7)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  #189ffe 0%,#a2d4f7 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  #189ffe 0%,#a2d4f7 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  #189ffe 0%,#a2d4f7 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  #189ffe 0%,#a2d4f7 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#189ffe', endColorstr='#a2d4f7',GradientType=0 ); /* IE6-9 */
-}
-#splash-monkey {
-	position: absolute;
-	width: 100%;
-	height: 60%;
-	top: 5%;
-	background-image: url(images/cruise-monkey-transparent.png);
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: center;
-	z-index: 110;
-}
-#splash-water-top {
-	position: absolute;
-	width: 100%;
-	height: 74px;
-	bottom: 55%;
-	z-index: 105;
-	background-color: transparent;
-	background-image: url(images/cruise-monkey-water-transparent.png);
-	background-size: contain;
-	background-repeat: repeat-x;
-	background-position: bottom;
-}
-#splash-water {
-	position: absolute;
-	width: 100%;
-	height: 55%;
-	bottom: 0;
-	z-index: 105;
-	background-color: #5086ab;
-}
-
 /** sign-in screen **/
 
 .sign-in-root {
@@ -145,6 +80,14 @@ table {
 	height: 100% !important;
 	margin: 0 !important;
 	padding: 0 !important;
+}
+
+#sign-in-version {
+	z-index: 120;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	color: white;
 }
 
 #sign-in-sky {
