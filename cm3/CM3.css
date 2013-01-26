@@ -312,10 +312,10 @@ div.icon-my-events       { background-image: url(images/icons/inactive/111-user.
 div.icon-public-events   { background-image: url(images/icons/inactive/112-group.png);      background-size: 32px 21px; }
 div.icon-amenities       { background-image: url(images/icons/inactive/90-lifebuoy.png);    background-size: 24px 24px; }
 div.icon-decks           { background-image: url(images/icons/inactive/103-map.png);        background-size: 26px 21px; }
-div.icon-login           { background-image: url(images/icons/inactive/55-network.png);     background-size: 24px 24px; }
+div.icon-login           { background-image: url(images/icons/online.png);                  background-size: 26px 24px; }
 div.icon-add             { background-image: url(images/icons/inactive/31-circle-plus.png); background-size: 28px 28px; }
 
-div#sign-out.not-authorized div.icon.icon-login { background-image: url(images/icons/not-authorized/55-network.png); background-size: 24px 24px; }
+div#sign-out.not-authorized div.icon.icon-login { background-image: url(images/icons/offline.png); background-size: 26px 24px; }
 
 .gwt-TabLayoutPanelTab-selected div.icon-official-events { background-image: url(images/icons/active/83-calendar.png);      background-size: 23px 25px; }
 .gwt-TabLayoutPanelTab-selected div.icon-my-events       { background-image: url(images/icons/active/111-user.png);         background-size: 24px 21px; }
@@ -333,10 +333,10 @@ div#sign-out.not-authorized div.icon.icon-login { background-image: url(images/i
 	div.icon-public-events             { background-image: url(images/icons/inactive/112-group@2x.png);      background-size: 32px 21px; }
 	div.icon-amenities                 { background-image: url(images/icons/inactive/90-lifebuoy@2x.png);    background-size: 24px 24px; }
 	div.icon-decks                     { background-image: url(images/icons/inactive/103-map@2x.png);        background-size: 26px 21px; }
-	div.icon-login                     { background-image: url(images/icons/inactive/55-network@2x.png);     background-size: 24px 24px; }
+	div.icon-login                     { background-image: url(images/icons/online@2x.png);                  background-size: 26px 24px; }
 	div.icon-add                       { background-image: url(images/icons/inactive/31-circle-plus@2x.png); background-size: 28px 28px; }
 
-	div#sign-out.not-authorized div.icon.icon-login { background-image: url(images/icons/not-authorized/55-network@2x.png); background-size: 24px 24px; }
+	div#sign-out.not-authorized div.icon.icon-login { background-image: url(images/icons/offline@2x.png); background-size: 26px 24px; }
 
 	.gwt-TabLayoutPanelTab-selected div.icon-official-events  { background-image: url(images/icons/active/83-calendar@2x.png);      background-size: 23px 25px; }
 	.gwt-TabLayoutPanelTab-selected div.icon-my-events        { background-image: url(images/icons/active/111-user@2x.png);         background-size: 24px 21px; }
@@ -440,11 +440,11 @@ label {
 }
 
 .even {
-	background-color: #ffffff;
+	background: #ffffff !important;
 }
 
 .odd {
-	background-color: #ddf2ff;
+	background: #ddf2ff !important;
 }
 
 .list-entry input {
