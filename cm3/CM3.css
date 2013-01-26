@@ -42,8 +42,8 @@ q:before, q:after {
 	content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+	border-collapse: collapse !important;
+	border-spacing: 0 !important;
 }
 
 /*
@@ -353,9 +353,10 @@ div#sign-out.not-authorized div.icon.icon-login { background-image: url(images/i
 
 .summary {
 	font-size: larger;
-	font-weight: bold;
+	font-weight: 900;
 	margin-right: 32px;
 	min-height: 32px;
+	vertical-align: middle;
 }
 
 .mine .summary {
@@ -396,9 +397,9 @@ label {
 }
 
 .list-entry {
-	width: 100%;
-	padding: 10px 5px;
-	border-bottom: 1px solid black;
+	margin: 4px -5px 5px -5px;
+	/* padding: 10px 5px; */
+	/* border-bottom: 1px solid black; */
 }
 
 .deck-list .deck {
@@ -406,6 +407,7 @@ label {
 }
 
 .deck-list .list-entry {
+	margin: 0 !important;
 	padding: 0 !important;
 	border: 0 !important;
 }
@@ -426,6 +428,14 @@ label {
 .divider {
 	font-size: larger;
 	font-weight: bolder;
+	margin: -2px -15px;
+	padding: 5px;
+}
+
+.deck-list .divider {
+	font-size: larger;
+	font-weight: bolder;
+	margin: 0 !important;
 	padding: 5px;
 }
 
