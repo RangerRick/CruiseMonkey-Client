@@ -4,7 +4,7 @@ var $gwt_version = "2.5.0";
 var $wnd = parent;
 var $doc = $wnd.document;
 var $moduleName, $moduleBase;
-var $strongName = 'B934D9A15F3A67C96AAC46E889420C1F';
+var $strongName = 'D1536E91013B5A23E112145663A79F81';
 var $stats = $wnd.__gwtStatsEvent ? function(a) {return $wnd.__gwtStatsEvent(a);} : null,
 $sessionId = $wnd.__gwtStatsSessionId ? $wnd.__gwtStatsSessionId : null;
 $stats && $stats({moduleName:'cm3',sessionId:$sessionId,subSystem:'startup',evtGroup:'moduleStartup',millis:(new Date()).getTime(),type:'moduleEvalStart'});
@@ -3208,7 +3208,7 @@ function com_google_web_bindery_event_shared_SimpleEventBus_$doAdd__Lcom_google_
   if (!type) {
     throw new java_lang_NullPointerException_NullPointerException__Ljava_lang_String_2V('Cannot add a handler with a null type');
   }
-  if (handler == null) {
+  if (!handler) {
     throw new java_lang_NullPointerException_NullPointerException__Ljava_lang_String_2V('Cannot add a null handler');
   }
   this$static.com_google_web_bindery_event_shared_SimpleEventBus_firingDepth > 0?com_google_web_bindery_event_shared_SimpleEventBus_$defer__Lcom_google_web_bindery_event_shared_SimpleEventBus_2Lcom_google_web_bindery_event_shared_SimpleEventBus$Command_2V(this$static, new com_google_web_bindery_event_shared_SimpleEventBus$2_SimpleEventBus$2__Lcom_google_web_bindery_event_shared_SimpleEventBus_2V(this$static, type, source, handler)):com_google_web_bindery_event_shared_SimpleEventBus_$doAddNow__Lcom_google_web_bindery_event_shared_SimpleEventBus_2Lcom_google_web_bindery_event_shared_Event$Type_2Ljava_lang_Object_2Ljava_lang_Object_2V(this$static, type, source, handler);
@@ -19504,7 +19504,7 @@ function com_raccoonfink_cruisemonkey_gwt_client_model_NetworkState_$getPassword
 function com_raccoonfink_cruisemonkey_gwt_client_model_NetworkState_$getServer__Lcom_raccoonfink_cruisemonkey_gwt_client_model_NetworkState_2Ljava_lang_String_2(this$static){
   var server;
   server = com_raccoonfink_cruisemonkey_gwt_client_StorageFactory_$get__Lcom_raccoonfink_cruisemonkey_gwt_client_StorageFactory_2Ljava_lang_String_2Ljava_lang_String_2(this$static.com_raccoonfink_cruisemonkey_gwt_client_model_NetworkState_m_1storage, $intern_424);
-  return server == null || java_lang_String_$equals__Ljava_lang_String_2Ljava_lang_Object_2Z($intern_8, server)?'http://cm.raccoonfink.com/':server;
+  return server == null || java_lang_String_$equals__Ljava_lang_String_2Ljava_lang_Object_2Z($intern_8, server)?'http://c4.amberwood.net/':server;
 }
 
 function com_raccoonfink_cruisemonkey_gwt_client_model_NetworkState_$getUsername__Lcom_raccoonfink_cruisemonkey_gwt_client_model_NetworkState_2Ljava_lang_String_2(this$static){
@@ -20475,7 +20475,7 @@ _.com_raccoonfink_cruisemonkey_gwt_client_ui_SignInWidget_1SignInWidgetUiBinderI
 function com_raccoonfink_cruisemonkey_gwt_client_ui_SignInWidget_1SignInWidgetUiBinderImpl_1TemplateImpl_$html1__Lcom_raccoonfink_cruisemonkey_gwt_client_ui_SignInWidget_1SignInWidgetUiBinderImpl_1TemplateImpl_2Ljava_lang_String_2Ljava_lang_String_2Ljava_lang_String_2Ljava_lang_String_2Ljava_lang_String_2Lcom_google_gwt_safehtml_shared_SafeHtml_2(arg0, arg1, arg2, arg3, arg4){
   var sb;
   sb = new java_lang_StringBuilder_StringBuilder__V;
-  sb.java_lang_StringBuilder_impl.com_google_gwt_core_client_impl_StringBufferImplAppend_string += "<div id='sign-in-login'> <table> <tr> <td colspan='2' style='color: #a2d4f7; padding: 5px; text-align: center;'>Note: You must first make an account on <a href='http://statusnet.raccoonfink.com/' style='color: white; text-decoration: underline;'>The Fake Twit-Arr server<\/a> before you can log in!<\/td> <\/tr> <tr> <td style='color: #a2d4f7; padding: 5px; vertical-align: top; text-align: right;'>Username:<\/td> <td><span id='";
+  sb.java_lang_StringBuilder_impl.com_google_gwt_core_client_impl_StringBufferImplAppend_string += "<div id='sign-in-login'> <table> <tr> <td colspan='2' style='color: #a2d4f7; padding: 5px; text-align: center;'>Note: You must first make an account on the Twit-Arrr server before you can log in!<\/td> <\/tr> <tr> <td style='color: #a2d4f7; padding: 5px; vertical-align: top; text-align: right;'>Username:<\/td> <td><span id='";
   java_lang_StringBuilder_$append__Ljava_lang_StringBuilder_2Ljava_lang_String_2Ljava_lang_StringBuilder_2(sb, com_google_gwt_safehtml_shared_SafeHtmlUtils_htmlEscape__Ljava_lang_String_2Ljava_lang_String_2(arg0));
   sb.java_lang_StringBuilder_impl.com_google_gwt_core_client_impl_StringBufferImplAppend_string += "'><\/span><\/td> <\/tr> <tr> <td style='color: #a2d4f7; padding: 5px; vertical-align: top; text-align: right;'>Password:<\/td> <td><span id='";
   java_lang_StringBuilder_$append__Ljava_lang_StringBuilder_2Ljava_lang_String_2Ljava_lang_StringBuilder_2(sb, com_google_gwt_safehtml_shared_SafeHtmlUtils_htmlEscape__Ljava_lang_String_2Ljava_lang_String_2(arg1));
