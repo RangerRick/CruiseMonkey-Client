@@ -2,7 +2,7 @@
 <widget xmlns		= "http://www.w3.org/ns/widgets"
 	xmlns:gap	= "http://phonegap.com/ns/1.0"
 	id		= "com.raccoonfink.cruisemonkey"
-	version 	= "3.0">
+	version 	= "3.0.1">
 
 	<name>CruiseMonkey</name>
 
@@ -21,15 +21,16 @@
 		<!-- <gap:platform name="blackberry" project="widgets"/> -->
 	</gap:platforms>
 
-	<icon src="cm3/images/icon-29.png"  width="29"  height="29"  gap:platform="ios" />
-	<icon src="cm3/images/icon-48.png"  width="48"  height="48"  gap:platform="ios" />
-	<icon src="cm3/images/icon-57.png"  width="57"  height="57"  gap:platform="ios" />
-	<icon src="cm3/images/icon-58.png"  width="58"  height="58"  gap:platform="ios" />
-	<icon src="cm3/images/icon-64.png"  width="64"  height="64"  gap:platform="ios" />
-	<icon src="cm3/images/icon-72.png"  width="72"  height="72"  gap:platform="ios" />
-	<icon src="cm3/images/icon-114.png" width="114" height="114" gap:platform="ios" />
+	<icon src="icon.png" />
+	<icon src="cm3/images/icon.png"     width="320" height="320" gap:platform="ios" />
 	<icon src="cm3/images/icon-144.png" width="144" height="144" gap:platform="ios" />
-	<icon src="cm3/images/icon-320.png" width="320" height="320" gap:platform="ios" />
+	<icon src="cm3/images/icon-114.png" width="114" height="114" gap:platform="ios" />
+	<icon src="cm3/images/icon-72.png"  width="72"  height="72"  gap:platform="ios" />
+	<icon src="cm3/images/icon-64.png"  width="64"  height="64"  gap:platform="ios" />
+	<icon src="cm3/images/icon-58.png"  width="58"  height="58"  gap:platform="ios" />
+	<icon src="cm3/images/icon-57.png"  width="57"  height="57"  gap:platform="ios" />
+	<icon src="cm3/images/icon-48.png"  width="48"  height="48"  gap:platform="ios" />
+	<icon src="cm3/images/icon-29.png"  width="29"  height="29"  gap:platform="ios" />
 
 	<icon src="cm3/images/icon-36.png"  width="36"  height="36"  gap:platform="android" />
 	<icon src="cm3/images/icon-48.png"  width="48"  height="48"  gap:platform="android" />
@@ -62,8 +63,8 @@
 
 	<gap:plugin name="ChildBrowser" />
 
-	<!-- sample preference specification -->
 	<preference name="phonegap-version" value="2.2.0" />
+	<preference name="target-device" value="universal" />
 	<!-- <preference name="autorotate" value="false" readonly="true"/> -->
 	<preference name="webviewbounce" value="false" />
 	<!-- <preference name="stay-in-webview" value="true" /> -->
