@@ -193,8 +193,9 @@ table {
 	}
 }
 
-@media only screen and (-webkit-max-device-pixel-ratio: 1) { 
+@media only screen and (-webkit-max-device-pixel-ratio: 1) and (device-width: 320px) { 
 	#sign-in-login {
+		top: 3px;
 		font-size: smaller;
 		height: 140px;
 		margin-top: -70px;
