@@ -198,7 +198,7 @@ table {
 		top: 3px;
 		font-size: smaller;
 		height: 140px;
-		margin-top: -70px;
+		margin-top: 0;
 	}
 	#sign-in-login input[type="email"], #sign-in-login input[type="url"], #sign-in-login input[type="password"] {
 		padding: 3px !important;
