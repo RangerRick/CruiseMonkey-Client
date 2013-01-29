@@ -113,7 +113,7 @@ table {
 	position: absolute;
 	width: 100%;
 	top: 0;
-	height: 80%;
+	height: 85%;
 	z-index: 100;
 
 	background: #189ffe; /* Old browsers */
@@ -169,7 +169,7 @@ table {
 	}
 	#sign-in-sky {
 		top: 0;
-		height: 50%;
+		height: 55%;
 	}
 	#sign-in-monkey {
 		position: absolute;
