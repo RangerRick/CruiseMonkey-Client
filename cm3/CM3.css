@@ -197,7 +197,7 @@ table {
 	#sign-in-login {
 		top: 3px;
 		font-size: smaller;
-		height: 150px;
+		height: 156px;
 		margin-top: 0;
 	}
 	#sign-in-login input[type="email"], #sign-in-login input[type="url"], #sign-in-login input[type="password"] {
