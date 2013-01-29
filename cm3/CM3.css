@@ -85,9 +85,10 @@ table {
 #sign-in-version {
 	z-index: 120;
 	position: absolute;
-	top: 5px;
+	bottom: 5px;
 	right: 5px;
 	color: white;
+	font-size: smallest;
 }
 
 #sign-in-login {
