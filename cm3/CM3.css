@@ -193,6 +193,20 @@ table {
 	}
 }
 
+@media only screen and (-webkit-max-device-pixel-ratio: 1) { 
+	#sign-in-login {
+		font-size: smaller;
+		height: 140px;
+		margin-top: -70px;
+	}
+	#sign-in-login input[type="email"], #sign-in-login input[type="url"], #sign-in-login input[type="password"] {
+		padding: 3px !important;
+		margin: 1px !important;
+		width: 200px !important;
+		border: 1px solid black !important;
+	}
+}
+
 /** tab bar **/
 
 .gwt-TabLayoutPanelContentContainer {
