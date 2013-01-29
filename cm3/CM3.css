@@ -295,7 +295,7 @@ div#sign-out.not-authorized div.icon.icon-login { background-image: url(images/i
 }
 
 .summary {
-	font-size: larger;
+	font-size: 15pt;
 	font-weight: 900;
 	margin-right: 32px;
 	min-height: 32px;
@@ -308,10 +308,15 @@ div#sign-out.not-authorized div.icon.icon-login { background-image: url(images/i
 
 .createdBy, .time, .location {
 	font-weight: bolder;
+	font-size: 12pt;
+}
+
+.description {
+	font-size: 12pt;
 }
 
 .name {
-	font-size: larger;
+	font-size: 15pt;
 	font-weight: bolder;
 }
 
@@ -369,14 +374,14 @@ label {
 }
 
 .divider {
-	font-size: larger;
+	font-size: 15pt;
 	font-weight: bolder;
 	margin: -2px -15px;
 	padding: 5px;
 }
 
 .deck-list .divider {
-	font-size: larger;
+	font-size: 15pt;
 	font-weight: bolder;
 	margin: 0 !important;
 	padding: 5px;
