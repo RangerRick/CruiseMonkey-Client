@@ -235,13 +235,13 @@ table {
 	height: 36px;
 	margin: 0 !important;
 	padding: 0 !important;
-	font-weight: bolder;
+	font-weight: bold;
 }
 
 .gwt-TabLayoutPanel .gwt-TabLayoutPanelTab-selected {
 	color: white;
 	background: transparent;
-	font-weight: bolder;
+	font-weight: bold;
 }
 
 .gwt-TabLayoutPanel .gwt-TabLayoutPanelTab .gwt-TabLayoutPanelTabInner {
@@ -249,7 +249,7 @@ table {
 }
 
 div.tabLabel {
-	font-weight: bolder;
+	font-weight: bold;
 	color: #febd11;
 	display: inline-block;
 	vertical-align: middle;
@@ -267,14 +267,14 @@ div#sign-out {
 }
 
 div#sign-out.not-authorized div.tabLabel {
-	font-weight: bolder;
+	font-weight: bold;
 	color: #f00;
 	content: 'Sign In';
 	padding-right: 5px;
 }
 
 div#sign-out.authorized div.tabLabel {
-	font-weight: bolder;
+	font-weight: bold;
 	color: #febd11;
 	content: 'Sign Out';
 	padding-right: 5px;
@@ -348,7 +348,7 @@ div#sign-out.not-authorized div.icon.icon-login { background-image: url(images/i
 
 .summary {
 	font-size: 15pt;
-	font-weight: 900;
+	font-weight: bold;
 	margin-right: 32px;
 	min-height: 32px;
 	vertical-align: middle;
@@ -359,7 +359,7 @@ div#sign-out.not-authorized div.icon.icon-login { background-image: url(images/i
 }
 
 .createdBy, .time, .location {
-	font-weight: bolder;
+	font-weight: bold;
 	font-size: 12pt;
 }
 
@@ -369,7 +369,7 @@ div#sign-out.not-authorized div.icon.icon-login { background-image: url(images/i
 
 .name {
 	font-size: 15pt;
-	font-weight: bolder;
+	font-weight: bold;
 }
 
 .favorite, .trash, .public, .edit {
@@ -426,6 +426,7 @@ label {
 }
 
 .divider {
+	font-family: "Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif !important;
 	font-size: 15pt;
 	font-weight: bold;
 	margin: -2px -15px;
@@ -434,9 +435,41 @@ label {
 
 .deck-list .divider {
 	font-size: 15pt;
-	font-weight: bolder;
+	font-weight: bold;
 	margin: 0 !important;
 	padding: 5px;
+}
+
+.deck-list .navigation {
+	float: right;
+}
+
+.deck-list .previous, .deck-list .next {
+	display: inline-block;
+	vertical-align: middle;
+	background-size: 24px 24px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	margin-left: 5px;
+	margin-right: 5px;
+	width: 24px;
+	height: 24px;
+}
+
+.deck-list .previous { background-image: url(images/icons/arrow-up.png);   background-size: 16px 19px; }
+.deck-list .next     { background-image: url(images/icons/arrow-down.png); background-size: 16px 19px; }
+
+@media 
+(-webkit-min-device-pixel-ratio: 2), 
+(min-resolution: 192dpi) { 
+	.deck-list .previous { background-image: url(images/icons/arrow-up@2x.png);   background-size: 16px 19px; }
+	.deck-list .next     { background-image: url(images/icons/arrow-down@2x.png); background-size: 16px 19px; }
+}
+
+.deck-list .previous a, .deck-list .next a {
+	width: 24px;
+	height: 24px;
+	display: inline-block;
 }
 
 .even {
