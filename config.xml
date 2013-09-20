@@ -56,10 +56,15 @@
 	<gap:splash src="cruise-monkey-720x1280.png"  width="720"  height="1280" gap:platform="android" gap:density="xhdpi" />
 	<gap:splash src="cruise-monkey-1280x720.png"  width="1280" height="720"  gap:platform="android" gap:density="xhdpi" />
 
+	<!-- <feature name="http://api.phonegap.com/1.0/battery"/> -->
+	<feature name="http://api.phonegap.com/1.0/camera"/>
+	<!-- <feature name="http://api.phonegap.com/1.0/contacts"/> -->
+	<feature name="http://api.phonegap.com/1.0/file"/>
 	<!-- <feature name="http://api.phonegap.com/1.0/geolocation"/> -->
+	<feature name="http://api.phonegap.com/1.0/media"/>
 	<feature name="http://api.phonegap.com/1.0/network"/>
-	<feature name="http://api.phonegap.com/1.0/storage"/>
-	<!-- <feature name="http://api.phonegap.com/1.0/camera"/> -->
+	<feature name="http://api.phonegap.com/1.0/notification"/>
+	<!-- <feature name="http://api.phonegap.com/1.0/device"/> -->
 
 	<!-- <gap:plugin name="ChildBrowser" /> -->
 
