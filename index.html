@@ -54,6 +54,7 @@ b,function(){function a(a,b,d){return function(){c[d||"push"]([a,b,arguments]);r
 
 		// load all of the dependencies asynchronously.
 		$script([
+			'js/3rdparty/fastclick.js',
 			'js/3rdparty/hammer.min.js',
 			'js/3rdparty/pouchdb-nightly.min.js',
 			'js/angular/angular.min.js',
@@ -70,6 +71,7 @@ b,function(){function a(a,b,d){return function(){c[d||"push"]([a,b,arguments]);r
 			'js/cruisemonkey/main.js'
 		], function() {
 			// when all is done, execute bootstrap angular application
+			new FastClick(document.body);
 			angular.bootstrap(document, ['cruisemonkey']);
 	    });
 	};
