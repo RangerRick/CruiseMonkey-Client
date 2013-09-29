@@ -1,3 +1,5 @@
-'use strict';
+(function() {
+	'use strict';
 
-angular.module('cruisemonkey.filters', []);
+	angular.module('cruisemonkey.filters', []);
+}());

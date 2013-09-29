@@ -1,5 +1,7 @@
-'use strict';
+(function() {
+	'use strict';
 
-angular.module('cruisemonkey.services', [])
+	angular.module('cruisemonkey.services', [])
 	.value('version', '3.90')
-;
+	;
+}());

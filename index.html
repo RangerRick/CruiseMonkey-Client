@@ -5,7 +5,7 @@
 <!--[if IE 8]>    <html class="no-js lt-ie9" lang="en" manifest="cruisemonkey.manifest"> <![endif]-->
 <!--[if gt IE 8]><!-->
 <!-- manifest="cruisemonkey.manifest" -->
-<html lang="en" manifest="cruisemonkey.manifest">
+<html xmlns:ng="http://angularjs.org" lang="en" manifest="cruisemonkey.manifest">
 <!--<![endif]-->
 <head>
 <meta charset="utf-8" />
@@ -23,65 +23,78 @@
 <!--[if lt IE 9]>
 		<script src="js/3rdparty/html5shiv.js"></script>
 	<![endif]-->
+<script src="js/log4javascript/log4javascript.js"></script>
+<script src="js/cruisemonkey/init.js"></script>
 <script src="js/3rdparty/jquery.js"></script>
-<script src="js/bootstrap/bootstrap.min.js"></script>
+<!-- <script src="js/bootstrap/bootstrap.min.js"></script>  -->
+<script src="js/3rdparty/script.js"></script>
+<script src="js/angular/angular-loader.js"></script>
 <script>
-	// include angular loader, which allows the files to load in any order
-	/*
-	 AngularJS v1.0.7
-	 (c) 2010-2012 Google, Inc. http://angularjs.org
-	 License: MIT
-	*/
-	(function(i){'use strict';function d(c,b,e){return c[b]||(c[b]=e())}return d(d(i,"angular",Object),"module",function(){var c={};return function(b,e,f){e&&c.hasOwnProperty(b)&&(c[b]=null);return d(c,
-b,function(){function a(a,b,d){return function(){c[d||"push"]([a,b,arguments]);return g}}if(!e)throw Error("No module: "+b);var c=[],d=[],h=a("$injector","invoke"),g={_invokeQueue:c,_runBlocks:d,requires:e,name:b,provider:a("$provide","provider"),factory:a("$provide","factory"),service:a("$provide","service"),
-	value:a("$provide","value"),constant:a("$provide","constant","unshift"),filter:a("$filterProvider","register"),controller:a("$controllerProvider","register"),directive:a("$compileProvider","directive"),config:h,run:function(a){d.push(a);return this}};f&&h(f);return g})}})})(window);
-
-	// include a third-party async loader library
-	/*!
-	 * $script.js v1.3
-	 * https://github.com/ded/script.js
-	 * Copyright: @ded & @fat - Dustin Diaz, Jacob Thornton 2011
-	 * Follow our software http://twitter.com/dedfat
-	 * License: MIT
-	 */
-	!function(a,b,c){function t(a,c){var e=b.createElement("script"),f=j;e.onload=e.onerror=e[o]=function(){e[m]&&!/^c|loade/.test(e[m])||f||(e.onload=e[o]=null,f=1,c())},e.async=1,e.src=a,d.insertBefore(e,d.firstChild)}function q(a,b){p(a,function(a){return!b(a)})}var d=b.getElementsByTagName("head")[0],e={},f={},g={},h={},i="string",j=!1,k="push",l="DOMContentLoaded",m="readyState",n="addEventListener",o="onreadystatechange",p=function(a,b){for(var c=0,d=a.length;c<d;++c)if(!b(a[c]))return j;return 1};!b[m]&&b[n]&&(b[n](l,function r(){b.removeEventListener(l,r,j),b[m]="complete"},j),b[m]="loading");var s=function(a,b,d){function o(){if(!--m){e[l]=1,j&&j();for(var a in g)p(a.split("|"),n)&&!q(g[a],n)&&(g[a]=[])}}function n(a){return a.call?a():e[a]}a=a[k]?a:[a];var i=b&&b.call,j=i?b:d,l=i?a.join(""):b,m=a.length;c(function(){q(a,function(a){h[a]?(l&&(f[l]=1),o()):(h[a]=1,l&&(f[l]=1),t(s.path?s.path+a+".js":a,o))})},0);return s};s.get=t,s.ready=function(a,b,c){a=a[k]?a:[a];var d=[];!q(a,function(a){e[a]||d[k](a)})&&p(a,function(a){return e[a]})?b():!function(a){g[a]=g[a]||[],g[a][k](b),c&&c(d)}(a.join("|"));return s};var u=a.$script;s.noConflict=function(){a.$script=u;return this},typeof module!="undefined"&&module.exports?module.exports=s:a.$script=s}(this,document,setTimeout)
-
-	var timeoutID;
-	var onDeviceReady = function() {
-		if (timeoutID) {
-			window.clearTimeout(timeoutID);
+window.addEventListener('load', function(e) {
+	window.applicationCache.addEventListener('updateready', function(e) {
+		if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
+			// Browser downloaded a new app cache.
+			// Swap it in and reload the page to get the new hotness.
+			log.info('a new version is available; reloading');
+			window.applicationCache.swapCache();
+			window.location.reload();
 		}
+	}, false);
+}, false);
 
-		// load all of the dependencies asynchronously.
-		$script([
-			'js/3rdparty/fastclick.js',
-			'js/3rdparty/hammer.min.js',
-			'js/3rdparty/pouchdb-nightly.min.js',
-			'js/angular/angular.min.js',
-			'js/angular/angular-resource.min.js',
-			'js/angular/angular-strap.min.js',
-			'js/angular/angular-hammer.js',
-			'js/cruisemonkey/string.js',
-			'js/cruisemonkey/offcanvas.js',
-			'js/cruisemonkey/services.js',
-			'js/cruisemonkey/factories.js',
-			'js/cruisemonkey/controllers.js',
-			'js/cruisemonkey/filters.js',
-			'js/cruisemonkey/directives.js',
-			'js/cruisemonkey/main.js'
-		], function() {
-			// when all is done, execute bootstrap angular application
-			new FastClick(document.body);
-			angular.bootstrap(document, ['cruisemonkey']);
-	    });
-	};
+// load all of the dependencies asynchronously.
+$script([
+	'js/3rdparty/fastclick.js',
+	'js/3rdparty/hammer.min.js'
+], '3rdparty', function() {
+	log.info('standalone 3rd party scripts loaded.');
+});
+$script('js/3rdparty/pouchdb-nightly.min.js', 'pouchdb', function() {
+	log.info('PouchDB loaded.');
+});
+$script([
+	'js/angular/angular.min.js',
+	'js/angular/angular-phonegap-ready.js',
+	'js/angular/angular-resource.min.js',
+	'js/angular/angular-strap.min.js',
+	'js/angular/angular-hammer.js'
+], 'angular', function() {
+	log.info('AngularJS (and 3rd-party addons) loaded.');
+});
+$script([
+	'js/cruisemonkey/string.js',
+	'js/cruisemonkey/offcanvas.js',
+	'js/cruisemonkey/services.js',
+	'js/cruisemonkey/factories.js',
+	'js/cruisemonkey/controllers.js',
+	'js/cruisemonkey/filters.js',
+	'js/cruisemonkey/directives.js',
+	'js/cruisemonkey/main.js'
+], 'cruisemonkey', function() {
+	log.info('CruiseMonkey loaded.');
+});
 
-	document.addEventListener('deviceready', onDeviceReady, false);
+$script.ready(['3rdparty', 'pouchdb', 'angular', 'cruisemonkey'], function() {
+	log.info('Everything is ready!');
+	new FastClick(document.body);
+	angular.bootstrap(document, ['cruisemonkey']);
+});
 
-	timeoutID = window.setInterval(function() {
-		window.clearInterval(timeoutID);
-		onDeviceReady();
-	}, 5000);
+var timeoutID;
+
+document.addEventListener("deviceready", function() {
+	if (timeoutID) {
+		window.clearTimeout(timeoutID);
+	}
+}, false);
+
+timeoutID = window.setTimeout(function() {
+	log.warn('Firing deviceready manually.');
+	window.clearTimeout(timeoutID);
+	var e = document.createEvent('Events');
+	e.initEvent('deviceready');
+	document.dispatchEvent(e);
+}, 2000);
   </script>
   <title ng-bind="'CruiseMonkey - ' + $root.title">CruiseMonkey</title>
 </head>
@@ -100,12 +113,12 @@ b,function(){function a(a,b,d){return function(){c[d||"push"]([a,b,arguments]);r
 		</div> <!--/sidebar-offcanvas -->
 		<div class="row row-offcanvas row-offcanvas-left">
 			<div class="col-lg-12 main-view shadow">
-				<div class="main-header">
+				<div class="main-header" ng-controller="CMHeaderCtrl">
 					<span class="glyphicon glyphicon-align-justify" data-toggle="offcanvas"></span>
-					<span class="title" ng-bind="$root.title">CruiseMonkey</span>
+					<span class="title">{{title}}</span>
+					<span class="actions" ng-repeat="action in actions">{{action.name}}</span>
 				</div>
-				<div class="main-contents" ng-view>
-				</div>
+				<div class="main-contents" ng-view />
 			</div>
 		</div> <!--/row-->
 	</div>

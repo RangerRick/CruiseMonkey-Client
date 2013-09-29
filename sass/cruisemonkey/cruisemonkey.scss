@@ -21,13 +21,13 @@
 
 @font-face {
 	font-family: Nexa;
-	src: url("../../fonts/nexa bold.otf");
+	src: url("../../fonts/nexa-bold.otf");
 	font-weight: 700;
 }
 
 @font-face {
 	font-family: Zag;
-	src: url("../../fonts/zag bold.otf");
+	src: url("../../fonts/zag-bold.otf");
 	font-weight: 600;
 }
 
@@ -202,6 +202,9 @@ html,body {
 	.title {
 		font-weight: bold;
 		letter-spacing: 2px;
+	}
+	.actions {
+		float: right;
 	}
 }
 

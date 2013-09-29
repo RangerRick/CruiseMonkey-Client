@@ -7,3 +7,4 @@ META-INF
 *.ipk
 *.xap
 *.ipa
+node_modules
