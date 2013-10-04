@@ -1,1239 +1,832 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Generator: Adobe Illustrator 16.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1"
-	 id="svg2" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="155.25px"
-	 height="813.375px" viewBox="573.062 96.375 155.25 813.375" enable-background="new 573.062 96.375 155.25 813.375"
-	 xml:space="preserve">
-<g>
-	<g>
+<!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+<svg id="svg2" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" enable-background="new 573.062 96.375 155.25 813.375" xml:space="preserve" height="813.38px" viewBox="573.062 96.375 155.25 813.375" width="155.25px" version="1.1" y="0px" x="0px" xmlns:cc="http://creativecommons.org/ns#" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/">
 		<g id="g10" transform="matrix(1.25,0,0,-1.25,0,990)">
 			<g id="g10996">
-				<g>
 					<g id="g10998">
-						<g id="g12200" transform="translate(462.1135,543.5578)">
-							<path id="path12202" inkscape:connector-curvature="0" fill="none" stroke="#918F90" stroke-width="0.475" d="M0,0
-								l-3.233,1.456 M0.428,2.259l-3.029,1.605 M1.185,4.377l-2.473,2.145 M2.551,5.999L0.257,8.505 M0-1.526l-3.233-1.456
-								 M0.428-3.783l-3.029-1.605 M1.185-5.903l-2.473-2.144 M2.551-7.525L0.257-10.03"/>
+						<g id="g12200" transform="translate(462.11 543.56)">
+							<path id="path12202" d="m0 0l-3.233 1.456m3.661 0.803l-3.029 1.605m3.786 0.513l-2.473 2.145m3.839-0.523l-2.294 2.506m-0.257-10.031l-3.233-1.456m3.661-0.801l-3.029-1.605m3.786-0.515l-2.473-2.144m3.839 0.522l-2.294-2.505" stroke="#918F90" stroke-width=".475" fill="none"/>
 						</g>
 					</g>
-				</g>
 			</g>
 			<g id="g12204">
-				<g>
 					<g id="g12206">
-						<g id="g12212" transform="translate(562.6934,644.4008)">
-							<path id="path12214" inkscape:connector-curvature="0" fill="#FFFFFF" d="M0,0h1.197l0.284,36.565l0.288,5.101l8.012,1.836
-								l0.713,2.004l0.355,1.572v1.361v1.287L10.494,51.3l-0.713,2.074l-16.812,4.507l-0.786,0.286l-0.931,0.429l-1.285,0.715
-								l-1.933,1.216l-3.006,1.858l-3.074,1.79l-3.287,1.572l-3.291,1.361l-3.436,1.074l-3.435,0.857L-35,69.612l-3.574,0.357
-								l-3.573,0.141l-3.655-0.141l-3.503-0.357l-3.576-0.573l-3.433-0.857l-3.435-1.074l-3.293-1.361l-3.288-1.572l-3.076-1.79
-								l-3.006-1.858l-1.928-1.216l-1.29-0.715l-0.93-0.429l-0.784-0.286l-16.812-4.507L-94.87,51.3l-0.287-1.574v-1.287v-1.361
-								l0.287-1.572l0.713-2.004l8.012-1.836l0.287-5.101L-85.576,0h1.052H0z"/>
+						<g id="g12212" transform="translate(562.69 644.4)">
+							<path id="path12214" d="m0 0h1.197l0.284 36.565 0.288 5.101 8.012 1.836 0.713 2.004 0.355 1.572v2.648l-0.355 1.574-0.713 2.074-16.812 4.507-0.786 0.286-0.931 0.429-1.285 0.715-1.933 1.216-3.006 1.858-3.074 1.79-3.287 1.572-3.291 1.361-3.436 1.074-3.435 0.857-3.505 0.573-3.574 0.357-3.573 0.141-3.655-0.141-3.503-0.357-3.576-0.573-3.433-0.857-3.435-1.074-3.293-1.361-3.288-1.572-3.076-1.79-3.006-1.858-1.928-1.216-1.29-0.715-0.93-0.429-0.784-0.286-16.812-4.507-0.714-2.074-0.287-1.574v-2.648l0.287-1.572 0.713-2.004 8.012-1.836 0.287-5.101 0.282-36.565h85.576z" fill="#fff"/>
 						</g>
-						<g id="g12216" transform="translate(562.6934,644.4008)">
-							<path id="path12218" inkscape:connector-curvature="0" fill="none" stroke="#918F90" stroke-width="0.95" d="M0,0h1.197
-								l0.284,36.565l0.288,5.101l8.012,1.836l0.713,2.004l0.355,1.572v1.361v1.287L10.494,51.3l-0.713,2.074l-16.812,4.507
-								l-0.786,0.286l-0.931,0.429l-1.285,0.715l-1.933,1.216l-3.006,1.858l-3.074,1.79l-3.287,1.572l-3.291,1.361l-3.436,1.074
-								l-3.435,0.857L-35,69.612l-3.574,0.357l-3.573,0.141l-3.655-0.141l-3.503-0.357l-3.576-0.573l-3.433-0.857l-3.435-1.074
-								l-3.293-1.361l-3.288-1.572l-3.076-1.79l-3.006-1.858l-1.928-1.216l-1.29-0.715l-0.93-0.429l-0.784-0.286l-16.812-4.507
-								L-94.87,51.3l-0.287-1.574v-1.287v-1.361l0.287-1.572l0.713-2.004l8.012-1.836l0.287-5.101L-85.576,0h1.052H0z"/>
+						<g id="g12216" transform="translate(562.69 644.4)">
+							<path id="path12218" d="m0 0h1.197l0.284 36.565 0.288 5.101 8.012 1.836 0.713 2.004 0.355 1.572v2.648l-0.355 1.574-0.713 2.074-16.812 4.507-0.786 0.286-0.931 0.429-1.285 0.715-1.933 1.216-3.006 1.858-3.074 1.79-3.287 1.572-3.291 1.361-3.436 1.074-3.435 0.857-3.505 0.573-3.574 0.357-3.573 0.141-3.655-0.141-3.503-0.357-3.576-0.573-3.433-0.857-3.435-1.074-3.293-1.361-3.288-1.572-3.076-1.79-3.006-1.858-1.928-1.216-1.29-0.715-0.93-0.429-0.784-0.286-16.812-4.507-0.714-2.074-0.287-1.574v-2.648l0.287-1.572 0.713-2.004 8.012-1.836 0.287-5.101 0.282-36.565h85.576z" stroke="#918F90" stroke-width=".95" fill="none"/>
 						</g>
 					</g>
-				</g>
 			</g>
 			<g id="g12220">
-				<g>
 					<g id="g12222">
-						<g id="g12228" transform="translate(567.7028,252.4856)">
-							<path id="path12230" inkscape:connector-curvature="0" fill="#FFFFFF" d="M0,0L1.987,9.01v248.123l-1.366,96.025l0.242,3.005
-								l0.043,5.507l-0.071,5.008l-0.144,6.007l-0.357,6.94l-0.646,8.369l-1.214,10.515l-2.145,13.806l-0.645,3.004l-0.93,2.861
-								l-1.074,2.789l-1.432,2.792l-1.572,2.645l-1.931,2.574l-2.145,2.504l-2.359,2.36l-2.72,2.289l-2.933,2.146l-2.648,1.646
-								l-2.715,1.431l-2.935,1.288l-3.004,1l-3.291,0.857l-3.504,0.575l-3.719,0.356l-3.93,0.143l-4.013-0.143l-3.718-0.356
-								l-3.505-0.575l-3.291-0.857l-3.003-1l-2.935-1.288l-2.716-1.431l-2.646-1.646l-2.933-2.146l-2.648-2.289l-2.431-2.36
-								l-2.147-2.504l-1.93-2.574l-1.573-2.645l-1.359-2.792l-1.147-2.789l-0.927-2.861l-0.645-3.004l-2.145-13.806l-1.216-10.515
-								l-0.645-8.369l-0.358-6.94l-0.144-6.007l-0.072-5.008l0.037-5.167l-1.037-98.459V8.514L-94.445,0l3.864-3.917v-129.247
-								c-2.075-2.202-4.079-4.543-5.978-7.041c0.99-26.472,22.547-47.626,49.008-47.626c26.791,0,48.547,21.678,49.036,48.606
-								c-1.702,2.175-3.479,4.23-5.316,6.176L-3.816-3.791L0,0z"/>
+						<g id="g12228" transform="translate(567.7 252.49)">
+							<path id="path12230" d="m0 0l1.987 9.01v248.12l-1.366 96.025 0.242 3.005 0.043 5.507-0.071 5.008-0.144 6.007-0.357 6.94-0.646 8.369-1.214 10.515-2.145 13.806-0.645 3.004-0.93 2.861-1.074 2.789-1.432 2.792-1.572 2.645-1.931 2.574-2.145 2.504-2.359 2.36-2.72 2.289-2.933 2.146-2.648 1.646-2.715 1.431-2.935 1.288-3.004 1-3.291 0.857-3.504 0.575-3.719 0.356-3.93 0.143-4.013-0.143-3.718-0.356-3.505-0.575-3.291-0.857-3.003-1-2.935-1.288-2.716-1.431-2.646-1.646-2.933-2.146-2.648-2.289-2.431-2.36-2.147-2.504-1.93-2.574-1.573-2.645-1.359-2.792-1.147-2.789-0.927-2.861-0.645-3.004-2.145-13.806-1.216-10.515-0.645-8.369-0.358-6.94-0.144-6.007-0.072-5.008 0.037-5.167-1.037-98.459v-249.55l1.86-8.51 3.864-3.917v-129.25c-2.075-2.202-4.079-4.543-5.978-7.041 0.99-26.472 22.547-47.626 49.008-47.626 26.791 0 48.547 21.678 49.036 48.606-1.702 2.175-3.479 4.23-5.316 6.176l0.015 129.26 3.816 3.79z" fill="#fff"/>
 						</g>
-						<g id="g12232" transform="translate(567.7028,252.4856)">
-							<path id="path12234" inkscape:connector-curvature="0" fill="none" stroke="#918F90" stroke-width="0.95" d="M0,0L1.987,9.01
-								v248.123l-1.366,96.025l0.242,3.005l0.043,5.507l-0.071,5.008l-0.144,6.007l-0.357,6.94l-0.646,8.369l-1.214,10.515
-								l-2.145,13.806l-0.645,3.004l-0.93,2.861l-1.074,2.789l-1.432,2.792l-1.572,2.645l-1.931,2.574l-2.145,2.504l-2.359,2.36
-								l-2.72,2.289l-2.933,2.146l-2.648,1.646l-2.715,1.431l-2.935,1.288l-3.004,1l-3.291,0.857l-3.504,0.575l-3.719,0.356
-								l-3.93,0.143l-4.013-0.143l-3.718-0.356l-3.505-0.575l-3.291-0.857l-3.003-1l-2.935-1.288l-2.716-1.431l-2.646-1.646
-								l-2.933-2.146l-2.648-2.289l-2.431-2.36l-2.147-2.504l-1.93-2.574l-1.573-2.645l-1.359-2.792l-1.147-2.789l-0.927-2.861
-								l-0.645-3.004l-2.145-13.806l-1.216-10.515l-0.645-8.369l-0.358-6.94l-0.144-6.007l-0.072-5.008l0.037-5.167l-1.037-98.459
-								V8.514L-94.445,0l3.864-3.917v-129.247c-2.075-2.202-4.079-4.543-5.978-7.041c0.99-26.472,22.547-47.626,49.008-47.626
-								c26.791,0,48.547,21.678,49.036,48.606c-1.702,2.175-3.479,4.23-5.316,6.176L-3.816-3.791L0,0z"/>
+						<g id="g12232" transform="translate(567.7 252.49)">
+							<path id="path12234" d="m0 0l1.987 9.01v248.12l-1.366 96.025 0.242 3.005 0.043 5.507-0.071 5.008-0.144 6.007-0.357 6.94-0.646 8.369-1.214 10.515-2.145 13.806-0.645 3.004-0.93 2.861-1.074 2.789-1.432 2.792-1.572 2.645-1.931 2.574-2.145 2.504-2.359 2.36-2.72 2.289-2.933 2.146-2.648 1.646-2.715 1.431-2.935 1.288-3.004 1-3.291 0.857-3.504 0.575-3.719 0.356-3.93 0.143-4.013-0.143-3.718-0.356-3.505-0.575-3.291-0.857-3.003-1-2.935-1.288-2.716-1.431-2.646-1.646-2.933-2.146-2.648-2.289-2.431-2.36-2.147-2.504-1.93-2.574-1.573-2.645-1.359-2.792-1.147-2.789-0.927-2.861-0.645-3.004-2.145-13.806-1.216-10.515-0.645-8.369-0.358-6.94-0.144-6.007-0.072-5.008 0.037-5.167-1.037-98.459v-249.55l1.86-8.51 3.864-3.917v-129.25c-2.075-2.202-4.079-4.543-5.978-7.041 0.99-26.472 22.547-47.626 49.008-47.626 26.791 0 48.547 21.678 49.036 48.606-1.702 2.175-3.479 4.23-5.316 6.176l0.015 129.26 3.816 3.79z" stroke="#918F90" stroke-width=".95" fill="none"/>
 						</g>
-						<path id="path12236" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M541.887,266.744h-4.709v1.087h4.709V266.744z"/>
-						<path id="path12238" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M541.887,267.831h-4.709v1.084h4.709V267.831z"/>
-						<path id="path12240" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M541.887,268.916h-4.709v1.085h4.709V268.916z"/>
-						<path id="path12242" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M545.425,266.744h-3.538v1.087h3.538V266.744z"/>
-						<path id="path12244" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M545.425,267.831h-3.538v1.084h3.538V267.831z"/>
-						<path id="path12246" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M545.425,268.916h-3.538v1.085h3.538V268.916z"/>
-						<path id="path12248" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M541.887,270.002h-4.709v1.084h4.709V270.002z"/>
-						<path id="path12250" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M545.425,270.002h-3.538v1.084h3.538V270.002z"/>
-						<path id="path12252" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M541.887,271.087h-4.709v1.084h4.709V271.087z"/>
-						<path id="path12254" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M545.425,271.087h-3.538v1.084h3.538V271.087z"/>
-						<path id="path12256" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M541.887,272.171h-4.709v1.087h4.709V272.171z"/>
-						<path id="path12258" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M545.425,272.171h-3.538v1.087h3.538V272.171z"/>
-						<path id="path12260" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M537.178,266.744h-3.538v1.087h3.538V266.744z"/>
-						<path id="path12262" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M537.178,267.831h-3.538v1.084h3.538V267.831z"/>
-						<path id="path12264" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M537.178,268.916h-3.538v1.085h3.538V268.916z"/>
-						<path id="path12266" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M537.178,270.002h-3.538v1.084h3.538V270.002z"/>
-						<path id="path12268" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M537.178,271.087h-3.538v1.084h3.538V271.087z"/>
-						<path id="path12270" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M537.178,272.171h-3.538v1.087h3.538V272.171z"/>
-						<path id="path12272" inkscape:connector-curvature="0" fill="#FFFFFF" d="M545.425,266.76H533.64v-3.201h11.785V266.76z"/>
-						<path id="path12274" inkscape:connector-curvature="0" fill="none" stroke="#918F90" stroke-width="0.475" d="M545.425,266.76
-							H533.64v-3.201h11.785V266.76z M471.399,492.348h11.913 M557.967,492.348h11.123 M557.326,491.326l-8.764,6.948v3.12h3.139
-							v6.896h6.566 M513.281,557.218v-21.181 M527.813,536.037v21.181 M508.269,569.398l5.012-12.18 M527.813,557.218l5.012,12.18"
-							/>
-						<g id="g12276" transform="translate(534.6176,556.744)">
-							<path id="path12278" inkscape:connector-curvature="0" fill="#FFFFFF" d="M0,0c-4.373,1.198-9.11,1.86-14.073,1.86
-								c-4.959,0-9.698-0.662-14.072-1.86c0.57-0.678,1.149-1.323,1.742-1.92c3.882,0.913,8.022,1.417,12.33,1.417
-								c4.309,0,8.45-0.504,12.33-1.417C-1.148-1.323-0.569-0.678,0,0"/>
+						<path id="path12236" d="m541.89 266.74h-4.709v1.087h4.709v-1.09z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12238" d="m541.89 267.83h-4.709v1.084h4.709v-1.08z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12240" d="m541.89 268.92h-4.709v1.085h4.709v-1.08z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12242" d="m545.42 266.74h-3.538v1.087h3.538v-1.09z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12244" d="m545.42 267.83h-3.538v1.084h3.538v-1.08z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12246" d="m545.42 268.92h-3.538v1.085h3.538v-1.08z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12248" d="m541.89 270h-4.709v1.084h4.709v-1.08z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12250" d="m545.42 270h-3.538v1.084h3.538v-1.08z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12252" d="m541.89 271.09h-4.709v1.084h4.709v-1.08z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12254" d="m545.42 271.09h-3.538v1.084h3.538v-1.08z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12256" d="m541.89 272.17h-4.709v1.087h4.709v-1.09z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12258" d="m545.42 272.17h-3.538v1.087h3.538v-1.09z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12260" d="m537.18 266.74h-3.538v1.087h3.538v-1.09z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12262" d="m537.18 267.83h-3.538v1.084h3.538v-1.08z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12264" d="m537.18 268.92h-3.538v1.085h3.538v-1.08z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12266" d="m537.18 270h-3.538v1.084h3.538v-1.08z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12268" d="m537.18 271.09h-3.538v1.084h3.538v-1.08z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12270" d="m537.18 272.17h-3.538v1.087h3.538v-1.09z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12272" d="m545.42 266.76h-11.78v-3.201h11.785v3.2z" fill="#fff"/>
+						<path id="path12274" d="m545.42 266.76h-11.78v-3.201h11.785v3.2zm-74.02 225.59h11.913m74.66 0h11.123m-11.76-1.02l-8.764 6.948v3.12h3.139v6.896h6.566m-45 48.92v-21.181m14.53 0v21.181m-19.54 12.18l5.012-12.18m14.53 0l5.012 12.18" stroke="#918F90" stroke-width=".475" fill="none"/>
+						<g id="g12276" transform="translate(534.62 556.74)">
+							<path id="path12278" d="m0 0c-4.373 1.198-9.11 1.86-14.073 1.86-4.959 0-9.698-0.662-14.072-1.86 0.57-0.678 1.149-1.323 1.742-1.92 3.882 0.913 8.022 1.417 12.33 1.417 4.309 0 8.45-0.504 12.33-1.417 0.595 0.597 1.174 1.242 1.743 1.92" fill="#fff"/>
 						</g>
-						<g id="g12280" transform="translate(534.6176,556.744)">
-							<path id="path12282" inkscape:connector-curvature="0" fill="none" stroke="#918F90" stroke-width="0.475" d="M0,0
-								c-4.373,1.198-9.11,1.86-14.073,1.86c-4.959,0-9.698-0.662-14.072-1.86c0.57-0.678,1.149-1.323,1.742-1.92
-								c3.882,0.913,8.022,1.417,12.33,1.417c4.309,0,8.45-0.504,12.33-1.417C-1.148-1.323-0.569-0.678,0,0z M9.897-380.617
-								L2.24-352.653h-32.623l-7.657-27.963v-43.274l7.657-27.961H2.24l7.657,27.961V-380.617z M-49.579-268.427h4.27v-3.325h4.617
-								v21.318h-4.617v-3.128h-4.27V-268.427L-49.579-268.427z M25.454-253.562h-8.288v3.128h-4.617v-21.318h4.617v3.325h8.288
-								 M-50.335-253.562h-4.618h-8.195 M-54.953-253.562v15.88c0,4.184-4.331,3.466-4.331-0.145 M-63.147-249.81h8.195
-								 M10.807-283.487h14.636v34.4c0,0,10.214,3.464,10.214,8.95"/>
+						<g id="g12280" transform="translate(534.62 556.74)">
+							<path id="path12282" d="m0 0c-4.373 1.198-9.11 1.86-14.073 1.86-4.959 0-9.698-0.662-14.072-1.86 0.57-0.678 1.149-1.323 1.742-1.92 3.882 0.913 8.022 1.417 12.33 1.417 4.309 0 8.45-0.504 12.33-1.417 0.595 0.597 1.174 1.242 1.743 1.92zm9.897-380.62l-7.657 27.97h-32.623l-7.657-27.963v-43.274l7.657-27.961h32.623l7.657 27.961v43.26zm-59.476 112.19h4.27v-3.325h4.617v21.318h-4.617v-3.128h-4.27v-14.86zm75.033 14.87h-8.288v3.128h-4.617v-21.318h4.617v3.325h8.288m-75.789 14.86h-12.813m8.195 0v15.88c0 4.184-4.331 3.466-4.331-0.145m-3.863-11.99h8.195m65.759-33.68h14.636v34.4s10.214 3.464 10.214 8.95" stroke="#918F90" stroke-width=".475" fill="none"/>
 						</g>
-						<g id="g12284" transform="translate(530.3648,231.149)">
-							<path id="path12286" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="M0,0h16.65
-								v18.54h7.379v3.666c0,0-1.999,1.999-1.999,8.323c0,8.999,7.666,11.579,7.666,11.579"/>
+						<g id="g12284" transform="translate(530.36 231.15)">
+							<path id="path12286" d="m0 0h16.65v18.54h7.379v3.666s-1.999 1.999-1.999 8.323c0 8.999 7.666 11.579 7.666 11.579" stroke="#918F90" stroke-width=".475" fill="#fff"/>
 						</g>
-						<g id="g12288" transform="translate(510.4071,231.149)">
-							<path id="path12290" inkscape:connector-curvature="0" fill="#FFFFFF" d="M0,0v42.146l-16.797-0.038V18.54h1.326V0H0z"/>
+						<g id="g12288" transform="translate(510.41 231.15)">
+							<path id="path12290" d="m0 0v42.146l-16.797-0.038v-23.568h1.326v-18.54h15.471z" fill="#fff"/>
 						</g>
-						<g id="g12292" transform="translate(510.4071,231.149)">
-							<path id="path12294" inkscape:connector-curvature="0" fill="none" stroke="#918F90" stroke-width="0.475" d="M0,0v42.146
-								l-16.797-0.038V18.54h1.326V0H0"/>
+						<g id="g12292" transform="translate(510.41 231.15)">
+							<path id="path12294" d="m0 0v42.146l-16.797-0.038v-23.568h1.326v-18.54h15.471" stroke="#918F90" stroke-width=".475" fill="none"/>
 						</g>
-						<g id="g12296" transform="translate(471.4707,284.7065)">
-							<path id="path12298" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="M0,0h12.523
-								v-9.38l9.616-2.068"/>
+						<g id="g12296" transform="translate(471.47 284.71)">
+							<path id="path12298" d="m0 0h12.523v-9.38l9.616-2.068" stroke="#918F90" stroke-width=".475" fill="#fff"/>
 						</g>
-						<g id="g12300" transform="translate(530.3648,273.2572)">
-							<path id="path12302" inkscape:connector-curvature="0" fill="#FFFFFF" d="M0,0v-42.108V0z"/>
+						<g id="g12300" transform="translate(530.36 273.26)">
+							<path id="path12302" d="m0 0v-42.108 42.108z" fill="#fff"/>
 						</g>
-						<g id="g12304" transform="translate(530.3648,273.2572)">
-							<path id="path12306" inkscape:connector-curvature="0" fill="none" stroke="#918F90" stroke-width="0.475" d="M0,0v-42.108V0
-								z"/>
+						<g id="g12304" transform="translate(530.36 273.26)">
+							<path id="path12306" d="m0 0v-42.108 42.108z" stroke="#918F90" stroke-width=".475" fill="none"/>
 						</g>
-						<g id="g12308" transform="translate(530.3648,273.2572)">
-							<path id="path12310" inkscape:connector-curvature="0" fill="#FFFFFF" d="M0,0h3.275"/>
+						<g id="g12308" transform="translate(530.36 273.26)">
+							<path id="path12310" d="m0 0h3.275" fill="#fff"/>
 						</g>
-						<g id="g12312" transform="translate(530.3648,273.2572)">
-							<path id="path12314" inkscape:connector-curvature="0" fill="none" stroke="#918F90" stroke-width="0.475" d="M0,0h3.275
-								 M29.695,5.067H39.91"/>
+						<g id="g12312" transform="translate(530.36 273.26)">
+							<path id="path12314" d="m0 0h3.275m26.42 5.067h10.215" stroke="#918F90" stroke-width=".475" fill="none"/>
 						</g>
-						<path id="path12316" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M503.981,266.782h-4.709v1.085h4.709V266.782z"/>
-						<path id="path12318" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M503.981,267.867h-4.709v1.087h4.709V267.867z"/>
-						<path id="path12320" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M503.981,268.954h-4.709v1.085h4.709V268.954z"/>
-						<path id="path12322" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M507.519,266.782h-3.538v1.085h3.538V266.782z"/>
-						<path id="path12324" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M507.519,267.867h-3.538v1.087h3.538V267.867z"/>
-						<path id="path12326" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M507.519,268.954h-3.538v1.085h3.538V268.954z"/>
-						<path id="path12328" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M503.981,270.039h-4.709v1.084h4.709V270.039z"/>
-						<path id="path12330" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M507.519,270.039h-3.538v1.084h3.538V270.039z"/>
-						<path id="path12332" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M503.981,271.123h-4.709v1.085h4.709V271.123z"/>
-						<path id="path12334" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M507.519,271.123h-3.538v1.085h3.538V271.123z"/>
-						<path id="path12336" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M503.981,272.208h-4.709v1.087h4.709V272.208z"/>
-						<path id="path12338" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M507.519,272.208h-3.538v1.087h3.538V272.208z"/>
-						<path id="path12340" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M499.272,266.782h-3.538v1.085h3.538V266.782z"/>
-						<path id="path12342" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M499.272,267.867h-3.538v1.087h3.538V267.867z"/>
-						<path id="path12344" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M499.272,268.954h-3.538v1.085h3.538V268.954z"/>
-						<path id="path12346" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M499.272,270.039h-3.538v1.084h3.538V270.039z"/>
-						<path id="path12348" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M499.272,271.123h-3.538v1.085h3.538V271.123z"/>
-						<path id="path12350" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M499.272,272.208h-3.538v1.087h3.538V272.208z"/>
-						<path id="path12352" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M507.519,266.798h-11.784v-3.201h11.784V266.798z"/>
-						<g id="g12354" transform="translate(481.8138,552.3696)">
-							<path id="path12356" inkscape:connector-curvature="0" fill="#FFFFFF" d="M0,0c-2.45,2.452-5.834,3.966-9.575,3.966
-								c-7.477,0-13.539-6.062-13.539-13.54c0-7.477,6.062-13.54,13.539-13.54c3.741,0,7.126,1.516,9.575,3.965l-9.575,9.575L0,0z"
-								/>
+						<path id="path12316" d="m503.98 266.78h-4.709v1.085h4.709v-1.08z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12318" d="m503.98 267.87h-4.709v1.087h4.709v-1.09z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12320" d="m503.98 268.95h-4.709v1.085h4.709v-1.09z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12322" d="m507.52 266.78h-3.538v1.085h3.538v-1.08z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12324" d="m507.52 267.87h-3.538v1.087h3.538v-1.09z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12326" d="m507.52 268.95h-3.538v1.085h3.538v-1.09z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12328" d="m503.98 270.04h-4.709v1.084h4.709v-1.08z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12330" d="m507.52 270.04h-3.538v1.084h3.538v-1.08z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12332" d="m503.98 271.12h-4.709v1.085h4.709v-1.08z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12334" d="m507.52 271.12h-3.538v1.085h3.538v-1.08z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12336" d="m503.98 272.21h-4.709v1.087h4.709v-1.09z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12338" d="m507.52 272.21h-3.538v1.087h3.538v-1.09z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12340" d="m499.27 266.78h-3.538v1.085h3.538v-1.08z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12342" d="m499.27 267.87h-3.538v1.087h3.538v-1.09z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12344" d="m499.27 268.95h-3.538v1.085h3.538v-1.09z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12346" d="m499.27 270.04h-3.538v1.084h3.538v-1.08z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12348" d="m499.27 271.12h-3.538v1.085h3.538v-1.08z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12350" d="m499.27 272.21h-3.538v1.087h3.538v-1.09z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12352" d="m507.52 266.8h-11.784v-3.201h11.784v3.2z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<g id="g12354" transform="translate(481.81 552.37)">
+							<path id="path12356" d="m0 0c-2.45 2.452-5.834 3.966-9.575 3.966-7.477 0-13.539-6.062-13.539-13.54 0-7.477 6.062-13.54 13.539-13.54 3.741 0 7.126 1.516 9.575 3.965l-9.575 9.575 9.575 9.574z" fill="#fff"/>
 						</g>
-						<g id="g12358" transform="translate(481.8138,552.3696)">
-							<path id="path12360" inkscape:connector-curvature="0" fill="none" stroke="#918F90" stroke-width="0.475" d="M0,0
-								c-2.45,2.452-5.834,3.966-9.575,3.966c-7.477,0-13.539-6.062-13.539-13.54c0-7.477,6.062-13.54,13.539-13.54
-								c3.741,0,7.126,1.516,9.575,3.965l-9.575,9.575L0,0z"/>
+						<g id="g12358" transform="translate(481.81 552.37)">
+							<path id="path12360" d="m0 0c-2.45 2.452-5.834 3.966-9.575 3.966-7.477 0-13.539-6.062-13.539-13.54 0-7.477 6.062-13.54 13.539-13.54 3.741 0 7.126 1.516 9.575 3.965l-9.575 9.575 9.575 9.574z" stroke="#918F90" stroke-width=".475" fill="none"/>
 						</g>
-						<g id="g12362" transform="translate(472.2413,546.1799)">
-							<path id="path12364" inkscape:connector-curvature="0" fill="#FFFFFF" d="M0,0l-0.222-0.021v-6.727L0-6.77
-								c1.87,0,3.384,1.516,3.384,3.384C3.384-1.516,1.87,0,0,0"/>
+						<g id="g12362" transform="translate(472.24 546.18)">
+							<path id="path12364" d="m0 0l-0.222-0.021v-6.727l0.222-0.022c1.87 0 3.384 1.516 3.384 3.384 0 1.87-1.514 3.386-3.384 3.386" fill="#fff"/>
 						</g>
-						<g id="g12366" transform="translate(472.2413,546.1799)">
-							<path id="path12368" inkscape:connector-curvature="0" fill="none" stroke="#918F90" stroke-width="0.475" d="M0,0
-								l-0.222-0.021v-6.727L0-6.77c1.87,0,3.384,1.516,3.384,3.384C3.384-1.516,1.87,0,0,0z M10.153-3.384
-								c0,5.609-4.546,10.155-10.156,10.155c-5.608,0-10.154-4.546-10.154-10.155s4.546-10.155,10.154-10.155
-								C5.607-13.539,10.153-8.992,10.153-3.384z M-0.003,6.771l-1.765,3.269"/>
+						<g id="g12366" transform="translate(472.24 546.18)">
+							<path id="path12368" d="m0 0l-0.222-0.021v-6.727l0.222-0.022c1.87 0 3.384 1.516 3.384 3.384 0 1.87-1.514 3.386-3.384 3.386zm10.153-3.384c0 5.609-4.546 10.155-10.156 10.155-5.608 0-10.154-4.546-10.154-10.155s4.546-10.155 10.154-10.155c5.61 0 10.156 4.547 10.156 10.155zm-10.156 10.155l-1.765 3.269" stroke="#918F90" stroke-width=".475" fill="none"/>
 						</g>
-						<g id="g12370" transform="translate(466.2306,550.9823)">
-							<path id="path12372" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="M0,0
-								l-2.158,2.611"/>
+						<g id="g12370" transform="translate(466.23 550.98)">
+							<path id="path12372" d="m0 0l-2.158 2.611" stroke="#918F90" stroke-width=".475" fill="#fff"/>
 						</g>
-						<g id="g12374" transform="translate(467.8193,551.9417)">
-							<path id="path12376" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="M0,0
-								l-1.815,2.874"/>
+						<g id="g12374" transform="translate(467.82 551.94)">
+							<path id="path12376" d="m0 0l-1.815 2.874" stroke="#918F90" stroke-width=".475" fill="#fff"/>
 						</g>
-						<g id="g12378" transform="translate(469.8975,552.6773)">
-							<path id="path12380" inkscape:connector-curvature="0" fill="#FFFFFF" d="M0,0l-1.52,3.099"/>
+						<g id="g12378" transform="translate(469.9 552.68)">
+							<path id="path12380" d="m0 0l-1.52 3.099" fill="#fff"/>
 						</g>
-						<g id="g12382" transform="translate(469.8975,552.6773)">
-							<path id="path12384" inkscape:connector-curvature="0" fill="none" stroke="#918F90" stroke-width="0.475" d="M0,0
-								l-1.52,3.099 M2.341-20.037l-1.765-3.27"/>
+						<g id="g12382" transform="translate(469.9 552.68)">
+							<path id="path12384" d="m0 0l-1.52 3.099m3.861-23.136l-1.765-3.27" stroke="#918F90" stroke-width=".475" fill="none"/>
 						</g>
-						<g id="g12386" transform="translate(466.2306,534.6104)">
-							<path id="path12388" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="M0,0
-								l-2.158-2.615"/>
+						<g id="g12386" transform="translate(466.23 534.61)">
+							<path id="path12388" d="m0 0l-2.158-2.615" stroke="#918F90" stroke-width=".475" fill="#fff"/>
 						</g>
-						<g id="g12390" transform="translate(467.8193,533.651)">
-							<path id="path12392" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="M0,0
-								l-1.815-2.877"/>
+						<g id="g12390" transform="translate(467.82 533.65)">
+							<path id="path12392" d="m0 0l-1.815-2.877" stroke="#918F90" stroke-width=".475" fill="#fff"/>
 						</g>
-						<g id="g12394" transform="translate(469.8975,532.9112)">
-							<path id="path12396" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="M0,0
-								l-1.52-3.096"/>
+						<g id="g12394" transform="translate(469.9 532.91)">
+							<path id="path12396" d="m0 0l-1.52-3.096" stroke="#918F90" stroke-width=".475" fill="#fff"/>
 						</g>
-						<g id="g12398" transform="translate(559.2783,552.3696)">
-							<path id="path12400" inkscape:connector-curvature="0" fill="#FFFFFF" d="M0,0c2.449,2.452,5.833,3.966,9.574,3.966
-								c7.478,0,13.539-6.062,13.539-13.54c0-7.477-6.061-13.54-13.539-13.54c-3.741,0-7.127,1.516-9.575,3.965l9.575,9.575L0,0z"/>
+						<g id="g12398" transform="translate(559.28 552.37)">
+							<path id="path12400" d="m0 0c2.449 2.452 5.833 3.966 9.574 3.966 7.478 0 13.539-6.062 13.539-13.54 0-7.477-6.061-13.54-13.539-13.54-3.741 0-7.127 1.516-9.575 3.965l9.575 9.575-9.574 9.574z" fill="#fff"/>
 						</g>
-						<g id="g12402" transform="translate(559.2783,552.3696)">
-							<path id="path12404" inkscape:connector-curvature="0" fill="none" stroke="#918F90" stroke-width="0.475" d="M0,0
-								c2.449,2.452,5.833,3.966,9.574,3.966c7.478,0,13.539-6.062,13.539-13.54c0-7.477-6.061-13.54-13.539-13.54
-								c-3.741,0-7.127,1.516-9.575,3.965l9.575,9.575L0,0z"/>
+						<g id="g12402" transform="translate(559.28 552.37)">
+							<path id="path12404" d="m0 0c2.449 2.452 5.833 3.966 9.574 3.966 7.478 0 13.539-6.062 13.539-13.54 0-7.477-6.061-13.54-13.539-13.54-3.741 0-7.127 1.516-9.575 3.965l9.575 9.575-9.574 9.574z" stroke="#918F90" stroke-width=".475" fill="none"/>
 						</g>
-						<g id="g12406" transform="translate(568.8495,546.1799)">
-							<path id="path12408" inkscape:connector-curvature="0" fill="#FFFFFF" d="M0,0l0.223-0.021v-6.727L0-6.77
-								c-1.868,0-3.384,1.516-3.384,3.384C-3.384-1.516-1.868,0,0,0"/>
+						<g id="g12406" transform="translate(568.85 546.18)">
+							<path id="path12408" d="m0 0l0.223-0.021v-6.727l-0.223-0.022c-1.868 0-3.384 1.516-3.384 3.384 0 1.87 1.516 3.386 3.384 3.386" fill="#fff"/>
 						</g>
-						<g id="g12410" transform="translate(568.8495,546.1799)">
-							<path id="path12412" inkscape:connector-curvature="0" fill="none" stroke="#918F90" stroke-width="0.475" d="M0,0
-								l0.223-0.021v-6.727L0-6.77c-1.868,0-3.384,1.516-3.384,3.384C-3.384-1.516-1.868,0,0,0z M-10.153-3.384
-								c0,5.609,4.545,10.155,10.155,10.155c5.608,0,10.154-4.546,10.154-10.155S5.611-13.539,0.003-13.539
-								C-5.607-13.539-10.153-8.992-10.153-3.384z M1.769,10.04L0.003,6.771 M13.36-1.166l-3.232-1.456 M12.729,1.243L9.7-0.364
-								 M11.416,3.9L8.943,1.755 M9.87,5.883L7.578,3.377"/>
+						<g id="g12410" transform="translate(568.85 546.18)">
+							<path id="path12412" d="m0 0l0.223-0.021v-6.727l-0.223-0.022c-1.868 0-3.384 1.516-3.384 3.384 0 1.87 1.516 3.386 3.384 3.386zm-10.153-3.384c0 5.609 4.545 10.155 10.155 10.155 5.608 0 10.154-4.546 10.154-10.155s-4.545-10.155-10.153-10.155c-5.61 0-10.156 4.547-10.156 10.155zm11.922 13.424l-1.766-3.269m13.357-7.937l-3.232-1.456m2.601 3.865l-3.029-1.607m1.716 4.264l-2.473-2.145m0.927 4.128l-2.292-2.506" stroke="#918F90" stroke-width=".475" fill="none"/>
 						</g>
-						<g id="g12414" transform="translate(577.0195,553.5933)">
-							<path id="path12416" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="M0,0
-								l-2.158-2.611"/>
+						<g id="g12414" transform="translate(577.02 553.59)">
+							<path id="path12416" d="m0 0l-2.158-2.611" stroke="#918F90" stroke-width=".475" fill="#fff"/>
 						</g>
-						<g id="g12418" transform="translate(575.0881,554.8156)">
-							<path id="path12420" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="M0,0
-								l-1.815-2.874"/>
+						<g id="g12418" transform="translate(575.09 554.82)">
+							<path id="path12420" d="m0 0l-1.815-2.874" stroke="#918F90" stroke-width=".475" fill="#fff"/>
 						</g>
-						<g id="g12422" transform="translate(572.7135,555.7763)">
-							<path id="path12424" inkscape:connector-curvature="0" fill="#FFFFFF" d="M0,0l-1.519-3.099"/>
+						<g id="g12422" transform="translate(572.71 555.78)">
+							<path id="path12424" d="m0 0l-1.519-3.099" fill="#fff"/>
 						</g>
-						<g id="g12426" transform="translate(572.7135,555.7763)">
-							<path id="path12428" inkscape:connector-curvature="0" fill="none" stroke="#918F90" stroke-width="0.475" d="M0,0
-								l-1.519-3.099 M-2.095-26.405l-1.766,3.27 M9.496-15.2l-3.232,1.455 M8.865-17.607l-3.029,1.605 M7.552-20.265l-2.473,2.145
-								 M6.006-22.248l-2.292,2.504"/>
+						<g id="g12426" transform="translate(572.71 555.78)">
+							<path id="path12428" d="m0 0l-1.519-3.099m-0.576-23.306l-1.766 3.27m13.357 7.935l-3.232 1.455m2.601-3.862l-3.029 1.605m1.716-4.263l-2.473 2.145m0.927-4.128l-2.292 2.504" stroke="#918F90" stroke-width=".475" fill="none"/>
 						</g>
-						<g id="g12430" transform="translate(577.0195,531.9952)">
-							<path id="path12432" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="M0,0
-								l-2.158,2.615"/>
+						<g id="g12430" transform="translate(577.02 532)">
+							<path id="path12432" d="m0 0l-2.158 2.615" stroke="#918F90" stroke-width=".475" fill="#fff"/>
 						</g>
-						<g id="g12434" transform="translate(575.0881,530.7743)">
-							<path id="path12436" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="M0,0
-								l-1.815,2.877"/>
+						<g id="g12434" transform="translate(575.09 530.77)">
+							<path id="path12436" d="m0 0l-1.815 2.877" stroke="#918F90" stroke-width=".475" fill="#fff"/>
 						</g>
-						<g id="g12438" transform="translate(572.7135,529.815)">
-							<path id="path12440" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="M0,0
-								l-1.519,3.096"/>
+						<g id="g12438" transform="translate(572.71 529.82)">
+							<path id="path12440" d="m0 0l-1.519 3.096" stroke="#918F90" stroke-width=".475" fill="#fff"/>
 						</g>
-						<path id="path12442" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M547.166,301.481h-5.673v-16.489h5.673V301.481z"/>
-						<path id="path12444" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M499.6,301.481h-5.674v-16.489h5.674V301.481z"/>
-						<g id="g12446" transform="translate(512.723,470.4188)">
-							<path id="path12448" inkscape:connector-curvature="0" fill="#FFFFFF" d="M0,0l-2.594-0.649l-0.263,1.064l2.593,0.648L0,0z"
-								/>
+						<path id="path12442" d="m547.17 301.48h-5.673v-16.489h5.673v16.49z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12444" d="m499.6 301.48h-5.674v-16.489h5.674v16.49z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<g id="g12446" transform="translate(512.72 470.42)">
+							<path id="path12448" d="m0 0l-2.594-0.649-0.263 1.064 2.593 0.648 0.264-1.063z" fill="#fff"/>
 						</g>
-						<g id="g12450" transform="translate(512.723,470.4188)">
-							<path id="path12452" inkscape:connector-curvature="0" fill="none" stroke="#918F90" stroke-width="0.475" d="M0,0
-								l-2.594-0.649l-0.263,1.064l2.593,0.648L0,0z"/>
+						<g id="g12450" transform="translate(512.72 470.42)">
+							<path id="path12452" d="m0 0l-2.594-0.649-0.263 1.064 2.593 0.648 0.264-1.063z" stroke="#918F90" stroke-width=".475" fill="none"/>
 						</g>
-						<g id="g12454" transform="translate(512.4587,471.4816)">
-							<path id="path12456" inkscape:connector-curvature="0" fill="#FFFFFF" d="M0,0l-2.593-0.647l-0.265,1.062l2.592,0.648L0,0z"
-								/>
+						<g id="g12454" transform="translate(512.46 471.48)">
+							<path id="path12456" d="m0 0l-2.593-0.647-0.265 1.062 2.592 0.648 0.266-1.063z" fill="#fff"/>
 						</g>
-						<g id="g12458" transform="translate(512.4587,471.4816)">
-							<path id="path12460" inkscape:connector-curvature="0" fill="none" stroke="#918F90" stroke-width="0.475" d="M0,0
-								l-2.593-0.647l-0.265,1.062l2.592,0.648L0,0z"/>
+						<g id="g12458" transform="translate(512.46 471.48)">
+							<path id="path12460" d="m0 0l-2.593-0.647-0.265 1.062 2.592 0.648 0.266-1.063z" stroke="#918F90" stroke-width=".475" fill="none"/>
 						</g>
-						<g id="g12462" transform="translate(512.193,472.5459)">
-							<path id="path12464" inkscape:connector-curvature="0" fill="#FFFFFF" d="M0,0l-2.593-0.649L-2.86,0.415l2.593,0.649L0,0z"/>
+						<g id="g12462" transform="translate(512.19 472.55)">
+							<path id="path12464" d="m0 0l-2.593-0.649-0.267 1.064 2.593 0.649 0.267-1.064z" fill="#fff"/>
 						</g>
-						<g id="g12466" transform="translate(512.193,472.5459)">
-							<path id="path12468" inkscape:connector-curvature="0" fill="none" stroke="#918F90" stroke-width="0.475" d="M0,0
-								l-2.593-0.649L-2.86,0.415l2.593,0.649L0,0z"/>
+						<g id="g12466" transform="translate(512.19 472.55)">
+							<path id="path12468" d="m0 0l-2.593-0.649-0.267 1.064 2.593 0.649 0.267-1.064z" stroke="#918F90" stroke-width=".475" fill="none"/>
 						</g>
-						<g id="g12470" transform="translate(511.9258,473.6101)">
-							<path id="path12472" inkscape:connector-curvature="0" fill="#FFFFFF" d="M0,0l-2.593-0.649l-0.264,1.063l2.593,0.649L0,0z"
-								/>
+						<g id="g12470" transform="translate(511.93 473.61)">
+							<path id="path12472" d="m0 0l-2.593-0.649-0.264 1.063 2.593 0.649 0.264-1.063z" fill="#fff"/>
 						</g>
-						<g id="g12474" transform="translate(511.9258,473.6101)">
-							<path id="path12476" inkscape:connector-curvature="0" fill="none" stroke="#918F90" stroke-width="0.475" d="M0,0
-								l-2.593-0.649l-0.264,1.063l2.593,0.649L0,0z"/>
+						<g id="g12474" transform="translate(511.93 473.61)">
+							<path id="path12476" d="m0 0l-2.593-0.649-0.264 1.063 2.593 0.649 0.264-1.063z" stroke="#918F90" stroke-width=".475" fill="none"/>
 						</g>
-						<g id="g12478" transform="translate(483.1927,494.0056)">
-							<path id="path12480" inkscape:connector-curvature="0" fill="#FFFFFF" d="M0,0l9.588-18.854
-								c8.331,4.615,18.025,6.54,20.917,6.767"/>
+						<g id="g12478" transform="translate(483.19 494.01)">
+							<path id="path12480" d="m0 0l9.588-18.854c8.331 4.615 18.025 6.54 20.917 6.767" fill="#fff"/>
 						</g>
-						<g id="g12482" transform="translate(483.1927,494.0056)">
-							<path id="path12484" inkscape:connector-curvature="0" fill="none" stroke="#918F90" stroke-width="0.475" d="M0,0
-								l9.588-18.854c8.331,4.615,18.025,6.54,20.917,6.767 M9.588-18.854l3.275-6.312c5.363,2.969,11.29,4.828,15.606,5.833
-								l-1.386,6.709"/>
+						<g id="g12482" transform="translate(483.19 494.01)">
+							<path id="path12484" d="m0 0l9.588-18.854c8.331 4.615 18.025 6.54 20.917 6.767m-20.917-6.767l3.275-6.312c5.363 2.969 11.29 4.828 15.606 5.833l-1.386 6.709" stroke="#918F90" stroke-width=".475" fill="none"/>
 						</g>
-						<g id="g12486" transform="translate(528.3524,470.4188)">
-							<path id="path12488" inkscape:connector-curvature="0" fill="#FFFFFF" d="M0,0l2.593-0.649L2.86,0.415L0.267,1.063L0,0z"/>
+						<g id="g12486" transform="translate(528.35 470.42)">
+							<path id="path12488" d="m0 0l2.593-0.649 0.267 1.064-2.593 0.648-0.267-1.063z" fill="#fff"/>
 						</g>
-						<g id="g12490" transform="translate(528.3524,470.4188)">
-							<path id="path12492" inkscape:connector-curvature="0" fill="none" stroke="#918F90" stroke-width="0.475" d="M0,0
-								l2.593-0.649L2.86,0.415L0.267,1.063L0,0z"/>
+						<g id="g12490" transform="translate(528.35 470.42)">
+							<path id="path12492" d="m0 0l2.593-0.649 0.267 1.064-2.593 0.648-0.267-1.063z" stroke="#918F90" stroke-width=".475" fill="none"/>
 						</g>
-						<g id="g12494" transform="translate(528.6194,471.4816)">
-							<path id="path12496" inkscape:connector-curvature="0" fill="#FFFFFF" d="M0,0l2.593-0.647l0.264,1.062L0.266,1.064L0,0z"/>
+						<g id="g12494" transform="translate(528.62 471.48)">
+							<path id="path12496" d="m0 0l2.593-0.647 0.264 1.062-2.591 0.649-0.266-1.064z" fill="#fff"/>
 						</g>
-						<g id="g12498" transform="translate(528.6194,471.4816)">
-							<path id="path12500" inkscape:connector-curvature="0" fill="none" stroke="#918F90" stroke-width="0.475" d="M0,0
-								l2.593-0.647l0.264,1.062L0.266,1.064L0,0z"/>
+						<g id="g12498" transform="translate(528.62 471.48)">
+							<path id="path12500" d="m0 0l2.593-0.647 0.264 1.062-2.591 0.649-0.266-1.064z" stroke="#918F90" stroke-width=".475" fill="none"/>
 						</g>
-						<g id="g12502" transform="translate(528.8853,472.5459)">
-							<path id="path12504" inkscape:connector-curvature="0" fill="#FFFFFF" d="M0,0l2.591-0.649L2.86,0.415L0.266,1.064L0,0z"/>
+						<g id="g12502" transform="translate(528.89 472.55)">
+							<path id="path12504" d="m0 0l2.591-0.649 0.269 1.064-2.594 0.649-0.266-1.064z" fill="#fff"/>
 						</g>
-						<g id="g12506" transform="translate(528.8853,472.5459)">
-							<path id="path12508" inkscape:connector-curvature="0" fill="none" stroke="#918F90" stroke-width="0.475" d="M0,0
-								l2.591-0.649L2.86,0.415L0.266,1.064L0,0z"/>
+						<g id="g12506" transform="translate(528.89 472.55)">
+							<path id="path12508" d="m0 0l2.591-0.649 0.269 1.064-2.594 0.649-0.266-1.064z" stroke="#918F90" stroke-width=".475" fill="none"/>
 						</g>
-						<g id="g12510" transform="translate(529.151,473.6101)">
-							<path id="path12512" inkscape:connector-curvature="0" fill="#FFFFFF" d="M0,0l2.595-0.649l0.264,1.063L0.266,1.063L0,0z"/>
+						<g id="g12510" transform="translate(529.15 473.61)">
+							<path id="path12512" d="m0 0l2.595-0.649 0.264 1.063-2.593 0.649-0.266-1.063z" fill="#fff"/>
 						</g>
-						<g id="g12514" transform="translate(529.151,473.6101)">
-							<path id="path12516" inkscape:connector-curvature="0" fill="none" stroke="#918F90" stroke-width="0.475" d="M0,0
-								l2.595-0.649l0.264,1.063L0.266,1.063L0,0z"/>
+						<g id="g12514" transform="translate(529.15 473.61)">
+							<path id="path12516" d="m0 0l2.595-0.649 0.264 1.063-2.593 0.649-0.266-1.063z" stroke="#918F90" stroke-width=".475" fill="none"/>
 						</g>
-						<g id="g12518" transform="translate(511.3399,477.1273)">
-							<path id="path12520" inkscape:connector-curvature="0" fill="#FFFFFF" d="M0,0l-2.594-0.647L-2.86,0.415l2.593,0.648L0,0z"/>
+						<g id="g12518" transform="translate(511.34 477.13)">
+							<path id="path12520" d="m0 0l-2.594-0.647-0.266 1.062 2.593 0.648 0.267-1.063z" fill="#fff"/>
 						</g>
-						<g id="g12522" transform="translate(511.3399,477.1273)">
-							<path id="path12524" inkscape:connector-curvature="0" fill="none" stroke="#918F90" stroke-width="0.475" d="M0,0
-								l-2.594-0.647L-2.86,0.415l2.593,0.648L0,0z"/>
+						<g id="g12522" transform="translate(511.34 477.13)">
+							<path id="path12524" d="m0 0l-2.594-0.647-0.266 1.062 2.593 0.648 0.267-1.063z" stroke="#918F90" stroke-width=".475" fill="none"/>
 						</g>
-						<g id="g12526" transform="translate(511.0728,478.1902)">
-							<path id="path12528" inkscape:connector-curvature="0" fill="#FFFFFF" d="M0,0l-2.593-0.648l-0.266,1.065l2.593,0.649L0,0z"
-								/>
+						<g id="g12526" transform="translate(511.07 478.19)">
+							<path id="path12528" d="m0 0l-2.593-0.648-0.266 1.065 2.593 0.649 0.266-1.066z" fill="#fff"/>
 						</g>
-						<g id="g12530" transform="translate(511.0728,478.1902)">
-							<path id="path12532" inkscape:connector-curvature="0" fill="none" stroke="#918F90" stroke-width="0.475" d="M0,0
-								l-2.593-0.648l-0.266,1.065l2.593,0.649L0,0z"/>
+						<g id="g12530" transform="translate(511.07 478.19)">
+							<path id="path12532" d="m0 0l-2.593-0.648-0.266 1.065 2.593 0.649 0.266-1.066z" stroke="#918F90" stroke-width=".475" fill="none"/>
 						</g>
-						<g id="g12534" transform="translate(510.8071,479.2558)">
-							<path id="path12536" inkscape:connector-curvature="0" fill="#FFFFFF" d="M0,0l-2.593-0.648l-0.265,1.066l2.591,0.647L0,0z"
-								/>
+						<g id="g12534" transform="translate(510.81 479.26)">
+							<path id="path12536" d="m0 0l-2.593-0.648-0.265 1.066 2.591 0.647 0.267-1.065z" fill="#fff"/>
 						</g>
-						<g id="g12538" transform="translate(510.8071,479.2558)">
-							<path id="path12540" inkscape:connector-curvature="0" fill="none" stroke="#918F90" stroke-width="0.475" d="M0,0
-								l-2.593-0.648l-0.265,1.066l2.591,0.647L0,0z"/>
+						<g id="g12538" transform="translate(510.81 479.26)">
+							<path id="path12540" d="m0 0l-2.593-0.648-0.265 1.066 2.591 0.647 0.267-1.065z" stroke="#918F90" stroke-width=".475" fill="none"/>
 						</g>
 						<g id="g12542" transform="translate(510.54,480.32)">
-							<path id="path12544" inkscape:connector-curvature="0" fill="#FFFFFF" d="M0,0l-2.591-0.648l-0.266,1.062l2.593,0.648L0,0z"
-								/>
+							<path id="path12544" d="m0 0l-2.591-0.648-0.266 1.062 2.593 0.648 0.264-1.062z" fill="#fff"/>
 						</g>
 						<g id="g12546" transform="translate(510.54,480.32)">
-							<path id="path12548" inkscape:connector-curvature="0" fill="none" stroke="#918F90" stroke-width="0.475" d="M0,0
-								l-2.591-0.648l-0.266,1.062l2.593,0.648L0,0z"/>
-						</g>
-						<g id="g12550" transform="translate(529.7355,477.1273)">
-							<path id="path12552" inkscape:connector-curvature="0" fill="#FFFFFF" d="M0,0l2.595-0.647L2.86,0.415L0.267,1.063L0,0z"/>
-						</g>
-						<g id="g12554" transform="translate(529.7355,477.1273)">
-							<path id="path12556" inkscape:connector-curvature="0" fill="none" stroke="#918F90" stroke-width="0.475" d="M0,0
-								l2.595-0.647L2.86,0.415L0.267,1.063L0,0z"/>
-						</g>
-						<g id="g12558" transform="translate(530.0026,478.1902)">
-							<path id="path12560" inkscape:connector-curvature="0" fill="#FFFFFF" d="M0,0l2.593-0.648l0.264,1.065l-2.59,0.649L0,0z"/>
-						</g>
-						<g id="g12562" transform="translate(530.0026,478.1902)">
-							<path id="path12564" inkscape:connector-curvature="0" fill="none" stroke="#918F90" stroke-width="0.475" d="M0,0
-								l2.593-0.648l0.264,1.065l-2.59,0.649L0,0z"/>
-						</g>
-						<g id="g12566" transform="translate(530.2697,479.2558)">
-							<path id="path12568" inkscape:connector-curvature="0" fill="#FFFFFF" d="M0,0l2.59-0.648l0.267,1.066L0.266,1.064L0,0z"/>
-						</g>
-						<g id="g12570" transform="translate(530.2697,479.2558)">
-							<path id="path12572" inkscape:connector-curvature="0" fill="none" stroke="#918F90" stroke-width="0.475" d="M0,0
-								l2.59-0.648l0.267,1.066L0.266,1.064L0,0z"/>
-						</g>
-						<g id="g12574" transform="translate(530.5354,480.32)">
-							<path id="path12576" inkscape:connector-curvature="0" fill="#FFFFFF" d="M0,0l2.591-0.648l0.266,1.062L0.266,1.062L0,0z"/>
-						</g>
-						<g id="g12578" transform="translate(530.5354,480.32)">
-							<path id="path12580" inkscape:connector-curvature="0" fill="none" stroke="#918F90" stroke-width="0.475" d="M0,0
-								l2.591-0.648l0.266,1.062L0.266,1.062L0,0z M17.762-5.169l-3.278-6.311C9.125-8.511,3.197-6.653-1.119-5.647l1.385,6.709"/>
-						</g>
-						<g id="g12582" transform="translate(520.7111,305.7718)">
-							<path id="path12584" inkscape:connector-curvature="0" fill="#FFFFFF" d="M0,0c-3.435,0-6.472-1.671-8.368-4.235h-3.976
-								V-22.45h9.074v0.009c0,1.805,1.462,3.268,3.27,3.268c1.804,0,3.267-1.463,3.267-3.268v-0.009h9.076v18.215H8.369
-								C6.469-1.671,3.433,0,0,0"/>
-						</g>
-						<g id="g12586" transform="translate(520.7111,305.7718)">
-							
-								<path id="path12588" inkscape:connector-curvature="0" fill="none" stroke="#918F90" stroke-width="0.95" stroke-linejoin="round" d="
-								M0,0c-3.435,0-6.472-1.671-8.368-4.235h-3.976V-22.45h9.074v0.009c0,1.805,1.462,3.268,3.27,3.268
-								c1.804,0,3.267-1.463,3.267-3.268v-0.009h9.076v18.215H8.369C6.469-1.671,3.433,0,0,0z"/>
-						</g>
-						<g id="g12590" transform="translate(513.8082,298.9122)">
-							
-								<path id="path12592" inkscape:connector-curvature="0" fill="none" stroke="#918F90" stroke-width="0.475" stroke-linejoin="round" d="
-								M0,0c0,1.601-1.302,2.9-2.902,2.9h-2.811v-5.806h2.811C-1.302-2.906,0-1.604,0,0z M0.273-12.687
-								c0,1.603-1.301,2.903-2.903,2.903h-2.811v-5.806h2.811C-1.028-15.59,0.273-14.291,0.273-12.687z M13.523-0.277
-								c0-1.604,1.299-2.903,2.905-2.903h2.818v5.805h-2.818C14.822,2.625,13.523,1.326,13.523-0.277z M13.802-12.967
-								c0-1.605,1.3-2.901,2.904-2.901h2.82v5.802h-2.82C15.102-10.065,13.802-11.363,13.802-12.967z"/>
-						</g>
-						<g id="g12594" transform="translate(520.7111,305.7718)">
-							<path id="path12596" inkscape:connector-curvature="0" fill="none" stroke="#918F90" stroke-width="0.475" d="M0,0
-								c-3.435,0-6.472-1.671-8.368-4.235h-3.976V-22.45h9.074v0.009c0,1.805,1.462,3.268,3.27,3.268
-								c1.804,0,3.267-1.463,3.267-3.268v-0.009h9.076v18.215H8.369C6.469-1.671,3.433,0,0,0z M-6.903-6.86
-								c0,1.602-1.302,2.901-2.902,2.901h-2.812v-5.807h2.812C-8.205-9.766-6.903-8.464-6.903-6.86z M-6.63-19.547
-								c0,1.603-1.301,2.904-2.903,2.904h-2.811v-5.807h2.811C-7.931-22.45-6.63-21.151-6.63-19.547z M6.62-7.136
-								c0-1.604,1.3-2.904,2.905-2.904h2.818v5.805H9.525C7.92-4.235,6.62-5.534,6.62-7.136z M6.899-19.826
-								c0-1.606,1.3-2.902,2.904-2.902h2.82v5.804h-2.82C8.199-16.924,6.899-18.222,6.899-19.826z"/>
-						</g>
-						<path id="path12598" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M531.31,605.127h4.423v-1.022h-4.423V605.127z"/>
-						<path id="path12600" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M531.31,604.105h4.423v-1.019h-4.423V604.105z"/>
-						<path id="path12602" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M531.31,603.086h4.423v-1.02h-4.423V603.086z"/>
-						<path id="path12604" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M527.986,605.127h3.324v-1.022h-3.324V605.127z"/>
-						<path id="path12606" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M527.986,604.105h3.324v-1.019h-3.324V604.105z"/>
-						<path id="path12608" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M527.986,603.086h3.324v-1.02h-3.324V603.086z"/>
-						<path id="path12610" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M531.31,602.067h4.423v-1.019h-4.423V602.067z"/>
-						<path id="path12612" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M527.986,602.067h3.324v-1.019h-3.324V602.067z"/>
-						<path id="path12614" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M531.31,601.048h4.423v-1.02h-4.423V601.048z"/>
-						<path id="path12616" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M527.986,601.048h3.324v-1.02h-3.324V601.048z"/>
-						<path id="path12618" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M531.31,600.028h4.423v-1.02h-4.423V600.028z"/>
-						<path id="path12620" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M527.986,600.028h3.324v-1.02h-3.324V600.028z"/>
-						<path id="path12622" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M535.734,605.127h3.323v-1.022h-3.323V605.127z"/>
-						<path id="path12624" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M535.734,604.105h3.323v-1.019h-3.323V604.105z"/>
-						<path id="path12626" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M535.734,603.086h3.323v-1.02h-3.323V603.086z"/>
-						<path id="path12628" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M535.734,602.067h3.323v-1.019h-3.323V602.067z"/>
-						<path id="path12630" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M535.734,601.048h3.323v-1.02h-3.323V601.048z"/>
-						<path id="path12632" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M535.734,600.028h3.323v-1.02h-3.323V600.028z"/>
-						<path id="path12634" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M527.986,605.112h11.072v3.006h-11.072V605.112z"/>
-						<path id="path12636" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M506.164,605.127h4.423v-1.022h-4.423V605.127z"/>
-						<path id="path12638" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M506.164,604.105h4.423v-1.019h-4.423V604.105z"/>
-						<path id="path12640" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M506.164,603.086h4.423v-1.02h-4.423V603.086z"/>
-						<path id="path12642" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M502.84,605.127h3.324v-1.022h-3.324V605.127z"/>
-						<path id="path12644" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M502.84,604.105h3.324v-1.019h-3.324V604.105z"/>
-						<path id="path12646" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M502.84,603.086h3.324v-1.02h-3.324V603.086z"/>
-						<path id="path12648" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M506.164,602.067h4.423v-1.019h-4.423V602.067z"/>
-						<path id="path12650" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M502.84,602.067h3.324v-1.019h-3.324V602.067z"/>
-						<path id="path12652" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M506.164,601.048h4.423v-1.02h-4.423V601.048z"/>
-						<path id="path12654" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M502.84,601.048h3.324v-1.02h-3.324V601.048z"/>
-						<path id="path12656" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M506.164,600.028h4.423v-1.02h-4.423V600.028z"/>
-						<path id="path12658" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M502.84,600.028h3.324v-1.02h-3.324V600.028z"/>
-						<path id="path12660" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M510.588,605.127h3.323v-1.022h-3.323V605.127z"/>
-						<path id="path12662" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M510.588,604.105h3.323v-1.019h-3.323V604.105z"/>
-						<path id="path12664" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M510.588,603.086h3.323v-1.02h-3.323V603.086z"/>
-						<path id="path12666" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M510.588,602.067h3.323v-1.019h-3.323V602.067z"/>
-						<path id="path12668" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M510.588,601.048h3.323v-1.02h-3.323V601.048z"/>
-						<path id="path12670" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M510.588,600.028h3.323v-1.02h-3.323V600.028z"/>
-						<path id="path12672" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M502.84,605.112h11.07v3.006h-11.07V605.112L502.84,605.112z"/>
-						<path id="path12674" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M503.202,586.836h-5.275V571.5h5.275V586.836z"/>
-						<path id="path12676" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M542.878,586.836h-5.275V571.5h5.275V586.836z"/>
-						<g id="g12678" transform="translate(520.3979,588.1571)">
-							<path id="path12680" inkscape:connector-curvature="0" fill="#FFFFFF" d="M0,0c-1.312,0-2.379,1.06-2.505,2.416
-								c-1.674-0.357-3.11-1.053-4.103-1.974h-3.75v-8.488h1.185v-4.215c0-2.461,4.173-4.458,9.323-4.458s9.327,1.997,9.327,4.458
-								v4.215h0.88v8.488H6.609C5.616,1.363,4.18,2.059,2.507,2.416C2.379,1.06,1.31,0,0,0"/>
-						</g>
-						<g id="g12682" transform="translate(520.3979,588.1571)">
-							
-								<path id="path12684" inkscape:connector-curvature="0" fill="none" stroke="#918F90" stroke-width="0.95" stroke-linejoin="round" d="
-								M0,0c-1.312,0-2.379,1.06-2.505,2.416c-1.674-0.357-3.11-1.053-4.103-1.974h-3.75v-8.488h1.185v-4.215
-								c0-2.461,4.173-4.458,9.323-4.458s9.327,1.997,9.327,4.458v4.215h0.88v8.488H6.609C5.616,1.363,4.18,2.059,2.507,2.416
-								C2.379,1.06,1.31,0,0,0z"/>
-						</g>
-						<g id="g12686" transform="translate(539.0578,608.1182)">
-							<path id="path12688" inkscape:connector-curvature="0" fill="none" stroke="#918F90" stroke-width="0.475" d="M0,0h9.371
-								v-8.303l4.355,0.023v4.438L26.23-3.796c-0.705,14.965-2.422,43.721-3.54,48.377C17.776,65.033,1.046,75.415-18.473,75.415
-								c-22.13,0-36.059-11.508-41.199-30.86c-2.036-10.023-3.571-32.138-3.853-47.509h13.057v-2.014h7.669V0h6.581 M-50.94-18.624
-								h5.573c0-3.24,0.255-13.303,6.833-23.108c3.185,1.3,9.662,5.052,20.024,5.052c10.365,0,15.639-3.373,20.025-5.052
-								c2.15,3.607,6.837,10.35,6.837,23.108h5.868 M-19.956,16.969c-0.055,0.159-0.093,0.328-0.093,0.505
-								c0,0.85,0.69,1.541,1.539,1.541c0.853,0,1.541-0.691,1.541-1.541c0-0.851-0.688-1.54-1.541-1.54
-								c-0.304,0-0.586,0.09-0.823,0.242l-1.521-2.479c0.684-0.425,1.482-0.682,2.344-0.682c2.462,0,4.457,1.997,4.457,4.459
-								c0,2.461-1.995,4.458-4.457,4.458c-2.46,0-4.455-1.997-4.455-4.458c0-0.741,0.197-1.43,0.516-2.044L-19.956,16.969z
-								 M-20.028,17.409l-2.915-0.124 M-19.923,18.06l-2.685,1.114 M-19.598,18.664l-1.909,2.082 M-18.347,19.046l0.29,2.844
-								 M-17.736,18.769l1.502,2.515 M-17.222,18.347l2.384,1.621 M-16.972,17.723l2.843,0.461 M-17.46,16.392l2.04-2.105
-								 M-18.018,16.055l0.965-2.774 M-18.671,15.893l-0.29-2.835"/>
-						</g>
-						<g id="g12690" transform="translate(476.5276,625.2693)">
-							
-								<path id="path12692" inkscape:connector-curvature="0" fill="none" stroke="#918F90" stroke-width="0.475" stroke-linejoin="round" d="
-								M0,0c0,27.473,4.1,42.76,12.904,52.087c7.47,7.912,17.952,13.78,31.155,13.78c13.204,0,23.686-5.868,31.154-13.78
-								C84.014,42.76,88.114,27.473,88.114,0h1.032c0,31.782-5.049,48.162-13.206,57.2C67.783,66.238,56.507,70,44.058,70
-								c-12.452,0-23.724-3.762-31.884-12.8C4.016,48.162-1.031,31.782-1.031,0H0z"/>
-						</g>
-						<g id="g12694" transform="translate(515.5591,690.8455)">
-							
-								<path id="path12696" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" stroke-linejoin="round" d="
-								M0,0l-0.423,4.121"/>
-						</g>
-						<g id="g12698" transform="translate(517.7575,690.9848)">
-							
-								<path id="path12700" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" stroke-linejoin="round" d="
-								M0,0l-0.236,4.146"/>
-						</g>
-						<g id="g12702" transform="translate(512.8195,690.4113)">
-							
-								<path id="path12704" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" stroke-linejoin="round" d="
-								M0,0l-0.685,4.279"/>
-						</g>
-						<g id="g12706" transform="translate(510.1302,689.7037)">
-							
-								<path id="path12708" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" stroke-linejoin="round" d="
-								M0,0l-0.97,4.41"/>
-						</g>
-						<g id="g12710" transform="translate(507.4046,689.1254)">
-							
-								<path id="path12712" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" stroke-linejoin="round" d="
-								M0,0l-1.177,4.183"/>
-						</g>
-						<g id="g12714" transform="translate(504.7866,688.108)">
-							
-								<path id="path12716" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" stroke-linejoin="round" d="
-								M0,0l-1.446,4.188"/>
-						</g>
-						<g id="g12718" transform="translate(502.1869,687.0174)">
-							
-								<path id="path12720" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" stroke-linejoin="round" d="
-								M0,0l-1.654,4.013"/>
-						</g>
-						<g id="g12722" transform="translate(499.8081,685.4196)">
-							
-								<path id="path12724" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" stroke-linejoin="round" d="
-								M0,0l-2.068,4.284"/>
-						</g>
-						<g id="g12726" transform="translate(497.3538,683.9897)">
-							
-								<path id="path12728" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" stroke-linejoin="round" d="
-								M0,0l-2.316,4.147"/>
-						</g>
-						<g id="g12730" transform="translate(494.9246,682.4793)">
-							
-								<path id="path12732" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" stroke-linejoin="round" d="
-								M0,0l-2.341,3.655"/>
-						</g>
-						<g id="g12734" transform="translate(492.8464,680.4244)">
-							
-								<path id="path12736" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" stroke-linejoin="round" d="
-								M0,0l-2.597,3.556"/>
-						</g>
-						<g id="g12738" transform="translate(490.6368,678.5536)">
-							
-								<path id="path12740" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" stroke-linejoin="round" d="
-								M0,0l-2.597,3.127"/>
-						</g>
-						<g id="g12742" transform="translate(488.6664,676.3773)">
-							
-								<path id="path12744" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" stroke-linejoin="round" d="
-								M0,0l-2.569,2.727"/>
-						</g>
-						<g id="g12746" transform="translate(486.7686,674.1251)">
-							
-								<path id="path12748" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" stroke-linejoin="round" d="
-								M0,0l-2.309,2.161"/>
-						</g>
-						<g id="g12750" transform="translate(485.1506,671.6192)">
-							
-								<path id="path12752" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" stroke-linejoin="round" d="
-								M0,0l-2.291,1.878"/>
-						</g>
-						<g id="g12754" transform="translate(483.657,669.0284)">
-							
-								<path id="path12756" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" stroke-linejoin="round" d="
-								M0,0l-2.014,1.446"/>
-						</g>
-						<g id="g12758" transform="translate(482.446,666.267)">
-							
-								<path id="path12760" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" stroke-linejoin="round" d="
-								M0,0l-1.861,1.159"/>
-						</g>
-						<g id="g12762" transform="translate(481.3971,663.4446)">
-							
-								<path id="path12764" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" stroke-linejoin="round" d="
-								M0,0l-1.794,0.957"/>
-						</g>
-						<g id="g12766" transform="translate(480.4391,660.6049)">
-							
-								<path id="path12768" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" stroke-linejoin="round" d="
-								M0,0l-1.531,0.689"/>
-						</g>
-						<g id="g12770" transform="translate(479.6559,657.7136)">
-							
-								<path id="path12772" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" stroke-linejoin="round" d="
-								M0,0l-1.414,0.522"/>
-						</g>
-						<g id="g12774" transform="translate(478.8952,654.8264)">
-							
-								<path id="path12776" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" stroke-linejoin="round" d="
-								M0,0l-1.358,0.397"/>
-						</g>
-						<g id="g12778" transform="translate(478.3764,651.8766)">
-							
-								<path id="path12780" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" stroke-linejoin="round" d="
-								M0,0l-1.278,0.281"/>
-						</g>
-						<g id="g12782" transform="translate(477.9303,648.9165)">
-							
-								<path id="path12784" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" stroke-linejoin="round" d="
-								M0,0l-1.229,0.182"/>
-						</g>
-						<g id="g12786" transform="translate(477.6086,645.9365)">
-							
-								<path id="path12788" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" stroke-linejoin="round" d="
-								M0,0l-1.287,0.1"/>
-						</g>
-						<g id="g12790" transform="translate(477.2184,642.9367)">
-							
-								<path id="path12792" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" stroke-linejoin="round" d="
-								M0,0l-1.159,0.009"/>
-						</g>
-						<g id="g12794" transform="translate(525.3065,690.8455)">
-							
-								<path id="path12796" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" stroke-linejoin="round" d="
-								M0,0l0.424,4.121"/>
-						</g>
-						<g id="g12798" transform="translate(523.1095,690.9848)">
-							
-								<path id="path12800" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" stroke-linejoin="round" d="
-								M0,0l0.231,4.146"/>
-						</g>
-						<g id="g12802" transform="translate(528.0447,690.4113)">
-							
-								<path id="path12804" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" stroke-linejoin="round" d="
-								M0,0l0.685,4.279"/>
-						</g>
-						<g id="g12806" transform="translate(530.7326,689.7037)">
-							
-								<path id="path12808" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" stroke-linejoin="round" d="
-								M0,0l0.969,4.41"/>
-						</g>
-						<g id="g12810" transform="translate(533.4597,689.1254)">
-							
-								<path id="path12812" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" stroke-linejoin="round" d="
-								M0,0l1.177,4.183"/>
-						</g>
-						<g id="g12814" transform="translate(536.079,688.108)">
-							
-								<path id="path12816" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" stroke-linejoin="round" d="
-								M0,0l1.445,4.188"/>
-						</g>
-						<g id="g12818" transform="translate(538.6774,687.0174)">
-							
-								<path id="path12820" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" stroke-linejoin="round" d="
-								M0,0l1.652,4.013"/>
-						</g>
-						<g id="g12822" transform="translate(541.0562,685.4196)">
-							
-								<path id="path12824" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" stroke-linejoin="round" d="
-								M0,0l2.068,4.284"/>
-						</g>
-						<g id="g12826" transform="translate(543.5091,683.9897)">
-							
-								<path id="path12828" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" stroke-linejoin="round" d="
-								M0,0l2.316,4.147"/>
-						</g>
-						<g id="g12830" transform="translate(545.9397,682.4793)">
-							
-								<path id="path12832" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" stroke-linejoin="round" d="
-								M0,0l2.341,3.655"/>
-						</g>
-						<g id="g12834" transform="translate(548.0192,680.4244)">
-							
-								<path id="path12836" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" stroke-linejoin="round" d="
-								M0,0l2.597,3.556"/>
-						</g>
-						<g id="g12838" transform="translate(550.2288,678.5536)">
-							
-								<path id="path12840" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" stroke-linejoin="round" d="
-								M0,0l2.596,3.127"/>
-						</g>
-						<g id="g12842" transform="translate(552.1964,676.3773)">
-							
-								<path id="path12844" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" stroke-linejoin="round" d="
-								M0,0l2.57,2.727"/>
-						</g>
-						<g id="g12846" transform="translate(554.097,674.1251)">
-							
-								<path id="path12848" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" stroke-linejoin="round" d="
-								M0,0l2.31,2.161"/>
-						</g>
-						<g id="g12850" transform="translate(555.7122,671.6192)">
-							
-								<path id="path12852" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" stroke-linejoin="round" d="
-								M0,0l2.291,1.878"/>
-						</g>
-						<g id="g12854" transform="translate(557.2058,669.0284)">
-							
-								<path id="path12856" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" stroke-linejoin="round" d="
-								M0,0l2.014,1.446"/>
-						</g>
-						<g id="g12858" transform="translate(558.4183,666.267)">
-							
-								<path id="path12860" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" stroke-linejoin="round" d="
-								M0,0l1.861,1.159"/>
-						</g>
-						<g id="g12862" transform="translate(559.4672,663.4446)">
-							
-								<path id="path12864" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" stroke-linejoin="round" d="
-								M0,0l1.794,0.957"/>
-						</g>
-						<g id="g12866" transform="translate(560.4236,660.6049)">
-							
-								<path id="path12868" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" stroke-linejoin="round" d="
-								M0,0l1.534,0.689"/>
-						</g>
-						<g id="g12870" transform="translate(561.2082,657.7136)">
-							
-								<path id="path12872" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" stroke-linejoin="round" d="
-								M0,0l1.413,0.522"/>
-						</g>
-						<g id="g12874" transform="translate(561.969,654.8264)">
-							
-								<path id="path12876" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" stroke-linejoin="round" d="
-								M0,0l1.359,0.397"/>
-						</g>
-						<g id="g12878" transform="translate(562.4879,651.8766)">
-							
-								<path id="path12880" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" stroke-linejoin="round" d="
-								M0,0l1.278,0.281"/>
-						</g>
-						<g id="g12882" transform="translate(562.9312,648.9165)">
-							
-								<path id="path12884" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" stroke-linejoin="round" d="
-								M0,0l1.231,0.182"/>
-						</g>
-						<g id="g12886" transform="translate(563.2556,645.9365)">
-							
-								<path id="path12888" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" stroke-linejoin="round" d="
-								M0,0l1.288,0.1"/>
-						</g>
-						<g id="g12890" transform="translate(563.6444,642.9367)">
-							
-								<path id="path12892" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" stroke-linejoin="round" d="
-								M0,0l1.161,0.009"/>
-						</g>
-						<g id="g12894" transform="translate(548.4289,604.2765)">
-							<path id="path12896" inkscape:connector-curvature="0" fill="none" stroke="#918F90" stroke-width="0.475" d="M0,0h5.63
-								 M-76.225,0.888h13.057 M7.682,0l12.506,0.046 M-17.734-214.947l-5.451-6.279h-9.398l-5.45,6.279
-								c-10.659-4.082-18.233-14.409-18.233-26.504c0-15.677,12.705-28.384,28.381-28.384c15.675,0,28.381,12.708,28.381,28.384
-								C0.497-229.356-7.076-219.029-17.734-214.947z M7.704-244.179c0.178,1.05,0.251,2.122,0.23,3.202l-0.191,2.227
-								c-0.283,1.84-0.858,3.666-1.777,5.414c-0.627,1.187-1.381,2.255-2.218,3.226l-2.919-2.598
-								c0.634-0.739,1.207-1.547,1.681-2.448c0.649-1.224,1.066-2.509,1.297-3.798l0.198-2.475
-								c-0.008-0.547-0.059-1.298-0.145-1.983L7.704-244.179L7.704-244.179z M0.867-232.674l2.88,2.563 M1.46-233.505l3.135,2.358
-								 M1.997-234.365l3.359,2.116 M2.59-235.196l3.432,1.788 M2.935-236.154l3.655,1.532 M3.909-239.047l3.765,0.565
-								 M3.947-240.209l3.81,0.211 M3.987-241.37l3.854-0.147 M3.92-242.378l3.816-0.46 M-63.477-244.179
-								c-0.179,1.05-0.252,2.122-0.231,3.202l0.193,2.227c0.28,1.84,0.855,3.666,1.777,5.413c0.626,1.188,1.379,2.256,2.217,3.227
-								l2.92-2.598c-0.638-0.739-1.206-1.547-1.684-2.448c-0.646-1.224-1.065-2.509-1.295-3.798l-0.2-2.475
-								c0.01-0.547,0.062-1.298,0.146-1.983L-63.477-244.179L-63.477-244.179z M-56.641-232.674l-2.881,2.563 M-57.233-233.505
-								l-3.136,2.358 M-57.771-234.365l-3.361,2.116 M-58.364-235.196l-3.432,1.788 M-58.711-236.154l-3.653,1.532 M-59.683-239.047
-								l-3.762,0.565 M-59.721-240.209l-3.809,0.211 M-59.76-241.37l-3.855-0.147 M-59.695-242.378l-3.812-0.46 M-22.557-149.859
-								c0,2.941-2.386,5.327-5.327,5.327c-2.941,0-5.323-2.386-5.323-5.327c0-2.943,2.383-5.325,5.323-5.325
-								C-24.943-155.184-22.557-152.802-22.557-149.859z M-5.748-193.799h-13.148v31.957h13.148V-193.799z M-50.019-193.799h13.147
-								v31.957h-13.147V-193.799z M-17.734-150.336l-5.452-6.282h-9.398l-5.45,6.282c-10.659-4.083-18.233-14.408-18.233-26.504
-								c0-15.677,12.705-28.385,28.381-28.385c15.675,0,28.381,12.708,28.381,28.385C0.497-164.744-7.076-154.419-17.734-150.336
-								L-17.734-150.336z"/>
-						</g>
-						<g id="g12898" transform="translate(533.5267,388.5057)">
-							<path id="path12900" inkscape:connector-curvature="0" fill="#FFFFFF" d="M0,0c0,7.173-5.812,12.984-12.982,12.984
-								c-7.17,0-12.982-5.81-12.982-12.984c0-7.169,5.812-12.982,12.982-12.982C-5.812-12.982,0-7.169,0,0"/>
-						</g>
-						<g id="g12902" transform="translate(533.5267,388.5057)">
-							<path id="path12904" inkscape:connector-curvature="0" fill="none" stroke="#918F90" stroke-width="0.475" d="M0,0
-								c0,7.173-5.812,12.984-12.982,12.984c-7.17,0-12.982-5.81-12.982-12.984c0-7.169,5.812-12.982,12.982-12.982
-								C-5.812-12.982,0-7.169,0,0z"/>
-						</g>
-						<g id="g12906" transform="translate(507.634,409.778)">
-							<path id="path12908" inkscape:connector-curvature="0" fill="#FFFFFF" d="M0,0c0,2.94-2.384,5.324-5.324,5.324
-								c-2.942,0-5.327-2.384-5.327-5.324c0-2.942,2.385-5.328,5.327-5.328C-2.383-5.328,0-2.942,0,0"/>
-						</g>
-						<g id="g12910" transform="translate(507.634,409.778)">
-							<path id="path12912" inkscape:connector-curvature="0" fill="none" stroke="#918F90" stroke-width="0.475" d="M0,0
-								c0,2.94-2.384,5.324-5.324,5.324c-2.942,0-5.327-2.384-5.327-5.324c0-2.942,2.385-5.328,5.327-5.328
-								C-2.383-5.328,0-2.942,0,0z"/>
-						</g>
-						<g id="g12914" transform="translate(507.536,410.4772)">
-							<path id="path12916" inkscape:connector-curvature="0" fill="#FFFFFF" d="M0,0c0,2.502-2.028,4.527-4.525,4.527
-								c-2.501,0-4.529-2.025-4.529-4.527c0-2.5,2.028-4.527,4.529-4.527C-2.028-4.527,0-2.5,0,0"/>
-						</g>
-						<g id="g12918" transform="translate(507.536,410.4772)">
-							<path id="path12920" inkscape:connector-curvature="0" fill="none" stroke="#918F90" stroke-width="0.475" d="M0,0
-								c0,2.502-2.028,4.527-4.525,4.527c-2.501,0-4.529-2.025-4.529-4.527c0-2.5,2.028-4.527,4.529-4.527C-2.028-4.527,0-2.5,0,0z"
-								/>
-						</g>
-						<g id="g12922" transform="translate(503.2357,416.8026)">
-							<path id="path12924" inkscape:connector-curvature="0" fill="#FFFFFF" d="M0,0C0,2.94-2.386,5.325-5.328,5.325
-								c-2.94,0-5.324-2.384-5.324-5.325c0-2.941,2.384-5.327,5.324-5.327C-2.386-5.327,0-2.942,0,0"/>
-						</g>
-						<g id="g12926" transform="translate(503.2357,416.8026)">
-							<path id="path12928" inkscape:connector-curvature="0" fill="none" stroke="#918F90" stroke-width="0.475" d="M0,0
-								C0,2.94-2.386,5.325-5.328,5.325c-2.94,0-5.324-2.384-5.324-5.325c0-2.941,2.384-5.327,5.324-5.327C-2.386-5.327,0-2.942,0,0
-								z"/>
-						</g>
-						<g id="g12930" transform="translate(514.1355,405.8986)">
-							<path id="path12932" inkscape:connector-curvature="0" fill="#FFFFFF" d="M0,0c0,2.942-2.383,5.325-5.323,5.325
-								c-2.942,0-5.327-2.383-5.327-5.325c0-2.941,2.385-5.325,5.327-5.325C-2.383-5.325,0-2.941,0,0"/>
-						</g>
-						<g id="g12934" transform="translate(514.1355,405.8986)">
-							<path id="path12936" inkscape:connector-curvature="0" fill="none" stroke="#918F90" stroke-width="0.475" d="M0,0
-								c0,2.942-2.383,5.325-5.323,5.325c-2.942,0-5.327-2.383-5.327-5.325c0-2.941,2.385-5.325,5.327-5.325
-								C-2.383-5.325,0-2.941,0,0z M-15.478,0l0.002,0.003 M-14.213,1.267l0.003,0.001 M-15.476,0.003l1.263,1.264 M-16.982,2.545
-								l1.431,1.083 M-13.158-1.277l1.082,1.43"/>
-						</g>
-						<g id="g12938" transform="translate(520.5447,391.5013)">
-							<path id="path12940" inkscape:connector-curvature="0" fill="#FFFFFF" d="M0,0c-12.683,0-24.787-1.831-35.864-5.149
-								c0.552-1.62,1.137-3.2,1.768-4.731C-24.767-17.645-12.912-22.302,0-22.302c12.914,0,24.767,4.657,34.098,12.422
-								c0.629,1.531,1.218,3.111,1.766,4.731C24.787-1.831,12.684,0,0,0"/>
-						</g>
-						<g id="g12942" transform="translate(520.5447,391.5013)">
-							<path id="path12944" inkscape:connector-curvature="0" fill="none" stroke="#918F90" stroke-width="0.475" d="M0,0
-								c-12.683,0-24.787-1.831-35.864-5.149c0.552-1.62,1.137-3.2,1.768-4.731C-24.767-17.645-12.912-22.302,0-22.302
-								c12.914,0,24.767,4.657,34.098,12.422c0.629,1.531,1.218,3.111,1.766,4.731C24.787-1.831,12.684,0,0,0z"/>
-						</g>
-						<g id="g12946" transform="translate(528.7761,391.2272)">
-							<path id="path12948" inkscape:connector-curvature="0" fill="#FFFFFF" d="M0,0c-2.713,0.172-5.457,0.274-8.23,0.274
-								c-2.775,0-5.516-0.102-8.232-0.274c0.03-4.056-0.793-13.549-8.465-19.317c5.261-1.753,10.869-2.71,16.697-2.71
-								c5.827,0,11.435,0.957,16.697,2.711C0.796-13.547-0.031-4.054,0,0"/>
-						</g>
-						<g id="g12950" transform="translate(528.7761,391.2272)">
-							<path id="path12952" inkscape:connector-curvature="0" fill="none" stroke="#918F90" stroke-width="0.475" d="M0,0
-								c-2.713,0.172-5.457,0.274-8.23,0.274c-2.775,0-5.516-0.102-8.232-0.274c0.03-4.056-0.793-13.549-8.465-19.317
-								c5.261-1.753,10.869-2.71,16.697-2.71c5.827,0,11.435,0.957,16.697,2.711C0.796-13.547-0.031-4.054,0,0z"/>
-						</g>
-						<path id="path12954" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="
-							M526.22,391.378h-11.352v-20.057h11.352V391.378z"/>
-						<g id="g12956" transform="translate(492.2521,360.6047)">
-							<path id="path12958" inkscape:connector-curvature="0" fill="#FFFFFF" d="M0,0c0.663-8.54,5.098-16.015,11.648-20.765
-								c1.663,2.181,2.663,4.895,2.663,7.85c0,7.172-5.814,12.983-12.984,12.983C0.88,0.068,0.436,0.046,0,0"/>
-						</g>
-						<g id="g12960" transform="translate(492.2521,360.6047)">
-							<path id="path12962" inkscape:connector-curvature="0" fill="none" stroke="#918F90" stroke-width="0.475" d="M0,0
-								c0.663-8.54,5.098-16.015,11.648-20.765c1.663,2.181,2.663,4.895,2.663,7.85c0,7.172-5.814,12.983-12.984,12.983
-								C0.88,0.068,0.436,0.046,0,0z"/>
-						</g>
-						<g id="g12964" transform="translate(509.8394,337.7815)">
-							<path id="path12966" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="M0,0
-								l-2.243,0.968c-1.109-4.159-3.862-5.334-6.191-5.334c-2.33,0-6.492,2.998-6.492,7.325c0,4.327,3.162,7.82,7.82,7.82
-								c4.661,0,7.492-3.994,7.492-7.655c0-3.663-1.83-6.99-1.83-6.99l-1.961,1.948"/>
-						</g>
-						<g id="g12968" transform="translate(507.5962,338.7494)">
-							<path id="path12970" inkscape:connector-curvature="0" fill="#FFFFFF" d="M0,0l2.243-0.968L0.8-4.835l-2.113,1.949L0,0z"/>
-						</g>
-						<g id="g12972" transform="translate(507.5962,338.7494)">
-							<path id="path12974" inkscape:connector-curvature="0" fill="none" stroke="#918F90" stroke-width="0.475" d="M0,0
-								l2.243-0.968L0.8-4.835l-2.113,1.949L0,0z"/>
-						</g>
-						<g id="g12976" transform="translate(509.231,335.8223)">
-							<path id="path12978" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="M0,0
-								l-2.087,1.498"/>
-						</g>
-						<g id="g12980" transform="translate(540.2367,346.3808)">
-							<path id="path12982" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="M0,0
-								l4.186,6.935"/>
-						</g>
-						<g id="g12984" transform="translate(540.9681,345.6494)">
-							<path id="path12986" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="M0,0
-								l4.187,6.935"/>
-						</g>
-						<g id="g12988" transform="translate(541.6995,344.918)">
-							<path id="path12990" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#918F90" stroke-width="0.475" d="M0,0
-								l4.186,6.936"/>
-						</g>
-						<g id="g12992" transform="translate(547.1675,353.3158)">
-							<path id="path12994" inkscape:connector-curvature="0" fill="#FFFFFF" d="M0,0c0,1.515-1.23,2.745-2.745,2.745
-								c-1.515,0-2.743-1.23-2.743-2.745c0-1.516,1.228-2.744,2.743-2.744C-1.231-2.744,0-1.516,0,0"/>
-						</g>
-						<g id="g12996" transform="translate(547.1675,353.3158)">
-							<path id="path12998" inkscape:connector-curvature="0" fill="none" stroke="#918F90" stroke-width="0.475" d="M0,0
-								c0,1.515-1.23,2.745-2.745,2.745c-1.515,0-2.743-1.23-2.743-2.745c0-1.516,1.228-2.744,2.743-2.744C-1.231-2.744,0-1.516,0,0
-								z"/>
-						</g>
-						<g id="g13000" transform="translate(542.9819,346.3808)">
-							<path id="path13002" inkscape:connector-curvature="0" fill="#FFFFFF" d="M0,0c0,1.517-1.228,2.745-2.745,2.745
-								C-4.261,2.744-5.49,1.517-5.49,0c0-1.516,1.229-2.744,2.745-2.744C-1.228-2.744,0-1.516,0,0"/>
-						</g>
-						<g id="g13004" transform="translate(542.9819,346.3808)">
-							<path id="path13006" inkscape:connector-curvature="0" fill="none" stroke="#918F90" stroke-width="0.475" d="M0,0
-								c0,1.517-1.228,2.745-2.745,2.745C-4.261,2.744-5.49,1.517-5.49,0c0-1.516,1.229-2.744,2.745-2.744C-1.228-2.744,0-1.516,0,0
-								z M-32.943,242.219v-7.066c1.951,0,3.532,1.581,3.532,3.533C-29.411,240.636-30.992,242.219-32.943,242.219L-32.943,242.219z
-								 M-11.93,242.219v-7.066c-1.951,0-3.53,1.581-3.53,3.533C-15.46,240.636-13.881,242.219-11.93,242.219L-11.93,242.219z
-								 M9.212,170.361h-21.625v8.62c-2.025-1.265-5.75-2.116-10.023-2.116c-4.273,0-7.999,0.851-10.023,2.116v-8.62h-20.672
-								c-3.677,0-6.658-2.98-6.658-6.655v-0.423v-2.002v-13.656l9.588-18.855c8.33,4.615,18.025,6.541,20.916,6.768
-								c0.217-3.597,3.193-6.449,6.845-6.449c3.651,0,6.627,2.852,6.844,6.449c4.426-0.237,15.748-3.558,20.919-6.768l10.546,19.414
-								v13.097v2.082v0.343C15.869,167.382,12.888,170.361,9.212,170.361z M-58.305,143.989l2.809,2.811v3.591h1.836v11.518h-6.01"
-								/>
+							<path id="path12548" d="m0 0l-2.591-0.648-0.266 1.062 2.593 0.648 0.264-1.062z" stroke="#918F90" stroke-width=".475" fill="none"/>
+						</g>
+						<g id="g12550" transform="translate(529.74 477.13)">
+							<path id="path12552" d="m0 0l2.595-0.647 0.265 1.062-2.593 0.648-0.267-1.063z" fill="#fff"/>
+						</g>
+						<g id="g12554" transform="translate(529.74 477.13)">
+							<path id="path12556" d="m0 0l2.595-0.647 0.265 1.062-2.593 0.648-0.267-1.063z" stroke="#918F90" stroke-width=".475" fill="none"/>
+						</g>
+						<g id="g12558" transform="translate(530 478.19)">
+							<path id="path12560" d="m0 0l2.593-0.648 0.264 1.065-2.59 0.649-0.267-1.066z" fill="#fff"/>
+						</g>
+						<g id="g12562" transform="translate(530 478.19)">
+							<path id="path12564" d="m0 0l2.593-0.648 0.264 1.065-2.59 0.649-0.267-1.066z" stroke="#918F90" stroke-width=".475" fill="none"/>
+						</g>
+						<g id="g12566" transform="translate(530.27 479.26)">
+							<path id="path12568" d="m0 0l2.59-0.648 0.267 1.066-2.591 0.646-0.266-1.064z" fill="#fff"/>
+						</g>
+						<g id="g12570" transform="translate(530.27 479.26)">
+							<path id="path12572" d="m0 0l2.59-0.648 0.267 1.066-2.591 0.646-0.266-1.064z" stroke="#918F90" stroke-width=".475" fill="none"/>
+						</g>
+						<g id="g12574" transform="translate(530.54 480.32)">
+							<path id="path12576" d="m0 0l2.591-0.648 0.266 1.062-2.591 0.648-0.266-1.062z" fill="#fff"/>
+						</g>
+						<g id="g12578" transform="translate(530.54 480.32)">
+							<path id="path12580" d="m0 0l2.591-0.648 0.266 1.062-2.591 0.648-0.266-1.062zm17.762-5.169l-3.278-6.311c-5.359 2.969-11.287 4.827-15.603 5.833l1.385 6.709" stroke="#918F90" stroke-width=".475" fill="none"/>
+						</g>
+						<g id="g12582" transform="translate(520.71 305.77)">
+							<path id="path12584" d="m0 0c-3.435 0-6.472-1.671-8.368-4.235h-3.976v-18.215h9.074v0.009c0 1.805 1.462 3.268 3.27 3.268 1.804 0 3.267-1.463 3.267-3.268v-0.009h9.076v18.215h-3.974c-1.9 2.564-4.936 4.235-8.369 4.235" fill="#fff"/>
+						</g>
+						<g id="g12586" transform="translate(520.71 305.77)">
+								<path id="path12588" stroke-linejoin="round" d="m0 0c-3.435 0-6.472-1.671-8.368-4.235h-3.976v-18.215h9.074v0.009c0 1.805 1.462 3.268 3.27 3.268 1.804 0 3.267-1.463 3.267-3.268v-0.009h9.076v18.215h-3.974c-1.9 2.564-4.936 4.235-8.369 4.235z" stroke="#918F90" stroke-width=".95" fill="none"/>
+						</g>
+						<g id="g12590" transform="translate(513.81 298.91)">
+								<path id="path12592" stroke-linejoin="round" d="m0 0c0 1.601-1.302 2.9-2.902 2.9h-2.811v-5.806h2.811c1.6 0 2.902 1.302 2.902 2.906zm0.273-12.687c0 1.603-1.301 2.903-2.903 2.903h-2.811v-5.806h2.811c1.602 0 2.903 1.299 2.903 2.903zm13.25 12.41c0-1.604 1.299-2.903 2.905-2.903h2.818v5.805h-2.818c-1.606 0-2.905-1.299-2.905-2.902zm0.279-12.69c0-1.605 1.3-2.901 2.904-2.901h2.82v5.802h-2.82c-1.604 0.001-2.904-1.297-2.904-2.901z" stroke="#918F90" stroke-width=".475" fill="none"/>
+						</g>
+						<g id="g12594" transform="translate(520.71 305.77)">
+							<path id="path12596" d="m0 0c-3.435 0-6.472-1.671-8.368-4.235h-3.976v-18.215h9.074v0.009c0 1.805 1.462 3.268 3.27 3.268 1.804 0 3.267-1.463 3.267-3.268v-0.009h9.076v18.215h-3.974c-1.9 2.564-4.936 4.235-8.369 4.235zm-6.903-6.86c0 1.602-1.302 2.901-2.902 2.901h-2.812v-5.807h2.812c1.6 0 2.902 1.302 2.902 2.906zm0.273-12.687c0 1.603-1.301 2.904-2.903 2.904h-2.811v-5.807h2.811c1.602 0 2.903 1.299 2.903 2.903zm13.25 12.411c0-1.604 1.3-2.904 2.905-2.904h2.818v5.805h-2.818c-1.605 0-2.905-1.299-2.905-2.901zm0.279-12.69c0-1.606 1.3-2.902 2.904-2.902h2.82v5.804h-2.82c-1.604 0-2.904-1.298-2.904-2.902z" stroke="#918F90" stroke-width=".475" fill="none"/>
+						</g>
+						<path id="path12598" d="m531.31 605.13h4.423v-1.022h-4.423v1.02z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12600" d="m531.31 604.1h4.423v-1.019h-4.423v1.02z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12602" d="m531.31 603.09h4.423v-1.02h-4.423v1.02z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12604" d="m527.99 605.13h3.324v-1.022h-3.324v1.02z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12606" d="m527.99 604.1h3.324v-1.019h-3.324v1.02z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12608" d="m527.99 603.09h3.324v-1.02h-3.324v1.02z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12610" d="m531.31 602.07h4.423v-1.019h-4.423v1.02z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12612" d="m527.99 602.07h3.324v-1.019h-3.324v1.02z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12614" d="m531.31 601.05h4.423v-1.02h-4.423v1.02z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12616" d="m527.99 601.05h3.324v-1.02h-3.324v1.02z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12618" d="m531.31 600.03h4.423v-1.02h-4.423v1.02z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12620" d="m527.99 600.03h3.324v-1.02h-3.324v1.02z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12622" d="m535.73 605.13h3.323v-1.022h-3.323v1.02z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12624" d="m535.73 604.1h3.323v-1.019h-3.323v1.02z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12626" d="m535.73 603.09h3.323v-1.02h-3.323v1.02z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12628" d="m535.73 602.07h3.323v-1.019h-3.323v1.02z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12630" d="m535.73 601.05h3.323v-1.02h-3.323v1.02z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12632" d="m535.73 600.03h3.323v-1.02h-3.323v1.02z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12634" d="m527.99 605.11h11.072v3.006h-11.072v-3.01z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12636" d="m506.16 605.13h4.423v-1.022h-4.423v1.02z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12638" d="m506.16 604.1h4.423v-1.019h-4.423v1.02z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12640" d="m506.16 603.09h4.423v-1.02h-4.423v1.02z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12642" d="m502.84 605.13h3.324v-1.022h-3.324v1.02z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12644" d="m502.84 604.1h3.324v-1.019h-3.324v1.02z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12646" d="m502.84 603.09h3.324v-1.02h-3.324v1.02z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12648" d="m506.16 602.07h4.423v-1.019h-4.423v1.02z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12650" d="m502.84 602.07h3.324v-1.019h-3.324v1.02z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12652" d="m506.16 601.05h4.423v-1.02h-4.423v1.02z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12654" d="m502.84 601.05h3.324v-1.02h-3.324v1.02z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12656" d="m506.16 600.03h4.423v-1.02h-4.423v1.02z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12658" d="m502.84 600.03h3.324v-1.02h-3.324v1.02z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12660" d="m510.59 605.13h3.323v-1.022h-3.323v1.02z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12662" d="m510.59 604.1h3.323v-1.019h-3.323v1.02z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12664" d="m510.59 603.09h3.323v-1.02h-3.323v1.02z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12666" d="m510.59 602.07h3.323v-1.019h-3.323v1.02z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12668" d="m510.59 601.05h3.323v-1.02h-3.323v1.02z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12670" d="m510.59 600.03h3.323v-1.02h-3.323v1.02z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12672" d="m502.84 605.11h11.07v3.006h-11.07v-3.01z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12674" d="m503.2 586.84h-5.275v-15.34h5.275v15.34z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<path id="path12676" d="m542.88 586.84h-5.275v-15.34h5.275v15.34z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<g id="g12678" transform="translate(520.4 588.16)">
+							<path id="path12680" d="m0 0c-1.312 0-2.379 1.06-2.505 2.416-1.674-0.357-3.11-1.053-4.103-1.974h-3.75v-8.488h1.185v-4.215c0-2.461 4.173-4.458 9.323-4.458s9.327 1.997 9.327 4.458v4.215h0.88v8.488h-3.748c-0.993 0.921-2.429 1.617-4.102 1.974-0.128-1.356-1.197-2.416-2.507-2.416" fill="#fff"/>
+						</g>
+						<g id="g12682" transform="translate(520.4 588.16)">
+								<path id="path12684" stroke-linejoin="round" d="m0 0c-1.312 0-2.379 1.06-2.505 2.416-1.674-0.357-3.11-1.053-4.103-1.974h-3.75v-8.488h1.185v-4.215c0-2.461 4.173-4.458 9.323-4.458s9.327 1.997 9.327 4.458v4.215h0.88v8.488h-3.748c-0.993 0.921-2.429 1.617-4.102 1.974-0.128-1.356-1.197-2.416-2.507-2.416z" stroke="#918F90" stroke-width=".95" fill="none"/>
+						</g>
+						<g id="g12686" transform="translate(539.06 608.12)">
+							<path id="path12688" d="m0 0h9.371v-8.303l4.355 0.023v4.438l12.504 0.046c-0.705 14.965-2.422 43.721-3.54 48.377-4.914 20.452-21.644 30.834-41.163 30.834-22.13 0-36.059-11.508-41.199-30.86-2.036-10.023-3.571-32.138-3.853-47.509h13.057v-2.014h7.669v4.968h6.581m-14.722-18.624h5.573c0-3.24 0.255-13.303 6.833-23.108 3.185 1.3 9.662 5.052 20.024 5.052 10.365 0 15.639-3.373 20.025-5.052 2.15 3.607 6.837 10.35 6.837 23.108h5.868m-34.176 35.593c-0.055 0.159-0.093 0.328-0.093 0.505 0 0.85 0.69 1.541 1.539 1.541 0.853 0 1.541-0.691 1.541-1.541 0-0.851-0.688-1.54-1.541-1.54-0.304 0-0.586 0.09-0.823 0.242l-1.521-2.479c0.684-0.425 1.482-0.682 2.344-0.682 2.462 0 4.457 1.997 4.457 4.459 0 2.461-1.995 4.458-4.457 4.458-2.46 0-4.455-1.997-4.455-4.458 0-0.741 0.197-1.43 0.516-2.044l2.493 1.539zm-0.072 0.44l-2.915-0.124m3.02 0.775l-2.685 1.114m3.01-0.51l-1.909 2.082m3.16-1.7l0.29 2.844m0.321-3.121l1.502 2.515m-0.988-2.937l2.384 1.621m-2.134-2.245l2.843 0.461m-3.331-1.792l2.04-2.105m-2.598 1.768l0.965-2.774m-1.618 2.612l-0.29-2.835" stroke="#918F90" stroke-width=".475" fill="none"/>
+						</g>
+						<g id="g12690" transform="translate(476.53 625.27)">
+								<path id="path12692" stroke-linejoin="round" d="m0 0c0 27.473 4.1 42.76 12.904 52.087 7.47 7.912 17.952 13.78 31.155 13.78 13.204 0 23.686-5.868 31.154-13.78 8.801-9.327 12.901-24.614 12.901-52.087h1.032c0 31.782-5.049 48.162-13.206 57.2s-19.433 12.8-31.882 12.8c-12.452 0-23.724-3.762-31.884-12.8-8.158-9.038-13.205-25.418-13.205-57.2h1.031z" stroke="#918F90" stroke-width=".475" fill="none"/>
+						</g>
+						<g id="g12694" transform="translate(515.56 690.85)">
+								<path id="path12696" stroke-linejoin="round" d="m0 0l-0.423 4.121" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						</g>
+						<g id="g12698" transform="translate(517.76 690.98)">
+								<path id="path12700" stroke-linejoin="round" d="m0 0l-0.236 4.146" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						</g>
+						<g id="g12702" transform="translate(512.82 690.41)">
+								<path id="path12704" stroke-linejoin="round" d="m0 0l-0.685 4.279" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						</g>
+						<g id="g12706" transform="translate(510.13 689.7)">
+								<path id="path12708" stroke-linejoin="round" d="m0 0l-0.97 4.41" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						</g>
+						<g id="g12710" transform="translate(507.4 689.13)">
+								<path id="path12712" stroke-linejoin="round" d="m0 0l-1.177 4.183" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						</g>
+						<g id="g12714" transform="translate(504.79 688.11)">
+								<path id="path12716" stroke-linejoin="round" d="m0 0l-1.446 4.188" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						</g>
+						<g id="g12718" transform="translate(502.19 687.02)">
+								<path id="path12720" stroke-linejoin="round" d="m0 0l-1.654 4.013" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						</g>
+						<g id="g12722" transform="translate(499.81 685.42)">
+								<path id="path12724" stroke-linejoin="round" d="m0 0l-2.068 4.284" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						</g>
+						<g id="g12726" transform="translate(497.35 683.99)">
+								<path id="path12728" stroke-linejoin="round" d="m0 0l-2.316 4.147" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						</g>
+						<g id="g12730" transform="translate(494.92 682.48)">
+								<path id="path12732" stroke-linejoin="round" d="m0 0l-2.341 3.655" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						</g>
+						<g id="g12734" transform="translate(492.85 680.42)">
+								<path id="path12736" stroke-linejoin="round" d="m0 0l-2.597 3.556" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						</g>
+						<g id="g12738" transform="translate(490.64 678.55)">
+								<path id="path12740" stroke-linejoin="round" d="m0 0l-2.597 3.127" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						</g>
+						<g id="g12742" transform="translate(488.67 676.38)">
+								<path id="path12744" stroke-linejoin="round" d="m0 0l-2.569 2.727" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						</g>
+						<g id="g12746" transform="translate(486.77 674.13)">
+								<path id="path12748" stroke-linejoin="round" d="m0 0l-2.309 2.161" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						</g>
+						<g id="g12750" transform="translate(485.15 671.62)">
+								<path id="path12752" stroke-linejoin="round" d="m0 0l-2.291 1.878" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						</g>
+						<g id="g12754" transform="translate(483.66 669.03)">
+								<path id="path12756" stroke-linejoin="round" d="m0 0l-2.014 1.446" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						</g>
+						<g id="g12758" transform="translate(482.45 666.27)">
+								<path id="path12760" stroke-linejoin="round" d="m0 0l-1.861 1.159" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						</g>
+						<g id="g12762" transform="translate(481.4 663.44)">
+								<path id="path12764" stroke-linejoin="round" d="m0 0l-1.794 0.957" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						</g>
+						<g id="g12766" transform="translate(480.44 660.6)">
+								<path id="path12768" stroke-linejoin="round" d="m0 0l-1.531 0.689" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						</g>
+						<g id="g12770" transform="translate(479.66 657.71)">
+								<path id="path12772" stroke-linejoin="round" d="m0 0l-1.414 0.522" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						</g>
+						<g id="g12774" transform="translate(478.9 654.83)">
+								<path id="path12776" stroke-linejoin="round" d="m0 0l-1.358 0.397" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						</g>
+						<g id="g12778" transform="translate(478.38 651.88)">
+								<path id="path12780" stroke-linejoin="round" d="m0 0l-1.278 0.281" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						</g>
+						<g id="g12782" transform="translate(477.93 648.92)">
+								<path id="path12784" stroke-linejoin="round" d="m0 0l-1.229 0.182" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						</g>
+						<g id="g12786" transform="translate(477.61 645.94)">
+								<path id="path12788" stroke-linejoin="round" d="m0 0l-1.287 0.1" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						</g>
+						<g id="g12790" transform="translate(477.22 642.94)">
+								<path id="path12792" stroke-linejoin="round" d="m0 0l-1.159 0.009" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						</g>
+						<g id="g12794" transform="translate(525.31 690.85)">
+								<path id="path12796" stroke-linejoin="round" d="m0 0l0.424 4.121" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						</g>
+						<g id="g12798" transform="translate(523.11 690.98)">
+								<path id="path12800" stroke-linejoin="round" d="m0 0l0.231 4.146" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						</g>
+						<g id="g12802" transform="translate(528.04 690.41)">
+								<path id="path12804" stroke-linejoin="round" d="m0 0l0.685 4.279" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						</g>
+						<g id="g12806" transform="translate(530.73 689.7)">
+								<path id="path12808" stroke-linejoin="round" d="m0 0l0.969 4.41" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						</g>
+						<g id="g12810" transform="translate(533.46 689.13)">
+								<path id="path12812" stroke-linejoin="round" d="m0 0l1.177 4.183" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						</g>
+						<g id="g12814" transform="translate(536.08 688.11)">
+								<path id="path12816" stroke-linejoin="round" d="m0 0l1.445 4.188" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						</g>
+						<g id="g12818" transform="translate(538.68 687.02)">
+								<path id="path12820" stroke-linejoin="round" d="m0 0l1.652 4.013" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						</g>
+						<g id="g12822" transform="translate(541.06 685.42)">
+								<path id="path12824" stroke-linejoin="round" d="m0 0l2.068 4.284" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						</g>
+						<g id="g12826" transform="translate(543.51 683.99)">
+								<path id="path12828" stroke-linejoin="round" d="m0 0l2.316 4.147" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						</g>
+						<g id="g12830" transform="translate(545.94 682.48)">
+								<path id="path12832" stroke-linejoin="round" d="m0 0l2.341 3.655" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						</g>
+						<g id="g12834" transform="translate(548.02 680.42)">
+								<path id="path12836" stroke-linejoin="round" d="m0 0l2.597 3.556" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						</g>
+						<g id="g12838" transform="translate(550.23 678.55)">
+								<path id="path12840" stroke-linejoin="round" d="m0 0l2.596 3.127" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						</g>
+						<g id="g12842" transform="translate(552.2 676.38)">
+								<path id="path12844" stroke-linejoin="round" d="m0 0l2.57 2.727" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						</g>
+						<g id="g12846" transform="translate(554.1 674.13)">
+								<path id="path12848" stroke-linejoin="round" d="m0 0l2.31 2.161" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						</g>
+						<g id="g12850" transform="translate(555.71 671.62)">
+								<path id="path12852" stroke-linejoin="round" d="m0 0l2.291 1.878" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						</g>
+						<g id="g12854" transform="translate(557.21 669.03)">
+								<path id="path12856" stroke-linejoin="round" d="m0 0l2.014 1.446" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						</g>
+						<g id="g12858" transform="translate(558.42 666.27)">
+								<path id="path12860" stroke-linejoin="round" d="m0 0l1.861 1.159" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						</g>
+						<g id="g12862" transform="translate(559.47 663.44)">
+								<path id="path12864" stroke-linejoin="round" d="m0 0l1.794 0.957" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						</g>
+						<g id="g12866" transform="translate(560.42 660.6)">
+								<path id="path12868" stroke-linejoin="round" d="m0 0l1.534 0.689" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						</g>
+						<g id="g12870" transform="translate(561.21 657.71)">
+								<path id="path12872" stroke-linejoin="round" d="m0 0l1.413 0.522" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						</g>
+						<g id="g12874" transform="translate(561.97 654.83)">
+								<path id="path12876" stroke-linejoin="round" d="m0 0l1.359 0.397" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						</g>
+						<g id="g12878" transform="translate(562.49 651.88)">
+								<path id="path12880" stroke-linejoin="round" d="m0 0l1.278 0.281" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						</g>
+						<g id="g12882" transform="translate(562.93 648.92)">
+								<path id="path12884" stroke-linejoin="round" d="m0 0l1.231 0.182" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						</g>
+						<g id="g12886" transform="translate(563.26 645.94)">
+								<path id="path12888" stroke-linejoin="round" d="m0 0l1.288 0.1" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						</g>
+						<g id="g12890" transform="translate(563.64 642.94)">
+								<path id="path12892" stroke-linejoin="round" d="m0 0l1.161 0.009" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						</g>
+						<g id="g12894" transform="translate(548.43 604.28)">
+							<path id="path12896" d="m0 0h5.63m-81.855 0.888h13.057m70.85-0.888l12.506 0.046m-37.922-215l-5.451-6.279h-9.398l-5.45 6.279c-10.659-4.082-18.233-14.409-18.233-26.504 0-15.677 12.705-28.384 28.381-28.384 15.675 0 28.381 12.708 28.381 28.384 0.001 12.09-7.572 22.42-18.23 26.5zm25.438-29.23c0.178 1.05 0.251 2.122 0.23 3.202l-0.191 2.227c-0.283 1.84-0.858 3.666-1.777 5.414-0.627 1.187-1.381 2.255-2.218 3.226l-2.919-2.598c0.634-0.739 1.207-1.547 1.681-2.448 0.649-1.224 1.066-2.509 1.297-3.798l0.198-2.475c-0.008-0.547-0.059-1.298-0.145-1.983l3.844-0.76zm-6.837 11.51l2.88 2.563m-2.287-3.39l3.135 2.358m-2.598-3.22l3.359 2.116m-2.766-2.96l3.432 1.788m-3.087-2.74l3.655 1.532m-2.681-4.43l3.765 0.565m-3.727-1.73l3.81 0.211m-3.77-1.37l3.854-0.147m-3.921-0.86l3.816-0.46m-71.213-1.34c-0.179 1.05-0.252 2.122-0.231 3.202l0.193 2.227c0.28 1.84 0.855 3.666 1.777 5.413 0.626 1.188 1.379 2.256 2.217 3.227l2.92-2.598c-0.638-0.739-1.206-1.547-1.684-2.448-0.646-1.224-1.065-2.509-1.295-3.798l-0.2-2.475c0.01-0.547 0.062-1.298 0.146-1.983l-3.843-0.76zm6.836 11.51l-2.881 2.563m2.289-3.39l-3.136 2.358m2.598-3.22l-3.361 2.116m2.768-2.96l-3.432 1.788m3.085-2.74l-3.653 1.532m2.681-4.43l-3.762 0.565m3.724-1.73l-3.809 0.211m3.77-1.37l-3.855-0.147m3.92-0.86l-3.812-0.46m40.95 92.98c0 2.941-2.386 5.327-5.327 5.327s-5.323-2.386-5.323-5.327c0-2.943 2.383-5.325 5.323-5.325 2.941 0 5.327 2.38 5.327 5.32zm16.809-43.94h-13.148v31.957h13.148v-31.96zm-44.271 0h13.147v31.957h-13.147v-31.96zm32.285 43.46l-5.452-6.282h-9.398l-5.45 6.282c-10.659-4.083-18.233-14.408-18.233-26.504 0-15.677 12.705-28.385 28.381-28.385 15.675 0 28.381 12.708 28.381 28.385 0.002 12.1-7.571 22.42-18.229 26.5z" stroke="#918F90" stroke-width=".475" fill="none"/>
+						</g>
+						<g id="g12898" transform="translate(533.53 388.51)">
+							<path id="path12900" d="m0 0c0 7.173-5.812 12.984-12.982 12.984s-12.982-5.81-12.982-12.984c0-7.169 5.812-12.982 12.982-12.982s12.982 5.813 12.982 12.982" fill="#fff"/>
+						</g>
+						<g id="g12902" transform="translate(533.53 388.51)">
+							<path id="path12904" d="m0 0c0 7.173-5.812 12.984-12.982 12.984s-12.982-5.81-12.982-12.984c0-7.169 5.812-12.982 12.982-12.982s12.982 5.813 12.982 12.982z" stroke="#918F90" stroke-width=".475" fill="none"/>
+						</g>
+						<g id="g12906" transform="translate(507.63 409.78)">
+							<path id="path12908" d="m0 0c0 2.94-2.384 5.324-5.324 5.324-2.942 0-5.327-2.384-5.327-5.324 0-2.942 2.385-5.328 5.327-5.328 2.941 0 5.324 2.386 5.324 5.328" fill="#fff"/>
+						</g>
+						<g id="g12910" transform="translate(507.63 409.78)">
+							<path id="path12912" d="m0 0c0 2.94-2.384 5.324-5.324 5.324-2.942 0-5.327-2.384-5.327-5.324 0-2.942 2.385-5.328 5.327-5.328 2.941 0 5.324 2.386 5.324 5.328z" stroke="#918F90" stroke-width=".475" fill="none"/>
+						</g>
+						<g id="g12914" transform="translate(507.54 410.48)">
+							<path id="path12916" d="m0 0c0 2.502-2.028 4.527-4.525 4.527-2.501 0-4.529-2.025-4.529-4.527 0-2.5 2.028-4.527 4.529-4.527 2.497 0 4.525 2.027 4.525 4.527" fill="#fff"/>
+						</g>
+						<g id="g12918" transform="translate(507.54 410.48)">
+							<path id="path12920" d="m0 0c0 2.502-2.028 4.527-4.525 4.527-2.501 0-4.529-2.025-4.529-4.527 0-2.5 2.028-4.527 4.529-4.527 2.497 0 4.525 2.027 4.525 4.527z" stroke="#918F90" stroke-width=".475" fill="none"/>
+						</g>
+						<g id="g12922" transform="translate(503.24 416.8)">
+							<path id="path12924" d="m0 0c0 2.94-2.386 5.325-5.328 5.325-2.94 0-5.324-2.384-5.324-5.325s2.384-5.327 5.324-5.327c2.942 0 5.328 2.385 5.328 5.327" fill="#fff"/>
+						</g>
+						<g id="g12926" transform="translate(503.24 416.8)">
+							<path id="path12928" d="m0 0c0 2.94-2.386 5.325-5.328 5.325-2.94 0-5.324-2.384-5.324-5.325s2.384-5.327 5.324-5.327c2.942 0 5.328 2.385 5.328 5.327z" stroke="#918F90" stroke-width=".475" fill="none"/>
+						</g>
+						<g id="g12930" transform="translate(514.14 405.9)">
+							<path id="path12932" d="m0 0c0 2.942-2.383 5.325-5.323 5.325-2.942 0-5.327-2.383-5.327-5.325 0-2.941 2.385-5.325 5.327-5.325 2.94 0 5.323 2.384 5.323 5.325" fill="#fff"/>
+						</g>
+						<g id="g12934" transform="translate(514.14 405.9)">
+							<path id="path12936" d="m0 0c0 2.942-2.383 5.325-5.323 5.325-2.942 0-5.327-2.383-5.327-5.325 0-2.941 2.385-5.325 5.327-5.325 2.94 0 5.323 2.384 5.323 5.325zm-15.478 0l0.002 0.003m1.263 1.264l0.003 0.001m-1.266-1.265l1.263 1.264m-2.769 1.278l1.431 1.083m2.393-4.905l1.082 1.43" stroke="#918F90" stroke-width=".475" fill="none"/>
+						</g>
+						<g id="g12938" transform="translate(520.54 391.5)">
+							<path id="path12940" d="m0 0c-12.683 0-24.787-1.831-35.864-5.149 0.552-1.62 1.137-3.2 1.768-4.731 9.329-7.765 21.184-12.422 34.096-12.422 12.914 0 24.767 4.657 34.098 12.422 0.629 1.531 1.218 3.111 1.766 4.731-11.077 3.318-23.18 5.149-35.864 5.149" fill="#fff"/>
+						</g>
+						<g id="g12942" transform="translate(520.54 391.5)">
+							<path id="path12944" d="m0 0c-12.683 0-24.787-1.831-35.864-5.149 0.552-1.62 1.137-3.2 1.768-4.731 9.329-7.765 21.184-12.422 34.096-12.422 12.914 0 24.767 4.657 34.098 12.422 0.629 1.531 1.218 3.111 1.766 4.731-11.077 3.318-23.18 5.149-35.864 5.149z" stroke="#918F90" stroke-width=".475" fill="none"/>
+						</g>
+						<g id="g12946" transform="translate(528.78 391.23)">
+							<path id="path12948" d="m0 0c-2.713 0.172-5.457 0.274-8.23 0.274-2.775 0-5.516-0.102-8.232-0.274 0.03-4.056-0.793-13.549-8.465-19.317 5.261-1.753 10.869-2.71 16.697-2.71 5.827 0 11.435 0.957 16.697 2.711-7.671 5.769-8.498 15.262-8.467 19.316" fill="#fff"/>
+						</g>
+						<g id="g12950" transform="translate(528.78 391.23)">
+							<path id="path12952" d="m0 0c-2.713 0.172-5.457 0.274-8.23 0.274-2.775 0-5.516-0.102-8.232-0.274 0.03-4.056-0.793-13.549-8.465-19.317 5.261-1.753 10.869-2.71 16.697-2.71 5.827 0 11.435 0.957 16.697 2.711-7.671 5.769-8.498 15.262-8.467 19.316z" stroke="#918F90" stroke-width=".475" fill="none"/>
+						</g>
+						<path id="path12954" d="m526.22 391.38h-11.352v-20.057h11.352v20.06z" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						<g id="g12956" transform="translate(492.25 360.6)">
+							<path id="path12958" d="m0 0c0.663-8.54 5.098-16.015 11.648-20.765 1.663 2.181 2.663 4.895 2.663 7.85 0 7.172-5.814 12.983-12.984 12.983-0.447 0-0.891-0.022-1.327-0.068" fill="#fff"/>
+						</g>
+						<g id="g12960" transform="translate(492.25 360.6)">
+							<path id="path12962" d="m0 0c0.663-8.54 5.098-16.015 11.648-20.765 1.663 2.181 2.663 4.895 2.663 7.85 0 7.172-5.814 12.983-12.984 12.983-0.447 0-0.891-0.022-1.327-0.068z" stroke="#918F90" stroke-width=".475" fill="none"/>
+						</g>
+						<g id="g12964" transform="translate(509.84 337.78)">
+							<path id="path12966" d="m0 0l-2.243 0.968c-1.109-4.159-3.862-5.334-6.191-5.334-2.33 0-6.492 2.998-6.492 7.325s3.162 7.82 7.82 7.82c4.661 0 7.492-3.994 7.492-7.655 0-3.663-1.83-6.99-1.83-6.99l-1.961 1.948" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						</g>
+						<g id="g12968" transform="translate(507.6 338.75)">
+							<path id="path12970" d="m0 0l2.243-0.968-1.443-3.867-2.113 1.949 1.313 2.886z" fill="#fff"/>
+						</g>
+						<g id="g12972" transform="translate(507.6 338.75)">
+							<path id="path12974" d="m0 0l2.243-0.968-1.443-3.867-2.113 1.949 1.313 2.886z" stroke="#918F90" stroke-width=".475" fill="none"/>
+						</g>
+						<g id="g12976" transform="translate(509.23 335.82)">
+							<path id="path12978" d="m0 0l-2.087 1.498" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						</g>
+						<g id="g12980" transform="translate(540.24 346.38)">
+							<path id="path12982" d="m0 0l4.186 6.935" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						</g>
+						<g id="g12984" transform="translate(540.97 345.65)">
+							<path id="path12986" d="m0 0l4.187 6.935" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						</g>
+						<g id="g12988" transform="translate(541.7 344.92)">
+							<path id="path12990" d="m0 0l4.186 6.936" stroke="#918F90" stroke-width=".475" fill="#fff"/>
+						</g>
+						<g id="g12992" transform="translate(547.17 353.32)">
+							<path id="path12994" d="m0 0c0 1.515-1.23 2.745-2.745 2.745s-2.743-1.23-2.743-2.745c0-1.516 1.228-2.744 2.743-2.744 1.514 0 2.745 1.228 2.745 2.744" fill="#fff"/>
+						</g>
+						<g id="g12996" transform="translate(547.17 353.32)">
+							<path id="path12998" d="m0 0c0 1.515-1.23 2.745-2.745 2.745s-2.743-1.23-2.743-2.745c0-1.516 1.228-2.744 2.743-2.744 1.514 0 2.745 1.228 2.745 2.744z" stroke="#918F90" stroke-width=".475" fill="none"/>
+						</g>
+						<g id="g13000" transform="translate(542.98 346.38)">
+							<path id="path13002" d="m0 0c0 1.517-1.228 2.745-2.745 2.745-1.516-0.001-2.745-1.228-2.745-2.745 0-1.516 1.229-2.744 2.745-2.744 1.517 0 2.745 1.228 2.745 2.744" fill="#fff"/>
+						</g>
+						<g id="g13004" transform="translate(542.98 346.38)">
+							<path id="path13006" d="m0 0c0 1.517-1.228 2.745-2.745 2.745-1.516-0.001-2.745-1.228-2.745-2.745 0-1.516 1.229-2.744 2.745-2.744 1.517 0 2.745 1.228 2.745 2.744zm-32.943 242.22v-7.066c1.951 0 3.532 1.581 3.532 3.533 0 1.96-1.581 3.54-3.532 3.54zm21.013 0v-7.066c-1.951 0-3.53 1.581-3.53 3.533 0 1.96 1.579 3.54 3.53 3.54zm21.142-71.86h-21.625v8.62c-2.025-1.265-5.75-2.116-10.023-2.116s-7.999 0.851-10.023 2.116v-8.62h-20.672c-3.677 0-6.658-2.98-6.658-6.655v-16.081l9.588-18.855c8.33 4.615 18.025 6.541 20.916 6.768 0.217-3.597 3.193-6.449 6.845-6.449 3.651 0 6.627 2.852 6.844 6.449 4.426-0.237 15.748-3.558 20.919-6.768l10.546 19.414v15.522c0 3.69-2.981 6.67-6.657 6.67zm-67.517-26.37l2.809 2.811v3.591h1.836v11.518h-6.01" stroke="#918F90" stroke-width=".475" fill="none"/>
 						</g>
 					</g>
-				</g>
 			</g>
 			<g id="g13778">
-				<g>
 					<g id="g13780">
-						<g id="g15706" transform="translate(485.3981,498.352)">
-							<path id="path15708" inkscape:connector-curvature="0" fill="#231F20" d="M0,0v2.866c-0.47,0.091-0.799,0.331-0.799,0.909
-								v2.056c0,0.459,0.37,0.83,0.828,0.83H0.38C0.05,6.791-0.171,7.11-0.171,7.482c0,0.498,0.4,0.898,0.89,0.898
-								c0.491,0,0.888-0.4,0.888-0.898c0-0.373-0.217-0.691-0.548-0.82h0.337c0.462,0,0.829-0.37,0.829-0.83V3.776
-								c0-0.571-0.318-0.81-0.788-0.909V0H0"/>
+						<g id="g15706" transform="translate(485.4 498.35)">
+							<path id="path15708" d="m0 0v2.866c-0.47 0.091-0.799 0.331-0.799 0.909v2.056c0 0.459 0.37 0.83 0.828 0.83h0.351c-0.33 0.13-0.551 0.449-0.551 0.821 0 0.498 0.4 0.898 0.89 0.898 0.491 0 0.888-0.4 0.888-0.898 0-0.373-0.217-0.691-0.548-0.82h0.337c0.462 0 0.829-0.37 0.829-0.83v-2.056c0-0.571-0.318-0.81-0.788-0.909v-2.867h-1.437" fill="#231F20"/>
 						</g>
-						<g id="g15710" transform="translate(555.0745,498.352)">
-							<path id="path15712" inkscape:connector-curvature="0" fill="#231F20" d="M0,0l-0.291,2.818H-1.06l0.55,2.195h-0.55
-								l0.55,1.648h0.618C-0.221,6.791-0.44,7.11-0.44,7.482c0,0.498,0.399,0.898,0.888,0.898c0.499,0,0.889-0.4,0.889-0.898
-								c0-0.373-0.22-0.691-0.548-0.82h0.618l0.549-1.648H1.407l0.549-2.195H1.197L0.898,0H0"/>
+						<g id="g15710" transform="translate(555.07 498.35)">
+							<path id="path15712" d="m0 0l-0.291 2.818h-0.769l0.55 2.195h-0.55l0.55 1.648h0.618c-0.329 0.13-0.548 0.449-0.548 0.821 0 0.498 0.399 0.898 0.888 0.898 0.499 0 0.889-0.4 0.889-0.898 0-0.373-0.22-0.691-0.548-0.82h0.618l0.549-1.648h-0.549l0.549-2.195h-0.759l-0.299-2.819h-0.898" fill="#231F20"/>
 						</g>
-						<g id="g15714" transform="translate(550.7183,290.7256)">
-							<path id="path15716" inkscape:connector-curvature="0" fill="#231F20" d="M0,0l-0.288,2.814h-0.769l0.548,2.2h-0.548
-								l0.548,1.647H0.11c-0.32,0.129-0.548,0.45-0.548,0.817c0,0.491,0.4,0.9,0.888,0.9c0.498,0,0.888-0.409,0.888-0.9
-								c0-0.367-0.219-0.688-0.548-0.817h0.618l0.55-1.647h-0.55l0.55-2.2h-0.77L0.899,0H0"/>
+						<g id="g15714" transform="translate(550.72 290.73)">
+							<path id="path15716" d="m0 0l-0.288 2.814h-0.769l0.548 2.2h-0.548l0.548 1.647h0.619c-0.32 0.129-0.548 0.45-0.548 0.817 0 0.491 0.4 0.9 0.888 0.9 0.498 0 0.888-0.409 0.888-0.9 0-0.367-0.219-0.688-0.548-0.817h0.618l0.55-1.647h-0.55l0.55-2.2h-0.77l-0.289-2.814h-0.899" fill="#231F20"/>
 						</g>
-						<g id="g15718" transform="translate(490.4257,297.3684)">
-							<path id="path15720" inkscape:connector-curvature="0" fill="#231F20" d="M0,0h-0.341c0.327,0.136,0.555,0.459,0.555,0.829
-								c0,0.501-0.402,0.904-0.902,0.904c-0.498,0-0.902-0.403-0.902-0.904c0-0.37,0.229-0.693,0.555-0.829h-0.354
-								c-0.458,0-0.832-0.373-0.832-0.831v-2.082c0-0.58,0.326-0.824,0.804-0.917v-2.898h1.456v2.898
-								c0.474,0.098,0.792,0.341,0.792,0.916v2.082C0.831-0.373,0.46,0,0,0"/>
+						<g id="g15718" transform="translate(490.43 297.37)">
+							<path id="path15720" d="m0 0h-0.341c0.327 0.136 0.555 0.459 0.555 0.829 0 0.501-0.402 0.904-0.902 0.904-0.498 0-0.902-0.403-0.902-0.904 0-0.37 0.229-0.693 0.555-0.829h-0.354c-0.458 0-0.832-0.373-0.832-0.831v-2.082c0-0.58 0.326-0.824 0.804-0.917v-2.898h1.456v2.898c0.474 0.098 0.792 0.341 0.792 0.916v2.082c0 0.459-0.371 0.832-0.831 0.832" fill="#231F20"/>
 						</g>
 					</g>
-				</g>
 			</g>
-			<text transform="matrix(0.8 0 0 -0.8 476.4641 539.9852)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">W</text>
-			<text transform="matrix(0.8 0 0 -0.8 481.9906 539.9852)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">H</text>
-			<text transform="matrix(0.8 0 0 -0.8 485.8453 539.9852)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">I</text>
-			<text transform="matrix(0.8 0 0 -0.8 487.6969 539.9852)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">R</text>
-			<text transform="matrix(0.8 0 0 -0.8 491.2211 539.9852)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">L</text>
-			<text transform="matrix(0.8 0 0 -0.8 494.0711 539.9852)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">P</text>
-			<text transform="matrix(0.8 0 0 -0.8 497.5953 539.9852)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">O</text>
-			<text transform="matrix(0.8 0 0 -0.8 501.45 539.9852)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">O</text>
-			<text transform="matrix(0.8 0 0 -0.8 505.3047 539.9852)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">L</text>
-			<text transform="matrix(0.8 0 0 -0.8 534.4883 539.9852)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">W</text>
-			<text transform="matrix(0.8 0 0 -0.8 540.0149 539.9852)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">H</text>
-			<text transform="matrix(0.8 0 0 -0.8 543.8695 539.9852)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">I</text>
-			<text transform="matrix(0.8 0 0 -0.8 545.7211 539.9852)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">R</text>
-			<text transform="matrix(0.8 0 0 -0.8 549.2454 539.9852)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">L</text>
-			<text transform="matrix(0.8 0 0 -0.8 552.0961 539.9852)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">P</text>
-			<text transform="matrix(0.8 0 0 -0.8 555.6195 539.9852)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">O</text>
-			<text transform="matrix(0.8 0 0 -0.8 559.4742 539.9852)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">O</text>
-			<text transform="matrix(0.8 0 0 -0.8 563.3289 539.9852)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">L</text>
-			<text transform="matrix(0.8 0 0 -0.8 504.9078 463.3555)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">W</text>
-			<text transform="matrix(0.8 0 0 -0.8 510.4344 463.3555)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">H</text>
-			<text transform="matrix(0.8 0 0 -0.8 514.2891 463.3555)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">I</text>
-			<text transform="matrix(0.8 0 0 -0.8 516.1406 463.3555)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">R</text>
-			<text transform="matrix(0.8 0 0 -0.8 519.6649 463.3555)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">L</text>
-			<text transform="matrix(0.8 0 0 -0.8 522.5156 463.3555)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">P</text>
-			<text transform="matrix(0.8 0 0 -0.8 526.0391 463.3555)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">O</text>
-			<text transform="matrix(0.8 0 0 -0.8 529.8938 463.3555)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">O</text>
-			<text transform="matrix(0.8 0 0 -0.8 533.7484 463.3555)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">L</text>
-			<text transform="matrix(0.8 0 0 -0.8 506.6641 545.5359)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">S</text>
-			<text transform="matrix(0.8 0 0 -0.8 510.1875 545.5359)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">O</text>
-			<text transform="matrix(0.8 0 0 -0.8 514.0422 545.5359)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">L</text>
-			<text transform="matrix(0.8 0 0 -0.8 516.8929 545.5359)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">A</text>
-			<text transform="matrix(0.8 0 0 -0.8 520.7477 545.5359)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">R</text>
-			<text transform="matrix(0.8 0 0 -0.8 524.2711 545.5359)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">I</text>
-			<text transform="matrix(0.8 0 0 -0.8 526.1234 545.5359)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">U</text>
-			<text transform="matrix(0.8 0 0 -0.8 529.9781 545.5359)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">M</text>
-			<text transform="matrix(0 0.8 0.8 0 546.557 286.7024)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">E</text>
-			<text transform="matrix(0 0.8 0.8 0 546.557 289.8899)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">L</text>
-			<text transform="matrix(0 0.8 0.8 0 546.557 292.7414)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">E</text>
-			<text transform="matrix(0 0.8 0.8 0 546.557 295.9289)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">V</text>
-			<text transform="matrix(0 0.8 0.8 0 546.557 299.007)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">.</text>
-			<text transform="matrix(0 0.8 0.8 0 559.6305 274.6883)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">S</text>
-			<text transform="matrix(0 0.8 0.8 0 559.6305 278.2133)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">E</text>
-			<text transform="matrix(0 0.8 0.8 0 559.6305 281.4008)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">A</text>
-			<text transform="matrix(0 0.8 0.8 0 559.6305 284.8945)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">T</text>
-			<text transform="matrix(0 0.8 0.8 0 559.6305 288.082)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">R</text>
-			<text transform="matrix(0 0.8 0.8 0 559.6305 291.6055)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">E</text>
-			<text transform="matrix(0 0.8 0.8 0 559.6305 294.7914)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">K</text>
-			<text transform="matrix(0 0.8 0.8 0 559.6305 298.3164)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169"> </text>
-			<text transform="matrix(0 0.8 0.8 0 559.6305 299.832)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">D</text>
-			<text transform="matrix(0 0.8 0.8 0 559.6305 303.6852)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">I</text>
-			<text transform="matrix(0 0.8 0.8 0 559.6305 305.5383)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">V</text>
-			<text transform="matrix(0 0.8 0.8 0 559.6305 309.0633)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">E</text>
-			<text transform="matrix(0 0.8 0.8 0 565.6438 286.0914)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">S</text>
-			<text transform="matrix(0 0.8 0.8 0 565.6438 289.6149)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">H</text>
-			<text transform="matrix(0 0.8 0.8 0 565.6438 293.4695)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">O</text>
-			<text transform="matrix(0 0.8 0.8 0 565.6438 297.3242)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">P</text>
-			<text transform="matrix(0 0.8 0.8 0 498.9062 286.2227)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">E</text>
-			<text transform="matrix(0 0.8 0.8 0 498.9062 289.4102)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">L</text>
-			<text transform="matrix(0 0.8 0.8 0 498.9062 292.2602)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">E</text>
-			<text transform="matrix(0 0.8 0.8 0 498.9062 295.4477)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">V</text>
-			<text transform="matrix(0 0.8 0.8 0 498.9062 298.5258)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">.</text>
-			<text transform="matrix(0.8 0 0 -0.8 494.15 90.8336)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">W</text>
-			<text transform="matrix(0.8 0 0 -0.8 499.6766 90.8336)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">I</text>
-			<text transform="matrix(0.8 0 0 -0.8 501.5281 90.8336)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">N</text>
-			<text transform="matrix(0.8 0 0 -0.8 505.7195 90.8336)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">D</text>
-			<text transform="matrix(0.8 0 0 -0.8 509.5742 90.8336)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">J</text>
-			<text transform="matrix(0.8 0 0 -0.8 512.7617 90.8336)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">A</text>
-			<text transform="matrix(0.8 0 0 -0.8 516.6165 90.8336)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">M</text>
-			<text transform="matrix(0.8 0 0 -0.8 521.8063 90.8336)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">M</text>
-			<text transform="matrix(0.8 0 0 -0.8 526.9954 90.8336)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">E</text>
-			<text transform="matrix(0.8 0 0 -0.8 530.1829 90.8336)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">R</text>
-			<text transform="matrix(0.8 0 0 -0.8 533.707 90.8336)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169"> </text>
-			<text transform="matrix(0.8 0 0 -0.8 535.2219 90.8336)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">C</text>
-			<text transform="matrix(0.8 0 0 -0.8 538.7461 90.8336)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">A</text>
-			<text transform="matrix(0.8 0 0 -0.8 542.6008 90.8336)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">F</text>
-			<text transform="matrix(0.8 0 0 -0.8 545.4508 90.8336)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">É</text>
-			<text transform="matrix(0.8 0 0 -0.8 499.7547 209.0406)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">T</text>
-			<text transform="matrix(0.8 0 0 -0.8 502.9414 209.0406)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">H</text>
-			<text transform="matrix(0.8 0 0 -0.8 506.7961 209.0406)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">E</text>
-			<text transform="matrix(0.8 0 0 -0.8 509.9836 209.0406)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169"> </text>
-			<text transform="matrix(0.8 0 0 -0.8 511.4992 209.0406)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">P</text>
-			<text transform="matrix(0.8 0 0 -0.8 515.0227 209.0406)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">L</text>
-			<text transform="matrix(0.8 0 0 -0.8 517.8734 209.0406)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">A</text>
-			<text transform="matrix(0.8 0 0 -0.8 521.7281 209.0406)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">Z</text>
-			<text transform="matrix(0.8 0 0 -0.8 524.9149 209.0406)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">A</text>
-			<text transform="matrix(0.8 0 0 -0.8 528.7695 209.0406)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169"> </text>
-			<text transform="matrix(0.8 0 0 -0.8 530.2852 209.0406)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">B</text>
-			<text transform="matrix(0.8 0 0 -0.8 534.1399 209.0406)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">A</text>
-			<text transform="matrix(0.8 0 0 -0.8 537.9945 209.0406)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">R</text>
-			<text transform="matrix(0.8 0 0 -0.8 479.5609 314.632)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">S</text>
-			<text transform="matrix(0.8 0 0 -0.8 483.0852 314.632)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">Q</text>
-			<text transform="matrix(0.8 0 0 -0.8 486.9398 314.632)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">U</text>
-			<text transform="matrix(0.8 0 0 -0.8 490.7945 314.632)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">E</text>
-			<text transform="matrix(0.8 0 0 -0.8 493.9813 314.632)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">E</text>
-			<text transform="matrix(0.8 0 0 -0.8 497.1688 314.632)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">Z</text>
-			<text transform="matrix(0.8 0 0 -0.8 500.3555 314.632)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">E</text>
-			<text transform="matrix(0 0.8 0.8 0 561.2664 213.1164)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">G</text>
-			<text transform="matrix(0 0.8 0.8 0 561.2664 216.9711)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">I</text>
-			<text transform="matrix(0 0.8 0.8 0 561.2664 218.8227)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">O</text>
-			<text transform="matrix(0 0.8 0.8 0 561.2664 222.6789)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">V</text>
-			<text transform="matrix(0 0.8 0.8 0 561.2664 225.9789)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">A</text>
-			<text transform="matrix(0 0.8 0.8 0 561.2664 229.8336)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">N</text>
-			<text transform="matrix(0 0.8 0.8 0 561.2664 234.0258)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">N</text>
-			<text transform="matrix(0 0.8 0.8 0 561.2664 238.2164)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">I</text>
-			<text transform="matrix(0 0.8 0.8 0 561.2664 240.0695)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">’</text>
-			<text transform="matrix(0 0.8 0.8 0 561.2664 241.5852)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">S</text>
-			<text transform="matrix(0 0.8 0.8 0 561.2664 245.1086)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169"> </text>
-			<text transform="matrix(0 0.8 0.8 0 561.2664 246.6227)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">T</text>
-			<text transform="matrix(0 0.8 0.8 0 561.2664 249.4508)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">A</text>
-			<text transform="matrix(0 0.8 0.8 0 561.2664 253.3039)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">B</text>
-			<text transform="matrix(0 0.8 0.8 0 561.2664 257.1602)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">L</text>
-			<text transform="matrix(0 0.8 0.8 0 561.2664 260.0102)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">E</text>
-			<text transform="matrix(0 0.8 0.8 0 486.5125 227.543)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">C</text>
-			<text transform="matrix(0 0.8 0.8 0 486.5125 231.0664)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">H</text>
-			<text transform="matrix(0 0.8 0.8 0 486.5125 234.9211)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">O</text>
-			<text transform="matrix(0 0.8 0.8 0 486.5125 238.7758)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">P</text>
-			<text transform="matrix(0 0.8 0.8 0 486.5125 242.3008)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">S</text>
-			<text transform="matrix(0 0.8 0.8 0 486.5125 245.8227)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169"> </text>
-			<text transform="matrix(0 0.8 0.8 0 486.5125 247.3383)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">G</text>
-			<text transform="matrix(0 0.8 0.8 0 486.5125 251.1945)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">R</text>
-			<text transform="matrix(0 0.8 0.8 0 486.5125 254.7164)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">I</text>
-			<text transform="matrix(0 0.8 0.8 0 486.5125 256.5695)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">L</text>
-			<text transform="matrix(0 0.8 0.8 0 486.5125 259.4196)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">L</text>
-			<text transform="matrix(0 0.8 0.8 0 486.5125 262.2711)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">E</text>
-			<text transform="matrix(0.8 0 0 -0.8 507.2148 484.1289)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">P</text>
-			<text transform="matrix(0.8 0 0 -0.8 510.7391 484.1289)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">O</text>
-			<text transform="matrix(0.8 0 0 -0.8 514.5938 484.1289)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">O</text>
-			<text transform="matrix(0.8 0 0 -0.8 518.4485 484.1289)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">L</text>
-			<text transform="matrix(0.8 0 0 -0.8 521.2985 484.1289)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169"> </text>
-			<text transform="matrix(0.8 0 0 -0.8 522.8141 484.1289)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">B</text>
-			<text transform="matrix(0.8 0 0 -0.8 526.6688 484.1289)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">A</text>
-			<text transform="matrix(0.8 0 0 -0.8 530.5234 484.1289)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">R</text>
-			<text transform="matrix(0 0.8 0.8 0 502.1891 572.7758)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">E</text>
-			<text transform="matrix(0 0.8 0.8 0 502.1891 575.9633)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">L</text>
-			<text transform="matrix(0 0.8 0.8 0 502.1891 578.8133)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">E</text>
-			<text transform="matrix(0 0.8 0.8 0 502.1891 582.0008)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">V</text>
-			<text transform="matrix(0 0.8 0.8 0 502.1891 585.0774)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">.</text>
-			<text transform="matrix(0 0.8 0.8 0 541.8656 572.7758)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">E</text>
-			<text transform="matrix(0 0.8 0.8 0 541.8656 575.9633)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">L</text>
-			<text transform="matrix(0 0.8 0.8 0 541.8656 578.8133)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">E</text>
-			<text transform="matrix(0 0.8 0.8 0 541.8656 582.0008)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">V</text>
-			<text transform="matrix(0 0.8 0.8 0 541.8656 585.0774)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">.</text>
-			<text transform="matrix(0.8 0 0 -0.8 478.5391 407.5524)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">W</text>
-			<text transform="matrix(0.8 0 0 -0.8 484.0656 407.5524)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">H</text>
-			<text transform="matrix(0.8 0 0 -0.8 487.9203 407.5524)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">I</text>
-			<text transform="matrix(0.8 0 0 -0.8 489.7727 407.5524)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">R</text>
-			<text transform="matrix(0.8 0 0 -0.8 493.2961 407.5524)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">L</text>
-			<text transform="matrix(0.8 0 0 -0.8 496.1469 407.5524)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">P</text>
-			<text transform="matrix(0.8 0 0 -0.8 499.6703 407.5524)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">O</text>
-			<text transform="matrix(0.8 0 0 -0.8 503.525 407.5524)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">O</text>
-			<text transform="matrix(0.8 0 0 -0.8 507.3797 407.5524)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">L</text>
-			<text transform="matrix(0.8 0 0 -0.8 510.2305 407.5524)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">S</text>
-			<text transform="matrix(0 0.8 0.8 0 549.9078 317.0227)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">W</text>
-			<text transform="matrix(0 0.8 0.8 0 549.9078 322.5508)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">H</text>
-			<text transform="matrix(0 0.8 0.8 0 549.9078 326.4039)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">I</text>
-			<text transform="matrix(0 0.8 0.8 0 549.9078 328.257)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">R</text>
-			<text transform="matrix(0 0.8 0.8 0 549.9078 331.7789)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">L</text>
-			<text transform="matrix(0 0.8 0.8 0 549.9078 334.632)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">P</text>
-			<text transform="matrix(0 0.8 0.8 0 549.9078 338.1539)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">O</text>
-			<text transform="matrix(0 0.8 0.8 0 549.9078 342.0102)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">O</text>
-			<text transform="matrix(0 0.8 0.8 0 549.9078 345.8633)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">L</text>
-			<text transform="matrix(0 0.8 0.8 0 549.9078 348.7148)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">S</text>
-			<text transform="matrix(0.8 0 0 -0.8 507.3883 361.9133)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">H</text>
-			<text transform="matrix(0.8 0 0 -0.8 511.243 361.9133)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">2</text>
-			<text transform="matrix(0.8 0 0 -0.8 514.0938 361.9133)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">O</text>
-			<text transform="matrix(0.8 0 0 -0.8 517.9485 361.9133)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169"> </text>
-			<text transform="matrix(0.8 0 0 -0.8 519.4633 361.9133)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">Z</text>
-			<text transform="matrix(0.8 0 0 -0.8 522.6508 361.9133)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">O</text>
-			<text transform="matrix(0.8 0 0 -0.8 526.5055 361.9133)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">N</text>
-			<text transform="matrix(0.8 0 0 -0.8 530.6969 361.9133)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">E</text>
-			<text transform="matrix(0 0.64 0.8 0 508.925 416.2734)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">M</text>
-			<text transform="matrix(0 0.64 0.8 0 508.925 420.4258)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">A</text>
-			<text transform="matrix(0 0.64 0.8 0 508.925 423.5094)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">I</text>
-			<text transform="matrix(0 0.64 0.8 0 508.925 424.9907)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">N</text>
-			<text transform="matrix(0 0.64 0.8 0 508.925 428.3438)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169"> </text>
-			<text transform="matrix(0 0.64 0.8 0 508.925 429.5563)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">P</text>
-			<text transform="matrix(0 0.64 0.8 0 508.925 432.3758)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">O</text>
-			<text transform="matrix(0 0.64 0.8 0 508.925 435.4594)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">O</text>
-			<text transform="matrix(0 0.64 0.8 0 508.925 438.5438)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">L</text>
-			<text transform="matrix(0 0.64 0.8 0 538.2469 413.2766)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">S</text>
-			<text transform="matrix(0 0.64 0.8 0 538.2469 416.0961)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">P</text>
-			<text transform="matrix(0 0.64 0.8 0 538.2469 418.9156)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">O</text>
-			<text transform="matrix(0 0.64 0.8 0 538.2469 421.9985)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">R</text>
-			<text transform="matrix(0 0.64 0.8 0 538.2469 424.818)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">T</text>
-			<text transform="matrix(0 0.64 0.8 0 538.2469 427.3672)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169"> </text>
-			<text transform="matrix(0 0.64 0.8 0 538.2469 428.5797)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">P</text>
-			<text transform="matrix(0 0.64 0.8 0 538.2469 431.3992)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">O</text>
-			<text transform="matrix(0 0.64 0.8 0 538.2469 434.4828)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">O</text>
-			<text transform="matrix(0 0.64 0.8 0 538.2469 437.5664)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">L</text>
-			<text transform="matrix(0.68 0 0 -0.8 504.3172 394.6344)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">M</text>
-			<text transform="matrix(0.68 0 0 -0.8 508.7281 394.6344)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">O</text>
-			<text transform="matrix(0.68 0 0 -0.8 512.0047 394.6344)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">V</text>
-			<text transform="matrix(0.68 0 0 -0.8 515 394.6344)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">I</text>
-			<text transform="matrix(0.68 0 0 -0.8 516.5735 394.6344)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">E</text>
-			<text transform="matrix(0.68 0 0 -0.8 519.2828 394.6344)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169"> </text>
-			<text transform="matrix(0.68 0 0 -0.8 520.5711 394.6344)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">S</text>
-			<text transform="matrix(0.68 0 0 -0.8 523.5664 394.6344)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">C</text>
-			<text transform="matrix(0.68 0 0 -0.8 526.5618 394.6344)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">R</text>
-			<text transform="matrix(0.68 0 0 -0.8 529.557 394.6344)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">E</text>
-			<text transform="matrix(0.68 0 0 -0.8 532.2656 394.6344)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">E</text>
-			<text transform="matrix(0.68 0 0 -0.8 534.975 394.6344)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">N</text>
-			<text transform="matrix(0.68 0 0 -0.8 502.2516 651.0781)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">V</text>
-			<text transform="matrix(0.68 0 0 -0.8 505.2469 651.0781)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">I</text>
-			<text transform="matrix(0.68 0 0 -0.8 506.8211 651.0781)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">T</text>
-			<text transform="matrix(0.68 0 0 -0.8 509.2234 651.0781)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">A</text>
-			<text transform="matrix(0.68 0 0 -0.8 512.5 651.0781)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">L</text>
-			<text transform="matrix(0.68 0 0 -0.8 514.9227 651.0781)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">I</text>
-			<text transform="matrix(0.68 0 0 -0.8 516.4969 651.0781)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">T</text>
-			<text transform="matrix(0.68 0 0 -0.8 519.2054 651.0781)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">Y</text>
-			<text transform="matrix(0.68 0 0 -0.8 522.2008 651.0781)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169"> </text>
-			<text transform="matrix(0.68 0 0 -0.8 523.4891 651.0781)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">A</text>
-			<text transform="matrix(0.68 0 0 -0.8 526.4594 651.0781)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">T</text>
-			<text transform="matrix(0.68 0 0 -0.8 529.168 651.0781)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169"> </text>
-			<text transform="matrix(0.68 0 0 -0.8 530.4554 651.0781)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">S</text>
-			<text transform="matrix(0.68 0 0 -0.8 533.4515 651.0781)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">E</text>
-			<text transform="matrix(0.68 0 0 -0.8 536.1602 651.0781)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">A</text>
-			<text transform="matrix(0.68 0 0 -0.8 539.4368 651.0781)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169"> </text>
-			<text transform="matrix(0.68 0 0 -0.8 491.6656 645.0648)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">S</text>
-			<text transform="matrix(0.68 0 0 -0.8 494.6609 645.0648)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">P</text>
-			<text transform="matrix(0.68 0 0 -0.8 497.4008 645.0648)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">A</text>
-			<text transform="matrix(0.68 0 0 -0.8 500.6766 645.0648)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169"> </text>
-			<text transform="matrix(0.68 0 0 -0.8 501.9656 645.0648)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">A</text>
-			<text transform="matrix(0.68 0 0 -0.8 505.2414 645.0648)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">N</text>
-			<text transform="matrix(0.68 0 0 -0.8 508.8039 645.0648)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">D</text>
-			<text transform="matrix(0.68 0 0 -0.8 512.0804 645.0648)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169"> </text>
-			<text transform="matrix(0.68 0 0 -0.8 513.3688 645.0648)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">F</text>
-			<text transform="matrix(0.68 0 0 -0.8 515.7914 645.0648)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">I</text>
-			<text transform="matrix(0.68 0 0 -0.8 517.3656 645.0648)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">T</text>
-			<text transform="matrix(0.68 0 0 -0.8 520.075 645.0648)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">N</text>
-			<text transform="matrix(0.68 0 0 -0.8 523.6375 645.0648)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">E</text>
-			<text transform="matrix(0.68 0 0 -0.8 526.3469 645.0648)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">S</text>
-			<text transform="matrix(0.68 0 0 -0.8 529.3422 645.0648)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">S</text>
-			<text transform="matrix(0.68 0 0 -0.8 532.3375 645.0648)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169"> </text>
-			<text transform="matrix(0.68 0 0 -0.8 533.625 645.0648)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">C</text>
-			<text transform="matrix(0.68 0 0 -0.8 536.6204 645.0648)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">E</text>
-			<text transform="matrix(0.68 0 0 -0.8 539.3297 645.0648)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">N</text>
-			<text transform="matrix(0.68 0 0 -0.8 542.8922 645.0648)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">T</text>
-			<text transform="matrix(0.68 0 0 -0.8 545.6016 645.0648)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">E</text>
-			<text transform="matrix(0.68 0 0 -0.8 548.3102 645.0648)" fill="#231F20" font-family="'ArialNarrow-Bold'" font-size="7.5169">R</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 476.46 539.99)" fill="#231F20">W</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 481.99 539.99)" fill="#231F20">H</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 485.85 539.99)" fill="#231F20">I</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 487.7 539.99)" fill="#231F20">R</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 491.22 539.99)" fill="#231F20">L</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 494.07 539.99)" fill="#231F20">P</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 497.6 539.99)" fill="#231F20">O</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 501.45 539.99)" fill="#231F20">O</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 505.3 539.99)" fill="#231F20">L</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 534.49 539.99)" fill="#231F20">W</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 540.01 539.99)" fill="#231F20">H</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 543.87 539.99)" fill="#231F20">I</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 545.72 539.99)" fill="#231F20">R</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 549.25 539.99)" fill="#231F20">L</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 552.1 539.99)" fill="#231F20">P</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 555.62 539.99)" fill="#231F20">O</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 559.47 539.99)" fill="#231F20">O</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 563.33 539.99)" fill="#231F20">L</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 504.91 463.36)" fill="#231F20">W</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 510.43 463.36)" fill="#231F20">H</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 514.29 463.36)" fill="#231F20">I</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 516.14 463.36)" fill="#231F20">R</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 519.66 463.36)" fill="#231F20">L</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 522.52 463.36)" fill="#231F20">P</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 526.04 463.36)" fill="#231F20">O</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 529.89 463.36)" fill="#231F20">O</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 533.75 463.36)" fill="#231F20">L</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 506.66 545.54)" fill="#231F20">S</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 510.19 545.54)" fill="#231F20">O</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 514.04 545.54)" fill="#231F20">L</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 516.89 545.54)" fill="#231F20">A</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 520.75 545.54)" fill="#231F20">R</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 524.27 545.54)" fill="#231F20">I</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 526.12 545.54)" fill="#231F20">U</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 529.98 545.54)" fill="#231F20">M</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .8 .8 0 546.56 286.7)" fill="#231F20">E</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .8 .8 0 546.56 289.89)" fill="#231F20">L</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .8 .8 0 546.56 292.74)" fill="#231F20">E</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .8 .8 0 546.56 295.93)" fill="#231F20">V</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .8 .8 0 546.56 299.01)" fill="#231F20">.</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .8 .8 0 559.63 274.69)" fill="#231F20">S</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .8 .8 0 559.63 278.21)" fill="#231F20">E</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .8 .8 0 559.63 281.4)" fill="#231F20">A</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .8 .8 0 559.63 284.89)" fill="#231F20">T</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .8 .8 0 559.63 288.08)" fill="#231F20">R</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .8 .8 0 559.63 291.61)" fill="#231F20">E</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .8 .8 0 559.63 294.79)" fill="#231F20">K</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .8 .8 0 559.63 298.32)" fill="#231F20"> </text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .8 .8 0 559.63 299.83)" fill="#231F20">D</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .8 .8 0 559.63 303.69)" fill="#231F20">I</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .8 .8 0 559.63 305.54)" fill="#231F20">V</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .8 .8 0 559.63 309.06)" fill="#231F20">E</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .8 .8 0 565.64 286.09)" fill="#231F20">S</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .8 .8 0 565.64 289.61)" fill="#231F20">H</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .8 .8 0 565.64 293.47)" fill="#231F20">O</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .8 .8 0 565.64 297.32)" fill="#231F20">P</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .8 .8 0 498.91 286.22)" fill="#231F20">E</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .8 .8 0 498.91 289.41)" fill="#231F20">L</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .8 .8 0 498.91 292.26)" fill="#231F20">E</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .8 .8 0 498.91 295.45)" fill="#231F20">V</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .8 .8 0 498.91 298.53)" fill="#231F20">.</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 494.15 90.834)" fill="#231F20">W</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 499.68 90.834)" fill="#231F20">I</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 501.53 90.834)" fill="#231F20">N</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 505.72 90.834)" fill="#231F20">D</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 509.57 90.834)" fill="#231F20">J</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 512.76 90.834)" fill="#231F20">A</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 516.62 90.834)" fill="#231F20">M</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 521.81 90.834)" fill="#231F20">M</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 527 90.834)" fill="#231F20">E</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 530.18 90.834)" fill="#231F20">R</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 533.71 90.834)" fill="#231F20"> </text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 535.22 90.834)" fill="#231F20">C</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 538.75 90.834)" fill="#231F20">A</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 542.6 90.834)" fill="#231F20">F</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 545.45 90.834)" fill="#231F20">É</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 499.75 209.04)" fill="#231F20">T</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 502.94 209.04)" fill="#231F20">H</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 506.8 209.04)" fill="#231F20">E</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 509.98 209.04)" fill="#231F20"> </text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 511.5 209.04)" fill="#231F20">P</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 515.02 209.04)" fill="#231F20">L</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 517.87 209.04)" fill="#231F20">A</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 521.73 209.04)" fill="#231F20">Z</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 524.91 209.04)" fill="#231F20">A</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 528.77 209.04)" fill="#231F20"> </text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 530.29 209.04)" fill="#231F20">B</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 534.14 209.04)" fill="#231F20">A</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 537.99 209.04)" fill="#231F20">R</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 479.56 314.63)" fill="#231F20">S</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 483.09 314.63)" fill="#231F20">Q</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 486.94 314.63)" fill="#231F20">U</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 490.79 314.63)" fill="#231F20">E</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 493.98 314.63)" fill="#231F20">E</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 497.17 314.63)" fill="#231F20">Z</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 500.36 314.63)" fill="#231F20">E</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .8 .8 0 561.27 213.12)" fill="#231F20">G</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .8 .8 0 561.27 216.97)" fill="#231F20">I</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .8 .8 0 561.27 218.82)" fill="#231F20">O</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .8 .8 0 561.27 222.68)" fill="#231F20">V</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .8 .8 0 561.27 225.98)" fill="#231F20">A</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .8 .8 0 561.27 229.83)" fill="#231F20">N</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .8 .8 0 561.27 234.03)" fill="#231F20">N</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .8 .8 0 561.27 238.22)" fill="#231F20">I</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .8 .8 0 561.27 240.07)" fill="#231F20">’</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .8 .8 0 561.27 241.59)" fill="#231F20">S</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .8 .8 0 561.27 245.11)" fill="#231F20"> </text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .8 .8 0 561.27 246.62)" fill="#231F20">T</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .8 .8 0 561.27 249.45)" fill="#231F20">A</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .8 .8 0 561.27 253.3)" fill="#231F20">B</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .8 .8 0 561.27 257.16)" fill="#231F20">L</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .8 .8 0 561.27 260.01)" fill="#231F20">E</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .8 .8 0 486.51 227.54)" fill="#231F20">C</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .8 .8 0 486.51 231.07)" fill="#231F20">H</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .8 .8 0 486.51 234.92)" fill="#231F20">O</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .8 .8 0 486.51 238.78)" fill="#231F20">P</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .8 .8 0 486.51 242.3)" fill="#231F20">S</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .8 .8 0 486.51 245.82)" fill="#231F20"> </text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .8 .8 0 486.51 247.34)" fill="#231F20">G</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .8 .8 0 486.51 251.19)" fill="#231F20">R</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .8 .8 0 486.51 254.72)" fill="#231F20">I</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .8 .8 0 486.51 256.57)" fill="#231F20">L</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .8 .8 0 486.51 259.42)" fill="#231F20">L</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .8 .8 0 486.51 262.27)" fill="#231F20">E</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 507.21 484.13)" fill="#231F20">P</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 510.74 484.13)" fill="#231F20">O</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 514.59 484.13)" fill="#231F20">O</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 518.45 484.13)" fill="#231F20">L</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 521.3 484.13)" fill="#231F20"> </text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 522.81 484.13)" fill="#231F20">B</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 526.67 484.13)" fill="#231F20">A</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 530.52 484.13)" fill="#231F20">R</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .8 .8 0 502.19 572.78)" fill="#231F20">E</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .8 .8 0 502.19 575.96)" fill="#231F20">L</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .8 .8 0 502.19 578.81)" fill="#231F20">E</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .8 .8 0 502.19 582)" fill="#231F20">V</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .8 .8 0 502.19 585.08)" fill="#231F20">.</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .8 .8 0 541.87 572.78)" fill="#231F20">E</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .8 .8 0 541.87 575.96)" fill="#231F20">L</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .8 .8 0 541.87 578.81)" fill="#231F20">E</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .8 .8 0 541.87 582)" fill="#231F20">V</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .8 .8 0 541.87 585.08)" fill="#231F20">.</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 478.54 407.55)" fill="#231F20">W</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 484.07 407.55)" fill="#231F20">H</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 487.92 407.55)" fill="#231F20">I</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 489.77 407.55)" fill="#231F20">R</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 493.3 407.55)" fill="#231F20">L</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 496.15 407.55)" fill="#231F20">P</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 499.67 407.55)" fill="#231F20">O</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 503.52 407.55)" fill="#231F20">O</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 507.38 407.55)" fill="#231F20">L</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 510.23 407.55)" fill="#231F20">S</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .8 .8 0 549.91 317.02)" fill="#231F20">W</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .8 .8 0 549.91 322.55)" fill="#231F20">H</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .8 .8 0 549.91 326.4)" fill="#231F20">I</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .8 .8 0 549.91 328.26)" fill="#231F20">R</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .8 .8 0 549.91 331.78)" fill="#231F20">L</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .8 .8 0 549.91 334.63)" fill="#231F20">P</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .8 .8 0 549.91 338.15)" fill="#231F20">O</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .8 .8 0 549.91 342.01)" fill="#231F20">O</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .8 .8 0 549.91 345.86)" fill="#231F20">L</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .8 .8 0 549.91 348.71)" fill="#231F20">S</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 507.39 361.91)" fill="#231F20">H</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 511.24 361.91)" fill="#231F20">2</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 514.09 361.91)" fill="#231F20">O</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 517.95 361.91)" fill="#231F20"> </text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 519.46 361.91)" fill="#231F20">Z</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 522.65 361.91)" fill="#231F20">O</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 526.51 361.91)" fill="#231F20">N</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.8 0 0 -.8 530.7 361.91)" fill="#231F20">E</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .64 .8 0 508.92 416.27)" fill="#231F20">M</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .64 .8 0 508.92 420.43)" fill="#231F20">A</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .64 .8 0 508.92 423.51)" fill="#231F20">I</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .64 .8 0 508.92 424.99)" fill="#231F20">N</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .64 .8 0 508.92 428.34)" fill="#231F20"> </text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .64 .8 0 508.92 429.56)" fill="#231F20">P</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .64 .8 0 508.92 432.38)" fill="#231F20">O</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .64 .8 0 508.92 435.46)" fill="#231F20">O</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .64 .8 0 508.92 438.54)" fill="#231F20">L</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .64 .8 0 538.25 413.28)" fill="#231F20">S</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .64 .8 0 538.25 416.1)" fill="#231F20">P</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .64 .8 0 538.25 418.92)" fill="#231F20">O</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .64 .8 0 538.25 422)" fill="#231F20">R</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .64 .8 0 538.25 424.82)" fill="#231F20">T</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .64 .8 0 538.25 427.37)" fill="#231F20"> </text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .64 .8 0 538.25 428.58)" fill="#231F20">P</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .64 .8 0 538.25 431.4)" fill="#231F20">O</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .64 .8 0 538.25 434.48)" fill="#231F20">O</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(0 .64 .8 0 538.25 437.57)" fill="#231F20">L</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.68 0 0 -.8 504.32 394.63)" fill="#231F20">M</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.68 0 0 -.8 508.73 394.63)" fill="#231F20">O</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.68 0 0 -.8 512 394.63)" fill="#231F20">V</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.68 0 0 -.8 515 394.63)" fill="#231F20">I</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.68 0 0 -.8 516.57 394.63)" fill="#231F20">E</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.68 0 0 -.8 519.28 394.63)" fill="#231F20"> </text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.68 0 0 -.8 520.57 394.63)" fill="#231F20">S</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.68 0 0 -.8 523.57 394.63)" fill="#231F20">C</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.68 0 0 -.8 526.56 394.63)" fill="#231F20">R</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.68 0 0 -.8 529.56 394.63)" fill="#231F20">E</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.68 0 0 -.8 532.27 394.63)" fill="#231F20">E</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.68 0 0 -.8 534.98 394.63)" fill="#231F20">N</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.68 0 0 -.8 502.25 651.08)" fill="#231F20">V</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.68 0 0 -.8 505.25 651.08)" fill="#231F20">I</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.68 0 0 -.8 506.82 651.08)" fill="#231F20">T</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.68 0 0 -.8 509.22 651.08)" fill="#231F20">A</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.68 0 0 -.8 512.5 651.08)" fill="#231F20">L</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.68 0 0 -.8 514.92 651.08)" fill="#231F20">I</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.68 0 0 -.8 516.5 651.08)" fill="#231F20">T</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.68 0 0 -.8 519.21 651.08)" fill="#231F20">Y</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.68 0 0 -.8 522.2 651.08)" fill="#231F20"> </text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.68 0 0 -.8 523.49 651.08)" fill="#231F20">A</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.68 0 0 -.8 526.46 651.08)" fill="#231F20">T</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.68 0 0 -.8 529.17 651.08)" fill="#231F20"> </text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.68 0 0 -.8 530.46 651.08)" fill="#231F20">S</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.68 0 0 -.8 533.45 651.08)" fill="#231F20">E</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.68 0 0 -.8 536.16 651.08)" fill="#231F20">A</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.68 0 0 -.8 539.44 651.08)" fill="#231F20"> </text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.68 0 0 -.8 491.67 645.06)" fill="#231F20">S</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.68 0 0 -.8 494.66 645.06)" fill="#231F20">P</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.68 0 0 -.8 497.4 645.06)" fill="#231F20">A</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.68 0 0 -.8 500.68 645.06)" fill="#231F20"> </text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.68 0 0 -.8 501.97 645.06)" fill="#231F20">A</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.68 0 0 -.8 505.24 645.06)" fill="#231F20">N</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.68 0 0 -.8 508.8 645.06)" fill="#231F20">D</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.68 0 0 -.8 512.08 645.06)" fill="#231F20"> </text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.68 0 0 -.8 513.37 645.06)" fill="#231F20">F</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.68 0 0 -.8 515.79 645.06)" fill="#231F20">I</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.68 0 0 -.8 517.37 645.06)" fill="#231F20">T</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.68 0 0 -.8 520.08 645.06)" fill="#231F20">N</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.68 0 0 -.8 523.64 645.06)" fill="#231F20">E</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.68 0 0 -.8 526.35 645.06)" fill="#231F20">S</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.68 0 0 -.8 529.34 645.06)" fill="#231F20">S</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.68 0 0 -.8 532.34 645.06)" fill="#231F20"> </text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.68 0 0 -.8 533.62 645.06)" fill="#231F20">C</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.68 0 0 -.8 536.62 645.06)" fill="#231F20">E</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.68 0 0 -.8 539.33 645.06)" fill="#231F20">N</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.68 0 0 -.8 542.89 645.06)" fill="#231F20">T</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.68 0 0 -.8 545.6 645.06)" fill="#231F20">E</text>
+			<text font-size="7.5169" font-family="&apos;ArialNarrow-Bold&apos;" transform="matrix(.68 0 0 -.8 548.31 645.06)" fill="#231F20">R</text>
 			<g id="g16114">
-				<g>
 					<g id="g16116">
-						<path id="path16122" inkscape:connector-curvature="0" fill="#231F20" stroke="#231F20" stroke-width="1.261" d="
-							M547.26,391.38h-53.443v1.37h53.443V391.38z"/>
+						<path id="path16122" d="m547.26 391.38h-53.443v1.37h53.443v-1.37z" stroke="#231F20" stroke-width="1.261" fill="#231F20"/>
 					</g>
-				</g>
 			</g>
 		</g>
-	</g>
-</g>
 </svg>
