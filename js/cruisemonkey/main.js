@@ -1,17 +1,17 @@
 (function () {
 	'use strict';
 
-	angular.module('cruisemonkey', [
+	angular.module('cruisemonkey',
+	[
 		'cruisemonkey.filters',
 		'cruisemonkey.services',
 		'cruisemonkey.directives',
 		'cruisemonkey.controllers',
 		'cruisemonkey.factories',
-		'$strap.directives',
+		/* '$strap.directives', */
 		'hmTouchEvents'
 	])
-	.config(function ($routeProvider) {
-		log.info('Configuring route provider.');
+	.config(['$routeProvider', function($routeProvider) {
 		$routeProvider
 			.when('/login', {
 				templateUrl: 'partials/login.html',
@@ -20,7 +20,7 @@
 			.when('/events', {
 				redirectTo: '/events/official'
 			})
-			.when('/events/:type', {
+			.when('/events/:eventType', {
 				templateUrl: 'partials/event-list.html',
 				controller: 'CMEventCtrl'
 			})
@@ -34,28 +34,34 @@
 			.otherwise({
 				redirectTo: '/events/official'
 			});
-	})
-	.run(function($rootScope, $location, UserService) {
-		log.info('rootscope: ' + $rootScope);
+	}])
+	.run(['$rootScope', '$location', 'UserService', function($rootScope, $location, UserService) {
 		$rootScope.$on('$routeChangeStart', function(event, currRoute, prevRoute) {
-			/*
-			log.warn("$routeChangeStart");
-			if (UserService.isLoggedIn) {
+			console.log("$routeChangeStart: template = " + currRoute.templateUrl + ", eventType = " + currRoute.params.eventType);
+
+			if (UserService.isLoggedIn()) {
 				angular.noop();
 				return;
 			}
 
-			if (prevRoute && prevRoute)
-			if (prevRoute && prevRoute.access && !prevRoute.access.requiresLogin) {
+			if (currRoute.templateUrl === 'partials/event-list.html' && currRoute.params.eventType === 'my') {
+				event.preventDefault();
+				$location.path('/login');
 				angular.noop();
 				return;
 			}
 
-			event.preventDefault();
-			$location.path('/login');
-			*/
+			if (prevRoute && prevRoute.access) {
+				if (prevRoute.access.requiresLogin) {
+					event.preventDefault();
+					$location.path('/login');
+					angular.noop();
+				}
+			}
+
 			angular.noop();
+			return;
 		});
-	})		
+	}])
 	;
 }());

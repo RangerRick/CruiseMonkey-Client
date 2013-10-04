@@ -1,5 +1,6 @@
 .*.swp
 .DS_Store
+.grunt
 WEB-INF
 META-INF
 *.wgz
@@ -7,4 +8,5 @@ META-INF
 *.ipk
 *.xap
 *.ipa
+_SpecRunner.html
 node_modules

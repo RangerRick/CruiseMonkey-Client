@@ -23,10 +23,7 @@
 <!--[if lt IE 9]>
 		<script src="js/3rdparty/html5shiv.js"></script>
 	<![endif]-->
-<script src="js/log4javascript/log4javascript.js"></script>
-<script src="js/cruisemonkey/init.js"></script>
-<script src="js/3rdparty/jquery.js"></script>
-<!-- <script src="js/bootstrap/bootstrap.min.js"></script>  -->
+<!-- <script src="js/3rdparty/jquery.js"></script> -->
 <script src="js/3rdparty/script.js"></script>
 <script src="js/angular/angular-loader.js"></script>
 <script>
@@ -35,49 +32,62 @@ window.addEventListener('load', function(e) {
 		if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
 			// Browser downloaded a new app cache.
 			// Swap it in and reload the page to get the new hotness.
-			log.info('a new version is available; reloading');
+			console.log('a new version is available; reloading');
 			window.applicationCache.swapCache();
 			window.location.reload();
 		}
 	}, false);
 }, false);
 
+window.setInterval(function() {
+	window.applicationCache.update();
+}, 5000);
+
 // load all of the dependencies asynchronously.
 $script([
+	'js/3rdparty/jquery.js',
 	'js/3rdparty/fastclick.js',
-	'js/3rdparty/hammer.min.js'
+	'js/3rdparty/hammer.min.js',
+	'js/3rdparty/pouchdb-nightly.min.js',
+	'js/log4javascript/log4javascript.js'
 ], '3rdparty', function() {
-	log.info('standalone 3rd party scripts loaded.');
-});
-$script('js/3rdparty/pouchdb-nightly.min.js', 'pouchdb', function() {
-	log.info('PouchDB loaded.');
-});
-$script([
-	'js/angular/angular.min.js',
-	'js/angular/angular-phonegap-ready.js',
-	'js/angular/angular-resource.min.js',
-	'js/angular/angular-strap.min.js',
-	'js/angular/angular-hammer.js'
-], 'angular', function() {
-	log.info('AngularJS (and 3rd-party addons) loaded.');
-});
-$script([
-	'js/cruisemonkey/string.js',
-	'js/cruisemonkey/offcanvas.js',
-	'js/cruisemonkey/services.js',
-	'js/cruisemonkey/factories.js',
-	'js/cruisemonkey/controllers.js',
-	'js/cruisemonkey/filters.js',
-	'js/cruisemonkey/directives.js',
-	'js/cruisemonkey/main.js'
-], 'cruisemonkey', function() {
-	log.info('CruiseMonkey loaded.');
+	console.log('standalone 3rd party scripts loaded.');
 });
 
-$script.ready(['3rdparty', 'pouchdb', 'angular', 'cruisemonkey'], function() {
-	log.info('Everything is ready!');
-	new FastClick(document.body);
-	angular.bootstrap(document, ['cruisemonkey']);
+$script([
+	'js/angular/angular.min.js'
+], 'angular-core', function() {
+	console.log('AngularJS Core loaded.');
+
+	$script([
+		'js/angular/angular-phonegap-ready.js',
+		'js/angular/angular-resource.min.js',
+		/* 'js/angular/angular-strap.min.js', */
+		'js/angular/angular-hammer.js',
+		'js/angular/angularls.js'
+	], 'angular-addons', function() {
+		console.log('AngularJS (and 3rd-party addons) loaded.');
+	});
+});
+
+$script.ready(['3rdparty', 'angular-core', 'angular-addons'], function() {
+	$script([
+		'js/cruisemonkey/string.js',
+		'js/cruisemonkey/offcanvas.js',
+		'js/cruisemonkey/Config.js',
+		'js/cruisemonkey/Logging.js',
+		'js/cruisemonkey/Database.js',
+		'js/cruisemonkey/services.js',
+		'js/cruisemonkey/factories.js',
+		'js/cruisemonkey/controllers.js',
+		'js/cruisemonkey/filters.js',
+		'js/cruisemonkey/directives.js',
+		'js/cruisemonkey/main.js'
+	], 'cruisemonkey', function() {
+		console.log('CruiseMonkey loaded.');
+		new FastClick(document.body);
+		angular.bootstrap(document, ['cruisemonkey']);
+	});
 });
 
 var timeoutID;
@@ -89,7 +99,7 @@ document.addEventListener("deviceready", function() {
 }, false);
 
 timeoutID = window.setTimeout(function() {
-	log.warn('Firing deviceready manually.');
+	console.log('Firing deviceready manually.');
 	window.clearTimeout(timeoutID);
 	var e = document.createEvent('Events');
 	e.initEvent('deviceready');
@@ -116,7 +126,9 @@ timeoutID = window.setTimeout(function() {
 				<div class="main-header" ng-controller="CMHeaderCtrl">
 					<span class="glyphicon glyphicon-align-justify" data-toggle="offcanvas"></span>
 					<span class="title">{{title}}</span>
-					<span class="actions" ng-repeat="action in actions">{{action.name}}</span>
+					<span class="actions" ng-repeat="action in actions">
+						<div class="icon icon-{{action.iconClass}}"></div>
+					</span>
 				</div>
 				<div class="main-contents" ng-view />
 			</div>

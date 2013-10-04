@@ -1,43 +1,56 @@
 (function() {
 	'use strict';
 
-	angular.module('cruisemonkey.factories', ['ngResource'])
-	.factory('EventResource', function($resource) {
-		return $resource('/services/events/:type');
-	})
-	.factory('EventService', function(EventResource) {
-		return {
-			get: function(parms) {
-				return EventResource.get(parms);
-			}
-		};
-	})
+	angular.module('cruisemonkey.factories', ['ngResource', 'cruisemonkey.Logging', 'cruisemonkey.Database'])
 	.factory('UserService', function() {
 		var user = {
-			isLoggedIn: false,
-			username: ''
+			loggedIn: false,
+			username: '',
+			password: ''
 		};
+
 		return {
-			isLoggedIn: function() {
-				return user.isLoggedIn;
+			'isLoggedIn': function() {
+				return user.loggedIn;
+			},
+			'get': function() {
+				return angular.copy(user);
+			},
+			'save': function(newUser) {
+				user = angular.copy(newUser);
 			}
-		}
+		};
 	})
-	.factory('pouchdb', function() {
-		Pouch.enableAllDbs = true;
-		var db = new Pouch('cruisemonkey');
-		Pouch.replicate('cruisemonkey', 'http://sin.local:5984/cruisemonkey', {continuous: true});
-		Pouch.replicate('http://sin.local:5984/cruisemonkey', 'cruisemonkey', {continuous: true});
-		return db;
-	})
-	.factory('pouchWrapper', function($q, $rootScope, pouchdb) {
+	.factory('pouchWrapper', ['$q', '$rootScope', 'db', 'LoggingService', 'UserService', function($q, $rootScope, db, log, UserService) {
 		return {
-			getEvents: function(type) {
+			getEvents: function(eventType) {
 				var deferred = $q.defer();
 				var map = function(doc) {
-					emit(doc.type, doc);
+					if (doc.type === 'event') {
+						emit(doc.eventType, doc);
+					}
 				};
-				pouchdb.query({map: map}, {key: type}, function(err, res) {
+				db.query({map: map}, {key: eventType}, function(err, res) {
+					$rootScope.$apply(function() {
+						if (err) {
+							log.error(err);
+							deferred.reject(err);
+						} else {
+							deferred.resolve(res);
+						}
+					});
+				});
+				return deferred.promise;
+			},
+			getFavorites: function() {
+				var user = UserService.get();
+				var deferred = $q.defer();
+				var map = function(doc) {
+					if (doc.type === 'favorite') {
+						emit(doc.username, doc.favorite);
+					}
+				};
+				db.query({map: map}, {key: user.username}, function(err, res) {
 					$rootScope.$apply(function() {
 						if (err) {
 							log.error(err);
@@ -51,7 +64,7 @@
 			},
 			add: function(doc) {
 				var deferred = $q.defer();
-				pouchdb.post(doc, function(err, res) {
+				db.post(doc, function(err, res) {
 					$rootScope.$apply(function() {
 						if (err) {
 							deferred.reject(err);
@@ -64,12 +77,12 @@
 			},
 			remove: function(id) {
 				var deferred = $q.defer();
-				pouchdb.get(id, function(err, doc) {
+				db.get(id, function(err, doc) {
 					$rootScope.$apply(function() {
 						if (err) {
 							deferred.reject(err);
 						} else {
-							pouchdb.remove(doc, function(err, res) {
+							db.remove(doc, function(err, res) {
 								$rootScope.$apply(function() {
 									if (err) {
 										deferred.reject(err);
@@ -84,27 +97,5 @@
 				return deferred.promise;
 			}
 		};
-	})
-	.factory('listener', function($rootScope, pouchdb) {
-		pouchdb.changes({
-			continuous: true,
-			onChange: function(change) {
-				if (!change.deleted) {
-					$rootScope.$apply(function() {
-						pouchdb.get(change.id, function(err, doc) {
-							$rootScope.$apply(function() {
-								if (err) log.error(err);
-								$rootScope.$broadcast('newEvent', doc);
-							});
-						});
-					});
-				} else {
-					$rootScope.$apply(function() {
-						$rootScope.$broadcast('delEvent', change.id);
-					});
-				}
-			}
-		});
-	})
-	;
+	}]);
 }());

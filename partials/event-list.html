@@ -1,9 +1,7 @@
 <div class="event-list">
 	<div ng-repeat="event in events" class="list-entry calendar-event scrollable">
 		<div class="favorite">
-			<input type="checkbox"
-				id="nvv1qam1dojo5hnd1pp9eijpn0googlecom20130210T190000Z-favorite"><label
-				for="nvv1qam1dojo5hnd1pp9eijpn0googlecom20130210T190000Z-favorite">&nbsp;</label>
+			<input type="checkbox" id="{{event._id}}-favorite" ng-model="favorites[event._id]" ng-checked="isFavorite(event._id)" ng-change="save(event._id)"><label for="{{event._id}}-favorite">&nbsp;</label>
 		</div>
 		<div class="summary">{{event.summary}}</div>
 		<div class="time">{{event.start}}-{{event.end}}</div>

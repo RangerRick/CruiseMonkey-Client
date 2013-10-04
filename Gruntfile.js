@@ -31,30 +31,86 @@ module.exports = function(grunt) {
 					'*.ico',
 					'*.png',
 					'css/*.css',
-					'css/3rdparty/*.css',
-					'css/foundation/*.css',
-					'css/cruisemonkey/*.css',
+					'css/*/*.css',
 					'fonts/*.otf',
 					'fonts/*.ttf',
 					'fonts/*.svg',
 					'img/*.svg',
-					'js/3rdparty/*.js',
-					'js/angular/*.js',
-					'js/bootstrap/*.js',
-					'js/foundation/*.js',
-					'js/log4javascript/*.js',
-					'js/cruisemonkey/*.js',
+					'icons/*.png',
+					'icons/*/*.png',
+					'js/*/*.js',
 					'index.html',
-					'partials/deck-plans.html',
-					'partials/event-list.html',
-					'partials/login.html'
+					'partials/*.html'
 				]
 			}
-		}
+		},
+		watch: {
+			css: {
+				files: ['sass/*/*.scss'],
+				tasks: ['sass', 'manifest'],
+				options: {
+					interval: 500,
+					spawn: false,
+					debounceDelay: 250,
+					atBegin: true
+				}
+			},
+			manifest: {
+				files: [
+					'*.ico',
+					'*.png',
+					'css/*.css',
+					'css/*/*.css',
+					'fonts/*.otf',
+					'fonts/*.ttf',
+					'fonts/*.svg',
+					'img/*.svg',
+					'icons/*.png',
+					'icons/*/*.png',
+					'js/*/*.js',
+					'index.html',
+					'partials/*.html'
+				],
+				tasks: ['manifest'],
+				options: {
+					interval: 500,
+					spawn: false,
+					debounceDelay: 250,
+					atBegin: true
+				}
+			}
+		},
+	    jasmine: {
+	        test: {
+	            src: [
+					'js/3rdparty/custom.modernizr.js',
+					'js/log4javascript/log4javascript_uncompressed.js',
+					'js/3rdparty/jquery.js',
+					'js/3rdparty/script.js',
+					'js/3rdparty/fastclick.js',
+					'js/3rdparty/hammer.min.js',
+					'js/3rdparty/pouchdb-nightly.js',
+					'js/angular/angular.js',
+					'js/angular/angular-phonegap-ready.js',
+					'js/angular/angular-resource.js',
+					'js/angular/angular.strap.min.js',
+					'js/angular/angular-hammer.js',
+					'js/angular/angular-mocks.js',
+					'js/cruisemonkey/*.js'
+				],
+	            options: {
+					keepRunner: true,
+	                specs: ['test/*.js']
+	            }
+	        }
+	    }
 	});
 
 	grunt.loadNpmTasks('grunt-sass');
 	grunt.loadNpmTasks('grunt-manifest');
-	grunt.registerTask('default', ['sass', 'manifest']);
+	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-contrib-jasmine');
+
+	grunt.registerTask('default', ['sass', 'manifest', 'jasmine']);
 };
 

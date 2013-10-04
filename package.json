@@ -13,6 +13,8 @@
     "grunt": "latest",
     "grunt-html2js": "latest",
     "grunt-sass": "latest",
-    "grunt-manifest": "latest"
+    "grunt-manifest": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-contrib-jasmine": "latest"
   }
 }

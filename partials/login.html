@@ -1,1 +1,37 @@
-LOG IN!
+<style>
+.login {
+}
+.login div {
+	height: 40px;
+}
+.login .label {
+	line-height: 40px;
+	color: black;
+}
+.login .header {
+	margin-top: 10px;
+	padding: 10px;
+	font-size: larger;
+	font-weight: xx-bold;
+}
+.login input {
+	margin: 5px;
+}
+</style>
+<form name="loginForm" class="container css-form" novalidate>
+	<div class="row">
+		<div class="col-md-4"></div>
+		<div class="col-md-4">
+			<div class="row login">
+				<div class="col-xs-12 header">Log In to Twit-Arrrr</div>
+				<div class="col-xs-4 label">Username:</div><div class="col-xs-8"><input type="text" ng-model="user.username" name="uUsername" required /></div>
+				<div class="col-xs-4 label">Password:</div><div class="col-xs-8"><input type="password" ng-model="user.password" name="uPassword" required /></div>
+				<div class="col-xs-4"></div>
+				<div class="col-xs-8">
+					<button ng-click="reset()" ng-disabled="isUnchanged(user)">Reset</button>
+					<button ng-click="update(user)" ng-disabled="form.$invalid || isUnchanged(user)">Log In</button>
+				</div>
+			</div>
+		<div class="col-md-4"></div>
+	</div>
+</form>

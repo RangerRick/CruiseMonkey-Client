@@ -206,6 +206,35 @@ html,body {
 	.actions {
 		float: right;
 	}
+
+	div.icon {
+		display: inline-block;
+		vertical-align: middle;
+		background-size: 32px 32px;
+		background-repeat: no-repeat;
+		background-position: center center;
+		margin-top: -5px;
+		margin-left: 5px;
+		margin-right: 5px;
+		width: 32px;
+		height: 32px;
+	}
+
+	@media only screen and (max-width: 940px) {
+		div.icon {
+			padding: 0;
+			margin: 2px;
+		}
+		div.tabLabel {
+			display: none;
+		}
+	}
+
+	div.icon-add {
+		background-image: url(../../icons/inactive/31-circle-plus.png);
+		background-size: 28px 28px;
+	}
+	
 }
 
 .main-header>* {
@@ -236,6 +265,27 @@ html,body {
 .list-entry {
 	border-bottom: $simpleBorder;
 	padding: 5px;
+
+	input {
+		display: none;
+	}
+
+	.favorite input[type=checkbox] + label {
+	        background:url(../../icons/star-unchecked.png) no-repeat;
+	        background-position: center center;
+	        background-size:26px 26px;
+	        width: 32px;
+	        height: 32px;
+	}
+
+	.favorite input[type=checkbox]:checked + label {
+	        background:url(../../icons/star-checked.png) no-repeat;
+	        background-position: center center;
+	        background-size: 26px 26px;
+	        width: 32px;
+	        height: 32px;
+	}
+
 }
 
 .list-entry:nth-child(odd) {
