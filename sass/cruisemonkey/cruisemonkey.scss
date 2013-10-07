@@ -62,234 +62,186 @@ $deckHeaderBG: black;
 $mainBG: white;
 $alternateBG: $cmBabyBlue;
 
-html,body {
-	height: 100%;
-	overflow-x: hidden;
-	font-family: $defaultFont;
-	-webkit-overflow-scrolling: touch;
+body {
+  font-family: $defaultFont;
+	color: #444;
 }
 
-.shadow {
-	-moz-box-shadow: $gutterShadow;
-	-webkit-box-shadow: $gutterShadow;
-	box-shadow: $gutterShadow;
+a:link,
+a:visited,
+a:hover {
+	color: #000;
+	text-decoration: none;
 }
 
-/*
- * Off Canvas
- * --------------------------------------------------
- */
-.row-offcanvas {
-	position: relative;
-	margin: 0;
+.mobile-header {
+	color: $titleBarColor;
+	background-color: $titleBarBG;
+  font-family: $headerFont;
+  font-size: larger;
+}
+
+.mobile-footer {
+
+}
+
+.mobile-frame {
 	-webkit-transition: $gutterTransition;
 	-moz-transition: $gutterTransition;
 	transition: $gutterTransition;
 	-webkit-transition: $gutterTransition;
 }
 
-.row-offcanvas-left .sidebar-offcanvas {
-	margin: 0;
+.mobile-content {
+	background-color: $mainBG;
 }
 
-.row-offcanvas-left.active {
-	margin: 0;
-}
-
-.sidebar-offcanvas {
-	position: fixed;
-	top: 40px;
-	height: 100%;
-	padding: 0;
-	font-size: larger;
+.mobile-nav {
 	color: $gutterColor;
 	background-color: $gutterBG;
-	a {
-		color: $gutterColor;
+	box-shadow: inset -.0625em 0 .625em rgba(0,0,0,.6);
+
+	.nav {
+		cursor: default;
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
 		background-color: transparent;
-	}
-	a:hover, a:focus {
-		color: $gutterHilightColor;
-		background-color: $gutterHilightBG;
-	}
-}
-
-.sidebar-header {
-	text-align: center;
-	padding: 15px;
-	font-family: $sidebarHeaderFont;
-	font-weight: bold;
-	font-size: 30px;
-}
-
-.nav > li {
-	a {
 		color: $gutterColor;
-		background-color: transparent;
-	}
-	a:hover, a:focus {
-		color: $gutterHilightColor;
-		background-color: $gutterHilightBG;
-	}
-	border-bottom: $gutterSeparator;
-}
 
-.nav > li.active {
-	color: $gutterSelectedColor;
-	background-color: $gutterSelectedBG;
-	a {
-		color: $gutterSelectedColor;
-	}
-	a:hover, a:focus {
-		color: $gutterHilightColor;
-	}
-}
-
-.row-offcanvas-left .sidebar-offcanvas {
-	left: -250px;
-}
-.row-offcanvas-left.active {
-	left: 250px;
-}
-.sidebar-offcanvas {
-	width: 250px;
-}
-
-.fcontainer {
-	width: 100%;
-	height: 100%;
-	min-height: 100%;
-	z-index: 1;
-}
-
-.row {
-	height: 100%;
-	min-height: 100%;
-}
-/*
- * Right-Page
- */
-.main-view {
-	border-left: $simpleBorder;
-	padding: 0;
-	margin: 0;
-	width: 100%;
-	min-height: 100%;
-	position: absolute;
-	overflow: hidden;
-	overflow-x: hidden;
-}
-
-.main-header {
-	width: 100%;
-	background-color: $titleBarBG;
-	height: 40px;
-	color: $titleBarColor;
-	font-family: $headerFont;
-	font-size: larger;
-	padding: 10px;
-	vertical-align: top;
-	left: 0;
-	top: 0;
-	position: fixed;
-	user-select: none;
-	.glyphicon {
-		margin: -10px;
-		padding: 10px;
-		width: 40px;
-		height: 40px;
-	}
-	.title {
-		font-weight: bold;
-		letter-spacing: 2px;
-	}
-	.actions {
-		float: right;
+		-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
 	}
 
-	div.icon {
+	.nav > li.sidebar-header {
 		display: inline-block;
-		vertical-align: middle;
-		background-size: 32px 32px;
-		background-repeat: no-repeat;
-		background-position: center center;
-		margin-top: -5px;
-		margin-left: 5px;
-		margin-right: 5px;
-		width: 32px;
+		width: 100%;
+		text-align: center;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		font-family: $sidebarHeaderFont;
+		font-weight: bold;
+		font-size: 26px;
+	}
+
+	.nav > li.sidebar-header:hover, .nav > li.sidebar-header:focus {
+		color: $gutterColor;
+		background-color: transparent;
+	}
+
+	.nav > li {
+		display: inline-block;
+		width: 100%;
+		border-bottom: $gutterSeparator;
+		color: $gutterColor;
+		a {
+			display: block;
+			padding: 10px;
+			color: $gutterColor;
+			background-color: transparent;
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	.nav > li:hover, .nav > li:focus {
+		color: $gutterHilightColor;
+		background-color: $gutterHilightBG;
+		a {
+			color: $gutterHilightColor;
+		}
+		a:hover, a:focus {
+			color: $gutterHilightColor;
+		}
+	}
+
+}
+
+.mobile-nav-toggle {
+	width: 30px;
+	height: 30px;
+	margin: 5px .625em;
+	float: left;
+	border: 1px solid white;
+	color: #eee;
+	background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMzBweCIgaGVpZ2h0PSIyNHB4IiB2aWV3Qm94PSIwIDAgMzAgMjQiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDMwIDI0IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxjaXJjbGUgZmlsbD0iI0ZGRkZGRiIgY3g9IjIuNSIgY3k9IjIuNSIgcj0iMi41Ii8+DQo8Y2lyY2xlIGZpbGw9IiNGRkZGRkYiIGN4PSIyLjUiIGN5PSIxMiIgcj0iMi41Ii8+DQo8Y2lyY2xlIGZpbGw9IiNGRkZGRkYiIGN4PSIyLjUiIGN5PSIyMS41IiByPSIyLjUiLz4NCjxyZWN0IHg9IjcuMiIgZmlsbD0iI0ZGRkZGRiIgd2lkdGg9IjE5LjgiIGhlaWdodD0iNSIvPg0KPHJlY3QgeD0iNy4yIiB5PSI5LjUiIGZpbGw9IiNGRkZGRkYiIHdpZHRoPSIyMi44IiBoZWlnaHQ9IjUiLz4NCjxyZWN0IHg9IjcuMiIgeT0iMTkiIGZpbGw9IiNGRkZGRkYiIHdpZHRoPSIxNi44IiBoZWlnaHQ9IjUiLz4NCjwvc3ZnPg0K);
+	background-color: #555;
+	background-position: center;
+	background-size: 24px 20px;
+	background-repeat: no-repeat;
+	/* background-origin: */
+	/* background-clip: */
+	background-attachment: scroll;
+	outline: none;
+	border-radius: 3px;
+	overflow: hidden;
+	text-align: left;
+	text-indent: 150%;
+	-webkit-appearance: none;
+	appearance: none;
+}
+
+.mobile-header-inner,
+.mobile-content-inner,
+.mobile-footer-inner {
+	padding: 0 .625em;
+}
+
+.mobile-header-inner {
+	/* height: 40px; */
+	float: left;
+	margin-top: 4px;
+
+	.title {
+		padding-top: 0;
+		padding-bottom: 0;
 		height: 32px;
+		font-size: 36px;
+		vertical-align: bottom;
 	}
-
-	@media only screen and (max-width: 940px) {
-		div.icon {
-			padding: 0;
-			margin: 2px;
-		}
-		div.tabLabel {
-			display: none;
-		}
-	}
-
-	div.icon-add {
-		background-image: url(../../icons/inactive/31-circle-plus.png);
-		background-size: 28px 28px;
-	}
-	
 }
 
-.main-header>* {
-	display: inline-block;
-	user-select: none;
+.mobile-content h1 {
+	padding: 0 .416667em;
 }
 
-.main-contents {
-	margin-top: 40px;
-	overflow-y: auto;
-}
-
-.sidebar-offcanvas {
-	display: none;
-}
-
-.sidebar-offcanvas.active {
-	display: block;
-}
-
-/*
- * Lists
- */
-.event-list {
-	font-family: $eventListFont;
+.mobile-content-inner {
+	padding: 0;
 }
 
 .list-entry {
 	border-bottom: $simpleBorder;
-	padding: 5px;
+	padding: 10px;
 
-	input {
+	.favorite input[type=checkbox] {
 		display: none;
 	}
 
 	.favorite input[type=checkbox] + label {
-	        background:url(../../icons/star-unchecked.png) no-repeat;
-	        background-position: center center;
-	        background-size:26px 26px;
-	        width: 32px;
-	        height: 32px;
+		display: block;
+		background:url(../../icons/star-unchecked.png) no-repeat;
+		background-position: center center;
+		background-size:26px 26px;
+		width: 32px;
+		height: 32px;
 	}
 
 	.favorite input[type=checkbox]:checked + label {
-	        background:url(../../icons/star-checked.png) no-repeat;
-	        background-position: center center;
-	        background-size: 26px 26px;
-	        width: 32px;
-	        height: 32px;
+		background:url(../../icons/star-checked.png) no-repeat;
+		background-position: center center;
+		background-size: 26px 26px;
+		width: 32px;
+		height: 32px;
 	}
 
 }
 
 .list-entry:nth-child(odd) {
-	background: $mainBG;
+	background: transparent;
 }
 
 .list-entry:nth-child(even) {
@@ -297,8 +249,13 @@ html,body {
 }
 
 /*
- * Event List
+ * Events
  */
+
+.event-list {
+	font-family: $eventListFont;
+}
+
 .summary {
 	font-size: 15pt;
 	font-weight: bold;
@@ -317,11 +274,12 @@ html,body {
 }
 
 .description {
+	margin-top: 12px;
 	font-size: 12pt;
 }
 
 .name {
-	font-size: 15pt;
+	font-size: 12pt;
 	font-weight: bold;
 }
 
@@ -334,46 +292,3 @@ html,body {
 	z-index: 1;
 }
 
-/**
- * Deck plans.
- */
-.deck-plans {
-	width: 100%;
-
-	img {
-		display: block;
-		width: 98%;
-		max-width: 500px;
-		margin: auto;
-		margin-bottom: 10px;
-		padding: 10px;
-	}
-	div.arrow {
-		position: absolute;
-		background-color: rgba(0,0,0,0.2);
-		width: 40px;
-		top: 40px;
-		bottom: 0;
-		height: 100%;
-		z-index: 2;
-	}
-	.left {
-		left: 0;
-	}
-	.right {
-		right: 0;
-	}
-	/*
-	div {
-		width: 100%;
-		color: $deckHeaderColor;
-		background-color: $deckHeaderBG;
-		font-family: $headerFont;
-		font-size: large;
-		font-weight: bold;
-		text-align: center;
-		padding: 5px;
-		margin-bottom: 10px;
-	}
-	*/
-}

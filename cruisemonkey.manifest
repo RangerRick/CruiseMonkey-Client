@@ -33,10 +33,8 @@ cruise-monkey-720x1280.png
 cruise-monkey-768x1024.png
 cruise-monkey-800x480.png
 cruise-monkey-960x640.png
-css/bootstrap-theme.css
-css/bootstrap-theme.min.css
-css/bootstrap.css
-css/bootstrap.min.css
+css/angular-mobile-frame.css
+css/angular-mobile-frame.min.css
 css/3rdparty/normalize.css
 css/cruisemonkey/cruisemonkey.css
 fonts/dekar.otf
@@ -121,6 +119,7 @@ js/3rdparty/custom.modernizr.js
 js/3rdparty/fastclick.js
 js/3rdparty/hammer.min.js
 js/3rdparty/html5shiv.js
+js/3rdparty/jasmine.async.js
 js/3rdparty/jquery.js
 js/3rdparty/pouchdb-nightly.js
 js/3rdparty/pouchdb-nightly.min.js
@@ -138,6 +137,8 @@ js/angular/angular-hammer.js
 js/angular/angular-inview.js
 js/angular/angular-loader.js
 js/angular/angular-loader.min.js
+js/angular/angular-mobile-frame.js
+js/angular/angular-mobile-frame.min.js
 js/angular/angular-mocks.js
 js/angular/angular-phonegap-ready.js
 js/angular/angular-resource.js
@@ -153,12 +154,11 @@ js/angular/angular-touch.min.js
 js/angular/angular.js
 js/angular/angular.min.js
 js/angular/angularls.js
-js/bootstrap/bootstrap.js
-js/bootstrap/bootstrap.min.js
 js/cruisemonkey/Config.js
 js/cruisemonkey/Database.js
 js/cruisemonkey/Events.js
 js/cruisemonkey/Logging.js
+js/cruisemonkey/Navigation.js
 js/cruisemonkey/controllers.js
 js/cruisemonkey/directives.js
 js/cruisemonkey/factories.js
@@ -177,4 +177,4 @@ partials/login.html
 NETWORK:
 *
 
-# hash: 218a0f2a783e9ec12cebdc0d8ee63b2a10a148cc6775cceb61cc72f5ba71d8a4
+# hash: be8309801bbc5d982241e5607d3ab0cb8248b259f47e24de84eedb74ffa4a123

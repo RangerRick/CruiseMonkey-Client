@@ -9,14 +9,15 @@
 <!--<![endif]-->
 <head>
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <style>
 	[ng-cloak] {
 		display: none;
 	}
 </style>
 <link rel="stylesheet" href="css/3rdparty/normalize.css" />
-<link rel="stylesheet" href="css/angular-mobile-frame.min.css" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/angular-mobile-frame-0.0.1.css" />
 <link rel="stylesheet" href="css/cruisemonkey/cruisemonkey.css" />
 <script src="js/3rdparty/custom.modernizr.js"></script>
 <!-- IE Fix for HTML5 Tags -->
@@ -60,7 +61,7 @@ $script([
 	console.log('AngularJS Core loaded.');
 
 	$script([
-		'js/angular/angular-mobile-frame.min.js',
+		'js/angular/angular-mobile-frame-0.0.1.min.js',
 		'js/angular/angular-phonegap-ready.js',
 		'js/angular/angular-resource.min.js',
 		/* 'js/angular/angular-strap.min.js', */
@@ -78,7 +79,6 @@ $script.ready(['3rdparty', 'angular-core', 'angular-addons'], function() {
 		'js/cruisemonkey/Config.js',
 		'js/cruisemonkey/Logging.js',
 		'js/cruisemonkey/Database.js',
-		'js/cruisemonkey/Navigation.js',
 		'js/cruisemonkey/services.js',
 		'js/cruisemonkey/factories.js',
 		'js/cruisemonkey/controllers.js',
@@ -111,28 +111,30 @@ timeoutID = window.setTimeout(function() {
   <title ng-bind="'CruiseMonkey - ' + $root.title">CruiseMonkey</title>
 </head>
 <body class="antialiased off-canvas hide-extras" ng-cloak>
-	<mobile-frame>
-		<mobile-header ng-controller="CMHeaderCtrl">
-			<span class="title"><strong>{{title}}</strong></span>
-			<span class="actions" ng-repeat="action in actions">
-				<div class="icon icon-{{action.iconClass}}"></div>
-			</span>
-		</mobile-header>
-		<mobile-nav ng-controller="CMNavigationCtrl">
-			<ul class="nav">
-				<li class="sidebar-header">CruiseMonkey</li>
-				<li data-match-route="/events/official"   ><a href="#/events/official"   >Official Events</a></li>
-				<li data-match-route="/events/unofficial" ><a href="#/events/unofficial" >Unofficial Events</a></li>
-				<li data-match-route="/events/my"         ><a href="#/events/my"         >My Events</a></li>
-				<li data-match-route="/deck-plans"        ><a href="#/deck-plans"        >Deck Plans</a></li>
-			</ul>
-		</mobile-nav>
-		<mobile-content ng-view></mobile-content>
-		<!--
-		<mobile-footer>
-			<small>Copyright &copy; 2013 &mdash; Benjamin Reed</small>
-		</mobile-footer>
-		-->
-	</mobile-frame>
+	<div class="fcontainer">
+		<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 row-offcanvas sidebar-offcanvas" id="sidebar" role="navigation">
+			<div class="sidebar-nav" bs-navbar>
+				<ul class="nav">
+					<li class="sidebar-header">CruiseMonkey</li>
+					<li data-match-route="/events/official"><a href="#/events/official">Official Events</a></li>
+					<li data-match-route="/events/unofficial"><a href="#/events/unofficial">Unofficial Events</a></li>
+					<li data-match-route="/events/my"><a href="#/events/my">My Events</a></li>
+					<li data-match-route="/deck-plans"><a href="#/deck-plans">Deck Plans</a></li>
+				</ul>
+			</div> <!--/sidebar-nav -->
+		</div> <!--/sidebar-offcanvas -->
+		<div class="row row-offcanvas row-offcanvas-left">
+			<div class="col-lg-12 main-view shadow">
+				<div class="main-header" ng-controller="CMHeaderCtrl">
+					<span class="glyphicon glyphicon-align-justify" data-toggle="offcanvas"></span>
+					<span class="title">{{title}}</span>
+					<span class="actions" ng-repeat="action in actions">
+						<div class="icon icon-{{action.iconClass}}"></div>
+					</span>
+				</div>
+				<div class="main-contents" ng-view />
+			</div>
+		</div> <!--/row-->
+	</div>
 </body>
 </html>

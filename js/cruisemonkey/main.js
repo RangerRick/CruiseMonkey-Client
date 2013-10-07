@@ -8,10 +8,12 @@
 		'cruisemonkey.directives',
 		'cruisemonkey.controllers',
 		'cruisemonkey.factories',
+		'cruisemonkey.Navigation',
+		'ek.mobileFrame',
 		/* '$strap.directives', */
 		'hmTouchEvents'
 	])
-	.config(['$routeProvider', function($routeProvider) {
+	.config(['$routeProvider', '$mobileFrameProvider', function($routeProvider, $mobileFrameProvider) {
 		$routeProvider
 			.when('/login', {
 				templateUrl: 'partials/login.html',
@@ -34,6 +36,10 @@
 			.otherwise({
 				redirectTo: '/events/official'
 			});
+		$mobileFrameProvider
+			.setHeaderHeight(40)
+			.setFooterHeight(0)
+			.setNavWidth(250);
 	}])
 	.run(['$rootScope', '$location', 'UserService', function($rootScope, $location, UserService) {
 		$rootScope.$on('$routeChangeStart', function(event, currRoute, prevRoute) {

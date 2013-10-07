@@ -21,7 +21,7 @@
 			}
 		};
 	})
-	.factory('pouchWrapper', ['$q', '$rootScope', 'db', 'LoggingService', 'UserService', function($q, $rootScope, db, log, UserService) {
+	.factory('pouchWrapper', ['$q', '$rootScope', 'Database', 'LoggingService', 'UserService', function($q, $rootScope, db, log, UserService) {
 		return {
 			getEvents: function(eventType) {
 				var deferred = $q.defer();

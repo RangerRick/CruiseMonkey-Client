@@ -96,6 +96,7 @@ module.exports = function(grunt) {
 					'js/angular/angular.strap.min.js',
 					'js/angular/angular-hammer.js',
 					'js/angular/angular-mocks.js',
+					'js/3rdparty/jasmine.async.js',
 					'js/cruisemonkey/*.js'
 				],
 	            options: {

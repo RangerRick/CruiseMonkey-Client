@@ -2,7 +2,7 @@ describe('Logging', function() {
 	var log = null;
 
 	beforeEach(module('cruisemonkey.Logging', function($provide) {
-		$provide.value('Logging.useStringAppender', true);
+		$provide.value('config.logging.useStringAppender', true);
 	}));
 
 	beforeEach(inject(function(LoggingService) {

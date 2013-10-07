@@ -2,23 +2,23 @@
 	'use strict';
 
 	angular.module('cruisemonkey.Database', ['cruisemonkey.Logging', 'cruisemonkey.Config'])
-	.factory('db', ['LoggingService', 'config.database.replicateTo', function(log, replicateTo) {
-		log.info('Initializing CruiseMonkey database.');
+	.factory('Database', ['LoggingService', 'config.database.name', 'config.database.replicateTo', function(log, databaseName, replicateTo) {
+		log.info('Initializing CruiseMonkey database: ' + databaseName);
 
-		Pouch.enableAllDbs = true;
-		var db = new Pouch('cruisemonkey');
+		// Pouch.enableAllDbs = true;
+		var db = new Pouch(databaseName);
 
 		if (replicateTo) {
-			log.info('Initializing Replication: ',replicateTo);
-			Pouch.replicate('cruisemonkey', replicateTo, {continuous: true});
-			Pouch.replicate(replicateTo, 'cruisemonkey', {continuous: true});
+			log.info('Initializing Replication: ' + replicateTo);
+			Pouch.replicate(databaseName, replicateTo, {continuous: true});
+			Pouch.replicate(replicateTo, databaseName, {continuous: true});
 		}
 
 		log.info('Finished initializing CruiseMonkey database.');
 
 		return db;
 	}])
-	.factory('listener', function($rootScope, db) {
+	.factory('listener', ['$rootScope', 'Database', function($rootScope, db) {
 		db.changes({
 			continuous: true,
 			onChange: function(change) {
@@ -38,5 +38,5 @@
 				}
 			}
 		});
-	});
+	}]);
 }());
