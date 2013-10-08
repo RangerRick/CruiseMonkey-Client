@@ -96,6 +96,9 @@
 			'warn': function() {
 				logger.warn(Array.prototype.slice.apply(arguments));
 			},
+			'warning': function() {
+				logger.warn(Array.prototype.slice.apply(arguments));
+			},
 			'error': function() {
 				logger.error(Array.prototype.slice.apply(arguments));
 			},
