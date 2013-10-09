@@ -71,7 +71,7 @@ module.exports = function(grunt) {
 					'index.html',
 					'partials/*.html'
 				],
-				tasks: ['manifest', 'jshint'],
+				tasks: ['manifest'],
 				options: {
 					interval: 500,
 					spawn: false,

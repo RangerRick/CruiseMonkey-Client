@@ -5,13 +5,15 @@
 	.factory('Database', ['LoggingService', 'config.database.name', 'config.database.replicateTo', function(log, databaseName, replicateTo) {
 		log.info('Initializing CruiseMonkey database: ' + databaseName);
 
-		// Pouch.enableAllDbs = true;
 		var db = new Pouch(databaseName);
 
 		if (replicateTo) {
+			var options = {
+				continuous: true
+			};
 			log.info('Initializing Replication: ' + replicateTo);
-			Pouch.replicate(databaseName, replicateTo, {continuous: true});
-			Pouch.replicate(replicateTo, databaseName, {continuous: true});
+			db.replicate.to(replicateTo, options);
+			db.replicate.from(replicateTo, options);
 		}
 
 		log.info('Finished initializing CruiseMonkey database.');

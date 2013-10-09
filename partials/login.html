@@ -28,8 +28,8 @@
 				<div class="col-xs-4 label">Password:</div><div class="col-xs-8"><input type="password" ng-model="user.password" name="uPassword" required /></div>
 				<div class="col-xs-4"></div>
 				<div class="col-xs-8">
-					<button ng-click="reset()" ng-disabled="isUnchanged(user)">Reset</button>
-					<button ng-click="update(user)" ng-disabled="form.$invalid || isUnchanged(user)">Log In</button>
+					<button type="reset" ng-click="reset()" ng-disabled="isUnchanged(user)">Reset</button>
+					<button type="submit" ng-click="update(user)" ng-disabled="form.$invalid || isUnchanged(user)">Log In</button>
 				</div>
 			</div>
 		<div class="col-md-4"></div>

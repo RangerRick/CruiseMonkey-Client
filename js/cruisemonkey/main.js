@@ -9,6 +9,7 @@
 		'cruisemonkey.controllers',
 		'cruisemonkey.factories',
 		'cruisemonkey.Navigation',
+		'cruisemonkey.Events',
 		'ek.mobileFrame',
 		/* '$strap.directives', */
 		'hmTouchEvents'

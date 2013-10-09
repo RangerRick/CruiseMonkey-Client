@@ -1,20 +1,20 @@
 (function() {
 	'use strict';
 
-	angular.module('cruisemonkey.controllers', ['cruisemonkey.services'])
-	.controller('CMLoginCtrl', function($scope, $rootScope, UserService) {
-		console.log('Initializing CMLoginCtrl');
+	angular.module('cruisemonkey.controllers', ['cruisemonkey.services', 'cruisemonkey.Logging', 'cruisemonkey.Events'])
+	.controller('CMLoginCtrl', function($scope, $rootScope, UserService, LoggingService) {
+		LoggingService.info('Initializing CMLoginCtrl');
 		$rootScope.title = "Log In";
 		$scope.user = UserService.get();
 		$scope.reset = function() {
 			var user = UserService.get();
-			console.log('resetting user: ', user);
+			LoggingService.info('resetting user: ', user);
 			$scope.user = user;
 		};
 		$scope.isUnchanged = function(newUser) {
 			var savedUser = UserService.get();
-			if (savedUser == null) {
-				if (newUser == null) {
+			if (savedUser === null || savedUser === undefined) {
+				if (newUser === null || newUser === undefined) {
 					return true;
 				} else {
 					return false;
@@ -23,13 +23,13 @@
 			return savedUser.username === newUser.username && savedUser.password === newUser.password;
 		};
 		$scope.update = function(user) {
-			user.isLoggedIn = true;
-			console.log('saving user: ', user);
+			user.loggedIn = true;
+			LoggingService.info('saving user: ', user);
 			UserService.save(user);
 		};
 	})
-	.controller('CMDeckListCtrl', function($scope, $rootScope, $routeParams, $location) {
-		console.log('Initializing CMDeckListCtrl');
+	.controller('CMDeckListCtrl', function($scope, $rootScope, $routeParams, $location, LoggingService) {
+		LoggingService.info('Initializing CMDeckListCtrl');
 		$scope.deck = parseInt($routeParams.deck, 10);
 		$rootScope.title = "Deck " + $scope.deck;
 		$scope.previous = function() {
@@ -43,11 +43,11 @@
 			}
 		};
 	})
-	.controller('CMHeaderCtrl', function($scope, $rootScope, $location) {
-		console.log('Initializing CMHeaderCtrl');
+	.controller('CMHeaderCtrl', function($scope, $rootScope, $location, LoggingService) {
+		LoggingService.info('Initializing CMHeaderCtrl');
 	})
-	.controller('CMEventCtrl', function($scope, $rootScope, $routeParams, pouchWrapper, $location, UserService) {
-		console.log('Initializing CMEventCtrl');
+	.controller('CMEventCtrl', function($scope, $rootScope, $routeParams, $location, $q, UserService, EventService, LoggingService) {
+		LoggingService.info('Initializing CMEventCtrl');
 
 		$rootScope.actions = [
 			{
@@ -62,22 +62,55 @@
 		if (!$scope.events) {
 			$scope.events = {};
 		}
-		if (!$scope.favorites) {
-			$scope.favorites = {};
-		}
 
-		$scope.isFavorite = function(id) {
-			return $scope.favorites[id];
-		}
+		$scope.user = UserService.get();
+		
+		$q.when($scope.user).then(function(user) {
+			var username = user.username;
 
-		$scope.save = function(eventId) {
-			console.log("this = ", this);
-			console.log("eventId = " + eventId);
-
-			if ($scope.favorites[eventId]) {
-				$scope.favorites[eventId] = false;
+			var func;
+			if ($routeParams.eventType === 'official') {
+				func = EventService.getOfficialEvents;
+			} else if ($routeParams.eventType === 'unofficial') {
+				func = EventService.getPublicEvents;
+			} else if ($routeParams.eventType === 'my') {
+				func = EventService.getMyEvents;
 			} else {
-				$scope.favorites[eventId] = true;
+				LoggingService.warn('unknown event type: ' + $routeParams.eventType);
+			}
+			$scope.events = $q.all([func(username), EventService.getMyFavorites(username)]).then(function(results) {
+				var i;
+				
+				var ret = {};
+				for (i = 0; i < results[0].length; i++) {
+					var e = results[0][i];
+					e.isFavorite = false;
+					ret[e._id] = e;
+				}
+				
+				for (i = 0; i < results[1].length; i++) {
+					var eventId = results[1][i];
+					if (ret[eventId]) {
+						ret[eventId].isFavorite = true;
+					} else {
+						LoggingService.warn('could not find ' + eventId + ' in available events');
+					}
+				}
+
+				return ret;
+			});
+
+		});
+
+		$scope.onChange = function(eventId, checked) {
+			var username = $scope.user.username;
+			$q.when($scope.events).then(function(events) {
+				events[eventId].isFavorite = checked;
+			});
+			if (checked) {
+				EventService.addFavorite(username, eventId);
+			} else {
+				EventService.removeFavorite(username, eventId);
 			}
 		};
 
@@ -92,25 +125,7 @@
 			}
 		};
 
-		var dbEvents = pouchWrapper.getEvents($routeParams.eventType);
-		dbEvents.then(function(docs) {
-			var events = {};
-			docs.rows.forEach(function(doc) {
-				events[doc.value._id] = doc.value;
-			});
-			$scope.events = events;
-		});
-
-		var dbFavorites = pouchWrapper.getFavorites();
-		dbFavorites.then(function(docs) {
-			console.log('new favorites: ', docs);
-			var favorites = {};
-			docs.rows.forEach(function(fav) {
-				favorites[fav] = true;
-			});
-			$scope.favorites = favorites;
-		});
-
+		/*
 		$scope.$on('newEvent', function(jsEvent, event) {
 			console.log('addEvent: ' + event._id);
 			$scope.safeApply(function() {
@@ -136,6 +151,7 @@
 				}
 			});
 		});
+		*/
 	})
 	;
 }());

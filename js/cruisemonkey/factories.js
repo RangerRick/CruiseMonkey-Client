@@ -4,8 +4,8 @@
 	angular.module('cruisemonkey.factories', ['ngResource', 'cruisemonkey.Logging', 'cruisemonkey.Database'])
 	.factory('UserService', function() {
 		var user = {
-			loggedIn: false,
-			username: '',
+			loggedIn: true,
+			username: 'ranger',
 			password: ''
 		};
 
