@@ -71,7 +71,7 @@ module.exports = function(grunt) {
 					'index.html',
 					'partials/*.html'
 				],
-				tasks: ['manifest'],
+				tasks: ['manifest', 'jshint'],
 				options: {
 					interval: 500,
 					spawn: false,
@@ -80,9 +80,15 @@ module.exports = function(grunt) {
 				}
 			}
 		},
-	    jasmine: {
-	        test: {
-	            src: [
+		jshint: {
+			options: {
+				force: true
+			},
+			uses_defaults: [ 'js/cruisemonkey/*.js' ]
+		},
+		jasmine: {
+			  test: {
+					src: [
 					'js/3rdparty/custom.modernizr.js',
 					'js/log4javascript/log4javascript_uncompressed.js',
 					'js/3rdparty/jquery.js',
@@ -99,19 +105,20 @@ module.exports = function(grunt) {
 					'js/3rdparty/jasmine.async.js',
 					'js/cruisemonkey/*.js'
 				],
-	            options: {
+					options: {
 					keepRunner: true,
-	                specs: ['test/*.js']
-	            }
-	        }
-	    }
+						 specs: ['test/*.js']
+					}
+			  }
+		 }
 	});
 
 	grunt.loadNpmTasks('grunt-sass');
 	grunt.loadNpmTasks('grunt-manifest');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-jasmine');
+	grunt.loadNpmTasks('grunt-contrib-jshint');
 
-	grunt.registerTask('default', ['sass', 'manifest', 'jasmine']);
+	grunt.registerTask('default', ['sass', 'manifest', 'jshint', 'jasmine']);
 };
 

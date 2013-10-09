@@ -15,6 +15,7 @@
     "grunt-sass": "latest",
     "grunt-manifest": "latest",
     "grunt-contrib-watch": "latest",
-    "grunt-contrib-jasmine": "latest"
+    "grunt-contrib-jasmine": "latest",
+    "grunt-contrib-jshint": "latest"
   }
 }
