@@ -60,14 +60,20 @@ $script([
 	console.log('AngularJS Core loaded.');
 
 	$script([
-		'js/angular/angular-mobile-frame.min.js',
-		'js/angular/angular-phonegap-ready.js',
-		'js/angular/angular-resource.min.js',
-		/* 'js/angular/angular-strap.min.js', */
-		'js/angular/angular-hammer.js',
-		'js/angular/angularls.js'
-	], 'angular-addons', function() {
-		console.log('AngularJS (and 3rd-party addons) loaded.');
+		'js/angular/angular-route.min.js'
+	], 'angular-core', function() {
+		console.log('AngularJS Core loaded.');
+
+		$script([
+			'js/angular/angular-mobile-frame.min.js',
+			'js/angular/angular-phonegap-ready.js',
+			'js/angular/angular-resource.min.js',
+			/* 'js/angular/angular-strap.min.js', */
+			'js/angular/angular-hammer.js',
+			'js/angular/angularls.js'
+		], 'angular-addons', function() {
+			console.log('AngularJS (and 3rd-party addons) loaded.');
+		});
 	});
 });
 

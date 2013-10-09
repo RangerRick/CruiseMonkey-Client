@@ -3,6 +3,7 @@
 
 	angular.module('cruisemonkey',
 	[
+		'ngRoute',
 		'cruisemonkey.filters',
 		'cruisemonkey.services',
 		'cruisemonkey.directives',

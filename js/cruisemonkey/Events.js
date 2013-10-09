@@ -201,7 +201,6 @@
 				{
 					map: function(doc) {
 						if (doc.type === 'favorite') {
-							console.log('emitting: ', doc);
 							emit({ 'username': doc.username, 'eventId': doc.eventId }, doc._id);
 						}
 					}
