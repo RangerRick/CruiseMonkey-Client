@@ -61,13 +61,14 @@ $script([
 
 	$script([
 		'js/angular/angular-route.min.js'
-	], 'angular-core', function() {
-		console.log('AngularJS Core loaded.');
+	], 'angular-routing', function() {
+		console.log('AngularJS Routing loaded.');
 
 		$script([
 			'js/angular/angular-mobile-frame.min.js',
 			'js/angular/angular-phonegap-ready.js',
 			'js/angular/angular-resource.min.js',
+			'js/angular/angular-touch.min.js',
 			/* 'js/angular/angular-strap.min.js', */
 			'js/angular/angular-hammer.js',
 			'js/angular/angularls.js'
@@ -77,7 +78,7 @@ $script([
 	});
 });
 
-$script.ready(['3rdparty', 'angular-core', 'angular-addons'], function() {
+$script.ready(['3rdparty', 'angular-core', 'angular-routing', 'angular-addons'], function() {
 	$script([
 		'js/cruisemonkey/string.js',
 		'js/cruisemonkey/offcanvas.js',
@@ -125,7 +126,7 @@ timeoutID = window.setTimeout(function() {
 				<div class="icon icon-{{action.iconClass}}"></div>
 			</span>
 		</mobile-header>
-		<mobile-nav ng-controller="CMNavigationCtrl">
+		<mobile-nav ng-controller="CMNavigationCtrl" ng-click="toggleDrawer()">
 			<ul class="nav">
 				<li class="sidebar-header">CruiseMonkey</li>
 				<li data-match-route="/events/official"   ><a href="#/events/official"   >Official Events</a></li>
