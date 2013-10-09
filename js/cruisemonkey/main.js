@@ -13,8 +13,9 @@
 		'cruisemonkey.Navigation',
 		'cruisemonkey.Events',
 		'ek.mobileFrame',
+		'btford.phonegap.ready'
 		/* '$strap.directives', */
-		'hmTouchEvents'
+		/* 'hmTouchEvents' */
 	])
 	.config(['$routeProvider', '$mobileFrameProvider', function($routeProvider, $mobileFrameProvider) {
 		$routeProvider
@@ -44,7 +45,13 @@
 			.setFooterHeight(0)
 			.setNavWidth(250);
 	}])
-	.run(['$rootScope', '$location', 'UserService', function($rootScope, $location, UserService) {
+	.run(['$rootScope', '$location', 'UserService', 'phonegapReady', function($rootScope, $location, UserService, phonegapReady) {
+		phonegapReady(function() {
+			if (parseFloat(window.device.version) === 7.0) {
+				document.body.style.marginTop = "20px";
+			}
+		});
+
 		$rootScope.$on('$routeChangeStart', function(event, currRoute, prevRoute) {
 			console.log("$routeChangeStart: template = " + currRoute.templateUrl + ", eventType = " + currRoute.params.eventType);
 

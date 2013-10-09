@@ -15,9 +15,6 @@
 
 	<gap:platform name="ios" minVersion="4.2" />
 	<gap:platform name="android" minVersion="2.3" />
-	<!-- <gap:platform name="webos" /> -->
-	<!-- <gap:platform name="symbian" /> -->
-	<!-- <gap:platform name="blackberry" /> -->
 	<!-- <gap:platform name="winphone" /> -->
 
 	<icon src="Icon.png" />

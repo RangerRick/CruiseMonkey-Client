@@ -1,6 +1,6 @@
 <div class="event-list">
 	<div ng-repeat="event in events" class="list-entry calendar-event scrollable">
-		<div class="favorite" ng-show="user.username">
+		<div class="favorite" ng-show="(user.username && user.username != event.username)">
 			<input type="checkbox" id="{{event._id}}-favorite" ng-checked="event.isFavorite" ng-model="fav" ng-change="onChange(event._id, fav)"><label for="{{event._id}}-favorite">&nbsp;</label>
 		</div>
 		<div class="summary">{{event.summary}}</div>
