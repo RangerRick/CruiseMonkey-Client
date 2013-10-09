@@ -87,8 +87,8 @@ module.exports = function(grunt) {
 			uses_defaults: [ 'js/cruisemonkey/*.js' ]
 		},
 		jasmine: {
-			  test: {
-					src: [
+			test: {
+				src: [
 					'js/3rdparty/custom.modernizr.js',
 					'js/log4javascript/log4javascript_uncompressed.js',
 					'js/3rdparty/jquery.js',
@@ -105,12 +105,20 @@ module.exports = function(grunt) {
 					'js/3rdparty/jasmine.async.js',
 					'js/cruisemonkey/*.js'
 				],
-					options: {
+				options: {
 					keepRunner: true,
-						 specs: ['test/*.js']
-					}
-			  }
-		 }
+					specs: ['test/*.js']
+				}
+			}
+		},
+		connect: {
+			local: {
+				options: {
+					port: 8080,
+					debug: true
+				}
+			}
+		}
 	});
 
 	grunt.loadNpmTasks('grunt-sass');
@@ -118,7 +126,8 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-jasmine');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
+	grunt.loadNpmTasks('grunt-contrib-connect');
 
-	grunt.registerTask('default', ['sass', 'manifest', 'jshint', 'jasmine']);
+	grunt.registerTask('default', ['connect', 'watch']);
 };
 
