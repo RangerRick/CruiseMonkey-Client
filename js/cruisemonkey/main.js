@@ -54,7 +54,7 @@
 		});
 
 		$rootScope.$on('$routeChangeStart', function(event, currRoute, prevRoute) {
-			console.log("$routeChangeStart: template = " + currRoute.templateUrl + ", eventType = " + currRoute.params.eventType);
+			// console.log("$routeChangeStart: template = " + currRoute.templateUrl + ", eventType = " + currRoute.params.eventType);
 
 			if (UserService.isLoggedIn()) {
 				angular.noop();
