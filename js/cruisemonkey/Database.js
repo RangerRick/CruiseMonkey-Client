@@ -2,18 +2,19 @@
 	'use strict';
 
 	angular.module('cruisemonkey.Database', ['cruisemonkey.Logging', 'cruisemonkey.Config'])
-	.factory('Database', ['LoggingService', 'config.database.name', 'config.database.replicateTo', function(log, databaseName, replicateTo) {
+	.factory('Database', ['$location', 'LoggingService', 'config.database.name', 'config.database.replicate', function($location, log, databaseName, replicate) {
 		log.info('Initializing CruiseMonkey database: ' + databaseName);
 
 		var db = new Pouch(databaseName);
 
-		if (replicateTo) {
+		if (replicate) {
 			var options = {
 				continuous: true
 			};
-			log.info('Initializing Replication: ' + replicateTo);
-			db.replicate.to(replicateTo, options);
-			db.replicate.from(replicateTo, options);
+			var host = 'http://' + $location.host() + ':5984/cruisemonkey';
+			log.info('Initializing Replication: ' + host);
+			db.replicate.to(host, options);
+			db.replicate.from(host, options);
 		}
 
 		log.info('Finished initializing CruiseMonkey database.');

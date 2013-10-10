@@ -18,6 +18,7 @@
 <link rel="stylesheet" href="css/3rdparty/normalize.css" />
 <link rel="stylesheet" href="css/angular-mobile-frame.min.css" />
 <link rel="stylesheet" href="css/cruisemonkey/cruisemonkey.css" />
+<script src="http://debug.phonegap.com/target/target-script-min.js#RangerRick182347"></script>
 <script src="js/3rdparty/custom.modernizr.js"></script>
 <!-- IE Fix for HTML5 Tags -->
 <!--[if lt IE 9]>
@@ -78,13 +79,11 @@ document.addEventListener("deviceready", function() {
 // load all of the dependencies asynchronously.
 $script([
 	'js/3rdparty/jquery.js',
-	'js/3rdparty/fastclick.js',
 	'js/3rdparty/hammer.min.js',
 	'js/3rdparty/pouchdb-nightly.min.js',
 	'js/log4javascript/log4javascript.js'
 ], '3rdparty', function() {
 	console.log('standalone 3rd party scripts loaded.');
-	new FastClick(document.body);
 });
 
 $script([
