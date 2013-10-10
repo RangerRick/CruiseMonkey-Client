@@ -23,7 +23,6 @@
 <!--[if lt IE 9]>
 		<script src="js/3rdparty/html5shiv.js"></script>
 	<![endif]-->
-<!-- <script src="js/3rdparty/jquery.js"></script> -->
 <script src="js/3rdparty/script.js"></script>
 <script src="js/angular/angular-loader.js"></script>
 <script>
@@ -43,6 +42,39 @@ window.setInterval(function() {
 	window.applicationCache.update();
 }, 5000);
 
+var timeoutID;
+
+document.addEventListener("deviceready", function() {
+	if (timeoutID) {
+		window.clearTimeout(timeoutID);
+	}
+
+	$script.ready(['3rdparty', 'angular-core', 'angular-routing', 'angular-addons'], function() {
+		$script([
+			'js/cruisemonkey/string.js',
+			'js/cruisemonkey/offcanvas.js',
+			'js/cruisemonkey/Config.js',
+			'js/cruisemonkey/Database.js',
+			'js/cruisemonkey/Events.js',
+			'js/cruisemonkey/Logging.js',
+			'js/cruisemonkey/Navigation.js',
+			'js/cruisemonkey/Controller.Login.js',
+			'js/cruisemonkey/User.js',
+			'js/cruisemonkey/services.js',
+			'js/cruisemonkey/factories.js',
+			'js/cruisemonkey/controllers.js',
+			'js/cruisemonkey/filters.js',
+			'js/cruisemonkey/directives.js',
+			'js/cruisemonkey/main.js',
+			'phonegap.js'
+		], 'cruisemonkey', function() {
+			console.log('CruiseMonkey loaded.');
+			angular.bootstrap(document, ['cruisemonkey']);
+		});
+	});
+
+}, false);
+
 // load all of the dependencies asynchronously.
 $script([
 	'js/3rdparty/jquery.js',
@@ -52,64 +84,36 @@ $script([
 	'js/log4javascript/log4javascript.js'
 ], '3rdparty', function() {
 	console.log('standalone 3rd party scripts loaded.');
+	new FastClick(document.body);
 });
 
 $script([
 	'js/angular/angular.min.js'
 ], 'angular-core', function() {
 	console.log('AngularJS Core loaded.');
+});
 
+$script.ready(['angular-core'], function() {
 	$script([
 		'js/angular/angular-route.min.js'
 	], 'angular-routing', function() {
 		console.log('AngularJS Routing loaded.');
-
-		$script([
-			'js/angular/angular-mobile-frame.min.js',
-			'js/angular/angular-phonegap-ready.js',
-			'js/angular/angular-resource.min.js',
-			'js/angular/angular-touch.min.js',
-			/* 'js/angular/angular-strap.min.js', */
-			'js/angular/angular-hammer.js',
-			'js/angular/angularls.js'
-		], 'angular-addons', function() {
-			console.log('AngularJS (and 3rd-party addons) loaded.');
-		});
 	});
 });
 
-$script.ready(['3rdparty', 'angular-core', 'angular-routing', 'angular-addons'], function() {
+$script.ready(['angular-routing'], function() {
 	$script([
-		'js/cruisemonkey/string.js',
-		'js/cruisemonkey/offcanvas.js',
-		'js/cruisemonkey/Config.js',
-		'js/cruisemonkey/Database.js',
-		'js/cruisemonkey/Events.js',
-		'js/cruisemonkey/Logging.js',
-		'js/cruisemonkey/Navigation.js',
-		'js/cruisemonkey/Controller.Login.js',
-		'js/cruisemonkey/User.js',
-		'js/cruisemonkey/services.js',
-		'js/cruisemonkey/factories.js',
-		'js/cruisemonkey/controllers.js',
-		'js/cruisemonkey/filters.js',
-		'js/cruisemonkey/directives.js',
-		'js/cruisemonkey/main.js',
-		'phonegap.js'
-	], 'cruisemonkey', function() {
-		console.log('CruiseMonkey loaded.');
-		new FastClick(document.body);
-		angular.bootstrap(document, ['cruisemonkey']);
+		'js/angular/angular-mobile-frame.min.js',
+		'js/angular/angular-phonegap-ready.js',
+		'js/angular/angular-resource.min.js',
+		'js/angular/angular-touch.min.js',
+		/* 'js/angular/angular-strap.min.js', */
+		'js/angular/angular-hammer.js',
+		'js/angular/angularls.js'
+	], 'angular-addons', function() {
+		console.log('AngularJS (and 3rd-party addons) loaded.');
 	});
 });
-
-var timeoutID;
-
-document.addEventListener("deviceready", function() {
-	if (timeoutID) {
-		window.clearTimeout(timeoutID);
-	}
-}, false);
 
 timeoutID = window.setTimeout(function() {
 	console.log('Firing deviceready manually.');
@@ -117,7 +121,7 @@ timeoutID = window.setTimeout(function() {
 	var e = document.createEvent('Events');
 	e.initEvent('deviceready');
 	document.dispatchEvent(e);
-}, 2000);
+}, 4000);
   </script>
   <title ng-bind="'CruiseMonkey - ' + $root.title">CruiseMonkey</title>
 </head>
