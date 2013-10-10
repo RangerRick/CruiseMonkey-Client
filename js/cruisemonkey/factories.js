@@ -1,26 +1,7 @@
 (function() {
 	'use strict';
 
-	angular.module('cruisemonkey.factories', ['ngResource', 'cruisemonkey.Logging', 'cruisemonkey.Database'])
-	.factory('UserService', function() {
-		var user = {
-			loggedIn: true,
-			username: 'ranger',
-			password: ''
-		};
-
-		return {
-			'isLoggedIn': function() {
-				return user.loggedIn;
-			},
-			'get': function() {
-				return angular.copy(user);
-			},
-			'save': function(newUser) {
-				user = angular.copy(newUser);
-			}
-		};
-	})
+	angular.module('cruisemonkey.factories', ['ngResource', 'cruisemonkey.Logging', 'cruisemonkey.Database', 'cruisemonkey.User'])
 	.factory('pouchWrapper', ['$q', '$rootScope', 'Database', 'LoggingService', 'UserService', function($q, $rootScope, db, log, UserService) {
 		return {
 			getEvents: function(eventType) {

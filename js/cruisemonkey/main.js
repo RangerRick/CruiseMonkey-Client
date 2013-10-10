@@ -12,6 +12,7 @@
 		'cruisemonkey.factories',
 		'cruisemonkey.Navigation',
 		'cruisemonkey.Events',
+		'cruisemonkey.User',
 		'ek.mobileFrame',
 		'btford.phonegap.ready'
 		/* '$strap.directives', */

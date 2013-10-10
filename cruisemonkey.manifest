@@ -155,10 +155,12 @@ js/angular/angular.js
 js/angular/angular.min.js
 js/angular/angularls.js
 js/cruisemonkey/Config.js
+js/cruisemonkey/Controller.Login.js
 js/cruisemonkey/Database.js
 js/cruisemonkey/Events.js
 js/cruisemonkey/Logging.js
 js/cruisemonkey/Navigation.js
+js/cruisemonkey/User.js
 js/cruisemonkey/controllers.js
 js/cruisemonkey/directives.js
 js/cruisemonkey/factories.js
@@ -177,4 +179,4 @@ partials/login.html
 NETWORK:
 *
 
-# hash: 6bd201bbba4c3f27f6ea900d1ae67b3fb906d7029c65be28710be038d368707a
+# hash: b56bc3034eae5a4b7e74f699f225ba60e5730ba04cca8f5294e21d86854e5498
