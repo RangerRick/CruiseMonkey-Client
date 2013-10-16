@@ -25,7 +25,6 @@
 		<script src="js/3rdparty/html5shiv.js"></script>
 	<![endif]-->
 <script src="js/3rdparty/script.js"></script>
-<script src="js/angular/angular-loader.js"></script>
 <script>
 window.addEventListener('load', function(e) {
 	window.applicationCache.addEventListener('updateready', function(e) {
@@ -59,7 +58,6 @@ document.addEventListener("deviceready", function() {
 			'js/cruisemonkey/Events.js',
 			'js/cruisemonkey/Logging.js',
 			'js/cruisemonkey/Navigation.js',
-			'js/cruisemonkey/Time.js',
 			'js/cruisemonkey/User.js',
 			'js/cruisemonkey/Controller.Login.js',
 			'js/cruisemonkey/services.js',
@@ -95,6 +93,7 @@ $script([
 
 $script.ready(['angular-core'], function() {
 	$script([
+		'js/angular/angular-loader.min.js',
 		'js/angular/angular-route.min.js'
 	], 'angular-routing', function() {
 		console.log('AngularJS Routing loaded.');
