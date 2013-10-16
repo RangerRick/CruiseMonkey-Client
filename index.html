@@ -59,8 +59,9 @@ document.addEventListener("deviceready", function() {
 			'js/cruisemonkey/Events.js',
 			'js/cruisemonkey/Logging.js',
 			'js/cruisemonkey/Navigation.js',
-			'js/cruisemonkey/Controller.Login.js',
+			'js/cruisemonkey/Time.js',
 			'js/cruisemonkey/User.js',
+			'js/cruisemonkey/Controller.Login.js',
 			'js/cruisemonkey/services.js',
 			'js/cruisemonkey/factories.js',
 			'js/cruisemonkey/controllers.js',
@@ -118,7 +119,7 @@ timeoutID = window.setTimeout(function() {
 	console.log('Firing deviceready manually.');
 	window.clearTimeout(timeoutID);
 	var e = document.createEvent('Events');
-	e.initEvent('deviceready');
+	e.initEvent('deviceready', true, true);
 	document.dispatchEvent(e);
 }, 4000);
   </script>

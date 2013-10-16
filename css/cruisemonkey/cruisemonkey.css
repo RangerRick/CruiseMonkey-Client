@@ -68,7 +68,7 @@ a:link, a:visited, a:hover {
     user-select: none; }
   .mobile-nav .nav > li.sidebar-header {
     display: inline-block;
-    width: 100%;
+    width: 250px;
     text-align: center;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -80,7 +80,7 @@ a:link, a:visited, a:hover {
     background-color: transparent; }
   .mobile-nav .nav > li {
     display: inline-block;
-    width: 100%;
+    width: 250px;
     border-bottom: 1px solid #aaaaaa;
     color: black; }
     .mobile-nav .nav > li a {
@@ -88,7 +88,7 @@ a:link, a:visited, a:hover {
       padding: 10px;
       color: black;
       background-color: transparent;
-      width: 100%;
+      width: 230px;
       height: 100%; }
   .mobile-nav .nav > li:hover, .mobile-nav .nav > li:focus {
     color: white;
@@ -122,21 +122,20 @@ a:link, a:visited, a:hover {
   appearance: none; }
 
 .mobile-header-inner, .mobile-content-inner, .mobile-footer-inner {
-  padding: 0 0.625em; }
+  padding: 0; }
 
 .mobile-header-inner {
-  /* height: 40px; */
   float: left;
-  margin-top: 4px; }
+  height: 40px;
+  margin: 0;
+  padding: 0; }
   .mobile-header-inner .title {
-    padding-top: 0;
-    padding-bottom: 0;
-    height: 32px;
-    font-size: 36px;
-    vertical-align: bottom; }
+    margin-top: 4px;
+    height: 40px;
+    font-size: 32px; }
 
 .mobile-content h1 {
-  padding: 0 0.41667em; }
+  padding: 0; }
 
 .mobile-content-inner {
   padding: 0; }

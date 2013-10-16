@@ -62,6 +62,8 @@ $deckHeaderBG: black;
 $mainBG: white;
 $alternateBG: $cmBabyBlue;
 
+$navWidth: 250px;
+
 body {
   font-family: $defaultFont;
 	color: #444;
@@ -119,7 +121,7 @@ a:hover {
 
 	.nav > li.sidebar-header {
 		display: inline-block;
-		width: 100%;
+		width: $navWidth;
 		text-align: center;
 		padding-top: 20px;
 		padding-bottom: 20px;
@@ -135,7 +137,7 @@ a:hover {
 
 	.nav > li {
 		display: inline-block;
-		width: 100%;
+		width: $navWidth;
 		border-bottom: $gutterSeparator;
 		color: $gutterColor;
 		a {
@@ -143,7 +145,7 @@ a:hover {
 			padding: 10px;
 			color: $gutterColor;
 			background-color: transparent;
-			width: 100%;
+			width: $navWidth - 20;
 			height: 100%;
 		}
 	}
@@ -188,25 +190,24 @@ a:hover {
 .mobile-header-inner,
 .mobile-content-inner,
 .mobile-footer-inner {
-	padding: 0 .625em;
+	padding: 0;
 }
 
 .mobile-header-inner {
-	/* height: 40px; */
 	float: left;
-	margin-top: 4px;
+	height: 40px;
+	margin: 0;
+	padding: 0;
 
 	.title {
-		padding-top: 0;
-		padding-bottom: 0;
-		height: 32px;
-		font-size: 36px;
-		vertical-align: bottom;
+		margin-top: 4px;
+		height: 40px;
+		font-size: 32px;
 	}
 }
 
 .mobile-content h1 {
-	padding: 0 .416667em;
+	padding: 0;
 }
 
 .mobile-content-inner {

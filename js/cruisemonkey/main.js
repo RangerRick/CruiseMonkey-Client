@@ -10,6 +10,7 @@
 		'cruisemonkey.directives',
 		'cruisemonkey.controllers',
 		'cruisemonkey.factories',
+		'cruisemonkey.Database',
 		'cruisemonkey.Navigation',
 		'cruisemonkey.Events',
 		'cruisemonkey.User',

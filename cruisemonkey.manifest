@@ -160,6 +160,7 @@ js/cruisemonkey/Database.js
 js/cruisemonkey/Events.js
 js/cruisemonkey/Logging.js
 js/cruisemonkey/Navigation.js
+js/cruisemonkey/Time.js
 js/cruisemonkey/User.js
 js/cruisemonkey/controllers.js
 js/cruisemonkey/directives.js
@@ -179,4 +180,4 @@ partials/login.html
 NETWORK:
 *
 
-# hash: 530fe0f40d6960541647732a7c3a01b2b8b96a232ac16b4a94616c7ca2027e08
+# hash: 6b7445c3ca3dca2cd8224eabcbc516a1f2341375856deddd280bb95ac3221186

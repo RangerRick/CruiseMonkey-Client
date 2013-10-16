@@ -11,7 +11,7 @@
 						emit(doc.eventType, doc);
 					}
 				};
-				db.query({map: map}, {key: eventType}, function(err, res) {
+				db.database.query({map: map}, {key: eventType}, function(err, res) {
 					$rootScope.$apply(function() {
 						if (err) {
 							log.error(err);
@@ -31,7 +31,7 @@
 						emit(doc.username, doc.favorite);
 					}
 				};
-				db.query({map: map}, {key: user.username}, function(err, res) {
+				db.database.query({map: map}, {key: user.username}, function(err, res) {
 					$rootScope.$apply(function() {
 						if (err) {
 							log.error(err);
@@ -45,7 +45,7 @@
 			},
 			add: function(doc) {
 				var deferred = $q.defer();
-				db.post(doc, function(err, res) {
+				db.database.post(doc, function(err, res) {
 					$rootScope.$apply(function() {
 						if (err) {
 							deferred.reject(err);
@@ -58,12 +58,12 @@
 			},
 			remove: function(id) {
 				var deferred = $q.defer();
-				db.get(id, function(err, doc) {
+				db.database.get(id, function(err, doc) {
 					$rootScope.$apply(function() {
 						if (err) {
 							deferred.reject(err);
 						} else {
-							db.remove(doc, function(err, res) {
+							db.database.remove(doc, function(err, res) {
 								$rootScope.$apply(function() {
 									if (err) {
 										deferred.reject(err);

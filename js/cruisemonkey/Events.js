@@ -5,7 +5,7 @@
 	.factory('EventService', ['$q', '$rootScope', 'Database', 'LoggingService', function($q, $rootScope, db, log) {
 		var doQuery = function(map, options) {
 			var deferred = $q.defer();
-			db.query({map: map}, options, function(err, res) {
+			db.database.query({map: map}, options, function(err, res) {
 				$rootScope.$apply(function() {
 					if (err) {
 						log.error(err);
@@ -67,7 +67,7 @@
 					return [];
 				}
 				var deferred = $q.defer();
-				db.query(
+				db.database.query(
 				{
 					map: function(doc) {
 						if (doc.type === 'event') {
@@ -107,7 +107,7 @@
 					return [];
 				}
 				var deferred = $q.defer();
-				db.query(
+				db.database.query(
 				{
 					map: function(doc) {
 						if (doc.type === 'favorite') {
@@ -141,7 +141,7 @@
 					return false;
 				}
 				var deferred = $q.defer();
-				db.query(
+				db.database.query(
 				{
 					map: function(doc) {
 						if (doc.type === 'favorite') {
@@ -174,7 +174,7 @@
 				}
 
 				var deferred = $q.defer();
-				db.post({
+				db.database.post({
 					'type': 'favorite',
 					'username': username,
 					'eventId': eventId
@@ -197,7 +197,7 @@
 				}
 
 				var deferred = $q.defer();
-				db.query(
+				db.database.query(
 				{
 					map: function(doc) {
 						if (doc.type === 'favorite') {
@@ -219,7 +219,7 @@
 							console.log(res);
 							if (res.total_rows > 0) {
 								var doc = res.rows[0].doc;
-								db.remove(doc, function(err, res) {
+								db.database.remove(doc, function(err, res) {
 									$rootScope.$apply(function() {
 										if (err) {
 											log.error(err);
