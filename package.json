@@ -17,6 +17,7 @@
     "grunt-contrib-watch": "latest",
     "grunt-contrib-jasmine": "latest",
     "grunt-contrib-jshint": "latest",
-    "grunt-contrib-connect": "latest"
+    "grunt-contrib-connect": "latest",
+    "grunt-contrib-uglify": "latest"
   }
 }

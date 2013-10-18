@@ -18,13 +18,41 @@
 <link rel="stylesheet" href="css/3rdparty/normalize.css" />
 <link rel="stylesheet" href="css/angular-mobile-frame.min.css" />
 <link rel="stylesheet" href="css/cruisemonkey/cruisemonkey.css" />
-<script src="http://debug.phonegap.com/target/target-script-min.js#RangerRick182347"></script>
+
+<!-- <script src="http://debug.phonegap.com/target/target-script-min.js#RangerRick182347"></script> -->
 <script src="js/3rdparty/custom.modernizr.js"></script>
 <!-- IE Fix for HTML5 Tags -->
 <!--[if lt IE 9]>
-		<script src="js/3rdparty/html5shiv.js"></script>
+		<script src="js/3rdparty/html5shiv.min.js"></script>
 	<![endif]-->
-<script src="js/3rdparty/script.js"></script>
+
+<script src="js/3rdparty/hammer.min.js"></script>
+<script src="js/3rdparty/pouchdb-nightly.min.js"></script>
+
+<!--
+<script src="js/log4javascript/log4javascript.min.js"></script>
+<script src="js/angular/angular.min.js"></script>
+<script src="js/angular/angular-loader.min.js"></script>
+<script src="js/angular/angular-route.min.js"></script>
+<script src="js/angular/angular-resource.min.js"></script>
+<script src="js/angular/angular-touch.min.js"></script>
+-->
+<script src="js/log4javascript/log4javascript.js"></script>
+<script src="js/angular/angular.js"></script>
+<script src="js/angular/angular-loader.js"></script>
+<script src="js/angular/angular-route.js"></script>
+<script src="js/angular/angular-resource.js"></script>
+<script src="js/angular/angular-touch.js"></script>
+
+<script src="js/angular-3rdparty/angular-hammer.js"></script>
+<script src="js/angular-3rdparty/angular-mobile-frame.min.js"></script>
+<script src="js/angular-3rdparty/angular-phonegap-ready.js"></script>
+<script src="js/angular-3rdparty/angularls.js"></script>
+<script src="js/angular-3rdparty/angular-interval.js"></script>
+
+<script src="js/cruisemonkey.min.js"></script>
+<script src="phonegap.js"></script>
+
 <script>
 window.addEventListener('load', function(e) {
 	window.applicationCache.addEventListener('updateready', function(e) {
@@ -49,70 +77,9 @@ document.addEventListener("deviceready", function() {
 		window.clearTimeout(timeoutID);
 	}
 
-	$script.ready(['3rdparty', 'angular-core', 'angular-routing', 'angular-addons'], function() {
-		$script([
-			'js/cruisemonkey/string.js',
-			'js/cruisemonkey/offcanvas.js',
-			'js/cruisemonkey/Config.js',
-			'js/cruisemonkey/Database.js',
-			'js/cruisemonkey/Events.js',
-			'js/cruisemonkey/Logging.js',
-			'js/cruisemonkey/Navigation.js',
-			'js/cruisemonkey/User.js',
-			'js/cruisemonkey/Controller.Login.js',
-			'js/cruisemonkey/services.js',
-			'js/cruisemonkey/factories.js',
-			'js/cruisemonkey/controllers.js',
-			'js/cruisemonkey/filters.js',
-			'js/cruisemonkey/directives.js',
-			'js/cruisemonkey/main.js',
-			'phonegap.js'
-		], 'cruisemonkey', function() {
-			console.log('CruiseMonkey loaded.');
-			angular.bootstrap(document, ['cruisemonkey']);
-		});
-	});
-
+	console.log('CruiseMonkey loaded.');
+	angular.bootstrap(document, ['cruisemonkey']);
 }, false);
-
-// load all of the dependencies asynchronously.
-$script([
-	'js/3rdparty/jquery.js',
-	'js/3rdparty/hammer.min.js',
-	'js/3rdparty/pouchdb-nightly.min.js',
-	'js/log4javascript/log4javascript.js'
-], '3rdparty', function() {
-	console.log('standalone 3rd party scripts loaded.');
-});
-
-$script([
-	'js/angular/angular.min.js'
-], 'angular-core', function() {
-	console.log('AngularJS Core loaded.');
-});
-
-$script.ready(['angular-core'], function() {
-	$script([
-		'js/angular/angular-loader.min.js',
-		'js/angular/angular-route.min.js'
-	], 'angular-routing', function() {
-		console.log('AngularJS Routing loaded.');
-	});
-});
-
-$script.ready(['angular-routing'], function() {
-	$script([
-		'js/angular/angular-mobile-frame.min.js',
-		'js/angular/angular-phonegap-ready.js',
-		'js/angular/angular-resource.min.js',
-		'js/angular/angular-touch.min.js',
-		/* 'js/angular/angular-strap.min.js', */
-		'js/angular/angular-hammer.js',
-		'js/angular/angularls.js'
-	], 'angular-addons', function() {
-		console.log('AngularJS (and 3rd-party addons) loaded.');
-	});
-});
 
 timeoutID = window.setTimeout(function() {
 	console.log('Firing deviceready manually.');
@@ -141,7 +108,8 @@ timeoutID = window.setTimeout(function() {
 				<li data-match-route="/deck-plans"        ><a href="#/deck-plans"        >Deck Plans</a></li>
 			</ul>
 		</mobile-nav>
-		<mobile-content ng-view></mobile-content>
+		<mobile-content ng-view>
+		</mobile-content>
 	</mobile-frame>
 </body>
 </html>

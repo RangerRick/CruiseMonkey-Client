@@ -1,7 +1,7 @@
 (function() {
 	'use strict';
 
-	angular.module('cruisemonkey.Database', ['cruisemonkey.Logging', 'cruisemonkey.Config'])
+	angular.module('cruisemonkey.Database', ['cruisemonkey.Logging', 'cruisemonkey.Config', 'ngInterval'])
 	.factory('Database', ['$location', '$interval', 'LoggingService', 'config.database.name', 'config.database.replicate', function($location, $interval, log, databaseName, replicate) {
 		log.info('Initializing CruiseMonkey database: ' + databaseName);
 

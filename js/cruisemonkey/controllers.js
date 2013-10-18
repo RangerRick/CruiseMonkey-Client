@@ -2,7 +2,7 @@
 	'use strict';
 
 	angular.module('cruisemonkey.controllers', ['cruisemonkey.services', 'cruisemonkey.Logging', 'cruisemonkey.Events', 'cruisemonkey.User'])
-	.controller('CMDeckListCtrl', function($scope, $rootScope, $routeParams, $location, LoggingService) {
+	.controller('CMDeckListCtrl', ['$scope', '$rootScope', '$routeParams', '$location', 'LoggingService', function($scope, $rootScope, $routeParams, $location, LoggingService) {
 		LoggingService.info('Initializing CMDeckListCtrl');
 		$scope.deck = parseInt($routeParams.deck, 10);
 		$rootScope.title = "Deck " + $scope.deck;
@@ -16,11 +16,11 @@
 				$location.path('/deck-plans/' + ($scope.deck + 1));
 			}
 		};
-	})
-	.controller('CMHeaderCtrl', function($scope, $rootScope, $location, LoggingService) {
+	}])
+	.controller('CMHeaderCtrl', ['$scope', '$rootScope', '$location', 'LoggingService', function($scope, $rootScope, $location, LoggingService) {
 		LoggingService.info('Initializing CMHeaderCtrl');
-	})
-	.controller('CMEventCtrl', function($scope, $rootScope, $routeParams, $location, $q, UserService, EventService, LoggingService) {
+	}])
+	.controller('CMEventCtrl', ['$scope', '$rootScope', '$routeParams', '$location', '$q', 'UserService', 'EventService', 'LoggingService', function($scope, $rootScope, $routeParams, $location, $q, UserService, EventService, LoggingService) {
 		LoggingService.info('Initializing CMEventCtrl');
 
 		$rootScope.actions = [
@@ -126,6 +126,6 @@
 			});
 		});
 		*/
-	})
+	}])
 	;
 }());

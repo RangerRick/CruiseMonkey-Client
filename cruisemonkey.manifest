@@ -114,17 +114,28 @@ icons/inactive/90-lifebuoy.png
 icons/inactive/90-lifebuoy@2x.png
 icons/not-authorized/55-network.png
 icons/not-authorized/55-network@2x.png
+js/cruisemonkey.min.js
 js/3rdparty/classie.js
 js/3rdparty/custom.modernizr.js
 js/3rdparty/fastclick.js
 js/3rdparty/hammer.min.js
 js/3rdparty/html5shiv.js
+js/3rdparty/html5shiv.min.js
 js/3rdparty/jasmine.async.js
 js/3rdparty/jquery.js
 js/3rdparty/pouchdb-nightly.js
 js/3rdparty/pouchdb-nightly.min.js
+js/3rdparty/require.js
+js/3rdparty/require.min.js
 js/3rdparty/script.js
 js/3rdparty/zepto.js
+js/angular-3rdparty/angular-hammer.js
+js/angular-3rdparty/angular-interval.js
+js/angular-3rdparty/angular-mobile-frame.js
+js/angular-3rdparty/angular-mobile-frame.min.js
+js/angular-3rdparty/angular-phonegap-ready.js
+js/angular-3rdparty/angular-strap.min.js
+js/angular-3rdparty/angularls.js
 js/angular/angular-animate.js
 js/angular/angular-animate.min.js
 js/angular/angular-bootstrap-prettify.js
@@ -133,14 +144,10 @@ js/angular/angular-bootstrap.js
 js/angular/angular-bootstrap.min.js
 js/angular/angular-cookies.js
 js/angular/angular-cookies.min.js
-js/angular/angular-hammer.js
 js/angular/angular-inview.js
 js/angular/angular-loader.js
 js/angular/angular-loader.min.js
-js/angular/angular-mobile-frame.js
-js/angular/angular-mobile-frame.min.js
 js/angular/angular-mocks.js
-js/angular/angular-phonegap-ready.js
 js/angular/angular-resource.js
 js/angular/angular-resource.min.js
 js/angular/angular-route.js
@@ -148,12 +155,10 @@ js/angular/angular-route.min.js
 js/angular/angular-sanitize.js
 js/angular/angular-sanitize.min.js
 js/angular/angular-scenario.js
-js/angular/angular-strap.min.js
 js/angular/angular-touch.js
 js/angular/angular-touch.min.js
 js/angular/angular.js
 js/angular/angular.min.js
-js/angular/angularls.js
 js/cruisemonkey/Config.js
 js/cruisemonkey/Controller.Login.js
 js/cruisemonkey/Database.js
@@ -163,14 +168,12 @@ js/cruisemonkey/Navigation.js
 js/cruisemonkey/User.js
 js/cruisemonkey/controllers.js
 js/cruisemonkey/directives.js
-js/cruisemonkey/factories.js
 js/cruisemonkey/filters.js
 js/cruisemonkey/main.js
-js/cruisemonkey/offcanvas.js
 js/cruisemonkey/services.js
 js/cruisemonkey/string.js
 js/log4javascript/log4javascript.js
-js/log4javascript/log4javascript_uncompressed.js
+js/log4javascript/log4javascript.min.js
 index.html
 partials/deck-plans.html
 partials/event-list.html
@@ -179,4 +182,4 @@ partials/login.html
 NETWORK:
 *
 
-# hash: 480238fc58e84dac4fca6feb274bbfeb407ccb5bf45c453b144496a429873cee
+# hash: 9816e69614463a0ef88fbba19fb0fa483099708bad3191403b6ea1fb1d53c748
