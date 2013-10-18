@@ -84,20 +84,19 @@ module.exports = function(grunt) {
 		jasmine: {
 			test: {
 				src: [
+					'js/3rdparty/jasmine.async.js',
 					'js/3rdparty/custom.modernizr.js',
 					'js/log4javascript/log4javascript.js',
-					'js/3rdparty/script.js',
 					'js/3rdparty/hammer.min.js',
 					'js/3rdparty/pouchdb-nightly.js',
 					'js/angular/angular.js',
-					'js/angular/angular-phonegap-ready.js',
-					'js/angular/angular-interval.js',
 					'js/angular/angular-route.js',
 					'js/angular/angular-resource.js',
 					'js/angular/angular-touch.js',
-					'js/angular/angular-hammer.js',
 					'js/angular/angular-mocks.js',
-					'js/3rdparty/jasmine.async.js',
+					'js/angular-3rdparty/angular-phonegap-ready.js',
+					'js/angular-3rdparty/angular-interval.js',
+					'js/angular-3rdparty/angular-hammer.js',
 					'js/cruisemonkey/*.js'
 				],
 				options: {

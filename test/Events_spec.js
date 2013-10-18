@@ -42,7 +42,7 @@ describe('Events', function() {
 
 	async.beforeEach(function(done) {
 		// initialize test data
-		db.bulkDocs({
+		db.database.bulkDocs({
 			docs: [{
 				'_id': '1',
 				'type': 'event',
