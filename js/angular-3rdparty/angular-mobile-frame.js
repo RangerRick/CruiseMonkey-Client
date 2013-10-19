@@ -113,7 +113,7 @@
 				replace: true,
 				template: [
 					'<header class="mobile-header" role="banner">',
-					'	<button type="button" class="mobile-nav-toggle" id="mobile-nav-toggle">Toggle</button>',
+					'	<button type="button" class="mobile-nav-toggle" id="mobile-nav-toggle">&nbsp;</button>',
 					'	<div class="mobile-header-inner" ng-transclude></div>',
 					'</header>'
 				].join(''),
