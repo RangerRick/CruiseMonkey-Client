@@ -37,6 +37,7 @@ css/angular-mobile-frame.css
 css/angular-mobile-frame.min.css
 css/3rdparty/normalize.css
 css/cruisemonkey/cruisemonkey.css
+css/icomoon/style.css
 fonts/dekar.otf
 fonts/hero.otf
 fonts/intro.otf
@@ -182,4 +183,4 @@ partials/login.html
 NETWORK:
 *
 
-# hash: 9816e69614463a0ef88fbba19fb0fa483099708bad3191403b6ea1fb1d53c748
+# hash: 128195c8d1b7dc17e8fe59e30efe3fb0226e075a07ad201a90b44cd367c2279a

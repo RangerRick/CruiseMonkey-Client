@@ -2,7 +2,7 @@ html, body {
 	padding: 0;
 	margin: 0;
 	overflow: hidden;
-	}
+}
 
 .mobile-frame {
 	width: 100%;
@@ -11,17 +11,17 @@ html, body {
 	-webkit-transition: -webkit-transform .2s linear;
 	-moz-transition: -moz-transform .2s linear;
 	transition: transform .2s linear;
-	}
+}
 
 .mobile-content {
 	overflow-x: hidden;
 	overflow-y: auto;
 	-webkit-overflow-scrolling: touch;
-	}
+}
 
 .mobile-nav {
 	position: absolute;
 	top: 0;
 	bottom: 0;
 	left: 0;
-	}
+}

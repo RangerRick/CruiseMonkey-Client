@@ -34,9 +34,10 @@
 $cmBabyBlue: #ddf2ff;
 
 $defaultFont: Hero, sans-serif;
-$headerFont: Intro, Dekar, sans-serif;
+/* $headerFont: Intro, Dekar, sans-serif; */
 $eventListFont: Casper, sans-serif;
 $sidebarHeaderFont: Nexa, Hero, sans-serif;
+$headerFont: $sidebarHeaderFont;
 
 $gutterShadow: 0px 0px 5px 6px rgba(0,0,0,0.4);
 $gutterTransition: all 0.1s ease-out;
@@ -170,10 +171,14 @@ a:hover {
 	float: left;
 	border: 1px solid white;
 	color: #eee;
-	background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMzBweCIgaGVpZ2h0PSIyNHB4IiB2aWV3Qm94PSIwIDAgMzAgMjQiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDMwIDI0IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxjaXJjbGUgZmlsbD0iI0ZGRkZGRiIgY3g9IjIuNSIgY3k9IjIuNSIgcj0iMi41Ii8+DQo8Y2lyY2xlIGZpbGw9IiNGRkZGRkYiIGN4PSIyLjUiIGN5PSIxMiIgcj0iMi41Ii8+DQo8Y2lyY2xlIGZpbGw9IiNGRkZGRkYiIGN4PSIyLjUiIGN5PSIyMS41IiByPSIyLjUiLz4NCjxyZWN0IHg9IjcuMiIgZmlsbD0iI0ZGRkZGRiIgd2lkdGg9IjE5LjgiIGhlaWdodD0iNSIvPg0KPHJlY3QgeD0iNy4yIiB5PSI5LjUiIGZpbGw9IiNGRkZGRkYiIHdpZHRoPSIyMi44IiBoZWlnaHQ9IjUiLz4NCjxyZWN0IHg9IjcuMiIgeT0iMTkiIGZpbGw9IiNGRkZGRkYiIHdpZHRoPSIxNi44IiBoZWlnaHQ9IjUiLz4NCjwvc3ZnPg0K);
 	background-color: #555;
 	background-position: center;
-	background-size: 24px 20px;
+	background-image: url('../../icons/entypo/grey/SVG/menu.svg');
+	background-size: 20px 20px;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
 	background-repeat: no-repeat;
 	/* background-origin: */
 	/* background-clip: */
@@ -195,13 +200,11 @@ a:hover {
 
 .mobile-header-inner {
 	float: left;
-	height: 40px;
+	height: 33px;
 	margin: 0;
-	padding: 0;
+	padding: 7px 0 0 0;
 
 	.title {
-		margin-top: 4px;
-		height: 40px;
 		font-size: 32px;
 	}
 }
@@ -223,8 +226,12 @@ a:hover {
 	}
 
 	.favorite input[type=checkbox] + label {
+		-moz-user-select: none;
+		-webkit-user-select: none;
+		-ms-user-select:none;
+		user-select:none;
 		display: block;
-		background:url(../../icons/star-unchecked.png) no-repeat;
+		background:url(../../icons/entypo/grey/SVG/star2.svg) no-repeat;
 		background-position: center center;
 		background-size:26px 26px;
 		width: 32px;
@@ -232,7 +239,11 @@ a:hover {
 	}
 
 	.favorite input[type=checkbox]:checked + label {
-		background:url(../../icons/star-checked.png) no-repeat;
+		-moz-user-select: none;
+		-webkit-user-select: none;
+		-ms-user-select:none;
+		user-select:none;
+		background:url(../../icons/entypo/yellow/SVG/star2.svg) no-repeat;
 		background-position: center center;
 		background-size: 26px 26px;
 		width: 32px;
