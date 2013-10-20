@@ -118,18 +118,6 @@ module.exports = function(grunt) {
 			},
 			cruisemonkey: {
 				files: [
-					'js/cruisemonkey/*.js'
-				],
-				tasks: ['uglify'],
-				options: {
-					interval: 500,
-					spawn: false,
-					debounceDelay: 250,
-					atBegin: true
-				}
-			},
-			manifest: {
-				files: [
 					'*.ico',
 					'*.png',
 					'css/*.css',
@@ -145,7 +133,7 @@ module.exports = function(grunt) {
 					'index.html',
 					'partials/*.html'
 				],
-				tasks: ['manifest'],
+				tasks: ['uglify', 'manifest'],
 				options: {
 					interval: 500,
 					spawn: false,

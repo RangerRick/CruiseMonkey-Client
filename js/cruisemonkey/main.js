@@ -4,7 +4,7 @@
 	angular.module('cruisemonkey',
 	[
 		'ngRoute',
-		'ngTouch',
+		/* 'ngTouch', */
 		'cruisemonkey.filters',
 		'cruisemonkey.services',
 		'cruisemonkey.directives',
