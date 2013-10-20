@@ -30,31 +30,6 @@
 <!-- <script src="js/3rdparty/hammer.min.js"></script> -->
 <script src="js/3rdparty/pouchdb-nightly.min.js"></script>
 
-<!--
-<script src="js/log4javascript/log4javascript.min.js"></script>
-<script src="js/angular/angular.min.js"></script>
-<script src="js/angular/angular-loader.min.js"></script>
-<script src="js/angular/angular-route.min.js"></script>
-<script src="js/angular/angular-resource.min.js"></script>
-<script src="js/angular/angular-touch.min.js"></script>
--->
-
-<script src="js/log4javascript/log4javascript.js"></script>
-<script src="js/angular/angular.js"></script>
-<script src="js/angular/angular-loader.js"></script>
-<script src="js/angular/angular-route.js"></script>
-<script src="js/angular/angular-resource.js"></script>
-<!-- <script src="js/angular/angular-touch.js"></script> -->
-
-<!-- <script src="js/angular-3rdparty/angular-hammer.js"></script> -->
-<script src="js/angular-3rdparty/angular-mobile-frame.min.js"></script>
-<script src="js/angular-3rdparty/angular-phonegap-ready.js"></script>
-<script src="js/angular-3rdparty/angularls.js"></script>
-<script src="js/angular-3rdparty/angular-interval.js"></script>
-
-<script src="js/cruisemonkey.min.js"></script>
-<script src="phonegap.js"></script>
-
 <script>
 window.addEventListener('load', function(e) {
 	window.applicationCache.addEventListener('updateready', function(e) {
@@ -81,6 +56,7 @@ document.addEventListener("deviceready", function() {
 
 	console.log('CruiseMonkey loaded.');
 	angular.bootstrap(document, ['cruisemonkey']);
+	FastClick.attach(document.body);
 }, false);
 
 timeoutID = window.setTimeout(function() {
@@ -113,5 +89,28 @@ timeoutID = window.setTimeout(function() {
 		<mobile-content ng-view>
 		</mobile-content>
 	</mobile-frame>
+
+	<!--
+	<script src="js/log4javascript/log4javascript.min.js"></script>
+	<script src="js/angular/angular.min.js"></script>
+	<script src="js/angular/angular-loader.min.js"></script>
+	<script src="js/angular/angular-route.min.js"></script>
+	<script src="js/angular/angular-resource.min.js"></script>
+	<script src="js/angular/angular-touch.min.js"></script>
+	-->
+
+	<script src="js/log4javascript/log4javascript.js"></script>
+	<script src="js/angular/angular.js"></script>
+	<script src="js/angular/angular-loader.js"></script>
+	<script src="js/angular/angular-route.js"></script>
+	<script src="js/angular/angular-resource.js"></script>
+
+	<script src="js/angular-3rdparty/angular-mobile-frame.min.js"></script>
+	<script src="js/angular-3rdparty/angular-phonegap-ready.js"></script>
+	<script src="js/angular-3rdparty/angularls.js"></script>
+	<script src="js/angular-3rdparty/angular-interval.js"></script>
+
+	<script src="js/cruisemonkey.min.js"></script>
+	<script src="phonegap.js"></script>
 </body>
 </html>
