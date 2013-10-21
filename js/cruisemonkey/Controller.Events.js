@@ -14,10 +14,14 @@
 				'iconClass': 'add',
 				'launch': function() {
 					log.info('launching modal');
-					$modal.open({
+					var modalInstance = $modal.open({
 						templateUrl:'add-event.html',
-						controller:'CMAddEventCtrl',
-						backdrop:false
+						controller:'CMAddEventCtrl'
+					});
+					modalInstance.result.then(function() {
+						log.info("Add finished!");
+					}, function() {
+						log.warn("Add canceled!");
 					});
 				}
 			}
