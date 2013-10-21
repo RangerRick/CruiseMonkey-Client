@@ -10,7 +10,7 @@
 		
 		var startReplication = function() {
 			if (replicate) {
-				if (timeout != null) {
+				if (timeout !== null) {
 					log.warn('Replication has already been started!  Timeout ID = ' + timeout);
 					return false;
 				} else {
@@ -32,7 +32,7 @@
 
 		var stopReplication = function() {
 			if (replicate) {
-				if (timeout != null) {
+				if (timeout !== null) {
 					log.info('Stopping replication with ' + host);
 					$interval.cancel(timeout);
 					timeout = null;
