@@ -60,6 +60,9 @@ module.exports = function(grunt) {
 					'js/cruisemonkey.min.js': [
 						'js/cruisemonkey/string.js',
 						'js/cruisemonkey/Config.js',
+						'js/cruisemonkey/Controller.DeckList.js',
+						'js/cruisemonkey/Controller.Events.js',
+						'js/cruisemonkey/Controller.Header.js',
 						'js/cruisemonkey/Controller.Login.js',
 						'js/cruisemonkey/Database.js',
 						'js/cruisemonkey/Events.js',

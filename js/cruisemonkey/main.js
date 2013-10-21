@@ -4,19 +4,19 @@
 	angular.module('cruisemonkey',
 	[
 		'ngRoute',
-		/* 'ngTouch', */
 		'cruisemonkey.filters',
 		'cruisemonkey.services',
 		'cruisemonkey.directives',
-		'cruisemonkey.controllers',
+		'cruisemonkey.controllers.DeckList',
+		'cruisemonkey.controllers.Events',
+		'cruisemonkey.controllers.Header',
+		'cruisemonkey.controllers.Login',
 		'cruisemonkey.Database',
 		'cruisemonkey.Navigation',
 		'cruisemonkey.Events',
 		'cruisemonkey.User',
 		'ek.mobileFrame',
 		'btford.phonegap.ready'
-		/* '$strap.directives', */
-		/* 'hmTouchEvents' */
 	])
 	.config(['$routeProvider', '$mobileFrameProvider', function($routeProvider, $mobileFrameProvider) {
 		$routeProvider
@@ -54,6 +54,7 @@
 		});
 
 		$rootScope.$on('$routeChangeStart', function(event, currRoute, prevRoute) {
+			$rootScope.actions = [];
 			// console.log("$routeChangeStart: template = " + currRoute.templateUrl + ", eventType = " + currRoute.params.eventType);
 
 			if (UserService.isLoggedIn()) {

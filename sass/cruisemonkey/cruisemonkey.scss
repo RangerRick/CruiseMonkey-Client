@@ -200,13 +200,9 @@ a:hover {
 
 .mobile-header-inner {
 	float: left;
-	height: 33px;
+	height: 31px;
 	margin: 0;
-	padding: 7px 0 0 0;
-
-	.title {
-		font-size: 32px;
-	}
+	padding: 9px 0 0 0;
 }
 
 .mobile-content h1 {
@@ -217,6 +213,31 @@ a:hover {
 	padding: 0;
 }
 
+.mobile-header {
+	.title {
+		font-size: 24px;
+	}
+	.actions {
+		position: absolute;
+		top: 4px;
+		right: 10px;
+		height: 40px;
+		z-index: 1;
+
+		.icon-add {
+			-moz-user-select: none;
+			-webkit-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+			display: block;
+			background: url(../../icons/entypo/yellow/SVG/plus.svg) no-repeat;
+			background-position: center center;
+			background-size: 26px 26px;
+			width: 32px;
+			height: 32px;
+		}
+	}
+}
 .list-entry {
 	border-bottom: $simpleBorder;
 	padding: 10px;

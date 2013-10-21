@@ -161,13 +161,15 @@ js/angular/angular-touch.min.js
 js/angular/angular.js
 js/angular/angular.min.js
 js/cruisemonkey/Config.js
+js/cruisemonkey/Controller.DeckList.js
+js/cruisemonkey/Controller.Events.js
+js/cruisemonkey/Controller.Header.js
 js/cruisemonkey/Controller.Login.js
 js/cruisemonkey/Database.js
 js/cruisemonkey/Events.js
 js/cruisemonkey/Logging.js
 js/cruisemonkey/Navigation.js
 js/cruisemonkey/User.js
-js/cruisemonkey/controllers.js
 js/cruisemonkey/directives.js
 js/cruisemonkey/filters.js
 js/cruisemonkey/main.js
@@ -183,4 +185,4 @@ partials/login.html
 NETWORK:
 *
 
-# hash: 7dc08ba1fb5a6ad2d6aba40c64308dc665ff943750977b484e40d4b7689b393b
+# hash: 5974e2843388e3867618f642cb69a66c45216f4605b3c4690503efe0cf1459ce
