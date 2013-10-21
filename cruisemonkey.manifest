@@ -165,10 +165,10 @@ js/cruisemonkey/Controller.DeckList.js
 js/cruisemonkey/Controller.Events.js
 js/cruisemonkey/Controller.Header.js
 js/cruisemonkey/Controller.Login.js
+js/cruisemonkey/Controller.Navigation.js
 js/cruisemonkey/Database.js
 js/cruisemonkey/Events.js
 js/cruisemonkey/Logging.js
-js/cruisemonkey/Navigation.js
 js/cruisemonkey/User.js
 js/cruisemonkey/directives.js
 js/cruisemonkey/filters.js
@@ -185,4 +185,4 @@ partials/login.html
 NETWORK:
 *
 
-# hash: 530db78c2e54c561383df096ea4347dffb6e91a9bfd78fd3358268a9c4ea9bee
+# hash: b693f52e58a1104aae615b3dca206e56227c129bfbc9078824fd9b9fc4989655

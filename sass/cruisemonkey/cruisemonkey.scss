@@ -49,7 +49,7 @@ $gutterColor: black;
 $gutterHilightBG: #333;
 $gutterHilightColor: white;
 
-$gutterSelectedBG: $cmBabyBlue;
+$gutterSelectedColorBG: $cmBabyBlue;
 $gutterSelectedColor: black;
 
 $simpleBorder: 1px solid black;
@@ -151,7 +151,7 @@ a:hover {
 		}
 	}
 
-	.nav > li:hover, .nav > li:focus {
+	.nav > li:hover, .nav > li:focus, .nav > li.selected {
 		color: $gutterHilightColor;
 		background-color: $gutterHilightBG;
 		a {

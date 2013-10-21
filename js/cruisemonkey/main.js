@@ -80,6 +80,24 @@
 			angular.noop();
 			return;
 		});
+		$rootScope.$on('$routeChangeSuccess', function(event, currRoute, prevRoute) {
+			var path = $location.path();
+			angular.forEach(document.getElementById('nav').children, function(li, key) {
+				if (li.children[0]) {
+					var href = li.children[0].href;
+					var index = href.indexOf('#');
+					if (index !== -1) {
+						href = href.substring(href.indexOf('#') + 1);
+					}
+					console.log('href = ' + href + ', path = ' + path);
+					if (path.startsWith(href)) {
+						angular.element(li).addClass('selected');
+					} else {
+						angular.element(li).removeClass('selected');
+					}
+				}
+			});
+		});
 	}])
 	;
 }());

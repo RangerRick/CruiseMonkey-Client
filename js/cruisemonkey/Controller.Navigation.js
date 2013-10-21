@@ -8,6 +8,7 @@
 			var evt = document.createEvent("HTMLEvents");
 			evt.initEvent('click', true, true);
 			document.getElementById('mobile-nav-toggle').dispatchEvent(evt);
+			return true;
 		};
 		$scope.goTo = function(link) {
 			log.debug('goTo(' + link + ')');

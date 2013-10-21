@@ -91,12 +91,12 @@ a:link, a:visited, a:hover {
       background-color: transparent;
       width: 230px;
       height: 100%; }
-  .mobile-nav .nav > li:hover, .mobile-nav .nav > li:focus {
+  .mobile-nav .nav > li:hover, .mobile-nav .nav > li:focus, .mobile-nav .nav > li.selected {
     color: white;
     background-color: #333333; }
-    .mobile-nav .nav > li:hover a, .mobile-nav .nav > li:focus a {
+    .mobile-nav .nav > li:hover a, .mobile-nav .nav > li:focus a, .mobile-nav .nav > li.selected a {
       color: white; }
-    .mobile-nav .nav > li:hover a:hover, .mobile-nav .nav > li:hover a:focus, .mobile-nav .nav > li:focus a:hover, .mobile-nav .nav > li:focus a:focus {
+    .mobile-nav .nav > li:hover a:hover, .mobile-nav .nav > li:hover a:focus, .mobile-nav .nav > li:focus a:hover, .mobile-nav .nav > li:focus a:focus, .mobile-nav .nav > li.selected a:hover, .mobile-nav .nav > li.selected a:focus {
       color: white; }
 
 .mobile-nav-toggle {
