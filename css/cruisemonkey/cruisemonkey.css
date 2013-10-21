@@ -63,7 +63,29 @@ a:link, a:visited, a:hover {
   color: white;
   background-color: black;
   font-family: Nexa, Hero, sans-serif;
-  font-size: larger; }
+  font-size: larger;
+  -webkit-overflow-scrolling: auto;
+  overflow-scrolling: auto;
+  overflow: hidden; }
+  .mobile-header .title {
+    font-size: 24px; }
+  .mobile-header .actions {
+    position: absolute;
+    top: 4px;
+    right: 10px;
+    height: 40px;
+    z-index: 1; }
+    .mobile-header .actions .icon-add {
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      display: block;
+      background: url(../../icons/entypo/yellow/SVG/plus.svg) no-repeat;
+      background-position: center center;
+      background-size: 26px 26px;
+      width: 32px;
+      height: 32px; }
 
 
 .mobile-frame {
@@ -163,26 +185,6 @@ a:link, a:visited, a:hover {
 
 .mobile-content-inner {
   padding: 0; }
-
-.mobile-header .title {
-  font-size: 24px; }
-.mobile-header .actions {
-  position: absolute;
-  top: 4px;
-  right: 10px;
-  height: 40px;
-  z-index: 1; }
-  .mobile-header .actions .icon-add {
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    display: block;
-    background: url(../../icons/entypo/yellow/SVG/plus.svg) no-repeat;
-    background-position: center center;
-    background-size: 26px 26px;
-    width: 32px;
-    height: 32px; }
 
 .list-entry {
   border-bottom: 1px solid black;
