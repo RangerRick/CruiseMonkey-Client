@@ -2,7 +2,7 @@
 	'use strict';
 
 	angular.module('cruisemonkey.Database', ['cruisemonkey.Logging', 'cruisemonkey.Config', 'ngInterval'])
-	.factory('Database', ['$location', '$interval', 'LoggingService', 'config.database.name', 'config.database.replicate', function($location, $interval, log, databaseName, replicate) {
+	.factory('Database', ['$location', '$interval', 'LoggingService', 'config.database.host', 'config.database.name', 'config.database.replicate', function($location, $interval, log, databaseHost, databaseName, replicate) {
 		log.info('Initializing CruiseMonkey database: ' + databaseName);
 
 		var db = new Pouch(databaseName);
@@ -14,7 +14,10 @@
 					log.warn('Replication has already been started!  Timeout ID = ' + timeout);
 					return false;
 				} else {
-					var host = 'http://' + $location.host() + ':5984/cruisemonkey';
+					if (!databaseHost) {
+						databaseHost = $location.host();
+					}
+					var host = 'http://' + databaseHost + ':5984/cruisemonkey';
 					log.info('Enabling replication with ' + host);
 
 					timeout = $interval(function() {
