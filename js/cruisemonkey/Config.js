@@ -3,7 +3,7 @@
 
 	angular.module('cruisemonkey.Config', [])
 	.value('config.logging.useStringAppender', false)
-	.value('config.database.host', 'server3.befunk.com')
+	.value('config.database.host', 'cm.raccoonfink.com')
 	.value('config.database.name', 'cruisemonkey')
 	.value('config.database.replicate', true)
 	.value('config.app.version', '3.90');
