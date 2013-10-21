@@ -254,6 +254,44 @@ a:link, a:visited, a:hover {
   z-index: 1; }
 
 /*
+ * Deck Plans
+ */
+.deck-plans {
+  width: 100%;
+  /*
+	div {
+		width: 100%;
+		color: $deckHeaderColor;
+		background-color: $deckHeaderBG;
+		font-family: $headerFont;
+		font-size: large;
+		font-weight: bold;
+		text-align: center;
+		padding: 5px;
+		margin-bottom: 10px;
+	}
+	*/ }
+  .deck-plans img {
+    display: block;
+    width: 98%;
+    max-width: 500px;
+    margin: auto;
+    margin-bottom: 10px;
+    padding: 10px; }
+  .deck-plans div.arrow {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 40px;
+    top: 40px;
+    bottom: 0;
+    height: 100%;
+    z-index: 2; }
+  .deck-plans .left {
+    left: 0; }
+  .deck-plans .right {
+    right: 0; }
+
+/*
  * Event Pop-Up
  */
 .modal {
