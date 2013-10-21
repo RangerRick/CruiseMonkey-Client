@@ -2,7 +2,8 @@
 
 	var _$mobileFrame_ = '$mobileFrame',
 		_directive_ = 'directive',
-		_toggle_ = null;
+		_toggle_ = null,
+		_navVisible_ = false;
 
 	// @todo: Commenting all this crap!
 
@@ -31,6 +32,9 @@
 						if (_toggle_) {
 							_toggle_();
 						}
+					},
+					navVisible: function () {
+						return _navVisible_;
 					}
 				};
 			};
@@ -70,14 +74,13 @@
 		[_directive_]('mobileFrame', [_$mobileFrame_, '$location', function ($mobileFrame, $location) {
 
 			var navWidth = $mobileFrame.getNavWidth(),
-				navVisible = false,
 				$elem;
 
 			function handleNav() {
 
-				var val = navVisible ? 0 : navWidth;
+				var val = _navVisible_ ? 0 : navWidth;
 
-				if ( arguments.length && !navVisible ) {
+				if ( arguments.length && !_navVisible_ ) {
 					return;
 				}
 
@@ -86,7 +89,7 @@
 					'-moz-transform': 'translate3d(' + val + 'px, 0, 0)',
 					'transform': 'translate3d(' + val + 'px, 0, 0)'
 				});
-				navVisible = !navVisible;
+				_navVisible_ = !_navVisible_;
 
 			}
 
