@@ -257,23 +257,11 @@ a:link, a:visited, a:hover {
  * Deck Plans
  */
 .deck-plans {
-  width: 100%;
-  /*
-	div {
-		width: 100%;
-		color: $deckHeaderColor;
-		background-color: $deckHeaderBG;
-		font-family: $headerFont;
-		font-size: large;
-		font-weight: bold;
-		text-align: center;
-		padding: 5px;
-		margin-bottom: 10px;
-	}
-	*/ }
+  overflow-x: hidden;
+  width: 100%; }
   .deck-plans img {
     display: block;
-    width: 98%;
+    width: 90%;
     max-width: 500px;
     margin: auto;
     margin-bottom: 10px;
