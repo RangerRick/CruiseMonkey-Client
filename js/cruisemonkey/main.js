@@ -20,21 +20,21 @@
 	])
 	.config(['$routeProvider', '$mobileFrameProvider', function($routeProvider, $mobileFrameProvider) {
 		$routeProvider
-			.when('/login/', {
+			.when('/login', {
 				templateUrl: 'template/login.html',
 				controller: 'CMLoginCtrl'
 			})
-			.when('/events/', {
-				redirectTo: '/events/official'
+			.when('/events', {
+				redirectTo: '/events/official/'
 			})
-			.when('/events/:eventType/', {
+			.when('/events/:eventType', {
 				templateUrl: 'template/event-list.html',
 				controller: 'CMEventCtrl'
 			})
-			.when('/deck-plans/', {
-				redirectTo: '/deck-plans/2'
+			.when('/deck-plans', {
+				redirectTo: '/deck-plans/2/'
 			})
-			.when('/deck-plans/:deck/', {
+			.when('/deck-plans/:deck', {
 				templateUrl: 'template/deck-plans.html',
 				controller: 'CMDeckListCtrl'
 			})
@@ -64,7 +64,7 @@
 
 			if (currRoute.templateUrl === 'template/event-list.html' && currRoute.params.eventType === 'my') {
 				event.preventDefault();
-				$location.path('/login');
+				$location.path('/login/');
 				angular.noop();
 				return;
 			}
@@ -72,7 +72,7 @@
 			if (prevRoute && prevRoute.access) {
 				if (prevRoute.access.requiresLogin) {
 					event.preventDefault();
-					$location.path('/login');
+					$location.path('/login/');
 					angular.noop();
 				}
 			}
