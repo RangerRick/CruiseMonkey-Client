@@ -10,7 +10,7 @@
 		};
 
 		return {
-			'isLoggedIn': function() {
+			'loggedIn': function() {
 				return user.loggedIn;
 			},
 			'get': function() {

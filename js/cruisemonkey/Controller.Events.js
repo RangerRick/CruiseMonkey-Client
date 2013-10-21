@@ -19,9 +19,7 @@
 			$scope.events = {};
 		}
 
-		$scope.user = UserService.get();
-	
-		$q.when($scope.user).then(function(user) {
+		$q.when($rootScope.user).then(function(user) {
 			var username = user.username;
 
 			var func;
@@ -59,7 +57,7 @@
 		});
 
 		$scope.onChange = function(eventId, checked) {
-			var username = $scope.user.username;
+			var username = $rootScope.user.username;
 			$q.when($scope.events).then(function(events) {
 				events[eventId].isFavorite = checked;
 			});

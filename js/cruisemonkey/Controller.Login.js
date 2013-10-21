@@ -2,15 +2,11 @@
 	'use strict';
 
 	angular.module('cruisemonkey.controllers.Login', ['cruisemonkey.Logging', 'cruisemonkey.User'])
-	.controller('CMLoginCtrl', ['$scope', '$rootScope', 'UserService', 'LoggingService', function($scope, $rootScope, UserService, LoggingService) {
-		LoggingService.info('Initializing CMLoginCtrl');
+	.controller('CMLoginCtrl', ['$scope', '$rootScope', '$location', 'UserService', 'LoggingService', function($scope, $rootScope, $location, UserService, log) {
+		log.info('Initializing CMLoginCtrl');
 		$rootScope.title = "Log In";
-		$scope.user = UserService.get();
-		$scope.reset = function() {
-			var user = UserService.get();
-			LoggingService.info('resetting user: ', user);
-			$scope.user = user;
-		};
+		$rootScope.user = UserService.get();
+
 		$scope.isUnchanged = function(newUser) {
 			var savedUser = UserService.get();
 			if (savedUser === null || savedUser === undefined) {
@@ -22,10 +18,22 @@
 			}
 			return savedUser.username === newUser.username && savedUser.password === newUser.password;
 		};
+
+		$scope.reset = function() {
+			var user = UserService.get();
+			log.info('resetting user: ', user);
+			$rootScope.user = user;
+			$rootScope.$broadcast('cmUpdateMenu');
+			$location.path('/events/official');
+		};
+
 		$scope.update = function(user) {
 			user.loggedIn = true;
-			LoggingService.info('saving user: ', user);
+			log.info('saving user: ', user);
 			UserService.save(user);
+			$rootScope.user = UserService.get();
+			$rootScope.$broadcast('cmUpdateMenu');
+			$location.path('/events/my');
 		};
 	}]);
 }());

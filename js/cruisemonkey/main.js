@@ -55,9 +55,9 @@
 
 		$rootScope.$on('$routeChangeStart', function(event, currRoute, prevRoute) {
 			$rootScope.actions = [];
-			// console.log("$routeChangeStart: template = " + currRoute.templateUrl + ", eventType = " + currRoute.params.eventType);
+			$rootScope.user = UserService.get();
 
-			if (UserService.isLoggedIn()) {
+			if (UserService.loggedIn()) {
 				angular.noop();
 				return;
 			}
@@ -80,7 +80,8 @@
 			angular.noop();
 			return;
 		});
-		$rootScope.$on('$routeChangeSuccess', function(event, currRoute, prevRoute) {
+		
+		var updateMenu = function() {
 			var path = $location.path();
 			angular.forEach(document.getElementById('nav').children, function(li, key) {
 				if (li.children[0]) {
@@ -89,7 +90,6 @@
 					if (index !== -1) {
 						href = href.substring(href.indexOf('#') + 1);
 					}
-					console.log('href = ' + href + ', path = ' + path);
 					if (path.startsWith(href)) {
 						angular.element(li).addClass('selected');
 					} else {
@@ -97,6 +97,14 @@
 					}
 				}
 			});
+		};
+
+		$rootScope.$on('$routeChangeSuccess', function(event, currRoute, prevRoute) {
+			updateMenu();
+		});
+		$rootScope.$on('cmUpdateMenu', function(event) {
+			console.log('cmUpdateMenu fired');
+			updateMenu();
 		});
 	}])
 	;

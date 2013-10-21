@@ -84,6 +84,8 @@ timeoutID = window.setTimeout(function() {
 				<li><a href="#/events/unofficial">Unofficial Events</a></li>
 				<li><a href="#/events/my"        >My Events</a></li>
 				<li><a href="#/deck-plans"       >Deck Plans</a></li>
+				<li ng-show="!user.loggedIn"><a href="#/login">Log In</a></li>
+				<li ng-show="user.loggedIn"><a href="#/logout">Log Out</a></li>
 			</ul>
 		</mobile-nav>
 		<mobile-content ng-view>
