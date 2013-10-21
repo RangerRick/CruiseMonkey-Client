@@ -20,26 +20,26 @@
 	])
 	.config(['$routeProvider', '$mobileFrameProvider', function($routeProvider, $mobileFrameProvider) {
 		$routeProvider
-			.when('/login', {
+			.when('/login/', {
 				templateUrl: 'template/login.html',
 				controller: 'CMLoginCtrl'
 			})
-			.when('/events', {
+			.when('/events/', {
 				redirectTo: '/events/official'
 			})
-			.when('/events/:eventType', {
+			.when('/events/:eventType/', {
 				templateUrl: 'template/event-list.html',
 				controller: 'CMEventCtrl'
 			})
-			.when('/deck-plans', {
+			.when('/deck-plans/', {
 				redirectTo: '/deck-plans/2'
 			})
-			.when('/deck-plans/:deck', {
+			.when('/deck-plans/:deck/', {
 				templateUrl: 'template/deck-plans.html',
 				controller: 'CMDeckListCtrl'
 			})
 			.otherwise({
-				redirectTo: '/events/official'
+				redirectTo: '/events/official/'
 			});
 		$mobileFrameProvider
 			.setHeaderHeight(40)

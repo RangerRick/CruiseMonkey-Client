@@ -80,12 +80,12 @@ timeoutID = window.setTimeout(function() {
 		<mobile-nav ng-controller="CMNavigationCtrl" ng-click="toggleDrawer()">
 			<ul class="nav" id="nav">
 				<li class="sidebar-header">CruiseMonkey</li>
-				<li><a href="#/events/official"  >Official Events</a></li>
-				<li><a href="#/events/unofficial">Unofficial Events</a></li>
-				<li><a href="#/events/my"        >My Events</a></li>
-				<li><a href="#/deck-plans"       >Deck Plans</a></li>
-				<li ng-show="!user.loggedIn"><a href="#/login">Log In</a></li>
-				<li ng-show="user.loggedIn"><a href="#/logout">Log Out</a></li>
+				<li><a href="#/events/official/"  >Official Events</a></li>
+				<li><a href="#/events/unofficial/">Unofficial Events</a></li>
+				<li><a href="#/events/my/"        >My Events</a></li>
+				<li><a href="#/deck-plans/"       >Deck Plans</a></li>
+				<li ng-show="!user.loggedIn"><a href="#/login/">Log In</a></li>
+				<li ng-show="user.loggedIn"><a href="#/logout/">Log Out</a></li>
 			</ul>
 		</mobile-nav>
 		<mobile-content ng-view>
