@@ -1,7 +1,8 @@
 (function (angular, undefined) {
 
 	var _$mobileFrame_ = '$mobileFrame',
-		_directive_ = 'directive';
+		_directive_ = 'directive',
+		_toggle_ = null;
 
 	// @todo: Commenting all this crap!
 
@@ -25,6 +26,11 @@
 					},
 					getNavWidth: function () {
 						return navWidth;
+					},
+					toggleNav: function () {
+						if (_toggle_) {
+							_toggle_();
+						}
 					}
 				};
 			};
@@ -58,6 +64,7 @@
 				that.callback = callback;
 			};
 
+			_toggle_ = this.toggleNav;
 		})
 
 		[_directive_]('mobileFrame', [_$mobileFrame_, '$location', function ($mobileFrame, $location) {
