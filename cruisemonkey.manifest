@@ -137,6 +137,10 @@ js/angular-3rdparty/angular-mobile-frame.min.js
 js/angular-3rdparty/angular-phonegap-ready.js
 js/angular-3rdparty/angular-strap.min.js
 js/angular-3rdparty/angularls.js
+js/angular-3rdparty/ui-bootstrap-0.6.0.js
+js/angular-3rdparty/ui-bootstrap-0.6.0.min.js
+js/angular-3rdparty/ui-bootstrap-tpls-0.6.0.js
+js/angular-3rdparty/ui-bootstrap-tpls-0.6.0.min.js
 js/angular/angular-animate.js
 js/angular/angular-animate.min.js
 js/angular/angular-bootstrap-prettify.js
@@ -178,11 +182,35 @@ js/cruisemonkey/string.js
 js/log4javascript/log4javascript.js
 js/log4javascript/log4javascript.min.js
 index.html
-partials/deck-plans.html
-partials/event-list.html
-partials/login.html
+template/deck-plans.html
+template/event-list.html
+template/login.html
+template/accordion/accordion-group.html
+template/accordion/accordion.html
+template/alert/alert.html
+template/carousel/carousel.html
+template/carousel/slide.html
+template/datepicker/datepicker.html
+template/datepicker/popup.html
+template/dialog/message.html
+template/modal/backdrop.html
+template/modal/window.html
+template/pagination/pager.html
+template/pagination/pagination.html
+template/popover/popover.html
+template/progressbar/bar.html
+template/progressbar/progress.html
+template/rating/rating.html
+template/tabs/tab.html
+template/tabs/tabset-titles.html
+template/tabs/tabset.html
+template/timepicker/timepicker.html
+template/tooltip/tooltip-html-unsafe-popup.html
+template/tooltip/tooltip-popup.html
+template/typeahead/typeahead-match.html
+template/typeahead/typeahead-popup.html
 
 NETWORK:
 *
 
-# hash: bf1a2e0097d351883893fa1b574e1f77ad197159550e7870b0565209b7bc048b
+# hash: 4701f5dd9f22dd729221c0a88b3a1d9c08edf29b543f82d9acc6980f34e6084c

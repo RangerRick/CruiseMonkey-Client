@@ -1,3 +1,15 @@
+<script type="text/ng-template" id="add-event.html">
+	<div class="modal-header">
+		<h3>Add an Event</h3>
+	</div>
+	<div class="modal-body">
+		This is my body.  Modal for you.
+	</div>
+	<div class="modal-footer">
+		<button class="btn btn-primary" ng-click="ok()">OK</button>
+		<button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+	</div>
+</script>
 <div class="event-list">
 	<div ng-repeat="event in events" class="list-entry calendar-event scrollable">
 		<div class="favorite" ng-show="(user.username && user.username != event.username)">

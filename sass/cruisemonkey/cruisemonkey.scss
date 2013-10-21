@@ -60,6 +60,8 @@ $titleBarBG: black;
 $deckHeaderColor: white;
 $deckHeaderBG: black;
 
+$contentBG: #f8f8f8;
+
 $mainBG: white;
 $alternateBG: $cmBabyBlue;
 
@@ -96,7 +98,7 @@ a:hover {
 }
 
 .mobile-content {
-	background-color: $mainBG;
+	background-color: $contentBG;
 }
 
 .mobile-nav {
@@ -274,7 +276,7 @@ a:hover {
 }
 
 .list-entry:nth-child(odd) {
-	background: transparent;
+	background: $mainBG;
 }
 
 .list-entry:nth-child(even) {

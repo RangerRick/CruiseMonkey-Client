@@ -21,21 +21,21 @@
 	.config(['$routeProvider', '$mobileFrameProvider', function($routeProvider, $mobileFrameProvider) {
 		$routeProvider
 			.when('/login', {
-				templateUrl: 'partials/login.html',
+				templateUrl: 'template/login.html',
 				controller: 'CMLoginCtrl'
 			})
 			.when('/events', {
 				redirectTo: '/events/official'
 			})
 			.when('/events/:eventType', {
-				templateUrl: 'partials/event-list.html',
+				templateUrl: 'template/event-list.html',
 				controller: 'CMEventCtrl'
 			})
 			.when('/deck-plans', {
 				redirectTo: '/deck-plans/2'
 			})
 			.when('/deck-plans/:deck', {
-				templateUrl: 'partials/deck-plans.html',
+				templateUrl: 'template/deck-plans.html',
 				controller: 'CMDeckListCtrl'
 			})
 			.otherwise({
@@ -62,7 +62,7 @@
 				return;
 			}
 
-			if (currRoute.templateUrl === 'partials/event-list.html' && currRoute.params.eventType === 'my') {
+			if (currRoute.templateUrl === 'template/event-list.html' && currRoute.params.eventType === 'my') {
 				event.preventDefault();
 				$location.path('/login');
 				angular.noop();

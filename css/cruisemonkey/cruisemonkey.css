@@ -48,7 +48,7 @@ a:link, a:visited, a:hover {
   -webkit-transition: all 0.1s ease-out; }
 
 .mobile-content {
-  background-color: white; }
+  background-color: #f8f8f8; }
 
 .mobile-nav {
   color: black;
@@ -187,7 +187,7 @@ a:link, a:visited, a:hover {
     height: 32px; }
 
 .list-entry:nth-child(odd) {
-  background: transparent; }
+  background: white; }
 
 .list-entry:nth-child(even) {
   background: #ddf2ff; }

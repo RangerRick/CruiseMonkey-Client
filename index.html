@@ -74,7 +74,7 @@ timeoutID = window.setTimeout(function() {
 		<mobile-header ng-controller="CMHeaderCtrl">
 			<span class="title"><strong>{{title}}</strong></span>
 			<span class="actions" ng-repeat="action in actions">
-				<div class="action icon icon-{{action.iconClass}}"></div>
+				<div class="action icon icon-{{action.iconClass}}" ng-click="action.launch()"></div>
 			</span>
 		</mobile-header>
 		<mobile-nav ng-controller="CMNavigationCtrl" ng-click="toggleDrawer()">
@@ -111,6 +111,8 @@ timeoutID = window.setTimeout(function() {
 	<script src="js/angular-3rdparty/angular-phonegap-ready.js"></script>
 	<script src="js/angular-3rdparty/angularls.js"></script>
 	<script src="js/angular-3rdparty/angular-interval.js"></script>
+	<script src="js/angular-3rdparty/ui-bootstrap-0.6.0.js"></script>
+	<!-- <script src="js/angular-3rdparty/angular-modal.js"></script> -->
 
 	<script src="js/cruisemonkey.min.js"></script>
 	<script src="phonegap.js"></script>

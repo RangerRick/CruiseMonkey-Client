@@ -20,9 +20,9 @@ module.exports = function(grunt) {
 					hash: true,
 					master: [
 						'index.html',
-						'partials/deck-plans.html',
-						'partials/event-list.html',
-						'partials/login.html'
+						'template/deck-plans.html',
+						'template/event-list.html',
+						'template/login.html'
 					],
 					exclude: ['Gruntfile.js', 'webserver.js', 'package.json', '.gitignore', '.git']
 				},
@@ -41,7 +41,8 @@ module.exports = function(grunt) {
 					'js/*.js',
 					'js/*/*.js',
 					'index.html',
-					'partials/*.html'
+					'template/*.html',
+					'template/**/*.html'
 				]
 			}
 		},
@@ -133,7 +134,8 @@ module.exports = function(grunt) {
 					'js/*.js',
 					'js/*/*.js',
 					'index.html',
-					'partials/*.html'
+					'template/*.html',
+					'tempate/**/*.html'
 				],
 				tasks: ['uglify', 'manifest'],
 				options: {

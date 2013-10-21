@@ -1,14 +1,25 @@
 (function() {
 	'use strict';
 
-	angular.module('cruisemonkey.controllers.Events', ['ngRoute', 'cruisemonkey.User', 'cruisemonkey.Events', 'cruisemonkey.Logging'])
-	.controller('CMEventCtrl', ['$scope', '$rootScope', '$routeParams', '$location', '$q', 'UserService', 'EventService', 'LoggingService', function($scope, $rootScope, $routeParams, $location, $q, UserService, EventService, LoggingService) {
-		LoggingService.info('Initializing CMEventCtrl');
+	angular.module('cruisemonkey.controllers.Events', ['ngRoute', 'cruisemonkey.User', 'cruisemonkey.Events', 'cruisemonkey.Logging', 'ui.bootstrap.modal'])
+	.controller('CMAddEventCtrl', ['$scope', '$modal', 'LoggingService', function($scope, $modal, log) {
+		log.info('Initializing CMAddEventCtrl');
+	}])
+	.controller('CMEventCtrl', ['$scope', '$rootScope', '$routeParams', '$location', '$q', '$modal', '$templateCache', 'UserService', 'EventService', 'LoggingService', function($scope, $rootScope, $routeParams, $location, $q, $modal, $templateCache, UserService, EventService, log) {
+		log.info('Initializing CMEventCtrl');
 
 		$rootScope.actions = [
 			{
 				'name': 'Add Event',
-				'iconClass': 'add'
+				'iconClass': 'add',
+				'launch': function() {
+					log.info('launching modal');
+					$modal.open({
+						templateUrl:'add-event.html',
+						controller:'CMAddEventCtrl',
+						backdrop:false
+					});
+				}
 			}
 		];
 
@@ -30,7 +41,7 @@
 			} else if ($routeParams.eventType === 'my') {
 				func = EventService.getMyEvents;
 			} else {
-				LoggingService.warn('unknown event type: ' + $routeParams.eventType);
+				log.warn('unknown event type: ' + $routeParams.eventType);
 			}
 			$scope.events = $q.all([func(username), EventService.getMyFavorites(username)]).then(function(results) {
 				var i;
@@ -47,7 +58,7 @@
 					if (ret[eventId]) {
 						ret[eventId].isFavorite = true;
 					} else {
-						LoggingService.warn('could not find ' + eventId + ' in available events');
+						log.warn('could not find ' + eventId + ' in available events');
 					}
 				}
 
