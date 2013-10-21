@@ -1,7 +1,7 @@
 (function() {
 	'use strict';
 
-	angular.module('cruisemonkey.controllers.Events', ['ngRoute', 'cruisemonkey.User', 'cruisemonkey.Events', 'cruisemonkey.Logging', 'ui.bootstrap.modal'])
+	angular.module('cruisemonkey.controllers.Events', ['ngRoute', 'ngAnimate', 'cruisemonkey.User', 'cruisemonkey.Events', 'cruisemonkey.Logging', 'ui.bootstrap.modal'])
 	.controller('CMAddEventCtrl', ['$scope', '$modal', 'LoggingService', function($scope, $modal, log) {
 		log.info('Initializing CMAddEventCtrl');
 	}])

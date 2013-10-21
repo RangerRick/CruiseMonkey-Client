@@ -79,6 +79,34 @@ a:hover {
 	text-decoration: none;
 }
 
+/*
+ * Animation
+ */
+
+.animate-events.ng-enter, .animate-events.ng-leave, .animate-events.ng-move {
+	-webkit-transition: 1s linear height;
+	-moz-transition: 1s linear height;
+	-o-transition: 1s linear height;
+	transition: 1s linear height;
+	transform:scale(1,0);
+	-ms-transform:scale(1,0);
+	-webkit-transform:scale(1,0);
+}
+
+.animate-events.ng-enter {
+	transform:scale(1,0);
+	-ms-transform:scale(1,0);
+	-webkit-transform:scale(1,0);
+}
+.animate-events.ng-enter.ng-enter-active {
+	transform:scale(1,1);
+	-ms-transform:scale(1,1);
+	-webkit-transform:scale(1,1);
+}
+
+/*
+ * Mobile Navigation Stuff
+ */
 .mobile-header {
 	color: $titleBarColor;
 	background-color: $titleBarBG;
