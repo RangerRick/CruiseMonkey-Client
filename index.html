@@ -55,16 +55,9 @@ document.addEventListener("deviceready", function() {
 	console.log('CruiseMonkey loaded.');
 	angular.bootstrap(document, ['cruisemonkey']);
 	FastClick.attach(document.body);
-
-	if (window.device) {
-		console.log('This is a phonegap device, not bothering to update the application cache.');
-	} else {
-		window.setInterval(function() {
-			window.applicationCache.update();
-		}, 5000);
-	}
 }, false);
 
+/*
 timeoutID = window.setTimeout(function() {
 	console.log('Firing deviceready manually.');
 	window.clearTimeout(timeoutID);
@@ -72,6 +65,17 @@ timeoutID = window.setTimeout(function() {
 	e.initEvent('deviceready', true, true);
 	document.dispatchEvent(e);
 }, 4000);
+*/
+
+window.setTimeout(function() {
+	if (window.device) {
+		console.log('This is a phonegap device, not bothering to update the application cache.');
+	} else {
+		window.setInterval(function() {
+			window.applicationCache.update();
+		}, 5000);
+	}
+}, 30000);
   </script>
   <title ng-bind="'CruiseMonkey - ' + $root.title">CruiseMonkey</title>
 </head>
