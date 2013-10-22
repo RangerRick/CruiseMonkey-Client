@@ -31,21 +31,23 @@
 <script src="js/3rdparty/pouchdb-nightly.min.js"></script>
 
 <script>
-window.addEventListener('load', function(e) {
-	window.applicationCache.addEventListener('updateready', function(e) {
-		if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
-			// Browser downloaded a new app cache.
-			// Swap it in and reload the page to get the new hotness.
-			console.log('a new version is available; reloading');
-			window.applicationCache.swapCache();
-			window.location.reload();
-		}
+if (window.applicationCache && window.applicationCache.addEventListener) {
+	window.addEventListener('load', function(e) {
+		window.applicationCache.addEventListener('updateready', function(e) {
+			if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
+				// Browser downloaded a new app cache.
+				// Swap it in and reload the page to get the new hotness.
+				console.log('a new version is available; reloading');
+				window.applicationCache.swapCache();
+				window.location.reload();
+			}
+		}, false);
 	}, false);
-}, false);
 
-window.setInterval(function() {
-	window.applicationCache.update();
-}, 5000);
+	window.setInterval(function() {
+		window.applicationCache.update();
+	}, 5000);
+}
 
 var timeoutID;
 
