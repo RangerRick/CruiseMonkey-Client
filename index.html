@@ -57,15 +57,15 @@ document.addEventListener("deviceready", function() {
 	FastClick.attach(document.body);
 }, false);
 
-/*
 timeoutID = window.setTimeout(function() {
 	console.log('Firing deviceready manually.');
 	window.clearTimeout(timeoutID);
 	var e = document.createEvent('Events');
 	e.initEvent('deviceready', true, true);
 	document.dispatchEvent(e);
-}, 4000);
+}, 8000);
 
+/*
 window.setTimeout(function() {
 	if (window.device) {
 		console.log('This is a phonegap device, not bothering to update the application cache.');
