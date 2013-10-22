@@ -44,9 +44,13 @@ if (window.applicationCache && window.applicationCache.addEventListener) {
 		}, false);
 	}, false);
 
-	window.setInterval(function() {
-		window.applicationCache.update();
-	}, 5000);
+	if (device && device.platform) {
+		console.log('This is a phonegap device, not bothering to update the application cache.');
+	} else {
+		window.setInterval(function() {
+			window.applicationCache.update();
+		}, 5000);
+	}
 }
 
 var timeoutID;
