@@ -43,14 +43,6 @@ if (window.applicationCache && window.applicationCache.addEventListener) {
 			}
 		}, false);
 	}, false);
-
-	if (device && device.platform) {
-		console.log('This is a phonegap device, not bothering to update the application cache.');
-	} else {
-		window.setInterval(function() {
-			window.applicationCache.update();
-		}, 5000);
-	}
 }
 
 var timeoutID;
@@ -63,6 +55,14 @@ document.addEventListener("deviceready", function() {
 	console.log('CruiseMonkey loaded.');
 	angular.bootstrap(document, ['cruisemonkey']);
 	FastClick.attach(document.body);
+
+	if (window.device) {
+		console.log('This is a phonegap device, not bothering to update the application cache.');
+	} else {
+		window.setInterval(function() {
+			window.applicationCache.update();
+		}, 5000);
+	}
 }, false);
 
 timeoutID = window.setTimeout(function() {
