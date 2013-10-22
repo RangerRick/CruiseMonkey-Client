@@ -364,6 +364,9 @@ a:hover {
 .deck-plans {
 	overflow-x: hidden;
 	width: 100%;
+	user-drag: none;
+	-moz-user-select: none;
+	-webkit-user-drag: none;
 
 	img {
 		display: block;
@@ -372,15 +375,27 @@ a:hover {
 		margin: auto;
 		margin-bottom: 10px;
 		padding: 10px;
+		user-drag: none;
+		-moz-user-select: none;
+		-webkit-user-drag: none;
 	}
 	div.arrow {
-		position: absolute;
-		background-color: rgba(0,0,0,0.2);
-		width: 40px;
+		position: fixed;
+		/* background-color: rgba(0,0,0,0.2); */
+		width: 5%;
+		min-width: 40px;
 		top: 40px;
 		bottom: 0;
 		height: 100%;
 		z-index: 2;
+		img {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			padding: 0;
+			margin-top: auto;
+			margin-bottom: auto;
+		}
 	}
 	.left {
 		left: 0;

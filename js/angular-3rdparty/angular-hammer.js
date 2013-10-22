@@ -1,83 +1,79 @@
-/*
- * angular-hammer v1.0.2
- * (c) 2013 Monospaced http://monospaced.com
- * License: MIT
- */
+;(function (__global, angular, hammer) {
 
-(function(window, angular, Hammer){
+  'use strict';
 
-var hmTouchEvents = angular.module('hmTouchEvents', []),
-    hmGestures = ['hmHold:hold',
-                  'hmTap:tap',
-                  'hmDoubletap:doubletap',
-                  'hmDrag:drag',
-                  'hmDragstart:dragstart',
-                  'hmDragend:dragend',
-                  'hmDragup:dragup',
-                  'hmDragdown:dragdown',
-                  'hmDragleft:dragleft',
-                  'hmDragright:dragright',
-                  'hmSwipe:swipe',
-                  'hmSwipeup:swipeup',
-                  'hmSwipedown:swipedown',
-                  'hmSwipeleft:swipeleft',
-                  'hmSwiperight:swiperight',
-                  'hmTransform:transform',
-                  'hmTransformstart:transformstart',
-                  'hmTransformend:transformend',
-                  'hmRotate:rotate',
-                  'hmPinch:pinch',
-                  'hmPinchin:pinchin',
-                  'hmPinchout:pinchout',
-                  'hmTouch:touch',
-                  'hmRelease:release'];
+  if (!angular) {
+    throw new Error("window.angular is not defined.");
+  }
 
-angular.forEach(hmGestures, function(name){
-  var directive = name.split(':'),
-      directiveName = directive[0],
-      eventName = directive[1];
+  if (!hammer) {
+    throw new Error("window.Hammer is not defined.");
+  }
 
-  hmTouchEvents.directive(directiveName, ['$parse', '$window', function($parse, $window){
-    return {
-      restrict: 'A, C',
-      link: function(scope, element, attr) {
-        var expr = $parse(attr[directiveName]),
-            fn = function(event){
-              scope.$apply(function() {
-                expr(scope, {$event: event});
-              });
-            },
-            opts = $parse(attr['hmOptions'])(scope, {}),
-            hammer;
+  var GESTURES = [
+    'hold',
+    'tap',
+    'doubletap',
+    'drag',
+    'dragstart',
+    'dragend',
+    'dragup',
+    'dragdown',
+    'dragleft',
+    'dragright',
+    'swipe',
+    'swipeup',
+    'swipedown',
+    'swipeleft',
+    'swiperight',
+    'transform',
+    'transformstart',
+    'transformend',
+    'rotate',
+    'pinch',
+    'pinchin',
+    'pinchout',
+    'touch',
+    'release'
+  ];
 
-        if (typeof Hammer === 'undefined' || !$window.addEventListener) {
-          // fallback to mouse events where appropriate
-          if (directiveName === 'hmTap') {
-            element.bind('click', fn);
-          }
-          if (directiveName === 'hmDoubletap') {
-            element.bind('dblclick', fn);
-          }
-          return;
-        }
+  // Create clean scope
 
-        // don't create multiple Hammer instances per element
-        if (!(hammer = element.data('hammer'))) {
-          hammer = Hammer(element[0], opts);
-          element.data('hammer', hammer);
-        }
+  var newScope;
 
-        // bind Hammer touch event
-        hammer.on(eventName, fn);
-
-        // unbind Hammer touch event
-        scope.$on('$destroy', function(){
-          hammer.off(eventName, fn);
-        });
-
-      }
-    };
+  angular.injector(['ng']).invoke(['$rootScope', function($rootScope) {
+    newScope = $rootScope.$new();
   }]);
-});
 
-})(window, window.angular, window.Hammer);
+  // Create module
+
+  var module = angular.module('hammer', []);
+
+  GESTURES.forEach(function (gesture, idx) {
+    var hammerGesture = 'hammer' + gesture[0].toUpperCase() + gesture.slice(1);
+
+    module.directive(hammerGesture, ['$parse', function ($parse) {
+      return function (scope, element, attr) {
+        var args = newScope.$eval(attr[hammerGesture]),
+            tapHandler,
+            options,
+            instance;
+
+        if (typeof args === 'undefined') {
+          tapHandler = $parse(attr[hammerGesture]);
+        } else {
+          tapHandler = $parse(args.fn);
+          delete args.fn;
+          options = args;
+        }
+
+        instance = hammer(element[0], options).on(gesture, function (e) {
+          scope.$apply(function () {
+            tapHandler(scope, { $event: e });
+          });
+        });
+      };
+    }]);
+  });
+
+}(window, window.angular, window.Hammer));

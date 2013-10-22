@@ -260,22 +260,36 @@ a:link, a:visited, a:hover {
  */
 .deck-plans {
   overflow-x: hidden;
-  width: 100%; }
+  width: 100%;
+  user-drag: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none; }
   .deck-plans img {
     display: block;
     width: 90%;
     max-width: 500px;
     margin: auto;
     margin-bottom: 10px;
-    padding: 10px; }
+    padding: 10px;
+    user-drag: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none; }
   .deck-plans div.arrow {
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.2);
-    width: 40px;
+    position: fixed;
+    /* background-color: rgba(0,0,0,0.2); */
+    width: 5%;
+    min-width: 40px;
     top: 40px;
     bottom: 0;
     height: 100%;
     z-index: 2; }
+    .deck-plans div.arrow img {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      padding: 0;
+      margin-top: auto;
+      margin-bottom: auto; }
   .deck-plans .left {
     left: 0; }
   .deck-plans .right {

@@ -131,6 +131,7 @@ js/3rdparty/require.min.js
 js/3rdparty/script.js
 js/3rdparty/zepto.js
 js/angular-3rdparty/angular-hammer.js
+js/angular-3rdparty/angular-hammer.min.js
 js/angular-3rdparty/angular-interval.js
 js/angular-3rdparty/angular-mobile-frame.js
 js/angular-3rdparty/angular-mobile-frame.min.js
@@ -213,4 +214,4 @@ template/typeahead/typeahead-popup.html
 NETWORK:
 *
 
-# hash: a5103e94f681402293725ce70fa7c3c3d1a6937ba0aaec4c4517d106d4421125
+# hash: bc55a10db93fc79228acfdfed3f26f8e5c70656fa0c6bab06919bfec09c39218

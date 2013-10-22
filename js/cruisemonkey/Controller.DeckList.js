@@ -1,7 +1,7 @@
 (function() {
 	'use strict';
 
-	angular.module('cruisemonkey.controllers.DeckList', ['ngRoute', 'cruisemonkey.Logging', 'hmTouchEvents'])
+	angular.module('cruisemonkey.controllers.DeckList', ['ngRoute', 'cruisemonkey.Logging', 'hammer'])
 	.controller('CMDeckListCtrl', ['$scope', '$rootScope', '$routeParams', '$location', 'LoggingService', function($scope, $rootScope, $routeParams, $location, LoggingService) {
 		LoggingService.info('Initializing CMDeckListCtrl');
 		$scope.deck = parseInt($routeParams.deck, 10);
