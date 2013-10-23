@@ -12,8 +12,13 @@
 				<tr>
 					<td class="label">Event Start:</td>
 					<td class="input">
-						<input type="text" datepicker-popup="yyyy/MM/dd" ng-model="event.startDate" min="2014/02/20" max="2014/03/03" show-weeks="false" ng-required="true" />
-						<timepicker />
+						<input type="datetime" date-time ng-model="start" hours format="short" min-view="date" max-view="date" />
+					</td>
+				</tr>
+				<tr>
+					<td class="label">Event End:</td>
+					<td class="input">
+						<input type="datetime" date-time ng-model="end" hours format="short" min-view="date" max-view="date" />
 					</td>
 				</tr>
 			</table>

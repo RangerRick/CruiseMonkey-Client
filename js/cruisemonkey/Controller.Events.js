@@ -1,9 +1,11 @@
 (function() {
 	'use strict';
 
-	angular.module('cruisemonkey.controllers.Events', ['ngRoute', 'ngAnimate', 'cruisemonkey.User', 'cruisemonkey.Events', 'cruisemonkey.Logging', 'ui.bootstrap.modal', 'ui.bootstrap.datepicker', 'ui.bootstrap.timepicker'])
+	angular.module('cruisemonkey.controllers.Events', ['ngRoute', 'cruisemonkey.User', 'cruisemonkey.Events', 'cruisemonkey.Logging', 'ui.bootstrap.modal', 'datePicker'])
 	.controller('CMAddEventCtrl', ['$scope', '$modal', 'LoggingService', function($scope, $modal, log) {
 		log.info('Initializing CMAddEventCtrl');
+		$scope.start = new Date();
+		$scope.end   = new Date($scope.start.getTime() + 60 * 60 * 1000);
 	}])
 	.controller('CMEventCtrl', ['$scope', '$rootScope', '$routeParams', '$location', '$q', '$modal', '$templateCache', 'UserService', 'EventService', 'LoggingService', function($scope, $rootScope, $routeParams, $location, $q, $modal, $templateCache, UserService, EventService, log) {
 		log.info('Initializing CMEventCtrl');
@@ -34,7 +36,7 @@
 			$scope.events = {};
 		}
 
-		$q.when($rootScope.user).then(function(user) {
+		$q.when(UserService.get()).then(function(user) {
 			var username = user.username;
 
 			var func;
@@ -72,15 +74,17 @@
 		});
 
 		$scope.onChange = function(eventId, checked) {
-			var username = $rootScope.user.username;
-			$q.when($scope.events).then(function(events) {
-				events[eventId].isFavorite = checked;
+			$q.when(UserService.get()).then(function(user) {
+				var username = user.username;
+				$q.when($scope.events).then(function(events) {
+					events[eventId].isFavorite = checked;
+				});
+				if (checked) {
+					EventService.addFavorite(username, eventId);
+				} else {
+					EventService.removeFavorite(username, eventId);
+				}
 			});
-			if (checked) {
-				EventService.addFavorite(username, eventId);
-			} else {
-				EventService.removeFavorite(username, eventId);
-			}
 		};
 
 		$scope.safeApply = function(fn) {

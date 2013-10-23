@@ -28,7 +28,7 @@
     "jasmine.async": "~0.1.0",
     "angular-mocks": "1.2.0-rc.2",
     "angular-phonegap-ready": "~0.0.1",
-    "angular-hammer": "~1.0.3",
-    "html5shiv": "~3.7.0"
+    "html5shiv": "~3.7.0",
+    "jquery": "~2.0.3"
   }
 }

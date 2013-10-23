@@ -116,12 +116,7 @@ icons/inactive/90-lifebuoy@2x.png
 icons/not-authorized/55-network.png
 icons/not-authorized/55-network@2x.png
 js/cruisemonkey.min.js
-js/3rdparty/classie.js
 js/3rdparty/custom.modernizr.js
-js/3rdparty/fastclick.js
-js/3rdparty/hammer.min.js
-js/3rdparty/html5shiv.js
-js/3rdparty/html5shiv.min.js
 js/3rdparty/jasmine.async.js
 js/3rdparty/jquery.js
 js/3rdparty/pouchdb-nightly.js
@@ -135,36 +130,11 @@ js/angular-3rdparty/angular-hammer.min.js
 js/angular-3rdparty/angular-interval.js
 js/angular-3rdparty/angular-mobile-frame.js
 js/angular-3rdparty/angular-mobile-frame.min.js
-js/angular-3rdparty/angular-phonegap-ready.js
-js/angular-3rdparty/angular-strap.min.js
 js/angular-3rdparty/angularls.js
 js/angular-3rdparty/ui-bootstrap-0.6.0.js
 js/angular-3rdparty/ui-bootstrap-0.6.0.min.js
 js/angular-3rdparty/ui-bootstrap-tpls-0.6.0.js
 js/angular-3rdparty/ui-bootstrap-tpls-0.6.0.min.js
-js/angular/angular-animate.js
-js/angular/angular-animate.min.js
-js/angular/angular-bootstrap-prettify.js
-js/angular/angular-bootstrap-prettify.min.js
-js/angular/angular-bootstrap.js
-js/angular/angular-bootstrap.min.js
-js/angular/angular-cookies.js
-js/angular/angular-cookies.min.js
-js/angular/angular-inview.js
-js/angular/angular-loader.js
-js/angular/angular-loader.min.js
-js/angular/angular-mocks.js
-js/angular/angular-resource.js
-js/angular/angular-resource.min.js
-js/angular/angular-route.js
-js/angular/angular-route.min.js
-js/angular/angular-sanitize.js
-js/angular/angular-sanitize.min.js
-js/angular/angular-scenario.js
-js/angular/angular-touch.js
-js/angular/angular-touch.min.js
-js/angular/angular.js
-js/angular/angular.min.js
 js/cruisemonkey/Config.js
 js/cruisemonkey/Controller.DeckList.js
 js/cruisemonkey/Controller.Events.js
@@ -180,8 +150,17 @@ js/cruisemonkey/filters.js
 js/cruisemonkey/main.js
 js/cruisemonkey/services.js
 js/cruisemonkey/string.js
-js/log4javascript/log4javascript.js
-js/log4javascript/log4javascript.min.js
+bower_components/log4javascript/log4javascript.js
+bower_components/log4javascript/log4javascript_uncompressed.js
+bower_components/angular/angular.js
+bower_components/angular/angular.min.js
+bower_components/angular/angular.min.js.map
+bower_components/angular-loader/angular-loader.js
+bower_components/angular-loader/angular-loader.min.js
+bower_components/angular-loader/angular-loader.min.js.map
+bower_components/angular-route/angular-route.js
+bower_components/angular-route/angular-route.min.js
+bower_components/angular-route/angular-route.min.js.map
 index.html
 template/deck-plans.html
 template/event-list.html
@@ -214,4 +193,4 @@ template/typeahead/typeahead-popup.html
 NETWORK:
 *
 
-# hash: 78c509070a638a642e667e41e82466eda8aea2fe56eaff2274a658de9e8a5f12
+# hash: 0ce773d6f3c8b42c8c4053f7342025cc544f8458551201e789acc9fc88ac2b50

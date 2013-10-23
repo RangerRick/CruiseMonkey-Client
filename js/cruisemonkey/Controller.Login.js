@@ -5,6 +5,7 @@
 	.controller('CMLoginCtrl', ['$scope', '$rootScope', '$location', 'UserService', 'LoggingService', function($scope, $rootScope, $location, UserService, log) {
 		log.info('Initializing CMLoginCtrl');
 		$rootScope.title = "Log In";
+
 		$rootScope.user = UserService.get();
 
 		$scope.isUnchanged = function(newUser) {
@@ -29,7 +30,8 @@
 
 		$scope.update = function(user) {
 			user.loggedIn = true;
-			log.info('saving user: ', user);
+			log.info('saving user');
+			console.log(user);
 			UserService.save(user);
 			$rootScope.user = UserService.get();
 			$rootScope.$broadcast('cmUpdateMenu');
