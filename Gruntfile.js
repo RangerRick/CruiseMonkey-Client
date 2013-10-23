@@ -40,6 +40,10 @@ module.exports = function(grunt) {
 					'icons/*/*.png',
 					'js/*.js',
 					'js/*/*.js',
+					'bower_components/log4javascript/log4javascript*.js',
+					'bower_components/angular/angular*',
+					'bower_components/angular-loader/angular-loader*',
+					'bower_components/angular-route/angular-route*',
 					'index.html',
 					'template/*.html',
 					'template/**/*.html'
@@ -87,19 +91,19 @@ module.exports = function(grunt) {
 		jasmine: {
 			test: {
 				src: [
-					'js/3rdparty/jasmine.async.js',
+					'bower_components/jasmine.async/lib/jasmine.async.min.js',
 					'js/3rdparty/custom.modernizr.js',
-					'js/log4javascript/log4javascript.js',
-					'js/3rdparty/hammer.min.js',
+					'bower_components/log4javascript/log4javascript.js',
+					'bower_components/hammerjs/dist/hammer.js',
 					'js/3rdparty/pouchdb-nightly.js',
-					'js/angular/angular.js',
-					'js/angular/angular-route.js',
-					'js/angular/angular-resource.js',
-					'js/angular/angular-touch.js',
-					'js/angular/angular-mocks.js',
-					'js/angular-3rdparty/angular-phonegap-ready.js',
+					'bower_components/angular/angular.js',
+					'bower_components/angular-loader/angular-loader.js',
+					'bower_components/angular-route/angular-route.js',
+					'bower_components/angular-resource/angular-resource.js',
+					'bower_components/angular-mocks/angular-mocks.js',
+					'bower_components/angular-phonegap-ready/ready.js',
 					'js/angular-3rdparty/angular-interval.js',
-					'js/angular-3rdparty/angular-hammer.js',
+					'bower_components/angular-hammer/angular-hammer.js',
 					'js/cruisemonkey/*.js'
 				],
 				options: {
@@ -135,7 +139,8 @@ module.exports = function(grunt) {
 					'js/*/*.js',
 					'index.html',
 					'template/*.html',
-					'tempate/**/*.html'
+					'tempate/**/*.html',
+					'bower_components/**/*'
 				],
 				tasks: ['uglify', 'manifest'],
 				options: {

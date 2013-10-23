@@ -3,7 +3,21 @@
 		<h3>Add an Event</h3>
 	</div>
 	<div class="modal-body">
-		This is my body.  Modal for you.
+		<form name="form" class="add-event-form" novalidate>
+			<table>
+				<tr>
+					<td class="label">Summary:</td>
+					<td class="input"><input type="text" ng-model="event.summary" name="eSummary" required /></td>
+				</tr>
+				<tr>
+					<td class="label">Event Start:</td>
+					<td class="input">
+						<input type="text" datepicker-popup="yyyy/MM/dd" ng-model="event.startDate" min="2014/02/20" max="2014/03/03" show-weeks="false" ng-required="true" />
+						<timepicker />
+					</td>
+				</tr>
+			</table>
+		</form>
 	</div>
 	<div class="modal-footer">
 		<button class="btn btn-primary" ng-click="$close()">OK</button>

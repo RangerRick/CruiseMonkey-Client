@@ -23,12 +23,8 @@
 <script src="js/3rdparty/custom.modernizr.js"></script>
 <!-- IE Fix for HTML5 Tags -->
 <!--[if lt IE 9]>
-		<script src="js/3rdparty/html5shiv.min.js"></script>
+		<script src="bower_components/html5shiv/dist/html5shiv.js"></script>
 	<![endif]-->
-
-<script src="js/3rdparty/fastclick.js"></script>
-<script src="js/3rdparty/hammer.min.js"></script>
-<script src="js/3rdparty/pouchdb-nightly.min.js"></script>
 
 <script>
 if (window.applicationCache && window.applicationCache.addEventListener) {
@@ -63,7 +59,7 @@ timeoutID = window.setTimeout(function() {
 	var e = document.createEvent('Events');
 	e.initEvent('deviceready', true, true);
 	document.dispatchEvent(e);
-}, 8000);
+}, 500);
 
 /*
 window.setTimeout(function() {
@@ -103,27 +99,32 @@ window.setTimeout(function() {
 	</mobile-frame>
 
 	<!--
-	<script src="js/log4javascript/log4javascript.min.js"></script>
-	<script src="js/angular/angular.min.js"></script>
-	<script src="js/angular/angular-loader.min.js"></script>
-	<script src="js/angular/angular-route.min.js"></script>
-	<script src="js/angular/angular-resource.min.js"></script>
-	<script src="js/angular/angular-touch.min.js"></script>
+	<script src="js/3rdparty/pouchdb-nightly.min.js"></script>
+	<script src="bower_components/hammerjs/dist/hammer.min.js"></script>
+	<script src="bower_components/log4javascript/log4javascript.js"></script>
+	<script src="bower_components/angular/angular.min.js"></script>
+	<script src="bower_components/angular-loader/angular-loader.min.js"></script>
+	<script src="bower_components/angular-route/angular-route.min.js"></script>
+	<script src="bower_components/angular-resource/angular-resource.min.js"></script>
+	<script src="bower_components/angular-datepicker/dist/index.min.js"></script>
 	-->
 
-	<script src="js/log4javascript/log4javascript.js"></script>
-	<script src="js/angular/angular.js"></script>
-	<script src="js/angular/angular-loader.js"></script>
-	<script src="js/angular/angular-route.js"></script>
-	<script src="js/angular/angular-resource.js"></script>
-	<script src="js/angular/angular-animate.js"></script>
+	<script src="js/3rdparty/pouchdb-nightly.js"></script>
+	<script src="bower_components/hammerjs/dist/hammer.js"></script>
+	<script src="bower_components/log4javascript/log4javascript_uncompressed.js"></script>
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="bower_components/angular-loader/angular-loader.js"></script>
+	<script src="bower_components/angular-route/angular-route.js"></script>
+	<script src="bower_components/angular-resource/angular-resource.js"></script>
+	<script src="bower_components/angular-datepicker/dist/index.js"></script>
 
+	<script src="bower_components/fastclick/lib/fastclick.js"></script>
+	<script src="bower_components/angular-phonegap-ready/ready.js"></script>
+	<script src="bower_components/angular-hammer/angular-hammer.js"></script>
 	<script src="js/angular-3rdparty/angular-mobile-frame.js"></script>
-	<script src="js/angular-3rdparty/angular-phonegap-ready.js"></script>
 	<script src="js/angular-3rdparty/angularls.js"></script>
 	<script src="js/angular-3rdparty/angular-interval.js"></script>
 	<script src="js/angular-3rdparty/ui-bootstrap-0.6.0.js"></script>
-	<script src="js/angular-3rdparty/angular-hammer.js"></script>
 
 	<script src="js/cruisemonkey.min.js"></script>
 	<script src="phonegap.js"></script>

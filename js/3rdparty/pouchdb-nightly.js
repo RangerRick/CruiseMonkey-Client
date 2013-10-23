@@ -1,4 +1,4 @@
-// pouchdb.nightly - 2013-09-19T10:26:58
+// pouchdb.nightly - 2013-10-22T21:09:01
 
 (function() {
  // BEGIN Math.uuid.js
@@ -830,8 +830,22 @@ Pouch.parseAdapter = function(name) {
   throw 'No valid adapter found';
 };
 
-Pouch.destroy = function(name, callback) {
-  var opts = Pouch.parseAdapter(name);
+Pouch.destroy = function(name, opts, callback) {
+  if (typeof opts === 'function' || typeof opts === 'undefined') {
+    callback = opts;
+    opts = {};
+  }
+
+  if (typeof name === 'object') {
+    opts = name;
+    name = undefined;
+  }
+
+  if (typeof callback === 'undefined') {
+    callback = function() {};
+  }
+  var backend = Pouch.parseAdapter(opts.name || name);
+
   var cb = function(err, response) {
     if (err) {
       callback(err);
@@ -839,18 +853,18 @@ Pouch.destroy = function(name, callback) {
     }
 
     for (var plugin in Pouch.plugins) {
-      Pouch.plugins[plugin]._delete(name);
+      Pouch.plugins[plugin]._delete(backend.name);
     }
     if (Pouch.DEBUG) {
-      console.log(name + ': Delete Database');
+      console.log(backend.name + ': Delete Database');
     }
 
     // call destroy method of the particular adaptor
-    Pouch.adapters[opts.adapter].destroy(opts.name, callback);
+    Pouch.adapters[backend.adapter].destroy(backend.name, opts, callback);
   };
 
   // remove Pouch from allDBs
-  Pouch.removeFromAllDbs(opts, cb);
+  Pouch.removeFromAllDbs(backend, cb);
 };
 
 Pouch.removeFromAllDbs = function(opts, callback) {
@@ -2362,25 +2376,50 @@ PouchAdapter = function(opts, callback) {
     var count = 0;
     var missing = {};
 
-    function readDoc(err, doc, id) {
-      req[id].map(function(revId) {
-        var matches = function(x) { return x.rev !== revId; };
-        if (!doc || doc._revs_info.every(matches)) {
-          if (!missing[id]) {
-            missing[id] = {missing: []};
+    function addToMissing(id, revId) {
+      if (!missing[id]) {
+        missing[id] = {missing: []};
+      }
+      missing[id].missing.push(revId);
+    }
+
+    function processDoc(id, rev_tree) {
+      // Is this fast enough? Maybe we should switch to a set simulated by a map
+      var missingForId = req[id].slice(0);
+      PouchMerge.traverseRevTree(rev_tree, function(isLeaf, pos, revHash, ctx,
+        opts) {
+          var rev = pos + '-' + revHash;
+          var idx = missingForId.indexOf(rev);
+          if (idx === -1) {
+            return;
           }
-          missing[id].missing.push(revId);
-        }
+
+          missingForId.splice(idx, 1);
+          if (opts.status !== 'available') {
+            addToMissing(id, rev);
+          }
       });
 
-      if (++count === ids.length) {
-        return call(callback, null, missing);
-      }
+      // Traversing the tree is synchronous, so now `missingForId` contains
+      // revisions that were not found in the tree
+      missingForId.forEach(function(rev) {
+        addToMissing(id, rev);
+      });
     }
 
     ids.map(function(id) {
-      api.get(id, {revs_info: true}, function(err, doc) {
-        readDoc(err, doc, id);
+      customApi._getRevisionTree(id, function(err, rev_tree) {
+        if (err && err.error === 'not_found' && err.reason === 'missing') {
+          missing[id] = {missing: req[id]};
+        } else if (err) {
+          return call(callback, err);
+        } else {
+          processDoc(id, rev_tree);
+        }
+
+        if (++count === ids.length) {
+          return call(callback, null, missing);
+        }
       });
     });
   };
@@ -2853,7 +2892,7 @@ parseUri.options = {
 
 // Get all the information you possibly can about the URI given by name and
 // return it as a suitable object.
-function getHost(name) {
+function getHost(name, opts) {
   // If the given name contains "http:"
   if (/http(s?):/.test(name)) {
     // Prase the URI into all its little bits
@@ -2878,6 +2917,18 @@ function getHost(name) {
     // Restore the path by joining all the remaining parts (all the parts
     // except for the database name) with '/'s
     uri.path = parts.join('/');
+    opts = opts || {};
+    uri.headers = opts.headers || {};
+    
+    if (opts.auth || uri.auth) { 
+      var nAuth = opts.auth || uri.auth;
+      var token = PouchUtils.btoa(nAuth.username + ':' + nAuth.password);
+      uri.headers.Authorization = 'Basic ' + token; 
+    }
+
+    if (opts.headers) {
+      uri.headers = opts.headers;
+    }
 
     return uri;
   }
@@ -2925,18 +2976,7 @@ function genUrl(opts, path) {
 var HttpPouch = function(opts, callback) {
 
   // Parse the URI given by opts.name into an easy-to-use object
-  var host = getHost(opts.name);
-
-  host.headers = opts.headers || {};
-  if (opts.auth || host.auth) { 
-    var nAuth = opts.auth || host.auth;
-    var token = PouchUtils.btoa(nAuth.username + ':' + nAuth.password);
-    host.headers.Authorization = 'Basic ' + token; 
-  }
-
-  if (opts.headers) {
-    host.headers = opts.headers;
-  }
+  var host = getHost(opts.name, opts);
 
   // Generate the database URL based on the host
   var db_url = genDBUrl(host, '');
@@ -3699,8 +3739,8 @@ var HttpPouch = function(opts, callback) {
 };
 
 // Delete the HttpPouch specified by the given name.
-HttpPouch.destroy = function(name, callback) {
-  var host = getHost(name);
+HttpPouch.destroy = function(name, opts, callback) {
+  var host = getHost(name, opts);
   ajax({headers: host.headers, method: 'DELETE', url: genDBUrl(host, '')}, callback);
 };
 
@@ -4562,7 +4602,7 @@ IdbPouch.valid = function idb_valid() {
   return typeof window !== 'undefined' && !!window.indexedDB;
 };
 
-IdbPouch.destroy = function idb_destroy(name, callback) {
+IdbPouch.destroy = function idb_destroy(name, opts, callback) {
   if (Pouch.DEBUG) {
     console.log(name + ': Delete Database');
   }
@@ -5294,7 +5334,7 @@ webSqlPouch.valid = function() {
   return typeof window !== 'undefined' && !!window.openDatabase;
 };
 
-webSqlPouch.destroy = function(name, callback) {
+webSqlPouch.destroy = function(name, opts, callback) {
   var db = openDatabase(name, POUCH_VERSION, name, POUCH_SIZE);
   db.transaction(function (tx) {
     tx.executeSql('DROP TABLE IF EXISTS ' + DOC_STORE, []);
