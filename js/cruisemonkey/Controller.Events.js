@@ -88,6 +88,10 @@
 
 		});
 
+		$scope.trash = function(ev) {
+			EventService.removeEvent(ev);
+		};
+
 		$scope.onChange = function(eventId, checked) {
 			$q.when(UserService.get()).then(function(user) {
 				var username = user.username;

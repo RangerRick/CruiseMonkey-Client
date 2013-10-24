@@ -53,6 +53,9 @@
 		<div class="favorite" ng-show="(user.username && user.username != event.username)">
 			<input type="checkbox" id="{{event._id}}-favorite" ng-checked="event.isFavorite" ng-model="fav" ng-change="onChange(event._id, fav)"><label for="{{event._id}}-favorite">&nbsp;</label>
 		</div>
+		<div class="trash" ng-show="(user.username && user.username == event.username)">
+			<input type="checkbox" id="{{event._id}}-trash" ng-click="trash(event)"><label for="{{event._id}}-trash">&nbsp;</label>
+		</div>
 		<div class="summary">{{event.summary}}</div>
 		<div class="time">{{event.start}}-{{event.end}}</div>
 		<div class="createdBy" ng-show="event.username != 'official'">Created By: {{event.username}}</div>

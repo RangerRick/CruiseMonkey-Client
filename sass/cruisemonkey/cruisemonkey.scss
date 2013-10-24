@@ -303,6 +303,23 @@ a:hover {
 		height: 32px;
 	}
 
+	.trash input[type=checkbox] {
+		display: none;
+	}
+
+	.trash input[type=checkbox] + label {
+		-moz-user-select: none;
+		-webkit-user-select: none;
+		-ms-user-select:none;
+		user-select:none;
+		display: block;
+		background:url(../../icons/entypo/yellow/SVG/trash.svg) no-repeat;
+		background-position: center center;
+		background-size:26px 26px;
+		width: 32px;
+		height: 32px;
+	}
+
 }
 
 .list-entry:nth-child(odd) {
