@@ -397,14 +397,12 @@ a:hover {
 		-webkit-user-drag: none;
 	}
 	div.arrow {
-		position: fixed;
-		/* background-color: rgba(0,0,0,0.2); */
+		position: absolute;
 		width: 5%;
 		min-width: 40px;
 		top: 40px;
 		bottom: 0;
 		height: 100%;
-		z-index: 2;
 		img {
 			position: absolute;
 			top: 0;
@@ -415,7 +413,7 @@ a:hover {
 		}
 	}
 	.left {
-		left: 0;
+		left: $navWidth;
 	}
 	.right {
 		right: 0;

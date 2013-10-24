@@ -288,14 +288,12 @@ a:link, a:visited, a:hover {
     -moz-user-select: none;
     -webkit-user-drag: none; }
   .deck-plans div.arrow {
-    position: fixed;
-    /* background-color: rgba(0,0,0,0.2); */
+    position: absolute;
     width: 5%;
     min-width: 40px;
     top: 40px;
     bottom: 0;
-    height: 100%;
-    z-index: 2; }
+    height: 100%; }
     .deck-plans div.arrow img {
       position: absolute;
       top: 0;
@@ -304,7 +302,7 @@ a:link, a:visited, a:hover {
       margin-top: auto;
       margin-bottom: auto; }
   .deck-plans .left {
-    left: 0; }
+    left: 250px; }
   .deck-plans .right {
     right: 0; }
 

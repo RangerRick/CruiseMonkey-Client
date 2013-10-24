@@ -14,8 +14,19 @@
 			next();
 		};
 
+		$scope.safeApply = function(fn) {
+			var phase = this.$root.$$phase;
+			if(phase === '$apply' || phase === '$digest') {
+				if(fn && (typeof(fn) === 'function')) {
+					fn();
+				}
+			} else {
+				this.$apply(fn);
+			}
+		};
+
 		var previous = function() {
-			$scope.$apply(function() {
+			$scope.safeApply(function() {
 				if ($scope.deck !== 2) {
 					var newdeck = ($scope.deck - 1);
 					log.info('previous() going down to deck ' + newdeck);
@@ -24,7 +35,7 @@
 			});
 		};
 		var next = function() {
-			$scope.$apply(function() {
+			$scope.safeApply(function() {
 				if ($scope.deck !== 15) {
 					var newdeck = ($scope.deck + 1);
 					log.info('next() going up to deck ' + newdeck);
