@@ -1,8 +1,8 @@
 (function() {
 	'use strict';
 
-	angular.module('cruisemonkey.Events', ['cruisemonkey.Database', 'cruisemonkey.Logging'])
-	.factory('EventService', ['$q', '$rootScope', 'Database', 'LoggingService', function($q, $rootScope, db, log) {
+	angular.module('cruisemonkey.Events', ['cruisemonkey.Database', 'cruisemonkey.User', 'cruisemonkey.Logging'])
+	.factory('EventService', ['$q', '$rootScope', 'Database', 'UserService', 'LoggingService', function($q, $rootScope, db, UserService, log) {
 		var doQuery = function(map, options) {
 			var deferred = $q.defer();
 			db.database.query({map: map}, options, function(err, res) {
@@ -23,6 +23,47 @@
 		};
 		
 		return {
+			addEvent: function(ev) {
+				ev.type = 'event';
+
+				var deferred = $q.defer();
+
+				if (!ev.username || ev.username === '') {
+					log.info('addEvent(): no username in the event!');
+					deferred.reject('no username specified');
+				} else {
+					log.info('addEvent(): posting event "' + ev.summary + '" for user "' + ev.username + '"');
+					db.database.post(ev, function(err, response) {
+						$rootScope.$apply(function() {
+							if (err) {
+								log.error(err);
+								deferred.reject(err);
+							} else {
+								ev._id = response.id;
+								ev._rev = response.rev;
+								deferred.resolve(ev);
+							}
+						});
+					});
+				}
+
+				return deferred.promise;
+			},
+			removeEvent: function(ev) {
+				log.info('removeEvent(' + ev._id + ')');
+				var deferred = $q.defer();
+				db.database.remove(ev, function(err, response) {
+					$rootScope.$apply(function() {
+						if (err) {
+							log.error(err);
+							deferred.reject(err);
+						} else {
+							deferred.resolve(response);
+						}
+					});
+				});
+				return deferred.promise;
+			},
 			getAllEvents: function() {
 				log.info('getAllEvents()');
 				return doQuery(function(doc) {

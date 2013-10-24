@@ -2,42 +2,57 @@
 	'use strict';
 
 	angular.module('cruisemonkey.controllers.Events', ['ngRoute', 'cruisemonkey.User', 'cruisemonkey.Events', 'cruisemonkey.Logging', 'ui.bootstrap.modal', 'datePicker'])
-	.controller('CMAddEventCtrl', ['$scope', '$modal', 'LoggingService', function($scope, $modal, log) {
-		log.info('Initializing CMAddEventCtrl');
-		$scope.start = new Date();
-		$scope.end   = new Date($scope.start.getTime() + 60 * 60 * 1000);
+	.controller('CMEditEventCtrl', ['$q', '$scope', '$modal', 'UserService', 'LoggingService', function($q, $scope, $modal, UserService, log) {
+		log.info('Initializing CMEditEventCtrl');
+
+		$q.when(UserService.get()).then(function(user) {
+			var start = new Date();
+			$scope.event = {
+				'start':    start,
+				'end':      new Date(start.getTime() + 60 * 60 * 1000),
+				'type':     'event',
+				'username': user.username
+			};
+		});
 	}])
 	.controller('CMEventCtrl', ['$scope', '$rootScope', '$routeParams', '$location', '$q', '$modal', '$templateCache', 'UserService', 'EventService', 'LoggingService', function($scope, $rootScope, $routeParams, $location, $q, $modal, $templateCache, UserService, EventService, log) {
 		log.info('Initializing CMEventCtrl');
 
-		$rootScope.actions = [
-			{
-				'name': 'Add Event',
-				'iconClass': 'add',
-				'launch': function() {
-					log.info('launching modal');
-					var modalInstance = $modal.open({
-						templateUrl:'add-event.html',
-						controller:'CMAddEventCtrl'
-					});
-					modalInstance.result.then(function() {
-						log.info("Add finished!");
-					}, function() {
-						log.warn("Add canceled!");
-					});
-				}
-			}
-		];
-
 		$scope.eventType = $routeParams.eventType;
 		$rootScope.title = $routeParams.eventType.capitalize() + ' Events';
+		$rootScope.actions = [];
 
 		if (!$scope.events) {
 			$scope.events = {};
 		}
 
 		$q.when(UserService.get()).then(function(user) {
-			var username = user.username;
+			var username = '';
+			if (user.username) {
+				username = user.username;
+			}
+
+			log.info('username = ' + username);
+
+			if (username && username !== '') {
+				$rootScope.actions.push({
+					'name': 'Add Event',
+					'iconClass': 'add',
+					'launch': function() {
+						log.info('launching modal');
+						var modalInstance = $modal.open({
+							templateUrl:'edit-event.html',
+							controller:'CMEditEventCtrl'
+						});
+						modalInstance.result.then(function(result) {
+							log.info("Add finished!");
+							EventService.addEvent(result);
+						}, function() {
+							log.warn("Add canceled!");
+						});
+					}
+				});
+			}
 
 			var func;
 			if ($routeParams.eventType === 'official') {

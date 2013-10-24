@@ -18,14 +18,13 @@ describe('Events', function() {
 			}
 		});
 	});
-	
+
 	async.beforeEach(function(done) {
-		module('cruisemonkey.Events', function($provide) {
+		module('cruisemonkey.Database', 'cruisemonkey.User', 'cruisemonkey.Events', function($provide) {
 			$provide.value('config.logging.useStringAppender', true);
 			$provide.value('config.database.name', dbName);
-			$provide.value('config.database.replicateTo', null);
+			$provide.value('config.database.replicate', false);
 		});
-
 		done();
 	});
 
@@ -36,7 +35,6 @@ describe('Events', function() {
 			service = EventService;
 			db      = Database;
 		}]);
-
 		done();
 	});
 
@@ -206,12 +204,55 @@ describe('Events', function() {
 			expect(service.removeFavorite).not.toBeUndefined();
 			service.addFavorite('ranger', '1').then(function(result) {
 				service.removeFavorite('ranger', '3').then(function(result) {
-					console.log('result=', result);
 					expect(result).not.toBeUndefined();
 					service.isFavorite('ranger', '3').then(function(result) {
 						expect(result).not.toBeTruthy();
 						done();
 					});
+				});
+			});
+		});
+	});
+	
+	describe('#addEvent', function() {
+		async.it('should add a new event', function(done) {
+			expect(db).not.toBeNull();
+			expect(service.addEvent).not.toBeUndefined();
+			service.addEvent({
+				'summary': 'This is a test.',
+				'description': 'A TEST, I SAY',
+				'username': 'testUser'
+			}).then(function(result) {
+				expect(result).not.toBeUndefined();
+				expect(result.username).not.toBeUndefined();
+				expect(result.username).toBe('testUser');
+				expect(result._id).not.toBeUndefined();
+				expect(result._rev).not.toBeUndefined();
+				done();
+			});
+		});
+	});
+	
+	describe('#removeEvent', function() {
+		async.it('should remove an existing event', function(done) {
+			expect(db).not.toBeNull();
+			expect(service.addEvent).not.toBeUndefined();
+			service.getAllEvents().then(function(result) {
+				expect(result.length).toEqual(4);
+
+				var existingId = result[0]._id;
+				var existingRev = parseInt(result[0]._rev.split('-')[0]);
+				expect(existingRev).toBeGreaterThan(0);
+				service.removeEvent(result[0]).then(function(result) {
+					expect(result.ok).not.toBeUndefined();
+					expect(result.ok).toBeTruthy();
+					expect(result.id).toBe(existingId);
+					expect(result.rev).not.toBeUndefined();
+					
+					var newRev = parseInt(result.rev.split('-')[0]);
+					expect(newRev).toBe(existingRev + 1);
+
+					done();
 				});
 			});
 		});
