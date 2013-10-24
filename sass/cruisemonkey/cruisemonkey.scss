@@ -274,11 +274,11 @@ a:hover {
 	border-bottom: $simpleBorder;
 	padding: 10px;
 
-	.favorite input[type=checkbox] {
+	input {
 		display: none;
 	}
 
-	.favorite input[type=checkbox] + label {
+	input + label {
 		-moz-user-select: none;
 		-webkit-user-select: none;
 		-ms-user-select:none;
@@ -291,35 +291,29 @@ a:hover {
 		height: 32px;
 	}
 
+	.favorite input[type=checkbox] + label {
+		background:url(../../icons/entypo/grey/SVG/star2.svg) no-repeat;
+	}
+
 	.favorite input[type=checkbox]:checked + label {
-		-moz-user-select: none;
-		-webkit-user-select: none;
-		-ms-user-select:none;
-		user-select:none;
 		background:url(../../icons/entypo/yellow/SVG/star2.svg) no-repeat;
-		background-position: center center;
-		background-size: 26px 26px;
-		width: 32px;
-		height: 32px;
 	}
 
-	.trash input[type=checkbox] {
-		display: none;
-	}
-
-	.trash input[type=checkbox] + label {
-		-moz-user-select: none;
-		-webkit-user-select: none;
-		-ms-user-select:none;
-		user-select:none;
-		display: block;
+	.trash input + label {
 		background:url(../../icons/entypo/yellow/SVG/trash.svg) no-repeat;
-		background-position: center center;
-		background-size:26px 26px;
-		width: 32px;
-		height: 32px;
 	}
 
+	.public input[type=checkbox] + label {
+		background:url(../../icons/entypo/grey/SVG/eye.svg) no-repeat;
+	}
+
+	.public input[type=checkbox]:checked + label {
+		background:url(../../icons/entypo/yellow/SVG/eye.svg) no-repeat;
+	}
+
+	.edit input + label {
+		background:url(../../icons/entypo/yellow/SVG/pencil.svg) no-repeat;
+	}
 }
 
 .list-entry:nth-child(odd) {

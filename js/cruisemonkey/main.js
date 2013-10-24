@@ -11,6 +11,7 @@
 		'cruisemonkey.controllers.Events',
 		'cruisemonkey.controllers.Header',
 		'cruisemonkey.controllers.Login',
+		'cruisemonkey.controllers.Logout',
 		'cruisemonkey.Database',
 		'cruisemonkey.Navigation',
 		'cruisemonkey.Events',
@@ -23,6 +24,10 @@
 			.when('/login', {
 				templateUrl: 'template/login.html',
 				controller: 'CMLoginCtrl'
+			})
+			.when('/logout', {
+				templateUrl: 'template/logout.html',
+				controller: 'CMLogoutCtrl'
 			})
 			.when('/events', {
 				redirectTo: '/events/official/'

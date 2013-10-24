@@ -49,6 +49,30 @@
 
 				return deferred.promise;
 			},
+			updateEvent: function(ev) {
+				var deferred = $q.defer();
+
+				if (!ev._rev || !ev._id) {
+					log.warn('Attempting to update event ' + ev.summary + ', but it is missing _rev or _id!');
+					deferred.reject('bad event');
+					return deferred.promise;
+				}
+
+				/* make a copy and strip out the user-specific isFavorite property */
+				var eventToSave = angular.copy(ev);
+				delete eventToSave['isFavorite'];
+
+				db.database.put(eventToSave, function(err, response) {
+					$rootScope.$apply(function() {
+						if (err) {
+							log.error(err);
+							deferred.reject(err);
+						} else {
+							deferred.resolve(response);
+						}
+					});
+				});
+			},
 			removeEvent: function(ev) {
 				log.info('removeEvent(' + ev._id + ')');
 				var deferred = $q.defer();

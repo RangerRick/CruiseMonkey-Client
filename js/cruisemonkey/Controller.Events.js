@@ -32,8 +32,6 @@
 				username = user.username;
 			}
 
-			log.info('username = ' + username);
-
 			if (username && username !== '') {
 				$rootScope.actions.push({
 					'name': 'Add Event',
@@ -91,8 +89,12 @@
 		$scope.trash = function(ev) {
 			EventService.removeEvent(ev);
 		};
+		
+		$scope.edit = function(ev) {
+			console.log('edit: ', ev);
+		};
 
-		$scope.onChange = function(eventId, checked) {
+		$scope.onFavoriteChanged = function(eventId, checked) {
 			$q.when(UserService.get()).then(function(user) {
 				var username = user.username;
 				$q.when($scope.events).then(function(events) {
@@ -103,6 +105,18 @@
 				} else {
 					EventService.removeFavorite(username, eventId);
 				}
+			});
+		};
+
+		$scope.onPublicChanged = function(event, pub) {
+			console.log('onPublicChanged: ', event, pub);
+			event.isPublic = pub;
+			$q.when(UserService.get()).then(function(user) {
+				var username = user.username;
+				$q.when($scope.events).then(function(events) {
+					events[event._id].isPublic = pub;
+					EventService.updateEvent(events[event._id]);
+				});
 			});
 		};
 

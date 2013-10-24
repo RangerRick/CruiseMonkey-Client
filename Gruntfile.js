@@ -22,6 +22,7 @@ module.exports = function(grunt) {
 						'index.html',
 						'template/deck-plans.html',
 						'template/event-list.html',
+						'template/logout.html',
 						'template/login.html'
 					],
 					exclude: ['Gruntfile.js', 'webserver.js', 'package.json', '.gitignore', '.git']
@@ -69,6 +70,7 @@ module.exports = function(grunt) {
 						'js/cruisemonkey/Controller.Events.js',
 						'js/cruisemonkey/Controller.Header.js',
 						'js/cruisemonkey/Controller.Login.js',
+						'js/cruisemonkey/Controller.Logout.js',
 						'js/cruisemonkey/Controller.Navigation.js',
 						'js/cruisemonkey/Database.js',
 						'js/cruisemonkey/Events.js',

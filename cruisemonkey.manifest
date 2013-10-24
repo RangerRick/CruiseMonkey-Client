@@ -140,6 +140,7 @@ js/cruisemonkey/Controller.DeckList.js
 js/cruisemonkey/Controller.Events.js
 js/cruisemonkey/Controller.Header.js
 js/cruisemonkey/Controller.Login.js
+js/cruisemonkey/Controller.Logout.js
 js/cruisemonkey/Controller.Navigation.js
 js/cruisemonkey/Database.js
 js/cruisemonkey/Events.js
@@ -165,6 +166,7 @@ index.html
 template/deck-plans.html
 template/event-list.html
 template/login.html
+template/logout.html
 template/accordion/accordion-group.html
 template/accordion/accordion.html
 template/alert/alert.html
@@ -193,4 +195,4 @@ template/typeahead/typeahead-popup.html
 NETWORK:
 *
 
-# hash: da462cf48956f2b3919f28594b00c993537a645c75b5461f63637ace38fc0077
+# hash: 8521de6fae696905b2b23360cd262acc9ea4deb7c19c3d03f45a01f7a0081408

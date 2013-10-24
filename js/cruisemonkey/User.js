@@ -4,9 +4,9 @@
 	angular.module('cruisemonkey.User', [])
 	.factory('UserService', function() {
 		var user = {
-			loggedIn: false,
-			username: '',
-			password: ''
+			'loggedIn': false,
+			'username': '',
+			'password': ''
 		};
 
 		return {
@@ -18,6 +18,14 @@
 			},
 			'save': function(newUser) {
 				user = angular.copy(newUser);
+			},
+			'reset': function() {
+				user = {
+					'loggedIn': false,
+					'username': '',
+					'password': ''
+				};
+				return user;
 			}
 		};
 	});
