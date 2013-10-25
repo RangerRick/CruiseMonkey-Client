@@ -93,8 +93,10 @@
 		db.database.changes({
 			continuous: true,
 			include_docs: true,
+			conflicts: true,
 			onChange: function(change) {
 				console.log('change = ', change);
+				/*
 				if (change.deleted) {
 					$rootScope.$apply(function() {
 						$rootScope.$broadcast('entryDeleted', change.id);
@@ -109,6 +111,7 @@
 						});
 					});
 				}
+				*/
 			}
 		});
 	}]);
