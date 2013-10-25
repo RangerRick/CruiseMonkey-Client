@@ -119,6 +119,7 @@ js/cruisemonkey.min.js
 js/3rdparty/custom.modernizr.js
 js/3rdparty/jasmine.async.js
 js/3rdparty/jquery.js
+js/3rdparty/modernizr-latest.js
 js/3rdparty/pouchdb-nightly.js
 js/3rdparty/pouchdb-nightly.min.js
 js/3rdparty/require.js
@@ -130,12 +131,12 @@ js/angular-3rdparty/angular-hammer.min.js
 js/angular-3rdparty/angular-interval.js
 js/angular-3rdparty/angular-mobile-frame.js
 js/angular-3rdparty/angular-mobile-frame.min.js
-js/angular-3rdparty/angularls.js
 js/angular-3rdparty/ui-bootstrap-0.6.0.js
 js/angular-3rdparty/ui-bootstrap-0.6.0.min.js
 js/angular-3rdparty/ui-bootstrap-tpls-0.6.0.js
 js/angular-3rdparty/ui-bootstrap-tpls-0.6.0.min.js
 js/cruisemonkey/Config.js
+js/cruisemonkey/Controller.About.js
 js/cruisemonkey/Controller.DeckList.js
 js/cruisemonkey/Controller.Events.js
 js/cruisemonkey/Controller.Header.js
@@ -163,6 +164,7 @@ bower_components/angular-route/angular-route.js
 bower_components/angular-route/angular-route.min.js
 bower_components/angular-route/angular-route.min.js.map
 index.html
+template/about.html
 template/deck-plans.html
 template/event-list.html
 template/login.html
@@ -195,4 +197,4 @@ template/typeahead/typeahead-popup.html
 NETWORK:
 *
 
-# hash: 79795cdb0874bb50299c2bc810e99ae28086cd9b46bbad41f27121a845c67c89
+# hash: d5cd1ca221f28bcccff3b7ee9076fdd7cadbfd62f04fbc3af4385f89b1dbf7fc

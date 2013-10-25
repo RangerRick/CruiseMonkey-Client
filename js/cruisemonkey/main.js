@@ -7,6 +7,7 @@
 		'cruisemonkey.filters',
 		'cruisemonkey.services',
 		'cruisemonkey.directives',
+		'cruisemonkey.controllers.About',
 		'cruisemonkey.controllers.DeckList',
 		'cruisemonkey.controllers.Events',
 		'cruisemonkey.controllers.Header',
@@ -42,6 +43,10 @@
 			.when('/deck-plans/:deck', {
 				templateUrl: 'template/deck-plans.html',
 				controller: 'CMDeckListCtrl'
+			})
+			.when('/about', {
+				templateUrl: 'template/about.html',
+				controller: 'CMAboutCtrl'
 			})
 			.otherwise({
 				redirectTo: '/events/official/'

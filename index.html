@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en" manifest="cruisemonkey.manifest"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en" manifest="cruisemonkey.manifest"> <![endif]-->
@@ -21,7 +21,7 @@
 <link rel="stylesheet" href="css/cruisemonkey/cruisemonkey.css" />
 
 <!-- <script src="http://debug.phonegap.com/target/target-script-min.js#RangerRick182347"></script> -->
-<script src="js/3rdparty/custom.modernizr.js"></script>
+<script src="js/3rdparty/modernizr-latest.js"></script>
 <!-- IE Fix for HTML5 Tags -->
 <!--[if lt IE 9]>
 		<script src="bower_components/html5shiv/dist/html5shiv.js"></script>
@@ -91,8 +91,10 @@ window.setTimeout(function() {
 				<li><a href="#/events/unofficial/">Unofficial Events</a></li>
 				<li><a href="#/events/my/"        >My Events</a></li>
 				<li><a href="#/deck-plans/"       >Deck Plans</a></li>
+				<li><a href="#/about/"            >About</a></li>
+
 				<li ng-show="!user.loggedIn"><a href="#/login/">Log In</a></li>
-				<li ng-show="user.loggedIn"><a href="#/logout/">Log Out</a></li>
+				<li ng-show="user.loggedIn" ><a href="#/logout/">Log Out</a></li>
 			</ul>
 		</mobile-nav>
 		<mobile-content ng-view>
@@ -100,7 +102,7 @@ window.setTimeout(function() {
 	</mobile-frame>
 
 	<!--
-	<script src="bower_components/jquery/jquery.min.js"></script>
+	!!!! <script src="bower_components/jquery/jquery.min.js"></script>
 	<script src="js/3rdparty/pouchdb-nightly.min.js"></script>
 	<script src="bower_components/hammerjs/dist/hammer.min.js"></script>
 	<script src="bower_components/momentjs/min/moment.min.js"></script>
@@ -109,7 +111,7 @@ window.setTimeout(function() {
 	<script src="bower_components/angular-loader/angular-loader.min.js"></script>
 	<script src="bower_components/angular-route/angular-route.min.js"></script>
 	<script src="bower_components/angular-resource/angular-resource.min.js"></script>
-	<script src="bower_components/angular-datepicker/dist/index.min.js"></script>
+	!!!! <script src="bower_components/angular-datepicker/dist/index.min.js"></script>
 	<script src="js/angular-3rdparty/angular-hammer.min.js"></script>
 	-->
 
@@ -122,13 +124,13 @@ window.setTimeout(function() {
 	<script src="bower_components/angular-loader/angular-loader.js"></script>
 	<script src="bower_components/angular-route/angular-route.js"></script>
 	<script src="bower_components/angular-resource/angular-resource.js"></script>
-	<script src="bower_components/angular-datepicker/dist/index.js"></script>
+	<!-- <script src="bower_components/angular-datepicker/dist/index.js"></script> -->
 	<script src="js/angular-3rdparty/angular-hammer.js"></script>
 
 	<script src="bower_components/fastclick/lib/fastclick.js"></script>
 	<script src="bower_components/angular-phonegap-ready/ready.js"></script>
+	<script src="bower_components/angular-localstorage/angular-local-storage.js"></script>
 	<script src="js/angular-3rdparty/angular-mobile-frame.js"></script>
-	<script src="js/angular-3rdparty/angularls.js"></script>
 	<script src="js/angular-3rdparty/angular-interval.js"></script>
 	<script src="js/angular-3rdparty/ui-bootstrap-0.6.0.js"></script>
 

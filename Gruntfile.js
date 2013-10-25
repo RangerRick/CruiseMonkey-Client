@@ -20,6 +20,7 @@ module.exports = function(grunt) {
 					hash: true,
 					master: [
 						'index.html',
+						'template/about.html',
 						'template/deck-plans.html',
 						'template/event-list.html',
 						'template/logout.html',
@@ -66,6 +67,7 @@ module.exports = function(grunt) {
 					'js/cruisemonkey.min.js': [
 						'js/cruisemonkey/string.js',
 						'js/cruisemonkey/Config.js',
+						'js/cruisemonkey/Controller.About.js',
 						'js/cruisemonkey/Controller.DeckList.js',
 						'js/cruisemonkey/Controller.Events.js',
 						'js/cruisemonkey/Controller.Header.js',
@@ -105,6 +107,7 @@ module.exports = function(grunt) {
 					'bower_components/angular-resource/angular-resource.js',
 					'bower_components/angular-mocks/angular-mocks.js',
 					'bower_components/angular-phonegap-ready/ready.js',
+					'bower_components/angular-localstorage/angular-local-storage.js',
 					'js/angular-3rdparty/angular-interval.js',
 					'js/angular-3rdparty/angular-hammer.js',
 					'js/cruisemonkey/*.js'

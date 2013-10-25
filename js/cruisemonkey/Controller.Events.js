@@ -1,22 +1,35 @@
 (function() {
 	'use strict';
 
-	angular.module('cruisemonkey.controllers.Events', ['ngRoute', 'cruisemonkey.User', 'cruisemonkey.Events', 'cruisemonkey.Logging', 'ui.bootstrap.modal', 'datePicker'])
+	angular.module('cruisemonkey.controllers.Events', ['ngRoute', 'cruisemonkey.User', 'cruisemonkey.Events', 'cruisemonkey.Logging', 'ui.bootstrap.modal'])
 	.controller('CMEditEventCtrl', ['$q', '$scope', '$rootScope', '$modal', 'UserService', 'LoggingService', function($q, $scope, $rootScope, $modal, UserService, log) {
 		log.info('Initializing CMEditEventCtrl');
 
+		var format="YYYY-MM-DD HH:mm";
+		if (Modernizr.inputtypes["datetime-local"]) {
+			format="YYYY-MM-DDTHH:mm";
+		}
+
 		if ($rootScope.editEvent) {
-			$scope.event = $rootScope.editEvent;
+			$scope.event = angular.copy($rootScope.editEvent);
 			delete $rootScope.editEvent;
+
+			$scope.event.start = moment($scope.event.start).format(format);
+			$scope.event.end = moment($scope.event.end).format(format);
+
+			log.info('Found existing event to edit.');
+			console.log($scope.event);
 		} else {
 			$q.when(UserService.get()).then(function(user) {
 				var start = new Date();
 				$scope.event = {
-					'start':    start,
-					'end':      new Date(start.getTime() + 60 * 60 * 1000),
+					'start':    moment(start).format(format),
+					'end':      moment(new Date(start.getTime() + 60 * 60 * 1000)).format(format),
 					'type':     'event',
 					'username': user.username
 				};
+				log.info('Created fresh event.');
+				console.log($scope.event);
 			});
 		}
 	}])
@@ -113,8 +126,8 @@
 			$scope.safeApply(function() {
 				console.log('edit: ', ev);
 
-				ev.start = moment(ev.start).toDate();
-				ev.end   = moment(ev.end).toDate();
+				ev.start = moment(ev.start).format("YYYY-MM-DD HH:mm");
+				ev.end   = moment(ev.end).format("YYYY-MM-DD HH:mm");
 				$rootScope.editEvent = ev;
 
 				var modalInstance = $modal.open({
@@ -122,7 +135,8 @@
 					controller:'CMEditEventCtrl'
 				});
 				modalInstance.result.then(function(result) {
-					log.info("Add finished!");
+					log.info("Save finished!");
+					console.log(result);
 					$q.all([EventService.addEvent(result), $scope.events]).then(function(results) {
 						var added = results[0];
 						var events = results[1];
@@ -179,7 +193,8 @@
 							controller:'CMEditEventCtrl'
 						});
 						modalInstance.result.then(function(result) {
-							log.info("Add finished!");
+							log.info("Save finished!");
+							console.log(result);
 							$q.all([EventService.addEvent(result), $scope.events]).then(function(results) {
 								var added = results[0];
 								var events = results[1];
