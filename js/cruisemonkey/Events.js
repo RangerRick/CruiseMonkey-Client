@@ -3,6 +3,13 @@
 
 	angular.module('cruisemonkey.Events', ['cruisemonkey.Database', 'cruisemonkey.User', 'cruisemonkey.Logging'])
 	.factory('EventService', ['$q', '$rootScope', 'Database', 'UserService', 'LoggingService', function($q, $rootScope, db, UserService, log) {
+		var stringifyDate = function(date) {
+			if (date === null || date === undefined) {
+				return undefined;
+			}
+			return moment(date).format("YYYY-MM-DD HH:mm");
+		};
+
 		var doQuery = function(map, options) {
 			var deferred = $q.defer();
 			db.database.query({map: map}, options, function(err, res) {
@@ -24,24 +31,28 @@
 		
 		return {
 			addEvent: function(ev) {
-				ev.type = 'event';
+				var eventToAdd = angular.copy(ev);
+
+				eventToAdd.type = 'event';
+				eventToAdd.start = stringifyDate(eventToAdd.start);
+				eventToAdd.end = stringifyDate(eventToAdd.end);
 
 				var deferred = $q.defer();
 
-				if (!ev.username || ev.username === '') {
+				if (!eventToAdd.username || eventToAdd.username === '') {
 					log.info('addEvent(): no username in the event!');
 					deferred.reject('no username specified');
 				} else {
-					log.info('addEvent(): posting event "' + ev.summary + '" for user "' + ev.username + '"');
-					db.database.post(ev, function(err, response) {
+					log.info('addEvent(): posting event "' + eventToAdd.summary + '" for user "' + eventToAdd.username + '"');
+					db.database.post(eventToAdd, function(err, response) {
 						$rootScope.$apply(function() {
 							if (err) {
 								log.error(err);
 								deferred.reject(err);
 							} else {
-								ev._id = response.id;
-								ev._rev = response.rev;
-								deferred.resolve(ev);
+								eventToAdd._id = response.id;
+								eventToAdd._rev = response.rev;
+								deferred.resolve(eventToAdd);
 							}
 						});
 					});
@@ -60,7 +71,9 @@
 
 				/* make a copy and strip out the user-specific isFavorite property */
 				var eventToSave = angular.copy(ev);
-				delete eventToSave['isFavorite'];
+				delete eventToSave.isFavorite;
+				eventToSave.start = stringifyDate(eventToSave.start);
+				eventToSave.end = stringifyDate(eventToSave.end);
 
 				db.database.put(eventToSave, function(err, response) {
 					$rootScope.$apply(function() {
@@ -68,6 +81,7 @@
 							log.error(err);
 							deferred.reject(err);
 						} else {
+							eventToSave._rev = response.rev;
 							deferred.resolve(response);
 						}
 					});
@@ -225,7 +239,6 @@
 							log.error(err);
 							deferred.reject(err);
 						} else {
-							console.log('isFavorite.res=', res);
 							deferred.resolve(res.total_rows > 0);
 						}
 					});
@@ -295,7 +308,7 @@
 									});
 								});
 							} else {
-								console.log('no results');
+								console.log('no favorites found');
 								deferred.resolve(null);
 							}
 						}

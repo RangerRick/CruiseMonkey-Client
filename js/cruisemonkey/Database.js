@@ -92,8 +92,14 @@
 	.factory('listener', ['$rootScope', 'Database', function($rootScope, db) {
 		db.database.changes({
 			continuous: true,
+			include_docs: true,
 			onChange: function(change) {
-				if (!change.deleted) {
+				console.log('change = ', change);
+				if (change.deleted) {
+					$rootScope.$apply(function() {
+						$rootScope.$broadcast('entryDeleted', change.id);
+					});
+				} else {
 					$rootScope.$apply(function() {
 						db.database.get(change.id, function(err, doc) {
 							$rootScope.$apply(function() {
@@ -101,10 +107,6 @@
 								$rootScope.$broadcast('entryChange', doc);
 							});
 						});
-					});
-				} else {
-					$rootScope.$apply(function() {
-						$rootScope.$broadcast('entryDeleted', change.id);
 					});
 				}
 			}

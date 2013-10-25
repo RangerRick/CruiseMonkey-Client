@@ -97,6 +97,7 @@ module.exports = function(grunt) {
 					'js/3rdparty/custom.modernizr.js',
 					'bower_components/log4javascript/log4javascript.js',
 					'bower_components/hammerjs/dist/hammer.js',
+					'bower_components/momentjs/moment.js',
 					'js/3rdparty/pouchdb-nightly.js',
 					'bower_components/angular/angular.js',
 					'bower_components/angular-loader/angular-loader.js',
@@ -105,7 +106,7 @@ module.exports = function(grunt) {
 					'bower_components/angular-mocks/angular-mocks.js',
 					'bower_components/angular-phonegap-ready/ready.js',
 					'js/angular-3rdparty/angular-interval.js',
-					'bower_components/angular-hammer/angular-hammer.js',
+					'js/angular-3rdparty/angular-hammer.js',
 					'js/cruisemonkey/*.js'
 				],
 				options: {

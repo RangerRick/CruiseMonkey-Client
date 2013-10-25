@@ -22,6 +22,17 @@
 		$rootScope.title = $routeParams.eventType.capitalize() + ' Events';
 		$rootScope.actions = [];
 
+		$scope.safeApply = function(fn) {
+			var phase = this.$root.$$phase;
+			if(phase === '$apply' || phase === '$digest') {
+				if(fn && (typeof(fn) === 'function')) {
+					fn();
+				}
+			} else {
+				this.$apply(fn);
+			}
+		};
+
 		if (!$scope.events) {
 			$scope.events = {};
 		}
@@ -44,7 +55,11 @@
 						});
 						modalInstance.result.then(function(result) {
 							log.info("Add finished!");
-							EventService.addEvent(result);
+							$q.all([EventService.addEvent(result), $scope.events]).then(function(results) {
+								var added = results[0];
+								var events = results[1];
+								events[added._id] = added;
+							});
 						}, function() {
 							log.warn("Add canceled!");
 						});
@@ -86,12 +101,28 @@
 
 		});
 
+		$scope.fuzzy = function(date) {
+			return moment(date).fromNow();
+		};
+		$scope.justTime = function(date) {
+			return moment(date).format('HH:mm');
+		};
+
 		$scope.trash = function(ev) {
-			EventService.removeEvent(ev);
+			$scope.safeApply(function() {
+				$q.all([EventService.removeEvent(ev), $scope.events]).then(function(response) {
+					var removed = response[0];
+					var events  = response[1];
+					console.log('removed = ', removed);
+					delete events[removed.id];
+				});
+			});
 		};
 		
 		$scope.edit = function(ev) {
-			console.log('edit: ', ev);
+			$scope.safeApply(function() {
+				console.log('edit: ', ev);
+			});
 		};
 
 		$scope.onFavoriteChanged = function(eventId, checked) {
@@ -120,43 +151,13 @@
 			});
 		};
 
-		$scope.safeApply = function(fn) {
-			var phase = this.$root.$$phase;
-			if(phase === '$apply' || phase === '$digest') {
-				if(fn && (typeof(fn) === 'function')) {
-					fn();
-				}
-			} else {
-				this.$apply(fn);
+		$scope.$on('entryChange', function(ev, doc) {
+			if (doc && doc.type === 'event') {
+				console.log('changed document: ', doc);
 			}
-		};
-
-		/*
-		$scope.$on('newEvent', function(jsEvent, event) {
-			console.log('addEvent: ' + event._id);
-			$scope.safeApply(function() {
-				if (event.eventType === $scope.eventType) {
-					for (var i = 0; i < $scope.events.length; i++) {
-						if ($scope.events[i]._id === event._id) {
-							$scope.events[i] = event;
-							return;
-						}
-					}
-					$scope.events.push(event);
-				}
-			});
 		});
-		$scope.$on('delEvent', function(jsEvent, id) {
-			console.log('delEvent: ' + id);
-			$scope.safeApply(function() {
-				for (var i = 0; i < $scope.events.length; i++) {
-					if ($scope.events[i]._id === id) {
-						$scope.events.splice(i,1);
-						break;
-					}
-				}
-			});
+		$scope.$on('entryDeleted', function(ev, id) {
+			console.log('deleted document: ' + id);
 		});
-		*/
 	}]);
 }());
