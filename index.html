@@ -11,13 +11,44 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, height=device-height, user-scalable=0, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
 <style>
-	[ng-cloak] {
+	 [ng\:cloak], [ng-cloak], .ng-cloak {
+		display: none !important;
+	}
+	.loading {
 		display: none;
+	}
+	.loading.ng-cloak {
+		display: inline-block !important;
+		z-index: 10000;
+		width: 100%;
+		height: 100%;
+		min-width: 100%;
+		min-height: 100%;
+	}
+	.loading .container {
+		position: relative;
+		width: 100%;
+		height: 100%;
+	}
+	.loading .centered {
+		width: 300px;
+		height: 300px;
+		overflow: auto;
+		margin: auto;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		text-align: center;
+	}
+	.loading img {
+		display: inline-block;
 	}
 </style>
 <link rel="stylesheet" href="css/3rdparty/normalize.css" />
 <link rel="stylesheet" href="css/angular-mobile-frame.min.css" />
-<link rel="stylesheet" href="bower_components/angular-datepicker/dist/index.min.css" />
+<!-- <link rel="stylesheet" href="bower_components/angular-datepicker/dist/index.min.css" /> -->
 <link rel="stylesheet" href="css/cruisemonkey/cruisemonkey.css" />
 
 <!-- <script src="http://debug.phonegap.com/target/target-script-min.js#RangerRick182347"></script> -->
@@ -30,15 +61,42 @@
 <script>
 if (window.applicationCache && window.applicationCache.addEventListener) {
 	window.addEventListener('load', function(e) {
-		window.applicationCache.addEventListener('updateready', function(e) {
-			if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
+		var loading = document.getElementById('loading');
+
+		loading.innerHTML = 'Checking for updates...';
+
+		var notifyUpdate = function(text) {
+			loading.innerHTML = text;
+			console.log(text);
+		};
+
+		var handleLoadingEvent = function(e) {
+			if (window.applicationCache.status == window.applicationCache.CHECKING) {
+				// we're starting checking
+				notifyUpdate('Checking for updates...');
+			} else if (window.applicationCache.status == window.applicationCache.DOWNLOADING) {
+				// an update has started downloading
+				notifyUpdate('An update to CruiseMonkey has been found.<br/>Please wait while we update.');
+			} else if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
 				// Browser downloaded a new app cache.
 				// Swap it in and reload the page to get the new hotness.
-				console.log('a new version is available; reloading');
-				window.applicationCache.swapCache();
-				window.location.reload();
+				notifyUpdate('The new version of CruiseMonkey is ready.  Reloading.');
+				setTimeout(function() {
+					window.applicationCache.swapCache();
+					window.location.reload();
+				}, 500);
+			} else if (window.applicationCache.status == window.applicationCache.OBSOLETE) {
+				notifyUpdate('Something is wrong with the CruiseMonkey update.  Skipping.');
+			} else {
+				notifyUpdate('No update was required.<br/>Finishing CruiseMonkey startup.');
 			}
-		}, false);
+		};
+
+		window.applicationCache.addEventListener('checking', handleLoadingEvent, false);
+		window.applicationCache.addEventListener('downloading', handleLoadingEvent, false);
+		window.applicationCache.addEventListener('updateready', handleLoadingEvent, false);
+		window.applicationCache.addEventListener('noupdate', handleLoadingEvent, false);
+		window.applicationCache.addEventListener('obsolete', handleLoadingEvent, false);
 	}, false);
 }
 
@@ -76,8 +134,14 @@ window.setTimeout(function() {
   </script>
   <title ng-bind="'CruiseMonkey - ' + $root.title">CruiseMonkey</title>
 </head>
-<body class="antialiased off-canvas hide-extras" ng-cloak>
-	<mobile-frame>
+<body class="antialiased off-canvas hide-extras">
+	<div class="loading container ng-cloak">
+		<div class="centered">
+			<img src="bower_components/hammerjs/examples/assets/img/spinner.png" /><br /><div id="loading">Loading...</div>
+		</div>
+	</div>
+
+	<mobile-frame ng-cloak>
 		<mobile-header ng-controller="CMHeaderCtrl">
 			<span class="title"><strong>{{title}}</strong></span>
 			<span class="actions" ng-repeat="action in actions">
