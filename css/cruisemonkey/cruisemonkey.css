@@ -35,31 +35,14 @@ a:link, a:visited, a:hover {
   text-decoration: none; }
 
 /*
- * Animation
- */
-.animate-events.ng-enter, .animate-events.ng-leave, .animate-events.ng-move {
-  -webkit-transition: 1s linear height;
-  -moz-transition: 1s linear height;
-  -o-transition: 1s linear height;
-  transition: 1s linear height;
-  transform: scale(1, 0);
-  -ms-transform: scale(1, 0);
-  -webkit-transform: scale(1, 0); }
-
-.animate-events.ng-enter {
-  transform: scale(1, 0);
-  -ms-transform: scale(1, 0);
-  -webkit-transform: scale(1, 0); }
-
-.animate-events.ng-enter.ng-enter-active {
-  transform: scale(1, 1);
-  -ms-transform: scale(1, 1);
-  -webkit-transform: scale(1, 1); }
-
-/*
  * Mobile Navigation Stuff
  */
 .mobile-header {
+  -webkit-transform: translate(0px, 0px);
+  -moz-transform: translate(0px, 0px);
+  -o-transform: translate(0px, 0px);
+  -ms-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
   color: white;
   background-color: black;
   font-family: Nexa, Hero, sans-serif;
@@ -98,6 +81,11 @@ a:link, a:visited, a:hover {
   background-color: #f8f8f8; }
 
 .mobile-nav {
+  -webkit-transform: translate(0px, 0px);
+  -moz-transform: translate(0px, 0px);
+  -o-transform: translate(0px, 0px);
+  -ms-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
   color: black;
   background-color: #cccccc;
   box-shadow: inset -0.0625em 0 0.625em rgba(0, 0, 0, 0.6); }
