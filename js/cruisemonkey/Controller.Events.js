@@ -89,6 +89,8 @@
 			if (refreshing) { return; }
 			refreshing = true;
 
+			log.info('Refreshing event list.');
+
 			$q.when(UserService.get()).then(function(user) {
 				var username = '';
 				if (user.username) {
@@ -106,7 +108,7 @@
 					log.warn('unknown event type: ' + $routeParams.eventType);
 				}
 
-				$scope.events = $q.all([func(username), EventService.getMyFavorites(username)]).then(function(results) {
+				$q.all([func(username), EventService.getMyFavorites(username)]).then(function(results) {
 					var i;
 
 					var ret = {};
@@ -127,7 +129,15 @@
 
 					refreshing = false;
 					initializing = false;
-					return ret;
+
+					angular.forEach(ret, function(value, key) {
+						$scope.events[key] = value;
+					});
+					angular.forEach($scope.events, function(value, key) {
+						if (!ret[key]) {
+							delete $scope.events[key];
+						}
+					});
 				});
 
 			});
@@ -203,12 +213,12 @@
 			});
 		};
 
-		$scope.$on('documentUpdated', function(ev, doc) {
+		$scope.$on('documentUpdated', function(ev, change) {
 			if (!initializing) {
 				$scope.refresh();
 			}
 		});
-		$scope.$on('documentDeleted', function(ev, doc) {
+		$scope.$on('documentDeleted', function(ev, change) {
 			if (!initializing) {
 				$scope.refresh();
 			}
