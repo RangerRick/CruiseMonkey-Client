@@ -20,10 +20,14 @@
 					var host = 'http://' + databaseHost + ':5984/cruisemonkey';
 					log.info('Enabling replication with ' + host);
 
+					var onChange = function(change) {
+						console.log('change: ', change);
+					};
+
 					timeout = $interval(function() {
 						log.info('Attempting to replicate with ' + host);
 						db.replicate.to(host, {});
-						db.replicate.from(host, {});
+						db.replicate.from(host, { 'onChange': onChange });
 					}, 10000);
 					return true;
 				}
@@ -88,31 +92,5 @@
 			'startReplication': startReplication,
 			'stopReplication': stopReplication
 		};
-	}])
-	.factory('listener', ['$rootScope', 'Database', function($rootScope, db) {
-		db.database.changes({
-			continuous: true,
-			include_docs: true,
-			conflicts: true,
-			onChange: function(change) {
-				console.log('change = ', change);
-				/*
-				if (change.deleted) {
-					$rootScope.$apply(function() {
-						$rootScope.$broadcast('entryDeleted', change.id);
-					});
-				} else {
-					$rootScope.$apply(function() {
-						db.database.get(change.id, function(err, doc) {
-							$rootScope.$apply(function() {
-								if (err) log.error(err);
-								$rootScope.$broadcast('entryChange', doc);
-							});
-						});
-					});
-				}
-				*/
-			}
-		});
 	}]);
 }());
