@@ -2,18 +2,23 @@
 	'use strict';
 
 	angular.module('cruisemonkey.controllers.Events', ['ngRoute', 'cruisemonkey.User', 'cruisemonkey.Events', 'cruisemonkey.Logging', 'ui.bootstrap.modal', 'datePicker'])
-	.controller('CMEditEventCtrl', ['$q', '$scope', '$modal', 'UserService', 'LoggingService', function($q, $scope, $modal, UserService, log) {
+	.controller('CMEditEventCtrl', ['$q', '$scope', '$rootScope', '$modal', 'UserService', 'LoggingService', function($q, $scope, $rootScope, $modal, UserService, log) {
 		log.info('Initializing CMEditEventCtrl');
 
-		$q.when(UserService.get()).then(function(user) {
-			var start = new Date();
-			$scope.event = {
-				'start':    start,
-				'end':      new Date(start.getTime() + 60 * 60 * 1000),
-				'type':     'event',
-				'username': user.username
-			};
-		});
+		if ($rootScope.editEvent) {
+			$scope.event = $rootScope.editEvent;
+			delete $rootScope.editEvent;
+		} else {
+			$q.when(UserService.get()).then(function(user) {
+				var start = new Date();
+				$scope.event = {
+					'start':    start,
+					'end':      new Date(start.getTime() + 60 * 60 * 1000),
+					'type':     'event',
+					'username': user.username
+				};
+			});
+		}
 	}])
 	.controller('CMEventCtrl', ['$scope', '$rootScope', '$routeParams', '$location', '$q', '$modal', '$templateCache', 'UserService', 'EventService', 'LoggingService', function($scope, $rootScope, $routeParams, $location, $q, $modal, $templateCache, UserService, EventService, log) {
 		log.info('Initializing CMEventCtrl');
@@ -107,6 +112,25 @@
 		$scope.edit = function(ev) {
 			$scope.safeApply(function() {
 				console.log('edit: ', ev);
+
+				ev.start = moment(ev.start).toDate();
+				ev.end   = moment(ev.end).toDate();
+				$rootScope.editEvent = ev;
+
+				var modalInstance = $modal.open({
+					templateUrl:'edit-event.html',
+					controller:'CMEditEventCtrl'
+				});
+				modalInstance.result.then(function(result) {
+					log.info("Add finished!");
+					$q.all([EventService.addEvent(result), $scope.events]).then(function(results) {
+						var added = results[0];
+						var events = results[1];
+						events[added._id] = added;
+					});
+				}, function() {
+					log.warn("Add canceled!");
+				});
 			});
 		};
 

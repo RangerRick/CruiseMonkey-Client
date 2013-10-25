@@ -29,6 +29,11 @@
 		};
 
 		$scope.update = function(user) {
+			if (user.username === 'official') {
+				console.log('Attempt to log in as "official", skipping.');
+				$location.path('/events/official');
+				return;
+			}
 			user.loggedIn = true;
 			log.info('saving user');
 			console.log(user);

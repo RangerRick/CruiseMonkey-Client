@@ -335,6 +335,7 @@ a:hover {
 .summary {
 	font-size: 15pt;
 	font-weight: bold;
+	padding: 2px;
 	margin-right: 32px;
 	min-height: 32px;
 	vertical-align: middle;
@@ -347,10 +348,12 @@ a:hover {
 .createdBy,.time,.location {
 	font-weight: bold;
 	font-size: 12pt;
+	padding: 2px;
 }
 
 .description {
 	margin-top: 12px;
+	padding: 2px;
 	font-size: 12pt;
 }
 
