@@ -10,6 +10,18 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, height=device-height, user-scalable=0, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<link rel="apple-touch-icon" href="icon.png" />
+<link rel="apple-touch-icon" sizes="29x29" href="Icon-Small.png" />
+<link rel="apple-touch-icon" sizes="57x57" href="Icon-57.png" />
+<link rel="apple-touch-icon" sizes="50x50" href="Icon-Small-50.png" />
+<link rel="apple-touch-icon" sizes="58x58" href="Icon-Small@2x.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="Icon-72.png" />
+<link rel="apple-touch-icon" sizes="100x100" href="Icon-Small-50@2x.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="Icon@2x.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="Icon-72@2x.png" />
+<link rel="apple-touch-startup-image" href="cruise-monkey-1536x2048.png" />
 <style>
 	 [ng\:cloak], [ng-cloak], .ng-cloak {
 		display: none !important;
@@ -88,7 +100,7 @@ if (window.applicationCache && window.applicationCache.addEventListener) {
 			} else if (window.applicationCache.status == window.applicationCache.OBSOLETE) {
 				notifyUpdate('Something is wrong with the CruiseMonkey update.  Skipping.');
 			} else {
-				notifyUpdate('No update was required.<br/>Finishing CruiseMonkey startup.');
+				notifyUpdate('CruiseMonkey Is Starting.');
 			}
 		};
 
@@ -118,7 +130,7 @@ timeoutID = window.setTimeout(function() {
 	var e = document.createEvent('Events');
 	e.initEvent('deviceready', true, true);
 	document.dispatchEvent(e);
-}, 500);
+}, 5000);
 
 /*
 window.setTimeout(function() {
@@ -137,7 +149,7 @@ window.setTimeout(function() {
 <body class="antialiased off-canvas hide-extras">
 	<div class="loading container ng-cloak">
 		<div class="centered">
-			<img src="bower_components/hammerjs/examples/assets/img/spinner.png" /><br /><div id="loading">Loading...</div>
+			<img src="icons/spinner.gif" /><br /><div id="loading">Loading...</div>
 		</div>
 	</div>
 

@@ -418,6 +418,26 @@ a:hover {
 }
 
 /*
+ * Pop-Ups
+ */
+.c-container {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.c-centered {
+	width: 280px;
+	height: 200px;
+	overflow: auto;
+	margin: auto;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+/*
  * Event Pop-Up
  */
 .modal {
@@ -433,7 +453,7 @@ a:hover {
 
 .add-event-form {
 	table {
-		width: 360px;
+		width: 320px;
 		overflow: auto;
 		margin-left: auto;
 		margin-right: auto;
