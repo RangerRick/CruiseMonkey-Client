@@ -2,6 +2,32 @@
 	'use strict';
 
 	angular.module('cruisemonkey.controllers.Events', ['ngRoute', 'cruisemonkey.User', 'cruisemonkey.Events', 'cruisemonkey.Logging', 'ui.bootstrap.modal'])
+	.filter('orderObjectBy', function(){
+	 return function(input, attribute) {
+	    if (!angular.isObject(input)) return input;
+
+	    var array = [];
+	    for(var objectKey in input) {
+	        array.push(input[objectKey]);
+	    }
+
+		if (attribute === 'start' || attribute === 'end') {
+			array.sort(function(a, b) {
+				var ad = moment(a[attribute]).valueOf();
+				var bd = moment(b[attribute]).valueOf();
+				return ad > bd ? 1 : ad < bd ? -1 : 0;
+			});
+		} else {
+		    array.sort(function(a, b){
+				var alc = a[attribute].toLowerCase(),
+					blc = b[attribute].toLowerCase();
+				return alc > blc ? 1 : alc < blc ? -1 : 0;
+		    });
+		}
+
+	    return array;
+	 }
+	})
 	.controller('CMEditEventCtrl', ['$q', '$scope', '$rootScope', '$modal', 'UserService', 'LoggingService', function($q, $scope, $rootScope, $modal, UserService, log) {
 		log.info('Initializing CMEditEventCtrl');
 
@@ -26,7 +52,8 @@
 					'start':    moment(start).format(format),
 					'end':      moment(new Date(start.getTime() + 60 * 60 * 1000)).format(format),
 					'type':     'event',
-					'username': user.username
+					'username': user.username,
+					'isPublic': true
 				};
 				log.info('Created fresh event.');
 				console.log($scope.event);
