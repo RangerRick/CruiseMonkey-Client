@@ -116,15 +116,15 @@
 					if (doc.type === 'event') {
 						emit(doc.username, doc);
 					}
-				}, {reduce: false, key: 'official'});
+				}, {reduce: true, key: 'official'});
 			},
 			getPublicEvents: function() {
 				log.info('getPublicEvents()');
 				return doQuery(function(doc) {
-					if (doc.type === 'event' && doc.isPublic) {
+					if (doc.type === 'event' && doc.isPublic && doc.username !== 'official') {
 						emit(doc.username, doc);
 					}
-				}, {reduce: false});
+				}, {reduce: true});
 			},
 			getUserEvents: function(username) {
 				log.info('getUserEvents(' + username + ')');
