@@ -2,12 +2,25 @@
 	'use strict';
 
 	angular.module('cruisemonkey.Database', ['cruisemonkey.Logging', 'cruisemonkey.Config', 'ngInterval'])
-	.factory('Database', ['$location', '$interval', 'LoggingService', 'config.database.host', 'config.database.name', 'config.database.replicate', function($location, $interval, log, databaseHost, databaseName, replicate) {
+	.factory('Database', ['$location', '$interval', '$rootScope', 'LoggingService', 'config.database.host', 'config.database.name', 'config.database.replicate', function($location, $interval, $rootScope, log, databaseHost, databaseName, replicate) {
 		log.info('Initializing CruiseMonkey database: ' + databaseName);
 
 		var db = new Pouch(databaseName);
 		var timeout = null;
 		
+		db.changes({
+			onChange: function(change) {
+				console.log('change: ', change);
+				if (change.deleted) {
+					$rootScope.$broadcast('documentDeleted', change);
+				} else {
+					$rootScope.$broadcast('documentUpdated', change.doc);
+				}
+			},
+			continuous: true,
+			include_docs: true
+		});
+
 		var startReplication = function() {
 			if (replicate) {
 				if (timeout !== null) {
@@ -20,14 +33,10 @@
 					var host = 'http://' + databaseHost + ':5984/cruisemonkey';
 					log.info('Enabling replication with ' + host);
 
-					var onChange = function(change) {
-						console.log('change: ', change);
-					};
-
 					timeout = $interval(function() {
 						log.info('Attempting to replicate with ' + host);
 						db.replicate.to(host, {});
-						db.replicate.from(host, { 'onChange': onChange });
+						db.replicate.from(host, {});
 					}, 10000);
 					return true;
 				}
