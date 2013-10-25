@@ -67,6 +67,9 @@
 		$rootScope.title = $routeParams.eventType.capitalize() + ' Events';
 		$rootScope.actions = [];
 
+		var initializing = true,
+			refreshing = false;
+
 		$scope.safeApply = function(fn) {
 			var phase = this.$root.$$phase;
 			if(phase === '$apply' || phase === '$digest') {
@@ -82,11 +85,9 @@
 			$scope.events = {};
 		}
 
-		$scope.refreshing = false;
-
 		$scope.refresh = function() {
-			if ($scope.refreshing) { return; }
-			$scope.refreshing = true;
+			if (refreshing) { return; }
+			refreshing = true;
 
 			$q.when(UserService.get()).then(function(user) {
 				var username = '';
@@ -124,7 +125,8 @@
 						}
 					}
 
-					$scope.refreshing = false;
+					refreshing = false;
+					initializing = false;
 					return ret;
 				});
 
@@ -202,10 +204,14 @@
 		};
 
 		$scope.$on('documentUpdated', function(ev, doc) {
-			$scope.refresh();
+			if (!initializing) {
+				$scope.refresh();
+			}
 		});
 		$scope.$on('documentDeleted', function(ev, doc) {
-			$scope.refresh();
+			if (!initializing) {
+				$scope.refresh();
+			}
 		});
 
 		$q.when(UserService.get()).then(function(user) {
