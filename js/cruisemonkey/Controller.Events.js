@@ -109,17 +109,19 @@
 				}
 
 				$q.all([func(username), EventService.getMyFavorites(username)]).then(function(results) {
-					var i;
+					var i,
+						events = results[0],
+						favorites = results[1],
+						ret = {};
 
-					var ret = {};
-					for (i = 0; i < results[0].length; i++) {
-						var e = results[0][i];
+					for (i = 0; i < events.length; i++) {
+						var e = events[i];
 						e.isFavorite = false;
 						ret[e._id] = e;
 					}
 
-					for (i = 0; i < results[1].length; i++) {
-						var eventId = results[1][i];
+					for (i = 0; i < favorites.length; i++) {
+						var eventId = favorites[i];
 						if (ret[eventId]) {
 							ret[eventId].isFavorite = true;
 						} else {

@@ -75,6 +75,7 @@
 	<preference name="ios-statusbarstyle" value="black-opaque" />
 	<preference name="detect-data-types" value="false" />
 	<!-- <preference name="exit-on-suspend" value="false" /> use default=false -->
+	<preference name="webviewbounce" value="false" />
 
 	<!-- Android preferences -->
 	<preference name="android-minSdkVersion" value="9" /> <!-- Android 2.3, see http://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels for details -->
@@ -83,6 +84,7 @@
 	<preference name="android-installLocation" value="auto" />
 	<!-- <preference name="android-windowSoftInputMode" value="stateVisible|adjustResize" /> use default -->
 	<preference name="splash-screen-duration" value="20000" />
+	<preference name="DisallowOverscroll" value="true" />
 
 	<access origin="*" />
 </widget>
