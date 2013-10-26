@@ -120,6 +120,16 @@ document.addEventListener("deviceready", function() {
 	}
 
 	console.log('CruiseMonkey loaded.');
+
+	if (window.device) {
+		console.log('Found PhoneGap Device Information.');
+		console.log('Model:    ' + window.device.model);
+		console.log('Cordova:  ' + window.device.cordova);
+		console.log('Platform: ' + window.device.platform);
+		console.log('UUID:     ' + window.device.uuid);
+		console.log('Version:  ' + window.device.version);
+	}
+
 	angular.bootstrap(document, ['cruisemonkey']);
 	FastClick.attach(document.body);
 }, false);

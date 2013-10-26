@@ -60,7 +60,7 @@
 	<feature name="http://api.phonegap.com/1.0/media"/>
 	<feature name="http://api.phonegap.com/1.0/network"/>
 	<feature name="http://api.phonegap.com/1.0/notification"/>
-	<!-- <feature name="http://api.phonegap.com/1.0/device"/> -->
+	<feature name="http://api.phonegap.com/1.0/device"/>
 
 	<!-- <gap:plugin name="ChildBrowser" /> -->
 	<gap:plugin name="com.phonegap.plugin.statusbar" />
