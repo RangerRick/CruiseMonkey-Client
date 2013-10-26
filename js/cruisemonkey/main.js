@@ -58,8 +58,9 @@
 	}])
 	.run(['$rootScope', '$location', 'UserService', 'phonegapReady', function($rootScope, $location, UserService, phonegapReady) {
 		phonegapReady(function() {
-			if (parseFloat(window.device.version) === 7.0) {
-				document.body.style.marginTop = "20px";
+			if (StatusBar) {
+				console.log('StatusBar exists, isVisible = ' + StatusBar.isVisible);
+				StatusBar.overlaysWebView(false);
 			}
 		});
 
