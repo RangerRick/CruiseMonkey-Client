@@ -61,6 +61,7 @@
 			if (StatusBar) {
 				console.log('StatusBar exists, isVisible = ' + StatusBar.isVisible);
 				StatusBar.overlaysWebView(false);
+				StatusBar.backgroundColorByName('black');
 			}
 		});
 
