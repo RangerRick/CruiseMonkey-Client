@@ -413,7 +413,7 @@
 	'use strict';
 
 	angular.module('cruisemonkey.Database', ['cruisemonkey.Logging', 'cruisemonkey.Config', 'ngInterval'])
-	.factory('Database', ['$location', '$interval', '$rootScope', 'LoggingService', 'config.database.host', 'config.database.name', 'config.database.replicate', function($location, $interval, $rootScope, log, databaseHost, databaseName, replicate) {
+	.factory('Database', ['$location', '$interval', '$timeout', '$rootScope', 'LoggingService', 'config.database.host', 'config.database.name', 'config.database.replicate', function($location, $interval, $timeout, $rootScope, log, databaseHost, databaseName, replicate) {
 		log.info('Initializing CruiseMonkey database: ' + databaseName);
 
 		var db = new Pouch(databaseName);
@@ -491,19 +491,21 @@
 			}
 		};
 
-		if (navigator && navigator.connection) {
-			if (navigator.connection.addEventListener) {
-				log.info("Browser has native navigator.connection support.");
-				navigator.connection.addEventListener('change', handleConnectionTypeChange);
+		$timeout(function() {
+			if (navigator && navigator.connection) {
+				if (navigator.connection.addEventListener) {
+					log.info("Browser has native navigator.connection support.");
+					navigator.connection.addEventListener('change', handleConnectionTypeChange);
+				} else {
+					log.info("Browser does not have native navigator.connection support.  Trying with phonegap.");
+					document.addEventListener('online', handleConnectionTypeChange);
+					document.addEventListener('offline', handleConnectionTypeChange);
+				}
 			} else {
-				log.info("Browser does not have native navigator.connection support.  Trying with phonegap.");
-				document.addEventListener('online', handleConnectionTypeChange);
-				document.addEventListener('offline', handleConnectionTypeChange);
+				log.warn("Unsure how to handle connection management; starting replication and hoping for the best.");
+				startReplication();
 			}
-		} else {
-			log.warn("Unsure how to handle connection management; starting replication and hoping for the best.");
-			startReplication();
-		}
+		}, 10);
 
 		log.info('Finished initializing CruiseMonkey database.');
 
