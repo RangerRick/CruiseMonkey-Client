@@ -1203,6 +1203,8 @@
 			console.log('cmUpdateMenu fired');
 			updateMenu();
 		});
+		
+		$rootScope.hideSpinner = true;
 	}])
 	;
 }());

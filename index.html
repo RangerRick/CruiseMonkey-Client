@@ -26,7 +26,7 @@
 	 [ng\:cloak], [ng-cloak], .ng-cloak {
 		display: none !important;
 	}
-	.loading {
+	.loading.hidden {
 		display: none;
 	}
 	.loading.ng-cloak {
@@ -157,7 +157,7 @@ window.setTimeout(function() {
   <title ng-bind="'CruiseMonkey - ' + $root.title">CruiseMonkey</title>
 </head>
 <body class="antialiased off-canvas hide-extras">
-	<div class="loading container ng-cloak">
+	<div class="loading container" ng-class="{hidden: hideSpinner}">
 		<div class="centered">
 			<img src="icons/spinner.gif" /><br /><div id="loading">Loading...</div>
 		</div>
