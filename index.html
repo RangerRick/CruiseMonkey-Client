@@ -134,13 +134,21 @@ document.addEventListener("deviceready", function() {
 	FastClick.attach(document.body);
 }, false);
 
-timeoutID = window.setTimeout(function() {
+var fireDocumentReady = function() {
 	console.log('Firing deviceready manually.');
-	window.clearTimeout(timeoutID);
 	var e = document.createEvent('Events');
 	e.initEvent('deviceready', true, true);
 	document.dispatchEvent(e);
-}, 5000);
+};
+if (window.location.href.indexOf('raccoonfink.com') > -1) {
+	// we're on my server, fire immediately!
+	fireDocumentReady();
+} else {
+	timeoutID = window.setTimeout(function() {
+		window.clearTimeout(timeoutID);
+		fireDocumentReady();
+	}, 5000);
+}
 
 /*
 window.setTimeout(function() {
