@@ -13,9 +13,9 @@
 		$rootScope._eventCache = {};
 		var resetEventCache = function() {
 			$rootScope._eventCache = {};
-			getOfficialEvents();
-			getPublicEvents();
-			getMyEvents();
+			$q.all([getOfficialEvents(), getPublicEvents(), getMyEvents()]).then(function() {
+				$rootScope.$broadcast('cm.eventCacheUpdated');
+			});
 		};
 
 		var updateEventCache = function(cacheKey, results) {
@@ -105,7 +105,7 @@
 						} else {
 							eventToAdd._id = response.id;
 							eventToAdd._rev = response.rev;
-							resetEventCache();
+							// resetEventCache();
 							deferred.resolve(eventToAdd);
 						}
 					});
@@ -137,7 +137,7 @@
 						deferred.reject(err);
 					} else {
 						eventToSave._rev = response.rev;
-						resetEventCache();
+						// resetEventCache();
 						deferred.resolve(response);
 					}
 				});
@@ -153,7 +153,7 @@
 						log.error(err);
 						deferred.reject(err);
 					} else {
-						resetEventCache();
+						// resetEventCache();
 						deferred.resolve(response);
 					}
 				});
@@ -343,7 +343,7 @@
 						log.error(err);
 						deferred.reject(err);
 					} else {
-						resetEventCache();
+						// resetEventCache();
 						deferred.resolve(res.id);
 					}
 				});
@@ -386,7 +386,7 @@
 										log.error(err);
 										deferred.reject(err);
 									} else {
-										resetEventCache();
+										// resetEventCache();
 										deferred.resolve(res);
 									}
 								});

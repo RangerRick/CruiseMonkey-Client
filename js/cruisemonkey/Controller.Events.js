@@ -161,13 +161,13 @@
 					templateUrl:'edit-event.html',
 					controller:'CMEditEventCtrl'
 				});
-				modalInstance.result.then(function(result) {
+				modalInstance.result.then(function(newEvent) {
 					log.info("Save finished!");
-					console.log(result);
-					$q.all([EventService.addEvent(result), $scope.events]).then(function(results) {
-						var added = results[0];
+					console.log(newEvent);
+					$q.all([EventService.updateEvent(newEvent), $scope.events]).then(function(results) {
 						var events = results[1];
-						events[added._id] = added;
+						events[newEvent._id] = newEvent;
+						log.info('Finished updating event.');
 					});
 				}, function() {
 					log.warn("Add canceled!");
@@ -192,12 +192,7 @@
 			});
 		};
 
-		$scope.$on('documentUpdated', function(ev, change) {
-			if (!initializing) {
-				$scope.refresh();
-			}
-		});
-		$scope.$on('documentDeleted', function(ev, change) {
+		$scope.$on('cm.eventCacheUpdated', function() {
 			if (!initializing) {
 				$scope.refresh();
 			}

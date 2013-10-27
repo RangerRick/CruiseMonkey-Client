@@ -116,19 +116,23 @@
 			}
 
 			array.sort(function(a,b) {
-				angular.forEach(attribute, function(attr) {
-					if (attr === 'start' || attr === 'end') {
-						var ad = moment(a[attr]).valueOf(),
-							bd = moment(b[attr]).valueOf();
-						if (ad > bd) return 1;
-						if (ad < bd) return -1;
+				for (var i = 0; i < attribute.length; i++) {
+					var attr = attribute[i];
+					if (attr === 'start' || attr === 'end' || angular.isDate(a[attr]) || angular.isDate(b[attr])) {
+						var ad = moment(a[attr]),
+							bd = moment(b[attr]);
+						if (ad.isBefore(bd)) return -1;
+						if (ad.isAfter(bd)) return 1;
+					} else if (angular.isNumber(a[attr]) || angular.isNumber(b[attr])) {
+						if (a[attr] > b[attr]) return 1;
+						if (a[attr] < b[attr]) return -1;
 					} else {
-						var alc = a[attr].toLowerCase(),
-							blc = b[attr].toLowerCase();
+						var alc = String(a[attr]).toLowerCase(),
+							blc = String(b[attr]).toLowerCase();
 						if (alc > blc) return 1;
 						if (alc < blc) return -1;
 					}
-				});
+				}
 				return 0;
 			});
 
@@ -260,13 +264,13 @@
 					templateUrl:'edit-event.html',
 					controller:'CMEditEventCtrl'
 				});
-				modalInstance.result.then(function(result) {
+				modalInstance.result.then(function(newEvent) {
 					log.info("Save finished!");
-					console.log(result);
-					$q.all([EventService.addEvent(result), $scope.events]).then(function(results) {
-						var added = results[0];
+					console.log(newEvent);
+					$q.all([EventService.updateEvent(newEvent), $scope.events]).then(function(results) {
 						var events = results[1];
-						events[added._id] = added;
+						events[newEvent._id] = newEvent;
+						log.info('Finished updating event.');
 					});
 				}, function() {
 					log.warn("Add canceled!");
@@ -291,12 +295,7 @@
 			});
 		};
 
-		$scope.$on('documentUpdated', function(ev, change) {
-			if (!initializing) {
-				$scope.refresh();
-			}
-		});
-		$scope.$on('documentDeleted', function(ev, change) {
+		$scope.$on('cm.eventCacheUpdated', function() {
 			if (!initializing) {
 				$scope.refresh();
 			}
@@ -563,9 +562,9 @@
 		$rootScope._eventCache = {};
 		var resetEventCache = function() {
 			$rootScope._eventCache = {};
-			getOfficialEvents();
-			getPublicEvents();
-			getMyEvents();
+			$q.all([getOfficialEvents(), getPublicEvents(), getMyEvents()]).then(function() {
+				$rootScope.$broadcast('cm.eventCacheUpdated');
+			});
 		};
 
 		var updateEventCache = function(cacheKey, results) {
@@ -655,7 +654,7 @@
 						} else {
 							eventToAdd._id = response.id;
 							eventToAdd._rev = response.rev;
-							resetEventCache();
+							// resetEventCache();
 							deferred.resolve(eventToAdd);
 						}
 					});
@@ -687,7 +686,7 @@
 						deferred.reject(err);
 					} else {
 						eventToSave._rev = response.rev;
-						resetEventCache();
+						// resetEventCache();
 						deferred.resolve(response);
 					}
 				});
@@ -703,7 +702,7 @@
 						log.error(err);
 						deferred.reject(err);
 					} else {
-						resetEventCache();
+						// resetEventCache();
 						deferred.resolve(response);
 					}
 				});
@@ -893,7 +892,7 @@
 						log.error(err);
 						deferred.reject(err);
 					} else {
-						resetEventCache();
+						// resetEventCache();
 						deferred.resolve(res.id);
 					}
 				});
@@ -936,7 +935,7 @@
 										log.error(err);
 										deferred.reject(err);
 									} else {
-										resetEventCache();
+										// resetEventCache();
 										deferred.resolve(res);
 									}
 								});

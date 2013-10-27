@@ -92,7 +92,7 @@ if (window.applicationCache && window.applicationCache.addEventListener) {
 			} else if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
 				// Browser downloaded a new app cache.
 				// Swap it in and reload the page to get the new hotness.
-				notifyUpdate('The new version of CruiseMonkey is ready.  Reloading.');
+				notifyUpdate('A new version of CruiseMonkey is ready.  Reloading.');
 				setTimeout(function() {
 					window.applicationCache.swapCache();
 					window.location.reload();
