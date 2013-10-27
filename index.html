@@ -71,6 +71,13 @@
 	<![endif]-->
 
 <script>
+var fireDocumentReady = function() {
+	console.log('Firing deviceready manually.');
+	var e = document.createEvent('Events');
+	e.initEvent('deviceready', true, true);
+	document.dispatchEvent(e);
+};
+
 if (window.applicationCache && window.applicationCache.addEventListener) {
 	window.addEventListener('load', function(e) {
 		var loading = document.getElementById('loading');
@@ -101,6 +108,15 @@ if (window.applicationCache && window.applicationCache.addEventListener) {
 				notifyUpdate('Something is wrong with the CruiseMonkey update.  Skipping.');
 			} else {
 				notifyUpdate('CruiseMonkey Is Starting.');
+				if (window.location.href.indexOf('raccoonfink.com') > -1) {
+					// we're on my server, fire immediately!
+					fireDocumentReady();
+				} else {
+					timeoutID = window.setTimeout(function() {
+						window.clearTimeout(timeoutID);
+						fireDocumentReady();
+					}, 5000);
+				}
 			}
 		};
 
@@ -133,22 +149,6 @@ document.addEventListener("deviceready", function() {
 	angular.bootstrap(document, ['cruisemonkey']);
 	FastClick.attach(document.body);
 }, false);
-
-var fireDocumentReady = function() {
-	console.log('Firing deviceready manually.');
-	var e = document.createEvent('Events');
-	e.initEvent('deviceready', true, true);
-	document.dispatchEvent(e);
-};
-if (window.location.href.indexOf('raccoonfink.com') > -1) {
-	// we're on my server, fire immediately!
-	fireDocumentReady();
-} else {
-	timeoutID = window.setTimeout(function() {
-		window.clearTimeout(timeoutID);
-		fireDocumentReady();
-	}, 5000);
-}
 
 /*
 window.setTimeout(function() {
