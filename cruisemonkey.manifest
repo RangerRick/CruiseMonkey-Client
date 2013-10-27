@@ -115,6 +115,7 @@ icons/inactive/90-lifebuoy.png
 icons/inactive/90-lifebuoy@2x.png
 icons/not-authorized/55-network.png
 icons/not-authorized/55-network@2x.png
+js/cruisemonkey.js
 js/cruisemonkey.min.js
 js/3rdparty/custom.modernizr.js
 js/3rdparty/jasmine.async.js
@@ -197,4 +198,4 @@ template/typeahead/typeahead-popup.html
 NETWORK:
 *
 
-# hash: d42eb4e1f1d33d16d3553e9a7484aedb5c314d700bb783c172c62503e8b11d9f
+# hash: cfca103c82a5281f06bcedcbbb70e548b1df2f9f1c79da1e5fdffc5d7495e78f

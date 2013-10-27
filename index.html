@@ -175,12 +175,13 @@ window.setTimeout(function() {
 				<li class="sidebar-header">CruiseMonkey</li>
 				<li><a href="#/events/official/"  >Official Events</a></li>
 				<li><a href="#/events/unofficial/">Unofficial Events</a></li>
-				<li><a href="#/events/my/"        >My Events</a></li>
+				<li ng-if="user.loggedIn"><a href="#/events/my/">My Events</a></li>
+				<li ng-if="!user.loggedIn" class="disabled"><a href="#">My Events</a></li>
 				<li><a href="#/deck-plans/"       >Deck Plans</a></li>
 				<li><a href="#/about/"            >About</a></li>
 
-				<li ng-show="!user.loggedIn"><a href="#/login/">Log In</a></li>
-				<li ng-show="user.loggedIn" ><a href="#/logout/">Log Out</a></li>
+				<li ng-if="user.loggedIn" ><a href="#/logout/">Log Out</a></li>
+				<li ng-if="!user.loggedIn"><a href="#/login/">Log In</a></li>
 			</ul>
 		</mobile-nav>
 		<mobile-content ng-view>
@@ -220,7 +221,9 @@ window.setTimeout(function() {
 	<script src="js/angular-3rdparty/angular-interval.js"></script>
 	<script src="js/angular-3rdparty/ui-bootstrap-0.6.0.js"></script>
 
-	<script src="js/cruisemonkey.min.js"></script>
+	<!-- <script src="js/cruisemonkey.min.js"></script> -->
+	<script src="js/cruisemonkey.js"></script>
+
 	<script src="phonegap.js"></script>
 </body>
 </html>

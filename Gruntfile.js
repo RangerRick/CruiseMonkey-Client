@@ -1,3 +1,23 @@
+var cmfiles = [
+	'js/cruisemonkey/string.js',
+	'js/cruisemonkey/Config.js',
+	'js/cruisemonkey/Controller.About.js',
+	'js/cruisemonkey/Controller.DeckList.js',
+	'js/cruisemonkey/Controller.Events.js',
+	'js/cruisemonkey/Controller.Header.js',
+	'js/cruisemonkey/Controller.Login.js',
+	'js/cruisemonkey/Controller.Logout.js',
+	'js/cruisemonkey/Controller.Navigation.js',
+	'js/cruisemonkey/Database.js',
+	'js/cruisemonkey/Events.js',
+	'js/cruisemonkey/Logging.js',
+	'js/cruisemonkey/User.js',
+	'js/cruisemonkey/directives.js',
+	'js/cruisemonkey/filters.js',
+	'js/cruisemonkey/services.js',
+	'js/cruisemonkey/main.js'
+];  
+
 module.exports = function(grunt) {
 	grunt.initConfig({
 		sass: {
@@ -64,26 +84,14 @@ module.exports = function(grunt) {
 		uglify: {
 			cruisemonkey: {
 				files: {
-					'js/cruisemonkey.min.js': [
-						'js/cruisemonkey/string.js',
-						'js/cruisemonkey/Config.js',
-						'js/cruisemonkey/Controller.About.js',
-						'js/cruisemonkey/Controller.DeckList.js',
-						'js/cruisemonkey/Controller.Events.js',
-						'js/cruisemonkey/Controller.Header.js',
-						'js/cruisemonkey/Controller.Login.js',
-						'js/cruisemonkey/Controller.Logout.js',
-						'js/cruisemonkey/Controller.Navigation.js',
-						'js/cruisemonkey/Database.js',
-						'js/cruisemonkey/Events.js',
-						'js/cruisemonkey/Logging.js',
-						'js/cruisemonkey/User.js',
-						'js/cruisemonkey/directives.js',
-						'js/cruisemonkey/filters.js',
-						'js/cruisemonkey/services.js',
-						'js/cruisemonkey/main.js'
-					]
+					'js/cruisemonkey.min.js': cmfiles
 				}
+			}
+		},
+		concat: {
+			cruisemonkey: {
+				src: cmfiles,
+				dest: 'js/cruisemonkey.js'
 			}
 		},
 		jshint: {
@@ -148,7 +156,7 @@ module.exports = function(grunt) {
 					'tempate/**/*.html',
 					'bower_components/**/*'
 				],
-				tasks: ['uglify', 'manifest'],
+				tasks: ['concat', 'uglify', 'manifest'],
 				options: {
 					interval: 500,
 					spawn: false,
@@ -166,6 +174,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-connect');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-contrib-concat');
 
 	grunt.registerTask('default', ['connect', 'watch']);
 };

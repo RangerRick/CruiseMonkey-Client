@@ -46,11 +46,13 @@ $gutterSeparator: 1px solid #aaa;
 $gutterBG: #ccc;
 $gutterColor: black;
 
-$gutterHilightBG: #333;
-$gutterHilightColor: white;
+$gutterDisabledColor: #bbb;
 
-$gutterSelectedColorBG: $cmBabyBlue;
-$gutterSelectedColor: black;
+$gutterSelectedBG: #333;
+$gutterSelectedColor: white;
+
+$gutterHoverBG: $cmBabyBlue;
+$gutterHoverColor: black;
 
 $simpleBorder: 1px solid black;
 
@@ -185,6 +187,7 @@ a:hover {
 		width: $navWidth;
 		border-bottom: $gutterSeparator;
 		color: $gutterColor;
+
 		a {
 			display: block;
 			padding: 10px;
@@ -195,14 +198,33 @@ a:hover {
 		}
 	}
 
-	.nav > li:hover, .nav > li:focus, .nav > li.selected {
-		color: $gutterHilightColor;
-		background-color: $gutterHilightBG;
-		a {
-			color: $gutterHilightColor;
+	.nav > li:hover, .nav > li:focus {
+		color: $gutterHoverColor;
+		background-color: $gutterHoverBG;
+
+		a, a:hover, a:focus {
+			color: $gutterHoverColor;
 		}
-		a:hover, a:focus {
-			color: $gutterHilightColor;
+	}
+
+	.nav > li.selected {
+		color: $gutterSelectedColor;
+		background-color: $gutterSelectedBG;
+
+		a, a:hover, a:focus {
+			color: $gutterSelectedColor;
+		}
+	}
+
+	.nav > li.disabled {
+		color: $gutterDisabledColor;
+		background-color: transparent;
+
+		:hover, :focus {
+			background-color: transparent;
+		}
+		a, a:hover, a:focus {
+			color: $gutterDisabledColor;
 		}
 	}
 

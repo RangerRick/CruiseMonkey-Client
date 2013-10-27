@@ -98,14 +98,22 @@
 			angular.forEach(document.getElementById('nav').children, function(li, key) {
 				if (li.children[0]) {
 					var href = li.children[0].href;
-					var index = href.indexOf('#');
-					if (index !== -1) {
-						href = href.substring(href.indexOf('#') + 1);
-					}
-					if (path.startsWith(href)) {
-						angular.element(li).addClass('selected');
-					} else {
-						angular.element(li).removeClass('selected');
+					if (href) {
+						if (href.charAt(href.length - 1) === '/') {
+							href = href.substr(0, href.length - 1);
+						}
+						var index = href.indexOf('#');
+						if (index !== -1) {
+							href = href.substring(href.indexOf('#') + 1);
+						}
+						console.log('href = ' + href + ', index = ' + index + ', path = ' + path);
+						if (href === '') {
+							angular.element(li).removeClass('selected');
+						} else if (path.startsWith(href)) {
+							angular.element(li).addClass('selected');
+						} else {
+							angular.element(li).removeClass('selected');
+						}
 					}
 				}
 			});

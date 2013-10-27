@@ -126,13 +126,23 @@ a:link, a:visited, a:hover {
       background-color: transparent;
       width: 230px;
       height: 100%; }
-  .mobile-nav .nav > li:hover, .mobile-nav .nav > li:focus, .mobile-nav .nav > li.selected {
+  .mobile-nav .nav > li:hover, .mobile-nav .nav > li:focus {
+    color: black;
+    background-color: #ddf2ff; }
+    .mobile-nav .nav > li:hover a, .mobile-nav .nav > li:hover a:hover, .mobile-nav .nav > li:hover a:focus, .mobile-nav .nav > li:focus a, .mobile-nav .nav > li:focus a:hover, .mobile-nav .nav > li:focus a:focus {
+      color: black; }
+  .mobile-nav .nav > li.selected {
     color: white;
     background-color: #333333; }
-    .mobile-nav .nav > li:hover a, .mobile-nav .nav > li:focus a, .mobile-nav .nav > li.selected a {
+    .mobile-nav .nav > li.selected a, .mobile-nav .nav > li.selected a:hover, .mobile-nav .nav > li.selected a:focus {
       color: white; }
-    .mobile-nav .nav > li:hover a:hover, .mobile-nav .nav > li:hover a:focus, .mobile-nav .nav > li:focus a:hover, .mobile-nav .nav > li:focus a:focus, .mobile-nav .nav > li.selected a:hover, .mobile-nav .nav > li.selected a:focus {
-      color: white; }
+  .mobile-nav .nav > li.disabled {
+    color: #bbbbbb;
+    background-color: transparent; }
+    .mobile-nav .nav > li.disabled :hover, .mobile-nav .nav > li.disabled :focus {
+      background-color: transparent; }
+    .mobile-nav .nav > li.disabled a, .mobile-nav .nav > li.disabled a:hover, .mobile-nav .nav > li.disabled a:focus {
+      color: #bbbbbb; }
 
 .mobile-nav-toggle {
   width: 30px;
