@@ -24,7 +24,7 @@
 			var user = UserService.get();
 			log.info('resetting user: ', user);
 			$rootScope.user = user;
-			$rootScope.$broadcast('cmUpdateMenu');
+			$rootScope.$broadcast('cm.loggedOut');
 			$location.path('/events/official');
 		};
 
@@ -39,7 +39,7 @@
 			console.log(user);
 			UserService.save(user);
 			$rootScope.user = UserService.get();
-			$rootScope.$broadcast('cmUpdateMenu');
+			$rootScope.$broadcast('cm.loggedIn');
 			$location.path('/events/my');
 		};
 	}]);

@@ -58,7 +58,7 @@
 			console.log($scope.event);
 		}
 	}])
-	.controller('CMEventCtrl', ['$scope', '$rootScope', '$routeParams', '$location', '$q', '$modal', '$templateCache', 'UserService', 'EventService', 'LoggingService', function($scope, $rootScope, $routeParams, $location, $q, $modal, $templateCache, UserService, EventService, log) {
+	.controller('CMEventCtrl', ['$scope', '$rootScope', '$timeout', '$routeParams', '$location', '$q', '$modal', '$templateCache', 'UserService', 'EventService', 'LoggingService', function($scope, $rootScope, $timeout, $routeParams, $location, $q, $modal, $templateCache, UserService, EventService, log) {
 		log.info('Initializing CMEventCtrl');
 
 		$scope.eventType = $routeParams.eventType;
@@ -221,6 +221,6 @@
 			});
 		}
 
-		$scope.refresh();
+		$timeout($scope.refresh, 0);
 	}]);
 }());

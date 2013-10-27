@@ -10,7 +10,43 @@
 			return moment(date).format("YYYY-MM-DD HH:mm");
 		};
 
-		var _doQuery = function(map, options) {
+		$rootScope._eventCache = {};
+		var resetEventCache = function() {
+			$rootScope._eventCache = {};
+			getOfficialEvents();
+			getPublicEvents();
+			getMyEvents();
+		};
+
+		var updateEventCache = function(cacheKey, results) {
+			$rootScope._eventCache[cacheKey] = results;
+		};
+
+		var wrapReturn = function(func, cacheKey) {
+			if ($rootScope._eventCache.hasOwnProperty(cacheKey)) {
+				log.info('cache hit: ' + cacheKey);
+				return promisedResult($rootScope._eventCache[cacheKey]);
+			} else {
+				log.info('cache miss: ' + cacheKey);
+				return func();
+			}
+		};
+
+		/* invalidate the cache whenever documents are updated or the user logs in/out */
+		$rootScope.$on('cm.documentDeleted', function() {
+			resetEventCache();
+		});
+		$rootScope.$on('cm.documentUpdated', function() {
+			resetEventCache();
+		});
+		$rootScope.$on('cm.loggedIn', function() {
+			resetEventCache();
+		});
+		$rootScope.$on('cm.loggedOut', function() {
+			resetEventCache();
+		});
+
+		var doQuery = function(map, options, cacheKey) {
 			var deferred = $q.defer();
 			db.database.query({map: map}, options, function(err, res) {
 				$rootScope.$apply(function() {
@@ -22,6 +58,7 @@
 						for (i = 0; i < res.total_rows; i++) {
 							results.push(res.rows[i].value);
 						}
+						updateEventCache(cacheKey, results);
 						deferred.resolve(results);
 					}
 				});
@@ -29,7 +66,7 @@
 			return deferred.promise;
 		};
 
-		var _promisedResult = function(res) {
+		var promisedResult = function(res) {
 			var deferred = $q.defer();
 			setTimeout(function() {
 				$rootScope.$apply(function() {
@@ -61,6 +98,7 @@
 						} else {
 							eventToAdd._id = response.id;
 							eventToAdd._rev = response.rev;
+							resetEventCache();
 							deferred.resolve(eventToAdd);
 						}
 					});
@@ -92,6 +130,7 @@
 						deferred.reject(err);
 					} else {
 						eventToSave._rev = response.rev;
+						resetEventCache();
 						deferred.resolve(response);
 					}
 				});
@@ -107,6 +146,7 @@
 						log.error(err);
 						deferred.reject(err);
 					} else {
+						resetEventCache();
 						deferred.resolve(response);
 					}
 				});
@@ -116,29 +156,29 @@
 
 		var getAllEvents = function() {
 			log.info('getAllEvents()');
-			return _doQuery(function(doc) {
+			return doQuery(function(doc) {
 				if (doc.type === 'event') {
 					emit(doc.username, doc);
 				}
-			}, {reduce: false});
+			}, {reduce: false}, 'all');
 		};
 
 		var getOfficialEvents = function() {
 			log.info('getOfficialEvents()');
-			return _doQuery(function(doc) {
+			return doQuery(function(doc) {
 				if (doc.type === 'event') {
 					emit(doc.username, doc);
 				}
-			}, {reduce: true, key: 'official'});
+			}, {reduce: true, key: 'official'}, 'official');
 		};
 
 		var getPublicEvents = function() {
 			log.info('getPublicEvents()');
-			return _doQuery(function(doc) {
+			return doQuery(function(doc) {
 				if (doc.type === 'event' && doc.isPublic && doc.username !== 'official') {
 					emit(doc.username, doc);
 				}
-			}, {reduce: true});
+			}, {reduce: true}, 'public');
 		};
 
 		var getUserEvents = function() {
@@ -147,14 +187,14 @@
 			var username = UserService.getUsername();
 			if (!username) {
 				log.warn('getUserEvent(): user not logged in');
-				return _promisedResult([]);
+				return promisedResult([]);
 			}
 
-			return _doQuery(function(doc) {
+			return doQuery(function(doc) {
 				if (doc.type === 'event') {
 					emit(doc.username, doc);
 				}
-			}, {reduce: false, key: username});
+			}, {reduce: false, key: username}, 'user');
 		};
 
 		var getMyEvents = function() {
@@ -163,7 +203,7 @@
 			var username = UserService.getUsername();
 			if (!username) {
 				log.warn('getMyEvents(): user not logged in');
-				return _promisedResult([]);
+				return promisedResult([]);
 			}
 
 			var deferred = $q.defer();
@@ -196,6 +236,7 @@
 							}
 							results.push(entry.doc);
 						}
+						updateEventCache('my', results);
 						deferred.resolve(results);
 					}
 				});
@@ -207,7 +248,7 @@
 			var username = UserService.getUsername();
 			if (!username) {
 				log.warn('getMyFavorites(): user not logged in');
-				return _promisedResult([]);
+				return promisedResult([]);
 			}
 
 			var deferred = $q.defer();
@@ -234,6 +275,7 @@
 						for (i = 0; i < res.total_rows; i++) {
 							results.push(res.rows[i].value);
 						}
+						updateEventCache('favorites', results);
 						deferred.resolve(results);
 					}
 				});
@@ -245,7 +287,7 @@
 			var username = UserService.getUsername();
 			if (!username || !eventId) {
 				log.warn('isFavorite(): user not logged in, or no eventId passed');
-				return _promisedResult(false);
+				return promisedResult(false);
 			}
 
 			var deferred = $q.defer();
@@ -279,7 +321,7 @@
 			var username = UserService.getUsername();
 			if (!username || !eventId) {
 				log.warn('addFavorite(): user not logged in, or no eventId passed');
-				return _promisedResult(undefined);
+				return promisedResult(undefined);
 			}
 
 			var deferred = $q.defer();
@@ -294,6 +336,7 @@
 						log.error(err);
 						deferred.reject(err);
 					} else {
+						resetEventCache();
 						deferred.resolve(res.id);
 					}
 				});
@@ -305,7 +348,7 @@
 			var username = UserService.getUsername();
 			if (!username || !eventId) {
 				log.warn('removeFavorite(): user not logged in, or no eventId passed');
-				return _promisedResult(undefined);
+				return promisedResult(undefined);
 			}
 
 			var deferred = $q.defer();
@@ -328,7 +371,6 @@
 						log.error(err);
 						deferred.reject(err);
 					} else {
-						console.log(res);
 						if (res.total_rows > 0) {
 							var doc = res.rows[0].doc;
 							db.database.remove(doc, function(err, res) {
@@ -337,12 +379,12 @@
 										log.error(err);
 										deferred.reject(err);
 									} else {
+										resetEventCache();
 										deferred.resolve(res);
 									}
 								});
 							});
 						} else {
-							console.log('no favorites found');
 							deferred.resolve(null);
 						}
 					}
@@ -355,11 +397,11 @@
 			'addEvent': addEvent,
 			'updateEvent': updateEvent,
 			'removeEvent': removeEvent,
-			'getAllEvents': getAllEvents,
-			'getOfficialEvents': getOfficialEvents,
-			'getPublicEvents': getPublicEvents,
-			'getUserEvents': getUserEvents,
-			'getMyEvents': getMyEvents,
+			'getAllEvents': function() { return wrapReturn(getAllEvents, 'all'); },
+			'getOfficialEvents': function() { return wrapReturn(getOfficialEvents, 'official'); },
+			'getPublicEvents': function() { return wrapReturn(getPublicEvents, 'public'); },
+			'getUserEvents': function() { return wrapReturn(getUserEvents, 'user'); },
+			'getMyEvents': function() { return wrapReturn(getMyEvents, 'my'); },
 			'getMyFavorites': getMyFavorites,
 			'isFavorite': isFavorite,
 			'addFavorite': addFavorite,

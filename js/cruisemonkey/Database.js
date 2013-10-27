@@ -12,9 +12,9 @@
 			onChange: function(change) {
 				/* console.log('change: ', change); */
 				if (change.deleted) {
-					$rootScope.$broadcast('documentDeleted', change);
+					$rootScope.$broadcast('cm.documentDeleted', change);
 				} else {
-					$rootScope.$broadcast('documentUpdated', change.doc);
+					$rootScope.$broadcast('cm.documentUpdated', change.doc);
 				}
 			},
 			continuous: true,

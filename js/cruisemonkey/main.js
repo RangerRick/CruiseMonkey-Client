@@ -122,8 +122,12 @@
 		$rootScope.$on('$routeChangeSuccess', function(event, currRoute, prevRoute) {
 			updateMenu();
 		});
-		$rootScope.$on('cmUpdateMenu', function(event) {
-			console.log('cmUpdateMenu fired');
+		$rootScope.$on('cm.loggedIn', function(event) {
+			console.log('User logged in, refreshing menu.');
+			updateMenu();
+		});
+		$rootScope.$on('cm.loggedOut', function(event) {
+			console.log('User logged out, refreshing menu.');
 			updateMenu();
 		});
 		
