@@ -118,6 +118,7 @@ module.exports = function(grunt) {
 					'bower_components/angular-localstorage/angular-local-storage.js',
 					'js/angular-3rdparty/angular-interval.js',
 					'js/angular-3rdparty/angular-hammer.js',
+					'js/angular-3rdparty/ui-bootstrap-0.6.0.js',
 					'js/cruisemonkey/*.js'
 				],
 				options: {

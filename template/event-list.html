@@ -51,7 +51,7 @@
 	</div>
 </script>
 <div class="event-list">
-	<div ng-repeat="event in events | orderObjectBy: 'start' track by event._id" class="list-entry calendar-event scrollable">
+	<div ng-repeat="event in events | orderObjectBy: ['start', 'summary', 'end'] track by event._id" class="list-entry">
 		<div class="favorite" ng-show="(user.username && user.username != event.username)">
 			<input type="checkbox" id="{{event._id}}-favorite" ng-checked="event.isFavorite" ng-model="fav" ng-change="onFavoriteChanged(event._id, fav)"><label for="{{event._id}}-favorite">&nbsp;</label>
 		</div>

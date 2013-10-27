@@ -5,25 +5,33 @@
 	.filter('orderObjectBy', function() {
 		return function(input, attribute) {
 			if (!angular.isObject(input)) return input;
+			if (!angular.isArray(attribute)) attribute = [attribute];
 
 			var array = [];
 			for(var objectKey in input) {
 				array.push(input[objectKey]);
 			}
 
-			if (attribute === 'start' || attribute === 'end') {
-				array.sort(function(a, b) {
-					var ad = moment(a[attribute]).valueOf(),
-						bd = moment(b[attribute]).valueOf();
-					return ad > bd ? 1 : ad < bd ? -1 : 0;
-				});
-			} else {
-				array.sort(function(a, b){
-					var alc = a[attribute].toLowerCase(),
-						blc = b[attribute].toLowerCase();
-					return alc > blc ? 1 : alc < blc ? -1 : 0;
-				});
-			}
+			array.sort(function(a,b) {
+				for (var i = 0; i < attribute.length; i++) {
+					var attr = attribute[i];
+					if (attr === 'start' || attr === 'end' || angular.isDate(a[attr]) || angular.isDate(b[attr])) {
+						var ad = moment(a[attr]),
+							bd = moment(b[attr]);
+						if (ad.isBefore(bd)) return -1;
+						if (ad.isAfter(bd)) return 1;
+					} else if (angular.isNumber(a[attr]) || angular.isNumber(b[attr])) {
+						if (a[attr] > b[attr]) return 1;
+						if (a[attr] < b[attr]) return -1;
+					} else {
+						var alc = String(a[attr]).toLowerCase(),
+							blc = String(b[attr]).toLowerCase();
+						if (alc > blc) return 1;
+						if (alc < blc) return -1;
+					}
+				}
+				return 0;
+			});
 
 			return array;
 		};

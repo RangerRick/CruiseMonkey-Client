@@ -1,4 +1,4 @@
-describe('Events', function() {
+describe('cruisemonkey.Events', function() {
 	var log         = null;
 	var service     = null;
 	var userService = null;
@@ -26,11 +26,6 @@ describe('Events', function() {
 			$provide.value('config.database.name', dbName);
 			$provide.value('config.database.replicate', false);
 		});
-		done();
-	});
-
-
-	async.beforeEach(function(done) {
 		inject(['LoggingService', 'EventService', 'UserService', 'Database', '$q', function(LoggingService, EventService, UserService, Database, q) {
 			log         = LoggingService;
 			service     = EventService;
