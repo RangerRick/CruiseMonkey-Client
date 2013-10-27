@@ -46,18 +46,16 @@
 			log.info('Found existing event to edit.');
 			console.log($scope.event);
 		} else {
-			$q.when(UserService.get()).then(function(user) {
-				var start = new Date();
-				$scope.event = {
-					'start':    moment(start).format(format),
-					'end':      moment(new Date(start.getTime() + 60 * 60 * 1000)).format(format),
-					'type':     'event',
-					'username': user.username,
-					'isPublic': true
-				};
-				log.info('Created fresh event.');
-				console.log($scope.event);
-			});
+			var start = new Date();
+			$scope.event = {
+				'start':    moment(start).format(format),
+				'end':      moment(new Date(start.getTime() + 60 * 60 * 1000)).format(format),
+				'type':     'event',
+				'username': UserService.getUsername(),
+				'isPublic': true
+			};
+			log.info('Created fresh event.');
+			console.log($scope.event);
 		}
 	}])
 	.controller('CMEventCtrl', ['$scope', '$rootScope', '$routeParams', '$location', '$q', '$modal', '$templateCache', 'UserService', 'EventService', 'LoggingService', function($scope, $rootScope, $routeParams, $location, $q, $modal, $templateCache, UserService, EventService, log) {
@@ -65,7 +63,6 @@
 
 		$scope.eventType = $routeParams.eventType;
 		$rootScope.title = $routeParams.eventType.capitalize() + ' Events';
-		$rootScope.actions = [];
 
 		var initializing = true,
 			refreshing = false;
@@ -91,57 +88,38 @@
 
 			log.info('Refreshing event list.');
 
-			$q.when(UserService.get()).then(function(user) {
-				var username = '';
-				if (user.username) {
-					username = user.username;
-				}
+			var func;
+			if ($routeParams.eventType === 'official') {
+				func = EventService.getOfficialEvents;
+			} else if ($routeParams.eventType === 'unofficial') {
+				func = EventService.getPublicEvents;
+			} else if ($routeParams.eventType === 'my') {
+				func = EventService.getMyEvents;
+			} else {
+				log.warn('unknown event type: ' + $routeParams.eventType);
+			}
 
-				var func;
-				if ($routeParams.eventType === 'official') {
-					func = EventService.getOfficialEvents;
-				} else if ($routeParams.eventType === 'unofficial') {
-					func = EventService.getPublicEvents;
-				} else if ($routeParams.eventType === 'my') {
-					func = EventService.getMyEvents;
-				} else {
-					log.warn('unknown event type: ' + $routeParams.eventType);
-				}
-
-				$q.all([func(username), EventService.getMyFavorites(username)]).then(function(results) {
-					var i,
-						events = results[0],
-						favorites = results[1],
-						ret = {};
-
-					for (i = 0; i < events.length; i++) {
-						var e = events[i];
+			$q.when(func()).then(function(events) {
+				var i, ret = {};
+				for (i = 0; i < events.length; i++) {
+					var e = events[i];
+					if (!e.hasOwnProperty('isFavorite')) {
 						e.isFavorite = false;
-						ret[e._id] = e;
 					}
+					ret[e._id] = e;
+				}
 
-					for (i = 0; i < favorites.length; i++) {
-						var eventId = favorites[i];
-						if (ret[eventId]) {
-							ret[eventId].isFavorite = true;
-						} else {
-							log.warn('could not find ' + eventId + ' in available events');
-						}
-					}
+				refreshing = false;
+				initializing = false;
 
-					refreshing = false;
-					initializing = false;
-
-					angular.forEach(ret, function(value, key) {
-						$scope.events[key] = value;
-					});
-					angular.forEach($scope.events, function(value, key) {
-						if (!ret[key]) {
-							delete $scope.events[key];
-						}
-					});
+				angular.forEach(ret, function(value, key) {
+					$scope.events[key] = value;
 				});
-
+				angular.forEach($scope.events, function(value, key) {
+					if (!ret[key]) {
+						delete $scope.events[key];
+					}
+				});
 			});
 		};
 
@@ -190,28 +168,19 @@
 		};
 
 		$scope.onFavoriteChanged = function(eventId, checked) {
-			$q.when(UserService.get()).then(function(user) {
-				var username = user.username;
-				$q.when($scope.events).then(function(events) {
-					events[eventId].isFavorite = checked;
-				});
-				if (checked) {
-					EventService.addFavorite(username, eventId);
-				} else {
-					EventService.removeFavorite(username, eventId);
-				}
-			});
+			if (checked) {
+				EventService.addFavorite(eventId);
+			} else {
+				EventService.removeFavorite(eventId);
+			}
 		};
 
 		$scope.onPublicChanged = function(event, pub) {
 			console.log('onPublicChanged: ', event, pub);
 			event.isPublic = pub;
-			$q.when(UserService.get()).then(function(user) {
-				var username = user.username;
-				$q.when($scope.events).then(function(events) {
-					events[event._id].isPublic = pub;
-					EventService.updateEvent(events[event._id]);
-				});
+			$q.when($scope.events).then(function(events) {
+				events[event._id].isPublic = pub;
+				EventService.updateEvent(events[event._id]);
 			});
 		};
 
@@ -226,32 +195,31 @@
 			}
 		});
 
-		$q.when(UserService.get()).then(function(user) {
-			if (user && user.username && user.username !== '') {
-				$rootScope.actions.push({
-					'name': 'Add Event',
-					'iconClass': 'add',
-					'launch': function() {
-						log.info('launching modal');
-						var modalInstance = $modal.open({
-							templateUrl:'edit-event.html',
-							controller:'CMEditEventCtrl'
+		$rootScope.actions = [];
+		if (UserService.getUsername() && UserService.getUsername() !== '') {
+			$rootScope.actions.push({
+				'name': 'Add Event',
+				'iconClass': 'add',
+				'launch': function() {
+					log.info('launching modal');
+					var modalInstance = $modal.open({
+						templateUrl:'edit-event.html',
+						controller:'CMEditEventCtrl'
+					});
+					modalInstance.result.then(function(result) {
+						log.info("Save finished!");
+						console.log(result);
+						$q.all([EventService.addEvent(result), $scope.events]).then(function(results) {
+							var added = results[0];
+							var events = results[1];
+							events[added._id] = added;
 						});
-						modalInstance.result.then(function(result) {
-							log.info("Save finished!");
-							console.log(result);
-							$q.all([EventService.addEvent(result), $scope.events]).then(function(results) {
-								var added = results[0];
-								var events = results[1];
-								events[added._id] = added;
-							});
-						}, function() {
-							log.warn("Add canceled!");
-						});
-					}
-				});
-			}
-		});
+					}, function() {
+						log.warn("Add canceled!");
+					});
+				}
+			});
+		}
 
 		$scope.refresh();
 	}]);

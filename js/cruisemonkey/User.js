@@ -13,6 +13,13 @@
 			'loggedIn': function() {
 				return user.loggedIn;
 			},
+			'getUsername': function() {
+				if (user.loggedIn) {
+					return user.username;
+				} else {
+					return undefined;
+				}
+			},
 			'get': function() {
 				return angular.copy(user);
 			},

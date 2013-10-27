@@ -10,7 +10,7 @@
 		
 		db.changes({
 			onChange: function(change) {
-				console.log('change: ', change);
+				/* console.log('change: ', change); */
 				if (change.deleted) {
 					$rootScope.$broadcast('documentDeleted', change);
 				} else {

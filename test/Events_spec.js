@@ -1,12 +1,13 @@
 describe('Events', function() {
-	var log       = null;
-	var service   = null;
-	var db        = null;
-	
-	var dbName    = 'cmtest';
+	var log         = null;
+	var service     = null;
+	var userService = null;
+	var db          = null;
+	var $q          = null;
 
-	var async     = new AsyncSpec(this);
-	
+	var dbName      = 'cmtest';
+	var async       = new AsyncSpec(this);
+
 	async.beforeEach(function(done) {
 		console.log('destroying database ' + dbName);
 		Pouch.destroy(dbName, function(err) {
@@ -30,10 +31,12 @@ describe('Events', function() {
 
 
 	async.beforeEach(function(done) {
-		inject(['LoggingService', 'EventService', 'Database', function(LoggingService, EventService, Database) {
-			log     = LoggingService;
-			service = EventService;
-			db      = Database;
+		inject(['LoggingService', 'EventService', 'UserService', 'Database', '$q', function(LoggingService, EventService, UserService, Database, q) {
+			log         = LoggingService;
+			service     = EventService;
+			userService = UserService;
+			db          = Database;
+			$q          = q;
 		}]);
 		done();
 	});
@@ -120,11 +123,11 @@ describe('Events', function() {
 	});
 
 	describe("#getPublicEvents", function() {
-		async.it('should return only the events marked isPublic', function(done) {
+		async.it('should return only the events marked isPublic which are not official', function(done) {
 			expect(db).not.toBeNull();
 			expect(service.getPublicEvents).not.toBeUndefined();
 			service.getPublicEvents().then(function(result) {
-				expect(result.length).toEqual(3);
+				expect(result.length).toEqual(2);
 				done();
 			});
 		});
@@ -132,12 +135,22 @@ describe('Events', function() {
 
 	describe("#getUserEvents", function() {
 		async.it('should return only the events for user "ranger"', function(done) {
+			userService.save({'loggedIn': true, 'username':'ranger', 'password':'whatever'});
 			expect(db).not.toBeNull();
 			expect(service.getUserEvents).not.toBeUndefined();
-			service.getUserEvents('ranger').then(function(result) {
+			$q.when(service.getUserEvents()).then(function(result) {
 				expect(result.length).toEqual(2);
 				expect(result[0]._id).toBe('2');
 				expect(result[1]._id).toBe('4');
+				done();
+			});
+		});
+		async.it('should not return any events if the user is not logged in', function(done) {
+			userService.save({'loggedIn': false, 'username':'ranger', 'password':'whatever'});
+			expect(db).not.toBeNull();
+			expect(service.getUserEvents).not.toBeUndefined();
+			$q.when(service.getUserEvents()).then(function(result) {
+				expect(result.length).toEqual(0);
 				done();
 			});
 		});
@@ -145,9 +158,10 @@ describe('Events', function() {
 
 	describe("#getMyEvents", function() {
 		async.it('should return only the events that user "ranger" has created or favorited', function(done) {
+			userService.save({'loggedIn': true, 'username':'ranger', 'password':'whatever'});
 			expect(db).not.toBeNull();
 			expect(service.getMyEvents).not.toBeUndefined();
-			service.getMyEvents('ranger').then(function(result) {
+			service.getMyEvents().then(function(result) {
 				expect(result.length).toEqual(3);
 				expect(result[0]._id).toBe('2');
 				expect(result[1]._id).toBe('4');
@@ -156,27 +170,89 @@ describe('Events', function() {
 				done();
 			});
 		});
+		async.it('should return nothing when the user is not logged in', function(done) {
+			userService.save({'loggedIn': false, 'username':'ranger', 'password':'whatever'});
+			expect(db).not.toBeNull();
+			expect(service.getMyEvents).not.toBeUndefined();
+			service.getMyEvents().then(function(result) {
+				expect(result.length).toEqual(0);
+				done();
+			});
+		});
 	});
 	
 	describe('#getMyFavorites', function() {
 		async.it('should return a list of favorited ids', function(done) {
+			userService.save({'loggedIn': true, 'username':'ranger', 'password':'whatever'});
 			expect(db).not.toBeNull();
 			expect(service.getMyFavorites).not.toBeUndefined();
-			service.getMyFavorites('ranger').then(function(result) {
+			service.getMyFavorites().then(function(result) {
 				expect(result.length).toEqual(1);
 				expect(result[0]).toBe('3');
+				done();
+			});
+		});
+		async.it('should return nothing when the user is not logged in', function(done) {
+			userService.save({'loggedIn': false, 'username':'ranger', 'password':'whatever'});
+			expect(db).not.toBeNull();
+			expect(service.getMyFavorites).not.toBeUndefined();
+			service.getMyFavorites().then(function(result) {
+				expect(result.length).toEqual(0);
 				done();
 			});
 		});
 	});
 	
 	describe('#isFavorite', function() {
-		async.it('should return true if the given id is a favorite', function(done) {
+		async.it('should return true if the given id is a favorite while ranger is logged in', function(done) {
+			userService.save({'loggedIn': true, 'username':'ranger', 'password':'whatever'});
 			expect(db).not.toBeNull();
 			expect(service.isFavorite).not.toBeUndefined();
-			service.isFavorite('ranger', '3').then(function(result) {
+			service.isFavorite('3').then(function(result) {
 				expect(result).toBeTruthy();
-				service.isFavorite('bob', '3').then(function(result) {
+				done();
+			});
+		});
+		async.it('should return false if the given id is a favorite while ranger is not logged in', function(done) {
+			userService.save({'loggedIn': false, 'username':'ranger', 'password':'whatever'});
+			expect(db).not.toBeNull();
+			expect(service.isFavorite).not.toBeUndefined();
+			service.isFavorite('3').then(function(result) {
+				expect(result).not.toBeTruthy();
+				done();
+			});
+		});
+		async.it('should return false if the given id is a favorite of another user', function(done) {
+			userService.save({'loggedIn': true, 'username':'bob', 'password':'whatever'});
+			expect(db).not.toBeNull();
+			expect(service.isFavorite).not.toBeUndefined();
+			service.isFavorite('3').then(function(result) {
+				expect(result).not.toBeTruthy();
+				done();
+			});
+		});
+	});
+	
+	describe('#addFavorite', function() {
+		async.it('should create a new favorite in the database if ther user is logged in', function(done) {
+			userService.save({'loggedIn': true, 'username':'ranger', 'password':'whatever'});
+			expect(db).not.toBeNull();
+			expect(service.addFavorite).not.toBeUndefined();
+			service.addFavorite('1').then(function(result) {
+				expect(result).not.toBeUndefined();
+				service.isFavorite('1').then(function(result) {
+					expect(result).toBeTruthy();
+					done();
+				});
+			});
+		});
+		async.it('should not create a new favorite in the database if the user is not logged in', function(done) {
+			userService.save({'loggedIn': false, 'username':'ranger', 'password':'whatever'});
+			expect(db).not.toBeNull();
+			expect(service.addFavorite).not.toBeUndefined();
+			service.addFavorite('17').then(function(result) {
+				expect(result).not.toBeTruthy();
+				service.isFavorite('17').then(function(result) {
 					expect(result).not.toBeTruthy();
 					done();
 				});
@@ -184,31 +260,29 @@ describe('Events', function() {
 		});
 	});
 	
-	describe('#addFavorite', function() {
-		async.it('should create a new favorite in the database', function(done) {
+	describe('#removeFavorite', function() {
+		async.it('should not remove a favorite from the database if the user is not logged in', function(done) {
+			userService.save({'loggedIn': false, 'username':'ranger', 'password':'whatever'});
 			expect(db).not.toBeNull();
-			expect(service.addFavorite).not.toBeUndefined();
-			service.addFavorite('ranger', '1').then(function(result) {
-				expect(result).not.toBeUndefined();
-				service.isFavorite('ranger', '1').then(function(result) {
+			expect(service.removeFavorite).not.toBeUndefined();
+			service.removeFavorite('3').then(function(result) {
+				expect(result).toBeUndefined();
+				userService.save({'loggedIn': true, 'username':'ranger', 'password':'whatever'});
+				service.isFavorite('3').then(function(result) {
 					expect(result).toBeTruthy();
 					done();
 				});
-			})
+			});
 		});
-	});
-	
-	describe('#removeFavorite', function() {
-		async.it('should remove a favorite from the database', function(done) {
+		async.it('should remove a favorite from the database if the user is logged in', function(done) {
+			userService.save({'loggedIn': true, 'username':'ranger', 'password':'whatever'});
 			expect(db).not.toBeNull();
 			expect(service.removeFavorite).not.toBeUndefined();
-			service.addFavorite('ranger', '1').then(function(result) {
-				service.removeFavorite('ranger', '3').then(function(result) {
-					expect(result).not.toBeUndefined();
-					service.isFavorite('ranger', '3').then(function(result) {
-						expect(result).not.toBeTruthy();
-						done();
-					});
+			service.removeFavorite('3').then(function(result) {
+				expect(result).not.toBeUndefined();
+				service.isFavorite('3').then(function(result) {
+					expect(result).not.toBeTruthy();
+					done();
 				});
 			});
 		});
