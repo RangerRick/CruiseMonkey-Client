@@ -88,7 +88,7 @@ if (window.applicationCache && window.applicationCache.addEventListener) {
 				notifyUpdate('Checking for updates...');
 			} else if (window.applicationCache.status == window.applicationCache.DOWNLOADING) {
 				// an update has started downloading
-				notifyUpdate('An update to CruiseMonkey has been found.<br/>Please wait while we update.');
+				notifyUpdate('CruiseMonkey has an update.<br/>Please wait... Downloading.');
 			} else if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
 				// Browser downloaded a new app cache.
 				// Swap it in and reload the page to get the new hotness.
