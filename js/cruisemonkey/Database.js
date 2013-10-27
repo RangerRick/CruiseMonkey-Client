@@ -6,20 +6,33 @@
 		log.info('Initializing CruiseMonkey database: ' + databaseName);
 
 		var db = new Pouch(databaseName);
-		var timeout = null;
-		
-		db.changes({
-			onChange: function(change) {
-				/* console.log('change: ', change); */
-				if (change.deleted) {
-					$rootScope.$broadcast('cm.documentDeleted', change);
-				} else {
-					$rootScope.$broadcast('cm.documentUpdated', change.doc);
-				}
-			},
-			continuous: true,
-			include_docs: true
-		});
+		var timeout = null,
+			watchingChanges = false;
+
+		db.compact();
+
+		var databaseReady = function() {
+			if (watchingChanges) {
+				return;
+			}
+
+			watchingChanges = true;
+			
+			log.info('Watching for document changes.');
+			db.changes({
+				onChange: function(change) {
+					console.log('change: ', change);
+					if (change.deleted) {
+						$rootScope.$broadcast('cm.documentDeleted', change);
+					} else {
+						$rootScope.$broadcast('cm.documentUpdated', change.doc);
+					}
+				},
+				continuous: true,
+				include_docs: true
+			});
+			$rootScope.$broadcast('cm.databaseReady');
+		};
 
 		var startReplication = function() {
 			if (replicate) {
@@ -27,6 +40,19 @@
 					log.warn('Replication has already been started!  Timeout ID = ' + timeout);
 					return false;
 				} else {
+					var doReplicate = function() {
+						log.info('Attempting to replicate with ' + host);
+						db.replicate.to(host, {
+							'complete': function() {
+								db.replicate.from(host, {
+									'complete': function() {
+										databaseReady();
+									}
+								});
+							}
+						});
+					};
+
 					if (!databaseHost) {
 						databaseHost = $location.host();
 					}
@@ -34,14 +60,15 @@
 					log.info('Enabling replication with ' + host);
 
 					timeout = $interval(function() {
-						log.info('Attempting to replicate with ' + host);
-						db.replicate.to(host, {});
-						db.replicate.from(host, {});
+						doReplicate();
 					}, 10000);
+					doReplicate();
+
 					return true;
 				}
 			} else {
 				log.warn('startReplication() called, but replication is not enabled!');
+				registerForChanges();
 			}
 			return false;
 		};

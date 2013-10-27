@@ -105,31 +105,31 @@
 	'use strict';
 
 	angular.module('cruisemonkey.controllers.Events', ['ngRoute', 'cruisemonkey.User', 'cruisemonkey.Events', 'cruisemonkey.Logging', 'ui.bootstrap.modal'])
-	.filter('orderObjectBy', function(){
-	 return function(input, attribute) {
-	    if (!angular.isObject(input)) return input;
+	.filter('orderObjectBy', function() {
+		return function(input, attribute) {
+			if (!angular.isObject(input)) return input;
 
-	    var array = [];
-	    for(var objectKey in input) {
-	        array.push(input[objectKey]);
-	    }
+			var array = [];
+			for(var objectKey in input) {
+				array.push(input[objectKey]);
+			}
 
-		if (attribute === 'start' || attribute === 'end') {
-			array.sort(function(a, b) {
-				var ad = moment(a[attribute]).valueOf();
-				var bd = moment(b[attribute]).valueOf();
-				return ad > bd ? 1 : ad < bd ? -1 : 0;
-			});
-		} else {
-		    array.sort(function(a, b){
-				var alc = a[attribute].toLowerCase(),
-					blc = b[attribute].toLowerCase();
-				return alc > blc ? 1 : alc < blc ? -1 : 0;
-		    });
-		}
+			if (attribute === 'start' || attribute === 'end') {
+				array.sort(function(a, b) {
+					var ad = moment(a[attribute]).valueOf(),
+						bd = moment(b[attribute]).valueOf();
+					return ad > bd ? 1 : ad < bd ? -1 : 0;
+				});
+			} else {
+				array.sort(function(a, b){
+					var alc = a[attribute].toLowerCase(),
+						blc = b[attribute].toLowerCase();
+					return alc > blc ? 1 : alc < blc ? -1 : 0;
+				});
+			}
 
-	    return array;
-	 }
+			return array;
+		};
 	})
 	.controller('CMEditEventCtrl', ['$q', '$scope', '$rootScope', '$modal', 'UserService', 'LoggingService', function($q, $scope, $rootScope, $modal, UserService, log) {
 		log.info('Initializing CMEditEventCtrl');
@@ -417,20 +417,33 @@
 		log.info('Initializing CruiseMonkey database: ' + databaseName);
 
 		var db = new Pouch(databaseName);
-		var timeout = null;
-		
-		db.changes({
-			onChange: function(change) {
-				/* console.log('change: ', change); */
-				if (change.deleted) {
-					$rootScope.$broadcast('cm.documentDeleted', change);
-				} else {
-					$rootScope.$broadcast('cm.documentUpdated', change.doc);
-				}
-			},
-			continuous: true,
-			include_docs: true
-		});
+		var timeout = null,
+			watchingChanges = false;
+
+		db.compact();
+
+		var databaseReady = function() {
+			if (watchingChanges) {
+				return;
+			}
+
+			watchingChanges = true;
+			
+			log.info('Watching for document changes.');
+			db.changes({
+				onChange: function(change) {
+					console.log('change: ', change);
+					if (change.deleted) {
+						$rootScope.$broadcast('cm.documentDeleted', change);
+					} else {
+						$rootScope.$broadcast('cm.documentUpdated', change.doc);
+					}
+				},
+				continuous: true,
+				include_docs: true
+			});
+			$rootScope.$broadcast('cm.databaseReady');
+		};
 
 		var startReplication = function() {
 			if (replicate) {
@@ -438,6 +451,19 @@
 					log.warn('Replication has already been started!  Timeout ID = ' + timeout);
 					return false;
 				} else {
+					var doReplicate = function() {
+						log.info('Attempting to replicate with ' + host);
+						db.replicate.to(host, {
+							'complete': function() {
+								db.replicate.from(host, {
+									'complete': function() {
+										databaseReady();
+									}
+								});
+							}
+						});
+					};
+
 					if (!databaseHost) {
 						databaseHost = $location.host();
 					}
@@ -445,14 +471,15 @@
 					log.info('Enabling replication with ' + host);
 
 					timeout = $interval(function() {
-						log.info('Attempting to replicate with ' + host);
-						db.replicate.to(host, {});
-						db.replicate.from(host, {});
+						doReplicate();
 					}, 10000);
+					doReplicate();
+
 					return true;
 				}
 			} else {
 				log.warn('startReplication() called, but replication is not enabled!');
+				registerForChanges();
 			}
 			return false;
 		};
@@ -551,18 +578,25 @@
 			}
 		};
 
-		/* invalidate the cache whenever documents are updated or the user logs in/out */
-		$rootScope.$on('cm.documentDeleted', function() {
-			resetEventCache();
+		var listeners = [],
+			databaseReady = false;
+
+		/* invalidate the cache whenever things affect the model */
+		angular.forEach(['cm.databaseReady', 'cm.documentDeleted', 'cm.documentUpdated', 'cm.loggedIn', 'cm.loggedOut'], function(value) {
+			listeners.push($rootScope.$on(value, function() {
+				if (value === 'cm.databaseReady') {
+					databaseReady = true;
+				}
+				if (databaseReady) {
+					resetEventCache();
+				}
+			}));
 		});
-		$rootScope.$on('cm.documentUpdated', function() {
-			resetEventCache();
-		});
-		$rootScope.$on('cm.loggedIn', function() {
-			resetEventCache();
-		});
-		$rootScope.$on('cm.loggedOut', function() {
-			resetEventCache();
+
+		$rootScope.$on('$destroy', function() {
+			angular.forEach(listeners, function(listener) {
+				listener();
+			});
 		});
 
 		var doQuery = function(map, options, cacheKey) {

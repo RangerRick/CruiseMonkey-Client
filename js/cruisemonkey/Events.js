@@ -32,18 +32,25 @@
 			}
 		};
 
-		/* invalidate the cache whenever documents are updated or the user logs in/out */
-		$rootScope.$on('cm.documentDeleted', function() {
-			resetEventCache();
+		var listeners = [],
+			databaseReady = false;
+
+		/* invalidate the cache whenever things affect the model */
+		angular.forEach(['cm.databaseReady', 'cm.documentDeleted', 'cm.documentUpdated', 'cm.loggedIn', 'cm.loggedOut'], function(value) {
+			listeners.push($rootScope.$on(value, function() {
+				if (value === 'cm.databaseReady') {
+					databaseReady = true;
+				}
+				if (databaseReady) {
+					resetEventCache();
+				}
+			}));
 		});
-		$rootScope.$on('cm.documentUpdated', function() {
-			resetEventCache();
-		});
-		$rootScope.$on('cm.loggedIn', function() {
-			resetEventCache();
-		});
-		$rootScope.$on('cm.loggedOut', function() {
-			resetEventCache();
+
+		$rootScope.$on('$destroy', function() {
+			angular.forEach(listeners, function(listener) {
+				listener();
+			});
 		});
 
 		var doQuery = function(map, options, cacheKey) {
