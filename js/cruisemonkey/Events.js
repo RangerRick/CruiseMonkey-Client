@@ -2,7 +2,7 @@
 	'use strict';
 
 	angular.module('cruisemonkey.Events', ['cruisemonkey.Database', 'cruisemonkey.User', 'cruisemonkey.Logging'])
-	.factory('EventService', ['$q', '$rootScope', 'Database', 'UserService', 'LoggingService', function($q, $rootScope, db, UserService, log) {
+	.factory('EventService', ['$q', '$rootScope', '$timeout', 'Database', 'UserService', 'LoggingService', function($q, $rootScope, $timeout, db, UserService, log) {
 		var stringifyDate = function(date) {
 			if (date === null || date === undefined) {
 				return undefined;
@@ -10,12 +10,26 @@
 			return moment(date).format("YYYY-MM-DD HH:mm");
 		};
 
+		var refreshing = false;
+
 		$rootScope._eventCache = {};
 		var resetEventCache = function() {
 			$rootScope._eventCache = {};
-			$q.all([getOfficialEvents(), getPublicEvents(), getMyEvents()]).then(function() {
-				$rootScope.$broadcast('cm.eventCacheUpdated');
-			});
+
+			if (refreshing) {
+				return;
+			}
+			refreshing = true;
+			
+			$timeout(function() {
+				$q.all([getOfficialEvents(), getPublicEvents(), getMyEvents()]).then(function(values) {
+					$rootScope._eventCache['official'] = values[0];
+					$rootScope._eventCache['public']   = values[1];
+					$rootScope._eventCache['my']       = values[2];
+					refreshing = false;
+					$rootScope.$broadcast('cm.eventCacheUpdated');
+				});
+			}, 250);
 		};
 
 		var updateEventCache = function(cacheKey, results) {

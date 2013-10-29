@@ -169,7 +169,7 @@
 			console.log($scope.event);
 		}
 	}])
-	.controller('CMEventCtrl', ['$scope', '$rootScope', '$timeout', '$routeParams', '$location', '$q', '$modal', '$templateCache', 'UserService', 'EventService', 'LoggingService', function($scope, $rootScope, $timeout, $routeParams, $location, $q, $modal, $templateCache, UserService, EventService, log) {
+	.controller('CMEventCtrl', ['$scope', '$rootScope', '$timeout', '$routeParams', '$location', '$q', '$modal', '$templateCache', 'UserService', 'EventService', 'LoggingService', 'events', function($scope, $rootScope, $timeout, $routeParams, $location, $q, $modal, $templateCache, UserService, EventService, log, events) {
 		log.info('Initializing CMEventCtrl');
 
 		$scope.eventType = $routeParams.eventType;
@@ -189,49 +189,47 @@
 			}
 		};
 
-		if (!$scope.events) {
-			$scope.events = {};
-		}
-
 		$scope.refresh = function() {
 			if (refreshing) { return; }
 			refreshing = true;
 
-			log.info('Refreshing event list.');
+			$timeout(function() {
+				log.info('Refreshing event list.');
 
-			var func;
-			if ($routeParams.eventType === 'official') {
-				func = EventService.getOfficialEvents;
-			} else if ($routeParams.eventType === 'unofficial') {
-				func = EventService.getPublicEvents;
-			} else if ($routeParams.eventType === 'my') {
-				func = EventService.getMyEvents;
-			} else {
-				log.warn('unknown event type: ' + $routeParams.eventType);
-			}
-
-			$q.when(func()).then(function(events) {
-				var i, ret = {};
-				for (i = 0; i < events.length; i++) {
-					var e = events[i];
-					if (!e.hasOwnProperty('isFavorite')) {
-						e.isFavorite = false;
-					}
-					ret[e._id] = e;
+				var func;
+				if ($routeParams.eventType === 'official') {
+					func = EventService.getOfficialEvents;
+				} else if ($routeParams.eventType === 'unofficial') {
+					func = EventService.getPublicEvents;
+				} else if ($routeParams.eventType === 'my') {
+					func = EventService.getMyEvents;
+				} else {
+					log.warn('unknown event type: ' + $routeParams.eventType);
 				}
 
-				refreshing = false;
-				initializing = false;
-
-				angular.forEach(ret, function(value, key) {
-					$scope.events[key] = value;
-				});
-				angular.forEach($scope.events, function(value, key) {
-					if (!ret[key]) {
-						delete $scope.events[key];
+				$q.when(func()).then(function(events) {
+					var i, ret = {};
+					for (i = 0; i < events.length; i++) {
+						var e = events[i];
+						if (!e.hasOwnProperty('isFavorite')) {
+							e.isFavorite = false;
+						}
+						ret[e._id] = e;
 					}
+
+					refreshing = false;
+					initializing = false;
+
+					angular.forEach(ret, function(value, key) {
+						$scope.events[key] = value;
+					});
+					angular.forEach($scope.events, function(value, key) {
+						if (!ret[key]) {
+							delete $scope.events[key];
+						}
+					});
 				});
-			});
+			}, 250);
 		};
 
 		$scope.fuzzy = function(date) {
@@ -297,7 +295,7 @@
 
 		$scope.$on('cm.eventCacheUpdated', function() {
 			if (!initializing) {
-				$scope.refresh();
+				// $scope.refresh();
 			}
 		});
 
@@ -327,7 +325,8 @@
 			});
 		}
 
-		$timeout($scope.refresh, 0);
+		/* console.log('events = ', events); */
+		$scope.events = events;
 	}]);
 }());
 (function() {
@@ -551,7 +550,7 @@
 	'use strict';
 
 	angular.module('cruisemonkey.Events', ['cruisemonkey.Database', 'cruisemonkey.User', 'cruisemonkey.Logging'])
-	.factory('EventService', ['$q', '$rootScope', 'Database', 'UserService', 'LoggingService', function($q, $rootScope, db, UserService, log) {
+	.factory('EventService', ['$q', '$rootScope', '$timeout', 'Database', 'UserService', 'LoggingService', function($q, $rootScope, $timeout, db, UserService, log) {
 		var stringifyDate = function(date) {
 			if (date === null || date === undefined) {
 				return undefined;
@@ -559,12 +558,26 @@
 			return moment(date).format("YYYY-MM-DD HH:mm");
 		};
 
+		var refreshing = false;
+
 		$rootScope._eventCache = {};
 		var resetEventCache = function() {
 			$rootScope._eventCache = {};
-			$q.all([getOfficialEvents(), getPublicEvents(), getMyEvents()]).then(function() {
-				$rootScope.$broadcast('cm.eventCacheUpdated');
-			});
+
+			if (refreshing) {
+				return;
+			}
+			refreshing = true;
+			
+			$timeout(function() {
+				$q.all([getOfficialEvents(), getPublicEvents(), getMyEvents()]).then(function(values) {
+					$rootScope._eventCache['official'] = values[0];
+					$rootScope._eventCache['public']   = values[1];
+					$rootScope._eventCache['my']       = values[2];
+					refreshing = false;
+					$rootScope.$broadcast('cm.eventCacheUpdated');
+				});
+			}, 250);
 		};
 
 		var updateEventCache = function(cacheKey, results) {
@@ -1191,7 +1204,42 @@
 			})
 			.when('/events/:eventType', {
 				templateUrl: 'template/event-list.html',
-				controller: 'CMEventCtrl'
+				controller: 'CMEventCtrl',
+				resolve: {
+					events: ['$q', '$route', '$timeout', 'EventService', 'LoggingService', function($q, $route, $timeout, EventService, log) {
+						var func;
+						var eventType = $route.current.params.eventType;
+						if (eventType === 'official') {
+							func = EventService.getOfficialEvents;
+						} else if (eventType === 'unofficial') {
+							func = EventService.getPublicEvents;
+						} else if (eventType === 'my') {
+							func = EventService.getMyEvents;
+						} else {
+							log.warn('unknown event type: ' + eventType);
+						}
+
+						var response = $q.defer();
+						if (func) {
+							$q.when(func()).then(function(events) {
+								var i, ret = {};
+								for (i = 0; i < events.length; i++) {
+									var e = events[i];
+									if (!e.hasOwnProperty('isFavorite')) {
+										e.isFavorite = false;
+									}
+									ret[e._id] = e;
+								}
+								response.resolve(ret);
+							});
+						} else {
+							$timeout(function() {
+								response.reject('unknown event type');
+							}, 0);
+						}
+						return response.promise;
+					}]
+				}
 			})
 			.when('/deck-plans', {
 				redirectTo: '/deck-plans/2/'
@@ -1262,7 +1310,6 @@
 						if (index !== -1) {
 							href = href.substring(href.indexOf('#') + 1);
 						}
-						console.log('href = ' + href + ', index = ' + index + ', path = ' + path);
 						if (href === '') {
 							angular.element(li).removeClass('selected');
 						} else if (path.startsWith(href)) {

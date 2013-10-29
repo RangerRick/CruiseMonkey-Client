@@ -35,7 +35,42 @@
 			})
 			.when('/events/:eventType', {
 				templateUrl: 'template/event-list.html',
-				controller: 'CMEventCtrl'
+				controller: 'CMEventCtrl',
+				resolve: {
+					events: ['$q', '$route', '$timeout', 'EventService', 'LoggingService', function($q, $route, $timeout, EventService, log) {
+						var func;
+						var eventType = $route.current.params.eventType;
+						if (eventType === 'official') {
+							func = EventService.getOfficialEvents;
+						} else if (eventType === 'unofficial') {
+							func = EventService.getPublicEvents;
+						} else if (eventType === 'my') {
+							func = EventService.getMyEvents;
+						} else {
+							log.warn('unknown event type: ' + eventType);
+						}
+
+						var response = $q.defer();
+						if (func) {
+							$q.when(func()).then(function(events) {
+								var i, ret = {};
+								for (i = 0; i < events.length; i++) {
+									var e = events[i];
+									if (!e.hasOwnProperty('isFavorite')) {
+										e.isFavorite = false;
+									}
+									ret[e._id] = e;
+								}
+								response.resolve(ret);
+							});
+						} else {
+							$timeout(function() {
+								response.reject('unknown event type');
+							}, 0);
+						}
+						return response.promise;
+					}]
+				}
 			})
 			.when('/deck-plans', {
 				redirectTo: '/deck-plans/2/'
@@ -106,7 +141,6 @@
 						if (index !== -1) {
 							href = href.substring(href.indexOf('#') + 1);
 						}
-						console.log('href = ' + href + ', index = ' + index + ', path = ' + path);
 						if (href === '') {
 							angular.element(li).removeClass('selected');
 						} else if (path.startsWith(href)) {

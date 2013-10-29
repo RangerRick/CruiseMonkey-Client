@@ -66,7 +66,7 @@
 			console.log($scope.event);
 		}
 	}])
-	.controller('CMEventCtrl', ['$scope', '$rootScope', '$timeout', '$routeParams', '$location', '$q', '$modal', '$templateCache', 'UserService', 'EventService', 'LoggingService', function($scope, $rootScope, $timeout, $routeParams, $location, $q, $modal, $templateCache, UserService, EventService, log) {
+	.controller('CMEventCtrl', ['$scope', '$rootScope', '$timeout', '$routeParams', '$location', '$q', '$modal', '$templateCache', 'UserService', 'EventService', 'LoggingService', 'events', function($scope, $rootScope, $timeout, $routeParams, $location, $q, $modal, $templateCache, UserService, EventService, log, events) {
 		log.info('Initializing CMEventCtrl');
 
 		$scope.eventType = $routeParams.eventType;
@@ -86,49 +86,47 @@
 			}
 		};
 
-		if (!$scope.events) {
-			$scope.events = {};
-		}
-
 		$scope.refresh = function() {
 			if (refreshing) { return; }
 			refreshing = true;
 
-			log.info('Refreshing event list.');
+			$timeout(function() {
+				log.info('Refreshing event list.');
 
-			var func;
-			if ($routeParams.eventType === 'official') {
-				func = EventService.getOfficialEvents;
-			} else if ($routeParams.eventType === 'unofficial') {
-				func = EventService.getPublicEvents;
-			} else if ($routeParams.eventType === 'my') {
-				func = EventService.getMyEvents;
-			} else {
-				log.warn('unknown event type: ' + $routeParams.eventType);
-			}
-
-			$q.when(func()).then(function(events) {
-				var i, ret = {};
-				for (i = 0; i < events.length; i++) {
-					var e = events[i];
-					if (!e.hasOwnProperty('isFavorite')) {
-						e.isFavorite = false;
-					}
-					ret[e._id] = e;
+				var func;
+				if ($routeParams.eventType === 'official') {
+					func = EventService.getOfficialEvents;
+				} else if ($routeParams.eventType === 'unofficial') {
+					func = EventService.getPublicEvents;
+				} else if ($routeParams.eventType === 'my') {
+					func = EventService.getMyEvents;
+				} else {
+					log.warn('unknown event type: ' + $routeParams.eventType);
 				}
 
-				refreshing = false;
-				initializing = false;
-
-				angular.forEach(ret, function(value, key) {
-					$scope.events[key] = value;
-				});
-				angular.forEach($scope.events, function(value, key) {
-					if (!ret[key]) {
-						delete $scope.events[key];
+				$q.when(func()).then(function(events) {
+					var i, ret = {};
+					for (i = 0; i < events.length; i++) {
+						var e = events[i];
+						if (!e.hasOwnProperty('isFavorite')) {
+							e.isFavorite = false;
+						}
+						ret[e._id] = e;
 					}
+
+					refreshing = false;
+					initializing = false;
+
+					angular.forEach(ret, function(value, key) {
+						$scope.events[key] = value;
+					});
+					angular.forEach($scope.events, function(value, key) {
+						if (!ret[key]) {
+							delete $scope.events[key];
+						}
+					});
 				});
-			});
+			}, 250);
 		};
 
 		$scope.fuzzy = function(date) {
@@ -194,7 +192,7 @@
 
 		$scope.$on('cm.eventCacheUpdated', function() {
 			if (!initializing) {
-				$scope.refresh();
+				// $scope.refresh();
 			}
 		});
 
@@ -224,6 +222,7 @@
 			});
 		}
 
-		$timeout($scope.refresh, 0);
+		/* console.log('events = ', events); */
+		$scope.events = events;
 	}]);
 }());
