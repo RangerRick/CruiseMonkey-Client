@@ -129,10 +129,12 @@
 				if (navigator.connection.addEventListener) {
 					log.info("Browser has native navigator.connection support.");
 					navigator.connection.addEventListener('change', handleConnectionTypeChange);
+					handleConnectionTypeChange();
 				} else {
 					log.info("Browser does not have native navigator.connection support.  Trying with phonegap.");
 					document.addEventListener('online', handleConnectionTypeChange);
 					document.addEventListener('offline', handleConnectionTypeChange);
+					handleConnectionTypeChange();
 				}
 			} else {
 				log.warn("Unsure how to handle connection management; starting replication and hoping for the best.");
