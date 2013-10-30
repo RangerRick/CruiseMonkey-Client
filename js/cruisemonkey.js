@@ -543,8 +543,8 @@
 			}
 		};
 
-		var handleConnectionTypeChange = function() {
-			if (navigator.connection.type !== undefined && Connection.WIFI !== undefined) {
+		var handleConnectionTypeChange = function(ev) {
+			if (navigator.connection.type !== undefined) {
 				console.log('Connection type is: ' + navigator.connection.type);
 				if (navigator.connection.type === Connection.NONE) {
 					stopReplication();
@@ -558,6 +558,9 @@
 				} else {
 					stopReplication();
 				}
+			} else {
+				log.info('Got a connection type event.');
+				console.log(ev);
 			}
 		};
 
