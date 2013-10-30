@@ -1095,6 +1095,43 @@
 		return "StringAppender";
 	};
 
+	function ConsoleAppender() {}
+
+	ConsoleAppender.prototype = new log4javascript.Appender();
+	ConsoleAppender.prototype.layout = new log4javascript.NullLayout();
+	ConsoleAppender.prototype.threshold = log4javascript.Level.DEBUG;
+
+	ConsoleAppender.prototype.append = function(loggingEvent) {
+		var appender = this;
+
+		var getFormattedMessage = function() {
+			var layout = appender.getLayout();
+			var formattedMessage = layout.format(loggingEvent);
+			if (layout.ignoresThrowable() && loggingEvent.exception) {
+				formattedMessage += loggingEvent.getThrowableStrRep();
+			}
+			return formattedMessage;
+		};
+
+		console.log(getFormattedMessage());
+	};
+
+	ConsoleAppender.prototype.group = function(name) {
+		if (console.group) {
+			console.group(name);
+		}
+	};
+
+	ConsoleAppender.prototype.groupEnd = function() {
+		if (console.groupEnd) {
+			console.groupEnd();
+		}
+	};
+
+	ConsoleAppender.prototype.toString = function() {
+		return "ConsoleAppender";
+	};
+
 	angular.module('cruisemonkey.Logging', ['cruisemonkey.Config'])
 	.factory('LoggingService', ['config.logging.useStringAppender', function(useStringAppender) {
 		console.log('initializing LoggingService');
@@ -1129,10 +1166,11 @@
 			}
 		};
 
+		var layout = new log4javascript.PatternLayout("%d{HH:mm:ss,SSS} [%-5p] %m");
 		if (useStringAppender) {
 			console.log('initializing StringAppender');
 			var stringAppender = new StringAppender();
-			stringAppender.setLayout(new log4javascript.PatternLayout("%d{HH:mm:ss,SSS} [%-5p] %m"));
+			stringAppender.setLayout(layout);
 			logger.addAppender(stringAppender);
 
 			ret.getLogHistory = function() {
@@ -1141,9 +1179,9 @@
 		} else {
 			console.log('skipping StringAppender');
 		}
-		
-		var appender = new log4javascript.BrowserConsoleAppender();
-		appender.setLayout(new log4javascript.PatternLayout("%d{HH:mm:ss,SSS} [%-5p] %m"));
+
+		var appender = new ConsoleAppender();
+		appender.setLayout(layout);
 		logger.addAppender(appender);
 
 		return ret;
