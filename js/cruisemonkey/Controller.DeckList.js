@@ -55,6 +55,33 @@
 			return true;
 		};
 
+		$rootScope.actions = [];
+		if ($scope.deck != 2) {
+			$rootScope.actions.push({
+				'name': 'Previous',
+				'iconClass': 'arrow-left4',
+				'launch': function() {
+					previous();
+				}
+			});
+		}
+		if ($scope.deck == 15) {
+			$rootScope.actions.push({
+				'name': 'Blank',
+				'iconClass': 'blank',
+				'launch': function() {
+				}
+			});
+		} else {
+			$rootScope.actions.push({
+				'name': 'Next',
+				'iconClass': 'arrow-right4',
+				'launch': function() {
+					next();
+				}
+			});
+		}
+
 		document.addEventListener('keydown', listener, true);
 		$scope.$on('$destroy', function() {
 			document.removeEventListener('keydown', listener, true);

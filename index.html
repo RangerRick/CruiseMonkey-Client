@@ -174,9 +174,11 @@ window.setTimeout(function() {
 	<mobile-frame ng-cloak>
 		<mobile-header ng-controller="CMHeaderCtrl">
 			<span class="title"><strong>{{title}}</strong></span>
-			<span class="actions" ng-repeat="action in actions">
-				<div class="action icon icon-{{action.iconClass}}" ng-click="action.launch()"></div>
-			</span>
+			<div class="actions">
+				<div ng-repeat="action in actions" class="action">
+					<div class="icon icon-{{action.iconClass}}" ng-click="action.launch()"></div>
+				</div>
+			</div>
 		</mobile-header>
 		<mobile-nav ng-controller="CMNavigationCtrl" ng-click="toggleDrawer()">
 			<ul class="nav" id="nav">

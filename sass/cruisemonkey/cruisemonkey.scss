@@ -106,20 +106,32 @@ a:hover {
 		position: absolute;
 		top: 4px;
 		right: 10px;
-		height: 40px;
-		z-index: 1;
+		height: 36px;
+		/* z-index: 1; */
+		display: block;
 
-		.icon-add {
+		.action {
+			position: relative;
 			-moz-user-select: none;
 			-webkit-user-select: none;
 			-ms-user-select: none;
 			user-select: none;
-			display: block;
-			background: url(../../icons/entypo/yellow/SVG/plus.svg) no-repeat;
+			display: inline-block;
 			background-position: center center;
 			background-size: 26px 26px;
 			width: 32px;
 			height: 32px;
+
+			.icon {
+				background-position: center center;
+				background-repeat: no-repeat;
+				background-size: 26px 26px;
+				width: 32px;
+				height: 32px;
+			}
+			.icon-add          { background-image: url(../../icons/entypo/yellow/SVG/plus.svg)         }
+			.icon-arrow-right4 { background-image: url(../../icons/entypo/yellow/SVG/arrow-right4.svg) }
+			.icon-arrow-left4  { background-image: url(../../icons/entypo/yellow/SVG/arrow-left4.svg)  }
 		}
 	}
 }
