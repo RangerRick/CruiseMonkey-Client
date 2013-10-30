@@ -1,8 +1,8 @@
 (function() {
 	'use strict';
 
-	angular.module('cruisemonkey.Database', ['cruisemonkey.Logging', 'cruisemonkey.Config', 'ngInterval'])
-	.factory('Database', ['$location', '$interval', '$timeout', '$rootScope', 'LoggingService', 'config.database.host', 'config.database.name', 'config.database.replicate', function($location, $interval, $timeout, $rootScope, log, databaseHost, databaseName, replicate) {
+	angular.module('cruisemonkey.Database', ['cruisemonkey.Logging', 'cruisemonkey.Config', 'ngInterval', 'angularLocalStorage'])
+	.factory('Database', ['$location', '$interval', '$timeout', '$rootScope', 'LoggingService', 'storage', 'config.database.host', 'config.database.name', 'config.database.replicate', function($location, $interval, $timeout, $rootScope, log, storage, databaseHost, databaseName, replicate) {
 		log.info('Initializing CruiseMonkey database: ' + databaseName);
 
 		var db = new Pouch(databaseName);
@@ -10,6 +10,12 @@
 			watchingChanges = false;
 
 		db.compact();
+
+		storage.bind($rootScope, '_seq', {
+			'defaultValue': 0,
+			'storeName': 'cm.db.sync'
+		});
+		console.log('last sequence: ' + $rootScope._seq);
 
 		var databaseReady = function() {
 			if (watchingChanges) {
@@ -19,9 +25,17 @@
 			watchingChanges = true;
 			
 			log.info('Watching for document changes.');
+			var seq = $rootScope._seq;
+			if (!seq) {
+				seq = 0;
+			}
 			db.changes({
+				since: seq,
 				onChange: function(change) {
 					console.log('change: ', change);
+					if (change.seq) {
+						$rootScope._seq = change.seq;
+					}
 					if (change.deleted) {
 						$rootScope.$broadcast('cm.documentDeleted', change);
 					} else {

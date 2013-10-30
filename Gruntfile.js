@@ -115,7 +115,7 @@ module.exports = function(grunt) {
 					'bower_components/angular-resource/angular-resource.js',
 					'bower_components/angular-mocks/angular-mocks.js',
 					'bower_components/angular-phonegap-ready/ready.js',
-					'bower_components/angular-localstorage/angular-local-storage.js',
+					'bower_components/angularLocalStorage/src/angularLocalStorage.js',
 					'js/angular-3rdparty/angular-interval.js',
 					'js/angular-3rdparty/angular-hammer.js',
 					'js/angular-3rdparty/ui-bootstrap-0.6.0.js',

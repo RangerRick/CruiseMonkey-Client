@@ -18,6 +18,7 @@
   "dependencies": {
     "log4javascript": "~1.4.5",
     "angular": "1.2.0-rc.2",
+    "angular-cookies": "1.2.0-rc.2",
     "angular-loader": "1.2.0-rc.2",
     "angular-route": "1.2.0-rc.2",
     "angular-resource": "1.2.0-rc.2",
@@ -30,7 +31,7 @@
     "angular-phonegap-ready": "~0.0.1",
     "html5shiv": "~3.7.0",
     "jquery": "~2.0.3",
-    "momentjs": "~2.3.1",
-    "angular-localstorage": "*"
+    "momentjs": "~2.4.0",
+    "angularLocalStorage": "~0.1.7"
   }
 }

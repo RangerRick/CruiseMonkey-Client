@@ -1,38 +1,41 @@
 (function() {
 	'use strict';
 
-	angular.module('cruisemonkey.User', [])
-	.factory('UserService', function() {
-		var user = {
-			'loggedIn': false,
-			'username': '',
-			'password': ''
-		};
+	angular.module('cruisemonkey.User', ['angularLocalStorage'])
+	.factory('UserService', function($rootScope, storage) {
+		storage.bind($rootScope, '_user', {
+			'defaultValue': {
+				'loggedIn': false,
+				'username': '',
+				'password': ''
+			},
+			'storeName': 'cm.user'
+		});
 
 		return {
 			'loggedIn': function() {
-				return user.loggedIn;
+				return $rootScope._user.loggedIn;
 			},
 			'getUsername': function() {
-				if (user.loggedIn) {
-					return user.username;
+				if ($rootScope._user.loggedIn) {
+					return $rootScope._user.username;
 				} else {
 					return undefined;
 				}
 			},
 			'get': function() {
-				return angular.copy(user);
+				return angular.copy($rootScope._user);
 			},
 			'save': function(newUser) {
-				user = angular.copy(newUser);
+				$rootScope._user = angular.copy(newUser);
 			},
 			'reset': function() {
-				user = {
+				$rootScope._user = {
 					'loggedIn': false,
 					'username': '',
 					'password': ''
 				};
-				return user;
+				return $rootScope._user;
 			}
 		};
 	});

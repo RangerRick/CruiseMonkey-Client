@@ -441,8 +441,8 @@
 (function() {
 	'use strict';
 
-	angular.module('cruisemonkey.Database', ['cruisemonkey.Logging', 'cruisemonkey.Config', 'ngInterval'])
-	.factory('Database', ['$location', '$interval', '$timeout', '$rootScope', 'LoggingService', 'config.database.host', 'config.database.name', 'config.database.replicate', function($location, $interval, $timeout, $rootScope, log, databaseHost, databaseName, replicate) {
+	angular.module('cruisemonkey.Database', ['cruisemonkey.Logging', 'cruisemonkey.Config', 'ngInterval', 'angularLocalStorage'])
+	.factory('Database', ['$location', '$interval', '$timeout', '$rootScope', 'LoggingService', 'storage', 'config.database.host', 'config.database.name', 'config.database.replicate', function($location, $interval, $timeout, $rootScope, log, storage, databaseHost, databaseName, replicate) {
 		log.info('Initializing CruiseMonkey database: ' + databaseName);
 
 		var db = new Pouch(databaseName);
@@ -450,6 +450,12 @@
 			watchingChanges = false;
 
 		db.compact();
+
+		storage.bind($rootScope, '_seq', {
+			'defaultValue': 0,
+			'storeName': 'cm.db.sync'
+		});
+		console.log('last sequence: ' + $rootScope._seq);
 
 		var databaseReady = function() {
 			if (watchingChanges) {
@@ -459,9 +465,17 @@
 			watchingChanges = true;
 			
 			log.info('Watching for document changes.');
+			var seq = $rootScope._seq;
+			if (!seq) {
+				seq = 0;
+			}
 			db.changes({
+				since: seq,
 				onChange: function(change) {
 					console.log('change: ', change);
+					if (change.seq) {
+						$rootScope._seq = change.seq;
+					}
 					if (change.deleted) {
 						$rootScope.$broadcast('cm.documentDeleted', change);
 					} else {
@@ -1139,38 +1153,41 @@
 (function() {
 	'use strict';
 
-	angular.module('cruisemonkey.User', [])
-	.factory('UserService', function() {
-		var user = {
-			'loggedIn': false,
-			'username': '',
-			'password': ''
-		};
+	angular.module('cruisemonkey.User', ['angularLocalStorage'])
+	.factory('UserService', function($rootScope, storage) {
+		storage.bind($rootScope, '_user', {
+			'defaultValue': {
+				'loggedIn': false,
+				'username': '',
+				'password': ''
+			},
+			'storeName': 'cm.user'
+		});
 
 		return {
 			'loggedIn': function() {
-				return user.loggedIn;
+				return $rootScope._user.loggedIn;
 			},
 			'getUsername': function() {
-				if (user.loggedIn) {
-					return user.username;
+				if ($rootScope._user.loggedIn) {
+					return $rootScope._user.username;
 				} else {
 					return undefined;
 				}
 			},
 			'get': function() {
-				return angular.copy(user);
+				return angular.copy($rootScope._user);
 			},
 			'save': function(newUser) {
-				user = angular.copy(newUser);
+				$rootScope._user = angular.copy(newUser);
 			},
 			'reset': function() {
-				user = {
+				$rootScope._user = {
 					'loggedIn': false,
 					'username': '',
 					'password': ''
 				};
-				return user;
+				return $rootScope._user;
 			}
 		};
 	});
