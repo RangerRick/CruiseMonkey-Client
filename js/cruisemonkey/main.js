@@ -35,7 +35,7 @@
 			})
 			.when('/events/:eventType', {
 				templateUrl: 'template/event-list.html',
-				controller: 'CMEventCtrl',
+				controller: 'CMEventCtrl' /*,
 				resolve: {
 					events: ['$q', '$route', '$timeout', 'EventService', 'LoggingService', function($q, $route, $timeout, EventService, log) {
 						var func;
@@ -70,7 +70,7 @@
 						}
 						return response.promise;
 					}]
-				}
+				} */
 			})
 			.when('/deck-plans', {
 				redirectTo: '/deck-plans/2/'

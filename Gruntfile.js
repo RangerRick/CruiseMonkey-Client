@@ -114,6 +114,7 @@ module.exports = function(grunt) {
 					'bower_components/angular-route/angular-route.js',
 					'bower_components/angular-resource/angular-resource.js',
 					'bower_components/angular-mocks/angular-mocks.js',
+					'bower_components/angular-cookies/angular-cookies.js',
 					'bower_components/angular-phonegap-ready/ready.js',
 					'bower_components/angularLocalStorage/src/angularLocalStorage.js',
 					'js/angular-3rdparty/angular-interval.js',

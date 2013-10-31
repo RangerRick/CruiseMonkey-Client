@@ -196,10 +196,10 @@
 			console.log($scope.event);
 		}
 	}])
-	.controller('CMEventCtrl', ['$scope', '$rootScope', '$timeout', '$routeParams', '$location', '$q', '$modal', '$templateCache', 'UserService', 'EventService', 'LoggingService', 'events', function($scope, $rootScope, $timeout, $routeParams, $location, $q, $modal, $templateCache, UserService, EventService, log, events) {
+	.controller('CMEventCtrl', ['$scope', '$rootScope', '$timeout', '$routeParams', '$location', '$q', '$modal', '$templateCache', 'UserService', 'EventService', 'LoggingService', function($scope, $rootScope, $timeout, $routeParams, $location, $q, $modal, $templateCache, UserService, EventService, log) {
 		log.info('Initializing CMEventCtrl');
 
-		$scope.eventType = $routeParams.eventType;
+		$rootScope.eventType = $routeParams.eventType;
 		$rootScope.title = $routeParams.eventType.capitalize() + ' Events';
 
 		var initializing = true,
@@ -351,9 +351,6 @@
 				}
 			});
 		}
-
-		/* console.log('events = ', events); */
-		$scope.events = events;
 	}]);
 }());
 (function() {
@@ -597,6 +594,8 @@
 
 	angular.module('cruisemonkey.Events', ['cruisemonkey.Database', 'cruisemonkey.User', 'cruisemonkey.Logging'])
 	.factory('EventService', ['$q', '$rootScope', '$timeout', 'Database', 'UserService', 'LoggingService', function($q, $rootScope, $timeout, db, UserService, log) {
+		log.info('Initializing EventService.');
+
 		var stringifyDate = function(date) {
 			if (date === null || date === undefined) {
 				return undefined;
@@ -604,64 +603,171 @@
 			return moment(date).format("YYYY-MM-DD HH:mm");
 		};
 
-		var refreshing = false;
-
-		$rootScope._eventCache = {};
-		var resetEventCache = function() {
-			$rootScope._eventCache = {};
-
-			if (refreshing) {
-				return;
-			}
-			refreshing = true;
-			
-			$timeout(function() {
-				$q.all([getOfficialEvents(), getPublicEvents(), getMyEvents()]).then(function(values) {
-					$rootScope._eventCache['official'] = values[0];
-					$rootScope._eventCache['public']   = values[1];
-					$rootScope._eventCache['my']       = values[2];
-					refreshing = false;
-					$rootScope.$broadcast('cm.eventCacheUpdated');
-				});
-			}, 250);
-		};
-
-		var updateEventCache = function(cacheKey, results) {
-			$rootScope._eventCache[cacheKey] = results;
-		};
-
-		var wrapReturn = function(func, cacheKey) {
-			if ($rootScope._eventCache.hasOwnProperty(cacheKey)) {
-				log.info('cache hit: ' + cacheKey);
-				return promisedResult($rootScope._eventCache[cacheKey]);
-			} else {
-				log.info('cache miss: ' + cacheKey);
-				return func();
-			}
-		};
+		var _favorites = {};
+		var _processedEvents = {};
 
 		var listeners = [],
 			databaseReady = false;
 
-		/* invalidate the cache whenever things affect the model */
-		angular.forEach(['cm.databaseReady', 'cm.documentDeleted', 'cm.documentUpdated', 'cm.loggedIn', 'cm.loggedOut'], function(value) {
-			listeners.push($rootScope.$on(value, function() {
-				if (value === 'cm.databaseReady') {
-					databaseReady = true;
+		var normalizeEvents = function(events) {
+			var i, ret = {};
+			for (i = 0; i < events.length; i++) {
+				var e = events[i];
+				if (e) {
+					if (!e.hasOwnProperty('isFavorite')) {
+						e.isFavorite = false;
+					}
+					ret[e._id] = e;
+				} else {
+					console.log('events = ', events);
+					console.log('event ' + i + ' was undefined!');
 				}
-				if (databaseReady) {
-					resetEventCache();
-				}
-			}));
-		});
+			}
+			return ret;
+		};
 
-		$rootScope.$on('$destroy', function() {
-			angular.forEach(listeners, function(listener) {
-				listener();
+		var updateEventCache = function() {
+			if (!_processedEvents[$rootScope.eventType]) {
+				return;
+			}
+			var events = _processedEvents[$rootScope.eventType];
+			if (events !== undefined) {
+				$rootScope.events = events;
+				$rootScope.$broadcast('cm.eventCacheUpdated');
+			}
+		};
+
+		var updateOfficialEventCache = function() {
+			var deferred = $q.defer();
+			$q.when(getOfficialEvents()).then(function(events) {
+				_processedEvents.official = normalizeEvents(events);
+				deferred.resolve(_processedEvents.official);
+				updateEventCache();
+			}, function(failure) {
+				deferred.reject(failure);
 			});
-		});
+			return deferred.promise;
+		};
 
-		var doQuery = function(map, options, cacheKey) {
+		var updatePublicEventCache = function() {
+			var deferred = $q.defer();
+			$q.when(getPublicEvents()).then(function(events) {
+				_processedEvents.public = normalizeEvents(events);
+				deferred.resolve(_processedEvents.public);
+				updateEventCache();
+			}, function(failure) {
+				deferred.reject(failure);
+			});
+			return deferred.promise;
+		};
+
+		var updateMyEventCache = function() {
+			var deferred = $q.defer();
+			$q.when(getMyEvents()).then(function(events) {
+				_processedEvents.my = normalizeEvents(events);
+				deferred.resolve(_processedEvents.my);
+				updateEventCache();
+			}, function(failure) {
+				deferred.reject(failure);
+			});
+			return deferred.promise;
+		};
+
+		var updateAllCaches = function() {
+			var deferred = $q.defer();
+			$q.all([updateOfficialEventCache(), updatePublicEventCache(), updateMyEventCache()]).then(function(finished) {
+				log.info('All caches updated.');
+				deferred.resolve();
+			}, function(failed) {
+				deferred.reject(failed);
+			});
+			return deferred.promise;
+		};
+
+		var getCached = function(type) {
+			if (_processedEvents[type]) {
+				return _processedEvents[type];
+			} else {
+				var deferred = $q.defer();
+				updateAllCaches().then(function(finished) {
+					deferred.resolve(finished);
+				}, function(failure) {
+					deferred.reject(failure);
+				});
+				return deferred.promise;
+			}
+		};
+
+		var updateDocument = function(doc) {
+			log.info('Events.updateDocument(' + doc._id + ')');
+			var id = doc._id;
+
+			if (doc.username === 'official') {
+				doc.isPublic = true;
+				if (!doc.isFavorite) {
+					doc.isFavorite = false;
+				}
+
+				if (_processedEvents.official) {
+					var existingOfficial = _processedEvents.official[id];
+					if (existingOfficial) {
+						doc.isFavorite = existingOfficial.isFavorite;
+					}
+				}
+
+				log.debug('Events.updateDocument(): putting ' + id + ' in official events.');
+				_processedEvents.official[id] = doc;
+			}
+
+			if (doc.isPublic && doc.username != 'official') {
+				if (!doc.isFavorite) {
+					doc.isFavorite = false;
+				}
+
+				if (_processedEvents.public) {
+					var existingPublic = _processedEvents.public[id];
+					if (existingPublic) {
+						doc.isFavorite = existingPublic.isFavorite;
+					}
+				}
+
+				log.debug('Events.updateDocument(): putting ' + id + ' in public events.');
+				_processedEvents.public[id] = doc;
+			}
+
+			var myExisting;
+			if (_processedEvents.my) {
+				myExisting = _processedEvents.my[id];
+			}
+			if (doc.username === UserService.getUsername() || (myExisting && myExisting.isFavorite)) {
+				if (myExisting) {
+					doc.isFavorite = myExisting.isFavorite;
+				}
+
+				log.debug('Events.updateDocument(): putting ' + id + ' in my events.');
+				_processedEvents.my[id] = doc;
+			}
+
+			updateEventCache();
+		};
+
+		var deleteDocument = function(doc) {
+			log.info('Events.deleteDocument(' + doc.id + ')');
+			var id = doc.id;
+			if (_favorites[id]) {
+				log.info(id + ' is a favorite.  Deleting the associated event (' + _favorites[id] + ')');
+				id = _favorites[id];
+				delete _favorites[id];
+			}
+			angular.forEach(_processedEvents, function(events, type) {
+				if (events[id]) {
+					log.debug('event[' + id + '] was found in type ' + type + ', deleting.');
+					delete events[id];
+				}
+			});
+		};
+
+		var doQuery = function(map, options) {
 			var deferred = $q.defer();
 			db.database.query({map: map}, options, function(err, res) {
 				$rootScope.$apply(function() {
@@ -673,7 +779,6 @@
 						for (i = 0; i < res.total_rows; i++) {
 							results.push(res.rows[i].value);
 						}
-						updateEventCache(cacheKey, results);
 						deferred.resolve(results);
 					}
 				});
@@ -713,7 +818,6 @@
 						} else {
 							eventToAdd._id = response.id;
 							eventToAdd._rev = response.rev;
-							// resetEventCache();
 							deferred.resolve(eventToAdd);
 						}
 					});
@@ -745,7 +849,6 @@
 						deferred.reject(err);
 					} else {
 						eventToSave._rev = response.rev;
-						// resetEventCache();
 						deferred.resolve(response);
 					}
 				});
@@ -761,7 +864,6 @@
 						log.error(err);
 						deferred.reject(err);
 					} else {
-						// resetEventCache();
 						deferred.resolve(response);
 					}
 				});
@@ -775,7 +877,7 @@
 				if (doc.type === 'event') {
 					emit(doc.username, doc);
 				}
-			}, {reduce: false}, 'all');
+			}, {reduce: false});
 		};
 
 		var getOfficialEvents = function() {
@@ -784,7 +886,7 @@
 				if (doc.type === 'event') {
 					emit(doc.username, doc);
 				}
-			}, {reduce: true, key: 'official'}, 'official');
+			}, {reduce: true, key: 'official'});
 		};
 
 		var getPublicEvents = function() {
@@ -793,7 +895,7 @@
 				if (doc.type === 'event' && doc.isPublic && doc.username !== 'official') {
 					emit(doc.username, doc);
 				}
-			}, {reduce: true}, 'public');
+			}, {reduce: true});
 		};
 
 		var getUserEvents = function() {
@@ -809,7 +911,7 @@
 				if (doc.type === 'event') {
 					emit(doc.username, doc);
 				}
-			}, {reduce: false, key: username}, 'user');
+			}, {reduce: false, key: username});
 		};
 
 		var getMyEvents = function() {
@@ -846,12 +948,13 @@
 						var results = [], i, entry;
 						for (i = 0; i < res.total_rows; i++) {
 							entry = res.rows[i];
-							if (entry.value.type === 'favorite') {
-								entry.doc.isFavorite = true;
+							if (entry.doc) {
+								if (entry.value.type === 'favorite') {
+									entry.doc.isFavorite = true;
+								}
+								results.push(entry.doc);
 							}
-							results.push(entry.doc);
 						}
-						updateEventCache('my', results);
 						deferred.resolve(results);
 					}
 				});
@@ -890,7 +993,6 @@
 						for (i = 0; i < res.total_rows; i++) {
 							results.push(res.rows[i].value);
 						}
-						updateEventCache('favorites', results);
 						deferred.resolve(results);
 					}
 				});
@@ -951,7 +1053,6 @@
 						log.error(err);
 						deferred.reject(err);
 					} else {
-						// resetEventCache();
 						deferred.resolve(res.id);
 					}
 				});
@@ -994,7 +1095,6 @@
 										log.error(err);
 										deferred.reject(err);
 									} else {
-										// resetEventCache();
 										deferred.resolve(res);
 									}
 								});
@@ -1008,15 +1108,49 @@
 			return deferred.promise;
 		};
 
+		var handleEvents = function(ev, doc) {
+			log.trace('got event: ', ev);
+			log.trace('document: ', doc);
+
+			if (ev.name === 'cm.databaseReady') {
+				// we've finished loading the database, prime the event cache
+				updateAllCaches();
+			} else if (ev.name === 'cm.documentUpdated') {
+				updateDocument(doc);
+			} else if (ev.name === 'cm.documentDeleted') {
+				deleteDocument(doc);
+			} else if (ev.name === 'cm.loggedIn' || ev.name === 'cm.loggedOut') {
+				log.info('User login changed.  Resetting cache.');
+				_processedEvents = {};
+				updateAllCaches();
+			} else {
+				log.warn("Unhandled event type: " + ev.name);
+			}
+		};
+
+		log.info('Initializing caches.');
+		updateAllCaches().then(function() {
+			/* invalidate the cache whenever things affect the model */
+			angular.forEach(['cm.databaseReady', 'cm.documentDeleted', 'cm.documentUpdated', 'cm.loggedIn', 'cm.loggedOut'], function(value) {
+				listeners.push($rootScope.$on(value, handleEvents));
+			});
+		});
+
+		$rootScope.$on('$destroy', function() {
+			angular.forEach(listeners, function(listener) {
+				listener();
+			});
+		});
+
 		return {
 			'addEvent': addEvent,
 			'updateEvent': updateEvent,
 			'removeEvent': removeEvent,
-			'getAllEvents': function() { return wrapReturn(getAllEvents, 'all'); },
-			'getOfficialEvents': function() { return wrapReturn(getOfficialEvents, 'official'); },
-			'getPublicEvents': function() { return wrapReturn(getPublicEvents, 'public'); },
-			'getUserEvents': function() { return wrapReturn(getUserEvents, 'user'); },
-			'getMyEvents': function() { return wrapReturn(getMyEvents, 'my'); },
+			'getAllEvents': getAllEvents,
+			'getOfficialEvents': getOfficialEvents,
+			'getPublicEvents': getPublicEvents,
+			'getUserEvents': getUserEvents,
+			'getMyEvents': getMyEvents,
 			'getMyFavorites': getMyFavorites,
 			'isFavorite': isFavorite,
 			'addFavorite': addFavorite,
@@ -1291,7 +1425,7 @@
 			})
 			.when('/events/:eventType', {
 				templateUrl: 'template/event-list.html',
-				controller: 'CMEventCtrl',
+				controller: 'CMEventCtrl' /*,
 				resolve: {
 					events: ['$q', '$route', '$timeout', 'EventService', 'LoggingService', function($q, $route, $timeout, EventService, log) {
 						var func;
@@ -1326,7 +1460,7 @@
 						}
 						return response.promise;
 					}]
-				}
+				} */
 			})
 			.when('/deck-plans', {
 				redirectTo: '/deck-plans/2/'
