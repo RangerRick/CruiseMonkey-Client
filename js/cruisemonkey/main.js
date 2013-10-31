@@ -43,7 +43,7 @@
 						if (eventType === 'official') {
 							func = EventService.getOfficialEvents;
 						} else if (eventType === 'unofficial') {
-							func = EventService.getPublicEvents;
+							func = EventService.getUnofficialEvents;
 						} else if (eventType === 'my') {
 							func = EventService.getMyEvents;
 						} else {
@@ -92,6 +92,17 @@
 			.setNavWidth(250);
 	}])
 	.run(['$rootScope', '$location', 'UserService', 'phonegapReady', function($rootScope, $location, UserService, phonegapReady) {
+		$rootScope.safeApply = function(fn) {
+			var phase = this.$root.$$phase;
+			if(phase === '$apply' || phase === '$digest') {
+				if(fn && (typeof(fn) === 'function')) {
+					fn();
+				}
+			} else {
+				this.$apply(fn);
+			}
+		};
+
 		phonegapReady(function() {
 			if (StatusBar) {
 				console.log('StatusBar exists, isVisible = ' + StatusBar.isVisible);

@@ -72,62 +72,7 @@
 		$rootScope.eventType = $routeParams.eventType;
 		$rootScope.title = $routeParams.eventType.capitalize() + ' Events';
 
-		var initializing = true,
-			refreshing = false;
-
-		$scope.safeApply = function(fn) {
-			var phase = this.$root.$$phase;
-			if(phase === '$apply' || phase === '$digest') {
-				if(fn && (typeof(fn) === 'function')) {
-					fn();
-				}
-			} else {
-				this.$apply(fn);
-			}
-		};
-
-		$scope.refresh = function() {
-			if (refreshing) { return; }
-			refreshing = true;
-
-			$timeout(function() {
-				log.info('Refreshing event list.');
-
-				var func;
-				if ($routeParams.eventType === 'official') {
-					func = EventService.getOfficialEvents;
-				} else if ($routeParams.eventType === 'unofficial') {
-					func = EventService.getPublicEvents;
-				} else if ($routeParams.eventType === 'my') {
-					func = EventService.getMyEvents;
-				} else {
-					log.warn('unknown event type: ' + $routeParams.eventType);
-				}
-
-				$q.when(func()).then(function(events) {
-					var i, ret = {};
-					for (i = 0; i < events.length; i++) {
-						var e = events[i];
-						if (!e.hasOwnProperty('isFavorite')) {
-							e.isFavorite = false;
-						}
-						ret[e._id] = e;
-					}
-
-					refreshing = false;
-					initializing = false;
-
-					angular.forEach(ret, function(value, key) {
-						$scope.events[key] = value;
-					});
-					angular.forEach($scope.events, function(value, key) {
-						if (!ret[key]) {
-							delete $scope.events[key];
-						}
-					});
-				});
-			}, 250);
-		};
+		EventService.init();
 
 		$scope.fuzzy = function(date) {
 			return moment(date).fromNow();
@@ -189,12 +134,6 @@
 				EventService.updateEvent(events[event._id]);
 			});
 		};
-
-		$scope.$on('cm.eventCacheUpdated', function() {
-			if (!initializing) {
-				// $scope.refresh();
-			}
-		});
 
 		$rootScope.actions = [];
 		if (UserService.getUsername() && UserService.getUsername() !== '') {

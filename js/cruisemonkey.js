@@ -54,17 +54,6 @@
 			next();
 		};
 
-		$scope.safeApply = function(fn) {
-			var phase = this.$root.$$phase;
-			if(phase === '$apply' || phase === '$digest') {
-				if(fn && (typeof(fn) === 'function')) {
-					fn();
-				}
-			} else {
-				this.$apply(fn);
-			}
-		};
-
 		var previous = function() {
 			$scope.safeApply(function() {
 				if ($scope.deck !== 2) {
@@ -202,62 +191,7 @@
 		$rootScope.eventType = $routeParams.eventType;
 		$rootScope.title = $routeParams.eventType.capitalize() + ' Events';
 
-		var initializing = true,
-			refreshing = false;
-
-		$scope.safeApply = function(fn) {
-			var phase = this.$root.$$phase;
-			if(phase === '$apply' || phase === '$digest') {
-				if(fn && (typeof(fn) === 'function')) {
-					fn();
-				}
-			} else {
-				this.$apply(fn);
-			}
-		};
-
-		$scope.refresh = function() {
-			if (refreshing) { return; }
-			refreshing = true;
-
-			$timeout(function() {
-				log.info('Refreshing event list.');
-
-				var func;
-				if ($routeParams.eventType === 'official') {
-					func = EventService.getOfficialEvents;
-				} else if ($routeParams.eventType === 'unofficial') {
-					func = EventService.getPublicEvents;
-				} else if ($routeParams.eventType === 'my') {
-					func = EventService.getMyEvents;
-				} else {
-					log.warn('unknown event type: ' + $routeParams.eventType);
-				}
-
-				$q.when(func()).then(function(events) {
-					var i, ret = {};
-					for (i = 0; i < events.length; i++) {
-						var e = events[i];
-						if (!e.hasOwnProperty('isFavorite')) {
-							e.isFavorite = false;
-						}
-						ret[e._id] = e;
-					}
-
-					refreshing = false;
-					initializing = false;
-
-					angular.forEach(ret, function(value, key) {
-						$scope.events[key] = value;
-					});
-					angular.forEach($scope.events, function(value, key) {
-						if (!ret[key]) {
-							delete $scope.events[key];
-						}
-					});
-				});
-			}, 250);
-		};
+		EventService.init();
 
 		$scope.fuzzy = function(date) {
 			return moment(date).fromNow();
@@ -319,12 +253,6 @@
 				EventService.updateEvent(events[event._id]);
 			});
 		};
-
-		$scope.$on('cm.eventCacheUpdated', function() {
-			if (!initializing) {
-				// $scope.refresh();
-			}
-		});
 
 		$rootScope.actions = [];
 		if (UserService.getUsername() && UserService.getUsername() !== '') {
@@ -627,14 +555,27 @@
 		};
 
 		var updateEventCache = function() {
+			log.info('Events.updateEventCache(): eventType = ' + $rootScope.eventType);
+
 			if (!_processedEvents[$rootScope.eventType]) {
+				log.info('no processed events for type ' + $rootScope.eventType);
 				return;
 			}
-			var events = _processedEvents[$rootScope.eventType];
-			if (events !== undefined) {
-				$rootScope.events = events;
-				$rootScope.$broadcast('cm.eventCacheUpdated');
+			if (!$rootScope.events) {
+				$rootScope.events = {};
 			}
+
+			var events = _processedEvents[$rootScope.eventType];
+
+			angular.forEach(events, function(value, index) {
+				$rootScope.events[index] = value;
+			});
+			angular.forEach($rootScope.events, function(value, index) {
+				if (!events[index]) {
+					delete $rootScope.events[index];
+				}
+			});
+			$rootScope.$broadcast('cm.eventCacheUpdated');
 		};
 
 		var updateOfficialEventCache = function() {
@@ -649,11 +590,11 @@
 			return deferred.promise;
 		};
 
-		var updatePublicEventCache = function() {
+		var updateUnofficialEventCache = function() {
 			var deferred = $q.defer();
-			$q.when(getPublicEvents()).then(function(events) {
-				_processedEvents.public = normalizeEvents(events);
-				deferred.resolve(_processedEvents.public);
+			$q.when(getUnofficialEvents()).then(function(events) {
+				_processedEvents.unofficial = normalizeEvents(events);
+				deferred.resolve(_processedEvents.unofficial);
 				updateEventCache();
 			}, function(failure) {
 				deferred.reject(failure);
@@ -675,27 +616,13 @@
 
 		var updateAllCaches = function() {
 			var deferred = $q.defer();
-			$q.all([updateOfficialEventCache(), updatePublicEventCache(), updateMyEventCache()]).then(function(finished) {
+			$q.all([updateOfficialEventCache(), updateUnofficialEventCache(), updateMyEventCache()]).then(function(finished) {
 				log.info('All caches updated.');
 				deferred.resolve();
 			}, function(failed) {
 				deferred.reject(failed);
 			});
 			return deferred.promise;
-		};
-
-		var getCached = function(type) {
-			if (_processedEvents[type]) {
-				return _processedEvents[type];
-			} else {
-				var deferred = $q.defer();
-				updateAllCaches().then(function(finished) {
-					deferred.resolve(finished);
-				}, function(failure) {
-					deferred.reject(failure);
-				});
-				return deferred.promise;
-			}
 		};
 
 		var updateDocument = function(doc) {
@@ -724,15 +651,15 @@
 					doc.isFavorite = false;
 				}
 
-				if (_processedEvents.public) {
-					var existingPublic = _processedEvents.public[id];
-					if (existingPublic) {
-						doc.isFavorite = existingPublic.isFavorite;
+				if (_processedEvents.unofficial) {
+					var existingUnofficial = _processedEvents.unofficial[id];
+					if (existingUnofficial) {
+						doc.isFavorite = existingUnofficial.isFavorite;
 					}
 				}
 
-				log.debug('Events.updateDocument(): putting ' + id + ' in public events.');
-				_processedEvents.public[id] = doc;
+				log.debug('Events.updateDocument(): putting ' + id + ' in unofficial events.');
+				_processedEvents.unofficial[id] = doc;
 			}
 
 			var myExisting;
@@ -889,8 +816,8 @@
 			}, {reduce: true, key: 'official'});
 		};
 
-		var getPublicEvents = function() {
-			log.info('getPublicEvents()');
+		var getUnofficialEvents = function() {
+			log.info('getUnofficialEvents()');
 			return doQuery(function(doc) {
 				if (doc.type === 'event' && doc.isPublic && doc.username !== 'official') {
 					emit(doc.username, doc);
@@ -1143,12 +1070,13 @@
 		});
 
 		return {
+			'init': updateEventCache,
 			'addEvent': addEvent,
 			'updateEvent': updateEvent,
 			'removeEvent': removeEvent,
 			'getAllEvents': getAllEvents,
 			'getOfficialEvents': getOfficialEvents,
-			'getPublicEvents': getPublicEvents,
+			'getUnofficialEvents': getUnofficialEvents,
 			'getUserEvents': getUserEvents,
 			'getMyEvents': getMyEvents,
 			'getMyFavorites': getMyFavorites,
@@ -1433,7 +1361,7 @@
 						if (eventType === 'official') {
 							func = EventService.getOfficialEvents;
 						} else if (eventType === 'unofficial') {
-							func = EventService.getPublicEvents;
+							func = EventService.getUnofficialEvents;
 						} else if (eventType === 'my') {
 							func = EventService.getMyEvents;
 						} else {
@@ -1482,6 +1410,17 @@
 			.setNavWidth(250);
 	}])
 	.run(['$rootScope', '$location', 'UserService', 'phonegapReady', function($rootScope, $location, UserService, phonegapReady) {
+		$rootScope.safeApply = function(fn) {
+			var phase = this.$root.$$phase;
+			if(phase === '$apply' || phase === '$digest') {
+				if(fn && (typeof(fn) === 'function')) {
+					fn();
+				}
+			} else {
+				this.$apply(fn);
+			}
+		};
+
 		phonegapReady(function() {
 			if (StatusBar) {
 				console.log('StatusBar exists, isVisible = ' + StatusBar.isVisible);
