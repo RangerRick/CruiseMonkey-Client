@@ -2,36 +2,66 @@
 	'use strict';
 
 	angular.module('cruisemonkey.controllers.Events', ['ngRoute', 'cruisemonkey.User', 'cruisemonkey.Events', 'cruisemonkey.Logging', 'ui.bootstrap.modal'])
-	.filter('orderObjectBy', function() {
-		return function(input, attribute) {
+	.filter('orderByEvent', function() {
+		return function(input) {
 			if (!angular.isObject(input)) return input;
-			if (!angular.isArray(attribute)) attribute = [attribute];
 
 			var array = [];
 			for(var objectKey in input) {
-				array.push(input[objectKey]);
+				var obj = input[objectKey];
+				obj.isNewDay = false;
+				array.push(obj);
 			}
 
+			var attrA, attrB;
+
 			array.sort(function(a,b) {
-				for (var i = 0; i < attribute.length; i++) {
-					var attr = attribute[i];
-					if (attr === 'start' || attr === 'end' || angular.isDate(a[attr]) || angular.isDate(b[attr])) {
-						var ad = moment(a[attr]),
-							bd = moment(b[attr]);
-						if (ad.isBefore(bd)) return -1;
-						if (ad.isAfter(bd)) return 1;
-					} else if (angular.isNumber(a[attr]) || angular.isNumber(b[attr])) {
-						if (a[attr] > b[attr]) return 1;
-						if (a[attr] < b[attr]) return -1;
-					} else {
-						var alc = String(a[attr]).toLowerCase(),
-							blc = String(b[attr]).toLowerCase();
-						if (alc > blc) return 1;
-						if (alc < blc) return -1;
-					}
+				attrA = moment(a.start);
+				attrB = moment(b.start);
+
+				if (attrA.isBefore(attrB)) {
+					return -1;
 				}
+				if (attrA.isAfter(attrB)) {
+					return 1;
+				}
+
+				attrA = a.summary.toLowerCase();
+				attrB = b.summary.toLowerCase();
+
+				if (attrA > attrB) return 1;
+				if (attrA < attrB) return -1;
+
+				attrA = moment(a.end);
+				attrB = moment(b.end);
+
+				if (attrA.isBefore(attrB)) return -1;
+				if (attrA.isAfter(attrB)) return 1;
+
 				return 0;
 			});
+
+			var lastStart, start;
+			angular.forEach(array, function(value, index) {
+				value.isNewDay = false;
+				start = moment(value.start);
+
+				if (index == 0) {
+					value.isNewDay = true;
+				} else {
+					if (start.isAfter(lastStart, 'day')) {
+						value.isNewDay = true;
+					}
+				}
+
+				lastStart = start;
+			});
+
+			for (var i = 0; i < array.length; i++) {
+				if (i == 0) {
+					array[i].isNewDay = true;
+				}
+			}
 
 			return array;
 		};
@@ -74,11 +104,16 @@
 
 		EventService.init();
 
+		$scope.prettyDate = function(date) {
+			return moment(date).format('dddd, MMMM Do');
+		};
+
 		$scope.fuzzy = function(date) {
 			return moment(date).fromNow();
 		};
+
 		$scope.justTime = function(date) {
-			return moment(date).format('HH:mm');
+			return moment(date).format('hh:mma');
 		};
 
 		$scope.trash = function(ev) {
@@ -91,7 +126,7 @@
 				});
 			});
 		};
-		
+
 		$scope.edit = function(ev) {
 			$scope.safeApply(function() {
 				console.log('edit: ', ev);

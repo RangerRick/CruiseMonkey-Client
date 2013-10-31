@@ -45,7 +45,7 @@ describe('cruisemonkey.Events', function() {
 				'username': 'official',
 				'summary': 'Murder',
 				'description': 'You will be murdered.',
-				'isUnofficial': true
+				'isPublic': true
 			},
 			{
 				'_id': '2',
@@ -53,7 +53,7 @@ describe('cruisemonkey.Events', function() {
 				'username': 'ranger',
 				'summary': 'Dying',
 				'description': 'I will be dying.',
-				'isUnofficial': true
+				'isPublic': true
 			},
 			{
 				'_id': '3',
@@ -61,7 +61,7 @@ describe('cruisemonkey.Events', function() {
 				'username': 'bob',
 				'summary': 'Living',
 				'description': 'I am totally going to continue living.',
-				'isUnofficial': true
+				'isPublic': true
 			},
 			{
 				'_id': '4',
@@ -69,7 +69,7 @@ describe('cruisemonkey.Events', function() {
 				'username': 'ranger',
 				'summary': 'Private',
 				'description': "It's a priiiivate event, dancin' for money, do what you want it to do.",
-				'isUnofficial': false
+				'isPublic': false
 			},
 			{
 				'type': 'favorite',
@@ -118,7 +118,7 @@ describe('cruisemonkey.Events', function() {
 	});
 
 	describe("#getUnofficialEvents", function() {
-		async.it('should return only the events marked isUnofficial which are not official', function(done) {
+		async.it('should return only the events marked isPublic which are not official', function(done) {
 			expect(db).not.toBeNull();
 			expect(service.getUnofficialEvents).not.toBeUndefined();
 			service.getUnofficialEvents().then(function(result) {

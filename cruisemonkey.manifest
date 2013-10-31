@@ -138,6 +138,7 @@ js/angular-3rdparty/ui-bootstrap-tpls-0.6.0.js
 js/angular-3rdparty/ui-bootstrap-tpls-0.6.0.min.js
 js/cruisemonkey/Config.js
 js/cruisemonkey/Controller.About.js
+js/cruisemonkey/Controller.Advanced.js
 js/cruisemonkey/Controller.DeckList.js
 js/cruisemonkey/Controller.Events.js
 js/cruisemonkey/Controller.Header.js
@@ -166,6 +167,7 @@ bower_components/angular-route/angular-route.min.js
 bower_components/angular-route/angular-route.min.js.map
 index.html
 template/about.html
+template/advanced.html
 template/deck-plans.html
 template/event-list.html
 template/login.html
@@ -198,4 +200,4 @@ template/typeahead/typeahead-popup.html
 NETWORK:
 *
 
-# hash: fc5d624e2e2a91b57ed2c4b8d507ac8df6a8f51cf06c0f0e2c54ee6696b3b50a
+# hash: aaec8766bca57828e98d15c4e239ad36915b1fb9afd1b4e175a716dbd5ad30b9

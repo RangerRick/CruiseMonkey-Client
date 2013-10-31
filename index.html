@@ -71,6 +71,7 @@
 	<![endif]-->
 
 <script>
+var bootstrapped = false;
 var fireDocumentReady = function() {
 	console.log('Firing deviceready manually.');
 	var e = document.createEvent('Events');
@@ -115,7 +116,7 @@ if (window.applicationCache && window.applicationCache.addEventListener) {
 					timeoutID = window.setTimeout(function() {
 						window.clearTimeout(timeoutID);
 						fireDocumentReady();
-					}, 5000);
+					}, 1000);
 				}
 			}
 		};
@@ -137,30 +138,33 @@ document.addEventListener("deviceready", function() {
 
 	console.log('CruiseMonkey loaded.');
 
-	if (window.device) {
-		console.log('Found PhoneGap Device Information.');
-		console.log('Model:    ' + window.device.model);
-		console.log('Cordova:  ' + window.device.cordova);
-		console.log('Platform: ' + window.device.platform);
-		console.log('UUID:     ' + window.device.uuid);
-		console.log('Version:  ' + window.device.version);
-	}
+	if (!bootstrapped) {
+		bootstrapped = true;
 
-	angular.bootstrap(document, ['cruisemonkey']);
-	FastClick.attach(document.body);
+		if (window.device) {
+			console.log('Found PhoneGap Device Information.');
+			console.log('Model:    ' + window.device.model);
+			console.log('Cordova:  ' + window.device.cordova);
+			console.log('Platform: ' + window.device.platform);
+			console.log('UUID:     ' + window.device.uuid);
+			console.log('Version:  ' + window.device.version);
+		}
+
+		angular.bootstrap(document, ['cruisemonkey']);
+		FastClick.attach(document.body);
+	}
 }, false);
 
-/*
 window.setTimeout(function() {
 	if (window.device) {
 		console.log('This is a phonegap device, not bothering to update the application cache.');
 	} else {
+		// check for updates every 5 minutes
 		window.setInterval(function() {
 			window.applicationCache.update();
-		}, 5000);
+		}, 300000);
 	}
 }, 30000);
-*/
   </script>
   <title ng-bind="'CruiseMonkey - ' + $root.title">CruiseMonkey</title>
 </head>
@@ -192,6 +196,8 @@ window.setTimeout(function() {
 
 				<li ng-if="user.loggedIn" ><a href="#/logout/">Log Out</a></li>
 				<li ng-if="!user.loggedIn"><a href="#/login/">Log In</a></li>
+
+				<li class="bottom"><a href="#/advanced/">Advanced</a></li>
 			</ul>
 		</mobile-nav>
 		<mobile-content ng-view>

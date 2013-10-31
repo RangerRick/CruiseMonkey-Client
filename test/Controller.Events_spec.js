@@ -1,34 +1,16 @@
 describe('cruisemonkey.controllers.Events', function() {
-	var orderObjectBy = null;
+	var orderByEvent = null;
 	
 	beforeEach(function() {
 		module('cruisemonkey.controllers.Events', function($provide) {
 			
 		});
-		inject(['orderObjectByFilter', function(o) {
-			orderObjectBy = o;
+		inject(['orderByEventFilter', function(o) {
+			orderByEvent = o;
 		}]);
 	});
 
-	describe('orderObjectBy', function() {
-		it('should sort 2 numbers ascending', function() {
-			expect(orderObjectBy([{foo: 2}, {foo: 1}], 'foo')).toEqual([{foo: 1}, {foo: 2}]);
-		});
-		it('should sort dates ascending', function() {
-			var first = new Date();
-			var second = new Date(0);
-
-			expect(orderObjectBy([{start: first}, {start: second}], 'start')).toEqual([{start: second}, {start: first}]);
-		});
-		it('should sort stringified dates ascending', function() {
-			var first = moment(new Date()).format('YYYY-MM-DD HH:mm');
-			var second = moment(new Date(0)).format('YYYY-MM-DD HH:mm');
-
-			expect(orderObjectBy([{start: first}, {start: second}], 'start')).toEqual([{start: second}, {start: first}]);
-		});
-		it('should sort strings ascending', function() {
-			expect(orderObjectBy([{foo: 'Banal'}, {foo: 'Anal'}], 'foo')).toEqual([{foo: 'Anal'}, {foo: 'Banal'}]);
-		});
+	describe('orderByEvent', function() {
 		it('should sort complex objects with multiple arguments properly', function() {
 			var a = {
 				'start':   '2013-04-14 00:00',
@@ -51,9 +33,7 @@ describe('cruisemonkey.controllers.Events', function() {
 				'summary': 'Not a thing.'
 			};
 
-			expect(orderObjectBy([a,b,c,d], ['start', 'end', 'summary'])).toEqual([c,d,a,b]);
-			expect(orderObjectBy([a,b,c,d], ['end', 'summary', 'start'])).toEqual([c,b,d,a]);
-			expect(orderObjectBy([a,b,c,d], ['summary', 'start', 'end'])).toEqual([b,c,d,a]);
+			expect(orderByEvent([a,b,c,d])).toEqual([c,d,a,b]);
 		});
 	});
 

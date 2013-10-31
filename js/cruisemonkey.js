@@ -32,10 +32,23 @@
 (function() {
 	'use strict';
 
-	angular.module('cruisemonkey.controllers.About', ['cruisemonkey.Logging', 'cruisemonkey.Config'])
+	angular.module('cruisemonkey.controllers.About', ['cruisemonkey.Database', 'cruisemonkey.Logging', 'cruisemonkey.Config'])
 	.controller('CMAboutCtrl', ['$scope', '$rootScope', 'LoggingService', 'config.app.version', function($scope, $rootScope, log, version) {
 		log.info('Initializing CMAboutCtrl');
 		$rootScope.title = 'About CruiseMonkey ' + version;
+	}]);
+}());
+(function() {
+	'use strict';
+
+	angular.module('cruisemonkey.controllers.Advanced', ['cruisemonkey.Logging', 'cruisemonkey.Config'])
+	.controller('CMAdvancedCtrl', ['$scope', '$rootScope', 'Database', 'LoggingService', 'config.app.version', function($scope, $rootScope, Database, log, version) {
+		log.info('Initializing CMAdvancedCtrl');
+		$rootScope.title = 'Break CruiseMonkey!';
+
+		$scope.resetDatabase = function() {
+			Database.reset();
+		};
 	}]);
 }());
 (function() {
@@ -121,36 +134,66 @@
 	'use strict';
 
 	angular.module('cruisemonkey.controllers.Events', ['ngRoute', 'cruisemonkey.User', 'cruisemonkey.Events', 'cruisemonkey.Logging', 'ui.bootstrap.modal'])
-	.filter('orderObjectBy', function() {
-		return function(input, attribute) {
+	.filter('orderByEvent', function() {
+		return function(input) {
 			if (!angular.isObject(input)) return input;
-			if (!angular.isArray(attribute)) attribute = [attribute];
 
 			var array = [];
 			for(var objectKey in input) {
-				array.push(input[objectKey]);
+				var obj = input[objectKey];
+				obj.isNewDay = false;
+				array.push(obj);
 			}
 
+			var attrA, attrB;
+
 			array.sort(function(a,b) {
-				for (var i = 0; i < attribute.length; i++) {
-					var attr = attribute[i];
-					if (attr === 'start' || attr === 'end' || angular.isDate(a[attr]) || angular.isDate(b[attr])) {
-						var ad = moment(a[attr]),
-							bd = moment(b[attr]);
-						if (ad.isBefore(bd)) return -1;
-						if (ad.isAfter(bd)) return 1;
-					} else if (angular.isNumber(a[attr]) || angular.isNumber(b[attr])) {
-						if (a[attr] > b[attr]) return 1;
-						if (a[attr] < b[attr]) return -1;
-					} else {
-						var alc = String(a[attr]).toLowerCase(),
-							blc = String(b[attr]).toLowerCase();
-						if (alc > blc) return 1;
-						if (alc < blc) return -1;
-					}
+				attrA = moment(a.start);
+				attrB = moment(b.start);
+
+				if (attrA.isBefore(attrB)) {
+					return -1;
 				}
+				if (attrA.isAfter(attrB)) {
+					return 1;
+				}
+
+				attrA = a.summary.toLowerCase();
+				attrB = b.summary.toLowerCase();
+
+				if (attrA > attrB) return 1;
+				if (attrA < attrB) return -1;
+
+				attrA = moment(a.end);
+				attrB = moment(b.end);
+
+				if (attrA.isBefore(attrB)) return -1;
+				if (attrA.isAfter(attrB)) return 1;
+
 				return 0;
 			});
+
+			var lastStart, start;
+			angular.forEach(array, function(value, index) {
+				value.isNewDay = false;
+				start = moment(value.start);
+
+				if (index == 0) {
+					value.isNewDay = true;
+				} else {
+					if (start.isAfter(lastStart, 'day')) {
+						value.isNewDay = true;
+					}
+				}
+
+				lastStart = start;
+			});
+
+			for (var i = 0; i < array.length; i++) {
+				if (i == 0) {
+					array[i].isNewDay = true;
+				}
+			}
 
 			return array;
 		};
@@ -193,11 +236,16 @@
 
 		EventService.init();
 
+		$scope.prettyDate = function(date) {
+			return moment(date).format('dddd, MMMM Do');
+		};
+
 		$scope.fuzzy = function(date) {
 			return moment(date).fromNow();
 		};
+
 		$scope.justTime = function(date) {
-			return moment(date).format('HH:mm');
+			return moment(date).format('hh:mma');
 		};
 
 		$scope.trash = function(ev) {
@@ -210,7 +258,7 @@
 				});
 			});
 		};
-		
+
 		$scope.edit = function(ev) {
 			$scope.safeApply(function() {
 				console.log('edit: ', ev);
@@ -367,20 +415,31 @@
 	'use strict';
 
 	angular.module('cruisemonkey.Database', ['cruisemonkey.Logging', 'cruisemonkey.Config', 'ngInterval', 'angularLocalStorage'])
-	.factory('Database', ['$location', '$interval', '$timeout', '$rootScope', 'LoggingService', 'storage', 'config.database.host', 'config.database.name', 'config.database.replicate', function($location, $interval, $timeout, $rootScope, log, storage, databaseHost, databaseName, replicate) {
+	.factory('Database', ['$location', '$interval', '$timeout', '$rootScope', '$window', 'LoggingService', 'storage', 'config.database.host', 'config.database.name', 'config.database.replicate', function($location, $interval, $timeout, $rootScope, $window, log, storage, databaseHost, databaseName, replicate) {
 		log.info('Initializing CruiseMonkey database: ' + databaseName);
-
-		var db = new Pouch(databaseName);
-		var timeout = null,
-			watchingChanges = false;
-
-		db.compact();
 
 		storage.bind($rootScope, '_seq', {
 			'defaultValue': 0,
 			'storeName': 'cm.db.sync'
 		});
 		console.log('last sequence: ' + $rootScope._seq);
+
+		if (!databaseHost) {
+			databaseHost = $location.host();
+		}
+		var host = 'http://' + databaseHost + ':5984/cruisemonkey';
+
+		var db = null,
+			timeout = null,
+			watchingChanges = false;
+
+		var initializeDatabase = function() {
+			db = new Pouch(databaseName);
+			timeout = null;
+			watchingChanges = false;
+
+			db.compact();
+		};
 
 		var databaseReady = function() {
 			if (watchingChanges) {
@@ -394,6 +453,7 @@
 			if (!seq) {
 				seq = 0;
 			}
+			
 			db.changes({
 				since: seq,
 				onChange: function(change) {
@@ -413,29 +473,25 @@
 			$rootScope.$broadcast('cm.databaseReady');
 		};
 
+		var doReplicate = function() {
+			log.info('Attempting to replicate with ' + host);
+			db.replicate.to(host, {
+				'complete': function() {
+					db.replicate.from(host, {
+						'complete': function() {
+							databaseReady();
+						}
+					});
+				}
+			});
+		};
+
 		var startReplication = function() {
 			if (replicate) {
 				if (timeout !== null) {
 					log.warn('Replication has already been started!  Timeout ID = ' + timeout);
 					return false;
 				} else {
-					var doReplicate = function() {
-						log.info('Attempting to replicate with ' + host);
-						db.replicate.to(host, {
-							'complete': function() {
-								db.replicate.from(host, {
-									'complete': function() {
-										databaseReady();
-									}
-								});
-							}
-						});
-					};
-
-					if (!databaseHost) {
-						databaseHost = $location.host();
-					}
-					var host = 'http://' + databaseHost + ':5984/cruisemonkey';
 					log.info('Enabling replication with ' + host);
 
 					timeout = $interval(function() {
@@ -447,7 +503,7 @@
 				}
 			} else {
 				log.warn('startReplication() called, but replication is not enabled!');
-				registerForChanges();
+				databaseReady();
 			}
 			return false;
 		};
@@ -489,27 +545,60 @@
 			}
 		};
 
-		$timeout(function() {
-			if (navigator && navigator.connection) {
-				if (navigator.connection.addEventListener) {
-					log.info("Browser has native navigator.connection support.");
-					navigator.connection.addEventListener('change', handleConnectionTypeChange);
-					handleConnectionTypeChange();
+		var setUp = function() {
+			$timeout(function() {
+				if (navigator && navigator.connection) {
+					if (navigator.connection.addEventListener) {
+						log.info("Browser has native navigator.connection support.");
+						navigator.connection.addEventListener('change', handleConnectionTypeChange, false);
+						handleConnectionTypeChange();
+					} else {
+						log.info("Browser does not have native navigator.connection support.  Trying with phonegap.");
+						document.addEventListener('online', handleConnectionTypeChange, false);
+						document.addEventListener('offline', handleConnectionTypeChange, false);
+						handleConnectionTypeChange();
+					}
 				} else {
-					log.info("Browser does not have native navigator.connection support.  Trying with phonegap.");
-					document.addEventListener('online', handleConnectionTypeChange);
-					document.addEventListener('offline', handleConnectionTypeChange);
-					handleConnectionTypeChange();
+					log.warn("Unsure how to handle connection management; starting replication and hoping for the best.");
+					startReplication();
 				}
+			}, 10);
+		};
+
+		var tearDown = function() {
+			stopReplication();
+			if (navigator && navigator.connection && navigator.connection.removeEventListener) {
+				navigator.connection.removeEventListener('change', handleConnectionTypeChange, false);
 			} else {
-				log.warn("Unsure how to handle connection management; starting replication and hoping for the best.");
-				startReplication();
+				document.removeEventListener('online', handleConnectionTypeChange, false);
+				document.removeEventListener('offline', handleConnectionTypeChange, false);
 			}
-		}, 10);
+		};
+
+		var resetDatabase = function() {
+			$rootScope.safeApply(function() {
+				tearDown();
+				watchingChanges = false;
+				
+				Pouch.destroy(databaseName, function(err) {
+					if (err) {
+						$window.alert('Failed to destroy existing database!');
+					} else {
+						log.info('Reloading CruiseMonkey.');
+						$window.location.reload();
+					}
+				});
+			});
+		};
+
+		/* start everything up */
+		initializeDatabase();
+		setUp();
 
 		log.info('Finished initializing CruiseMonkey database.');
 
 		return {
+			'reset': resetDatabase,
 			'database': db,
 			'startReplication': startReplication,
 			'stopReplication': stopReplication
@@ -1326,6 +1415,7 @@
 		'cruisemonkey.services',
 		'cruisemonkey.directives',
 		'cruisemonkey.controllers.About',
+		'cruisemonkey.controllers.Advanced',
 		'cruisemonkey.controllers.DeckList',
 		'cruisemonkey.controllers.Events',
 		'cruisemonkey.controllers.Header',
@@ -1400,6 +1490,10 @@
 			.when('/about', {
 				templateUrl: 'template/about.html',
 				controller: 'CMAboutCtrl'
+			})
+			.when('/advanced', {
+				templateUrl: 'template/advanced.html',
+				controller: 'CMAdvancedCtrl'
 			})
 			.otherwise({
 				redirectTo: '/events/official/'

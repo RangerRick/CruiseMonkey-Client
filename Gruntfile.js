@@ -2,6 +2,7 @@ var cmfiles = [
 	'js/cruisemonkey/string.js',
 	'js/cruisemonkey/Config.js',
 	'js/cruisemonkey/Controller.About.js',
+	'js/cruisemonkey/Controller.Advanced.js',
 	'js/cruisemonkey/Controller.DeckList.js',
 	'js/cruisemonkey/Controller.Events.js',
 	'js/cruisemonkey/Controller.Header.js',

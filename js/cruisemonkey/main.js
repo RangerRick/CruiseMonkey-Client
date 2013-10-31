@@ -8,6 +8,7 @@
 		'cruisemonkey.services',
 		'cruisemonkey.directives',
 		'cruisemonkey.controllers.About',
+		'cruisemonkey.controllers.Advanced',
 		'cruisemonkey.controllers.DeckList',
 		'cruisemonkey.controllers.Events',
 		'cruisemonkey.controllers.Header',
@@ -82,6 +83,10 @@
 			.when('/about', {
 				templateUrl: 'template/about.html',
 				controller: 'CMAboutCtrl'
+			})
+			.when('/advanced', {
+				templateUrl: 'template/advanced.html',
+				controller: 'CMAdvancedCtrl'
 			})
 			.otherwise({
 				redirectTo: '/events/official/'

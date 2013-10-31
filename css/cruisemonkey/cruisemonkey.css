@@ -93,6 +93,10 @@ a:link, a:visited, a:hover {
 .mobile-content {
   background-color: #f8f8f8; }
 
+.mobile-nav-inner {
+  height: 100%;
+  min-height: 100%; }
+
 .mobile-nav {
   -webkit-transform: translate(0px, 0px);
   -moz-transform: translate(0px, 0px);
@@ -103,6 +107,8 @@ a:link, a:visited, a:hover {
   background-color: #cccccc;
   box-shadow: inset -0.0625em 0 0.625em rgba(0, 0, 0, 0.6); }
   .mobile-nav .nav {
+    height: 100%;
+    min-height: 100%;
     cursor: default;
     margin: 0;
     padding: 0;
@@ -115,6 +121,11 @@ a:link, a:visited, a:hover {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none; }
+  .mobile-nav .nav > li.bottom {
+    position: absolute;
+    bottom: 0;
+    border-top: 1px solid #aaaaaa;
+    border-bottom: none; }
   .mobile-nav .nav > li.sidebar-header {
     display: inline-block;
     width: 250px;
@@ -226,17 +237,30 @@ a:link, a:visited, a:hover {
   .list-entry .edit input + label {
     background: url(../../icons/entypo/yellow/SVG/pencil.svg) no-repeat; }
 
+/*
 .list-entry:nth-child(odd) {
-  background: white; }
+	background: $mainBG;
+}
 
 .list-entry:nth-child(even) {
-  background: #ddf2ff; }
-
+	background: $alternateBG;
+}
+*/
 /*
  * Events
  */
 .event-list {
   font-family: Casper, sans-serif; }
+  .event-list .odd {
+    background-color: white; }
+  .event-list .even {
+    background-color: #ddf2ff; }
+  .event-list .header {
+    font-family: Nexa, Hero, sans-serif;
+    font-size: 20px;
+    padding: 5px;
+    color: white;
+    background-color: black; }
 
 .summary {
   font-size: 15pt;

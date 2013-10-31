@@ -56,11 +56,8 @@ $gutterHoverColor: black;
 
 $simpleBorder: 1px solid black;
 
-$titleBarColor: white;
-$titleBarBG: black;
-
-$deckHeaderColor: white;
-$deckHeaderBG: black;
+$headerColor: white;
+$headerBG: black;
 
 $contentBG: #f8f8f8;
 
@@ -91,8 +88,9 @@ a:hover {
 	-ms-transform:translate(0px,0px);
 	transform:translate(0px,0px);
 
-	color: $titleBarColor;
-	background-color: $titleBarBG;
+	color: $headerColor;
+	background-color: $headerBG;
+	
   font-family: $headerFont;
   font-size: larger;
 	-webkit-overflow-scrolling: auto;
@@ -151,6 +149,11 @@ a:hover {
 	background-color: $contentBG;
 }
 
+.mobile-nav-inner {
+	height: 100%;
+	min-height: 100%;
+}
+
 .mobile-nav {
 	-webkit-transform:translate(0px,0px);
 	-moz-transform:translate(0px,0px);
@@ -163,6 +166,8 @@ a:hover {
 	box-shadow: inset -.0625em 0 .625em rgba(0,0,0,.6);
 
 	.nav {
+		height: 100%;
+		min-height: 100%;
 		cursor: default;
 		margin: 0;
 		padding: 0;
@@ -176,6 +181,13 @@ a:hover {
 		-moz-user-select: none;
 		-ms-user-select: none;
 		user-select: none;
+	}
+
+	.nav > li.bottom {
+		position: absolute;
+		bottom: 0;
+		border-top: $gutterSeparator;
+		border-bottom: none;
 	}
 
 	.nav > li.sidebar-header {
@@ -337,6 +349,7 @@ a:hover {
 	}
 }
 
+/*
 .list-entry:nth-child(odd) {
 	background: $mainBG;
 }
@@ -344,6 +357,7 @@ a:hover {
 .list-entry:nth-child(even) {
 	background: $alternateBG;
 }
+*/
 
 /*
  * Events
@@ -351,6 +365,21 @@ a:hover {
 
 .event-list {
 	font-family: $eventListFont;
+	
+	.odd {
+		background-color: $mainBG;
+	}
+	.even {
+		background-color: $alternateBG;
+	}
+
+	.header {
+		font-family: $headerFont;
+		font-size: 20px;
+		padding: 5px;
+		color: $headerColor;
+		background-color: $headerBG;
+	}
 }
 
 .summary {
