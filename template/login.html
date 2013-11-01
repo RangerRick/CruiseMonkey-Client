@@ -33,7 +33,7 @@
 	height: 100%;
 }
 </style>
-<form name="loginForm" class="c-container css-form" novalidate>
+<form name="loginForm" class="c-container css-form" novalidate="">
 	<div class="c-centered">
 		<table class="login">
 			<tr>
@@ -41,11 +41,11 @@
 			</tr>
 			<tr>
 				<td class="label">Username:</td>
-				<td colspan="2"><input type="text" autocapitalize="off" ng-model="user.username" name="uUsername" autofocus required /></td>
+				<td colspan="2"><input type="text" autocapitalize="off" ng-model="user.username" name="uUsername" autofocus="" required=""></td>
 			</tr>
 			<tr>
 				<td class="label">Password:</td>
-				<td colspan="2"><input type="password" ng-model="user.password" name="uPassword" required /></td>
+				<td colspan="2"><input type="password" ng-model="user.password" name="uPassword" required=""></td>
 			</tr>
 			<tr><td colspan="3">&nbsp;</td></tr>
 			<tr>

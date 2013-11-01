@@ -25,6 +25,5 @@
   },
   "_source": "git://github.com/agrublev/angularLocalStorage.git",
   "_target": "~0.1.7",
-  "_originalSource": "angularLocalStorage",
-  "_direct": true
+  "_originalSource": "angularLocalStorage"
 }

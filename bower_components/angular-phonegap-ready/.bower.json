@@ -14,6 +14,5 @@
   },
   "_source": "git://github.com/btford/angular-phonegap-ready.git",
   "_target": "~0.0.1",
-  "_originalSource": "angular-phonegap-ready",
-  "_direct": true
+  "_originalSource": "angular-phonegap-ready"
 }

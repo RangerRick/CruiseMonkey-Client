@@ -10,6 +10,5 @@
   },
   "_source": "git://github.com/toushay/log4javascript.git",
   "_target": "~1.4.5",
-  "_originalSource": "log4javascript",
-  "_direct": true
+  "_originalSource": "log4javascript"
 }

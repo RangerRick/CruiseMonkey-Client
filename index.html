@@ -8,20 +8,20 @@
 <html xmlns:ng="http://angularjs.org" lang="en" manifest="cruisemonkey.manifest">
 <!--<![endif]-->
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, user-scalable=0, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
-<meta name="format-detection" content="telephone=no" />
-<meta name="apple-mobile-web-app-capable" content="yes" />
-<link rel="apple-touch-icon" href="icon.png" />
-<link rel="apple-touch-icon" sizes="29x29" href="Icon-Small.png" />
-<link rel="apple-touch-icon" sizes="57x57" href="Icon-57.png" />
-<link rel="apple-touch-icon" sizes="50x50" href="Icon-Small-50.png" />
-<link rel="apple-touch-icon" sizes="58x58" href="Icon-Small@2x.png" />
-<link rel="apple-touch-icon" sizes="72x72" href="Icon-72.png" />
-<link rel="apple-touch-icon" sizes="100x100" href="Icon-Small-50@2x.png" />
-<link rel="apple-touch-icon" sizes="114x114" href="Icon@2x.png" />
-<link rel="apple-touch-icon" sizes="144x144" href="Icon-72@2x.png" />
-<link rel="apple-touch-startup-image" href="cruise-monkey-1536x2048.png" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, user-scalable=0, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="apple-touch-icon" href="icon.png">
+<link rel="apple-touch-icon" sizes="29x29" href="Icon-Small.png">
+<link rel="apple-touch-icon" sizes="57x57" href="Icon-57.png">
+<link rel="apple-touch-icon" sizes="50x50" href="Icon-Small-50.png">
+<link rel="apple-touch-icon" sizes="58x58" href="Icon-Small@2x.png">
+<link rel="apple-touch-icon" sizes="72x72" href="Icon-72.png">
+<link rel="apple-touch-icon" sizes="100x100" href="Icon-Small-50@2x.png">
+<link rel="apple-touch-icon" sizes="114x114" href="Icon@2x.png">
+<link rel="apple-touch-icon" sizes="144x144" href="Icon-72@2x.png">
+<link rel="apple-touch-startup-image" href="cruise-monkey-1536x2048.png">
 <style>
 	 [ng\:cloak], [ng-cloak], .ng-cloak {
 		display: none !important;
@@ -54,17 +54,18 @@
 		right: 0;
 		text-align: center;
 	}
-	.loading img {
+	.loading .spinner {
 		display: inline-block;
+		width: 16px;
+		height: 16px;
+		background-image: url('images/861ccbfa.spinner.gif');
 	}
 </style>
-<link rel="stylesheet" href="css/3rdparty/normalize.css" />
-<link rel="stylesheet" href="css/angular-mobile-frame.min.css" />
-<!-- <link rel="stylesheet" href="bower_components/angular-datepicker/dist/index.min.css" /> -->
-<link rel="stylesheet" href="css/cruisemonkey/cruisemonkey.css" />
 
-<!-- <script src="http://debug.phonegap.com/target/target-script-min.js#RangerRick182347"></script> -->
-<script src="js/3rdparty/modernizr-latest.js"></script>
+<link rel="stylesheet" href="styles/8189a6d5.3rdparty.css"/>
+
+<link rel="stylesheet" href="styles/429788c8.cm.css"/>
+
 <!-- IE Fix for HTML5 Tags -->
 <!--[if lt IE 9]>
 		<script src="bower_components/html5shiv/dist/html5shiv.js"></script>
@@ -171,11 +172,11 @@ window.setTimeout(function() {
 <body class="antialiased off-canvas hide-extras">
 	<div class="loading container" ng-class="{hidden: hideSpinner}">
 		<div class="centered">
-			<img src="icons/spinner.gif" /><br /><div id="loading">Loading...</div>
+			<div class="spinner"></div><br><div id="loading">Loading...</div>
 		</div>
 	</div>
 
-	<mobile-frame ng-cloak>
+	<mobile-frame ng-cloak="">
 		<mobile-header ng-controller="CMHeaderCtrl">
 			<span class="title"><strong>{{title}}</strong></span>
 			<div class="actions">
@@ -187,60 +188,26 @@ window.setTimeout(function() {
 		<mobile-nav ng-controller="CMNavigationCtrl" ng-click="toggleDrawer()">
 			<ul class="nav" id="nav">
 				<li class="sidebar-header">CruiseMonkey</li>
-				<li><a href="#/events/official/"  >Official Events</a></li>
+				<li><a href="#/events/official/">Official Events</a></li>
 				<li><a href="#/events/unofficial/">Unofficial Events</a></li>
 				<li ng-if="user.loggedIn"><a href="#/events/my/">My Events</a></li>
 				<li ng-if="!user.loggedIn" class="disabled"><a href="#">My Events</a></li>
-				<li><a href="#/deck-plans/"       >Deck Plans</a></li>
-				<li><a href="#/about/"            >About</a></li>
+				<li><a href="#/deck-plans/">Deck Plans</a></li>
+				<li><a href="#/about/">About</a></li>
 
-				<li ng-if="user.loggedIn" ><a href="#/logout/">Log Out</a></li>
+				<li ng-if="user.loggedIn"><a href="#/logout/">Log Out</a></li>
 				<li ng-if="!user.loggedIn"><a href="#/login/">Log In</a></li>
 
 				<li class="bottom"><a href="#/advanced/">Advanced</a></li>
 			</ul>
 		</mobile-nav>
-		<mobile-content ng-view>
+		<mobile-content ng-view="">
 		</mobile-content>
 	</mobile-frame>
 
-	<!--
-	!!!! <script src="bower_components/jquery/jquery.min.js"></script>
-	<script src="js/3rdparty/pouchdb-nightly.min.js"></script>
-	<script src="bower_components/hammerjs/dist/hammer.min.js"></script>
-	<script src="bower_components/momentjs/min/moment.min.js"></script>
-	<script src="bower_components/log4javascript/log4javascript.js"></script>
-	<script src="bower_components/angular/angular.min.js"></script>
-	<script src="bower_components/angular-cookies/angular-cookies.js"></script>
-	<script src="bower_components/angular-loader/angular-loader.min.js"></script>
-	<script src="bower_components/angular-route/angular-route.min.js"></script>
-	<script src="bower_components/angular-resource/angular-resource.min.js"></script>
-	!!!! <script src="bower_components/angular-datepicker/dist/index.min.js"></script>
-	<script src="js/angular-3rdparty/angular-hammer.min.js"></script>
-	-->
+  <script src="scripts/407b6d95.3rdparty.js"></script>
 
-	<script src="bower_components/jquery/jquery.js"></script>
-	<script src="js/3rdparty/pouchdb-nightly.js"></script>
-	<script src="bower_components/hammerjs/dist/hammer.js"></script>
-	<script src="bower_components/momentjs/moment.js"></script>
-	<script src="bower_components/log4javascript/log4javascript_uncompressed.js"></script>
-	<script src="bower_components/angular/angular.js"></script>
-	<script src="bower_components/angular-cookies/angular-cookies.js"></script>
-	<script src="bower_components/angular-loader/angular-loader.js"></script>
-	<script src="bower_components/angular-route/angular-route.js"></script>
-	<script src="bower_components/angular-resource/angular-resource.js"></script>
-	<!-- <script src="bower_components/angular-datepicker/dist/index.js"></script> -->
-	<script src="js/angular-3rdparty/angular-hammer.js"></script>
-
-	<script src="bower_components/fastclick/lib/fastclick.js"></script>
-	<script src="bower_components/angular-phonegap-ready/ready.js"></script>
-	<script src="bower_components/angularLocalStorage/src/angularLocalStorage.js"></script>
-	<script src="js/angular-3rdparty/angular-mobile-frame.js"></script>
-	<script src="js/angular-3rdparty/angular-interval.js"></script>
-	<script src="js/angular-3rdparty/ui-bootstrap-0.6.0.js"></script>
-
-	<!-- <script src="js/cruisemonkey.min.js"></script> -->
-	<script src="js/cruisemonkey.js"></script>
+  <script src="scripts/546e4e8d.cm.js"></script>
 
 	<script src="phonegap.js"></script>
 </body>
