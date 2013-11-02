@@ -655,7 +655,6 @@ scripts/3rdparty/d00225c1.pouchdb-nightly.min.js
 scripts/3rdparty/d4f49e01.require.js
 scripts/3rdparty/e4a2469a.script.js
 scripts/407b6d95.3rdparty.js
-scripts/70d263f8.cm.js
 scripts/angular-3rdparty/0c5164c8.ui-bootstrap-0.6.0.min.js
 scripts/angular-3rdparty/1f143492.angular-mobile-frame.js
 scripts/angular-3rdparty/1fe6d369.angular-hammer.min.js
@@ -665,6 +664,7 @@ scripts/angular-3rdparty/b5d511d0.angular-interval.js
 scripts/angular-3rdparty/d16966ff.angular-hammer.js
 scripts/angular-3rdparty/df51aae3.ui-bootstrap-0.6.0.js
 scripts/angular-3rdparty/e6f294c4.angular-mobile-frame.min.js
+scripts/b908b632.cm.js
 styles/429788c8.cm.css
 styles/68f33d27.main.css
 styles/8189a6d5.3rdparty.css
@@ -683,4 +683,4 @@ NETWORK:
 SETTINGS:
 prefer-online
 
-# hash: ec6d4f11700db3bf2c54aad04faaa17101f543ead012dbe06b7964fde648b4a6
+# hash: c19dc3b6bab620aff6bf63e95debc66294f825319db4a2707c3156b11dc51736
