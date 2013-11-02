@@ -47,6 +47,7 @@ font/a6192e0c.glyphicons-halflings-regular.eot
 font/af2d0451.casper.ttf
 font/e99b9a2f.null-free.otf
 images/861ccbfa.spinner.gif
+images/9273df5d.cruise-monkey-transparent-bg.png
 images/decks/deck10.svg
 images/decks/deck11.svg
 images/decks/deck12.svg
@@ -61,6 +62,8 @@ images/decks/deck6.svg
 images/decks/deck7.svg
 images/decks/deck8.svg
 images/decks/deck9.svg
+images/dff11ce4.cruise-monkey-transparent-bg@2x.png
+images/e9a10de6.cruise-monkey-transparent.png
 images/entypo/grey/SVG/001ac6d2.clipboard.svg
 images/entypo/grey/SVG/00621344.search.svg
 images/entypo/grey/SVG/010ffe0d.cc.svg
@@ -664,8 +667,8 @@ scripts/angular-3rdparty/b5d511d0.angular-interval.js
 scripts/angular-3rdparty/d16966ff.angular-hammer.js
 scripts/angular-3rdparty/df51aae3.ui-bootstrap-0.6.0.js
 scripts/angular-3rdparty/e6f294c4.angular-mobile-frame.min.js
-scripts/b908b632.cm.js
-styles/429788c8.cm.css
+scripts/d5872f99.cm.js
+styles/66cfeb2e.cm.css
 styles/68f33d27.main.css
 styles/8189a6d5.3rdparty.css
 template/about.html
@@ -683,4 +686,4 @@ NETWORK:
 SETTINGS:
 prefer-online
 
-# hash: c19dc3b6bab620aff6bf63e95debc66294f825319db4a2707c3156b11dc51736
+# hash: 9bd25b679ea71dacd67386e3a079e0e818fbb25a33a89f45640a1c30c33dc9f9
