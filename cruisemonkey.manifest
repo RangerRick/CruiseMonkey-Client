@@ -644,7 +644,6 @@ images/entypo/yellow/sprites/9705a233.sprites.png
 index.html
 module.min.js
 phonegap.js
-scripts/2295ad35.cm.js
 scripts/3rdparty/02630317.custom.modernizr.js
 scripts/3rdparty/8daafb40.require.min.js
 scripts/3rdparty/90949fe3.jquery.js
@@ -656,6 +655,7 @@ scripts/3rdparty/d00225c1.pouchdb-nightly.min.js
 scripts/3rdparty/d4f49e01.require.js
 scripts/3rdparty/e4a2469a.script.js
 scripts/407b6d95.3rdparty.js
+scripts/70d263f8.cm.js
 scripts/angular-3rdparty/0c5164c8.ui-bootstrap-0.6.0.min.js
 scripts/angular-3rdparty/1f143492.angular-mobile-frame.js
 scripts/angular-3rdparty/1fe6d369.angular-hammer.min.js
@@ -683,4 +683,4 @@ NETWORK:
 SETTINGS:
 prefer-online
 
-# hash: 2038d887c571f4b97d8eaef3d3cc90fd89d23bb0164581ac810326124b7229e9
+# hash: ec6d4f11700db3bf2c54aad04faaa17101f543ead012dbe06b7964fde648b4a6
