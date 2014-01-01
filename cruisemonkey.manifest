@@ -658,7 +658,7 @@ scripts/3rdparty/d00225c1.pouchdb-nightly.min.js
 scripts/3rdparty/d4f49e01.require.js
 scripts/3rdparty/e4a2469a.script.js
 scripts/407b6d95.3rdparty.js
-scripts/64e34c8f.cm.js
+scripts/827a2744.cm.js
 scripts/angular-3rdparty/0c5164c8.ui-bootstrap-0.6.0.min.js
 scripts/angular-3rdparty/1f143492.angular-mobile-frame.js
 scripts/angular-3rdparty/1fe6d369.angular-hammer.min.js
@@ -686,4 +686,4 @@ NETWORK:
 SETTINGS:
 prefer-online
 
-# hash: 90f4bc1128aaa57520bcb278a1724086e71b5f52a26d52e16aa5277d70151ad2
+# hash: f2a7ea09a096dcf6fa62f10b458aa3701d435742b46c9ab2925fb85db71cd0c1
