@@ -34,18 +34,22 @@ cruise-monkey-800x480.png
 cruise-monkey-960x640.png
 cruise-monkey-head.ico
 favicon.ico
-font/085d063f.glyphicons-halflings-regular.ttf
-font/12a21d20.glyphicons-halflings-regular.woff
-font/3b31e1de.glyphicons-halflings-regular.svg
-font/48e8d761.hero.otf
-font/54f98da8.intro.otf
-font/59328399.nexa-bold.otf
-font/5bb1b21b.dekar.otf
-font/6815e278.zag-bold.otf
-font/9bc8146c.fff_eula_license.pdf
-font/a6192e0c.glyphicons-halflings-regular.eot
-font/af2d0451.casper.ttf
-font/e99b9a2f.null-free.otf
+fonts/085d063f.glyphicons-halflings-regular.ttf
+fonts/0dc5bb1f.ionicons.woff
+fonts/12a21d20.glyphicons-halflings-regular.woff
+fonts/39f0c91c.ionicons.ttf
+fonts/3b31e1de.glyphicons-halflings-regular.svg
+fonts/48e8d761.hero.otf
+fonts/54f98da8.intro.otf
+fonts/59328399.nexa-bold.otf
+fonts/5bb1b21b.dekar.otf
+fonts/6815e278.zag-bold.otf
+fonts/9bc8146c.fff_eula_license.pdf
+fonts/a411fa13.ionicons.eot
+fonts/a6192e0c.glyphicons-halflings-regular.eot
+fonts/af2d0451.casper.ttf
+fonts/cb4b3322.ionicons.svg
+fonts/e99b9a2f.null-free.otf
 images/861ccbfa.spinner.gif
 images/9273df5d.cruise-monkey-transparent-bg.png
 images/decks/deck10.svg
@@ -647,6 +651,7 @@ images/entypo/yellow/sprites/9705a233.sprites.png
 index.html
 module.min.js
 phonegap.js
+scripts/3082b022.cm.js
 scripts/3rdparty/02630317.custom.modernizr.js
 scripts/3rdparty/8daafb40.require.min.js
 scripts/3rdparty/90949fe3.jquery.js
@@ -657,20 +662,23 @@ scripts/3rdparty/b4fd5d94.zepto.js
 scripts/3rdparty/d00225c1.pouchdb-nightly.min.js
 scripts/3rdparty/d4f49e01.require.js
 scripts/3rdparty/e4a2469a.script.js
-scripts/407b6d95.3rdparty.js
-scripts/827a2744.cm.js
 scripts/angular-3rdparty/0c5164c8.ui-bootstrap-0.6.0.min.js
 scripts/angular-3rdparty/1f143492.angular-mobile-frame.js
 scripts/angular-3rdparty/1fe6d369.angular-hammer.min.js
 scripts/angular-3rdparty/2d745ded.ui-bootstrap-tpls-0.6.0.min.js
+scripts/angular-3rdparty/42b0005b.ionic.js
 scripts/angular-3rdparty/5f033f22.ui-bootstrap-tpls-0.6.0.js
+scripts/angular-3rdparty/6da0dff9.ionic-angular.js
 scripts/angular-3rdparty/b5d511d0.angular-interval.js
 scripts/angular-3rdparty/d16966ff.angular-hammer.js
 scripts/angular-3rdparty/df51aae3.ui-bootstrap-0.6.0.js
+scripts/angular-3rdparty/e4f6a148.ionic.min.js
 scripts/angular-3rdparty/e6f294c4.angular-mobile-frame.min.js
-styles/66cfeb2e.cm.css
+scripts/angular-3rdparty/fa40f7a2.ionic-angular.min.js
+scripts/ddf76cca.3rdparty.js
 styles/68f33d27.main.css
-styles/8189a6d5.3rdparty.css
+styles/9fdc879c.3rdparty.css
+styles/d5506bb7.cm.css
 template/about.html
 template/advanced.html
 template/deck-plans.html
@@ -686,4 +694,4 @@ NETWORK:
 SETTINGS:
 prefer-online
 
-# hash: f2a7ea09a096dcf6fa62f10b458aa3701d435742b46c9ab2925fb85db71cd0c1
+# hash: 8239e10a623b32715ba4de4d56761b01b346802e389bb39261436eaf3ba46982

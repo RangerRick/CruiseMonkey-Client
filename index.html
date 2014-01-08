@@ -165,11 +165,11 @@ window.setTimeout(function() {
 	}
 </style>
 
-<link rel="stylesheet" href="styles/8189a6d5.3rdparty.css"/>
+<link rel="stylesheet" href="styles/9fdc879c.3rdparty.css"/>
 
-<link rel="stylesheet" href="styles/66cfeb2e.cm.css"/>
+<link rel="stylesheet" href="styles/d5506bb7.cm.css"/>
 
-  <title ng-bind="'CruiseMonkey - ' + $root.title">CruiseMonkey</title>
+	<title ng-bind="'CruiseMonkey - ' + $root.title">CruiseMonkey</title>
 </head>
 <body class="antialiased off-canvas hide-extras">
 	<div class="loading container" ng-class="{hidden: hideSpinner}">
@@ -178,38 +178,47 @@ window.setTimeout(function() {
 		</div>
 	</div>
 
-	<mobile-frame ng-cloak="">
-		<mobile-header ng-controller="CMHeaderCtrl">
-			<span class="title"><strong>{{title}}</strong></span>
-			<div class="actions">
-				<div ng-repeat="action in actions" class="action">
-					<div class="icon icon-{{action.iconClass}}" ng-click="action.launch()"></div>
+	<side-menus>
+		<!-- animation="slide-left-right-ios7" -->
+		<pane side-menu-content="" nav-router="">
+			<header class="bar bar-header bar-dark">
+				<button class="button button-icon" ng-click="openLeft()"><i class="icon ion-navicon"></i></button>
+				<h1 class="title">{{title}}</h1>
+				<div class="buttons">
+					<button ng-repeat="button in rightButtons" class="button button-clear no-animation" ng-class="button.type" ng-click="button.tap($event, $index)" ng-bind-html="button.content">
+					</button>
 				</div>
-			</div>
-		</mobile-header>
-		<mobile-nav ng-controller="CMNavigationCtrl" ng-click="toggleDrawer()">
-			<ul class="nav" id="nav">
-				<li class="sidebar-header">CruiseMonkey</li>
-				<li><a href="#/events/official/">Official Events</a></li>
-				<li><a href="#/events/unofficial/">Unofficial Events</a></li>
-				<li ng-if="user.loggedIn"><a href="#/events/my/">My Events</a></li>
-				<li ng-if="!user.loggedIn" class="disabled"><a href="#">My Events</a></li>
-				<li><a href="#/deck-plans/">Deck Plans</a></li>
-				<li><a href="#/about/">About</a></li>
+			</header>
+			<content has-header="true" overflow-scroll="true" scroll="true">
+				<refresher></refresher>
+				<ng-view></ng-view>
+			</content>
+		</pane>
+		<side-menu side="left" ng-click="sideMenuController.close()">
+			<header class="bar bar-header bar-dark">
+				<h1 class="title bar-bold">CruiseMonkey</h1>
+			</header>
+			<content has-header="true" scroll="false" overflow-scroll="false" class="nav">
+				<ul id="nav">
+					<li class="item"><a href="#/events/official/">Official Events</a></li>
+					<li class="item"><a href="#/events/unofficial/">Unofficial Events</a></li>
+					<li class="item" ng-if="user.loggedIn"><a href="#/events/my/">My Events</a></li>
+					<li ng-if="!user.loggedIn" class="item disabled"><a href="#">My Events</a></li>
+					<li class="item"><a href="#/deck-plans/">Deck Plans</a></li>
+					<li class="item"><a href="#/about/">About</a></li>
 
-				<li ng-if="user.loggedIn"><a href="#/logout/">Log Out</a></li>
-				<li ng-if="!user.loggedIn"><a href="#/login/">Log In</a></li>
+					<li class="item" ng-if="user.loggedIn"><a href="#/logout/">Log Out</a></li>
+					<li class="item" ng-if="!user.loggedIn"><a href="#/login/">Log In</a></li>
 
-				<li class="bottom"><a href="#/advanced/">Advanced</a></li>
-			</ul>
-		</mobile-nav>
-		<mobile-content ng-view="">
-		</mobile-content>
-	</mobile-frame>
+					<li class="item bottom"><a href="#/advanced/">Advanced</a></li>
+				</ul>
+			</content>
+		</side-menu>
+	</side-menus>
 
-  <script src="scripts/407b6d95.3rdparty.js"></script>
+	<script src="scripts/ddf76cca.3rdparty.js"></script>
 
-  <script src="scripts/827a2744.cm.js"></script>
+	<script src="scripts/3082b022.cm.js"></script>
 
 	<script src="phonegap.js"></script>
 </body>
