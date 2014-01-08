@@ -651,7 +651,7 @@ images/entypo/yellow/sprites/9705a233.sprites.png
 index.html
 module.min.js
 phonegap.js
-scripts/3082b022.cm.js
+scripts/3dcd4a39.cm.js
 scripts/3rdparty/02630317.custom.modernizr.js
 scripts/3rdparty/8daafb40.require.min.js
 scripts/3rdparty/90949fe3.jquery.js
@@ -676,9 +676,9 @@ scripts/angular-3rdparty/e4f6a148.ionic.min.js
 scripts/angular-3rdparty/e6f294c4.angular-mobile-frame.min.js
 scripts/angular-3rdparty/fa40f7a2.ionic-angular.min.js
 scripts/ddf76cca.3rdparty.js
+styles/142b987d.cm.css
 styles/68f33d27.main.css
 styles/9fdc879c.3rdparty.css
-styles/d5506bb7.cm.css
 template/about.html
 template/advanced.html
 template/deck-plans.html
@@ -694,4 +694,4 @@ NETWORK:
 SETTINGS:
 prefer-online
 
-# hash: 8239e10a623b32715ba4de4d56761b01b346802e389bb39261436eaf3ba46982
+# hash: 0f81bd893bbdb4856f70e845337c662bb6add4ca48746beb1d884a910726a5e8
