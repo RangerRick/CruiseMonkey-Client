@@ -661,7 +661,7 @@ scripts/3rdparty/b4fd5d94.zepto.js
 scripts/3rdparty/d00225c1.pouchdb-nightly.min.js
 scripts/3rdparty/d4f49e01.require.js
 scripts/3rdparty/e4a2469a.script.js
-scripts/92b570d4.cm.js
+scripts/580d7557.cm.js
 scripts/angular-3rdparty/0c5164c8.ui-bootstrap-0.6.0.min.js
 scripts/angular-3rdparty/1f143492.angular-mobile-frame.js
 scripts/angular-3rdparty/1fe6d369.angular-hammer.min.js
@@ -676,9 +676,9 @@ scripts/angular-3rdparty/e4f6a148.ionic.min.js
 scripts/angular-3rdparty/e6f294c4.angular-mobile-frame.min.js
 scripts/angular-3rdparty/fa40f7a2.ionic-angular.min.js
 scripts/ddf76cca.3rdparty.js
-styles/142b987d.cm.css
 styles/68f33d27.main.css
 styles/9fdc879c.3rdparty.css
+styles/a6be3941.cm.css
 template/about.html
 template/advanced.html
 template/deck-plans.html
@@ -694,4 +694,4 @@ NETWORK:
 SETTINGS:
 prefer-online
 
-# hash: a7d6b5a71fcc779628f861531dae8bf97cfea227a851596e7b1e67091cb92291
+# hash: b90afb5c678484798f4383122c5ecef3708e82ea22dfddb069830bd066fc9bac
