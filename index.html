@@ -39,6 +39,11 @@ if (typeof String.prototype.endsWith !== 'function') {
 		return this.indexOf(suffix, this.length - suffix.length) !== -1;
 	};
 }
+if (typeof String.prototype.contains !== 'function') {
+	String.prototype.contains = function(comparator) {
+		return comparator === undefined? true : (this.toLowerCase().indexOf(comparator.toLowerCase()) > -1);
+	}
+}
 
 var bootstrapped = false;
 var fireDocumentReady = function() {
@@ -182,7 +187,7 @@ window.setTimeout(function() {
 
 <link rel="stylesheet" href="styles/9fdc879c.3rdparty.css"/>
 
-<link rel="stylesheet" href="styles/b6e2a59c.cm.css"/>
+<link rel="stylesheet" href="styles/bda3faf7.cm.css"/>
 
 	<title ng-bind="'CruiseMonkey - ' + $root.title">CruiseMonkey</title>
 </head>
@@ -231,7 +236,7 @@ window.setTimeout(function() {
 
 	<script src="scripts/083c6d31.3rdparty.js"></script>
 
-	<script src="scripts/4b5fac9e.cm.js"></script>
+	<script src="scripts/a5d71cda.cm.js"></script>
 
 	<script src="phonegap.js"></script>
 </body>
