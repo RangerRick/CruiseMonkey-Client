@@ -34,21 +34,21 @@ cruise-monkey-800x480.png
 cruise-monkey-960x640.png
 cruise-monkey-head.ico
 favicon.ico
+fonts/06df5af0.ionicons.svg
 fonts/085d063f.glyphicons-halflings-regular.ttf
-fonts/0dc5bb1f.ionicons.woff
 fonts/12a21d20.glyphicons-halflings-regular.woff
-fonts/39f0c91c.ionicons.ttf
+fonts/2d676aab.ionicons.woff
 fonts/3b31e1de.glyphicons-halflings-regular.svg
 fonts/48e8d761.hero.otf
 fonts/54f98da8.intro.otf
 fonts/59328399.nexa-bold.otf
 fonts/5bb1b21b.dekar.otf
+fonts/5dfc2a6b.ionicons.eot
 fonts/6815e278.zag-bold.otf
 fonts/9bc8146c.fff_eula_license.pdf
-fonts/a411fa13.ionicons.eot
 fonts/a6192e0c.glyphicons-halflings-regular.eot
 fonts/af2d0451.casper.ttf
-fonts/cb4b3322.ionicons.svg
+fonts/ceb77096.ionicons.ttf
 fonts/e99b9a2f.null-free.otf
 images/861ccbfa.spinner.gif
 images/9273df5d.cruise-monkey-transparent-bg.png
@@ -651,8 +651,8 @@ images/entypo/yellow/sprites/9705a233.sprites.png
 index.html
 module.min.js
 phonegap.js
+scripts/083c6d31.3rdparty.js
 scripts/13513a99.cm.js
-scripts/39714f7c.3rdparty.js
 scripts/3rdparty/02630317.custom.modernizr.js
 scripts/3rdparty/8daafb40.require.min.js
 scripts/3rdparty/90949fe3.jquery.js
@@ -665,14 +665,14 @@ scripts/3rdparty/d4f49e01.require.js
 scripts/3rdparty/e4a2469a.script.js
 scripts/angular-3rdparty/1f143492.angular-mobile-frame.js
 scripts/angular-3rdparty/1fe6d369.angular-hammer.min.js
-scripts/angular-3rdparty/34593faf.ionic-angular.min.js
-scripts/angular-3rdparty/af8fe3f8.ionic.min.js
-scripts/angular-3rdparty/b7abdcd7.ionic-angular.js
+scripts/angular-3rdparty/2c6f726a.ionic.js
+scripts/angular-3rdparty/7561e6ec.ionic-angular.min.js
+scripts/angular-3rdparty/7fd92ced.ionic-angular.js
+scripts/angular-3rdparty/a4b85022.ionic.min.js
 scripts/angular-3rdparty/d16966ff.angular-hammer.js
 scripts/angular-3rdparty/e6f294c4.angular-mobile-frame.min.js
-scripts/angular-3rdparty/efe1b86c.ionic.js
+styles/6310ce8a.cm.css
 styles/68f33d27.main.css
-styles/8cdd0566.cm.css
 styles/9fdc879c.3rdparty.css
 template/about.html
 template/advanced.html
@@ -689,4 +689,4 @@ NETWORK:
 SETTINGS:
 prefer-online
 
-# hash: 6d497b4ee67ac2a136fc75a8b59dd99de92a492a1ea8bff4863d11675f71ff62
+# hash: d145021c1322d7bfa9df8b956e45477deaab359f75c08ba25f4a18f54ee645ad
