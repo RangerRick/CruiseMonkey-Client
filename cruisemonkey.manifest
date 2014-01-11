@@ -661,24 +661,24 @@ scripts/3rdparty/b4fd5d94.zepto.js
 scripts/3rdparty/d00225c1.pouchdb-nightly.min.js
 scripts/3rdparty/d4f49e01.require.js
 scripts/3rdparty/e4a2469a.script.js
+scripts/76716c83.3rdparty.js
 scripts/angular-3rdparty/0c5164c8.ui-bootstrap-0.6.0.min.js
 scripts/angular-3rdparty/1f143492.angular-mobile-frame.js
 scripts/angular-3rdparty/1fe6d369.angular-hammer.min.js
 scripts/angular-3rdparty/2d745ded.ui-bootstrap-tpls-0.6.0.min.js
-scripts/angular-3rdparty/42b0005b.ionic.js
+scripts/angular-3rdparty/34593faf.ionic-angular.min.js
 scripts/angular-3rdparty/5f033f22.ui-bootstrap-tpls-0.6.0.js
-scripts/angular-3rdparty/6da0dff9.ionic-angular.js
+scripts/angular-3rdparty/af8fe3f8.ionic.min.js
 scripts/angular-3rdparty/b5d511d0.angular-interval.js
+scripts/angular-3rdparty/b7abdcd7.ionic-angular.js
 scripts/angular-3rdparty/d16966ff.angular-hammer.js
 scripts/angular-3rdparty/df51aae3.ui-bootstrap-0.6.0.js
-scripts/angular-3rdparty/e4f6a148.ionic.min.js
 scripts/angular-3rdparty/e6f294c4.angular-mobile-frame.min.js
-scripts/angular-3rdparty/fa40f7a2.ionic-angular.min.js
-scripts/ca8d8b0a.cm.js
-scripts/ddf76cca.3rdparty.js
+scripts/angular-3rdparty/efe1b86c.ionic.js
+scripts/e688c0a1.cm.js
+styles/5bb67081.cm.css
 styles/68f33d27.main.css
 styles/9fdc879c.3rdparty.css
-styles/a6be3941.cm.css
 template/about.html
 template/advanced.html
 template/deck-plans.html
@@ -694,4 +694,4 @@ NETWORK:
 SETTINGS:
 prefer-online
 
-# hash: f18879be2cff23b29d4aad605ed35eff8fa7b6e9d91cab063091fce67a7d9958
+# hash: 94ece53fa28c11d5a60e4b6d04a564bc2eb2656cd3350d2c51828835455368f5
