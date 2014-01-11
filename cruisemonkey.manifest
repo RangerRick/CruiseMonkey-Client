@@ -651,6 +651,7 @@ images/entypo/yellow/sprites/9705a233.sprites.png
 index.html
 module.min.js
 phonegap.js
+scripts/39714f7c.3rdparty.js
 scripts/3rdparty/02630317.custom.modernizr.js
 scripts/3rdparty/8daafb40.require.min.js
 scripts/3rdparty/90949fe3.jquery.js
@@ -661,21 +662,15 @@ scripts/3rdparty/b4fd5d94.zepto.js
 scripts/3rdparty/d00225c1.pouchdb-nightly.min.js
 scripts/3rdparty/d4f49e01.require.js
 scripts/3rdparty/e4a2469a.script.js
-scripts/76716c83.3rdparty.js
-scripts/angular-3rdparty/0c5164c8.ui-bootstrap-0.6.0.min.js
 scripts/angular-3rdparty/1f143492.angular-mobile-frame.js
 scripts/angular-3rdparty/1fe6d369.angular-hammer.min.js
-scripts/angular-3rdparty/2d745ded.ui-bootstrap-tpls-0.6.0.min.js
 scripts/angular-3rdparty/34593faf.ionic-angular.min.js
-scripts/angular-3rdparty/5f033f22.ui-bootstrap-tpls-0.6.0.js
 scripts/angular-3rdparty/af8fe3f8.ionic.min.js
-scripts/angular-3rdparty/b5d511d0.angular-interval.js
 scripts/angular-3rdparty/b7abdcd7.ionic-angular.js
 scripts/angular-3rdparty/d16966ff.angular-hammer.js
-scripts/angular-3rdparty/df51aae3.ui-bootstrap-0.6.0.js
 scripts/angular-3rdparty/e6f294c4.angular-mobile-frame.min.js
 scripts/angular-3rdparty/efe1b86c.ionic.js
-scripts/e688c0a1.cm.js
+scripts/ba77e225.cm.js
 styles/68f33d27.main.css
 styles/9fdc879c.3rdparty.css
 styles/a8bfdbe2.cm.css
@@ -694,4 +689,4 @@ NETWORK:
 SETTINGS:
 prefer-online
 
-# hash: 973490d47a3860afcff2253ed6a5da35b6f12f6468ab2bb7b145bfc06fe4fa65
+# hash: 9a9f53bb94549f981048a0880b671fa5312fccfefde9e9348b468e71ccb8e955
