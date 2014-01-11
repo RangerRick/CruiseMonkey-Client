@@ -672,8 +672,8 @@ scripts/angular-3rdparty/d16966ff.angular-hammer.js
 scripts/angular-3rdparty/e6f294c4.angular-mobile-frame.min.js
 scripts/angular-3rdparty/efe1b86c.ionic.js
 styles/68f33d27.main.css
+styles/8cdd0566.cm.css
 styles/9fdc879c.3rdparty.css
-styles/a8bfdbe2.cm.css
 template/about.html
 template/advanced.html
 template/deck-plans.html
@@ -689,4 +689,4 @@ NETWORK:
 SETTINGS:
 prefer-online
 
-# hash: af964dbd567cb4d9687c2b462504cb35a231c2ccc2bbbd75bfcfa8ab94e16860
+# hash: 6d497b4ee67ac2a136fc75a8b59dd99de92a492a1ea8bff4863d11675f71ff62
