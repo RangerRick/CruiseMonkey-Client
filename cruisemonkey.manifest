@@ -662,13 +662,14 @@ scripts/3rdparty/b4fd5d94.zepto.js
 scripts/3rdparty/d00225c1.pouchdb-nightly.min.js
 scripts/3rdparty/d4f49e01.require.js
 scripts/3rdparty/e4a2469a.script.js
+scripts/3rdparty/f113b98a.testflight.js
+scripts/76661d71.cm.js
 scripts/angular-3rdparty/1fe6d369.angular-hammer.min.js
 scripts/angular-3rdparty/2c6f726a.ionic.js
 scripts/angular-3rdparty/7561e6ec.ionic-angular.min.js
 scripts/angular-3rdparty/7fd92ced.ionic-angular.js
 scripts/angular-3rdparty/a4b85022.ionic.min.js
 scripts/angular-3rdparty/d16966ff.angular-hammer.js
-scripts/fce6006f.cm.js
 styles/68f33d27.main.css
 styles/9fdc879c.3rdparty.css
 styles/bda3faf7.cm.css
@@ -687,4 +688,4 @@ NETWORK:
 SETTINGS:
 prefer-online
 
-# hash: 502dd7ac02f3958b82566f7d05db1541f2035d45f31300c09a210c2c6d4e234f
+# hash: afabbff8cead4090af66aa3931578278df55e59ad3384744a45e39300cb2752c
