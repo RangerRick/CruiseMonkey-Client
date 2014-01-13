@@ -16,22 +16,15 @@ Icon-Small.png
 Icon-Small@2x.png
 Icon.png
 Icon@2x.png
-cruise-monkey-1024x768.png
 cruise-monkey-1136x640.png
-cruise-monkey-1280x720.png
 cruise-monkey-1536x2048.png
 cruise-monkey-200x320.png
-cruise-monkey-2048x1536.png
-cruise-monkey-320x200.png
 cruise-monkey-320x480.png
-cruise-monkey-480x320.png
 cruise-monkey-480x800.png
 cruise-monkey-640x1136.png
 cruise-monkey-640x960.png
 cruise-monkey-720x1280.png
 cruise-monkey-768x1024.png
-cruise-monkey-800x480.png
-cruise-monkey-960x640.png
 cruise-monkey-head.ico
 favicon.ico
 fonts/06df5af0.ionicons.svg
@@ -688,4 +681,4 @@ NETWORK:
 SETTINGS:
 prefer-online
 
-# hash: fdda478188ac7738609f0fe925624c5edc79f85a747b381b2fe4d1e821e9839b
+# hash: 80d095bd2b8445015a9d63dccd6d9f2ee265c2f35ad9caed7cc3b02e4a997938
